@@ -114,7 +114,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L25)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L25)
 
 ## Properties
 
@@ -124,7 +124,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L23)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L23)
 
 ***
 
@@ -134,7 +134,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L22)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L22)
 
 ***
 
@@ -144,7 +144,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L21)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L21)
 
 ***
 
@@ -154,7 +154,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L18)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L18)
 
 ***
 
@@ -164,7 +164,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L19)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L19)
 
 ## Accessors
 
@@ -182,7 +182,7 @@ The amount of penalization chosen by cross validation.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L610)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L610)
 
 ***
 
@@ -200,7 +200,7 @@ The grid of alphas used for fitting, for each l1\_ratio.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L664)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L664)
 
 ***
 
@@ -218,7 +218,7 @@ Parameter vector (W in the cost function formula). Note that `coef\_` stores the
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L583)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L583)
 
 ***
 
@@ -236,7 +236,7 @@ The dual gap at the end of the optimization for the optimal alpha.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L745)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L745)
 
 ***
 
@@ -254,7 +254,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:799](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L799)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:799](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L799)
 
 ***
 
@@ -272,7 +272,7 @@ Independent term in decision function.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L556)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L556)
 
 ***
 
@@ -290,7 +290,7 @@ Best l1\_ratio obtained by cross-validation.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L691)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L691)
 
 ***
 
@@ -308,7 +308,7 @@ Mean square error for the test set on each fold, varying alpha.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L637)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L637)
 
 ***
 
@@ -326,7 +326,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:772](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L772)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:772](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L772)
 
 ***
 
@@ -344,7 +344,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L718)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L718)
 
 ***
 
@@ -372,7 +372,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L113)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L113)
 
 ## Methods
 
@@ -390,7 +390,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L169)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L169)
 
 ***
 
@@ -424,7 +424,7 @@ Training target variable. Will be cast to X’s dtype if necessary.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L188)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L188)
 
 ***
 
@@ -450,7 +450,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L234)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L234)
 
 ***
 
@@ -472,7 +472,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L126)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L126)
 
 ***
 
@@ -592,7 +592,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L274)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L274)
 
 ***
 
@@ -616,7 +616,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L396)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L396)
 
 ***
 
@@ -650,7 +650,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L432)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L432)
 
 ***
 
@@ -678,7 +678,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L480)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L480)
 
 ***
 
@@ -706,4 +706,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskElasticNetCV.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L520)
+[generated/linear\_model/MultiTaskElasticNetCV.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L520)

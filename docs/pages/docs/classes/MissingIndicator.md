@@ -54,7 +54,7 @@ Whether the imputer mask format should be sparse or dense.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L25)
+[generated/impute/MissingIndicator.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L25)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Whether the imputer mask format should be sparse or dense.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L23)
+[generated/impute/MissingIndicator.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L23)
 
 ***
 
@@ -74,7 +74,7 @@ Whether the imputer mask format should be sparse or dense.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L22)
+[generated/impute/MissingIndicator.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L22)
 
 ***
 
@@ -84,7 +84,7 @@ Whether the imputer mask format should be sparse or dense.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L21)
+[generated/impute/MissingIndicator.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L21)
 
 ***
 
@@ -94,7 +94,7 @@ Whether the imputer mask format should be sparse or dense.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L18)
+[generated/impute/MissingIndicator.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L18)
 
 ***
 
@@ -104,7 +104,7 @@ Whether the imputer mask format should be sparse or dense.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L19)
+[generated/impute/MissingIndicator.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L19)
 
 ## Accessors
 
@@ -122,7 +122,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L405)
+[generated/impute/MissingIndicator.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L405)
 
 ***
 
@@ -140,7 +140,7 @@ The features indices which will be returned when calling [`transform`](#sklearn.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L351)
+[generated/impute/MissingIndicator.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L351)
 
 ***
 
@@ -158,7 +158,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L378)
+[generated/impute/MissingIndicator.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L378)
 
 ***
 
@@ -186,7 +186,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L56)
+[generated/impute/MissingIndicator.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L56)
 
 ## Methods
 
@@ -204,7 +204,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L110)
+[generated/impute/MissingIndicator.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L110)
 
 ***
 
@@ -232,7 +232,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L127)
+[generated/impute/MissingIndicator.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L127)
 
 ***
 
@@ -260,7 +260,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L166)
+[generated/impute/MissingIndicator.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L166)
 
 ***
 
@@ -284,7 +284,7 @@ Input features.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L207)
+[generated/impute/MissingIndicator.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L207)
 
 ***
 
@@ -310,7 +310,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L245)
+[generated/impute/MissingIndicator.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L245)
 
 ***
 
@@ -332,7 +332,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L69)
+[generated/impute/MissingIndicator.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L69)
 
 ***
 
@@ -358,7 +358,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L283)
+[generated/impute/MissingIndicator.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L283)
 
 ***
 
@@ -382,4 +382,4 @@ The input data to complete.
 
 #### Defined in
 
-[generated/impute/MissingIndicator.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/MissingIndicator.ts#L317)
+[generated/impute/MissingIndicator.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/MissingIndicator.ts#L317)

@@ -78,7 +78,7 @@ If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "skl
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L25)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L25)
 
 ## Properties
 
@@ -88,7 +88,7 @@ If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "skl
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L23)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L23)
 
 ***
 
@@ -98,7 +98,7 @@ If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "skl
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L22)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L22)
 
 ***
 
@@ -108,7 +108,7 @@ If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "skl
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L21)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L21)
 
 ***
 
@@ -118,7 +118,7 @@ If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "skl
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L18)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L18)
 
 ***
 
@@ -128,7 +128,7 @@ If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "skl
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L19)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L19)
 
 ## Accessors
 
@@ -146,7 +146,7 @@ The linear transformation learned during fitting.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L392)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L392)
 
 ***
 
@@ -164,7 +164,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L500)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L500)
 
 ***
 
@@ -182,7 +182,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L419)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L419)
 
 ***
 
@@ -200,7 +200,7 @@ Counts the number of iterations performed by the optimizer.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L446)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L446)
 
 ***
 
@@ -228,7 +228,7 @@ Counts the number of iterations performed by the optimizer.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L80)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L80)
 
 ***
 
@@ -246,7 +246,7 @@ Pseudo random number generator object used during initialization.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L473)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L473)
 
 ## Methods
 
@@ -264,7 +264,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L136)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L136)
 
 ***
 
@@ -292,7 +292,7 @@ The corresponding training labels.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L153)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L153)
 
 ***
 
@@ -326,7 +326,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L196)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L196)
 
 ***
 
@@ -352,7 +352,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L244)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L244)
 
 ***
 
@@ -378,7 +378,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L282)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L282)
 
 ***
 
@@ -400,7 +400,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L93)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L93)
 
 ***
 
@@ -426,7 +426,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L320)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L320)
 
 ***
 
@@ -450,4 +450,4 @@ Data samples.
 
 #### Defined in
 
-[generated/neighbors/NeighborhoodComponentsAnalysis.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L356)
+[generated/neighbors/NeighborhoodComponentsAnalysis.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L356)

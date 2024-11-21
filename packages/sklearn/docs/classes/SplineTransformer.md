@@ -84,7 +84,7 @@ Will return sparse CSR matrix if set `true` else will return an array. This opti
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L27)
+[generated/preprocessing/SplineTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L27)
 
 ## Properties
 
@@ -94,7 +94,7 @@ Will return sparse CSR matrix if set `true` else will return an array. This opti
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L25)
+[generated/preprocessing/SplineTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L25)
 
 ***
 
@@ -104,7 +104,7 @@ Will return sparse CSR matrix if set `true` else will return an array. This opti
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L24)
+[generated/preprocessing/SplineTransformer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L24)
 
 ***
 
@@ -114,7 +114,7 @@ Will return sparse CSR matrix if set `true` else will return an array. This opti
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L23)
+[generated/preprocessing/SplineTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L23)
 
 ***
 
@@ -124,7 +124,7 @@ Will return sparse CSR matrix if set `true` else will return an array. This opti
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L20)
+[generated/preprocessing/SplineTransformer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L20)
 
 ***
 
@@ -134,7 +134,7 @@ Will return sparse CSR matrix if set `true` else will return an array. This opti
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L21)
+[generated/preprocessing/SplineTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L21)
 
 ## Accessors
 
@@ -152,7 +152,7 @@ List of BSplines objects, one for each feature.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L428)
+[generated/preprocessing/SplineTransformer.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L428)
 
 ***
 
@@ -170,7 +170,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L482)
+[generated/preprocessing/SplineTransformer.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L482)
 
 ***
 
@@ -188,7 +188,7 @@ The total number of input features.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L455)
+[generated/preprocessing/SplineTransformer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L455)
 
 ***
 
@@ -206,7 +206,7 @@ The total number of output features, which is computed as `n\_features \* n\_spl
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L509)
+[generated/preprocessing/SplineTransformer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L509)
 
 ***
 
@@ -234,7 +234,7 @@ The total number of output features, which is computed as `n\_features \* n\_spl
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L81)
+[generated/preprocessing/SplineTransformer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L81)
 
 ## Methods
 
@@ -252,7 +252,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L135)
+[generated/preprocessing/SplineTransformer.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L135)
 
 ***
 
@@ -284,7 +284,7 @@ Ignored.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L152)
+[generated/preprocessing/SplineTransformer.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L152)
 
 ***
 
@@ -318,7 +318,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L198)
+[generated/preprocessing/SplineTransformer.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L198)
 
 ***
 
@@ -342,7 +342,7 @@ Input features.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L244)
+[generated/preprocessing/SplineTransformer.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L244)
 
 ***
 
@@ -368,7 +368,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L282)
+[generated/preprocessing/SplineTransformer.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L282)
 
 ***
 
@@ -390,7 +390,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L94)
+[generated/preprocessing/SplineTransformer.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L94)
 
 ***
 
@@ -418,7 +418,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L322)
+[generated/preprocessing/SplineTransformer.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L322)
 
 ***
 
@@ -444,7 +444,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L360)
+[generated/preprocessing/SplineTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L360)
 
 ***
 
@@ -468,4 +468,4 @@ The data to transform.
 
 #### Defined in
 
-[generated/preprocessing/SplineTransformer.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L394)
+[generated/preprocessing/SplineTransformer.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L394)

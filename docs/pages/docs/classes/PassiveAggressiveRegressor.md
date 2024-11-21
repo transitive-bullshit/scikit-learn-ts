@@ -134,7 +134,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L23)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L23)
 
 ## Properties
 
@@ -144,7 +144,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L21)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L21)
 
 ***
 
@@ -154,7 +154,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L20)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L20)
 
 ***
 
@@ -164,7 +164,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L19)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L19)
 
 ***
 
@@ -174,7 +174,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L16)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L16)
 
 ***
 
@@ -184,7 +184,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L17)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L17)
 
 ## Accessors
 
@@ -202,7 +202,7 @@ Weights assigned to the features.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L604)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L604)
 
 ***
 
@@ -220,7 +220,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L685)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L685)
 
 ***
 
@@ -238,7 +238,7 @@ Constants in decision function.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L631)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L631)
 
 ***
 
@@ -256,7 +256,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L658)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L658)
 
 ***
 
@@ -274,7 +274,7 @@ The actual number of iterations to reach the stopping criterion.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L712)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L712)
 
 ***
 
@@ -302,7 +302,7 @@ The actual number of iterations to reach the stopping criterion.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L126)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L126)
 
 ***
 
@@ -320,7 +320,7 @@ Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_sa
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L739)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L739)
 
 ## Methods
 
@@ -342,7 +342,7 @@ Converts the `coef\_` member (back) to a numpy.ndarray. This is the default form
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L201)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L201)
 
 ***
 
@@ -360,7 +360,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L182)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L182)
 
 ***
 
@@ -396,7 +396,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L231)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L231)
 
 ***
 
@@ -422,7 +422,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L284)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L284)
 
 ***
 
@@ -444,7 +444,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L139)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L139)
 
 ***
 
@@ -472,7 +472,7 @@ Subset of target values.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L320)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L320)
 
 ***
 
@@ -496,7 +496,7 @@ Input data.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L361)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L361)
 
 ***
 
@@ -530,7 +530,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L399)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L399)
 
 ***
 
@@ -562,7 +562,7 @@ Metadata routing for `intercept\_init` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L449)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L449)
 
 ***
 
@@ -590,7 +590,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L494)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L494)
 
 ***
 
@@ -618,7 +618,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L534)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L534)
 
 ***
 
@@ -642,4 +642,4 @@ The `intercept\_` member is not converted.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveRegressor.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L574)
+[generated/linear\_model/PassiveAggressiveRegressor.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L574)

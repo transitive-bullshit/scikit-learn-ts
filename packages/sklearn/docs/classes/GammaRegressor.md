@@ -82,7 +82,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L25)
+[generated/linear\_model/GammaRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L25)
 
 ## Properties
 
@@ -92,7 +92,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L23)
+[generated/linear\_model/GammaRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L23)
 
 ***
 
@@ -102,7 +102,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L22)
+[generated/linear\_model/GammaRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L22)
 
 ***
 
@@ -112,7 +112,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L21)
+[generated/linear\_model/GammaRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L21)
 
 ***
 
@@ -122,7 +122,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L18)
+[generated/linear\_model/GammaRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L18)
 
 ***
 
@@ -132,7 +132,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L19)
+[generated/linear\_model/GammaRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L19)
 
 ## Accessors
 
@@ -150,7 +150,7 @@ Estimated coefficients for the linear predictor (`X @ coef\_ + intercept\_`) in 
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L380)
+[generated/linear\_model/GammaRegressor.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L380)
 
 ***
 
@@ -168,7 +168,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L478)
+[generated/linear\_model/GammaRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L478)
 
 ***
 
@@ -186,7 +186,7 @@ Intercept (a.k.a. bias) added to linear predictor.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L403)
+[generated/linear\_model/GammaRegressor.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L403)
 
 ***
 
@@ -204,7 +204,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L428)
+[generated/linear\_model/GammaRegressor.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L428)
 
 ***
 
@@ -222,7 +222,7 @@ Actual number of iterations used in the solver.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L453)
+[generated/linear\_model/GammaRegressor.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L453)
 
 ***
 
@@ -250,7 +250,7 @@ Actual number of iterations used in the solver.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L79)
+[generated/linear\_model/GammaRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L79)
 
 ## Methods
 
@@ -268,7 +268,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L131)
+[generated/linear\_model/GammaRegressor.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L131)
 
 ***
 
@@ -300,7 +300,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L148)
+[generated/linear\_model/GammaRegressor.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L148)
 
 ***
 
@@ -326,7 +326,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L192)
+[generated/linear\_model/GammaRegressor.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L192)
 
 ***
 
@@ -348,7 +348,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L92)
+[generated/linear\_model/GammaRegressor.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L92)
 
 ***
 
@@ -372,7 +372,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L226)
+[generated/linear\_model/GammaRegressor.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L226)
 
 ***
 
@@ -408,7 +408,7 @@ True values of target.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L262)
+[generated/linear\_model/GammaRegressor.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L262)
 
 ***
 
@@ -436,7 +436,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L308)
+[generated/linear\_model/GammaRegressor.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L308)
 
 ***
 
@@ -464,4 +464,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/GammaRegressor.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L346)
+[generated/linear\_model/GammaRegressor.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L346)

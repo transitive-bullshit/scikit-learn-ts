@@ -78,7 +78,7 @@ Convergence tolerance: threshold to consider the system at steady state.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L25)
+[generated/semi\_supervised/LabelSpreading.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L25)
 
 ## Properties
 
@@ -88,7 +88,7 @@ Convergence tolerance: threshold to consider the system at steady state.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L23)
+[generated/semi\_supervised/LabelSpreading.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L23)
 
 ***
 
@@ -98,7 +98,7 @@ Convergence tolerance: threshold to consider the system at steady state.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L22)
+[generated/semi\_supervised/LabelSpreading.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L22)
 
 ***
 
@@ -108,7 +108,7 @@ Convergence tolerance: threshold to consider the system at steady state.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L21)
+[generated/semi\_supervised/LabelSpreading.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L21)
 
 ***
 
@@ -118,7 +118,7 @@ Convergence tolerance: threshold to consider the system at steady state.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L18)
+[generated/semi\_supervised/LabelSpreading.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L18)
 
 ***
 
@@ -128,7 +128,7 @@ Convergence tolerance: threshold to consider the system at steady state.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L19)
+[generated/semi\_supervised/LabelSpreading.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L19)
 
 ## Accessors
 
@@ -146,7 +146,7 @@ The distinct labels used in classifying instances.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L392)
+[generated/semi\_supervised/LabelSpreading.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L392)
 
 ***
 
@@ -164,7 +164,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L492)
+[generated/semi\_supervised/LabelSpreading.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L492)
 
 ***
 
@@ -182,7 +182,7 @@ Categorical distribution for each item.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L417)
+[generated/semi\_supervised/LabelSpreading.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L417)
 
 ***
 
@@ -200,7 +200,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L467)
+[generated/semi\_supervised/LabelSpreading.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L467)
 
 ***
 
@@ -218,7 +218,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L517)
+[generated/semi\_supervised/LabelSpreading.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L517)
 
 ***
 
@@ -246,7 +246,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L77)
+[generated/semi\_supervised/LabelSpreading.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L77)
 
 ***
 
@@ -264,7 +264,7 @@ Label assigned to each item during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L442)
+[generated/semi\_supervised/LabelSpreading.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L442)
 
 ***
 
@@ -282,7 +282,7 @@ Input array.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L369)
+[generated/semi\_supervised/LabelSpreading.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L369)
 
 ## Methods
 
@@ -300,7 +300,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L129)
+[generated/semi\_supervised/LabelSpreading.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L129)
 
 ***
 
@@ -330,7 +330,7 @@ Target class values with unlabeled points marked as -1. All unlabeled samples wi
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L148)
+[generated/semi\_supervised/LabelSpreading.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L148)
 
 ***
 
@@ -356,7 +356,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L187)
+[generated/semi\_supervised/LabelSpreading.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L187)
 
 ***
 
@@ -378,7 +378,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L90)
+[generated/semi\_supervised/LabelSpreading.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L90)
 
 ***
 
@@ -402,7 +402,7 @@ The data matrix.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L221)
+[generated/semi\_supervised/LabelSpreading.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L221)
 
 ***
 
@@ -428,7 +428,7 @@ The data matrix.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L255)
+[generated/semi\_supervised/LabelSpreading.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L255)
 
 ***
 
@@ -462,7 +462,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L289)
+[generated/semi\_supervised/LabelSpreading.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L289)
 
 ***
 
@@ -490,4 +490,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/semi\_supervised/LabelSpreading.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L335)
+[generated/semi\_supervised/LabelSpreading.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L335)

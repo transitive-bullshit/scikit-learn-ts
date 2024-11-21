@@ -58,7 +58,7 @@ Minimum number of categories per feature.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L25)
+[generated/naive\_bayes/CategoricalNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L25)
 
 ## Properties
 
@@ -68,7 +68,7 @@ Minimum number of categories per feature.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L23)
+[generated/naive\_bayes/CategoricalNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L23)
 
 ***
 
@@ -78,7 +78,7 @@ Minimum number of categories per feature.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L22)
+[generated/naive\_bayes/CategoricalNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L22)
 
 ***
 
@@ -88,7 +88,7 @@ Minimum number of categories per feature.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L21)
+[generated/naive\_bayes/CategoricalNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L21)
 
 ***
 
@@ -98,7 +98,7 @@ Minimum number of categories per feature.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L18)
+[generated/naive\_bayes/CategoricalNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L18)
 
 ***
 
@@ -108,7 +108,7 @@ Minimum number of categories per feature.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L19)
+[generated/naive\_bayes/CategoricalNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L19)
 
 ## Accessors
 
@@ -126,7 +126,7 @@ Holds arrays of shape (n\_classes, n\_categories of respective feature) for each
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L558)
+[generated/naive\_bayes/CategoricalNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L558)
 
 ***
 
@@ -144,7 +144,7 @@ Number of samples encountered for each class during fitting. This value is weigh
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L583)
+[generated/naive\_bayes/CategoricalNB.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L583)
 
 ***
 
@@ -162,7 +162,7 @@ Smoothed empirical log probability for each class.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L608)
+[generated/naive\_bayes/CategoricalNB.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L608)
 
 ***
 
@@ -180,7 +180,7 @@ Class labels known to the classifier
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L633)
+[generated/naive\_bayes/CategoricalNB.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L633)
 
 ***
 
@@ -198,7 +198,7 @@ Holds arrays of shape (n\_classes, n\_categories of respective feature) for each
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L658)
+[generated/naive\_bayes/CategoricalNB.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L658)
 
 ***
 
@@ -216,7 +216,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L708)
+[generated/naive\_bayes/CategoricalNB.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L708)
 
 ***
 
@@ -234,7 +234,7 @@ Number of categories for each feature. This value is inferred from the data or s
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L733)
+[generated/naive\_bayes/CategoricalNB.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L733)
 
 ***
 
@@ -252,7 +252,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L683)
+[generated/naive\_bayes/CategoricalNB.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L683)
 
 ***
 
@@ -280,7 +280,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L61)
+[generated/naive\_bayes/CategoricalNB.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L61)
 
 ## Methods
 
@@ -298,7 +298,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L113)
+[generated/naive\_bayes/CategoricalNB.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L113)
 
 ***
 
@@ -330,7 +330,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L130)
+[generated/naive\_bayes/CategoricalNB.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L130)
 
 ***
 
@@ -356,7 +356,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L174)
+[generated/naive\_bayes/CategoricalNB.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L174)
 
 ***
 
@@ -378,7 +378,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L74)
+[generated/naive\_bayes/CategoricalNB.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L74)
 
 ***
 
@@ -422,7 +422,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L214)
+[generated/naive\_bayes/CategoricalNB.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L214)
 
 ***
 
@@ -446,7 +446,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L263)
+[generated/naive\_bayes/CategoricalNB.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L263)
 
 ***
 
@@ -472,7 +472,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L297)
+[generated/naive\_bayes/CategoricalNB.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L297)
 
 ***
 
@@ -496,7 +496,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L331)
+[generated/naive\_bayes/CategoricalNB.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L331)
 
 ***
 
@@ -520,7 +520,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L365)
+[generated/naive\_bayes/CategoricalNB.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L365)
 
 ***
 
@@ -554,7 +554,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L399)
+[generated/naive\_bayes/CategoricalNB.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L399)
 
 ***
 
@@ -582,7 +582,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L445)
+[generated/naive\_bayes/CategoricalNB.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L445)
 
 ***
 
@@ -614,7 +614,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L481)
+[generated/naive\_bayes/CategoricalNB.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L481)
 
 ***
 
@@ -642,4 +642,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L524)
+[generated/naive\_bayes/CategoricalNB.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L524)

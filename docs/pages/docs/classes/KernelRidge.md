@@ -70,7 +70,7 @@ Additional parameters (keyword arguments) for kernel function passed as callable
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L29)
+[generated/kernel\_ridge/KernelRidge.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L29)
 
 ## Properties
 
@@ -80,7 +80,7 @@ Additional parameters (keyword arguments) for kernel function passed as callable
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L27)
+[generated/kernel\_ridge/KernelRidge.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L27)
 
 ***
 
@@ -90,7 +90,7 @@ Additional parameters (keyword arguments) for kernel function passed as callable
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L26)
+[generated/kernel\_ridge/KernelRidge.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L26)
 
 ***
 
@@ -100,7 +100,7 @@ Additional parameters (keyword arguments) for kernel function passed as callable
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L25)
+[generated/kernel\_ridge/KernelRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L25)
 
 ***
 
@@ -110,7 +110,7 @@ Additional parameters (keyword arguments) for kernel function passed as callable
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L22)
+[generated/kernel\_ridge/KernelRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L22)
 
 ***
 
@@ -120,7 +120,7 @@ Additional parameters (keyword arguments) for kernel function passed as callable
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L23)
+[generated/kernel\_ridge/KernelRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L23)
 
 ## Accessors
 
@@ -138,7 +138,7 @@ Representation of weight vector(s) in kernel space
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L367)
+[generated/kernel\_ridge/KernelRidge.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L367)
 
 ***
 
@@ -156,7 +156,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L440)
+[generated/kernel\_ridge/KernelRidge.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L440)
 
 ***
 
@@ -174,7 +174,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L415)
+[generated/kernel\_ridge/KernelRidge.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L415)
 
 ***
 
@@ -202,7 +202,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L72)
+[generated/kernel\_ridge/KernelRidge.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L72)
 
 ***
 
@@ -220,7 +220,7 @@ Training data, which is also required for prediction. If kernel == “precompute
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L392)
+[generated/kernel\_ridge/KernelRidge.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L392)
 
 ## Methods
 
@@ -238,7 +238,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L124)
+[generated/kernel\_ridge/KernelRidge.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L124)
 
 ***
 
@@ -270,7 +270,7 @@ Target values.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L141)
+[generated/kernel\_ridge/KernelRidge.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L141)
 
 ***
 
@@ -296,7 +296,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L185)
+[generated/kernel\_ridge/KernelRidge.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L185)
 
 ***
 
@@ -318,7 +318,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L85)
+[generated/kernel\_ridge/KernelRidge.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L85)
 
 ***
 
@@ -342,7 +342,7 @@ Samples. If kernel == “precomputed” this is instead a precomputed kernel mat
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L219)
+[generated/kernel\_ridge/KernelRidge.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L219)
 
 ***
 
@@ -376,7 +376,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L253)
+[generated/kernel\_ridge/KernelRidge.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L253)
 
 ***
 
@@ -404,7 +404,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L299)
+[generated/kernel\_ridge/KernelRidge.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L299)
 
 ***
 
@@ -432,4 +432,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/kernel\_ridge/KernelRidge.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L335)
+[generated/kernel\_ridge/KernelRidge.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L335)

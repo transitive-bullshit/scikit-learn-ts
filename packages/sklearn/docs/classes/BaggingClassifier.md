@@ -104,7 +104,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L27)
+[generated/ensemble/BaggingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L27)
 
 ## Properties
 
@@ -114,7 +114,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L25)
+[generated/ensemble/BaggingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L25)
 
 ***
 
@@ -124,7 +124,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L24)
+[generated/ensemble/BaggingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L24)
 
 ***
 
@@ -134,7 +134,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L23)
+[generated/ensemble/BaggingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L23)
 
 ***
 
@@ -144,7 +144,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L20)
+[generated/ensemble/BaggingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L20)
 
 ***
 
@@ -154,7 +154,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L21)
+[generated/ensemble/BaggingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L21)
 
 ## Accessors
 
@@ -172,7 +172,7 @@ The classes labels.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L670)
+[generated/ensemble/BaggingClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L670)
 
 ***
 
@@ -190,7 +190,7 @@ The base estimator from which the ensemble is grown.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L535)
+[generated/ensemble/BaggingClassifier.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L535)
 
 ***
 
@@ -208,7 +208,7 @@ The collection of fitted base estimators.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L616)
+[generated/ensemble/BaggingClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L616)
 
 ***
 
@@ -226,7 +226,7 @@ The subset of drawn features for each base estimator.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L643)
+[generated/ensemble/BaggingClassifier.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L643)
 
 ***
 
@@ -244,7 +244,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L589)
+[generated/ensemble/BaggingClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L589)
 
 ***
 
@@ -262,7 +262,7 @@ The number of classes.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L697)
+[generated/ensemble/BaggingClassifier.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L697)
 
 ***
 
@@ -280,7 +280,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L562)
+[generated/ensemble/BaggingClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L562)
 
 ***
 
@@ -298,7 +298,7 @@ Decision function computed with out-of-bag estimate on the training set. If n\_e
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L751)
+[generated/ensemble/BaggingClassifier.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L751)
 
 ***
 
@@ -316,7 +316,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L724)
+[generated/ensemble/BaggingClassifier.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L724)
 
 ***
 
@@ -344,7 +344,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L103)
+[generated/ensemble/BaggingClassifier.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L103)
 
 ## Methods
 
@@ -368,7 +368,7 @@ The training input samples. Sparse matrices are accepted only if they are suppor
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L174)
+[generated/ensemble/BaggingClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L174)
 
 ***
 
@@ -386,7 +386,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L157)
+[generated/ensemble/BaggingClassifier.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L157)
 
 ***
 
@@ -422,7 +422,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L210)
+[generated/ensemble/BaggingClassifier.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L210)
 
 ***
 
@@ -448,7 +448,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L261)
+[generated/ensemble/BaggingClassifier.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L261)
 
 ***
 
@@ -470,7 +470,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L116)
+[generated/ensemble/BaggingClassifier.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L116)
 
 ***
 
@@ -496,7 +496,7 @@ The training input samples. Sparse matrices are accepted only if they are suppor
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L299)
+[generated/ensemble/BaggingClassifier.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L299)
 
 ***
 
@@ -522,7 +522,7 @@ The training input samples. Sparse matrices are accepted only if they are suppor
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L335)
+[generated/ensemble/BaggingClassifier.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L335)
 
 ***
 
@@ -548,7 +548,7 @@ The training input samples. Sparse matrices are accepted only if they are suppor
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L373)
+[generated/ensemble/BaggingClassifier.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L373)
 
 ***
 
@@ -582,7 +582,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L411)
+[generated/ensemble/BaggingClassifier.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L411)
 
 ***
 
@@ -610,7 +610,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L459)
+[generated/ensemble/BaggingClassifier.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L459)
 
 ***
 
@@ -638,4 +638,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/BaggingClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L499)
+[generated/ensemble/BaggingClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L499)

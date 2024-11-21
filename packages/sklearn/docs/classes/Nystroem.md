@@ -68,7 +68,7 @@ Pseudo-random number generator to control the uniform sampling without replaceme
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L25)
+[generated/kernel\_approximation/Nystroem.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L25)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Pseudo-random number generator to control the uniform sampling without replaceme
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L23)
+[generated/kernel\_approximation/Nystroem.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L23)
 
 ***
 
@@ -88,7 +88,7 @@ Pseudo-random number generator to control the uniform sampling without replaceme
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L22)
+[generated/kernel\_approximation/Nystroem.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L22)
 
 ***
 
@@ -98,7 +98,7 @@ Pseudo-random number generator to control the uniform sampling without replaceme
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L21)
+[generated/kernel\_approximation/Nystroem.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L21)
 
 ***
 
@@ -108,7 +108,7 @@ Pseudo-random number generator to control the uniform sampling without replaceme
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L18)
+[generated/kernel\_approximation/Nystroem.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L18)
 
 ***
 
@@ -118,7 +118,7 @@ Pseudo-random number generator to control the uniform sampling without replaceme
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L19)
+[generated/kernel\_approximation/Nystroem.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L19)
 
 ## Accessors
 
@@ -136,7 +136,7 @@ Indices of `components\_` in the training set.
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L388)
+[generated/kernel\_approximation/Nystroem.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L388)
 
 ***
 
@@ -154,7 +154,7 @@ Subset of training points used to construct the feature map.
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L365)
+[generated/kernel\_approximation/Nystroem.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L365)
 
 ***
 
@@ -172,7 +172,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L463)
+[generated/kernel\_approximation/Nystroem.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L463)
 
 ***
 
@@ -190,7 +190,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L438)
+[generated/kernel\_approximation/Nystroem.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L438)
 
 ***
 
@@ -208,7 +208,7 @@ Normalization matrix needed for embedding. Square root of the kernel matrix on `
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L413)
+[generated/kernel\_approximation/Nystroem.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L413)
 
 ***
 
@@ -236,7 +236,7 @@ Normalization matrix needed for embedding. Square root of the kernel matrix on `
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L76)
+[generated/kernel\_approximation/Nystroem.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L76)
 
 ## Methods
 
@@ -254,7 +254,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L127)
+[generated/kernel\_approximation/Nystroem.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L127)
 
 ***
 
@@ -284,7 +284,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L146)
+[generated/kernel\_approximation/Nystroem.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L146)
 
 ***
 
@@ -318,7 +318,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L185)
+[generated/kernel\_approximation/Nystroem.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L185)
 
 ***
 
@@ -344,7 +344,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L229)
+[generated/kernel\_approximation/Nystroem.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L229)
 
 ***
 
@@ -370,7 +370,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L265)
+[generated/kernel\_approximation/Nystroem.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L265)
 
 ***
 
@@ -392,7 +392,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L89)
+[generated/kernel\_approximation/Nystroem.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L89)
 
 ***
 
@@ -418,7 +418,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L299)
+[generated/kernel\_approximation/Nystroem.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L299)
 
 ***
 
@@ -444,4 +444,4 @@ Data to transform.
 
 #### Defined in
 
-[generated/kernel\_approximation/Nystroem.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L333)
+[generated/kernel\_approximation/Nystroem.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L333)

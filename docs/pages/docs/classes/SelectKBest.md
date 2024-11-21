@@ -36,7 +36,7 @@ Function taking two arrays X and y, and returning a pair of arrays (scores, pval
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L23)
+[generated/feature\_selection/SelectKBest.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Function taking two arrays X and y, and returning a pair of arrays (scores, pval
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L21)
+[generated/feature\_selection/SelectKBest.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ Function taking two arrays X and y, and returning a pair of arrays (scores, pval
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L20)
+[generated/feature\_selection/SelectKBest.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ Function taking two arrays X and y, and returning a pair of arrays (scores, pval
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L19)
+[generated/feature\_selection/SelectKBest.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ Function taking two arrays X and y, and returning a pair of arrays (scores, pval
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L16)
+[generated/feature\_selection/SelectKBest.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ Function taking two arrays X and y, and returning a pair of arrays (scores, pval
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L17)
+[generated/feature\_selection/SelectKBest.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L17)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L463)
+[generated/feature\_selection/SelectKBest.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L463)
 
 ***
 
@@ -122,7 +122,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L438)
+[generated/feature\_selection/SelectKBest.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L438)
 
 ***
 
@@ -140,7 +140,7 @@ p-values of feature scores, `undefined` if `score\_func` returned only scores.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L415)
+[generated/feature\_selection/SelectKBest.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L415)
 
 ***
 
@@ -168,7 +168,7 @@ p-values of feature scores, `undefined` if `score\_func` returned only scores.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L40)
+[generated/feature\_selection/SelectKBest.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L40)
 
 ***
 
@@ -186,7 +186,7 @@ Scores of features.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L392)
+[generated/feature\_selection/SelectKBest.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L392)
 
 ## Methods
 
@@ -204,7 +204,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L92)
+[generated/feature\_selection/SelectKBest.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L92)
 
 ***
 
@@ -232,7 +232,7 @@ The target values (class labels in classification, real numbers in regression). 
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L109)
+[generated/feature\_selection/SelectKBest.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L109)
 
 ***
 
@@ -266,7 +266,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L148)
+[generated/feature\_selection/SelectKBest.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L148)
 
 ***
 
@@ -290,7 +290,7 @@ Input features.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L190)
+[generated/feature\_selection/SelectKBest.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L190)
 
 ***
 
@@ -316,7 +316,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L226)
+[generated/feature\_selection/SelectKBest.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L226)
 
 ***
 
@@ -344,7 +344,7 @@ If `true`, the return value will be an array of integers, rather than a boolean 
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L260)
+[generated/feature\_selection/SelectKBest.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L260)
 
 ***
 
@@ -366,7 +366,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L53)
+[generated/feature\_selection/SelectKBest.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L53)
 
 ***
 
@@ -390,7 +390,7 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L294)
+[generated/feature\_selection/SelectKBest.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L294)
 
 ***
 
@@ -416,7 +416,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L328)
+[generated/feature\_selection/SelectKBest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L328)
 
 ***
 
@@ -440,4 +440,4 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/SelectKBest.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L360)
+[generated/feature\_selection/SelectKBest.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L360)

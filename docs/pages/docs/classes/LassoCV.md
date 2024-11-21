@@ -124,7 +124,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L27)
+[generated/linear\_model/LassoCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L27)
 
 ## Properties
 
@@ -134,7 +134,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L25)
+[generated/linear\_model/LassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L25)
 
 ***
 
@@ -144,7 +144,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L24)
+[generated/linear\_model/LassoCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L24)
 
 ***
 
@@ -154,7 +154,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L23)
+[generated/linear\_model/LassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L23)
 
 ***
 
@@ -164,7 +164,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L20)
+[generated/linear\_model/LassoCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L20)
 
 ***
 
@@ -174,7 +174,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L21)
+[generated/linear\_model/LassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L21)
 
 ## Accessors
 
@@ -192,7 +192,7 @@ The amount of penalization chosen by cross validation.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L530)
+[generated/linear\_model/LassoCV.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L530)
 
 ***
 
@@ -210,7 +210,7 @@ The grid of alphas used for fitting.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L620)
+[generated/linear\_model/LassoCV.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L620)
 
 ***
 
@@ -228,7 +228,7 @@ Parameter vector (w in the cost function formula).
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L552)
+[generated/linear\_model/LassoCV.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L552)
 
 ***
 
@@ -246,7 +246,7 @@ The dual gap at the end of the optimization for the optimal alpha (`alpha\_`).
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L643)
+[generated/linear\_model/LassoCV.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L643)
 
 ***
 
@@ -264,7 +264,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L714)
+[generated/linear\_model/LassoCV.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L714)
 
 ***
 
@@ -282,7 +282,7 @@ Independent term in decision function.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L574)
+[generated/linear\_model/LassoCV.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L574)
 
 ***
 
@@ -300,7 +300,7 @@ Mean square error for the test set on each fold, varying alpha.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L597)
+[generated/linear\_model/LassoCV.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L597)
 
 ***
 
@@ -318,7 +318,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L689)
+[generated/linear\_model/LassoCV.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L689)
 
 ***
 
@@ -336,7 +336,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L666)
+[generated/linear\_model/LassoCV.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L666)
 
 ***
 
@@ -364,7 +364,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L122)
+[generated/linear\_model/LassoCV.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L122)
 
 ## Methods
 
@@ -382,7 +382,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L173)
+[generated/linear\_model/LassoCV.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L173)
 
 ***
 
@@ -420,7 +420,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L192)
+[generated/linear\_model/LassoCV.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L192)
 
 ***
 
@@ -446,7 +446,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L241)
+[generated/linear\_model/LassoCV.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L241)
 
 ***
 
@@ -468,7 +468,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L135)
+[generated/linear\_model/LassoCV.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L135)
 
 ***
 
@@ -572,7 +572,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L277)
+[generated/linear\_model/LassoCV.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L277)
 
 ***
 
@@ -596,7 +596,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L383)
+[generated/linear\_model/LassoCV.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L383)
 
 ***
 
@@ -630,7 +630,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L416)
+[generated/linear\_model/LassoCV.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L416)
 
 ***
 
@@ -658,7 +658,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L462)
+[generated/linear\_model/LassoCV.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L462)
 
 ***
 
@@ -686,4 +686,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/LassoCV.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoCV.ts#L498)
+[generated/linear\_model/LassoCV.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoCV.ts#L498)

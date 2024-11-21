@@ -50,7 +50,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of the data
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L29)
+[generated/model\_selection/ShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L29)
 
 ## Properties
 
@@ -60,7 +60,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of the data
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L27)
+[generated/model\_selection/ShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L27)
 
 ***
 
@@ -70,7 +70,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of the data
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L26)
+[generated/model\_selection/ShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L26)
 
 ***
 
@@ -80,7 +80,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of the data
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L25)
+[generated/model\_selection/ShuffleSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L25)
 
 ***
 
@@ -90,7 +90,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of the data
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L22)
+[generated/model\_selection/ShuffleSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L22)
 
 ***
 
@@ -100,7 +100,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of the data
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L23)
+[generated/model\_selection/ShuffleSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L23)
 
 ## Accessors
 
@@ -128,7 +128,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of the data
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L56)
+[generated/model\_selection/ShuffleSplit.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L56)
 
 ## Methods
 
@@ -146,7 +146,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L108)
+[generated/model\_selection/ShuffleSplit.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L108)
 
 ***
 
@@ -172,7 +172,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L127)
+[generated/model\_selection/ShuffleSplit.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L127)
 
 ***
 
@@ -204,7 +204,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L161)
+[generated/model\_selection/ShuffleSplit.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L161)
 
 ***
 
@@ -226,7 +226,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L69)
+[generated/model\_selection/ShuffleSplit.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L69)
 
 ***
 
@@ -258,4 +258,4 @@ The target variable for supervised learning problems.
 
 #### Defined in
 
-[generated/model\_selection/ShuffleSplit.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L203)
+[generated/model\_selection/ShuffleSplit.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L203)

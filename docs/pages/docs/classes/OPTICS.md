@@ -122,7 +122,7 @@ Determines the minimum steepness on the reachability plot that constitutes a clu
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L29)
+[generated/cluster/OPTICS.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L29)
 
 ## Properties
 
@@ -132,7 +132,7 @@ Determines the minimum steepness on the reachability plot that constitutes a clu
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L27)
+[generated/cluster/OPTICS.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L27)
 
 ***
 
@@ -142,7 +142,7 @@ Determines the minimum steepness on the reachability plot that constitutes a clu
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L26)
+[generated/cluster/OPTICS.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L26)
 
 ***
 
@@ -152,7 +152,7 @@ Determines the minimum steepness on the reachability plot that constitutes a clu
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L25)
+[generated/cluster/OPTICS.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L25)
 
 ***
 
@@ -162,7 +162,7 @@ Determines the minimum steepness on the reachability plot that constitutes a clu
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L22)
+[generated/cluster/OPTICS.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L22)
 
 ***
 
@@ -172,7 +172,7 @@ Determines the minimum steepness on the reachability plot that constitutes a clu
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L23)
+[generated/cluster/OPTICS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L23)
 
 ## Accessors
 
@@ -190,7 +190,7 @@ The list of clusters in the form of `\[start, end\]` in each row, with all indic
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L423)
+[generated/cluster/OPTICS.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L423)
 
 ***
 
@@ -208,7 +208,7 @@ Distance at which each sample becomes a core point, indexed by object order. Poi
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L375)
+[generated/cluster/OPTICS.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L375)
 
 ***
 
@@ -226,7 +226,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L471)
+[generated/cluster/OPTICS.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L471)
 
 ***
 
@@ -244,7 +244,7 @@ Cluster labels for each point in the dataset given to fit(). Noisy samples and p
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L307)
+[generated/cluster/OPTICS.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L307)
 
 ***
 
@@ -262,7 +262,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L448)
+[generated/cluster/OPTICS.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L448)
 
 ***
 
@@ -280,7 +280,7 @@ The cluster ordered list of sample indices.
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L352)
+[generated/cluster/OPTICS.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L352)
 
 ***
 
@@ -298,7 +298,7 @@ Point that a sample was reached from, indexed by object order. Seed points have 
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L400)
+[generated/cluster/OPTICS.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L400)
 
 ***
 
@@ -326,7 +326,7 @@ Point that a sample was reached from, indexed by object order. Seed points have 
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L124)
+[generated/cluster/OPTICS.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L124)
 
 ***
 
@@ -344,7 +344,7 @@ Reachability distances per sample, indexed by object order. Use `clust.reachabil
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L329)
+[generated/cluster/OPTICS.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L329)
 
 ## Methods
 
@@ -362,7 +362,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
+[generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
 
 ***
 
@@ -392,7 +392,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L194)
+[generated/cluster/OPTICS.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L194)
 
 ***
 
@@ -424,7 +424,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L231)
+[generated/cluster/OPTICS.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L231)
 
 ***
 
@@ -450,7 +450,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L275)
+[generated/cluster/OPTICS.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L275)
 
 ***
 
@@ -472,4 +472,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/OPTICS.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/OPTICS.ts#L137)
+[generated/cluster/OPTICS.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/OPTICS.ts#L137)

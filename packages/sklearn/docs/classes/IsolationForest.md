@@ -100,7 +100,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L33)
+[generated/ensemble/IsolationForest.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L33)
 
 ## Properties
 
@@ -110,7 +110,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L31)
+[generated/ensemble/IsolationForest.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L31)
 
 ***
 
@@ -120,7 +120,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L30)
+[generated/ensemble/IsolationForest.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L30)
 
 ***
 
@@ -130,7 +130,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L29)
+[generated/ensemble/IsolationForest.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L29)
 
 ***
 
@@ -140,7 +140,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L26)
+[generated/ensemble/IsolationForest.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L26)
 
 ***
 
@@ -150,7 +150,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L27)
+[generated/ensemble/IsolationForest.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L27)
 
 ## Accessors
 
@@ -168,7 +168,7 @@ The child estimator template used to create the collection of fitted sub-estimat
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L434)
+[generated/ensemble/IsolationForest.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L434)
 
 ***
 
@@ -186,7 +186,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L459)
+[generated/ensemble/IsolationForest.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L459)
 
 ***
 
@@ -204,7 +204,7 @@ The subset of drawn features for each base estimator.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L484)
+[generated/ensemble/IsolationForest.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L484)
 
 ***
 
@@ -222,7 +222,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L584)
+[generated/ensemble/IsolationForest.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L584)
 
 ***
 
@@ -240,7 +240,7 @@ The actual number of samples.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L509)
+[generated/ensemble/IsolationForest.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L509)
 
 ***
 
@@ -258,7 +258,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L559)
+[generated/ensemble/IsolationForest.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L559)
 
 ***
 
@@ -276,7 +276,7 @@ Offset used to define the decision function from the raw scores. We have the rel
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L534)
+[generated/ensemble/IsolationForest.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L534)
 
 ***
 
@@ -304,7 +304,7 @@ Offset used to define the decision function from the raw scores. We have the rel
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L99)
+[generated/ensemble/IsolationForest.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L99)
 
 ## Methods
 
@@ -332,7 +332,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L172)
+[generated/ensemble/IsolationForest.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L172)
 
 ***
 
@@ -350,7 +350,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L151)
+[generated/ensemble/IsolationForest.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L151)
 
 ***
 
@@ -382,7 +382,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L206)
+[generated/ensemble/IsolationForest.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L206)
 
 ***
 
@@ -416,7 +416,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L250)
+[generated/ensemble/IsolationForest.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L250)
 
 ***
 
@@ -442,7 +442,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L294)
+[generated/ensemble/IsolationForest.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L294)
 
 ***
 
@@ -464,7 +464,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L112)
+[generated/ensemble/IsolationForest.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L112)
 
 ***
 
@@ -488,7 +488,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L328)
+[generated/ensemble/IsolationForest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L328)
 
 ***
 
@@ -516,7 +516,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L364)
+[generated/ensemble/IsolationForest.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L364)
 
 ***
 
@@ -544,4 +544,4 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/IsolationForest.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L400)
+[generated/ensemble/IsolationForest.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L400)

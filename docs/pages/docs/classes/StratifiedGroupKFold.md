@@ -52,7 +52,7 @@ Whether to shuffle each class’s samples before splitting into batches. Note th
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L31)
+[generated/model\_selection/StratifiedGroupKFold.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L31)
 
 ## Properties
 
@@ -62,7 +62,7 @@ Whether to shuffle each class’s samples before splitting into batches. Note th
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L29)
+[generated/model\_selection/StratifiedGroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L29)
 
 ***
 
@@ -72,7 +72,7 @@ Whether to shuffle each class’s samples before splitting into batches. Note th
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L28)
+[generated/model\_selection/StratifiedGroupKFold.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L28)
 
 ***
 
@@ -82,7 +82,7 @@ Whether to shuffle each class’s samples before splitting into batches. Note th
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L27)
+[generated/model\_selection/StratifiedGroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L27)
 
 ***
 
@@ -92,7 +92,7 @@ Whether to shuffle each class’s samples before splitting into batches. Note th
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L24)
+[generated/model\_selection/StratifiedGroupKFold.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L24)
 
 ***
 
@@ -102,7 +102,7 @@ Whether to shuffle each class’s samples before splitting into batches. Note th
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L25)
+[generated/model\_selection/StratifiedGroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L25)
 
 ## Accessors
 
@@ -130,7 +130,7 @@ Whether to shuffle each class’s samples before splitting into batches. Note th
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L55)
+[generated/model\_selection/StratifiedGroupKFold.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L55)
 
 ## Methods
 
@@ -148,7 +148,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L111)
+[generated/model\_selection/StratifiedGroupKFold.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L111)
 
 ***
 
@@ -174,7 +174,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L130)
+[generated/model\_selection/StratifiedGroupKFold.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L130)
 
 ***
 
@@ -206,7 +206,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L166)
+[generated/model\_selection/StratifiedGroupKFold.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L166)
 
 ***
 
@@ -228,7 +228,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L68)
+[generated/model\_selection/StratifiedGroupKFold.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L68)
 
 ***
 
@@ -256,7 +256,7 @@ Metadata routing for `groups` parameter in `split`.
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L216)
+[generated/model\_selection/StratifiedGroupKFold.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L216)
 
 ***
 
@@ -288,4 +288,4 @@ The target variable for supervised learning problems.
 
 #### Defined in
 
-[generated/model\_selection/StratifiedGroupKFold.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L252)
+[generated/model\_selection/StratifiedGroupKFold.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L252)

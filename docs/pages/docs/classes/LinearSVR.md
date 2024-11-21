@@ -106,7 +106,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L29)
+[generated/svm/LinearSVR.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L29)
 
 ## Properties
 
@@ -116,7 +116,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L27)
+[generated/svm/LinearSVR.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L27)
 
 ***
 
@@ -126,7 +126,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L26)
+[generated/svm/LinearSVR.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L26)
 
 ***
 
@@ -136,7 +136,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L25)
+[generated/svm/LinearSVR.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L25)
 
 ***
 
@@ -146,7 +146,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L22)
+[generated/svm/LinearSVR.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L22)
 
 ***
 
@@ -156,7 +156,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L23)
+[generated/svm/LinearSVR.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L23)
 
 ## Accessors
 
@@ -176,7 +176,7 @@ Weights assigned to the features (coefficients in the primal problem).
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L397)
+[generated/svm/LinearSVR.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L397)
 
 ***
 
@@ -194,7 +194,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L468)
+[generated/svm/LinearSVR.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L468)
 
 ***
 
@@ -212,7 +212,7 @@ Constants in decision function.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L420)
+[generated/svm/LinearSVR.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L420)
 
 ***
 
@@ -230,7 +230,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L443)
+[generated/svm/LinearSVR.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L443)
 
 ***
 
@@ -248,7 +248,7 @@ Maximum number of iterations run across all classes.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L493)
+[generated/svm/LinearSVR.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L493)
 
 ***
 
@@ -276,7 +276,7 @@ Maximum number of iterations run across all classes.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L102)
+[generated/svm/LinearSVR.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L102)
 
 ## Methods
 
@@ -294,7 +294,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L153)
+[generated/svm/LinearSVR.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L153)
 
 ***
 
@@ -326,7 +326,7 @@ Target vector relative to X.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L170)
+[generated/svm/LinearSVR.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L170)
 
 ***
 
@@ -352,7 +352,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L214)
+[generated/svm/LinearSVR.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L214)
 
 ***
 
@@ -374,7 +374,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L115)
+[generated/svm/LinearSVR.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L115)
 
 ***
 
@@ -398,7 +398,7 @@ Samples.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L248)
+[generated/svm/LinearSVR.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L248)
 
 ***
 
@@ -432,7 +432,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L281)
+[generated/svm/LinearSVR.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L281)
 
 ***
 
@@ -460,7 +460,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L327)
+[generated/svm/LinearSVR.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L327)
 
 ***
 
@@ -488,4 +488,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/svm/LinearSVR.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/LinearSVR.ts#L363)
+[generated/svm/LinearSVR.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/svm/LinearSVR.ts#L363)

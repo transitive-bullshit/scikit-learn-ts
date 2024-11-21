@@ -56,7 +56,7 @@ The proportion of points to be included in the support of the raw MCD estimate. 
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L23)
+[generated/covariance/EllipticEnvelope.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L23)
 
 ## Properties
 
@@ -66,7 +66,7 @@ The proportion of points to be included in the support of the raw MCD estimate. 
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L21)
+[generated/covariance/EllipticEnvelope.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L21)
 
 ***
 
@@ -76,7 +76,7 @@ The proportion of points to be included in the support of the raw MCD estimate. 
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L20)
+[generated/covariance/EllipticEnvelope.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L20)
 
 ***
 
@@ -86,7 +86,7 @@ The proportion of points to be included in the support of the raw MCD estimate. 
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L19)
+[generated/covariance/EllipticEnvelope.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L19)
 
 ***
 
@@ -96,7 +96,7 @@ The proportion of points to be included in the support of the raw MCD estimate. 
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L16)
+[generated/covariance/EllipticEnvelope.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L16)
 
 ***
 
@@ -106,7 +106,7 @@ The proportion of points to be included in the support of the raw MCD estimate. 
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L17)
+[generated/covariance/EllipticEnvelope.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L17)
 
 ## Accessors
 
@@ -124,7 +124,7 @@ Estimated robust covariance matrix.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L673)
+[generated/covariance/EllipticEnvelope.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L673)
 
 ***
 
@@ -142,7 +142,7 @@ Mahalanobis distances of the training set (on which [`fit`](#sklearn.covariance.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L862)
+[generated/covariance/EllipticEnvelope.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L862)
 
 ***
 
@@ -160,7 +160,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:916](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L916)
+[generated/covariance/EllipticEnvelope.ts:916](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L916)
 
 ***
 
@@ -178,7 +178,7 @@ Estimated robust location.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L646)
+[generated/covariance/EllipticEnvelope.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L646)
 
 ***
 
@@ -196,7 +196,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:889](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L889)
+[generated/covariance/EllipticEnvelope.ts:889](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L889)
 
 ***
 
@@ -214,7 +214,7 @@ Offset used to define the decision function from the raw scores. We have the rel
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L754)
+[generated/covariance/EllipticEnvelope.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L754)
 
 ***
 
@@ -232,7 +232,7 @@ Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L700)
+[generated/covariance/EllipticEnvelope.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L700)
 
 ***
 
@@ -260,7 +260,7 @@ Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L59)
+[generated/covariance/EllipticEnvelope.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L59)
 
 ***
 
@@ -278,7 +278,7 @@ The raw robust estimated covariance before correction and re-weighting.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L808)
+[generated/covariance/EllipticEnvelope.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L808)
 
 ***
 
@@ -296,7 +296,7 @@ The raw robust estimated location before correction and re-weighting.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L781)
+[generated/covariance/EllipticEnvelope.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L781)
 
 ***
 
@@ -314,7 +314,7 @@ A mask of the observations that have been used to compute the raw robust estimat
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
+[generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
 
 ***
 
@@ -332,7 +332,7 @@ A mask of the observations that have been used to compute the robust estimates o
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L727)
+[generated/covariance/EllipticEnvelope.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L727)
 
 ## Methods
 
@@ -358,7 +358,7 @@ The data matrix, with p features and n samples. The data set must be the one whi
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L132)
+[generated/covariance/EllipticEnvelope.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L132)
 
 ***
 
@@ -382,7 +382,7 @@ The data matrix.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L168)
+[generated/covariance/EllipticEnvelope.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L168)
 
 ***
 
@@ -400,7 +400,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L113)
+[generated/covariance/EllipticEnvelope.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L113)
 
 ***
 
@@ -448,7 +448,7 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L204)
+[generated/covariance/EllipticEnvelope.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L204)
 
 ***
 
@@ -476,7 +476,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L259)
+[generated/covariance/EllipticEnvelope.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L259)
 
 ***
 
@@ -510,7 +510,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L300)
+[generated/covariance/EllipticEnvelope.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L300)
 
 ***
 
@@ -536,7 +536,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L346)
+[generated/covariance/EllipticEnvelope.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L346)
 
 ***
 
@@ -560,7 +560,7 @@ The precision matrix associated to the current covariance object.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L382)
+[generated/covariance/EllipticEnvelope.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L382)
 
 ***
 
@@ -582,7 +582,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L72)
+[generated/covariance/EllipticEnvelope.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L72)
 
 ***
 
@@ -606,7 +606,7 @@ The observations, the Mahalanobis distances of the which we compute. Observation
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L418)
+[generated/covariance/EllipticEnvelope.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L418)
 
 ***
 
@@ -630,7 +630,7 @@ The data matrix.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L452)
+[generated/covariance/EllipticEnvelope.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L452)
 
 ***
 
@@ -656,7 +656,7 @@ The data matrix, with p features and n samples. The data set must be the one whi
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L488)
+[generated/covariance/EllipticEnvelope.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L488)
 
 ***
 
@@ -690,7 +690,7 @@ True labels for X.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L526)
+[generated/covariance/EllipticEnvelope.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L526)
 
 ***
 
@@ -714,7 +714,7 @@ The data matrix.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L570)
+[generated/covariance/EllipticEnvelope.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L570)
 
 ***
 
@@ -742,4 +742,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/covariance/EllipticEnvelope.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L610)
+[generated/covariance/EllipticEnvelope.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L610)

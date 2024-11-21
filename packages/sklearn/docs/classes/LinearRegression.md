@@ -52,7 +52,7 @@ When set to `true`, forces the coefficients to be positive. This option is only 
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L23)
+[generated/linear\_model/LinearRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L23)
 
 ## Properties
 
@@ -62,7 +62,7 @@ When set to `true`, forces the coefficients to be positive. This option is only 
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L21)
+[generated/linear\_model/LinearRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L21)
 
 ***
 
@@ -72,7 +72,7 @@ When set to `true`, forces the coefficients to be positive. This option is only 
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L20)
+[generated/linear\_model/LinearRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L20)
 
 ***
 
@@ -82,7 +82,7 @@ When set to `true`, forces the coefficients to be positive. This option is only 
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L19)
+[generated/linear\_model/LinearRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L19)
 
 ***
 
@@ -92,7 +92,7 @@ When set to `true`, forces the coefficients to be positive. This option is only 
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L16)
+[generated/linear\_model/LinearRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L16)
 
 ***
 
@@ -102,7 +102,7 @@ When set to `true`, forces the coefficients to be positive. This option is only 
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L17)
+[generated/linear\_model/LinearRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L17)
 
 ## Accessors
 
@@ -120,7 +120,7 @@ Estimated coefficients for the linear regression problem. If multiple targets ar
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L367)
+[generated/linear\_model/LinearRegression.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L367)
 
 ***
 
@@ -138,7 +138,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L502)
+[generated/linear\_model/LinearRegression.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L502)
 
 ***
 
@@ -156,7 +156,7 @@ Independent term in the linear model. Set to 0.0 if `fit\_intercept \= False`.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L448)
+[generated/linear\_model/LinearRegression.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L448)
 
 ***
 
@@ -174,7 +174,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L475)
+[generated/linear\_model/LinearRegression.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L475)
 
 ***
 
@@ -202,7 +202,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L54)
+[generated/linear\_model/LinearRegression.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L54)
 
 ***
 
@@ -220,7 +220,7 @@ Rank of matrix `X`. Only available when `X` is dense.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L394)
+[generated/linear\_model/LinearRegression.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L394)
 
 ***
 
@@ -238,7 +238,7 @@ Singular values of `X`. Only available when `X` is dense.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L421)
+[generated/linear\_model/LinearRegression.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L421)
 
 ## Methods
 
@@ -256,7 +256,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L108)
+[generated/linear\_model/LinearRegression.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L108)
 
 ***
 
@@ -288,7 +288,7 @@ Target values. Will be cast to X’s dtype if necessary.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L125)
+[generated/linear\_model/LinearRegression.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L125)
 
 ***
 
@@ -314,7 +314,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L171)
+[generated/linear\_model/LinearRegression.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L171)
 
 ***
 
@@ -336,7 +336,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L67)
+[generated/linear\_model/LinearRegression.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L67)
 
 ***
 
@@ -360,7 +360,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L207)
+[generated/linear\_model/LinearRegression.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L207)
 
 ***
 
@@ -394,7 +394,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L243)
+[generated/linear\_model/LinearRegression.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L243)
 
 ***
 
@@ -422,7 +422,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L291)
+[generated/linear\_model/LinearRegression.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L291)
 
 ***
 
@@ -450,4 +450,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/LinearRegression.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L331)
+[generated/linear\_model/LinearRegression.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L331)

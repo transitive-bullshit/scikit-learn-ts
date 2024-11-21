@@ -114,7 +114,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L27)
+[generated/ensemble/RandomTreesEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L27)
 
 ## Properties
 
@@ -124,7 +124,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L25)
+[generated/ensemble/RandomTreesEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L25)
 
 ***
 
@@ -134,7 +134,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L24)
+[generated/ensemble/RandomTreesEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L24)
 
 ***
 
@@ -144,7 +144,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L23)
+[generated/ensemble/RandomTreesEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L23)
 
 ***
 
@@ -154,7 +154,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L20)
+[generated/ensemble/RandomTreesEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L20)
 
 ***
 
@@ -164,7 +164,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L21)
+[generated/ensemble/RandomTreesEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L21)
 
 ## Accessors
 
@@ -182,7 +182,7 @@ The child estimator template used to create the collection of fitted sub-estimat
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L533)
+[generated/ensemble/RandomTreesEmbedding.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L533)
 
 ***
 
@@ -200,7 +200,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L560)
+[generated/ensemble/RandomTreesEmbedding.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L560)
 
 ***
 
@@ -218,7 +218,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L614)
+[generated/ensemble/RandomTreesEmbedding.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L614)
 
 ***
 
@@ -236,7 +236,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L587)
+[generated/ensemble/RandomTreesEmbedding.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L587)
 
 ***
 
@@ -254,7 +254,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L641)
+[generated/ensemble/RandomTreesEmbedding.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L641)
 
 ***
 
@@ -272,7 +272,7 @@ One-hot encoder used to create the sparse embedding.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L668)
+[generated/ensemble/RandomTreesEmbedding.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L668)
 
 ***
 
@@ -300,7 +300,7 @@ One-hot encoder used to create the sparse embedding.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L112)
+[generated/ensemble/RandomTreesEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L112)
 
 ## Methods
 
@@ -324,7 +324,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L185)
+[generated/ensemble/RandomTreesEmbedding.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L185)
 
 ***
 
@@ -348,7 +348,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L219)
+[generated/ensemble/RandomTreesEmbedding.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L219)
 
 ***
 
@@ -366,7 +366,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L168)
+[generated/ensemble/RandomTreesEmbedding.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L168)
 
 ***
 
@@ -398,7 +398,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L255)
+[generated/ensemble/RandomTreesEmbedding.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L255)
 
 ***
 
@@ -430,7 +430,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L299)
+[generated/ensemble/RandomTreesEmbedding.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L299)
 
 ***
 
@@ -454,7 +454,7 @@ Only used to validate feature names with the names seen in [`fit`](#sklearn.ense
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L345)
+[generated/ensemble/RandomTreesEmbedding.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L345)
 
 ***
 
@@ -480,7 +480,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L383)
+[generated/ensemble/RandomTreesEmbedding.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L383)
 
 ***
 
@@ -502,7 +502,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L125)
+[generated/ensemble/RandomTreesEmbedding.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L125)
 
 ***
 
@@ -530,7 +530,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L423)
+[generated/ensemble/RandomTreesEmbedding.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L423)
 
 ***
 
@@ -556,7 +556,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L461)
+[generated/ensemble/RandomTreesEmbedding.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L461)
 
 ***
 
@@ -580,4 +580,4 @@ Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Spa
 
 #### Defined in
 
-[generated/ensemble/RandomTreesEmbedding.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L497)
+[generated/ensemble/RandomTreesEmbedding.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L497)

@@ -106,7 +106,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L25)
+[generated/linear\_model/MultiTaskLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L25)
 
 ## Properties
 
@@ -116,7 +116,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L23)
+[generated/linear\_model/MultiTaskLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L23)
 
 ***
 
@@ -126,7 +126,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L22)
+[generated/linear\_model/MultiTaskLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L22)
 
 ***
 
@@ -136,7 +136,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L21)
+[generated/linear\_model/MultiTaskLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L21)
 
 ***
 
@@ -146,7 +146,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L18)
+[generated/linear\_model/MultiTaskLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L18)
 
 ***
 
@@ -156,7 +156,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L19)
+[generated/linear\_model/MultiTaskLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L19)
 
 ## Accessors
 
@@ -174,7 +174,7 @@ The amount of penalization chosen by cross validation.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L587)
+[generated/linear\_model/MultiTaskLassoCV.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L587)
 
 ***
 
@@ -192,7 +192,7 @@ The grid of alphas used for fitting.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L641)
+[generated/linear\_model/MultiTaskLassoCV.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L641)
 
 ***
 
@@ -210,7 +210,7 @@ Parameter vector (W in the cost function formula). Note that `coef\_` stores the
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L560)
+[generated/linear\_model/MultiTaskLassoCV.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L560)
 
 ***
 
@@ -228,7 +228,7 @@ The dual gap at the end of the optimization for the optimal alpha.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L695)
+[generated/linear\_model/MultiTaskLassoCV.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L695)
 
 ***
 
@@ -246,7 +246,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L749)
+[generated/linear\_model/MultiTaskLassoCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L749)
 
 ***
 
@@ -264,7 +264,7 @@ Independent term in decision function.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L533)
+[generated/linear\_model/MultiTaskLassoCV.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L533)
 
 ***
 
@@ -282,7 +282,7 @@ Mean square error for the test set on each fold, varying alpha.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L614)
+[generated/linear\_model/MultiTaskLassoCV.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L614)
 
 ***
 
@@ -300,7 +300,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L722)
+[generated/linear\_model/MultiTaskLassoCV.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L722)
 
 ***
 
@@ -318,7 +318,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L668)
+[generated/linear\_model/MultiTaskLassoCV.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L668)
 
 ***
 
@@ -346,7 +346,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L106)
+[generated/linear\_model/MultiTaskLassoCV.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L106)
 
 ## Methods
 
@@ -364,7 +364,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L160)
+[generated/linear\_model/MultiTaskLassoCV.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L160)
 
 ***
 
@@ -398,7 +398,7 @@ Target. Will be cast to X’s dtype if necessary.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L179)
+[generated/linear\_model/MultiTaskLassoCV.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L179)
 
 ***
 
@@ -424,7 +424,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L225)
+[generated/linear\_model/MultiTaskLassoCV.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L225)
 
 ***
 
@@ -446,7 +446,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L119)
+[generated/linear\_model/MultiTaskLassoCV.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L119)
 
 ***
 
@@ -550,7 +550,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L265)
+[generated/linear\_model/MultiTaskLassoCV.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L265)
 
 ***
 
@@ -574,7 +574,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L373)
+[generated/linear\_model/MultiTaskLassoCV.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L373)
 
 ***
 
@@ -608,7 +608,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L409)
+[generated/linear\_model/MultiTaskLassoCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L409)
 
 ***
 
@@ -636,7 +636,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L457)
+[generated/linear\_model/MultiTaskLassoCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L457)
 
 ***
 
@@ -664,4 +664,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/MultiTaskLassoCV.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L497)
+[generated/linear\_model/MultiTaskLassoCV.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L497)

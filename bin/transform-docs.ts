@@ -84,7 +84,7 @@ async function main() {
   {
     // top-level nextra _meta.json file
     const docsMeta = {
-      modules: 'Table of Contents',
+      // modules: 'Table of Contents',
       classes: 'Classes',
       functions: 'Functions',
       interfaces: {

@@ -126,7 +126,7 @@ Verbosity flag, controls the debug messages that are issued as functions are eva
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L25)
+[generated/impute/IterativeImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L25)
 
 ## Properties
 
@@ -136,7 +136,7 @@ Verbosity flag, controls the debug messages that are issued as functions are eva
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L23)
+[generated/impute/IterativeImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L23)
 
 ***
 
@@ -146,7 +146,7 @@ Verbosity flag, controls the debug messages that are issued as functions are eva
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L22)
+[generated/impute/IterativeImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L22)
 
 ***
 
@@ -156,7 +156,7 @@ Verbosity flag, controls the debug messages that are issued as functions are eva
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L21)
+[generated/impute/IterativeImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L21)
 
 ***
 
@@ -166,7 +166,7 @@ Verbosity flag, controls the debug messages that are issued as functions are eva
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L18)
+[generated/impute/IterativeImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L18)
 
 ***
 
@@ -176,7 +176,7 @@ Verbosity flag, controls the debug messages that are issued as functions are eva
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L19)
+[generated/impute/IterativeImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L19)
 
 ## Accessors
 
@@ -194,7 +194,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L548)
+[generated/impute/IterativeImputer.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L548)
 
 ***
 
@@ -212,7 +212,7 @@ Each tuple has `(feat\_idx, neighbor\_feat\_idx, estimator)`, where `feat\_idx` 
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L467)
+[generated/impute/IterativeImputer.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L467)
 
 ***
 
@@ -230,7 +230,7 @@ Indicator used to add binary indicators for missing values. `undefined` if `add\
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L602)
+[generated/impute/IterativeImputer.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L602)
 
 ***
 
@@ -248,7 +248,7 @@ Imputer used to initialize the missing values.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L440)
+[generated/impute/IterativeImputer.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L440)
 
 ***
 
@@ -266,7 +266,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L521)
+[generated/impute/IterativeImputer.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L521)
 
 ***
 
@@ -284,7 +284,7 @@ Number of features with missing values.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L575)
+[generated/impute/IterativeImputer.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L575)
 
 ***
 
@@ -302,7 +302,7 @@ Number of iteration rounds that occurred. Will be less than `self.max\_iter` if 
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L494)
+[generated/impute/IterativeImputer.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L494)
 
 ***
 
@@ -330,7 +330,7 @@ Number of iteration rounds that occurred. Will be less than `self.max\_iter` if 
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L133)
+[generated/impute/IterativeImputer.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L133)
 
 ***
 
@@ -348,7 +348,7 @@ RandomState instance that is generated either from a seed, the random number gen
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L629)
+[generated/impute/IterativeImputer.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L629)
 
 ## Methods
 
@@ -366,7 +366,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L187)
+[generated/impute/IterativeImputer.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L187)
 
 ***
 
@@ -398,7 +398,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L204)
+[generated/impute/IterativeImputer.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L204)
 
 ***
 
@@ -430,7 +430,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L248)
+[generated/impute/IterativeImputer.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L248)
 
 ***
 
@@ -454,7 +454,7 @@ Input features.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L294)
+[generated/impute/IterativeImputer.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L294)
 
 ***
 
@@ -480,7 +480,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L332)
+[generated/impute/IterativeImputer.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L332)
 
 ***
 
@@ -502,7 +502,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L146)
+[generated/impute/IterativeImputer.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L146)
 
 ***
 
@@ -528,7 +528,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L370)
+[generated/impute/IterativeImputer.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L370)
 
 ***
 
@@ -554,4 +554,4 @@ The input data to complete.
 
 #### Defined in
 
-[generated/impute/IterativeImputer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/IterativeImputer.ts#L406)
+[generated/impute/IterativeImputer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/IterativeImputer.ts#L406)

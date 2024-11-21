@@ -36,7 +36,7 @@ Portion of the largest variance of all features that is added to variances for c
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L23)
+[generated/naive\_bayes/GaussianNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Portion of the largest variance of all features that is added to variances for c
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L21)
+[generated/naive\_bayes/GaussianNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ Portion of the largest variance of all features that is added to variances for c
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L20)
+[generated/naive\_bayes/GaussianNB.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ Portion of the largest variance of all features that is added to variances for c
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L19)
+[generated/naive\_bayes/GaussianNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ Portion of the largest variance of all features that is added to variances for c
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L16)
+[generated/naive\_bayes/GaussianNB.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ Portion of the largest variance of all features that is added to variances for c
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L17)
+[generated/naive\_bayes/GaussianNB.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L17)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ number of training samples observed in each class.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L533)
+[generated/naive\_bayes/GaussianNB.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L533)
 
 ***
 
@@ -122,7 +122,7 @@ probability of each class.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L558)
+[generated/naive\_bayes/GaussianNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L558)
 
 ***
 
@@ -140,7 +140,7 @@ class labels known to the classifier.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L583)
+[generated/naive\_bayes/GaussianNB.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L583)
 
 ***
 
@@ -158,7 +158,7 @@ absolute additive value to variances.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L606)
+[generated/naive\_bayes/GaussianNB.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L606)
 
 ***
 
@@ -176,7 +176,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L654)
+[generated/naive\_bayes/GaussianNB.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L654)
 
 ***
 
@@ -194,7 +194,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L629)
+[generated/naive\_bayes/GaussianNB.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L629)
 
 ***
 
@@ -222,7 +222,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L40)
+[generated/naive\_bayes/GaussianNB.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L40)
 
 ***
 
@@ -240,7 +240,7 @@ mean of each feature per class.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:702](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L702)
+[generated/naive\_bayes/GaussianNB.ts:702](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L702)
 
 ***
 
@@ -258,7 +258,7 @@ Variance of each feature per class.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L679)
+[generated/naive\_bayes/GaussianNB.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L679)
 
 ## Methods
 
@@ -276,7 +276,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L92)
+[generated/naive\_bayes/GaussianNB.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L92)
 
 ***
 
@@ -308,7 +308,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L109)
+[generated/naive\_bayes/GaussianNB.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L109)
 
 ***
 
@@ -334,7 +334,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L153)
+[generated/naive\_bayes/GaussianNB.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L153)
 
 ***
 
@@ -356,7 +356,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L53)
+[generated/naive\_bayes/GaussianNB.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L53)
 
 ***
 
@@ -400,7 +400,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L193)
+[generated/naive\_bayes/GaussianNB.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L193)
 
 ***
 
@@ -424,7 +424,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L242)
+[generated/naive\_bayes/GaussianNB.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L242)
 
 ***
 
@@ -450,7 +450,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L276)
+[generated/naive\_bayes/GaussianNB.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L276)
 
 ***
 
@@ -474,7 +474,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L310)
+[generated/naive\_bayes/GaussianNB.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L310)
 
 ***
 
@@ -498,7 +498,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L342)
+[generated/naive\_bayes/GaussianNB.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L342)
 
 ***
 
@@ -532,7 +532,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L376)
+[generated/naive\_bayes/GaussianNB.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L376)
 
 ***
 
@@ -560,7 +560,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L422)
+[generated/naive\_bayes/GaussianNB.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L422)
 
 ***
 
@@ -592,7 +592,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L458)
+[generated/naive\_bayes/GaussianNB.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L458)
 
 ***
 
@@ -620,4 +620,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/naive\_bayes/GaussianNB.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L501)
+[generated/naive\_bayes/GaussianNB.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L501)

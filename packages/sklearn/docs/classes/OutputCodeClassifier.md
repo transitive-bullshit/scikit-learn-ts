@@ -48,7 +48,7 @@ The generator used to initialize the codebook. Pass an int for reproducible outp
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L25)
+[generated/multiclass/OutputCodeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L25)
 
 ## Properties
 
@@ -58,7 +58,7 @@ The generator used to initialize the codebook. Pass an int for reproducible outp
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L23)
+[generated/multiclass/OutputCodeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L23)
 
 ***
 
@@ -68,7 +68,7 @@ The generator used to initialize the codebook. Pass an int for reproducible outp
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L22)
+[generated/multiclass/OutputCodeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L22)
 
 ***
 
@@ -78,7 +78,7 @@ The generator used to initialize the codebook. Pass an int for reproducible outp
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L21)
+[generated/multiclass/OutputCodeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L21)
 
 ***
 
@@ -88,7 +88,7 @@ The generator used to initialize the codebook. Pass an int for reproducible outp
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L18)
+[generated/multiclass/OutputCodeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L18)
 
 ***
 
@@ -98,7 +98,7 @@ The generator used to initialize the codebook. Pass an int for reproducible outp
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L19)
+[generated/multiclass/OutputCodeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L19)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Array containing labels.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L356)
+[generated/multiclass/OutputCodeClassifier.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L356)
 
 ***
 
@@ -134,7 +134,7 @@ Binary array containing the code of each class.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L383)
+[generated/multiclass/OutputCodeClassifier.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L383)
 
 ***
 
@@ -152,7 +152,7 @@ Estimators used for predictions.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L329)
+[generated/multiclass/OutputCodeClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L329)
 
 ***
 
@@ -170,7 +170,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Only defined 
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L437)
+[generated/multiclass/OutputCodeClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L437)
 
 ***
 
@@ -188,7 +188,7 @@ Number of features seen during [fit](../../glossary.html#term-fit). Only defined
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L410)
+[generated/multiclass/OutputCodeClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L410)
 
 ***
 
@@ -216,7 +216,7 @@ Number of features seen during [fit](../../glossary.html#term-fit). Only defined
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L54)
+[generated/multiclass/OutputCodeClassifier.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L54)
 
 ## Methods
 
@@ -234,7 +234,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L110)
+[generated/multiclass/OutputCodeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L110)
 
 ***
 
@@ -266,7 +266,7 @@ Multi-class targets.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L127)
+[generated/multiclass/OutputCodeClassifier.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L127)
 
 ***
 
@@ -292,7 +292,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L173)
+[generated/multiclass/OutputCodeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L173)
 
 ***
 
@@ -314,7 +314,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L67)
+[generated/multiclass/OutputCodeClassifier.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L67)
 
 ***
 
@@ -338,7 +338,7 @@ Data.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L209)
+[generated/multiclass/OutputCodeClassifier.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L209)
 
 ***
 
@@ -372,7 +372,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L245)
+[generated/multiclass/OutputCodeClassifier.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L245)
 
 ***
 
@@ -400,4 +400,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/multiclass/OutputCodeClassifier.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L293)
+[generated/multiclass/OutputCodeClassifier.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L293)

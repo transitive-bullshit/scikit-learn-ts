@@ -96,7 +96,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L29)
+[generated/model\_selection/GridSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L29)
 
 ## Properties
 
@@ -106,7 +106,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L27)
+[generated/model\_selection/GridSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L27)
 
 ***
 
@@ -116,7 +116,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L26)
+[generated/model\_selection/GridSearchCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L26)
 
 ***
 
@@ -126,7 +126,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L25)
+[generated/model\_selection/GridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L25)
 
 ***
 
@@ -136,7 +136,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L22)
+[generated/model\_selection/GridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L22)
 
 ***
 
@@ -146,7 +146,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L23)
+[generated/model\_selection/GridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L23)
 
 ## Accessors
 
@@ -166,7 +166,7 @@ See `refit` parameter for more information on allowed values.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L575)
+[generated/model\_selection/GridSearchCV.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L575)
 
 ***
 
@@ -188,7 +188,7 @@ For multi-metric evaluation, this is present only if `refit` is specified.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L660)
+[generated/model\_selection/GridSearchCV.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L660)
 
 ***
 
@@ -208,7 +208,7 @@ For multi-metric evaluation, this is present only if `refit` is specified.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L631)
+[generated/model\_selection/GridSearchCV.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L631)
 
 ***
 
@@ -230,7 +230,7 @@ This attribute is not available if `refit` is a function.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L604)
+[generated/model\_selection/GridSearchCV.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L604)
 
 ***
 
@@ -250,7 +250,7 @@ For instance the below given table
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L548)
+[generated/model\_selection/GridSearchCV.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L548)
 
 ***
 
@@ -268,7 +268,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Only defined 
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L787)
+[generated/model\_selection/GridSearchCV.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L787)
 
 ***
 
@@ -286,7 +286,7 @@ Whether or not the scorers compute several metrics.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L762)
+[generated/model\_selection/GridSearchCV.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L762)
 
 ***
 
@@ -304,7 +304,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L710)
+[generated/model\_selection/GridSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L710)
 
 ***
 
@@ -332,7 +332,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L104)
+[generated/model\_selection/GridSearchCV.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L104)
 
 ***
 
@@ -352,7 +352,7 @@ This is present only if `refit` is not `false`.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L737)
+[generated/model\_selection/GridSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L737)
 
 ***
 
@@ -372,7 +372,7 @@ For multi-metric evaluation, this attribute holds the validated `scoring` dict w
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L687)
+[generated/model\_selection/GridSearchCV.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L687)
 
 ## Methods
 
@@ -398,7 +398,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L175)
+[generated/model\_selection/GridSearchCV.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L175)
 
 ***
 
@@ -416,7 +416,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L156)
+[generated/model\_selection/GridSearchCV.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L156)
 
 ***
 
@@ -450,7 +450,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L209)
+[generated/model\_selection/GridSearchCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L209)
 
 ***
 
@@ -476,7 +476,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L255)
+[generated/model\_selection/GridSearchCV.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L255)
 
 ***
 
@@ -498,7 +498,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L117)
+[generated/model\_selection/GridSearchCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L117)
 
 ***
 
@@ -528,7 +528,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L291)
+[generated/model\_selection/GridSearchCV.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L291)
 
 ***
 
@@ -554,7 +554,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L332)
+[generated/model\_selection/GridSearchCV.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L332)
 
 ***
 
@@ -580,7 +580,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L366)
+[generated/model\_selection/GridSearchCV.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L366)
 
 ***
 
@@ -606,7 +606,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L402)
+[generated/model\_selection/GridSearchCV.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L402)
 
 ***
 
@@ -640,7 +640,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L436)
+[generated/model\_selection/GridSearchCV.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L436)
 
 ***
 
@@ -666,7 +666,7 @@ Data to predict on. Must fulfill input requirements of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L480)
+[generated/model\_selection/GridSearchCV.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L480)
 
 ***
 
@@ -692,4 +692,4 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/GridSearchCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L514)
+[generated/model\_selection/GridSearchCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L514)

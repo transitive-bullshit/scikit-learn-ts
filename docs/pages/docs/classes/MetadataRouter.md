@@ -28,7 +28,7 @@ The name of the object to which these requests belong.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L23)
+[generated/utils/metadata\_routing/MetadataRouter.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L23)
 
 ## Properties
 
@@ -38,7 +38,7 @@ The name of the object to which these requests belong.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L21)
+[generated/utils/metadata\_routing/MetadataRouter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L21)
 
 ***
 
@@ -48,7 +48,7 @@ The name of the object to which these requests belong.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L20)
+[generated/utils/metadata\_routing/MetadataRouter.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L20)
 
 ***
 
@@ -58,7 +58,7 @@ The name of the object to which these requests belong.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L19)
+[generated/utils/metadata\_routing/MetadataRouter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L19)
 
 ***
 
@@ -68,7 +68,7 @@ The name of the object to which these requests belong.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L16)
+[generated/utils/metadata\_routing/MetadataRouter.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L16)
 
 ***
 
@@ -78,7 +78,7 @@ The name of the object to which these requests belong.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L17)
+[generated/utils/metadata\_routing/MetadataRouter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L17)
 
 ## Accessors
 
@@ -106,7 +106,7 @@ The name of the object to which these requests belong.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L33)
+[generated/utils/metadata\_routing/MetadataRouter.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L33)
 
 ## Methods
 
@@ -134,7 +134,7 @@ A dictionary of objects from which metadata is extracted by calling [`get\_routi
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L102)
+[generated/utils/metadata\_routing/MetadataRouter.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L102)
 
 ***
 
@@ -162,7 +162,7 @@ This is typically the router instance, i.e. `self` in a `get\_metadata\_routing(
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L143)
+[generated/utils/metadata\_routing/MetadataRouter.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L143)
 
 ***
 
@@ -190,7 +190,7 @@ An iterable of parameters to check.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L177)
+[generated/utils/metadata\_routing/MetadataRouter.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L177)
 
 ***
 
@@ -208,7 +208,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L85)
+[generated/utils/metadata\_routing/MetadataRouter.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L85)
 
 ***
 
@@ -230,7 +230,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L46)
+[generated/utils/metadata\_routing/MetadataRouter.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L46)
 
 ***
 
@@ -262,7 +262,7 @@ A dictionary of provided metadata.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L218)
+[generated/utils/metadata\_routing/MetadataRouter.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L218)
 
 ***
 
@@ -292,4 +292,4 @@ A dictionary of provided metadata.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MetadataRouter.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L257)
+[generated/utils/metadata\_routing/MetadataRouter.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L257)

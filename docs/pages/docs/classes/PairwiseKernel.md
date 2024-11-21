@@ -48,7 +48,7 @@ All entries of this dict (if any) are passed as keyword arguments to the pairwis
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L23)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L23)
 
 ## Properties
 
@@ -58,7 +58,7 @@ All entries of this dict (if any) are passed as keyword arguments to the pairwis
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L21)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L21)
 
 ***
 
@@ -68,7 +68,7 @@ All entries of this dict (if any) are passed as keyword arguments to the pairwis
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L20)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L20)
 
 ***
 
@@ -78,7 +78,7 @@ All entries of this dict (if any) are passed as keyword arguments to the pairwis
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L19)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L19)
 
 ***
 
@@ -88,7 +88,7 @@ All entries of this dict (if any) are passed as keyword arguments to the pairwis
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L16)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L16)
 
 ***
 
@@ -98,7 +98,7 @@ All entries of this dict (if any) are passed as keyword arguments to the pairwis
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L17)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L17)
 
 ## Accessors
 
@@ -126,7 +126,7 @@ All entries of this dict (if any) are passed as keyword arguments to the pairwis
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L61)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L61)
 
 ## Methods
 
@@ -162,7 +162,7 @@ Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evalua
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L130)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L130)
 
 ***
 
@@ -186,7 +186,7 @@ The hyperparameters
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L174)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L174)
 
 ***
 
@@ -212,7 +212,7 @@ Left argument of the returned kernel k(X, Y)
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L210)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L210)
 
 ***
 
@@ -230,7 +230,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L113)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L113)
 
 ***
 
@@ -252,7 +252,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L74)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L74)
 
 ***
 
@@ -272,4 +272,4 @@ Returns whether the kernel is stationary.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/PairwiseKernel.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L242)
+[generated/gaussian\_process/kernels/PairwiseKernel.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L242)

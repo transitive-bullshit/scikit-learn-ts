@@ -48,7 +48,7 @@ If `true`, scale the data to unit variance (or equivalently, unit standard devia
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L23)
+[generated/preprocessing/StandardScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L23)
 
 ## Properties
 
@@ -58,7 +58,7 @@ If `true`, scale the data to unit variance (or equivalently, unit standard devia
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L21)
+[generated/preprocessing/StandardScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L21)
 
 ***
 
@@ -68,7 +68,7 @@ If `true`, scale the data to unit variance (or equivalently, unit standard devia
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L20)
+[generated/preprocessing/StandardScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L20)
 
 ***
 
@@ -78,7 +78,7 @@ If `true`, scale the data to unit variance (or equivalently, unit standard devia
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L19)
+[generated/preprocessing/StandardScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L19)
 
 ***
 
@@ -88,7 +88,7 @@ If `true`, scale the data to unit variance (or equivalently, unit standard devia
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L16)
+[generated/preprocessing/StandardScaler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L16)
 
 ***
 
@@ -98,7 +98,7 @@ If `true`, scale the data to unit variance (or equivalently, unit standard devia
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L17)
+[generated/preprocessing/StandardScaler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L17)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L676)
+[generated/preprocessing/StandardScaler.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L676)
 
 ***
 
@@ -134,7 +134,7 @@ The mean value for each feature in the training set. Equal to `undefined` when `
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L605)
+[generated/preprocessing/StandardScaler.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L605)
 
 ***
 
@@ -152,7 +152,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L651)
+[generated/preprocessing/StandardScaler.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L651)
 
 ***
 
@@ -170,7 +170,7 @@ The number of samples processed by the estimator for each feature. If there are 
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L701)
+[generated/preprocessing/StandardScaler.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L701)
 
 ***
 
@@ -198,7 +198,7 @@ The number of samples processed by the estimator for each feature. If there are 
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L49)
+[generated/preprocessing/StandardScaler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L49)
 
 ***
 
@@ -216,7 +216,7 @@ Per feature relative scaling of the data to achieve zero mean and unit variance.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L582)
+[generated/preprocessing/StandardScaler.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L582)
 
 ***
 
@@ -234,7 +234,7 @@ The variance for each feature in the training set. Used to compute `scale\_`. Eq
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L628)
+[generated/preprocessing/StandardScaler.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L628)
 
 ## Methods
 
@@ -252,7 +252,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L101)
+[generated/preprocessing/StandardScaler.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L101)
 
 ***
 
@@ -284,7 +284,7 @@ Ignored.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L118)
+[generated/preprocessing/StandardScaler.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L118)
 
 ***
 
@@ -318,7 +318,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L162)
+[generated/preprocessing/StandardScaler.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L162)
 
 ***
 
@@ -342,7 +342,7 @@ Input features.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L204)
+[generated/preprocessing/StandardScaler.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L204)
 
 ***
 
@@ -368,7 +368,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L240)
+[generated/preprocessing/StandardScaler.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L240)
 
 ***
 
@@ -390,7 +390,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L62)
+[generated/preprocessing/StandardScaler.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L62)
 
 ***
 
@@ -418,7 +418,7 @@ The data used to scale along the features axis.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L274)
+[generated/preprocessing/StandardScaler.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L274)
 
 ***
 
@@ -454,7 +454,7 @@ Ignored.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L317)
+[generated/preprocessing/StandardScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L317)
 
 ***
 
@@ -482,7 +482,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L363)
+[generated/preprocessing/StandardScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L363)
 
 ***
 
@@ -510,7 +510,7 @@ Metadata routing for `copy` parameter in `inverse\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L401)
+[generated/preprocessing/StandardScaler.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L401)
 
 ***
 
@@ -536,7 +536,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L437)
+[generated/preprocessing/StandardScaler.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L437)
 
 ***
 
@@ -564,7 +564,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L473)
+[generated/preprocessing/StandardScaler.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L473)
 
 ***
 
@@ -592,7 +592,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L511)
+[generated/preprocessing/StandardScaler.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L511)
 
 ***
 
@@ -620,4 +620,4 @@ The data used to scale along the features axis.
 
 #### Defined in
 
-[generated/preprocessing/StandardScaler.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L545)
+[generated/preprocessing/StandardScaler.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L545)

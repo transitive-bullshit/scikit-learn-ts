@@ -34,7 +34,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L29)
+[generated/model\_selection/LeavePOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L29)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L27)
+[generated/model\_selection/LeavePOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L27)
 
 ***
 
@@ -54,7 +54,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L26)
+[generated/model\_selection/LeavePOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L26)
 
 ***
 
@@ -64,7 +64,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L25)
+[generated/model\_selection/LeavePOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L25)
 
 ***
 
@@ -74,7 +74,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L22)
+[generated/model\_selection/LeavePOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L22)
 
 ***
 
@@ -84,7 +84,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L23)
+[generated/model\_selection/LeavePOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L23)
 
 ## Accessors
 
@@ -112,7 +112,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L39)
+[generated/model\_selection/LeavePOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L39)
 
 ## Methods
 
@@ -130,7 +130,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L89)
+[generated/model\_selection/LeavePOut.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L89)
 
 ***
 
@@ -156,7 +156,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L108)
+[generated/model\_selection/LeavePOut.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L108)
 
 ***
 
@@ -188,7 +188,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L142)
+[generated/model\_selection/LeavePOut.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L142)
 
 ***
 
@@ -210,7 +210,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L52)
+[generated/model\_selection/LeavePOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L52)
 
 ***
 
@@ -242,4 +242,4 @@ The target variable for supervised learning problems.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L184)
+[generated/model\_selection/LeavePOut.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L184)

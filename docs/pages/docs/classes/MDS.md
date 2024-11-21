@@ -94,7 +94,7 @@ Level of verbosity.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L23)
+[generated/manifold/MDS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L23)
 
 ## Properties
 
@@ -104,7 +104,7 @@ Level of verbosity.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L21)
+[generated/manifold/MDS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L21)
 
 ***
 
@@ -114,7 +114,7 @@ Level of verbosity.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L20)
+[generated/manifold/MDS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L20)
 
 ***
 
@@ -124,7 +124,7 @@ Level of verbosity.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L19)
+[generated/manifold/MDS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L19)
 
 ***
 
@@ -134,7 +134,7 @@ Level of verbosity.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L16)
+[generated/manifold/MDS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L16)
 
 ***
 
@@ -144,7 +144,7 @@ Level of verbosity.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L17)
+[generated/manifold/MDS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L17)
 
 ## Accessors
 
@@ -162,7 +162,7 @@ Pairwise dissimilarities between the points. Symmetric matrix that:
 
 #### Defined in
 
-[generated/manifold/MDS.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L359)
+[generated/manifold/MDS.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L359)
 
 ***
 
@@ -180,7 +180,7 @@ Stores the position of the dataset in the embedding space.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L315)
+[generated/manifold/MDS.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L315)
 
 ***
 
@@ -198,7 +198,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/manifold/MDS.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L407)
+[generated/manifold/MDS.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L407)
 
 ***
 
@@ -216,7 +216,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L384)
+[generated/manifold/MDS.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L384)
 
 ***
 
@@ -234,7 +234,7 @@ The number of iterations corresponding to the best stress.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L430)
+[generated/manifold/MDS.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L430)
 
 ***
 
@@ -262,7 +262,7 @@ The number of iterations corresponding to the best stress.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L94)
+[generated/manifold/MDS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L94)
 
 ***
 
@@ -280,7 +280,7 @@ The final value of the stress (sum of squared distance of the disparities and th
 
 #### Defined in
 
-[generated/manifold/MDS.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L337)
+[generated/manifold/MDS.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L337)
 
 ## Methods
 
@@ -298,7 +298,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L145)
+[generated/manifold/MDS.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L145)
 
 ***
 
@@ -330,7 +330,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L162)
+[generated/manifold/MDS.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L162)
 
 ***
 
@@ -362,7 +362,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L203)
+[generated/manifold/MDS.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L203)
 
 ***
 
@@ -388,7 +388,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/manifold/MDS.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L247)
+[generated/manifold/MDS.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L247)
 
 ***
 
@@ -410,7 +410,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L107)
+[generated/manifold/MDS.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L107)
 
 ***
 
@@ -438,4 +438,4 @@ Metadata routing for `init` parameter in `fit`.
 
 #### Defined in
 
-[generated/manifold/MDS.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/MDS.ts#L283)
+[generated/manifold/MDS.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/MDS.ts#L283)

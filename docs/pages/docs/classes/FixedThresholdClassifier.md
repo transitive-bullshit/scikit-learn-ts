@@ -52,7 +52,7 @@ The decision threshold to use when converting posterior probability estimates (i
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L27)
+[generated/model\_selection/FixedThresholdClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L27)
 
 ## Properties
 
@@ -62,7 +62,7 @@ The decision threshold to use when converting posterior probability estimates (i
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L25)
+[generated/model\_selection/FixedThresholdClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L25)
 
 ***
 
@@ -72,7 +72,7 @@ The decision threshold to use when converting posterior probability estimates (i
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L24)
+[generated/model\_selection/FixedThresholdClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L24)
 
 ***
 
@@ -82,7 +82,7 @@ The decision threshold to use when converting posterior probability estimates (i
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L23)
+[generated/model\_selection/FixedThresholdClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L23)
 
 ***
 
@@ -92,7 +92,7 @@ The decision threshold to use when converting posterior probability estimates (i
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L20)
+[generated/model\_selection/FixedThresholdClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L20)
 
 ***
 
@@ -102,7 +102,7 @@ The decision threshold to use when converting posterior probability estimates (i
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L21)
+[generated/model\_selection/FixedThresholdClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L21)
 
 ## Accessors
 
@@ -120,7 +120,7 @@ The fitted classifier used when predicting.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L443)
+[generated/model\_selection/FixedThresholdClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L443)
 
 ***
 
@@ -138,7 +138,7 @@ Names of features seen during fit. Only defined if the underlying estimator expo
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L497)
+[generated/model\_selection/FixedThresholdClassifier.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L497)
 
 ***
 
@@ -156,7 +156,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L470)
+[generated/model\_selection/FixedThresholdClassifier.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L470)
 
 ***
 
@@ -184,7 +184,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L56)
+[generated/model\_selection/FixedThresholdClassifier.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L56)
 
 ## Methods
 
@@ -208,7 +208,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L129)
+[generated/model\_selection/FixedThresholdClassifier.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L129)
 
 ***
 
@@ -226,7 +226,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L112)
+[generated/model\_selection/FixedThresholdClassifier.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L112)
 
 ***
 
@@ -258,7 +258,7 @@ Target values.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L165)
+[generated/model\_selection/FixedThresholdClassifier.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L165)
 
 ***
 
@@ -284,7 +284,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L211)
+[generated/model\_selection/FixedThresholdClassifier.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L211)
 
 ***
 
@@ -306,7 +306,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L69)
+[generated/model\_selection/FixedThresholdClassifier.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L69)
 
 ***
 
@@ -330,7 +330,7 @@ The samples, as accepted by `estimator.predict`.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L247)
+[generated/model\_selection/FixedThresholdClassifier.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L247)
 
 ***
 
@@ -354,7 +354,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L283)
+[generated/model\_selection/FixedThresholdClassifier.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L283)
 
 ***
 
@@ -378,7 +378,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L319)
+[generated/model\_selection/FixedThresholdClassifier.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L319)
 
 ***
 
@@ -412,7 +412,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L357)
+[generated/model\_selection/FixedThresholdClassifier.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L357)
 
 ***
 
@@ -440,4 +440,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/model\_selection/FixedThresholdClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L407)
+[generated/model\_selection/FixedThresholdClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/FixedThresholdClassifier.ts#L407)

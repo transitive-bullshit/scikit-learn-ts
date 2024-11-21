@@ -34,7 +34,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L25)
+[generated/utils/metadata\_routing/MethodMapping.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L25)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L23)
+[generated/utils/metadata\_routing/MethodMapping.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L23)
 
 ***
 
@@ -54,7 +54,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L22)
+[generated/utils/metadata\_routing/MethodMapping.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L22)
 
 ***
 
@@ -64,7 +64,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L21)
+[generated/utils/metadata\_routing/MethodMapping.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L21)
 
 ***
 
@@ -74,7 +74,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L18)
+[generated/utils/metadata\_routing/MethodMapping.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L18)
 
 ***
 
@@ -84,7 +84,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L19)
+[generated/utils/metadata\_routing/MethodMapping.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L19)
 
 ## Accessors
 
@@ -112,7 +112,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L40)
+[generated/utils/metadata\_routing/MethodMapping.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L40)
 
 ***
 
@@ -130,7 +130,7 @@ Returns self.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L146)
+[generated/utils/metadata\_routing/MethodMapping.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L146)
 
 ## Methods
 
@@ -158,7 +158,7 @@ Parent estimator’s method name in which the `callee` is called.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L109)
+[generated/utils/metadata\_routing/MethodMapping.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L109)
 
 ***
 
@@ -176,7 +176,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L92)
+[generated/utils/metadata\_routing/MethodMapping.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L92)
 
 ***
 
@@ -198,4 +198,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/utils/metadata\_routing/MethodMapping.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L53)
+[generated/utils/metadata\_routing/MethodMapping.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L53)

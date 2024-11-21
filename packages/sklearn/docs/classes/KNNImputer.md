@@ -78,7 +78,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L25)
+[generated/impute/KNNImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L25)
 
 ## Properties
 
@@ -88,7 +88,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L23)
+[generated/impute/KNNImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L23)
 
 ***
 
@@ -98,7 +98,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L22)
+[generated/impute/KNNImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L22)
 
 ***
 
@@ -108,7 +108,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L21)
+[generated/impute/KNNImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L21)
 
 ***
 
@@ -118,7 +118,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L18)
+[generated/impute/KNNImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L18)
 
 ***
 
@@ -128,7 +128,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L19)
+[generated/impute/KNNImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L19)
 
 ## Accessors
 
@@ -146,7 +146,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L411)
+[generated/impute/KNNImputer.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L411)
 
 ***
 
@@ -164,7 +164,7 @@ Indicator used to add binary indicators for missing values. `undefined` if add\_
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L363)
+[generated/impute/KNNImputer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L363)
 
 ***
 
@@ -182,7 +182,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L386)
+[generated/impute/KNNImputer.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L386)
 
 ***
 
@@ -210,7 +210,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L77)
+[generated/impute/KNNImputer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L77)
 
 ## Methods
 
@@ -228,7 +228,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L129)
+[generated/impute/KNNImputer.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L129)
 
 ***
 
@@ -256,7 +256,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L146)
+[generated/impute/KNNImputer.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L146)
 
 ***
 
@@ -290,7 +290,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L185)
+[generated/impute/KNNImputer.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L185)
 
 ***
 
@@ -314,7 +314,7 @@ Input features.
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L227)
+[generated/impute/KNNImputer.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L227)
 
 ***
 
@@ -340,7 +340,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L263)
+[generated/impute/KNNImputer.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L263)
 
 ***
 
@@ -362,7 +362,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L90)
+[generated/impute/KNNImputer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L90)
 
 ***
 
@@ -388,7 +388,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L299)
+[generated/impute/KNNImputer.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L299)
 
 ***
 
@@ -412,4 +412,4 @@ The input data to complete.
 
 #### Defined in
 
-[generated/impute/KNNImputer.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/impute/KNNImputer.ts#L331)
+[generated/impute/KNNImputer.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/impute/KNNImputer.ts#L331)

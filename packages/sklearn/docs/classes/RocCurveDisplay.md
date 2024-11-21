@@ -46,7 +46,7 @@ True positive rate.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
+[generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
 
 ## Properties
 
@@ -56,7 +56,7 @@ True positive rate.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
+[generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
 
 ***
 
@@ -66,7 +66,7 @@ True positive rate.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
+[generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
 
 ***
 
@@ -76,7 +76,7 @@ True positive rate.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
+[generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
 
 ***
 
@@ -86,7 +86,7 @@ True positive rate.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
+[generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
 
 ***
 
@@ -96,7 +96,7 @@ True positive rate.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
+[generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ Axes with ROC Curve.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L406)
+[generated/metrics/RocCurveDisplay.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L406)
 
 ***
 
@@ -132,7 +132,7 @@ The chance level line. It is `undefined` if the chance level is not plotted.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L381)
+[generated/metrics/RocCurveDisplay.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L381)
 
 ***
 
@@ -150,7 +150,7 @@ Figure containing the curve.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L429)
+[generated/metrics/RocCurveDisplay.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L429)
 
 ***
 
@@ -168,7 +168,7 @@ ROC Curve.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L358)
+[generated/metrics/RocCurveDisplay.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L358)
 
 ***
 
@@ -196,7 +196,7 @@ ROC Curve.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55)
+[generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55)
 
 ## Methods
 
@@ -214,7 +214,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L107)
+[generated/metrics/RocCurveDisplay.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L107)
 
 ***
 
@@ -290,7 +290,7 @@ Target values.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L124)
+[generated/metrics/RocCurveDisplay.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L124)
 
 ***
 
@@ -360,7 +360,7 @@ True labels.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L219)
+[generated/metrics/RocCurveDisplay.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L219)
 
 ***
 
@@ -382,7 +382,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L68)
+[generated/metrics/RocCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L68)
 
 ***
 
@@ -428,4 +428,4 @@ Whether to plot the chance level.
 
 #### Defined in
 
-[generated/metrics/RocCurveDisplay.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L304)
+[generated/metrics/RocCurveDisplay.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L304)

@@ -44,7 +44,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L23)
+[generated/neighbors/BallTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L23)
 
 ## Properties
 
@@ -54,7 +54,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L21)
+[generated/neighbors/BallTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L21)
 
 ***
 
@@ -64,7 +64,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L20)
+[generated/neighbors/BallTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L20)
 
 ***
 
@@ -74,7 +74,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L19)
+[generated/neighbors/BallTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L19)
 
 ***
 
@@ -84,7 +84,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L16)
+[generated/neighbors/BallTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L16)
 
 ***
 
@@ -94,7 +94,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L17)
+[generated/neighbors/BallTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L17)
 
 ## Accessors
 
@@ -112,7 +112,7 @@ The training data
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L462)
+[generated/neighbors/BallTree.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L462)
 
 ***
 
@@ -140,7 +140,7 @@ The training data
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L47)
+[generated/neighbors/BallTree.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L47)
 
 ## Methods
 
@@ -158,7 +158,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L98)
+[generated/neighbors/BallTree.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L98)
 
 ***
 
@@ -178,7 +178,7 @@ Get data and node arrays.
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L115)
+[generated/neighbors/BallTree.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L115)
 
 ***
 
@@ -198,7 +198,7 @@ Get number of calls.
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L141)
+[generated/neighbors/BallTree.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L141)
 
 ***
 
@@ -218,7 +218,7 @@ Get tree status.
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L167)
+[generated/neighbors/BallTree.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L167)
 
 ***
 
@@ -240,7 +240,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L60)
+[generated/neighbors/BallTree.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L60)
 
 ***
 
@@ -308,7 +308,7 @@ An array of points to query. Last dimension should match dimension of training d
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L193)
+[generated/neighbors/BallTree.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L193)
 
 ***
 
@@ -372,7 +372,7 @@ An array of points to query
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L265)
+[generated/neighbors/BallTree.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L265)
 
 ***
 
@@ -424,7 +424,7 @@ An array of points to query
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L332)
+[generated/neighbors/BallTree.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L332)
 
 ***
 
@@ -444,7 +444,7 @@ Reset number of calls to 0.
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L390)
+[generated/neighbors/BallTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L390)
 
 ***
 
@@ -480,4 +480,4 @@ An array of points to query. Last dimension should match dimension of training d
 
 #### Defined in
 
-[generated/neighbors/BallTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/BallTree.ts#L416)
+[generated/neighbors/BallTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/BallTree.ts#L416)

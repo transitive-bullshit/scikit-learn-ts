@@ -94,7 +94,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L25)
+[generated/linear\_model/LassoLarsCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L25)
 
 ## Properties
 
@@ -104,7 +104,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L23)
+[generated/linear\_model/LassoLarsCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L23)
 
 ***
 
@@ -114,7 +114,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L22)
+[generated/linear\_model/LassoLarsCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L22)
 
 ***
 
@@ -124,7 +124,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L21)
+[generated/linear\_model/LassoLarsCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L21)
 
 ***
 
@@ -134,7 +134,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L18)
+[generated/linear\_model/LassoLarsCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L18)
 
 ***
 
@@ -144,7 +144,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L19)
+[generated/linear\_model/LassoLarsCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L19)
 
 ## Accessors
 
@@ -162,7 +162,7 @@ Indices of active variables at the end of the path.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L578)
+[generated/linear\_model/LassoLarsCV.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L578)
 
 ***
 
@@ -180,7 +180,7 @@ the estimated regularization parameter alpha
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L461)
+[generated/linear\_model/LassoLarsCV.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L461)
 
 ***
 
@@ -198,7 +198,7 @@ the different values of alpha along the path
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L484)
+[generated/linear\_model/LassoLarsCV.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L484)
 
 ***
 
@@ -216,7 +216,7 @@ parameter vector (w in the formulation formula)
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L388)
+[generated/linear\_model/LassoLarsCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L388)
 
 ***
 
@@ -234,7 +234,7 @@ the varying values of the coefficients along the path
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L436)
+[generated/linear\_model/LassoLarsCV.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L436)
 
 ***
 
@@ -252,7 +252,7 @@ all the values of alpha along the path for the different folds
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L507)
+[generated/linear\_model/LassoLarsCV.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L507)
 
 ***
 
@@ -270,7 +270,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L626)
+[generated/linear\_model/LassoLarsCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L626)
 
 ***
 
@@ -288,7 +288,7 @@ independent term in decision function.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L411)
+[generated/linear\_model/LassoLarsCV.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L411)
 
 ***
 
@@ -306,7 +306,7 @@ the mean square error on left-out for each fold along the path (alpha values giv
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L532)
+[generated/linear\_model/LassoLarsCV.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L532)
 
 ***
 
@@ -324,7 +324,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L601)
+[generated/linear\_model/LassoLarsCV.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L601)
 
 ***
 
@@ -342,7 +342,7 @@ the number of iterations run by Lars with the optimal alpha.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L555)
+[generated/linear\_model/LassoLarsCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L555)
 
 ***
 
@@ -370,7 +370,7 @@ the number of iterations run by Lars with the optimal alpha.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L94)
+[generated/linear\_model/LassoLarsCV.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L94)
 
 ## Methods
 
@@ -388,7 +388,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L146)
+[generated/linear\_model/LassoLarsCV.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L146)
 
 ***
 
@@ -420,7 +420,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L163)
+[generated/linear\_model/LassoLarsCV.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L163)
 
 ***
 
@@ -446,7 +446,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L207)
+[generated/linear\_model/LassoLarsCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L207)
 
 ***
 
@@ -468,7 +468,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L107)
+[generated/linear\_model/LassoLarsCV.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L107)
 
 ***
 
@@ -492,7 +492,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L241)
+[generated/linear\_model/LassoLarsCV.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L241)
 
 ***
 
@@ -526,7 +526,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L274)
+[generated/linear\_model/LassoLarsCV.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L274)
 
 ***
 
@@ -554,7 +554,7 @@ Metadata routing for `Xy` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L320)
+[generated/linear\_model/LassoLarsCV.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L320)
 
 ***
 
@@ -582,4 +582,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/LassoLarsCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L356)
+[generated/linear\_model/LassoLarsCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L356)

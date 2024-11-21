@@ -184,7 +184,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L29)
+[generated/linear\_model/SGDRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L29)
 
 ## Properties
 
@@ -194,7 +194,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L27)
+[generated/linear\_model/SGDRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L27)
 
 ***
 
@@ -204,7 +204,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L26)
+[generated/linear\_model/SGDRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L26)
 
 ***
 
@@ -214,7 +214,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L25)
+[generated/linear\_model/SGDRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L25)
 
 ***
 
@@ -224,7 +224,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L22)
+[generated/linear\_model/SGDRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L22)
 
 ***
 
@@ -234,7 +234,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L23)
+[generated/linear\_model/SGDRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L23)
 
 ## Accessors
 
@@ -252,7 +252,7 @@ Weights assigned to the features.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L628)
+[generated/linear\_model/SGDRegressor.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L628)
 
 ***
 
@@ -270,7 +270,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L747)
+[generated/linear\_model/SGDRegressor.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L747)
 
 ***
 
@@ -288,7 +288,7 @@ The intercept term.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L651)
+[generated/linear\_model/SGDRegressor.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L651)
 
 ***
 
@@ -306,7 +306,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L722)
+[generated/linear\_model/SGDRegressor.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L722)
 
 ***
 
@@ -324,7 +324,7 @@ The actual number of iterations before reaching the stopping criterion.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L676)
+[generated/linear\_model/SGDRegressor.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L676)
 
 ***
 
@@ -352,7 +352,7 @@ The actual number of iterations before reaching the stopping criterion.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L171)
+[generated/linear\_model/SGDRegressor.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L171)
 
 ***
 
@@ -370,7 +370,7 @@ Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_sa
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L699)
+[generated/linear\_model/SGDRegressor.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L699)
 
 ## Methods
 
@@ -392,7 +392,7 @@ Converts the `coef\_` member (back) to a numpy.ndarray. This is the default form
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L242)
+[generated/linear\_model/SGDRegressor.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L242)
 
 ***
 
@@ -410,7 +410,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L223)
+[generated/linear\_model/SGDRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L223)
 
 ***
 
@@ -450,7 +450,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L268)
+[generated/linear\_model/SGDRegressor.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L268)
 
 ***
 
@@ -476,7 +476,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L322)
+[generated/linear\_model/SGDRegressor.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L322)
 
 ***
 
@@ -498,7 +498,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L184)
+[generated/linear\_model/SGDRegressor.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L184)
 
 ***
 
@@ -532,7 +532,7 @@ Subset of target values.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L358)
+[generated/linear\_model/SGDRegressor.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L358)
 
 ***
 
@@ -556,7 +556,7 @@ Input data.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L400)
+[generated/linear\_model/SGDRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L400)
 
 ***
 
@@ -590,7 +590,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L434)
+[generated/linear\_model/SGDRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L434)
 
 ***
 
@@ -626,7 +626,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L480)
+[generated/linear\_model/SGDRegressor.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L480)
 
 ***
 
@@ -654,7 +654,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L526)
+[generated/linear\_model/SGDRegressor.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L526)
 
 ***
 
@@ -682,7 +682,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L564)
+[generated/linear\_model/SGDRegressor.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L564)
 
 ***
 
@@ -706,4 +706,4 @@ The `intercept\_` member is not converted.
 
 #### Defined in
 
-[generated/linear\_model/SGDRegressor.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L602)
+[generated/linear\_model/SGDRegressor.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L602)

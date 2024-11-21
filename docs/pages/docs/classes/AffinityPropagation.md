@@ -80,7 +80,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L23)
+[generated/cluster/AffinityPropagation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L23)
 
 ## Properties
 
@@ -90,7 +90,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L21)
+[generated/cluster/AffinityPropagation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L21)
 
 ***
 
@@ -100,7 +100,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L20)
+[generated/cluster/AffinityPropagation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L20)
 
 ***
 
@@ -110,7 +110,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L19)
+[generated/cluster/AffinityPropagation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L19)
 
 ***
 
@@ -120,7 +120,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L16)
+[generated/cluster/AffinityPropagation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L16)
 
 ***
 
@@ -130,7 +130,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L17)
+[generated/cluster/AffinityPropagation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L17)
 
 ## Accessors
 
@@ -148,7 +148,7 @@ Stores the affinity matrix used in `fit`.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L386)
+[generated/cluster/AffinityPropagation.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L386)
 
 ***
 
@@ -166,7 +166,7 @@ Cluster centers (if affinity != `precomputed`).
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L332)
+[generated/cluster/AffinityPropagation.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L332)
 
 ***
 
@@ -184,7 +184,7 @@ Indices of cluster centers.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L305)
+[generated/cluster/AffinityPropagation.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L305)
 
 ***
 
@@ -202,7 +202,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L467)
+[generated/cluster/AffinityPropagation.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L467)
 
 ***
 
@@ -220,7 +220,7 @@ Labels of each point.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L359)
+[generated/cluster/AffinityPropagation.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L359)
 
 ***
 
@@ -238,7 +238,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L440)
+[generated/cluster/AffinityPropagation.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L440)
 
 ***
 
@@ -256,7 +256,7 @@ Number of iterations taken to converge.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L413)
+[generated/cluster/AffinityPropagation.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L413)
 
 ***
 
@@ -284,7 +284,7 @@ Number of iterations taken to converge.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L80)
+[generated/cluster/AffinityPropagation.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L80)
 
 ## Methods
 
@@ -302,7 +302,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L136)
+[generated/cluster/AffinityPropagation.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L136)
 
 ***
 
@@ -330,7 +330,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L153)
+[generated/cluster/AffinityPropagation.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L153)
 
 ***
 
@@ -358,7 +358,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L192)
+[generated/cluster/AffinityPropagation.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L192)
 
 ***
 
@@ -384,7 +384,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L235)
+[generated/cluster/AffinityPropagation.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L235)
 
 ***
 
@@ -406,7 +406,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L93)
+[generated/cluster/AffinityPropagation.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L93)
 
 ***
 
@@ -430,4 +430,4 @@ New data to predict. If a sparse matrix is provided, it will be converted into a
 
 #### Defined in
 
-[generated/cluster/AffinityPropagation.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L271)
+[generated/cluster/AffinityPropagation.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L271)

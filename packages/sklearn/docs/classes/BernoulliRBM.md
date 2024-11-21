@@ -72,7 +72,7 @@ The verbosity level. The default, zero, means silent mode. Range of values is \[
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L27)
+[generated/neural\_network/BernoulliRBM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L27)
 
 ## Properties
 
@@ -82,7 +82,7 @@ The verbosity level. The default, zero, means silent mode. Range of values is \[
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L25)
+[generated/neural\_network/BernoulliRBM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L25)
 
 ***
 
@@ -92,7 +92,7 @@ The verbosity level. The default, zero, means silent mode. Range of values is \[
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L24)
+[generated/neural\_network/BernoulliRBM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L24)
 
 ***
 
@@ -102,7 +102,7 @@ The verbosity level. The default, zero, means silent mode. Range of values is \[
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L23)
+[generated/neural\_network/BernoulliRBM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L23)
 
 ***
 
@@ -112,7 +112,7 @@ The verbosity level. The default, zero, means silent mode. Range of values is \[
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L20)
+[generated/neural\_network/BernoulliRBM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L20)
 
 ***
 
@@ -122,7 +122,7 @@ The verbosity level. The default, zero, means silent mode. Range of values is \[
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L21)
+[generated/neural\_network/BernoulliRBM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L21)
 
 ## Accessors
 
@@ -140,7 +140,7 @@ Weight matrix, where `n\_features` is the number of visible units and `n\_compon
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L511)
+[generated/neural\_network/BernoulliRBM.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L511)
 
 ***
 
@@ -158,7 +158,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L586)
+[generated/neural\_network/BernoulliRBM.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L586)
 
 ***
 
@@ -176,7 +176,7 @@ Hidden Activation sampled from the model distribution, where `batch\_size` is th
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L536)
+[generated/neural\_network/BernoulliRBM.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L536)
 
 ***
 
@@ -194,7 +194,7 @@ Biases of the hidden units.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L461)
+[generated/neural\_network/BernoulliRBM.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L461)
 
 ***
 
@@ -212,7 +212,7 @@ Biases of the visible units.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L486)
+[generated/neural\_network/BernoulliRBM.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L486)
 
 ***
 
@@ -230,7 +230,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L561)
+[generated/neural\_network/BernoulliRBM.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L561)
 
 ***
 
@@ -258,7 +258,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L72)
+[generated/neural\_network/BernoulliRBM.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L72)
 
 ## Methods
 
@@ -276,7 +276,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L124)
+[generated/neural\_network/BernoulliRBM.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L124)
 
 ***
 
@@ -304,7 +304,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L141)
+[generated/neural\_network/BernoulliRBM.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L141)
 
 ***
 
@@ -338,7 +338,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L180)
+[generated/neural\_network/BernoulliRBM.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L180)
 
 ***
 
@@ -364,7 +364,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L224)
+[generated/neural\_network/BernoulliRBM.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L224)
 
 ***
 
@@ -390,7 +390,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L260)
+[generated/neural\_network/BernoulliRBM.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L260)
 
 ***
 
@@ -414,7 +414,7 @@ Values of the visible layer to start from.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L294)
+[generated/neural\_network/BernoulliRBM.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L294)
 
 ***
 
@@ -436,7 +436,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L85)
+[generated/neural\_network/BernoulliRBM.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L85)
 
 ***
 
@@ -464,7 +464,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L326)
+[generated/neural\_network/BernoulliRBM.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L326)
 
 ***
 
@@ -488,7 +488,7 @@ Values of the visible layer. Must be all-boolean (not checked).
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L363)
+[generated/neural\_network/BernoulliRBM.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L363)
 
 ***
 
@@ -514,7 +514,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L397)
+[generated/neural\_network/BernoulliRBM.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L397)
 
 ***
 
@@ -538,4 +538,4 @@ The data to be transformed.
 
 #### Defined in
 
-[generated/neural\_network/BernoulliRBM.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L429)
+[generated/neural\_network/BernoulliRBM.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L429)

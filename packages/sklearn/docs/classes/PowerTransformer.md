@@ -58,7 +58,7 @@ Set to `true` to apply zero-mean, unit-variance normalization to the transformed
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L33)
+[generated/preprocessing/PowerTransformer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L33)
 
 ## Properties
 
@@ -68,7 +68,7 @@ Set to `true` to apply zero-mean, unit-variance normalization to the transformed
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L31)
+[generated/preprocessing/PowerTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L31)
 
 ***
 
@@ -78,7 +78,7 @@ Set to `true` to apply zero-mean, unit-variance normalization to the transformed
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L30)
+[generated/preprocessing/PowerTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L30)
 
 ***
 
@@ -88,7 +88,7 @@ Set to `true` to apply zero-mean, unit-variance normalization to the transformed
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L29)
+[generated/preprocessing/PowerTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L29)
 
 ***
 
@@ -98,7 +98,7 @@ Set to `true` to apply zero-mean, unit-variance normalization to the transformed
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L26)
+[generated/preprocessing/PowerTransformer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L26)
 
 ***
 
@@ -108,7 +108,7 @@ Set to `true` to apply zero-mean, unit-variance normalization to the transformed
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L27)
+[generated/preprocessing/PowerTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L27)
 
 ## Accessors
 
@@ -126,7 +126,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L448)
+[generated/preprocessing/PowerTransformer.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L448)
 
 ***
 
@@ -144,7 +144,7 @@ The parameters of the power transformation for the selected features.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L394)
+[generated/preprocessing/PowerTransformer.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L394)
 
 ***
 
@@ -162,7 +162,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L421)
+[generated/preprocessing/PowerTransformer.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L421)
 
 ***
 
@@ -190,7 +190,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L59)
+[generated/preprocessing/PowerTransformer.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L59)
 
 ## Methods
 
@@ -208,7 +208,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L113)
+[generated/preprocessing/PowerTransformer.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L113)
 
 ***
 
@@ -238,7 +238,7 @@ Ignored.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L132)
+[generated/preprocessing/PowerTransformer.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L132)
 
 ***
 
@@ -266,7 +266,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L171)
+[generated/preprocessing/PowerTransformer.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L171)
 
 ***
 
@@ -290,7 +290,7 @@ Input features.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L212)
+[generated/preprocessing/PowerTransformer.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L212)
 
 ***
 
@@ -316,7 +316,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L250)
+[generated/preprocessing/PowerTransformer.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L250)
 
 ***
 
@@ -338,7 +338,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L72)
+[generated/preprocessing/PowerTransformer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L72)
 
 ***
 
@@ -364,7 +364,7 @@ The transformed data.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L288)
+[generated/preprocessing/PowerTransformer.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L288)
 
 ***
 
@@ -390,7 +390,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L326)
+[generated/preprocessing/PowerTransformer.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L326)
 
 ***
 
@@ -414,4 +414,4 @@ The data to be transformed using a power transformation.
 
 #### Defined in
 
-[generated/preprocessing/PowerTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L360)
+[generated/preprocessing/PowerTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L360)

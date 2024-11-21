@@ -84,7 +84,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L23)
+[generated/linear\_model/Lars.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L23)
 
 ## Properties
 
@@ -94,7 +94,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L21)
+[generated/linear\_model/Lars.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L21)
 
 ***
 
@@ -104,7 +104,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L20)
+[generated/linear\_model/Lars.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L20)
 
 ***
 
@@ -114,7 +114,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L19)
+[generated/linear\_model/Lars.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L19)
 
 ***
 
@@ -124,7 +124,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L16)
+[generated/linear\_model/Lars.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L16)
 
 ***
 
@@ -134,7 +134,7 @@ Sets the verbosity amount.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L17)
+[generated/linear\_model/Lars.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L17)
 
 ## Accessors
 
@@ -152,7 +152,7 @@ Indices of active variables at the end of the path. If this is a list of list, t
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L397)
+[generated/linear\_model/Lars.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L397)
 
 ***
 
@@ -170,7 +170,7 @@ Maximum of covariances (in absolute value) at each iteration. `n\_alphas` is eit
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L375)
+[generated/linear\_model/Lars.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L375)
 
 ***
 
@@ -188,7 +188,7 @@ Parameter vector (w in the formulation formula).
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L442)
+[generated/linear\_model/Lars.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L442)
 
 ***
 
@@ -206,7 +206,7 @@ The varying values of the coefficients along the path. It is not present if the 
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L419)
+[generated/linear\_model/Lars.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L419)
 
 ***
 
@@ -224,7 +224,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L532)
+[generated/linear\_model/Lars.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L532)
 
 ***
 
@@ -242,7 +242,7 @@ Independent term in decision function.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L464)
+[generated/linear\_model/Lars.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L464)
 
 ***
 
@@ -260,7 +260,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L509)
+[generated/linear\_model/Lars.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L509)
 
 ***
 
@@ -278,7 +278,7 @@ The number of iterations taken by lars\_path to find the grid of alphas for each
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L487)
+[generated/linear\_model/Lars.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L487)
 
 ***
 
@@ -306,7 +306,7 @@ The number of iterations taken by lars\_path to find the grid of alphas for each
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L85)
+[generated/linear\_model/Lars.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L85)
 
 ## Methods
 
@@ -324,7 +324,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L136)
+[generated/linear\_model/Lars.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L136)
 
 ***
 
@@ -356,7 +356,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L153)
+[generated/linear\_model/Lars.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L153)
 
 ***
 
@@ -382,7 +382,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L196)
+[generated/linear\_model/Lars.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L196)
 
 ***
 
@@ -404,7 +404,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L98)
+[generated/linear\_model/Lars.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L98)
 
 ***
 
@@ -428,7 +428,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L228)
+[generated/linear\_model/Lars.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L228)
 
 ***
 
@@ -462,7 +462,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L261)
+[generated/linear\_model/Lars.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L261)
 
 ***
 
@@ -490,7 +490,7 @@ Metadata routing for `Xy` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L307)
+[generated/linear\_model/Lars.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L307)
 
 ***
 
@@ -518,4 +518,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/Lars.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/Lars.ts#L343)
+[generated/linear\_model/Lars.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/Lars.ts#L343)

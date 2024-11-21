@@ -162,7 +162,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L25)
+[generated/ensemble/ExtraTreesClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L25)
 
 ## Properties
 
@@ -172,7 +172,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L23)
+[generated/ensemble/ExtraTreesClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L23)
 
 ***
 
@@ -182,7 +182,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L22)
+[generated/ensemble/ExtraTreesClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L22)
 
 ***
 
@@ -192,7 +192,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L21)
+[generated/ensemble/ExtraTreesClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L21)
 
 ***
 
@@ -202,7 +202,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L18)
+[generated/ensemble/ExtraTreesClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L18)
 
 ***
 
@@ -212,7 +212,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L19)
+[generated/ensemble/ExtraTreesClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L19)
 
 ## Accessors
 
@@ -230,7 +230,7 @@ The classes labels (single output problem), or a list of arrays of class labels 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L678)
+[generated/ensemble/ExtraTreesClassifier.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L678)
 
 ***
 
@@ -248,7 +248,7 @@ The child estimator template used to create the collection of fitted sub-estimat
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L624)
+[generated/ensemble/ExtraTreesClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L624)
 
 ***
 
@@ -266,7 +266,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L651)
+[generated/ensemble/ExtraTreesClassifier.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L651)
 
 ***
 
@@ -284,7 +284,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:759](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L759)
+[generated/ensemble/ExtraTreesClassifier.ts:759](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L759)
 
 ***
 
@@ -302,7 +302,7 @@ The number of classes (single output problem), or a list containing the number o
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L705)
+[generated/ensemble/ExtraTreesClassifier.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L705)
 
 ***
 
@@ -320,7 +320,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L732)
+[generated/ensemble/ExtraTreesClassifier.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L732)
 
 ***
 
@@ -338,7 +338,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L786)
+[generated/ensemble/ExtraTreesClassifier.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L786)
 
 ***
 
@@ -356,7 +356,7 @@ Decision function computed with out-of-bag estimate on the training set. If n\_e
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:840](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L840)
+[generated/ensemble/ExtraTreesClassifier.ts:840](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L840)
 
 ***
 
@@ -374,7 +374,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:813](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L813)
+[generated/ensemble/ExtraTreesClassifier.ts:813](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L813)
 
 ***
 
@@ -402,7 +402,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L161)
+[generated/ensemble/ExtraTreesClassifier.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L161)
 
 ## Methods
 
@@ -426,7 +426,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L234)
+[generated/ensemble/ExtraTreesClassifier.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L234)
 
 ***
 
@@ -450,7 +450,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L268)
+[generated/ensemble/ExtraTreesClassifier.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L268)
 
 ***
 
@@ -468,7 +468,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L217)
+[generated/ensemble/ExtraTreesClassifier.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L217)
 
 ***
 
@@ -500,7 +500,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L304)
+[generated/ensemble/ExtraTreesClassifier.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L304)
 
 ***
 
@@ -526,7 +526,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L350)
+[generated/ensemble/ExtraTreesClassifier.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L350)
 
 ***
 
@@ -548,7 +548,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L174)
+[generated/ensemble/ExtraTreesClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L174)
 
 ***
 
@@ -574,7 +574,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L388)
+[generated/ensemble/ExtraTreesClassifier.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L388)
 
 ***
 
@@ -600,7 +600,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L424)
+[generated/ensemble/ExtraTreesClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L424)
 
 ***
 
@@ -626,7 +626,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L462)
+[generated/ensemble/ExtraTreesClassifier.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L462)
 
 ***
 
@@ -660,7 +660,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L500)
+[generated/ensemble/ExtraTreesClassifier.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L500)
 
 ***
 
@@ -688,7 +688,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L548)
+[generated/ensemble/ExtraTreesClassifier.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L548)
 
 ***
 
@@ -716,4 +716,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L588)
+[generated/ensemble/ExtraTreesClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L588)

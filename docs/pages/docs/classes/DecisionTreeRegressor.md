@@ -102,7 +102,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L23)
+[generated/tree/DecisionTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L23)
 
 ## Properties
 
@@ -112,7 +112,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L21)
+[generated/tree/DecisionTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L21)
 
 ***
 
@@ -122,7 +122,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L20)
+[generated/tree/DecisionTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L20)
 
 ***
 
@@ -132,7 +132,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L19)
+[generated/tree/DecisionTreeRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L19)
 
 ***
 
@@ -142,7 +142,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L16)
+[generated/tree/DecisionTreeRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L16)
 
 ***
 
@@ -152,7 +152,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L17)
+[generated/tree/DecisionTreeRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L17)
 
 ## Accessors
 
@@ -170,7 +170,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L728)
+[generated/tree/DecisionTreeRegressor.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L728)
 
 ***
 
@@ -188,7 +188,7 @@ The inferred value of max\_features.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L674)
+[generated/tree/DecisionTreeRegressor.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L674)
 
 ***
 
@@ -206,7 +206,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L701)
+[generated/tree/DecisionTreeRegressor.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L701)
 
 ***
 
@@ -224,7 +224,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:755](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L755)
+[generated/tree/DecisionTreeRegressor.ts:755](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L755)
 
 ***
 
@@ -252,7 +252,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L104)
+[generated/tree/DecisionTreeRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L104)
 
 ***
 
@@ -270,7 +270,7 @@ The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:782](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L782)
+[generated/tree/DecisionTreeRegressor.ts:782](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L782)
 
 ## Methods
 
@@ -302,7 +302,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L177)
+[generated/tree/DecisionTreeRegressor.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L177)
 
 ***
 
@@ -336,7 +336,7 @@ The target values (class labels) as integers or strings.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L220)
+[generated/tree/DecisionTreeRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L220)
 
 ***
 
@@ -368,7 +368,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L266)
+[generated/tree/DecisionTreeRegressor.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L266)
 
 ***
 
@@ -386,7 +386,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L160)
+[generated/tree/DecisionTreeRegressor.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L160)
 
 ***
 
@@ -426,7 +426,7 @@ The target values (real numbers). Use `dtype=np.float64` and `order='C'` for max
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L309)
+[generated/tree/DecisionTreeRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L309)
 
 ***
 
@@ -448,7 +448,7 @@ The depth of a tree is the maximum distance between the root and any leaf.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L362)
+[generated/tree/DecisionTreeRegressor.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L362)
 
 ***
 
@@ -474,7 +474,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L394)
+[generated/tree/DecisionTreeRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L394)
 
 ***
 
@@ -494,7 +494,7 @@ Return the number of leaves of the decision tree.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L430)
+[generated/tree/DecisionTreeRegressor.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L430)
 
 ***
 
@@ -516,7 +516,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L117)
+[generated/tree/DecisionTreeRegressor.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L117)
 
 ***
 
@@ -550,7 +550,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L462)
+[generated/tree/DecisionTreeRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L462)
 
 ***
 
@@ -584,7 +584,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L505)
+[generated/tree/DecisionTreeRegressor.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L505)
 
 ***
 
@@ -616,7 +616,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L553)
+[generated/tree/DecisionTreeRegressor.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L553)
 
 ***
 
@@ -644,7 +644,7 @@ Metadata routing for `check\_input` parameter in `predict`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L598)
+[generated/tree/DecisionTreeRegressor.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L598)
 
 ***
 
@@ -672,4 +672,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeRegressor.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L638)
+[generated/tree/DecisionTreeRegressor.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L638)

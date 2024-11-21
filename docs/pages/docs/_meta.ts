@@ -1,5 +1,4 @@
 export default {
-  "modules": "Table of Contents",
   "classes": "Classes",
   "functions": "Functions",
   "interfaces": {

@@ -170,7 +170,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L27)
+[generated/ensemble/GradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L27)
 
 ## Properties
 
@@ -180,7 +180,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L25)
+[generated/ensemble/GradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L25)
 
 ***
 
@@ -190,7 +190,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L24)
+[generated/ensemble/GradientBoostingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L24)
 
 ***
 
@@ -200,7 +200,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L23)
+[generated/ensemble/GradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L23)
 
 ***
 
@@ -210,7 +210,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L20)
+[generated/ensemble/GradientBoostingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L20)
 
 ***
 
@@ -220,7 +220,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L21)
+[generated/ensemble/GradientBoostingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L21)
 
 ## Accessors
 
@@ -238,7 +238,7 @@ The classes labels.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:969](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L969)
+[generated/ensemble/GradientBoostingClassifier.ts:969](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L969)
 
 ***
 
@@ -256,7 +256,7 @@ The collection of fitted sub-estimators. `n\_trees\_per\_iteration\_` is 1 for b
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:942](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L942)
+[generated/ensemble/GradientBoostingClassifier.ts:942](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L942)
 
 ***
 
@@ -274,7 +274,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:1023](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L1023)
+[generated/ensemble/GradientBoostingClassifier.ts:1023](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L1023)
 
 ***
 
@@ -292,7 +292,7 @@ The estimator that provides the initial predictions. Set via the `init` argument
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:915](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L915)
+[generated/ensemble/GradientBoostingClassifier.ts:915](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L915)
 
 ***
 
@@ -310,7 +310,7 @@ The inferred value of max\_features.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:1077](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L1077)
+[generated/ensemble/GradientBoostingClassifier.ts:1077](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L1077)
 
 ***
 
@@ -328,7 +328,7 @@ The number of classes.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:1050](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L1050)
+[generated/ensemble/GradientBoostingClassifier.ts:1050](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L1050)
 
 ***
 
@@ -346,7 +346,7 @@ The number of estimators as selected by early stopping (if `n\_iter\_no\_change`
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L753)
+[generated/ensemble/GradientBoostingClassifier.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L753)
 
 ***
 
@@ -364,7 +364,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:996](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L996)
+[generated/ensemble/GradientBoostingClassifier.ts:996](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L996)
 
 ***
 
@@ -382,7 +382,7 @@ The number of trees that are built at each iteration. For binary classifiers, th
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L780)
+[generated/ensemble/GradientBoostingClassifier.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L780)
 
 ***
 
@@ -400,7 +400,7 @@ The improvement in loss on the out-of-bag samples relative to the previous itera
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L807)
+[generated/ensemble/GradientBoostingClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L807)
 
 ***
 
@@ -418,7 +418,7 @@ The last value of the loss on the out-of-bag samples. It is the same as `oob\_sc
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L861)
+[generated/ensemble/GradientBoostingClassifier.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L861)
 
 ***
 
@@ -436,7 +436,7 @@ The full history of the loss values on the out-of-bag samples. Only available if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L834)
+[generated/ensemble/GradientBoostingClassifier.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L834)
 
 ***
 
@@ -464,7 +464,7 @@ The full history of the loss values on the out-of-bag samples. Only available if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L164)
+[generated/ensemble/GradientBoostingClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L164)
 
 ***
 
@@ -482,7 +482,7 @@ The i-th score `train\_score\_\[i\]` is the loss of the model at iteration `i` o
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L888)
+[generated/ensemble/GradientBoostingClassifier.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L888)
 
 ## Methods
 
@@ -506,7 +506,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L237)
+[generated/ensemble/GradientBoostingClassifier.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L237)
 
 ***
 
@@ -530,7 +530,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L273)
+[generated/ensemble/GradientBoostingClassifier.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L273)
 
 ***
 
@@ -548,7 +548,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L220)
+[generated/ensemble/GradientBoostingClassifier.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L220)
 
 ***
 
@@ -584,7 +584,7 @@ Target values (strings or integers in classification, real numbers in regression
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L309)
+[generated/ensemble/GradientBoostingClassifier.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L309)
 
 ***
 
@@ -610,7 +610,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L362)
+[generated/ensemble/GradientBoostingClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L362)
 
 ***
 
@@ -632,7 +632,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L177)
+[generated/ensemble/GradientBoostingClassifier.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L177)
 
 ***
 
@@ -656,7 +656,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L398)
+[generated/ensemble/GradientBoostingClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L398)
 
 ***
 
@@ -680,7 +680,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L434)
+[generated/ensemble/GradientBoostingClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L434)
 
 ***
 
@@ -704,7 +704,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L470)
+[generated/ensemble/GradientBoostingClassifier.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L470)
 
 ***
 
@@ -738,7 +738,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L508)
+[generated/ensemble/GradientBoostingClassifier.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L508)
 
 ***
 
@@ -770,7 +770,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L558)
+[generated/ensemble/GradientBoostingClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L558)
 
 ***
 
@@ -798,7 +798,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L603)
+[generated/ensemble/GradientBoostingClassifier.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L603)
 
 ***
 
@@ -824,7 +824,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L641)
+[generated/ensemble/GradientBoostingClassifier.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L641)
 
 ***
 
@@ -850,7 +850,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L679)
+[generated/ensemble/GradientBoostingClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L679)
 
 ***
 
@@ -876,4 +876,4 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/ensemble/GradientBoostingClassifier.ts:717](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L717)
+[generated/ensemble/GradientBoostingClassifier.ts:717](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L717)

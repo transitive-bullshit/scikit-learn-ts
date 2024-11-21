@@ -78,7 +78,7 @@ If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.Colum
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L25)
+[generated/compose/ColumnTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L25)
 
 ## Properties
 
@@ -88,7 +88,7 @@ If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.Colum
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L23)
+[generated/compose/ColumnTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L23)
 
 ***
 
@@ -98,7 +98,7 @@ If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.Colum
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L22)
+[generated/compose/ColumnTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L22)
 
 ***
 
@@ -108,7 +108,7 @@ If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.Colum
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L21)
+[generated/compose/ColumnTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L21)
 
 ***
 
@@ -118,7 +118,7 @@ If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.Colum
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L18)
+[generated/compose/ColumnTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L18)
 
 ***
 
@@ -128,7 +128,7 @@ If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.Colum
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L19)
+[generated/compose/ColumnTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L19)
 
 ## Accessors
 
@@ -146,7 +146,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L504)
+[generated/compose/ColumnTransformer.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L504)
 
 ***
 
@@ -164,7 +164,7 @@ Number of features seen during fit. Only defined if the underlying transformers 
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L477)
+[generated/compose/ColumnTransformer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L477)
 
 ***
 
@@ -182,7 +182,7 @@ A dictionary from each transformer name to a slice, where the slice corresponds 
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L450)
+[generated/compose/ColumnTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L450)
 
 ***
 
@@ -210,7 +210,7 @@ A dictionary from each transformer name to a slice, where the slice corresponds 
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L80)
+[generated/compose/ColumnTransformer.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L80)
 
 ***
 
@@ -228,7 +228,7 @@ Boolean flag indicating whether the output of `transform` is a sparse matrix or 
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L423)
+[generated/compose/ColumnTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L423)
 
 ***
 
@@ -246,7 +246,7 @@ The collection of fitted transformers as tuples of (name, fitted\_transformer, c
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L396)
+[generated/compose/ColumnTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L396)
 
 ## Methods
 
@@ -264,7 +264,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L134)
+[generated/compose/ColumnTransformer.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L134)
 
 ***
 
@@ -298,7 +298,7 @@ Targets for supervised learning.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L151)
+[generated/compose/ColumnTransformer.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L151)
 
 ***
 
@@ -332,7 +332,7 @@ Targets for supervised learning.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L197)
+[generated/compose/ColumnTransformer.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L197)
 
 ***
 
@@ -356,7 +356,7 @@ Input features.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L245)
+[generated/compose/ColumnTransformer.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L245)
 
 ***
 
@@ -382,7 +382,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L283)
+[generated/compose/ColumnTransformer.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L283)
 
 ***
 
@@ -404,7 +404,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L93)
+[generated/compose/ColumnTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L93)
 
 ***
 
@@ -430,7 +430,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L321)
+[generated/compose/ColumnTransformer.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L321)
 
 ***
 
@@ -460,4 +460,4 @@ The data to be transformed by subset.
 
 #### Defined in
 
-[generated/compose/ColumnTransformer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L355)
+[generated/compose/ColumnTransformer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L355)

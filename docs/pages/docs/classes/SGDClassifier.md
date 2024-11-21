@@ -192,7 +192,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L29)
+[generated/linear\_model/SGDClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L29)
 
 ## Properties
 
@@ -202,7 +202,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L27)
+[generated/linear\_model/SGDClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L27)
 
 ***
 
@@ -212,7 +212,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L26)
+[generated/linear\_model/SGDClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L26)
 
 ***
 
@@ -222,7 +222,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L25)
+[generated/linear\_model/SGDClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L25)
 
 ***
 
@@ -232,7 +232,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L22)
+[generated/linear\_model/SGDClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L22)
 
 ***
 
@@ -242,7 +242,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L23)
+[generated/linear\_model/SGDClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L23)
 
 ## Accessors
 
@@ -258,7 +258,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L864)
+[generated/linear\_model/SGDClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L864)
 
 ***
 
@@ -276,7 +276,7 @@ Weights assigned to the features.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:771](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L771)
+[generated/linear\_model/SGDClassifier.ts:771](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L771)
 
 ***
 
@@ -294,7 +294,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:937](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L937)
+[generated/linear\_model/SGDClassifier.ts:937](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L937)
 
 ***
 
@@ -312,7 +312,7 @@ Constants in decision function.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L794)
+[generated/linear\_model/SGDClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L794)
 
 ***
 
@@ -330,7 +330,7 @@ Deprecated since version 1.4: Attribute `loss\_function\_` was deprecated in ver
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L842)
+[generated/linear\_model/SGDClassifier.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L842)
 
 ***
 
@@ -348,7 +348,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:912](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L912)
+[generated/linear\_model/SGDClassifier.ts:912](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L912)
 
 ***
 
@@ -366,7 +366,7 @@ The actual number of iterations before reaching the stopping criterion. For mult
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:819](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L819)
+[generated/linear\_model/SGDClassifier.ts:819](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L819)
 
 ***
 
@@ -394,7 +394,7 @@ The actual number of iterations before reaching the stopping criterion. For mult
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L190)
+[generated/linear\_model/SGDClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L190)
 
 ***
 
@@ -412,7 +412,7 @@ Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_sa
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:889](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L889)
+[generated/linear\_model/SGDClassifier.ts:889](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L889)
 
 ## Methods
 
@@ -438,7 +438,7 @@ The data matrix for which we want to get the confidence scores.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L261)
+[generated/linear\_model/SGDClassifier.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L261)
 
 ***
 
@@ -460,7 +460,7 @@ Converts the `coef\_` member (back) to a numpy.ndarray. This is the default form
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L297)
+[generated/linear\_model/SGDClassifier.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L297)
 
 ***
 
@@ -478,7 +478,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L242)
+[generated/linear\_model/SGDClassifier.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L242)
 
 ***
 
@@ -518,7 +518,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L323)
+[generated/linear\_model/SGDClassifier.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L323)
 
 ***
 
@@ -544,7 +544,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L377)
+[generated/linear\_model/SGDClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L377)
 
 ***
 
@@ -566,7 +566,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L203)
+[generated/linear\_model/SGDClassifier.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L203)
 
 ***
 
@@ -604,7 +604,7 @@ Subset of the target values.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L413)
+[generated/linear\_model/SGDClassifier.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L413)
 
 ***
 
@@ -628,7 +628,7 @@ The data matrix for which we want to get the predictions.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L460)
+[generated/linear\_model/SGDClassifier.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L460)
 
 ***
 
@@ -658,7 +658,7 @@ Input data for prediction.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L498)
+[generated/linear\_model/SGDClassifier.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L498)
 
 ***
 
@@ -688,7 +688,7 @@ Input data for prediction.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L538)
+[generated/linear\_model/SGDClassifier.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L538)
 
 ***
 
@@ -722,7 +722,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L572)
+[generated/linear\_model/SGDClassifier.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L572)
 
 ***
 
@@ -758,7 +758,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L618)
+[generated/linear\_model/SGDClassifier.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L618)
 
 ***
 
@@ -790,7 +790,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L664)
+[generated/linear\_model/SGDClassifier.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L664)
 
 ***
 
@@ -818,7 +818,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L707)
+[generated/linear\_model/SGDClassifier.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L707)
 
 ***
 
@@ -842,4 +842,4 @@ The `intercept\_` member is not converted.
 
 #### Defined in
 
-[generated/linear\_model/SGDClassifier.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L745)
+[generated/linear\_model/SGDClassifier.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L745)

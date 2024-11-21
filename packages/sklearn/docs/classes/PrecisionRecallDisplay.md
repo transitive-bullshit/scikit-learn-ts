@@ -50,7 +50,7 @@ Recall values.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
+[generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Recall values.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23)
+[generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23)
 
 ***
 
@@ -70,7 +70,7 @@ Recall values.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22)
+[generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22)
 
 ***
 
@@ -80,7 +80,7 @@ Recall values.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21)
+[generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21)
 
 ***
 
@@ -90,7 +90,7 @@ Recall values.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18)
+[generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18)
 
 ***
 
@@ -100,7 +100,7 @@ Recall values.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19)
+[generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19)
 
 ## Accessors
 
@@ -118,7 +118,7 @@ Axes with precision recall curve.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L427)
+[generated/metrics/PrecisionRecallDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L427)
 
 ***
 
@@ -136,7 +136,7 @@ The chance level line. It is `undefined` if the chance level is not plotted.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L400)
+[generated/metrics/PrecisionRecallDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L400)
 
 ***
 
@@ -154,7 +154,7 @@ Figure containing the curve.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L454)
+[generated/metrics/PrecisionRecallDisplay.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L454)
 
 ***
 
@@ -172,7 +172,7 @@ Precision recall curve.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L373)
+[generated/metrics/PrecisionRecallDisplay.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L373)
 
 ***
 
@@ -200,7 +200,7 @@ Precision recall curve.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L60)
+[generated/metrics/PrecisionRecallDisplay.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L60)
 
 ## Methods
 
@@ -218,7 +218,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L116)
+[generated/metrics/PrecisionRecallDisplay.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L116)
 
 ***
 
@@ -298,7 +298,7 @@ Target values.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L133)
+[generated/metrics/PrecisionRecallDisplay.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L133)
 
 ***
 
@@ -366,7 +366,7 @@ True binary labels.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L230)
+[generated/metrics/PrecisionRecallDisplay.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L230)
 
 ***
 
@@ -388,7 +388,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L73)
+[generated/metrics/PrecisionRecallDisplay.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L73)
 
 ***
 
@@ -434,4 +434,4 @@ Whether to plot the chance level. The chance level is the prevalence of the posi
 
 #### Defined in
 
-[generated/metrics/PrecisionRecallDisplay.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L317)
+[generated/metrics/PrecisionRecallDisplay.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L317)

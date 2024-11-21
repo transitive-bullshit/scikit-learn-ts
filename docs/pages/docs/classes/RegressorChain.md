@@ -50,7 +50,7 @@ If `true`, chain progress is output as each model is completed.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L25)
+[generated/multioutput/RegressorChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L25)
 
 ## Properties
 
@@ -60,7 +60,7 @@ If `true`, chain progress is output as each model is completed.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L23)
+[generated/multioutput/RegressorChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L23)
 
 ***
 
@@ -70,7 +70,7 @@ If `true`, chain progress is output as each model is completed.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L22)
+[generated/multioutput/RegressorChain.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L22)
 
 ***
 
@@ -80,7 +80,7 @@ If `true`, chain progress is output as each model is completed.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L21)
+[generated/multioutput/RegressorChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L21)
 
 ***
 
@@ -90,7 +90,7 @@ If `true`, chain progress is output as each model is completed.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L18)
+[generated/multioutput/RegressorChain.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L18)
 
 ***
 
@@ -100,7 +100,7 @@ If `true`, chain progress is output as each model is completed.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L19)
+[generated/multioutput/RegressorChain.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L19)
 
 ## Accessors
 
@@ -118,7 +118,7 @@ A list of clones of base\_estimator.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L318)
+[generated/multioutput/RegressorChain.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L318)
 
 ***
 
@@ -136,7 +136,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L391)
+[generated/multioutput/RegressorChain.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L391)
 
 ***
 
@@ -154,7 +154,7 @@ Number of features seen during fit. Only defined if the underlying `base\_estima
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L366)
+[generated/multioutput/RegressorChain.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L366)
 
 ***
 
@@ -172,7 +172,7 @@ The order of labels in the classifier chain.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L343)
+[generated/multioutput/RegressorChain.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L343)
 
 ***
 
@@ -200,7 +200,7 @@ The order of labels in the classifier chain.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L57)
+[generated/multioutput/RegressorChain.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L57)
 
 ## Methods
 
@@ -218,7 +218,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L109)
+[generated/multioutput/RegressorChain.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L109)
 
 ***
 
@@ -250,7 +250,7 @@ The target values.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L126)
+[generated/multioutput/RegressorChain.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L126)
 
 ***
 
@@ -276,7 +276,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L170)
+[generated/multioutput/RegressorChain.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L170)
 
 ***
 
@@ -298,7 +298,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L70)
+[generated/multioutput/RegressorChain.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L70)
 
 ***
 
@@ -322,7 +322,7 @@ The input data.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L204)
+[generated/multioutput/RegressorChain.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L204)
 
 ***
 
@@ -356,7 +356,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L238)
+[generated/multioutput/RegressorChain.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L238)
 
 ***
 
@@ -384,4 +384,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/multioutput/RegressorChain.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L284)
+[generated/multioutput/RegressorChain.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L284)

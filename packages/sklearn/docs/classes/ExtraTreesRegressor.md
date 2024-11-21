@@ -148,7 +148,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L25)
+[generated/ensemble/ExtraTreesRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L25)
 
 ## Properties
 
@@ -158,7 +158,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L23)
+[generated/ensemble/ExtraTreesRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L23)
 
 ***
 
@@ -168,7 +168,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L22)
+[generated/ensemble/ExtraTreesRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L22)
 
 ***
 
@@ -178,7 +178,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L21)
+[generated/ensemble/ExtraTreesRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L21)
 
 ***
 
@@ -188,7 +188,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L18)
+[generated/ensemble/ExtraTreesRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L18)
 
 ***
 
@@ -198,7 +198,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L19)
+[generated/ensemble/ExtraTreesRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L19)
 
 ## Accessors
 
@@ -216,7 +216,7 @@ The child estimator template used to create the collection of fitted sub-estimat
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L533)
+[generated/ensemble/ExtraTreesRegressor.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L533)
 
 ***
 
@@ -234,7 +234,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L560)
+[generated/ensemble/ExtraTreesRegressor.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L560)
 
 ***
 
@@ -252,7 +252,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L614)
+[generated/ensemble/ExtraTreesRegressor.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L614)
 
 ***
 
@@ -270,7 +270,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L587)
+[generated/ensemble/ExtraTreesRegressor.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L587)
 
 ***
 
@@ -288,7 +288,7 @@ The number of outputs.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L641)
+[generated/ensemble/ExtraTreesRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L641)
 
 ***
 
@@ -306,7 +306,7 @@ Prediction computed with out-of-bag estimate on the training set. This attribute
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L695)
+[generated/ensemble/ExtraTreesRegressor.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L695)
 
 ***
 
@@ -324,7 +324,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L668)
+[generated/ensemble/ExtraTreesRegressor.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L668)
 
 ***
 
@@ -352,7 +352,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L146)
+[generated/ensemble/ExtraTreesRegressor.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L146)
 
 ## Methods
 
@@ -376,7 +376,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L219)
+[generated/ensemble/ExtraTreesRegressor.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L219)
 
 ***
 
@@ -400,7 +400,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L253)
+[generated/ensemble/ExtraTreesRegressor.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L253)
 
 ***
 
@@ -418,7 +418,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L202)
+[generated/ensemble/ExtraTreesRegressor.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L202)
 
 ***
 
@@ -450,7 +450,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L289)
+[generated/ensemble/ExtraTreesRegressor.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L289)
 
 ***
 
@@ -476,7 +476,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L335)
+[generated/ensemble/ExtraTreesRegressor.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L335)
 
 ***
 
@@ -498,7 +498,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L159)
+[generated/ensemble/ExtraTreesRegressor.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L159)
 
 ***
 
@@ -524,7 +524,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L373)
+[generated/ensemble/ExtraTreesRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L373)
 
 ***
 
@@ -558,7 +558,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L409)
+[generated/ensemble/ExtraTreesRegressor.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L409)
 
 ***
 
@@ -586,7 +586,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L457)
+[generated/ensemble/ExtraTreesRegressor.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L457)
 
 ***
 
@@ -614,4 +614,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/ExtraTreesRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L497)
+[generated/ensemble/ExtraTreesRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L497)

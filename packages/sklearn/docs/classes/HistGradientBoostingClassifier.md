@@ -184,7 +184,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L29)
+[generated/ensemble/HistGradientBoostingClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L29)
 
 ## Properties
 
@@ -194,7 +194,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L27)
+[generated/ensemble/HistGradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L27)
 
 ***
 
@@ -204,7 +204,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L26)
+[generated/ensemble/HistGradientBoostingClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L26)
 
 ***
 
@@ -214,7 +214,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L25)
+[generated/ensemble/HistGradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L25)
 
 ***
 
@@ -224,7 +224,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L22)
+[generated/ensemble/HistGradientBoostingClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L22)
 
 ***
 
@@ -234,7 +234,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L23)
+[generated/ensemble/HistGradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L23)
 
 ## Accessors
 
@@ -252,7 +252,7 @@ Class labels.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L686)
+[generated/ensemble/HistGradientBoostingClassifier.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L686)
 
 ***
 
@@ -270,7 +270,7 @@ Indicates whether early stopping is used during training.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L713)
+[generated/ensemble/HistGradientBoostingClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L713)
 
 ***
 
@@ -288,7 +288,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:875](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L875)
+[generated/ensemble/HistGradientBoostingClassifier.ts:875](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L875)
 
 ***
 
@@ -306,7 +306,7 @@ Boolean mask for the categorical features. `undefined` if there are no categoric
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L821)
+[generated/ensemble/HistGradientBoostingClassifier.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L821)
 
 ***
 
@@ -324,7 +324,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:848](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L848)
+[generated/ensemble/HistGradientBoostingClassifier.ts:848](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L848)
 
 ***
 
@@ -342,7 +342,7 @@ The number of tree that are built at each iteration. This is equal to 1 for bina
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L740)
+[generated/ensemble/HistGradientBoostingClassifier.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L740)
 
 ***
 
@@ -370,7 +370,7 @@ The number of tree that are built at each iteration. This is equal to 1 for bina
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L179)
+[generated/ensemble/HistGradientBoostingClassifier.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L179)
 
 ***
 
@@ -388,7 +388,7 @@ The scores at each iteration on the training data. The first entry is the score 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L767)
+[generated/ensemble/HistGradientBoostingClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L767)
 
 ***
 
@@ -406,7 +406,7 @@ The scores at each iteration on the held-out validation data. The first entry is
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L794)
+[generated/ensemble/HistGradientBoostingClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L794)
 
 ## Methods
 
@@ -430,7 +430,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L252)
+[generated/ensemble/HistGradientBoostingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L252)
 
 ***
 
@@ -448,7 +448,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L235)
+[generated/ensemble/HistGradientBoostingClassifier.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L235)
 
 ***
 
@@ -480,7 +480,7 @@ Target values.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L288)
+[generated/ensemble/HistGradientBoostingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L288)
 
 ***
 
@@ -506,7 +506,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L336)
+[generated/ensemble/HistGradientBoostingClassifier.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L336)
 
 ***
 
@@ -528,7 +528,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L192)
+[generated/ensemble/HistGradientBoostingClassifier.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L192)
 
 ***
 
@@ -552,7 +552,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L372)
+[generated/ensemble/HistGradientBoostingClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L372)
 
 ***
 
@@ -576,7 +576,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L408)
+[generated/ensemble/HistGradientBoostingClassifier.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L408)
 
 ***
 
@@ -610,7 +610,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L446)
+[generated/ensemble/HistGradientBoostingClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L446)
 
 ***
 
@@ -638,7 +638,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L496)
+[generated/ensemble/HistGradientBoostingClassifier.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L496)
 
 ***
 
@@ -666,7 +666,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L536)
+[generated/ensemble/HistGradientBoostingClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L536)
 
 ***
 
@@ -692,7 +692,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L574)
+[generated/ensemble/HistGradientBoostingClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L574)
 
 ***
 
@@ -718,7 +718,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L612)
+[generated/ensemble/HistGradientBoostingClassifier.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L612)
 
 ***
 
@@ -744,4 +744,4 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L650)
+[generated/ensemble/HistGradientBoostingClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L650)

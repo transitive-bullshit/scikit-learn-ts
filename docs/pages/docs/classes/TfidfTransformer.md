@@ -68,7 +68,7 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L35)
+[generated/feature\_extraction/text/TfidfTransformer.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L35)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L33)
+[generated/feature\_extraction/text/TfidfTransformer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L33)
 
 ***
 
@@ -88,7 +88,7 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L32)
+[generated/feature\_extraction/text/TfidfTransformer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L32)
 
 ***
 
@@ -98,7 +98,7 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L31)
+[generated/feature\_extraction/text/TfidfTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L31)
 
 ***
 
@@ -108,7 +108,7 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L28)
+[generated/feature\_extraction/text/TfidfTransformer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L28)
 
 ***
 
@@ -118,7 +118,7 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L29)
+[generated/feature\_extraction/text/TfidfTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L29)
 
 ## Accessors
 
@@ -136,7 +136,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L469)
+[generated/feature\_extraction/text/TfidfTransformer.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L469)
 
 ***
 
@@ -154,7 +154,7 @@ The inverse document frequency (IDF) vector; only defined if `use\_idf` is `true
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L417)
+[generated/feature\_extraction/text/TfidfTransformer.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L417)
 
 ***
 
@@ -172,7 +172,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L442)
+[generated/feature\_extraction/text/TfidfTransformer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L442)
 
 ***
 
@@ -200,7 +200,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L68)
+[generated/feature\_extraction/text/TfidfTransformer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L68)
 
 ## Methods
 
@@ -218,7 +218,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L122)
+[generated/feature\_extraction/text/TfidfTransformer.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L122)
 
 ***
 
@@ -246,7 +246,7 @@ This parameter is not needed to compute tf-idf.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L139)
+[generated/feature\_extraction/text/TfidfTransformer.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L139)
 
 ***
 
@@ -280,7 +280,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L180)
+[generated/feature\_extraction/text/TfidfTransformer.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L180)
 
 ***
 
@@ -304,7 +304,7 @@ Input features.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L226)
+[generated/feature\_extraction/text/TfidfTransformer.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L226)
 
 ***
 
@@ -330,7 +330,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L264)
+[generated/feature\_extraction/text/TfidfTransformer.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L264)
 
 ***
 
@@ -352,7 +352,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L81)
+[generated/feature\_extraction/text/TfidfTransformer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L81)
 
 ***
 
@@ -378,7 +378,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L302)
+[generated/feature\_extraction/text/TfidfTransformer.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L302)
 
 ***
 
@@ -406,7 +406,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L340)
+[generated/feature\_extraction/text/TfidfTransformer.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L340)
 
 ***
 
@@ -438,4 +438,4 @@ A matrix of term/token counts.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfTransformer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L376)
+[generated/feature\_extraction/text/TfidfTransformer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L376)

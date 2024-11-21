@@ -80,7 +80,7 @@ Selects the algorithm for finding singular vectors. May be ‘randomized’ or �
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L29)
+[generated/cluster/SpectralCoclustering.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L29)
 
 ## Properties
 
@@ -90,7 +90,7 @@ Selects the algorithm for finding singular vectors. May be ‘randomized’ or �
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L27)
+[generated/cluster/SpectralCoclustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L27)
 
 ***
 
@@ -100,7 +100,7 @@ Selects the algorithm for finding singular vectors. May be ‘randomized’ or �
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L26)
+[generated/cluster/SpectralCoclustering.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L26)
 
 ***
 
@@ -110,7 +110,7 @@ Selects the algorithm for finding singular vectors. May be ‘randomized’ or �
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L25)
+[generated/cluster/SpectralCoclustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L25)
 
 ***
 
@@ -120,7 +120,7 @@ Selects the algorithm for finding singular vectors. May be ‘randomized’ or �
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L22)
+[generated/cluster/SpectralCoclustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L22)
 
 ***
 
@@ -130,7 +130,7 @@ Selects the algorithm for finding singular vectors. May be ‘randomized’ or �
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L23)
+[generated/cluster/SpectralCoclustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L23)
 
 ## Accessors
 
@@ -148,7 +148,7 @@ The bicluster label of each column.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L427)
+[generated/cluster/SpectralCoclustering.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L427)
 
 ***
 
@@ -166,7 +166,7 @@ Results of the clustering, like `rows`.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L373)
+[generated/cluster/SpectralCoclustering.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L373)
 
 ***
 
@@ -184,7 +184,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L481)
+[generated/cluster/SpectralCoclustering.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L481)
 
 ***
 
@@ -202,7 +202,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L454)
+[generated/cluster/SpectralCoclustering.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L454)
 
 ***
 
@@ -230,7 +230,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L81)
+[generated/cluster/SpectralCoclustering.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L81)
 
 ***
 
@@ -248,7 +248,7 @@ The bicluster label of each row.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L400)
+[generated/cluster/SpectralCoclustering.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L400)
 
 ***
 
@@ -266,7 +266,7 @@ Results of the clustering. `rows\[i, r\]` is `true` if cluster `i` contains row 
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L346)
+[generated/cluster/SpectralCoclustering.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L346)
 
 ## Methods
 
@@ -284,7 +284,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L137)
+[generated/cluster/SpectralCoclustering.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L137)
 
 ***
 
@@ -312,7 +312,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L154)
+[generated/cluster/SpectralCoclustering.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L154)
 
 ***
 
@@ -338,7 +338,7 @@ The index of the cluster.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L195)
+[generated/cluster/SpectralCoclustering.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L195)
 
 ***
 
@@ -364,7 +364,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L233)
+[generated/cluster/SpectralCoclustering.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L233)
 
 ***
 
@@ -388,7 +388,7 @@ The index of the cluster.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L269)
+[generated/cluster/SpectralCoclustering.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L269)
 
 ***
 
@@ -416,7 +416,7 @@ The index of the cluster.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L305)
+[generated/cluster/SpectralCoclustering.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L305)
 
 ***
 
@@ -438,4 +438,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/SpectralCoclustering.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L94)
+[generated/cluster/SpectralCoclustering.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L94)

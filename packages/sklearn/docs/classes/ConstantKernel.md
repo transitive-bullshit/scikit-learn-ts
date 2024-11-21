@@ -36,7 +36,7 @@ The lower and upper bound on `constant\_value`. If set to “fixed”, `constant
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L23)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ The lower and upper bound on `constant\_value`. If set to “fixed”, `constant
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L21)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ The lower and upper bound on `constant\_value`. If set to “fixed”, `constant
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L20)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ The lower and upper bound on `constant\_value`. If set to “fixed”, `constant
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L19)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ The lower and upper bound on `constant\_value`. If set to “fixed”, `constant
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L16)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ The lower and upper bound on `constant\_value`. If set to “fixed”, `constant
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L17)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L17)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ The lower and upper bound on `constant\_value`. If set to “fixed”, `constant
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L40)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L40)
 
 ## Methods
 
@@ -150,7 +150,7 @@ Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evalua
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L109)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L109)
 
 ***
 
@@ -174,7 +174,7 @@ The hyperparameters
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L153)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L153)
 
 ***
 
@@ -200,7 +200,7 @@ Argument to the kernel.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L189)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L189)
 
 ***
 
@@ -218,7 +218,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L92)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L92)
 
 ***
 
@@ -240,7 +240,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L53)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L53)
 
 ***
 
@@ -260,4 +260,4 @@ Returns whether the kernel is stationary.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ConstantKernel.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L221)
+[generated/gaussian\_process/kernels/ConstantKernel.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L221)

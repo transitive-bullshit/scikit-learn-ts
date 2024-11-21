@@ -46,7 +46,7 @@ Sequence of weights (`float` or `int`) to weight the occurrences of predicted va
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L25)
+[generated/ensemble/VotingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L25)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Sequence of weights (`float` or `int`) to weight the occurrences of predicted va
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L23)
+[generated/ensemble/VotingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L23)
 
 ***
 
@@ -66,7 +66,7 @@ Sequence of weights (`float` or `int`) to weight the occurrences of predicted va
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L22)
+[generated/ensemble/VotingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L22)
 
 ***
 
@@ -76,7 +76,7 @@ Sequence of weights (`float` or `int`) to weight the occurrences of predicted va
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L21)
+[generated/ensemble/VotingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L21)
 
 ***
 
@@ -86,7 +86,7 @@ Sequence of weights (`float` or `int`) to weight the occurrences of predicted va
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L18)
+[generated/ensemble/VotingRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L18)
 
 ***
 
@@ -96,7 +96,7 @@ Sequence of weights (`float` or `int`) to weight the occurrences of predicted va
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L19)
+[generated/ensemble/VotingRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L19)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ The collection of fitted sub-estimators as defined in `estimators` that are not 
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L502)
+[generated/ensemble/VotingRegressor.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L502)
 
 ***
 
@@ -132,7 +132,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Only defined 
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L552)
+[generated/ensemble/VotingRegressor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L552)
 
 ***
 
@@ -150,7 +150,7 @@ Attribute to access any fitted sub-estimators by name.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L527)
+[generated/ensemble/VotingRegressor.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L527)
 
 ***
 
@@ -178,7 +178,7 @@ Attribute to access any fitted sub-estimators by name.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L52)
+[generated/ensemble/VotingRegressor.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L52)
 
 ## Methods
 
@@ -196,7 +196,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L104)
+[generated/ensemble/VotingRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L104)
 
 ***
 
@@ -232,7 +232,7 @@ Target values.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L121)
+[generated/ensemble/VotingRegressor.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L121)
 
 ***
 
@@ -266,7 +266,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L170)
+[generated/ensemble/VotingRegressor.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L170)
 
 ***
 
@@ -290,7 +290,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L212)
+[generated/ensemble/VotingRegressor.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L212)
 
 ***
 
@@ -316,7 +316,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L248)
+[generated/ensemble/VotingRegressor.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L248)
 
 ***
 
@@ -338,7 +338,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L65)
+[generated/ensemble/VotingRegressor.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L65)
 
 ***
 
@@ -364,7 +364,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L284)
+[generated/ensemble/VotingRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L284)
 
 ***
 
@@ -398,7 +398,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L318)
+[generated/ensemble/VotingRegressor.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L318)
 
 ***
 
@@ -426,7 +426,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L364)
+[generated/ensemble/VotingRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L364)
 
 ***
 
@@ -452,7 +452,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L400)
+[generated/ensemble/VotingRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L400)
 
 ***
 
@@ -480,7 +480,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L436)
+[generated/ensemble/VotingRegressor.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L436)
 
 ***
 
@@ -504,4 +504,4 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/VotingRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L470)
+[generated/ensemble/VotingRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L470)

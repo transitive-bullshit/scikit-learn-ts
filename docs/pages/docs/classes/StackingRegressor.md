@@ -60,7 +60,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L27)
+[generated/ensemble/StackingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L27)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L25)
+[generated/ensemble/StackingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L25)
 
 ***
 
@@ -80,7 +80,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L24)
+[generated/ensemble/StackingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L24)
 
 ***
 
@@ -90,7 +90,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L23)
+[generated/ensemble/StackingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L23)
 
 ***
 
@@ -100,7 +100,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L20)
+[generated/ensemble/StackingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L20)
 
 ***
 
@@ -110,7 +110,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L21)
+[generated/ensemble/StackingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L21)
 
 ## Accessors
 
@@ -128,7 +128,7 @@ The elements of the `estimators` parameter, having been fitted on the training d
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L530)
+[generated/ensemble/StackingRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L530)
 
 ***
 
@@ -146,7 +146,7 @@ Names of features seen during fit. Only defined if the underlying estimators exp
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L584)
+[generated/ensemble/StackingRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L584)
 
 ***
 
@@ -164,7 +164,7 @@ The regressor to stacked the base estimators fitted.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L611)
+[generated/ensemble/StackingRegressor.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L611)
 
 ***
 
@@ -182,7 +182,7 @@ Attribute to access any fitted sub-estimators by name.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L557)
+[generated/ensemble/StackingRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L557)
 
 ***
 
@@ -210,7 +210,7 @@ Attribute to access any fitted sub-estimators by name.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L66)
+[generated/ensemble/StackingRegressor.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L66)
 
 ***
 
@@ -228,7 +228,7 @@ The method used by each base estimator.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L638)
+[generated/ensemble/StackingRegressor.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L638)
 
 ## Methods
 
@@ -246,7 +246,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L120)
+[generated/ensemble/StackingRegressor.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L120)
 
 ***
 
@@ -278,7 +278,7 @@ Target values.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L137)
+[generated/ensemble/StackingRegressor.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L137)
 
 ***
 
@@ -310,7 +310,7 @@ Target values.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L181)
+[generated/ensemble/StackingRegressor.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L181)
 
 ***
 
@@ -334,7 +334,7 @@ Input features. The input feature names are only used when `passthrough` is `tru
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L227)
+[generated/ensemble/StackingRegressor.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L227)
 
 ***
 
@@ -356,7 +356,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L265)
+[generated/ensemble/StackingRegressor.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L265)
 
 ***
 
@@ -378,7 +378,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L79)
+[generated/ensemble/StackingRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L79)
 
 ***
 
@@ -406,7 +406,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L295)
+[generated/ensemble/StackingRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L295)
 
 ***
 
@@ -440,7 +440,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L336)
+[generated/ensemble/StackingRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L336)
 
 ***
 
@@ -468,7 +468,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L384)
+[generated/ensemble/StackingRegressor.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L384)
 
 ***
 
@@ -494,7 +494,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L422)
+[generated/ensemble/StackingRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L422)
 
 ***
 
@@ -522,7 +522,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L460)
+[generated/ensemble/StackingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L460)
 
 ***
 
@@ -546,4 +546,4 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/ensemble/StackingRegressor.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L496)
+[generated/ensemble/StackingRegressor.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L496)

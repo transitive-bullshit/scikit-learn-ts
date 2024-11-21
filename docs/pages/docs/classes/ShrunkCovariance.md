@@ -48,7 +48,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L23)
+[generated/covariance/ShrunkCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L23)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L21)
+[generated/covariance/ShrunkCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L21)
 
 ***
 
@@ -68,7 +68,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L20)
+[generated/covariance/ShrunkCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L20)
 
 ***
 
@@ -78,7 +78,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L19)
+[generated/covariance/ShrunkCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L19)
 
 ***
 
@@ -88,7 +88,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L16)
+[generated/covariance/ShrunkCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L16)
 
 ***
 
@@ -98,7 +98,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L17)
+[generated/covariance/ShrunkCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L17)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Estimated covariance matrix
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L403)
+[generated/covariance/ShrunkCovariance.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L403)
 
 ***
 
@@ -134,7 +134,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L511)
+[generated/covariance/ShrunkCovariance.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L511)
 
 ***
 
@@ -152,7 +152,7 @@ Estimated location, i.e. the estimated mean.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L430)
+[generated/covariance/ShrunkCovariance.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L430)
 
 ***
 
@@ -170,7 +170,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L484)
+[generated/covariance/ShrunkCovariance.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L484)
 
 ***
 
@@ -188,7 +188,7 @@ Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L457)
+[generated/covariance/ShrunkCovariance.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L457)
 
 ***
 
@@ -216,7 +216,7 @@ Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L49)
+[generated/covariance/ShrunkCovariance.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L49)
 
 ## Methods
 
@@ -234,7 +234,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L103)
+[generated/covariance/ShrunkCovariance.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L103)
 
 ***
 
@@ -282,7 +282,7 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L120)
+[generated/covariance/ShrunkCovariance.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L120)
 
 ***
 
@@ -310,7 +310,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L175)
+[generated/covariance/ShrunkCovariance.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L175)
 
 ***
 
@@ -336,7 +336,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L216)
+[generated/covariance/ShrunkCovariance.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L216)
 
 ***
 
@@ -360,7 +360,7 @@ The precision matrix associated to the current covariance object.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L252)
+[generated/covariance/ShrunkCovariance.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L252)
 
 ***
 
@@ -382,7 +382,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L62)
+[generated/covariance/ShrunkCovariance.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L62)
 
 ***
 
@@ -406,7 +406,7 @@ The observations, the Mahalanobis distances of the which we compute. Observation
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L288)
+[generated/covariance/ShrunkCovariance.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L288)
 
 ***
 
@@ -436,7 +436,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L324)
+[generated/covariance/ShrunkCovariance.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L324)
 
 ***
 
@@ -464,4 +464,4 @@ Metadata routing for `X\_test` parameter in `score`.
 
 #### Defined in
 
-[generated/covariance/ShrunkCovariance.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L367)
+[generated/covariance/ShrunkCovariance.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L367)
