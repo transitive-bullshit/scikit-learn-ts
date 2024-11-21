@@ -57,7 +57,7 @@ _This project is meant for Node.js users, so don't worry if you're not familiar 
 
 Make sure you have Node.js and Python 3 installed and in your `PATH`.
 
-- `node >= 14`
+- `node >= 18`
 - `python >= 3.7`
 
 In python land, install `numpy` and `scikit-learn` either globally via `pip` or via your favorite virtualenv manager. The shell running your Node.js program will need access to these python modules, so if you're using a virtualenv, make sure it's activated.
