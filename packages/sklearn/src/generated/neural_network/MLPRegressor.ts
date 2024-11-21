@@ -218,39 +218,8 @@ except NameError: bridgeMLPRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MLPRegressor = {'hidden_layer_sizes': np.array(${
-      this.opts['hidden_layer_sizes'] ?? undefined
-    }) if ${
-      this.opts['hidden_layer_sizes'] !== undefined
-    } else None, 'activation': ${
-      this.opts['activation'] ?? undefined
-    }, 'solver': ${this.opts['solver'] ?? undefined}, 'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'batch_size': ${
-      this.opts['batch_size'] ?? undefined
-    }, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'learning_rate_init': ${
-      this.opts['learning_rate_init'] ?? undefined
-    }, 'power_t': ${this.opts['power_t'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'momentum': ${
-      this.opts['momentum'] ?? undefined
-    }, 'nesterovs_momentum': ${
-      this.opts['nesterovs_momentum'] ?? undefined
-    }, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'beta_1': ${this.opts['beta_1'] ?? undefined}, 'beta_2': ${
-      this.opts['beta_2'] ?? undefined
-    }, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'max_fun': ${this.opts['max_fun'] ?? undefined}}
+    await this._py
+      .ex`ctor_MLPRegressor = {'hidden_layer_sizes': np.array(${this.opts['hidden_layer_sizes'] ?? undefined}) if ${this.opts['hidden_layer_sizes'] !== undefined} else None, 'activation': ${this.opts['activation'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'learning_rate_init': ${this.opts['learning_rate_init'] ?? undefined}, 'power_t': ${this.opts['power_t'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'momentum': ${this.opts['momentum'] ?? undefined}, 'nesterovs_momentum': ${this.opts['nesterovs_momentum'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'beta_1': ${this.opts['beta_1'] ?? undefined}, 'beta_2': ${this.opts['beta_2'] ?? undefined}, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'max_fun': ${this.opts['max_fun'] ?? undefined}}
 
 ctor_MLPRegressor = {k: v for k, v in ctor_MLPRegressor.items() if v is not None}`
 
@@ -302,11 +271,8 @@ ctor_MLPRegressor = {k: v for k, v in ctor_MLPRegressor.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_MLPRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_MLPRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_MLPRegressor_fit = {k: v for k, v in pms_MLPRegressor_fit.items() if v is not None}`
 
@@ -341,9 +307,8 @@ pms_MLPRegressor_fit = {k: v for k, v in pms_MLPRegressor_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_MLPRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MLPRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MLPRegressor_get_metadata_routing = {k: v for k, v in pms_MLPRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -379,11 +344,8 @@ pms_MLPRegressor_get_metadata_routing = {k: v for k, v in pms_MLPRegressor_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_MLPRegressor_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_MLPRegressor_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_MLPRegressor_partial_fit = {k: v for k, v in pms_MLPRegressor_partial_fit.items() if v is not None}`
 
@@ -414,9 +376,8 @@ pms_MLPRegressor_partial_fit = {k: v for k, v in pms_MLPRegressor_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_MLPRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MLPRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MLPRegressor_predict = {k: v for k, v in pms_MLPRegressor_predict.items() if v is not None}`
 
@@ -459,13 +420,8 @@ pms_MLPRegressor_predict = {k: v for k, v in pms_MLPRegressor_predict.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_MLPRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_MLPRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v is not None}`
 
@@ -502,9 +458,8 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_MLPRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MLPRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MLPRegressor_set_score_request = {k: v for k, v in pms_MLPRegressor_set_score_request.items() if v is not None}`
 

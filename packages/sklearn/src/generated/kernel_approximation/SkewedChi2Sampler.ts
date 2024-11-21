@@ -82,11 +82,8 @@ except NameError: bridgeSkewedChi2Sampler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SkewedChi2Sampler = {'skewedness': ${
-      this.opts['skewedness'] ?? undefined
-    }, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_SkewedChi2Sampler = {'skewedness': ${this.opts['skewedness'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SkewedChi2Sampler = {k: v for k, v in ctor_SkewedChi2Sampler.items() if v is not None}`
 
@@ -142,9 +139,8 @@ ctor_SkewedChi2Sampler = {k: v for k, v in ctor_SkewedChi2Sampler.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SkewedChi2Sampler_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SkewedChi2Sampler_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_SkewedChi2Sampler_fit = {k: v for k, v in pms_SkewedChi2Sampler_fit.items() if v is not None}`
 
@@ -191,13 +187,8 @@ pms_SkewedChi2Sampler_fit = {k: v for k, v in pms_SkewedChi2Sampler_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SkewedChi2Sampler_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SkewedChi2Sampler_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SkewedChi2Sampler_fit_transform = {k: v for k, v in pms_SkewedChi2Sampler_fit_transform.items() if v is not None}`
 
@@ -235,9 +226,7 @@ pms_SkewedChi2Sampler_fit_transform = {k: v for k, v in pms_SkewedChi2Sampler_fi
 
     // set up method params
     await this._py
-      .ex`pms_SkewedChi2Sampler_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SkewedChi2Sampler_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SkewedChi2Sampler_get_feature_names_out = {k: v for k, v in pms_SkewedChi2Sampler_get_feature_names_out.items() if v is not None}`
 
@@ -275,9 +264,7 @@ pms_SkewedChi2Sampler_get_feature_names_out = {k: v for k, v in pms_SkewedChi2Sa
 
     // set up method params
     await this._py
-      .ex`pms_SkewedChi2Sampler_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SkewedChi2Sampler_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SkewedChi2Sampler_get_metadata_routing = {k: v for k, v in pms_SkewedChi2Sampler_get_metadata_routing.items() if v is not None}`
 
@@ -299,7 +286,7 @@ pms_SkewedChi2Sampler_get_metadata_routing = {k: v for k, v in pms_SkewedChi2Sam
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -312,9 +299,8 @@ pms_SkewedChi2Sampler_get_metadata_routing = {k: v for k, v in pms_SkewedChi2Sam
     }
 
     // set up method params
-    await this._py.ex`pms_SkewedChi2Sampler_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SkewedChi2Sampler_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SkewedChi2Sampler_set_output = {k: v for k, v in pms_SkewedChi2Sampler_set_output.items() if v is not None}`
 
@@ -347,9 +333,8 @@ pms_SkewedChi2Sampler_set_output = {k: v for k, v in pms_SkewedChi2Sampler_set_o
     }
 
     // set up method params
-    await this._py.ex`pms_SkewedChi2Sampler_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SkewedChi2Sampler_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_SkewedChi2Sampler_transform = {k: v for k, v in pms_SkewedChi2Sampler_transform.items() if v is not None}`
 

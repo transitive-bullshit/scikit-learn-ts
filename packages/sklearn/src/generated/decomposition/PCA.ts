@@ -12,9 +12,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   It uses the LAPACK implementation of the full SVD or a randomized truncated SVD by the method of Halko et al. 2009, depending on the shape of the input data and the number of components to extract.
 
-  It can also use the scipy.sparse.linalg ARPACK implementation of the truncated SVD.
+  With sparse inputs, the ARPACK implementation of the truncated SVD can be used (i.e. through [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.14.1)")). Alternatively, one may consider [`TruncatedSVD`](sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD "sklearn.decomposition.TruncatedSVD") where the data are not centered.
 
-  Notice that this class does not support sparse input. See [`TruncatedSVD`](sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD "sklearn.decomposition.TruncatedSVD") for an alternative with sparse data.
+  Notice that this class only supports sparse inputs for some solvers such as “arpack” and “covariance\_eigh”. See [`TruncatedSVD`](sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD "sklearn.decomposition.TruncatedSVD") for an alternative with sparse data.
+
+  For a usage example, see [PCA example with Iris Data-set](../../auto_examples/decomposition/plot_pca_iris.html#sphx-glr-auto-examples-decomposition-plot-pca-iris-py)
 
   Read more in the [User Guide](../decomposition.html#pca).
 
@@ -51,11 +53,11 @@ export class PCA {
     whiten?: boolean
 
     /**
-      The solver is selected by a default policy based on `X.shape` and `n\_components`: if the input data is larger than 500x500 and the number of components to extract is lower than 80% of the smallest dimension of the data, then the more efficient ‘randomized’ method is enabled. Otherwise the exact full SVD is computed and optionally truncated afterwards.
+      The solver is selected by a default ‘auto’ policy is based on `X.shape` and `n\_components`: if the input data has fewer than 1000 features and more than 10 times as many samples, then the “covariance\_eigh” solver is used. Otherwise, if the input data is larger than 500x500 and the number of components to extract is lower than 80% of the smallest dimension of the data, then the more efficient “randomized” method is selected. Otherwise the exact “full” SVD is computed and optionally truncated afterwards.
 
       @defaultValue `'auto'`
      */
-    svd_solver?: 'auto' | 'full' | 'arpack' | 'randomized'
+    svd_solver?: 'auto' | 'full' | 'covariance_eigh' | 'arpack' | 'randomized'
 
     /**
       Tolerance for singular values computed by svd\_solver == ‘arpack’. Must be of range \[0.0, infinity).
@@ -130,19 +132,8 @@ except NameError: bridgePCA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PCA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'copy': ${this.opts['copy'] ?? undefined}, 'whiten': ${
-      this.opts['whiten'] ?? undefined
-    }, 'svd_solver': ${this.opts['svd_solver'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'iterated_power': ${
-      this.opts['iterated_power'] ?? undefined
-    }, 'n_oversamples': ${
-      this.opts['n_oversamples'] ?? undefined
-    }, 'power_iteration_normalizer': ${
-      this.opts['power_iteration_normalizer'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_PCA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}, 'whiten': ${this.opts['whiten'] ?? undefined}, 'svd_solver': ${this.opts['svd_solver'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'iterated_power': ${this.opts['iterated_power'] ?? undefined}, 'n_oversamples': ${this.opts['n_oversamples'] ?? undefined}, 'power_iteration_normalizer': ${this.opts['power_iteration_normalizer'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_PCA = {k: v for k, v in ctor_PCA.items() if v is not None}`
 
@@ -177,7 +168,7 @@ ctor_PCA = {k: v for k, v in ctor_PCA.items() if v is not None}`
     /**
       Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
      */
-    X?: ArrayLike[]
+    X?: ArrayLike | SparseMatrix[]
 
     /**
       Ignored.
@@ -193,9 +184,8 @@ ctor_PCA = {k: v for k, v in ctor_PCA.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PCA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PCA_fit = {k: v for k, v in pms_PCA_fit.items() if v is not None}`
 
@@ -214,7 +204,7 @@ pms_PCA_fit = {k: v for k, v in pms_PCA_fit.items() if v is not None}`
     /**
       Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
      */
-    X?: ArrayLike[]
+    X?: ArrayLike | SparseMatrix[]
 
     /**
       Ignored.
@@ -230,9 +220,8 @@ pms_PCA_fit = {k: v for k, v in pms_PCA_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PCA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PCA_fit_transform = {k: v for k, v in pms_PCA_fit_transform.items() if v is not None}`
 
@@ -265,9 +254,8 @@ pms_PCA_fit_transform = {k: v for k, v in pms_PCA_fit_transform.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_get_covariance = {'cov': np.array(${
-      opts['cov'] ?? undefined
-    }) if ${opts['cov'] !== undefined} else None}
+    await this._py
+      .ex`pms_PCA_get_covariance = {'cov': np.array(${opts['cov'] ?? undefined}) if ${opts['cov'] !== undefined} else None}
 
 pms_PCA_get_covariance = {k: v for k, v in pms_PCA_get_covariance.items() if v is not None}`
 
@@ -300,9 +288,8 @@ pms_PCA_get_covariance = {k: v for k, v in pms_PCA_get_covariance.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PCA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PCA_get_feature_names_out = {k: v for k, v in pms_PCA_get_feature_names_out.items() if v is not None}`
 
@@ -335,9 +322,8 @@ pms_PCA_get_feature_names_out = {k: v for k, v in pms_PCA_get_feature_names_out.
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PCA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PCA_get_metadata_routing = {k: v for k, v in pms_PCA_get_metadata_routing.items() if v is not None}`
 
@@ -370,9 +356,8 @@ pms_PCA_get_metadata_routing = {k: v for k, v in pms_PCA_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_get_precision = {'precision': ${
-      opts['precision'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PCA_get_precision = {'precision': ${opts['precision'] ?? undefined}}
 
 pms_PCA_get_precision = {k: v for k, v in pms_PCA_get_precision.items() if v is not None}`
 
@@ -405,9 +390,8 @@ pms_PCA_get_precision = {k: v for k, v in pms_PCA_get_precision.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PCA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PCA_inverse_transform = {k: v for k, v in pms_PCA_inverse_transform.items() if v is not None}`
 
@@ -445,9 +429,8 @@ pms_PCA_inverse_transform = {k: v for k, v in pms_PCA_inverse_transform.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PCA_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PCA_score = {k: v for k, v in pms_PCA_score.items() if v is not None}`
 
@@ -480,9 +463,8 @@ pms_PCA_score = {k: v for k, v in pms_PCA_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PCA_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PCA_score_samples = {k: v for k, v in pms_PCA_score_samples.items() if v is not None}`
 
@@ -504,7 +486,7 @@ pms_PCA_score_samples = {k: v for k, v in pms_PCA_score_samples.items() if v is 
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
@@ -515,9 +497,8 @@ pms_PCA_score_samples = {k: v for k, v in pms_PCA_score_samples.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PCA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PCA_set_output = {k: v for k, v in pms_PCA_set_output.items() if v is not None}`
 
@@ -539,7 +520,7 @@ pms_PCA_set_output = {k: v for k, v in pms_PCA_set_output.items() if v is not No
     /**
       New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
      */
-    X?: ArrayLike[]
+    X?: ArrayLike | SparseMatrix[]
   }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
@@ -550,9 +531,8 @@ pms_PCA_set_output = {k: v for k, v in pms_PCA_set_output.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_PCA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PCA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None}`
 
@@ -709,29 +689,6 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
       // convert the result from python to node.js
       return this
         ._py`attr_PCA_n_components_.tolist() if hasattr(attr_PCA_n_components_, 'tolist') else attr_PCA_n_components_`
-    })()
-  }
-
-  /**
-    Number of features in the training data.
-   */
-  get n_features_(): Promise<number> {
-    if (this._isDisposed) {
-      throw new Error('This PCA instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('PCA must call init() before accessing n_features_')
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_PCA_n_features_ = bridgePCA[${this.id}].n_features_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_PCA_n_features_.tolist() if hasattr(attr_PCA_n_features_, 'tolist') else attr_PCA_n_features_`
     })()
   }
 

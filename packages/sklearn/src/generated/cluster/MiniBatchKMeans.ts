@@ -106,7 +106,7 @@ export class MiniBatchKMeans {
 
       When `n\_init='auto'`, the number of runs depends on the value of init: 3 if using `init='random'` or `init` is a callable; 1 if using `init='k-means++'` or `init` is an array-like.
 
-      @defaultValue `3`
+      @defaultValue `'auto'`
      */
     n_init?: 'auto' | number
 
@@ -157,23 +157,8 @@ except NameError: bridgeMiniBatchKMeans = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MiniBatchKMeans = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'init': np.array(${this.opts['init'] ?? undefined}) if ${
-      this.opts['init'] !== undefined
-    } else None, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'compute_labels': ${
-      this.opts['compute_labels'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_no_improvement': ${
-      this.opts['max_no_improvement'] ?? undefined
-    }, 'init_size': ${this.opts['init_size'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'reassignment_ratio': ${this.opts['reassignment_ratio'] ?? undefined}}
+    await this._py
+      .ex`ctor_MiniBatchKMeans = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'init': np.array(${this.opts['init'] ?? undefined}) if ${this.opts['init'] !== undefined} else None, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'compute_labels': ${this.opts['compute_labels'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_no_improvement': ${this.opts['max_no_improvement'] ?? undefined}, 'init_size': ${this.opts['init_size'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'reassignment_ratio': ${this.opts['reassignment_ratio'] ?? undefined}}
 
 ctor_MiniBatchKMeans = {k: v for k, v in ctor_MiniBatchKMeans.items() if v is not None}`
 
@@ -230,13 +215,8 @@ ctor_MiniBatchKMeans = {k: v for k, v in ctor_MiniBatchKMeans.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MiniBatchKMeans_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MiniBatchKMeans_fit = {k: v for k, v in pms_MiniBatchKMeans_fit.items() if v is not None}`
 
@@ -279,13 +259,8 @@ pms_MiniBatchKMeans_fit = {k: v for k, v in pms_MiniBatchKMeans_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MiniBatchKMeans_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MiniBatchKMeans_fit_predict = {k: v for k, v in pms_MiniBatchKMeans_fit_predict.items() if v is not None}`
 
@@ -328,13 +303,8 @@ pms_MiniBatchKMeans_fit_predict = {k: v for k, v in pms_MiniBatchKMeans_fit_pred
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MiniBatchKMeans_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MiniBatchKMeans_fit_transform = {k: v for k, v in pms_MiniBatchKMeans_fit_transform.items() if v is not None}`
 
@@ -370,9 +340,7 @@ pms_MiniBatchKMeans_fit_transform = {k: v for k, v in pms_MiniBatchKMeans_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchKMeans_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_MiniBatchKMeans_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_MiniBatchKMeans_get_feature_names_out = {k: v for k, v in pms_MiniBatchKMeans_get_feature_names_out.items() if v is not None}`
 
@@ -407,9 +375,8 @@ pms_MiniBatchKMeans_get_feature_names_out = {k: v for k, v in pms_MiniBatchKMean
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MiniBatchKMeans_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MiniBatchKMeans_get_metadata_routing = {k: v for k, v in pms_MiniBatchKMeans_get_metadata_routing.items() if v is not None}`
 
@@ -450,13 +417,8 @@ pms_MiniBatchKMeans_get_metadata_routing = {k: v for k, v in pms_MiniBatchKMeans
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MiniBatchKMeans_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MiniBatchKMeans_partial_fit = {k: v for k, v in pms_MiniBatchKMeans_partial_fit.items() if v is not None}`
 
@@ -479,11 +441,6 @@ pms_MiniBatchKMeans_partial_fit = {k: v for k, v in pms_MiniBatchKMeans_partial_
       New data to predict.
      */
     X?: ArrayLike | SparseMatrix[]
-
-    /**
-      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-     */
-    sample_weight?: ArrayLike
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
@@ -494,11 +451,8 @@ pms_MiniBatchKMeans_partial_fit = {k: v for k, v in pms_MiniBatchKMeans_partial_
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_MiniBatchKMeans_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MiniBatchKMeans_predict = {k: v for k, v in pms_MiniBatchKMeans_predict.items() if v is not None}`
 
@@ -539,13 +493,8 @@ pms_MiniBatchKMeans_predict = {k: v for k, v in pms_MiniBatchKMeans_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MiniBatchKMeans_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MiniBatchKMeans_score = {k: v for k, v in pms_MiniBatchKMeans_score.items() if v is not None}`
 
@@ -582,9 +531,8 @@ pms_MiniBatchKMeans_score = {k: v for k, v in pms_MiniBatchKMeans_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MiniBatchKMeans_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MiniBatchKMeans_set_fit_request = {k: v for k, v in pms_MiniBatchKMeans_set_fit_request.items() if v is not None}`
 
@@ -606,7 +554,7 @@ pms_MiniBatchKMeans_set_fit_request = {k: v for k, v in pms_MiniBatchKMeans_set_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
@@ -617,9 +565,8 @@ pms_MiniBatchKMeans_set_fit_request = {k: v for k, v in pms_MiniBatchKMeans_set_
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MiniBatchKMeans_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MiniBatchKMeans_set_output = {k: v for k, v in pms_MiniBatchKMeans_set_output.items() if v is not None}`
 
@@ -657,9 +604,7 @@ pms_MiniBatchKMeans_set_output = {k: v for k, v in pms_MiniBatchKMeans_set_outpu
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchKMeans_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MiniBatchKMeans_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MiniBatchKMeans_set_partial_fit_request = {k: v for k, v in pms_MiniBatchKMeans_set_partial_fit_request.items() if v is not None}`
 
@@ -670,46 +615,6 @@ pms_MiniBatchKMeans_set_partial_fit_request = {k: v for k, v in pms_MiniBatchKMe
     // convert the result from python to node.js
     return this
       ._py`res_MiniBatchKMeans_set_partial_fit_request.tolist() if hasattr(res_MiniBatchKMeans_set_partial_fit_request, 'tolist') else res_MiniBatchKMeans_set_partial_fit_request`
-  }
-
-  /**
-    Request metadata passed to the `predict` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_predict_request(opts: {
-    /**
-      Metadata routing for `sample\_weight` parameter in `predict`.
-     */
-    sample_weight?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This MiniBatchKMeans instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'MiniBatchKMeans must call init() before set_predict_request()'
-      )
-    }
-
-    // set up method params
-    await this._py
-      .ex`pms_MiniBatchKMeans_set_predict_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
-
-pms_MiniBatchKMeans_set_predict_request = {k: v for k, v in pms_MiniBatchKMeans_set_predict_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_MiniBatchKMeans_set_predict_request = bridgeMiniBatchKMeans[${this.id}].set_predict_request(**pms_MiniBatchKMeans_set_predict_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_MiniBatchKMeans_set_predict_request.tolist() if hasattr(res_MiniBatchKMeans_set_predict_request, 'tolist') else res_MiniBatchKMeans_set_predict_request`
   }
 
   /**
@@ -737,9 +642,7 @@ pms_MiniBatchKMeans_set_predict_request = {k: v for k, v in pms_MiniBatchKMeans_
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchKMeans_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MiniBatchKMeans_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MiniBatchKMeans_set_score_request = {k: v for k, v in pms_MiniBatchKMeans_set_score_request.items() if v is not None}`
 
@@ -772,9 +675,8 @@ pms_MiniBatchKMeans_set_score_request = {k: v for k, v in pms_MiniBatchKMeans_se
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchKMeans_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MiniBatchKMeans_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.items() if v is not None}`
 

@@ -6,13 +6,13 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Stratified ShuffleSplit cross-validator
+  Stratified ShuffleSplit cross-validator.
 
   Provides train/test indices to split data in train/test sets.
 
-  This cross-validation object is a merge of StratifiedKFold and ShuffleSplit, which returns stratified randomized folds. The folds are made by preserving the percentage of samples for each class.
+  This cross-validation object is a merge of [`StratifiedKFold`](sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold "sklearn.model_selection.StratifiedKFold") and [`ShuffleSplit`](sklearn.model_selection.ShuffleSplit.html#sklearn.model_selection.ShuffleSplit "sklearn.model_selection.ShuffleSplit"), which returns stratified randomized folds. The folds are made by preserving the percentage of samples for each class.
 
-  Note: like the ShuffleSplit strategy, stratified random splits do not guarantee that all folds will be different, although this is still very likely for sizeable datasets.
+  Note: like the [`ShuffleSplit`](sklearn.model_selection.ShuffleSplit.html#sklearn.model_selection.ShuffleSplit "sklearn.model_selection.ShuffleSplit") strategy, stratified random splits do not guarantee that test sets across all folds will be mutually exclusive, and might include overlapping samples. However, this is still very likely for sizeable datasets.
 
   Read more in the [User Guide](../cross_validation.html#stratified-shuffle-split).
 
@@ -95,11 +95,8 @@ except NameError: bridgeStratifiedShuffleSplit = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_StratifiedShuffleSplit = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${
-      this.opts['train_size'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_StratifiedShuffleSplit = {'n_splits': ${this.opts['n_splits'] ?? undefined}, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${this.opts['train_size'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_StratifiedShuffleSplit = {k: v for k, v in ctor_StratifiedShuffleSplit.items() if v is not None}`
 
@@ -153,9 +150,7 @@ ctor_StratifiedShuffleSplit = {k: v for k, v in ctor_StratifiedShuffleSplit.item
 
     // set up method params
     await this._py
-      .ex`pms_StratifiedShuffleSplit_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_StratifiedShuffleSplit_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_StratifiedShuffleSplit_get_metadata_routing = {k: v for k, v in pms_StratifiedShuffleSplit_get_metadata_routing.items() if v is not None}`
 
@@ -169,7 +164,7 @@ pms_StratifiedShuffleSplit_get_metadata_routing = {k: v for k, v in pms_Stratifi
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -200,9 +195,8 @@ pms_StratifiedShuffleSplit_get_metadata_routing = {k: v for k, v in pms_Stratifi
     }
 
     // set up method params
-    await this._py.ex`pms_StratifiedShuffleSplit_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_StratifiedShuffleSplit_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_StratifiedShuffleSplit_get_n_splits = {k: v for k, v in pms_StratifiedShuffleSplit_get_n_splits.items() if v is not None}`
 
@@ -247,13 +241,8 @@ pms_StratifiedShuffleSplit_get_n_splits = {k: v for k, v in pms_StratifiedShuffl
     }
 
     // set up method params
-    await this._py.ex`pms_StratifiedShuffleSplit_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': ${
-      opts['groups'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StratifiedShuffleSplit_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_StratifiedShuffleSplit_split = {k: v for k, v in pms_StratifiedShuffleSplit_split.items() if v is not None}`
 

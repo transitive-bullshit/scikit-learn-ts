@@ -36,7 +36,7 @@ export class LinearRegression {
     copy_X?: boolean
 
     /**
-      The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -89,11 +89,8 @@ except NameError: bridgeLinearRegression = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LinearRegression = {'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}}
+    await this._py
+      .ex`ctor_LinearRegression = {'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}}
 
 ctor_LinearRegression = {k: v for k, v in ctor_LinearRegression.items() if v is not None}`
 
@@ -152,13 +149,8 @@ ctor_LinearRegression = {k: v for k, v in ctor_LinearRegression.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearRegression_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearRegression_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearRegression_fit = {k: v for k, v in pms_LinearRegression_fit.items() if v is not None}`
 
@@ -195,9 +187,8 @@ pms_LinearRegression_fit = {k: v for k, v in pms_LinearRegression_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_LinearRegression_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearRegression_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LinearRegression_get_metadata_routing = {k: v for k, v in pms_LinearRegression_get_metadata_routing.items() if v is not None}`
 
@@ -230,9 +221,8 @@ pms_LinearRegression_get_metadata_routing = {k: v for k, v in pms_LinearRegressi
     }
 
     // set up method params
-    await this._py.ex`pms_LinearRegression_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearRegression_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_LinearRegression_predict = {k: v for k, v in pms_LinearRegression_predict.items() if v is not None}`
 
@@ -277,13 +267,8 @@ pms_LinearRegression_predict = {k: v for k, v in pms_LinearRegression_predict.it
     }
 
     // set up method params
-    await this._py.ex`pms_LinearRegression_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearRegression_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items() if v is not None}`
 
@@ -323,9 +308,7 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
 
     // set up method params
     await this._py
-      .ex`pms_LinearRegression_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LinearRegression_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearRegression_set_fit_request = {k: v for k, v in pms_LinearRegression_set_fit_request.items() if v is not None}`
 
@@ -365,9 +348,7 @@ pms_LinearRegression_set_fit_request = {k: v for k, v in pms_LinearRegression_se
 
     // set up method params
     await this._py
-      .ex`pms_LinearRegression_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LinearRegression_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearRegression_set_score_request = {k: v for k, v in pms_LinearRegression_set_score_request.items() if v is not None}`
 

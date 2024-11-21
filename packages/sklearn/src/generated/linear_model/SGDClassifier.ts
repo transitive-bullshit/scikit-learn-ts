@@ -107,7 +107,7 @@ export class SGDClassifier {
     epsilon?: number
 
     /**
-      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -124,14 +124,14 @@ export class SGDClassifier {
     learning_rate?: string
 
     /**
-      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’. Values must be in the range `(0.0, inf)`.
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0`
      */
     eta0?: number
 
     /**
-      The exponent for inverse scaling learning rate \[default 0.5\]. Values must be in the range `(-inf, inf)`.
+      The exponent for inverse scaling learning rate. Values must be in the range `(-inf, inf)`.
 
       @defaultValue `0.5`
      */
@@ -223,33 +223,8 @@ except NameError: bridgeSGDClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SGDClassifier = {'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${
-      this.opts['eta0'] ?? undefined
-    }, 'power_t': ${this.opts['power_t'] ?? undefined}, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${
-      this.opts['average'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_SGDClassifier = {'loss': ${this.opts['loss'] ?? undefined}, 'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${this.opts['eta0'] ?? undefined}, 'power_t': ${this.opts['power_t'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${this.opts['average'] ?? undefined}}
 
 ctor_SGDClassifier = {k: v for k, v in ctor_SGDClassifier.items() if v is not None}`
 
@@ -300,9 +275,8 @@ ctor_SGDClassifier = {k: v for k, v in ctor_SGDClassifier.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SGDClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SGDClassifier_decision_function = {k: v for k, v in pms_SGDClassifier_decision_function.items() if v is not None}`
 
@@ -381,17 +355,8 @@ pms_SGDClassifier_densify = {k: v for k, v in pms_SGDClassifier_densify.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'intercept_init': np.array(${
-      opts['intercept_init'] ?? undefined
-    }) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDClassifier_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'intercept_init': np.array(${opts['intercept_init'] ?? undefined}) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDClassifier_fit = {k: v for k, v in pms_SGDClassifier_fit.items() if v is not None}`
 
@@ -426,9 +391,8 @@ pms_SGDClassifier_fit = {k: v for k, v in pms_SGDClassifier_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SGDClassifier_get_metadata_routing = {k: v for k, v in pms_SGDClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -476,13 +440,8 @@ pms_SGDClassifier_get_metadata_routing = {k: v for k, v in pms_SGDClassifier_get
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_partial_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${
-      opts['classes'] !== undefined
-    } else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDClassifier_partial_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${opts['classes'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDClassifier_partial_fit = {k: v for k, v in pms_SGDClassifier_partial_fit.items() if v is not None}`
 
@@ -513,9 +472,8 @@ pms_SGDClassifier_partial_fit = {k: v for k, v in pms_SGDClassifier_partial_fit.
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SGDClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SGDClassifier_predict = {k: v for k, v in pms_SGDClassifier_predict.items() if v is not None}`
 
@@ -554,9 +512,8 @@ pms_SGDClassifier_predict = {k: v for k, v in pms_SGDClassifier_predict.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SGDClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SGDClassifier_predict_log_proba = {k: v for k, v in pms_SGDClassifier_predict_log_proba.items() if v is not None}`
 
@@ -593,9 +550,8 @@ pms_SGDClassifier_predict_log_proba = {k: v for k, v in pms_SGDClassifier_predic
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDClassifier_predict_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDClassifier_predict_proba = {k: v for k, v in pms_SGDClassifier_predict_proba.items() if v is not None}`
 
@@ -638,13 +594,8 @@ pms_SGDClassifier_predict_proba = {k: v for k, v in pms_SGDClassifier_predict_pr
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_SGDClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SGDClassifier_score = {k: v for k, v in pms_SGDClassifier_score.items() if v is not None}`
 
@@ -689,11 +640,8 @@ pms_SGDClassifier_score = {k: v for k, v in pms_SGDClassifier_score.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'intercept_init': ${
-      opts['intercept_init'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDClassifier_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'intercept_init': ${opts['intercept_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDClassifier_set_fit_request = {k: v for k, v in pms_SGDClassifier_set_fit_request.items() if v is not None}`
 
@@ -735,9 +683,8 @@ pms_SGDClassifier_set_fit_request = {k: v for k, v in pms_SGDClassifier_set_fit_
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDClassifier_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDClassifier_set_partial_fit_request = {k: v for k, v in pms_SGDClassifier_set_partial_fit_request.items() if v is not None}`
 
@@ -774,9 +721,8 @@ pms_SGDClassifier_set_partial_fit_request = {k: v for k, v in pms_SGDClassifier_
     }
 
     // set up method params
-    await this._py.ex`pms_SGDClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDClassifier_set_score_request = {k: v for k, v in pms_SGDClassifier_set_score_request.items() if v is not None}`
 
@@ -890,6 +836,9 @@ pms_SGDClassifier_sparsify = {k: v for k, v in pms_SGDClassifier_sparsify.items(
     })()
   }
 
+  /**
+    Deprecated since version 1.4: Attribute `loss\_function\_` was deprecated in version 1.4 and will be removed in 1.6.
+   */
   get loss_function_(): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')

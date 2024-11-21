@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Linear perceptron classifier.
 
-  Read more in the [User Guide](../linear_model.html#perceptron).
+  The implementation is a wrapper around [`SGDClassifier`](sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier "sklearn.linear_model.SGDClassifier") by fixing the `loss` and `learning\_rate` parameters as:
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)
  */
@@ -83,7 +83,7 @@ export class Perceptron {
     eta0?: number
 
     /**
-      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -95,7 +95,7 @@ export class Perceptron {
     random_state?: number
 
     /**
-      Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
+      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs.
 
       @defaultValue `false`
      */
@@ -171,29 +171,8 @@ except NameError: bridgePerceptron = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Perceptron = {'penalty': ${
-      this.opts['penalty'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${
-      this.opts['l1_ratio'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'eta0': ${this.opts['eta0'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
+    await this._py
+      .ex`ctor_Perceptron = {'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eta0': ${this.opts['eta0'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
 
 ctor_Perceptron = {k: v for k, v in ctor_Perceptron.items() if v is not None}`
 
@@ -242,9 +221,8 @@ ctor_Perceptron = {k: v for k, v in ctor_Perceptron.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Perceptron_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Perceptron_decision_function = {k: v for k, v in pms_Perceptron_decision_function.items() if v is not None}`
 
@@ -323,17 +301,8 @@ pms_Perceptron_densify = {k: v for k, v in pms_Perceptron_densify.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'intercept_init': np.array(${
-      opts['intercept_init'] ?? undefined
-    }) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Perceptron_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'intercept_init': np.array(${opts['intercept_init'] ?? undefined}) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_fit = {k: v for k, v in pms_Perceptron_fit.items() if v is not None}`
 
@@ -368,9 +337,8 @@ pms_Perceptron_fit = {k: v for k, v in pms_Perceptron_fit.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Perceptron_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Perceptron_get_metadata_routing = {k: v for k, v in pms_Perceptron_get_metadata_routing.items() if v is not None}`
 
@@ -418,13 +386,8 @@ pms_Perceptron_get_metadata_routing = {k: v for k, v in pms_Perceptron_get_metad
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_partial_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${
-      opts['classes'] !== undefined
-    } else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_Perceptron_partial_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${opts['classes'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_partial_fit = {k: v for k, v in pms_Perceptron_partial_fit.items() if v is not None}`
 
@@ -455,9 +418,8 @@ pms_Perceptron_partial_fit = {k: v for k, v in pms_Perceptron_partial_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Perceptron_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Perceptron_predict = {k: v for k, v in pms_Perceptron_predict.items() if v is not None}`
 
@@ -500,13 +462,8 @@ pms_Perceptron_predict = {k: v for k, v in pms_Perceptron_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_Perceptron_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_Perceptron_score = {k: v for k, v in pms_Perceptron_score.items() if v is not None}`
 
@@ -551,11 +508,8 @@ pms_Perceptron_score = {k: v for k, v in pms_Perceptron_score.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'intercept_init': ${
-      opts['intercept_init'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_Perceptron_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'intercept_init': ${opts['intercept_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_set_fit_request = {k: v for k, v in pms_Perceptron_set_fit_request.items() if v is not None}`
 
@@ -597,9 +551,8 @@ pms_Perceptron_set_fit_request = {k: v for k, v in pms_Perceptron_set_fit_reques
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_Perceptron_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_set_partial_fit_request = {k: v for k, v in pms_Perceptron_set_partial_fit_request.items() if v is not None}`
 
@@ -634,9 +587,8 @@ pms_Perceptron_set_partial_fit_request = {k: v for k, v in pms_Perceptron_set_pa
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Perceptron_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_set_score_request = {k: v for k, v in pms_Perceptron_set_score_request.items() if v is not None}`
 

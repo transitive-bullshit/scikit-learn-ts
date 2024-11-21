@@ -72,11 +72,18 @@ export class HistGradientBoostingClassifier {
     min_samples_leaf?: number
 
     /**
-      The L2 regularization parameter. Use 0 for no regularization.
+      The L2 regularization parameter penalizing leaves with small hessians. Use `0` for no regularization (default).
 
       @defaultValue `0`
      */
     l2_regularization?: number
+
+    /**
+      Proportion of randomly chosen features in each and every node split. This is a form of regularization, smaller values make the trees weaker learners and might prevent overfitting. If interaction constraints from `interaction\_cst` are present, only allowed features are taken into account for the subsampling.
+
+      @defaultValue `1`
+     */
+    max_features?: number
 
     /**
       The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max\_bins` bins. In addition to the `max\_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255.
@@ -165,9 +172,7 @@ export class HistGradientBoostingClassifier {
      */
     class_weight?: any | 'balanced'
   }) {
-    this.id = `HistGradientBoostingClassifier${
-      crypto.randomUUID().split('-')[0]
-    }`
+    this.id = `HistGradientBoostingClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
 
@@ -211,45 +216,8 @@ except NameError: bridgeHistGradientBoostingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HistGradientBoostingClassifier = {'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'l2_regularization': ${
-      this.opts['l2_regularization'] ?? undefined
-    }, 'max_bins': ${
-      this.opts['max_bins'] ?? undefined
-    }, 'categorical_features': np.array(${
-      this.opts['categorical_features'] ?? undefined
-    }) if ${
-      this.opts['categorical_features'] !== undefined
-    } else None, 'monotonic_cst': np.array(${
-      this.opts['monotonic_cst'] ?? undefined
-    }) if ${
-      this.opts['monotonic_cst'] !== undefined
-    } else None, 'interaction_cst': ${
-      this.opts['interaction_cst'] ?? undefined
-    }, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'class_weight': ${this.opts['class_weight'] ?? undefined}}
+    await this._py
+      .ex`ctor_HistGradientBoostingClassifier = {'loss': ${this.opts['loss'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'l2_regularization': ${this.opts['l2_regularization'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'max_bins': ${this.opts['max_bins'] ?? undefined}, 'categorical_features': np.array(${this.opts['categorical_features'] ?? undefined}) if ${this.opts['categorical_features'] !== undefined} else None, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None, 'interaction_cst': ${this.opts['interaction_cst'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}}
 
 ctor_HistGradientBoostingClassifier = {k: v for k, v in ctor_HistGradientBoostingClassifier.items() if v is not None}`
 
@@ -301,9 +269,7 @@ ctor_HistGradientBoostingClassifier = {k: v for k, v in ctor_HistGradientBoostin
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingClassifier_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_HistGradientBoostingClassifier_decision_function = {k: v for k, v in pms_HistGradientBoostingClassifier_decision_function.items() if v is not None}`
 
@@ -348,13 +314,8 @@ pms_HistGradientBoostingClassifier_decision_function = {k: v for k, v in pms_His
     }
 
     // set up method params
-    await this._py.ex`pms_HistGradientBoostingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_HistGradientBoostingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_HistGradientBoostingClassifier_fit = {k: v for k, v in pms_HistGradientBoostingClassifier_fit.items() if v is not None}`
 
@@ -392,9 +353,7 @@ pms_HistGradientBoostingClassifier_fit = {k: v for k, v in pms_HistGradientBoost
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HistGradientBoostingClassifier_get_metadata_routing = {k: v for k, v in pms_HistGradientBoostingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -429,9 +388,8 @@ pms_HistGradientBoostingClassifier_get_metadata_routing = {k: v for k, v in pms_
     }
 
     // set up method params
-    await this._py.ex`pms_HistGradientBoostingClassifier_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HistGradientBoostingClassifier_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_HistGradientBoostingClassifier_predict = {k: v for k, v in pms_HistGradientBoostingClassifier_predict.items() if v is not None}`
 
@@ -467,9 +425,7 @@ pms_HistGradientBoostingClassifier_predict = {k: v for k, v in pms_HistGradientB
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingClassifier_predict_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_HistGradientBoostingClassifier_predict_proba = {k: v for k, v in pms_HistGradientBoostingClassifier_predict_proba.items() if v is not None}`
 
@@ -517,13 +473,7 @@ pms_HistGradientBoostingClassifier_predict_proba = {k: v for k, v in pms_HistGra
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+      .ex`pms_HistGradientBoostingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_HistGradientBoostingClassifier_score = {k: v for k, v in pms_HistGradientBoostingClassifier_score.items() if v is not None}`
 
@@ -563,9 +513,7 @@ pms_HistGradientBoostingClassifier_score = {k: v for k, v in pms_HistGradientBoo
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_HistGradientBoostingClassifier_set_fit_request = {k: v for k, v in pms_HistGradientBoostingClassifier_set_fit_request.items() if v is not None}`
 
@@ -605,9 +553,7 @@ pms_HistGradientBoostingClassifier_set_fit_request = {k: v for k, v in pms_HistG
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_HistGradientBoostingClassifier_set_score_request = {k: v for k, v in pms_HistGradientBoostingClassifier_set_score_request.items() if v is not None}`
 
@@ -645,9 +591,7 @@ pms_HistGradientBoostingClassifier_set_score_request = {k: v for k, v in pms_His
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_staged_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_HistGradientBoostingClassifier_staged_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_HistGradientBoostingClassifier_staged_decision_function = {k: v for k, v in pms_HistGradientBoostingClassifier_staged_decision_function.items() if v is not None}`
 
@@ -685,9 +629,7 @@ pms_HistGradientBoostingClassifier_staged_decision_function = {k: v for k, v in 
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_staged_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_HistGradientBoostingClassifier_staged_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_HistGradientBoostingClassifier_staged_predict = {k: v for k, v in pms_HistGradientBoostingClassifier_staged_predict.items() if v is not None}`
 
@@ -725,9 +667,7 @@ pms_HistGradientBoostingClassifier_staged_predict = {k: v for k, v in pms_HistGr
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingClassifier_staged_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_HistGradientBoostingClassifier_staged_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_HistGradientBoostingClassifier_staged_predict_proba = {k: v for k, v in pms_HistGradientBoostingClassifier_staged_predict_proba.items() if v is not None}`
 

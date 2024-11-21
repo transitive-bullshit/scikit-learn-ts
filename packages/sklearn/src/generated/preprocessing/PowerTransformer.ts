@@ -94,11 +94,8 @@ except NameError: bridgePowerTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PowerTransformer = {'method': ${
-      this.opts['method'] ?? undefined
-    }, 'standardize': ${this.opts['standardize'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PowerTransformer = {'method': ${this.opts['method'] ?? undefined}, 'standardize': ${this.opts['standardize'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_PowerTransformer = {k: v for k, v in ctor_PowerTransformer.items() if v is not None}`
 
@@ -154,9 +151,8 @@ ctor_PowerTransformer = {k: v for k, v in ctor_PowerTransformer.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PowerTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PowerTransformer_fit = {k: v for k, v in pms_PowerTransformer_fit.items() if v is not None}`
 
@@ -196,9 +192,8 @@ pms_PowerTransformer_fit = {k: v for k, v in pms_PowerTransformer_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PowerTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PowerTransformer_fit_transform = {k: v for k, v in pms_PowerTransformer_fit_transform.items() if v is not None}`
 
@@ -234,9 +229,7 @@ pms_PowerTransformer_fit_transform = {k: v for k, v in pms_PowerTransformer_fit_
 
     // set up method params
     await this._py
-      .ex`pms_PowerTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_PowerTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PowerTransformer_get_feature_names_out = {k: v for k, v in pms_PowerTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -273,9 +266,8 @@ pms_PowerTransformer_get_feature_names_out = {k: v for k, v in pms_PowerTransfor
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PowerTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PowerTransformer_get_metadata_routing = {k: v for k, v in pms_PowerTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -312,9 +304,8 @@ pms_PowerTransformer_get_metadata_routing = {k: v for k, v in pms_PowerTransform
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PowerTransformer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_inverse_transform.items() if v is not None}`
 
@@ -336,7 +327,7 @@ pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -349,9 +340,8 @@ pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PowerTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PowerTransformer_set_output = {k: v for k, v in pms_PowerTransformer_set_output.items() if v is not None}`
 
@@ -384,9 +374,8 @@ pms_PowerTransformer_set_output = {k: v for k, v in pms_PowerTransformer_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PowerTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PowerTransformer_transform = {k: v for k, v in pms_PowerTransformer_transform.items() if v is not None}`
 

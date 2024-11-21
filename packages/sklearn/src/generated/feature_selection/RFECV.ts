@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Recursive feature elimination with cross-validation to select features.
 
-  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+  The number of features selected is tuned automatically by fitting an [`RFE`](sklearn.feature_selection.RFE.html#sklearn.feature_selection.RFE "sklearn.feature_selection.RFE") selector on the different cross-validation splits (provided by the `cv` parameter). The performance of the [`RFE`](sklearn.feature_selection.RFE.html#sklearn.feature_selection.RFE "sklearn.feature_selection.RFE") selector are evaluated using `scorer` for different number of selected features and aggregated together. Finally, the scores are averaged across folds and the number of features selected is set to the number of features that maximize the cross-validation score. See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
 
   Read more in the [User Guide](../feature_selection.html#rfe).
 
@@ -60,7 +60,7 @@ export class RFECV {
     verbose?: number
 
     /**
-      Number of cores to run in parallel while fitting across folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of cores to run in parallel while fitting across folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -115,15 +115,8 @@ except NameError: bridgeRFECV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RFECV = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'step': ${this.opts['step'] ?? undefined}, 'min_features_to_select': ${
-      this.opts['min_features_to_select'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
+    await this._py
+      .ex`ctor_RFECV = {'estimator': ${this.opts['estimator'] ?? undefined}, 'step': ${this.opts['step'] ?? undefined}, 'min_features_to_select': ${this.opts['min_features_to_select'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
 
 ctor_RFECV = {k: v for k, v in ctor_RFECV.items() if v is not None}`
 
@@ -169,9 +162,8 @@ ctor_RFECV = {k: v for k, v in ctor_RFECV.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFECV_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFECV_decision_function = {k: v for k, v in pms_RFECV_decision_function.items() if v is not None}`
 
@@ -212,13 +204,8 @@ pms_RFECV_decision_function = {k: v for k, v in pms_RFECV_decision_function.item
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFECV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_RFECV_fit = {k: v for k, v in pms_RFECV_fit.items() if v is not None}`
 
@@ -261,13 +248,8 @@ pms_RFECV_fit = {k: v for k, v in pms_RFECV_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFECV_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RFECV_fit_transform = {k: v for k, v in pms_RFECV_fit_transform.items() if v is not None}`
 
@@ -298,9 +280,8 @@ pms_RFECV_fit_transform = {k: v for k, v in pms_RFECV_fit_transform.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFECV_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_RFECV_get_feature_names_out = {k: v for k, v in pms_RFECV_get_feature_names_out.items() if v is not None}`
 
@@ -314,16 +295,11 @@ pms_RFECV_get_feature_names_out = {k: v for k, v in pms_RFECV_get_feature_names_
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -333,9 +309,7 @@ pms_RFECV_get_feature_names_out = {k: v for k, v in pms_RFECV_get_feature_names_
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_RFECV_get_metadata_routing = {}
 
 pms_RFECV_get_metadata_routing = {k: v for k, v in pms_RFECV_get_metadata_routing.items() if v is not None}`
 
@@ -368,9 +342,8 @@ pms_RFECV_get_metadata_routing = {k: v for k, v in pms_RFECV_get_metadata_routin
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFECV_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_RFECV_get_support = {k: v for k, v in pms_RFECV_get_support.items() if v is not None}`
 
@@ -401,9 +374,8 @@ pms_RFECV_get_support = {k: v for k, v in pms_RFECV_get_support.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFECV_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFECV_inverse_transform = {k: v for k, v in pms_RFECV_inverse_transform.items() if v is not None}`
 
@@ -434,9 +406,8 @@ pms_RFECV_inverse_transform = {k: v for k, v in pms_RFECV_inverse_transform.item
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFECV_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFECV_predict = {k: v for k, v in pms_RFECV_predict.items() if v is not None}`
 
@@ -467,9 +438,8 @@ pms_RFECV_predict = {k: v for k, v in pms_RFECV_predict.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFECV_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFECV_predict_log_proba = {k: v for k, v in pms_RFECV_predict_log_proba.items() if v is not None}`
 
@@ -500,9 +470,8 @@ pms_RFECV_predict_log_proba = {k: v for k, v in pms_RFECV_predict_log_proba.item
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFECV_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFECV_predict_proba = {k: v for k, v in pms_RFECV_predict_proba.items() if v is not None}`
 
@@ -543,13 +512,8 @@ pms_RFECV_predict_proba = {k: v for k, v in pms_RFECV_predict_proba.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFECV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RFECV_score = {k: v for k, v in pms_RFECV_score.items() if v is not None}`
 
@@ -584,9 +548,8 @@ pms_RFECV_score = {k: v for k, v in pms_RFECV_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_set_fit_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFECV_set_fit_request = {'groups': ${opts['groups'] ?? undefined}}
 
 pms_RFECV_set_fit_request = {k: v for k, v in pms_RFECV_set_fit_request.items() if v is not None}`
 
@@ -608,7 +571,7 @@ pms_RFECV_set_fit_request = {k: v for k, v in pms_RFECV_set_fit_request.items() 
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
@@ -619,9 +582,8 @@ pms_RFECV_set_fit_request = {k: v for k, v in pms_RFECV_set_fit_request.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFECV_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_RFECV_set_output = {k: v for k, v in pms_RFECV_set_output.items() if v is not None}`
 
@@ -652,9 +614,8 @@ pms_RFECV_set_output = {k: v for k, v in pms_RFECV_set_output.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_RFECV_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFECV_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFECV_transform = {k: v for k, v in pms_RFECV_transform.items() if v is not None}`
 
@@ -691,7 +652,7 @@ pms_RFECV_transform = {k: v for k, v in pms_RFECV_transform.items() if v is not 
   }
 
   /**
-    A dict with keys:
+    All arrays (values of the dictionary) are sorted in ascending order by the number of features used (i.e., the first element of the array represents the models that used the least number of features, while the last element represents the models that used all available features). This dictionary contains the following keys:
    */
   get cv_results_(): Promise<any> {
     if (this._isDisposed) {

@@ -35,7 +35,7 @@ export class SpectralCoclustering {
     n_clusters?: number
 
     /**
-      Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.11.3)"), which is more accurate, but possibly slower in some cases.
+      Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.14.1)"), which is more accurate, but possibly slower in some cases.
 
       @defaultValue `'randomized'`
      */
@@ -118,17 +118,8 @@ except NameError: bridgeSpectralCoclustering = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SpectralCoclustering = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'svd_method': ${this.opts['svd_method'] ?? undefined}, 'n_svd_vecs': ${
-      this.opts['n_svd_vecs'] ?? undefined
-    }, 'mini_batch': ${
-      this.opts['mini_batch'] ?? undefined
-    }, 'init': np.array(${this.opts['init'] ?? undefined}) if ${
-      this.opts['init'] !== undefined
-    } else None, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_SpectralCoclustering = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'svd_method': ${this.opts['svd_method'] ?? undefined}, 'n_svd_vecs': ${this.opts['n_svd_vecs'] ?? undefined}, 'mini_batch': ${this.opts['mini_batch'] ?? undefined}, 'init': np.array(${this.opts['init'] ?? undefined}) if ${this.opts['init'] !== undefined} else None, 'n_init': ${this.opts['n_init'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SpectralCoclustering = {k: v for k, v in ctor_SpectralCoclustering.items() if v is not None}`
 
@@ -182,9 +173,8 @@ ctor_SpectralCoclustering = {k: v for k, v in ctor_SpectralCoclustering.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralCoclustering_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralCoclustering_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralCoclustering_fit = {k: v for k, v in pms_SpectralCoclustering_fit.items() if v is not None}`
 
@@ -221,9 +211,8 @@ pms_SpectralCoclustering_fit = {k: v for k, v in pms_SpectralCoclustering_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralCoclustering_get_indices = {'i': ${
-      opts['i'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SpectralCoclustering_get_indices = {'i': ${opts['i'] ?? undefined}}
 
 pms_SpectralCoclustering_get_indices = {k: v for k, v in pms_SpectralCoclustering_get_indices.items() if v is not None}`
 
@@ -261,9 +250,7 @@ pms_SpectralCoclustering_get_indices = {k: v for k, v in pms_SpectralCoclusterin
 
     // set up method params
     await this._py
-      .ex`pms_SpectralCoclustering_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SpectralCoclustering_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SpectralCoclustering_get_metadata_routing = {k: v for k, v in pms_SpectralCoclustering_get_metadata_routing.items() if v is not None}`
 
@@ -298,9 +285,8 @@ pms_SpectralCoclustering_get_metadata_routing = {k: v for k, v in pms_SpectralCo
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralCoclustering_get_shape = {'i': ${
-      opts['i'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SpectralCoclustering_get_shape = {'i': ${opts['i'] ?? undefined}}
 
 pms_SpectralCoclustering_get_shape = {k: v for k, v in pms_SpectralCoclustering_get_shape.items() if v is not None}`
 
@@ -340,11 +326,8 @@ pms_SpectralCoclustering_get_shape = {k: v for k, v in pms_SpectralCoclustering_
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralCoclustering_get_submatrix = {'i': ${
-      opts['i'] ?? undefined
-    }, 'data': np.array(${opts['data'] ?? undefined}) if ${
-      opts['data'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_SpectralCoclustering_get_submatrix = {'i': ${opts['i'] ?? undefined}, 'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_SpectralCoclustering_get_submatrix = {k: v for k, v in pms_SpectralCoclustering_get_submatrix.items() if v is not None}`
 

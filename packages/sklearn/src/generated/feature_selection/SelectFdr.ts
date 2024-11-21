@@ -75,9 +75,8 @@ except NameError: bridgeSelectFdr = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectFdr = {'score_func': ${
-      this.opts['score_func'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelectFdr = {'score_func': ${this.opts['score_func'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}}
 
 ctor_SelectFdr = {k: v for k, v in ctor_SelectFdr.items() if v is not None}`
 
@@ -115,7 +114,7 @@ ctor_SelectFdr = {k: v for k, v in ctor_SelectFdr.items() if v is not None}`
     X?: ArrayLike[]
 
     /**
-      The target values (class labels in classification, real numbers in regression).
+      The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`.
      */
     y?: ArrayLike
   }): Promise<any> {
@@ -128,11 +127,8 @@ ctor_SelectFdr = {k: v for k, v in ctor_SelectFdr.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFdr_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFdr_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SelectFdr_fit = {k: v for k, v in pms_SelectFdr_fit.items() if v is not None}`
 
@@ -175,13 +171,8 @@ pms_SelectFdr_fit = {k: v for k, v in pms_SelectFdr_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFdr_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFdr_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectFdr_fit_transform = {k: v for k, v in pms_SelectFdr_fit_transform.items() if v is not None}`
 
@@ -215,9 +206,7 @@ pms_SelectFdr_fit_transform = {k: v for k, v in pms_SelectFdr_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_SelectFdr_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectFdr_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectFdr_get_feature_names_out = {k: v for k, v in pms_SelectFdr_get_feature_names_out.items() if v is not None}`
 
@@ -252,9 +241,8 @@ pms_SelectFdr_get_feature_names_out = {k: v for k, v in pms_SelectFdr_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFdr_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFdr_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SelectFdr_get_metadata_routing = {k: v for k, v in pms_SelectFdr_get_metadata_routing.items() if v is not None}`
 
@@ -287,9 +275,8 @@ pms_SelectFdr_get_metadata_routing = {k: v for k, v in pms_SelectFdr_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFdr_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFdr_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectFdr_get_support = {k: v for k, v in pms_SelectFdr_get_support.items() if v is not None}`
 
@@ -320,9 +307,8 @@ pms_SelectFdr_get_support = {k: v for k, v in pms_SelectFdr_get_support.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFdr_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFdr_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFdr_inverse_transform = {k: v for k, v in pms_SelectFdr_inverse_transform.items() if v is not None}`
 
@@ -344,7 +330,7 @@ pms_SelectFdr_inverse_transform = {k: v for k, v in pms_SelectFdr_inverse_transf
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectFdr instance has already been disposed')
@@ -355,9 +341,8 @@ pms_SelectFdr_inverse_transform = {k: v for k, v in pms_SelectFdr_inverse_transf
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFdr_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFdr_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectFdr_set_output = {k: v for k, v in pms_SelectFdr_set_output.items() if v is not None}`
 
@@ -388,9 +373,8 @@ pms_SelectFdr_set_output = {k: v for k, v in pms_SelectFdr_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFdr_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFdr_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFdr_transform = {k: v for k, v in pms_SelectFdr_transform.items() if v is not None}`
 

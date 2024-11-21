@@ -103,11 +103,8 @@ except NameError: bridgeTfidfTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TfidfTransformer = {'norm': ${
-      this.opts['norm'] ?? undefined
-    }, 'use_idf': ${this.opts['use_idf'] ?? undefined}, 'smooth_idf': ${
-      this.opts['smooth_idf'] ?? undefined
-    }, 'sublinear_tf': ${this.opts['sublinear_tf'] ?? undefined}}
+    await this._py
+      .ex`ctor_TfidfTransformer = {'norm': ${this.opts['norm'] ?? undefined}, 'use_idf': ${this.opts['use_idf'] ?? undefined}, 'smooth_idf': ${this.opts['smooth_idf'] ?? undefined}, 'sublinear_tf': ${this.opts['sublinear_tf'] ?? undefined}}
 
 ctor_TfidfTransformer = {k: v for k, v in ctor_TfidfTransformer.items() if v is not None}`
 
@@ -143,7 +140,7 @@ ctor_TfidfTransformer = {k: v for k, v in ctor_TfidfTransformer.items() if v is 
     /**
       A matrix of term/token counts.
      */
-    X?: any
+    X?: SparseMatrix[]
 
     /**
       This parameter is not needed to compute tf-idf.
@@ -161,9 +158,8 @@ ctor_TfidfTransformer = {k: v for k, v in ctor_TfidfTransformer.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TfidfTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_TfidfTransformer_fit = {k: v for k, v in pms_TfidfTransformer_fit.items() if v is not None}`
 
@@ -210,13 +206,8 @@ pms_TfidfTransformer_fit = {k: v for k, v in pms_TfidfTransformer_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_TfidfTransformer_fit_transform = {k: v for k, v in pms_TfidfTransformer_fit_transform.items() if v is not None}`
 
@@ -252,9 +243,7 @@ pms_TfidfTransformer_fit_transform = {k: v for k, v in pms_TfidfTransformer_fit_
 
     // set up method params
     await this._py
-      .ex`pms_TfidfTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_TfidfTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_TfidfTransformer_get_feature_names_out = {k: v for k, v in pms_TfidfTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -291,9 +280,8 @@ pms_TfidfTransformer_get_feature_names_out = {k: v for k, v in pms_TfidfTransfor
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TfidfTransformer_get_metadata_routing = {k: v for k, v in pms_TfidfTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -315,7 +303,7 @@ pms_TfidfTransformer_get_metadata_routing = {k: v for k, v in pms_TfidfTransform
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -328,9 +316,8 @@ pms_TfidfTransformer_get_metadata_routing = {k: v for k, v in pms_TfidfTransform
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_TfidfTransformer_set_output = {k: v for k, v in pms_TfidfTransformer_set_output.items() if v is not None}`
 
@@ -369,9 +356,8 @@ pms_TfidfTransformer_set_output = {k: v for k, v in pms_TfidfTransformer_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfTransformer_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfTransformer_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_TfidfTransformer_set_transform_request = {k: v for k, v in pms_TfidfTransformer_set_transform_request.items() if v is not None}`
 
@@ -394,7 +380,7 @@ pms_TfidfTransformer_set_transform_request = {k: v for k, v in pms_TfidfTransfor
     X?: any
 
     /**
-      Whether to copy X and operate on the copy or perform in-place operations.
+      Whether to copy X and operate on the copy or perform in-place operations. `copy=False` will only be effective with CSR sparse matrix.
 
       @defaultValue `true`
      */
@@ -411,9 +397,8 @@ pms_TfidfTransformer_set_transform_request = {k: v for k, v in pms_TfidfTransfor
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfTransformer_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'copy': ${opts['copy'] ?? undefined}}
+    await this._py
+      .ex`pms_TfidfTransformer_transform = {'X': ${opts['X'] ?? undefined}, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_TfidfTransformer_transform = {k: v for k, v in pms_TfidfTransformer_transform.items() if v is not None}`
 
@@ -424,6 +409,31 @@ pms_TfidfTransformer_transform = {k: v for k, v in pms_TfidfTransformer_transfor
     // convert the result from python to node.js
     return this
       ._py`res_TfidfTransformer_transform.tolist() if hasattr(res_TfidfTransformer_transform, 'tolist') else res_TfidfTransformer_transform`
+  }
+
+  /**
+    The inverse document frequency (IDF) vector; only defined if `use\_idf` is `true`.
+   */
+  get idf_(): Promise<any[]> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This TfidfTransformer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('TfidfTransformer must call init() before accessing idf_')
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_TfidfTransformer_idf_ = bridgeTfidfTransformer[${this.id}].idf_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_TfidfTransformer_idf_.tolist() if hasattr(attr_TfidfTransformer_idf_, 'tolist') else attr_TfidfTransformer_idf_`
+    })()
   }
 
   /**

@@ -24,6 +24,8 @@ export class KMeans {
     /**
       The number of clusters to form as well as the number of centroids to generate.
 
+      For an example of how to choose an optimal value for `n\_clusters` refer to [Selecting the number of clusters with silhouette analysis on KMeans clustering](../../auto_examples/cluster/plot_kmeans_silhouette_analysis.html#sphx-glr-auto-examples-cluster-plot-kmeans-silhouette-analysis-py).
+
       @defaultValue `8`
      */
     n_clusters?: number
@@ -40,7 +42,7 @@ export class KMeans {
 
       When `n\_init='auto'`, the number of runs depends on the value of init: 10 if using `init='random'` or `init` is a callable; 1 if using `init='k-means++'` or `init` is an array-like.
 
-      @defaultValue `10`
+      @defaultValue `'auto'`
      */
     n_init?: 'auto' | number
 
@@ -80,11 +82,9 @@ export class KMeans {
     /**
       K-means algorithm to use. The classical EM-style algorithm is `"lloyd"`. The `"elkan"` variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape `(n\_samples, n\_clusters)`.
 
-      `"auto"` and `"full"` are deprecated and they will be removed in Scikit-Learn 1.3. They are both aliases for `"lloyd"`.
-
       @defaultValue `'lloyd'`
      */
-    algorithm?: 'lloyd' | 'elkan' | 'auto' | 'full'
+    algorithm?: 'lloyd' | 'elkan'
   }) {
     this.id = `KMeans${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -126,17 +126,8 @@ except NameError: bridgeKMeans = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KMeans = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'init': np.array(${this.opts['init'] ?? undefined}) if ${
-      this.opts['init'] !== undefined
-    } else None, 'n_init': ${this.opts['n_init'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'copy_x': ${
-      this.opts['copy_x'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}}
+    await this._py
+      .ex`ctor_KMeans = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'init': np.array(${this.opts['init'] ?? undefined}) if ${this.opts['init'] !== undefined} else None, 'n_init': ${this.opts['n_init'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'copy_x': ${this.opts['copy_x'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}}
 
 ctor_KMeans = {k: v for k, v in ctor_KMeans.items() if v is not None}`
 
@@ -192,13 +183,8 @@ ctor_KMeans = {k: v for k, v in ctor_KMeans.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_fit = {k: v for k, v in pms_KMeans_fit.items() if v is not None}`
 
@@ -241,13 +227,8 @@ pms_KMeans_fit = {k: v for k, v in pms_KMeans_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_fit_predict = {k: v for k, v in pms_KMeans_fit_predict.items() if v is not None}`
 
@@ -290,13 +271,8 @@ pms_KMeans_fit_predict = {k: v for k, v in pms_KMeans_fit_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_fit_transform = {k: v for k, v in pms_KMeans_fit_transform.items() if v is not None}`
 
@@ -329,9 +305,8 @@ pms_KMeans_fit_transform = {k: v for k, v in pms_KMeans_fit_transform.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_KMeans_get_feature_names_out = {k: v for k, v in pms_KMeans_get_feature_names_out.items() if v is not None}`
 
@@ -364,9 +339,8 @@ pms_KMeans_get_feature_names_out = {k: v for k, v in pms_KMeans_get_feature_name
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KMeans_get_metadata_routing = {k: v for k, v in pms_KMeans_get_metadata_routing.items() if v is not None}`
 
@@ -389,11 +363,6 @@ pms_KMeans_get_metadata_routing = {k: v for k, v in pms_KMeans_get_metadata_rout
       New data to predict.
      */
     X?: ArrayLike | SparseMatrix[]
-
-    /**
-      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-     */
-    sample_weight?: ArrayLike
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This KMeans instance has already been disposed')
@@ -404,11 +373,8 @@ pms_KMeans_get_metadata_routing = {k: v for k, v in pms_KMeans_get_metadata_rout
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_KMeans_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KMeans_predict = {k: v for k, v in pms_KMeans_predict.items() if v is not None}`
 
@@ -449,13 +415,8 @@ pms_KMeans_predict = {k: v for k, v in pms_KMeans_predict.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_score = {k: v for k, v in pms_KMeans_score.items() if v is not None}`
 
@@ -490,9 +451,8 @@ pms_KMeans_score = {k: v for k, v in pms_KMeans_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KMeans_set_fit_request = {k: v for k, v in pms_KMeans_set_fit_request.items() if v is not None}`
 
@@ -514,7 +474,7 @@ pms_KMeans_set_fit_request = {k: v for k, v in pms_KMeans_set_fit_request.items(
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KMeans instance has already been disposed')
@@ -525,9 +485,8 @@ pms_KMeans_set_fit_request = {k: v for k, v in pms_KMeans_set_fit_request.items(
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_KMeans_set_output = {k: v for k, v in pms_KMeans_set_output.items() if v is not None}`
 
@@ -538,43 +497,6 @@ pms_KMeans_set_output = {k: v for k, v in pms_KMeans_set_output.items() if v is 
     // convert the result from python to node.js
     return this
       ._py`res_KMeans_set_output.tolist() if hasattr(res_KMeans_set_output, 'tolist') else res_KMeans_set_output`
-  }
-
-  /**
-    Request metadata passed to the `predict` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_predict_request(opts: {
-    /**
-      Metadata routing for `sample\_weight` parameter in `predict`.
-     */
-    sample_weight?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This KMeans instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('KMeans must call init() before set_predict_request()')
-    }
-
-    // set up method params
-    await this._py.ex`pms_KMeans_set_predict_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
-
-pms_KMeans_set_predict_request = {k: v for k, v in pms_KMeans_set_predict_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_KMeans_set_predict_request = bridgeKMeans[${this.id}].set_predict_request(**pms_KMeans_set_predict_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_KMeans_set_predict_request.tolist() if hasattr(res_KMeans_set_predict_request, 'tolist') else res_KMeans_set_predict_request`
   }
 
   /**
@@ -599,9 +521,8 @@ pms_KMeans_set_predict_request = {k: v for k, v in pms_KMeans_set_predict_reques
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KMeans_set_score_request = {k: v for k, v in pms_KMeans_set_score_request.items() if v is not None}`
 
@@ -634,9 +555,8 @@ pms_KMeans_set_score_request = {k: v for k, v in pms_KMeans_set_score_request.it
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KMeans_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KMeans_transform = {k: v for k, v in pms_KMeans_transform.items() if v is not None}`
 

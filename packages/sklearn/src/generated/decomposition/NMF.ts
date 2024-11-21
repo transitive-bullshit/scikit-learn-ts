@@ -24,9 +24,9 @@ export class NMF {
 
   constructor(opts?: {
     /**
-      Number of components, if n\_components is not set all features are kept.
+      Number of components, if n\_components is not set all features are kept. If `n\_components='auto'`, the number of components is automatically inferred from W or H shapes.
      */
-    n_components?: number
+    n_components?: number | 'auto'
 
     /**
       Method used to initialize the procedure. Valid options:
@@ -141,19 +141,8 @@ except NameError: bridgeNMF = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NMF = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'init': ${this.opts['init'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'beta_loss': ${this.opts['beta_loss'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'alpha_W': ${this.opts['alpha_W'] ?? undefined}, 'alpha_H': ${
-      this.opts['alpha_H'] ?? undefined
-    }, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}}
+    await this._py
+      .ex`ctor_NMF = {'n_components': ${this.opts['n_components'] ?? undefined}, 'init': ${this.opts['init'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'beta_loss': ${this.opts['beta_loss'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'alpha_W': ${this.opts['alpha_W'] ?? undefined}, 'alpha_H': ${this.opts['alpha_H'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}}
 
 ctor_NMF = {k: v for k, v in ctor_NMF.items() if v is not None}`
 
@@ -209,11 +198,8 @@ ctor_NMF = {k: v for k, v in ctor_NMF.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_NMF_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_NMF_fit = {k: v for k, v in pms_NMF_fit.items() if v is not None}`
 
@@ -260,15 +246,8 @@ pms_NMF_fit = {k: v for k, v in pms_NMF_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'W': np.array(${opts['W'] ?? undefined}) if ${
-      opts['W'] !== undefined
-    } else None, 'H': np.array(${opts['H'] ?? undefined}) if ${
-      opts['H'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_NMF_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'W': np.array(${opts['W'] ?? undefined}) if ${opts['W'] !== undefined} else None, 'H': np.array(${opts['H'] ?? undefined}) if ${opts['H'] !== undefined} else None}
 
 pms_NMF_fit_transform = {k: v for k, v in pms_NMF_fit_transform.items() if v is not None}`
 
@@ -301,9 +280,8 @@ pms_NMF_fit_transform = {k: v for k, v in pms_NMF_fit_transform.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NMF_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_NMF_get_feature_names_out = {k: v for k, v in pms_NMF_get_feature_names_out.items() if v is not None}`
 
@@ -336,9 +314,8 @@ pms_NMF_get_feature_names_out = {k: v for k, v in pms_NMF_get_feature_names_out.
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NMF_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NMF_get_metadata_routing = {k: v for k, v in pms_NMF_get_metadata_routing.items() if v is not None}`
 
@@ -358,13 +335,13 @@ pms_NMF_get_metadata_routing = {k: v for k, v in pms_NMF_get_metadata_routing.it
     /**
       Transformed data matrix.
      */
-    Xt?: NDArray | SparseMatrix[]
+    X?: NDArray | SparseMatrix[]
 
     /**
-      Use `Xt` instead.
+      Transformed data matrix.
      */
-    W?: any
-  }): Promise<NDArray | SparseMatrix[]> {
+    Xt?: NDArray | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
     }
@@ -374,9 +351,8 @@ pms_NMF_get_metadata_routing = {k: v for k, v in pms_NMF_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_inverse_transform = {'Xt': np.array(${
-      opts['Xt'] ?? undefined
-    }) if ${opts['Xt'] !== undefined} else None, 'W': ${opts['W'] ?? undefined}}
+    await this._py
+      .ex`pms_NMF_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Xt': np.array(${opts['Xt'] ?? undefined}) if ${opts['Xt'] !== undefined} else None}
 
 pms_NMF_inverse_transform = {k: v for k, v in pms_NMF_inverse_transform.items() if v is not None}`
 
@@ -398,7 +374,7 @@ pms_NMF_inverse_transform = {k: v for k, v in pms_NMF_inverse_transform.items() 
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
@@ -409,9 +385,8 @@ pms_NMF_inverse_transform = {k: v for k, v in pms_NMF_inverse_transform.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NMF_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_NMF_set_output = {k: v for k, v in pms_NMF_set_output.items() if v is not None}`
 
@@ -442,9 +417,8 @@ pms_NMF_set_output = {k: v for k, v in pms_NMF_set_output.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NMF_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NMF_transform = {k: v for k, v in pms_NMF_transform.items() if v is not None}`
 

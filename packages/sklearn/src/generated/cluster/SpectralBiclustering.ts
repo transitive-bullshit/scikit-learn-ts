@@ -135,19 +135,8 @@ except NameError: bridgeSpectralBiclustering = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SpectralBiclustering = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'method': ${this.opts['method'] ?? undefined}, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'n_best': ${this.opts['n_best'] ?? undefined}, 'svd_method': ${
-      this.opts['svd_method'] ?? undefined
-    }, 'n_svd_vecs': ${this.opts['n_svd_vecs'] ?? undefined}, 'mini_batch': ${
-      this.opts['mini_batch'] ?? undefined
-    }, 'init': np.array(${this.opts['init'] ?? undefined}) if ${
-      this.opts['init'] !== undefined
-    } else None, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_SpectralBiclustering = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'method': ${this.opts['method'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'n_best': ${this.opts['n_best'] ?? undefined}, 'svd_method': ${this.opts['svd_method'] ?? undefined}, 'n_svd_vecs': ${this.opts['n_svd_vecs'] ?? undefined}, 'mini_batch': ${this.opts['mini_batch'] ?? undefined}, 'init': np.array(${this.opts['init'] ?? undefined}) if ${this.opts['init'] !== undefined} else None, 'n_init': ${this.opts['n_init'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SpectralBiclustering = {k: v for k, v in ctor_SpectralBiclustering.items() if v is not None}`
 
@@ -201,9 +190,8 @@ ctor_SpectralBiclustering = {k: v for k, v in ctor_SpectralBiclustering.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralBiclustering_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralBiclustering_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralBiclustering_fit = {k: v for k, v in pms_SpectralBiclustering_fit.items() if v is not None}`
 
@@ -240,9 +228,8 @@ pms_SpectralBiclustering_fit = {k: v for k, v in pms_SpectralBiclustering_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralBiclustering_get_indices = {'i': ${
-      opts['i'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SpectralBiclustering_get_indices = {'i': ${opts['i'] ?? undefined}}
 
 pms_SpectralBiclustering_get_indices = {k: v for k, v in pms_SpectralBiclustering_get_indices.items() if v is not None}`
 
@@ -280,9 +267,7 @@ pms_SpectralBiclustering_get_indices = {k: v for k, v in pms_SpectralBiclusterin
 
     // set up method params
     await this._py
-      .ex`pms_SpectralBiclustering_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SpectralBiclustering_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SpectralBiclustering_get_metadata_routing = {k: v for k, v in pms_SpectralBiclustering_get_metadata_routing.items() if v is not None}`
 
@@ -317,9 +302,8 @@ pms_SpectralBiclustering_get_metadata_routing = {k: v for k, v in pms_SpectralBi
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralBiclustering_get_shape = {'i': ${
-      opts['i'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SpectralBiclustering_get_shape = {'i': ${opts['i'] ?? undefined}}
 
 pms_SpectralBiclustering_get_shape = {k: v for k, v in pms_SpectralBiclustering_get_shape.items() if v is not None}`
 
@@ -359,11 +343,8 @@ pms_SpectralBiclustering_get_shape = {k: v for k, v in pms_SpectralBiclustering_
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralBiclustering_get_submatrix = {'i': ${
-      opts['i'] ?? undefined
-    }, 'data': np.array(${opts['data'] ?? undefined}) if ${
-      opts['data'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_SpectralBiclustering_get_submatrix = {'i': ${opts['i'] ?? undefined}, 'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_SpectralBiclustering_get_submatrix = {k: v for k, v in pms_SpectralBiclustering_get_submatrix.items() if v is not None}`
 

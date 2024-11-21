@@ -72,9 +72,8 @@ except NameError: bridgeVarianceThreshold = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_VarianceThreshold = {'threshold': ${
-      this.opts['threshold'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_VarianceThreshold = {'threshold': ${this.opts['threshold'] ?? undefined}}
 
 ctor_VarianceThreshold = {k: v for k, v in ctor_VarianceThreshold.items() if v is not None}`
 
@@ -128,9 +127,8 @@ ctor_VarianceThreshold = {k: v for k, v in ctor_VarianceThreshold.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_VarianceThreshold_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_VarianceThreshold_fit = {k: v for k, v in pms_VarianceThreshold_fit.items() if v is not None}`
 
@@ -177,13 +175,8 @@ pms_VarianceThreshold_fit = {k: v for k, v in pms_VarianceThreshold_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VarianceThreshold_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VarianceThreshold_fit_transform = {k: v for k, v in pms_VarianceThreshold_fit_transform.items() if v is not None}`
 
@@ -219,9 +212,7 @@ pms_VarianceThreshold_fit_transform = {k: v for k, v in pms_VarianceThreshold_fi
 
     // set up method params
     await this._py
-      .ex`pms_VarianceThreshold_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_VarianceThreshold_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_VarianceThreshold_get_feature_names_out = {k: v for k, v in pms_VarianceThreshold_get_feature_names_out.items() if v is not None}`
 
@@ -259,9 +250,7 @@ pms_VarianceThreshold_get_feature_names_out = {k: v for k, v in pms_VarianceThre
 
     // set up method params
     await this._py
-      .ex`pms_VarianceThreshold_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_VarianceThreshold_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_VarianceThreshold_get_metadata_routing = {k: v for k, v in pms_VarianceThreshold_get_metadata_routing.items() if v is not None}`
 
@@ -296,9 +285,8 @@ pms_VarianceThreshold_get_metadata_routing = {k: v for k, v in pms_VarianceThres
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VarianceThreshold_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_VarianceThreshold_get_support = {k: v for k, v in pms_VarianceThreshold_get_support.items() if v is not None}`
 
@@ -334,9 +322,7 @@ pms_VarianceThreshold_get_support = {k: v for k, v in pms_VarianceThreshold_get_
 
     // set up method params
     await this._py
-      .ex`pms_VarianceThreshold_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_VarianceThreshold_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshold_inverse_transform.items() if v is not None}`
 
@@ -358,7 +344,7 @@ pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshol
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -371,9 +357,8 @@ pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshol
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VarianceThreshold_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_VarianceThreshold_set_output = {k: v for k, v in pms_VarianceThreshold_set_output.items() if v is not None}`
 
@@ -406,9 +391,8 @@ pms_VarianceThreshold_set_output = {k: v for k, v in pms_VarianceThreshold_set_o
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VarianceThreshold_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VarianceThreshold_transform = {k: v for k, v in pms_VarianceThreshold_transform.items() if v is not None}`
 

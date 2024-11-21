@@ -34,12 +34,12 @@ export class TransformedTargetRegressor {
     transformer?: any
 
     /**
-      Function to apply to `y` before passing to [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit"). Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. If `func is None`, the function used will be the identity function.
+      Function to apply to `y` before passing to [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit"). Cannot be set at the same time as `transformer`. If `func is None`, the function used will be the identity function. If `func` is set, `inverse\_func` also needs to be provided. The function needs to return a 2-dimensional array.
      */
     func?: any
 
     /**
-      Function to apply to the prediction of the regressor. Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. The inverse function is used to return predictions to the same space of the original training labels.
+      Function to apply to the prediction of the regressor. Cannot be set at the same time as `transformer`. The inverse function is used to return predictions to the same space of the original training labels. If `inverse\_func` is set, `func` also needs to be provided. The inverse function needs to return a 2-dimensional array.
      */
     inverse_func?: any
 
@@ -94,13 +94,8 @@ except NameError: bridgeTransformedTargetRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TransformedTargetRegressor = {'regressor': ${
-      this.opts['regressor'] ?? undefined
-    }, 'transformer': ${this.opts['transformer'] ?? undefined}, 'func': ${
-      this.opts['func'] ?? undefined
-    }, 'inverse_func': ${
-      this.opts['inverse_func'] ?? undefined
-    }, 'check_inverse': ${this.opts['check_inverse'] ?? undefined}}
+    await this._py
+      .ex`ctor_TransformedTargetRegressor = {'regressor': ${this.opts['regressor'] ?? undefined}, 'transformer': ${this.opts['transformer'] ?? undefined}, 'func': ${this.opts['func'] ?? undefined}, 'inverse_func': ${this.opts['inverse_func'] ?? undefined}, 'check_inverse': ${this.opts['check_inverse'] ?? undefined}}
 
 ctor_TransformedTargetRegressor = {k: v for k, v in ctor_TransformedTargetRegressor.items() if v is not None}`
 
@@ -161,13 +156,8 @@ ctor_TransformedTargetRegressor = {k: v for k, v in ctor_TransformedTargetRegres
     }
 
     // set up method params
-    await this._py.ex`pms_TransformedTargetRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TransformedTargetRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_TransformedTargetRegressor_fit = {k: v for k, v in pms_TransformedTargetRegressor_fit.items() if v is not None}`
 
@@ -181,16 +171,11 @@ pms_TransformedTargetRegressor_fit = {k: v for k, v in pms_TransformedTargetRegr
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TransformedTargetRegressor instance has already been disposed'
@@ -204,10 +189,7 @@ pms_TransformedTargetRegressor_fit = {k: v for k, v in pms_TransformedTargetRegr
     }
 
     // set up method params
-    await this._py
-      .ex`pms_TransformedTargetRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_TransformedTargetRegressor_get_metadata_routing = {}
 
 pms_TransformedTargetRegressor_get_metadata_routing = {k: v for k, v in pms_TransformedTargetRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -249,11 +231,8 @@ pms_TransformedTargetRegressor_get_metadata_routing = {k: v for k, v in pms_Tran
     }
 
     // set up method params
-    await this._py.ex`pms_TransformedTargetRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'predict_params': ${
-      opts['predict_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TransformedTargetRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'predict_params': ${opts['predict_params'] ?? undefined}}
 
 pms_TransformedTargetRegressor_predict = {k: v for k, v in pms_TransformedTargetRegressor_predict.items() if v is not None}`
 
@@ -300,13 +279,8 @@ pms_TransformedTargetRegressor_predict = {k: v for k, v in pms_TransformedTarget
     }
 
     // set up method params
-    await this._py.ex`pms_TransformedTargetRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_TransformedTargetRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_TransformedTargetRegressor_score = {k: v for k, v in pms_TransformedTargetRegressor_score.items() if v is not None}`
 
@@ -346,9 +320,7 @@ pms_TransformedTargetRegressor_score = {k: v for k, v in pms_TransformedTargetRe
 
     // set up method params
     await this._py
-      .ex`pms_TransformedTargetRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_TransformedTargetRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_TransformedTargetRegressor_set_score_request = {k: v for k, v in pms_TransformedTargetRegressor_set_score_request.items() if v is not None}`
 

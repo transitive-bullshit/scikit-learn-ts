@@ -64,7 +64,7 @@ export class SparsePCA {
     method?: 'lars' | 'cd'
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -130,21 +130,8 @@ except NameError: bridgeSparsePCA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SparsePCA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'ridge_alpha': ${
-      this.opts['ridge_alpha'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'method': ${this.opts['method'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'U_init': np.array(${this.opts['U_init'] ?? undefined}) if ${
-      this.opts['U_init'] !== undefined
-    } else None, 'V_init': np.array(${this.opts['V_init'] ?? undefined}) if ${
-      this.opts['V_init'] !== undefined
-    } else None, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_SparsePCA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'ridge_alpha': ${this.opts['ridge_alpha'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'method': ${this.opts['method'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'U_init': np.array(${this.opts['U_init'] ?? undefined}) if ${this.opts['U_init'] !== undefined} else None, 'V_init': np.array(${this.opts['V_init'] ?? undefined}) if ${this.opts['V_init'] !== undefined} else None, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SparsePCA = {k: v for k, v in ctor_SparsePCA.items() if v is not None}`
 
@@ -195,9 +182,8 @@ ctor_SparsePCA = {k: v for k, v in ctor_SparsePCA.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SparsePCA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SparsePCA_fit = {k: v for k, v in pms_SparsePCA_fit.items() if v is not None}`
 
@@ -240,13 +226,8 @@ pms_SparsePCA_fit = {k: v for k, v in pms_SparsePCA_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparsePCA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SparsePCA_fit_transform = {k: v for k, v in pms_SparsePCA_fit_transform.items() if v is not None}`
 
@@ -282,9 +263,7 @@ pms_SparsePCA_fit_transform = {k: v for k, v in pms_SparsePCA_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_SparsePCA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SparsePCA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SparsePCA_get_feature_names_out = {k: v for k, v in pms_SparsePCA_get_feature_names_out.items() if v is not None}`
 
@@ -319,9 +298,8 @@ pms_SparsePCA_get_feature_names_out = {k: v for k, v in pms_SparsePCA_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparsePCA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SparsePCA_get_metadata_routing = {k: v for k, v in pms_SparsePCA_get_metadata_routing.items() if v is not None}`
 
@@ -354,9 +332,8 @@ pms_SparsePCA_get_metadata_routing = {k: v for k, v in pms_SparsePCA_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SparsePCA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparsePCA_inverse_transform = {k: v for k, v in pms_SparsePCA_inverse_transform.items() if v is not None}`
 
@@ -378,7 +355,7 @@ pms_SparsePCA_inverse_transform = {k: v for k, v in pms_SparsePCA_inverse_transf
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
@@ -389,9 +366,8 @@ pms_SparsePCA_inverse_transform = {k: v for k, v in pms_SparsePCA_inverse_transf
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparsePCA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SparsePCA_set_output = {k: v for k, v in pms_SparsePCA_set_output.items() if v is not None}`
 
@@ -426,9 +402,8 @@ pms_SparsePCA_set_output = {k: v for k, v in pms_SparsePCA_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SparsePCA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparsePCA_transform = {k: v for k, v in pms_SparsePCA_transform.items() if v is not None}`
 

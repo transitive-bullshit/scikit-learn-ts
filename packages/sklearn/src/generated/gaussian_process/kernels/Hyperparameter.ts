@@ -86,13 +86,8 @@ except NameError: bridgeHyperparameter = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Hyperparameter = {'name': ${
-      this.opts['name'] ?? undefined
-    }, 'value_type': ${this.opts['value_type'] ?? undefined}, 'bounds': ${
-      this.opts['bounds'] ?? undefined
-    }, 'n_elements': ${this.opts['n_elements'] ?? undefined}, 'fixed': ${
-      this.opts['fixed'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Hyperparameter = {'name': ${this.opts['name'] ?? undefined}, 'value_type': ${this.opts['value_type'] ?? undefined}, 'bounds': ${this.opts['bounds'] ?? undefined}, 'n_elements': ${this.opts['n_elements'] ?? undefined}, 'fixed': ${this.opts['fixed'] ?? undefined}}
 
 ctor_Hyperparameter = {k: v for k, v in ctor_Hyperparameter.items() if v is not None}`
 
@@ -119,32 +114,6 @@ ctor_Hyperparameter = {k: v for k, v in ctor_Hyperparameter.items() if v is not 
     await this._py.ex`del bridgeHyperparameter[${this.id}]`
 
     this._isDisposed = true
-  }
-
-  /**
-    Call self as a function.
-   */
-  async __call__(opts: {}): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This Hyperparameter instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('Hyperparameter must call init() before __call__()')
-    }
-
-    // set up method params
-    await this._py.ex`pms_Hyperparameter___call__ = {}
-
-pms_Hyperparameter___call__ = {k: v for k, v in pms_Hyperparameter___call__.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_Hyperparameter___call__ = bridgeHyperparameter[${this.id}].__call__(**pms_Hyperparameter___call__)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_Hyperparameter___call__.tolist() if hasattr(res_Hyperparameter___call__, 'tolist') else res_Hyperparameter___call__`
   }
 
   /**

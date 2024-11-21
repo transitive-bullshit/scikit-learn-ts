@@ -35,7 +35,7 @@ export class KernelRidge {
     alpha?: number | ArrayLike
 
     /**
-      Kernel mapping used internally. This parameter is directly passed to [`pairwise\_kernels`](sklearn.metrics.pairwise.pairwise_kernels.html#sklearn.metrics.pairwise.pairwise_kernels "sklearn.metrics.pairwise.pairwise_kernels"). If `kernel` is a string, it must be one of the metrics in `pairwise.PAIRWISE\_KERNEL\_FUNCTIONS` or “precomputed”. If `kernel` is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if `kernel` is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two rows from X as input and return the corresponding kernel value as a single number. This means that callables from [`sklearn.metrics.pairwise`](../classes.html#module-sklearn.metrics.pairwise "sklearn.metrics.pairwise") are not allowed, as they operate on matrices, not single samples. Use the string identifying the kernel instead.
+      Kernel mapping used internally. This parameter is directly passed to [`pairwise\_kernels`](sklearn.metrics.pairwise.pairwise_kernels.html#sklearn.metrics.pairwise.pairwise_kernels "sklearn.metrics.pairwise.pairwise_kernels"). If `kernel` is a string, it must be one of the metrics in `pairwise.PAIRWISE\_KERNEL\_FUNCTIONS` or “precomputed”. If `kernel` is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if `kernel` is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two rows from X as input and return the corresponding kernel value as a single number. This means that callables from [`sklearn.metrics.pairwise`](../../api/sklearn.metrics.html#module-sklearn.metrics.pairwise "sklearn.metrics.pairwise") are not allowed, as they operate on matrices, not single samples. Use the string identifying the kernel instead.
 
       @defaultValue `'linear'`
      */
@@ -105,15 +105,8 @@ except NameError: bridgeKernelRidge = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KernelRidge = {'alpha': np.array(${
-      this.opts['alpha'] ?? undefined
-    }) if ${this.opts['alpha'] !== undefined} else None, 'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'degree': ${
-      this.opts['degree'] ?? undefined
-    }, 'coef0': ${this.opts['coef0'] ?? undefined}, 'kernel_params': ${
-      this.opts['kernel_params'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_KernelRidge = {'alpha': np.array(${this.opts['alpha'] ?? undefined}) if ${this.opts['alpha'] !== undefined} else None, 'kernel': ${this.opts['kernel'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'kernel_params': ${this.opts['kernel_params'] ?? undefined}}
 
 ctor_KernelRidge = {k: v for k, v in ctor_KernelRidge.items() if v is not None}`
 
@@ -170,13 +163,8 @@ ctor_KernelRidge = {k: v for k, v in ctor_KernelRidge.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KernelRidge_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_KernelRidge_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KernelRidge_fit = {k: v for k, v in pms_KernelRidge_fit.items() if v is not None}`
 
@@ -211,9 +199,8 @@ pms_KernelRidge_fit = {k: v for k, v in pms_KernelRidge_fit.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_KernelRidge_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelRidge_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KernelRidge_get_metadata_routing = {k: v for k, v in pms_KernelRidge_get_metadata_routing.items() if v is not None}`
 
@@ -244,9 +231,8 @@ pms_KernelRidge_get_metadata_routing = {k: v for k, v in pms_KernelRidge_get_met
     }
 
     // set up method params
-    await this._py.ex`pms_KernelRidge_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KernelRidge_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KernelRidge_predict = {k: v for k, v in pms_KernelRidge_predict.items() if v is not None}`
 
@@ -289,13 +275,8 @@ pms_KernelRidge_predict = {k: v for k, v in pms_KernelRidge_predict.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_KernelRidge_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_KernelRidge_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KernelRidge_score = {k: v for k, v in pms_KernelRidge_score.items() if v is not None}`
 
@@ -330,9 +311,8 @@ pms_KernelRidge_score = {k: v for k, v in pms_KernelRidge_score.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_KernelRidge_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelRidge_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KernelRidge_set_fit_request = {k: v for k, v in pms_KernelRidge_set_fit_request.items() if v is not None}`
 
@@ -367,9 +347,8 @@ pms_KernelRidge_set_fit_request = {k: v for k, v in pms_KernelRidge_set_fit_requ
     }
 
     // set up method params
-    await this._py.ex`pms_KernelRidge_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelRidge_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KernelRidge_set_score_request = {k: v for k, v in pms_KernelRidge_set_score_request.items() if v is not None}`
 

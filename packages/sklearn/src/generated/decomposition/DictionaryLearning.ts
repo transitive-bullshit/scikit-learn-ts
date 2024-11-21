@@ -79,7 +79,7 @@ export class DictionaryLearning {
     transform_alpha?: number
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -182,35 +182,8 @@ except NameError: bridgeDictionaryLearning = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DictionaryLearning = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'fit_algorithm': ${
-      this.opts['fit_algorithm'] ?? undefined
-    }, 'transform_algorithm': ${
-      this.opts['transform_algorithm'] ?? undefined
-    }, 'transform_n_nonzero_coefs': ${
-      this.opts['transform_n_nonzero_coefs'] ?? undefined
-    }, 'transform_alpha': ${
-      this.opts['transform_alpha'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'code_init': np.array(${
-      this.opts['code_init'] ?? undefined
-    }) if ${
-      this.opts['code_init'] !== undefined
-    } else None, 'dict_init': np.array(${
-      this.opts['dict_init'] ?? undefined
-    }) if ${this.opts['dict_init'] !== undefined} else None, 'callback': ${
-      this.opts['callback'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'split_sign': ${
-      this.opts['split_sign'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'positive_code': ${
-      this.opts['positive_code'] ?? undefined
-    }, 'positive_dict': ${
-      this.opts['positive_dict'] ?? undefined
-    }, 'transform_max_iter': ${this.opts['transform_max_iter'] ?? undefined}}
+    await this._py
+      .ex`ctor_DictionaryLearning = {'n_components': ${this.opts['n_components'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'fit_algorithm': ${this.opts['fit_algorithm'] ?? undefined}, 'transform_algorithm': ${this.opts['transform_algorithm'] ?? undefined}, 'transform_n_nonzero_coefs': ${this.opts['transform_n_nonzero_coefs'] ?? undefined}, 'transform_alpha': ${this.opts['transform_alpha'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'code_init': np.array(${this.opts['code_init'] ?? undefined}) if ${this.opts['code_init'] !== undefined} else None, 'dict_init': np.array(${this.opts['dict_init'] ?? undefined}) if ${this.opts['dict_init'] !== undefined} else None, 'callback': ${this.opts['callback'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'split_sign': ${this.opts['split_sign'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'positive_code': ${this.opts['positive_code'] ?? undefined}, 'positive_dict': ${this.opts['positive_dict'] ?? undefined}, 'transform_max_iter': ${this.opts['transform_max_iter'] ?? undefined}}
 
 ctor_DictionaryLearning = {k: v for k, v in ctor_DictionaryLearning.items() if v is not None}`
 
@@ -264,9 +237,8 @@ ctor_DictionaryLearning = {k: v for k, v in ctor_DictionaryLearning.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_DictionaryLearning_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_DictionaryLearning_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_DictionaryLearning_fit = {k: v for k, v in pms_DictionaryLearning_fit.items() if v is not None}`
 
@@ -306,9 +278,8 @@ pms_DictionaryLearning_fit = {k: v for k, v in pms_DictionaryLearning_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_DictionaryLearning_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_DictionaryLearning_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_DictionaryLearning_fit_transform = {k: v for k, v in pms_DictionaryLearning_fit_transform.items() if v is not None}`
 
@@ -346,9 +317,7 @@ pms_DictionaryLearning_fit_transform = {k: v for k, v in pms_DictionaryLearning_
 
     // set up method params
     await this._py
-      .ex`pms_DictionaryLearning_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_DictionaryLearning_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_DictionaryLearning_get_feature_names_out = {k: v for k, v in pms_DictionaryLearning_get_feature_names_out.items() if v is not None}`
 
@@ -386,9 +355,7 @@ pms_DictionaryLearning_get_feature_names_out = {k: v for k, v in pms_DictionaryL
 
     // set up method params
     await this._py
-      .ex`pms_DictionaryLearning_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_DictionaryLearning_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DictionaryLearning_get_metadata_routing = {k: v for k, v in pms_DictionaryLearning_get_metadata_routing.items() if v is not None}`
 
@@ -410,7 +377,7 @@ pms_DictionaryLearning_get_metadata_routing = {k: v for k, v in pms_DictionaryLe
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -423,9 +390,8 @@ pms_DictionaryLearning_get_metadata_routing = {k: v for k, v in pms_DictionaryLe
     }
 
     // set up method params
-    await this._py.ex`pms_DictionaryLearning_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DictionaryLearning_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_DictionaryLearning_set_output = {k: v for k, v in pms_DictionaryLearning_set_output.items() if v is not None}`
 
@@ -460,9 +426,8 @@ pms_DictionaryLearning_set_output = {k: v for k, v in pms_DictionaryLearning_set
     }
 
     // set up method params
-    await this._py.ex`pms_DictionaryLearning_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_DictionaryLearning_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_transform.items() if v is not None}`
 

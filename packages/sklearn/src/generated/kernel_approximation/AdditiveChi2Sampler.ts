@@ -83,9 +83,8 @@ except NameError: bridgeAdditiveChi2Sampler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_AdditiveChi2Sampler = {'sample_steps': ${
-      this.opts['sample_steps'] ?? undefined
-    }, 'sample_interval': ${this.opts['sample_interval'] ?? undefined}}
+    await this._py
+      .ex`ctor_AdditiveChi2Sampler = {'sample_steps': ${this.opts['sample_steps'] ?? undefined}, 'sample_interval': ${this.opts['sample_interval'] ?? undefined}}
 
 ctor_AdditiveChi2Sampler = {k: v for k, v in ctor_AdditiveChi2Sampler.items() if v is not None}`
 
@@ -141,9 +140,8 @@ ctor_AdditiveChi2Sampler = {k: v for k, v in ctor_AdditiveChi2Sampler.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_AdditiveChi2Sampler_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_AdditiveChi2Sampler_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_AdditiveChi2Sampler_fit = {k: v for k, v in pms_AdditiveChi2Sampler_fit.items() if v is not None}`
 
@@ -190,13 +188,8 @@ pms_AdditiveChi2Sampler_fit = {k: v for k, v in pms_AdditiveChi2Sampler_fit.item
     }
 
     // set up method params
-    await this._py.ex`pms_AdditiveChi2Sampler_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_AdditiveChi2Sampler_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_AdditiveChi2Sampler_fit_transform = {k: v for k, v in pms_AdditiveChi2Sampler_fit_transform.items() if v is not None}`
 
@@ -232,9 +225,7 @@ pms_AdditiveChi2Sampler_fit_transform = {k: v for k, v in pms_AdditiveChi2Sample
 
     // set up method params
     await this._py
-      .ex`pms_AdditiveChi2Sampler_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_AdditiveChi2Sampler_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_AdditiveChi2Sampler_get_feature_names_out = {k: v for k, v in pms_AdditiveChi2Sampler_get_feature_names_out.items() if v is not None}`
 
@@ -272,9 +263,7 @@ pms_AdditiveChi2Sampler_get_feature_names_out = {k: v for k, v in pms_AdditiveCh
 
     // set up method params
     await this._py
-      .ex`pms_AdditiveChi2Sampler_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_AdditiveChi2Sampler_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_AdditiveChi2Sampler_get_metadata_routing = {k: v for k, v in pms_AdditiveChi2Sampler_get_metadata_routing.items() if v is not None}`
 
@@ -296,7 +285,7 @@ pms_AdditiveChi2Sampler_get_metadata_routing = {k: v for k, v in pms_AdditiveChi
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -311,9 +300,8 @@ pms_AdditiveChi2Sampler_get_metadata_routing = {k: v for k, v in pms_AdditiveChi
     }
 
     // set up method params
-    await this._py.ex`pms_AdditiveChi2Sampler_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_AdditiveChi2Sampler_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_AdditiveChi2Sampler_set_output = {k: v for k, v in pms_AdditiveChi2Sampler_set_output.items() if v is not None}`
 
@@ -346,9 +334,8 @@ pms_AdditiveChi2Sampler_set_output = {k: v for k, v in pms_AdditiveChi2Sampler_s
     }
 
     // set up method params
-    await this._py.ex`pms_AdditiveChi2Sampler_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_AdditiveChi2Sampler_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_transform.items() if v is not None}`
 
@@ -359,33 +346,6 @@ pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_tr
     // convert the result from python to node.js
     return this
       ._py`res_AdditiveChi2Sampler_transform.tolist() if hasattr(res_AdditiveChi2Sampler_transform, 'tolist') else res_AdditiveChi2Sampler_transform`
-  }
-
-  /**
-    Stored sampling interval. Specified as a parameter if `sample\_steps` not in {1,2,3}.
-   */
-  get sample_interval_(): Promise<number> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This AdditiveChi2Sampler instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'AdditiveChi2Sampler must call init() before accessing sample_interval_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_AdditiveChi2Sampler_sample_interval_ = bridgeAdditiveChi2Sampler[${this.id}].sample_interval_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_AdditiveChi2Sampler_sample_interval_.tolist() if hasattr(attr_AdditiveChi2Sampler_sample_interval_, 'tolist') else attr_AdditiveChi2Sampler_sample_interval_`
-    })()
   }
 
   /**

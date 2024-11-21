@@ -119,15 +119,8 @@ except NameError: bridgeSparseRandomProjection = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SparseRandomProjection = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'density': ${this.opts['density'] ?? undefined}, 'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'dense_output': ${
-      this.opts['dense_output'] ?? undefined
-    }, 'compute_inverse_components': ${
-      this.opts['compute_inverse_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_SparseRandomProjection = {'n_components': ${this.opts['n_components'] ?? undefined}, 'density': ${this.opts['density'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'dense_output': ${this.opts['dense_output'] ?? undefined}, 'compute_inverse_components': ${this.opts['compute_inverse_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SparseRandomProjection = {k: v for k, v in ctor_SparseRandomProjection.items() if v is not None}`
 
@@ -181,9 +174,8 @@ ctor_SparseRandomProjection = {k: v for k, v in ctor_SparseRandomProjection.item
     }
 
     // set up method params
-    await this._py.ex`pms_SparseRandomProjection_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SparseRandomProjection_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SparseRandomProjection_fit = {k: v for k, v in pms_SparseRandomProjection_fit.items() if v is not None}`
 
@@ -231,13 +223,7 @@ pms_SparseRandomProjection_fit = {k: v for k, v in pms_SparseRandomProjection_fi
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_SparseRandomProjection_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SparseRandomProjection_fit_transform = {k: v for k, v in pms_SparseRandomProjection_fit_transform.items() if v is not None}`
 
@@ -275,9 +261,7 @@ pms_SparseRandomProjection_fit_transform = {k: v for k, v in pms_SparseRandomPro
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SparseRandomProjection_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SparseRandomProjection_get_feature_names_out = {k: v for k, v in pms_SparseRandomProjection_get_feature_names_out.items() if v is not None}`
 
@@ -315,9 +299,7 @@ pms_SparseRandomProjection_get_feature_names_out = {k: v for k, v in pms_SparseR
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SparseRandomProjection_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SparseRandomProjection_get_metadata_routing = {k: v for k, v in pms_SparseRandomProjection_get_metadata_routing.items() if v is not None}`
 
@@ -357,9 +339,7 @@ pms_SparseRandomProjection_get_metadata_routing = {k: v for k, v in pms_SparseRa
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_SparseRandomProjection_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparseRandomProjection_inverse_transform = {k: v for k, v in pms_SparseRandomProjection_inverse_transform.items() if v is not None}`
 
@@ -381,7 +361,7 @@ pms_SparseRandomProjection_inverse_transform = {k: v for k, v in pms_SparseRando
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -396,9 +376,8 @@ pms_SparseRandomProjection_inverse_transform = {k: v for k, v in pms_SparseRando
     }
 
     // set up method params
-    await this._py.ex`pms_SparseRandomProjection_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparseRandomProjection_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SparseRandomProjection_set_output = {k: v for k, v in pms_SparseRandomProjection_set_output.items() if v is not None}`
 
@@ -433,9 +412,8 @@ pms_SparseRandomProjection_set_output = {k: v for k, v in pms_SparseRandomProjec
     }
 
     // set up method params
-    await this._py.ex`pms_SparseRandomProjection_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SparseRandomProjection_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparseRandomProjection_transform = {k: v for k, v in pms_SparseRandomProjection_transform.items() if v is not None}`
 

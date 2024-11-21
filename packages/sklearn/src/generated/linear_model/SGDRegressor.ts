@@ -46,14 +46,14 @@ export class SGDRegressor {
     penalty?: 'l2' | 'l1' | 'elasticnet'
 
     /**
-      Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when set to `learning\_rate` is set to ‘optimal’.
+      Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when `learning\_rate` is set to ‘optimal’. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.0001`
      */
     alpha?: number
 
     /**
-      The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’.
+      The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’. Values must be in the range `\[0.0, 1.0\]`.
 
       @defaultValue `0.15`
      */
@@ -67,14 +67,14 @@ export class SGDRegressor {
     fit_intercept?: boolean
 
     /**
-      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDRegressor.partial_fit "sklearn.linear_model.SGDRegressor.partial_fit") method.
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDRegressor.partial_fit "sklearn.linear_model.SGDRegressor.partial_fit") method. Values must be in the range `\[1, inf)`.
 
       @defaultValue `1000`
      */
     max_iter?: number
 
     /**
-      The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
+      The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.001`
      */
@@ -88,14 +88,14 @@ export class SGDRegressor {
     shuffle?: boolean
 
     /**
-      The verbosity level.
+      The verbosity level. Values must be in the range `\[0, inf)`.
 
       @defaultValue `0`
      */
     verbose?: number
 
     /**
-      Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold.
+      Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.1`
      */
@@ -114,14 +114,14 @@ export class SGDRegressor {
     learning_rate?: string
 
     /**
-      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.01.
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.01. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.01`
      */
     eta0?: number
 
     /**
-      The exponent for inverse scaling learning rate.
+      The exponent for inverse scaling learning rate. Values must be in the range `(-inf, inf)`.
 
       @defaultValue `0.25`
      */
@@ -135,14 +135,14 @@ export class SGDRegressor {
     early_stopping?: boolean
 
     /**
-      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`.
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`. Values must be in the range `(0.0, 1.0)`.
 
       @defaultValue `0.1`
      */
     validation_fraction?: number
 
     /**
-      Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
+      Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter. Integer values must be in the range `\[1, max\_iter)`.
 
       @defaultValue `5`
      */
@@ -204,29 +204,8 @@ except NameError: bridgeSGDRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SGDRegressor = {'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${
-      this.opts['eta0'] ?? undefined
-    }, 'power_t': ${this.opts['power_t'] ?? undefined}, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${
-      this.opts['average'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_SGDRegressor = {'loss': ${this.opts['loss'] ?? undefined}, 'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${this.opts['eta0'] ?? undefined}, 'power_t': ${this.opts['power_t'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${this.opts['average'] ?? undefined}}
 
 ctor_SGDRegressor = {k: v for k, v in ctor_SGDRegressor.items() if v is not None}`
 
@@ -321,17 +300,8 @@ pms_SGDRegressor_densify = {k: v for k, v in pms_SGDRegressor_densify.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'intercept_init': np.array(${
-      opts['intercept_init'] ?? undefined
-    }) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'intercept_init': np.array(${opts['intercept_init'] ?? undefined}) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_fit = {k: v for k, v in pms_SGDRegressor_fit.items() if v is not None}`
 
@@ -366,9 +336,8 @@ pms_SGDRegressor_fit = {k: v for k, v in pms_SGDRegressor_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SGDRegressor_get_metadata_routing = {k: v for k, v in pms_SGDRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -411,11 +380,8 @@ pms_SGDRegressor_get_metadata_routing = {k: v for k, v in pms_SGDRegressor_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_partial_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDRegressor_partial_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_partial_fit = {k: v for k, v in pms_SGDRegressor_partial_fit.items() if v is not None}`
 
@@ -446,9 +412,8 @@ pms_SGDRegressor_partial_fit = {k: v for k, v in pms_SGDRegressor_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDRegressor_predict = {k: v for k, v in pms_SGDRegressor_predict.items() if v is not None}`
 
@@ -491,13 +456,8 @@ pms_SGDRegressor_predict = {k: v for k, v in pms_SGDRegressor_predict.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_SGDRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SGDRegressor_score = {k: v for k, v in pms_SGDRegressor_score.items() if v is not None}`
 
@@ -542,11 +502,8 @@ pms_SGDRegressor_score = {k: v for k, v in pms_SGDRegressor_score.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'intercept_init': ${
-      opts['intercept_init'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDRegressor_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'intercept_init': ${opts['intercept_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_set_fit_request = {k: v for k, v in pms_SGDRegressor_set_fit_request.items() if v is not None}`
 
@@ -584,9 +541,7 @@ pms_SGDRegressor_set_fit_request = {k: v for k, v in pms_SGDRegressor_set_fit_re
 
     // set up method params
     await this._py
-      .ex`pms_SGDRegressor_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_SGDRegressor_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_set_partial_fit_request = {k: v for k, v in pms_SGDRegressor_set_partial_fit_request.items() if v is not None}`
 
@@ -623,9 +578,8 @@ pms_SGDRegressor_set_partial_fit_request = {k: v for k, v in pms_SGDRegressor_se
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_set_score_request = {k: v for k, v in pms_SGDRegressor_set_score_request.items() if v is not None}`
 

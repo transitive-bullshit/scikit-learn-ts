@@ -24,13 +24,13 @@ export class NearestCentroid {
 
   constructor(opts?: {
     /**
-      Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values. Note that “wminkowski”, “seuclidean” and “mahalanobis” are not supported.
+      Metric to use for distance computation.
 
-      The centroids for the samples corresponding to each class is the point from which the sum of the distances (according to the metric) of all samples that belong to that particular class are minimized. If the `"manhattan"` metric is provided, this centroid is the median and for all other metrics, the centroid is now set to be the mean.
+      If `metric="euclidean"`, the centroid for the samples corresponding to each class is the arithmetic mean, which minimizes the sum of squared L1 distances. If `metric="manhattan"`, the centroid is the feature-wise median, which minimizes the sum of L1 distances.
 
       @defaultValue `'euclidean'`
      */
-    metric?: string
+    metric?: 'euclidean' | 'manhattan'
 
     /**
       Threshold for shrinking centroids to remove features.
@@ -77,9 +77,8 @@ except NameError: bridgeNearestCentroid = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NearestCentroid = {'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'shrink_threshold': ${this.opts['shrink_threshold'] ?? undefined}}
+    await this._py
+      .ex`ctor_NearestCentroid = {'metric': ${this.opts['metric'] ?? undefined}, 'shrink_threshold': ${this.opts['shrink_threshold'] ?? undefined}}
 
 ctor_NearestCentroid = {k: v for k, v in ctor_NearestCentroid.items() if v is not None}`
 
@@ -131,11 +130,8 @@ ctor_NearestCentroid = {k: v for k, v in ctor_NearestCentroid.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_NearestCentroid_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v is not None}`
 
@@ -170,9 +166,8 @@ pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NearestCentroid_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NearestCentroid_get_metadata_routing = {k: v for k, v in pms_NearestCentroid_get_metadata_routing.items() if v is not None}`
 
@@ -205,9 +200,8 @@ pms_NearestCentroid_get_metadata_routing = {k: v for k, v in pms_NearestCentroid
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NearestCentroid_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NearestCentroid_predict = {k: v for k, v in pms_NearestCentroid_predict.items() if v is not None}`
 
@@ -250,13 +244,8 @@ pms_NearestCentroid_predict = {k: v for k, v in pms_NearestCentroid_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NearestCentroid_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() if v is not None}`
 
@@ -294,9 +283,7 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
 
     // set up method params
     await this._py
-      .ex`pms_NearestCentroid_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_NearestCentroid_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NearestCentroid_set_score_request = {k: v for k, v in pms_NearestCentroid_set_score_request.items() if v is not None}`
 

@@ -99,7 +99,7 @@ export class ExtraTreesClassifier {
     oob_score?: boolean
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesClassifier.fit "sklearn.ensemble.ExtraTreesClassifier.fit"), [`predict`](#sklearn.ensemble.ExtraTreesClassifier.predict "sklearn.ensemble.ExtraTreesClassifier.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesClassifier.decision_path "sklearn.ensemble.ExtraTreesClassifier.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesClassifier.apply "sklearn.ensemble.ExtraTreesClassifier.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesClassifier.fit "sklearn.ensemble.ExtraTreesClassifier.fit"), [`predict`](#sklearn.ensemble.ExtraTreesClassifier.predict "sklearn.ensemble.ExtraTreesClassifier.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesClassifier.decision_path "sklearn.ensemble.ExtraTreesClassifier.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesClassifier.apply "sklearn.ensemble.ExtraTreesClassifier.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -116,7 +116,7 @@ export class ExtraTreesClassifier {
     verbose?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional trees](../ensemble.html#tree-ensemble-warm-start) for details.
 
       @defaultValue `false`
      */
@@ -148,6 +148,11 @@ export class ExtraTreesClassifier {
       If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
      */
     max_samples?: number
+
+    /**
+      1: monotonically increasing
+     */
+    monotonic_cst?: any[]
   }) {
     this.id = `ExtraTreesClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -193,33 +198,8 @@ except NameError: bridgeExtraTreesClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ExtraTreesClassifier = {'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'criterion': ${this.opts['criterion'] ?? undefined}, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'oob_score': ${
-      this.opts['oob_score'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'max_samples': ${
-      this.opts['max_samples'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ExtraTreesClassifier = {'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'criterion': ${this.opts['criterion'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'oob_score': ${this.opts['oob_score'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'max_samples': ${this.opts['max_samples'] ?? undefined}, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None}
 
 ctor_ExtraTreesClassifier = {k: v for k, v in ctor_ExtraTreesClassifier.items() if v is not None}`
 
@@ -268,9 +248,8 @@ ctor_ExtraTreesClassifier = {k: v for k, v in ctor_ExtraTreesClassifier.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesClassifier_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesClassifier_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesClassifier_apply = {k: v for k, v in pms_ExtraTreesClassifier_apply.items() if v is not None}`
 
@@ -305,9 +284,8 @@ pms_ExtraTreesClassifier_apply = {k: v for k, v in pms_ExtraTreesClassifier_appl
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesClassifier_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesClassifier_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesClassifier_decision_path = {k: v for k, v in pms_ExtraTreesClassifier_decision_path.items() if v is not None}`
 
@@ -350,13 +328,8 @@ pms_ExtraTreesClassifier_decision_path = {k: v for k, v in pms_ExtraTreesClassif
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ExtraTreesClassifier_fit = {k: v for k, v in pms_ExtraTreesClassifier_fit.items() if v is not None}`
 
@@ -394,9 +367,7 @@ pms_ExtraTreesClassifier_fit = {k: v for k, v in pms_ExtraTreesClassifier_fit.it
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreesClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_ExtraTreesClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ExtraTreesClassifier_get_metadata_routing = {k: v for k, v in pms_ExtraTreesClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -431,9 +402,8 @@ pms_ExtraTreesClassifier_get_metadata_routing = {k: v for k, v in pms_ExtraTrees
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesClassifier_predict = {k: v for k, v in pms_ExtraTreesClassifier_predict.items() if v is not None}`
 
@@ -471,9 +441,7 @@ pms_ExtraTreesClassifier_predict = {k: v for k, v in pms_ExtraTreesClassifier_pr
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreesClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_ExtraTreesClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesClassifier_predict_log_proba = {k: v for k, v in pms_ExtraTreesClassifier_predict_log_proba.items() if v is not None}`
 
@@ -510,9 +478,8 @@ pms_ExtraTreesClassifier_predict_log_proba = {k: v for k, v in pms_ExtraTreesCla
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesClassifier_predict_proba = {k: v for k, v in pms_ExtraTreesClassifier_predict_proba.items() if v is not None}`
 
@@ -557,13 +524,8 @@ pms_ExtraTreesClassifier_predict_proba = {k: v for k, v in pms_ExtraTreesClassif
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ExtraTreesClassifier_score = {k: v for k, v in pms_ExtraTreesClassifier_score.items() if v is not None}`
 
@@ -603,9 +565,7 @@ pms_ExtraTreesClassifier_score = {k: v for k, v in pms_ExtraTreesClassifier_scor
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreesClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_ExtraTreesClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ExtraTreesClassifier_set_fit_request = {k: v for k, v in pms_ExtraTreesClassifier_set_fit_request.items() if v is not None}`
 
@@ -645,9 +605,7 @@ pms_ExtraTreesClassifier_set_fit_request = {k: v for k, v in pms_ExtraTreesClass
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreesClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_ExtraTreesClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ExtraTreesClassifier_set_score_request = {k: v for k, v in pms_ExtraTreesClassifier_set_score_request.items() if v is not None}`
 

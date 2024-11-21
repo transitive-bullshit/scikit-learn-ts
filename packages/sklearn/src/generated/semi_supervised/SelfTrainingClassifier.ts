@@ -109,13 +109,8 @@ except NameError: bridgeSelfTrainingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelfTrainingClassifier = {'base_estimator': ${
-      this.opts['base_estimator'] ?? undefined
-    }, 'threshold': ${this.opts['threshold'] ?? undefined}, 'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'k_best': ${this.opts['k_best'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelfTrainingClassifier = {'base_estimator': ${this.opts['base_estimator'] ?? undefined}, 'threshold': ${this.opts['threshold'] ?? undefined}, 'criterion': ${this.opts['criterion'] ?? undefined}, 'k_best': ${this.opts['k_best'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_SelfTrainingClassifier = {k: v for k, v in ctor_SelfTrainingClassifier.items() if v is not None}`
 
@@ -167,9 +162,7 @@ ctor_SelfTrainingClassifier = {k: v for k, v in ctor_SelfTrainingClassifier.item
 
     // set up method params
     await this._py
-      .ex`pms_SelfTrainingClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_SelfTrainingClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelfTrainingClassifier_decision_function = {k: v for k, v in pms_SelfTrainingClassifier_decision_function.items() if v is not None}`
 
@@ -207,11 +200,8 @@ pms_SelfTrainingClassifier_decision_function = {k: v for k, v in pms_SelfTrainin
     }
 
     // set up method params
-    await this._py.ex`pms_SelfTrainingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelfTrainingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SelfTrainingClassifier_fit = {k: v for k, v in pms_SelfTrainingClassifier_fit.items() if v is not None}`
 
@@ -225,16 +215,11 @@ pms_SelfTrainingClassifier_fit = {k: v for k, v in pms_SelfTrainingClassifier_fi
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelfTrainingClassifier instance has already been disposed'
@@ -248,10 +233,7 @@ pms_SelfTrainingClassifier_fit = {k: v for k, v in pms_SelfTrainingClassifier_fi
     }
 
     // set up method params
-    await this._py
-      .ex`pms_SelfTrainingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_SelfTrainingClassifier_get_metadata_routing = {}
 
 pms_SelfTrainingClassifier_get_metadata_routing = {k: v for k, v in pms_SelfTrainingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -286,9 +268,8 @@ pms_SelfTrainingClassifier_get_metadata_routing = {k: v for k, v in pms_SelfTrai
     }
 
     // set up method params
-    await this._py.ex`pms_SelfTrainingClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelfTrainingClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelfTrainingClassifier_predict = {k: v for k, v in pms_SelfTrainingClassifier_predict.items() if v is not None}`
 
@@ -324,9 +305,7 @@ pms_SelfTrainingClassifier_predict = {k: v for k, v in pms_SelfTrainingClassifie
 
     // set up method params
     await this._py
-      .ex`pms_SelfTrainingClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_SelfTrainingClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelfTrainingClassifier_predict_log_proba = {k: v for k, v in pms_SelfTrainingClassifier_predict_log_proba.items() if v is not None}`
 
@@ -362,9 +341,7 @@ pms_SelfTrainingClassifier_predict_log_proba = {k: v for k, v in pms_SelfTrainin
 
     // set up method params
     await this._py
-      .ex`pms_SelfTrainingClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_SelfTrainingClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelfTrainingClassifier_predict_proba = {k: v for k, v in pms_SelfTrainingClassifier_predict_proba.items() if v is not None}`
 
@@ -402,11 +379,8 @@ pms_SelfTrainingClassifier_predict_proba = {k: v for k, v in pms_SelfTrainingCla
     }
 
     // set up method params
-    await this._py.ex`pms_SelfTrainingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelfTrainingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SelfTrainingClassifier_score = {k: v for k, v in pms_SelfTrainingClassifier_score.items() if v is not None}`
 

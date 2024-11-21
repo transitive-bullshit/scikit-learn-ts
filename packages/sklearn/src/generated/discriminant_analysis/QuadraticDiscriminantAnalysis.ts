@@ -49,9 +49,7 @@ export class QuadraticDiscriminantAnalysis {
      */
     tol?: number
   }) {
-    this.id = `QuadraticDiscriminantAnalysis${
-      crypto.randomUUID().split('-')[0]
-    }`
+    this.id = `QuadraticDiscriminantAnalysis${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
 
@@ -96,13 +94,7 @@ except NameError: bridgeQuadraticDiscriminantAnalysis = {}
 
     // set up constructor params
     await this._py
-      .ex`ctor_QuadraticDiscriminantAnalysis = {'priors': np.array(${
-      this.opts['priors'] ?? undefined
-    }) if ${this.opts['priors'] !== undefined} else None, 'reg_param': ${
-      this.opts['reg_param'] ?? undefined
-    }, 'store_covariance': ${
-      this.opts['store_covariance'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}}
+      .ex`ctor_QuadraticDiscriminantAnalysis = {'priors': np.array(${this.opts['priors'] ?? undefined}) if ${this.opts['priors'] !== undefined} else None, 'reg_param': ${this.opts['reg_param'] ?? undefined}, 'store_covariance': ${this.opts['store_covariance'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}}
 
 ctor_QuadraticDiscriminantAnalysis = {k: v for k, v in ctor_QuadraticDiscriminantAnalysis.items() if v is not None}`
 
@@ -156,9 +148,7 @@ ctor_QuadraticDiscriminantAnalysis = {k: v for k, v in ctor_QuadraticDiscriminan
 
     // set up method params
     await this._py
-      .ex`pms_QuadraticDiscriminantAnalysis_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_QuadraticDiscriminantAnalysis_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_QuadraticDiscriminantAnalysis_decision_function = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_decision_function.items() if v is not None}`
 
@@ -198,11 +188,8 @@ pms_QuadraticDiscriminantAnalysis_decision_function = {k: v for k, v in pms_Quad
     }
 
     // set up method params
-    await this._py.ex`pms_QuadraticDiscriminantAnalysis_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_QuadraticDiscriminantAnalysis_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_QuadraticDiscriminantAnalysis_fit = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_fit.items() if v is not None}`
 
@@ -240,9 +227,7 @@ pms_QuadraticDiscriminantAnalysis_fit = {k: v for k, v in pms_QuadraticDiscrimin
 
     // set up method params
     await this._py
-      .ex`pms_QuadraticDiscriminantAnalysis_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_QuadraticDiscriminantAnalysis_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_QuadraticDiscriminantAnalysis_get_metadata_routing = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_get_metadata_routing.items() if v is not None}`
 
@@ -280,9 +265,7 @@ pms_QuadraticDiscriminantAnalysis_get_metadata_routing = {k: v for k, v in pms_Q
 
     // set up method params
     await this._py
-      .ex`pms_QuadraticDiscriminantAnalysis_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_QuadraticDiscriminantAnalysis_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_QuadraticDiscriminantAnalysis_predict = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_predict.items() if v is not None}`
 
@@ -318,9 +301,7 @@ pms_QuadraticDiscriminantAnalysis_predict = {k: v for k, v in pms_QuadraticDiscr
 
     // set up method params
     await this._py
-      .ex`pms_QuadraticDiscriminantAnalysis_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_QuadraticDiscriminantAnalysis_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_QuadraticDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_predict_log_proba.items() if v is not None}`
 
@@ -356,9 +337,7 @@ pms_QuadraticDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_Quad
 
     // set up method params
     await this._py
-      .ex`pms_QuadraticDiscriminantAnalysis_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_QuadraticDiscriminantAnalysis_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_QuadraticDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_predict_proba.items() if v is not None}`
 
@@ -406,13 +385,7 @@ pms_QuadraticDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_Quadrati
 
     // set up method params
     await this._py
-      .ex`pms_QuadraticDiscriminantAnalysis_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+      .ex`pms_QuadraticDiscriminantAnalysis_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_score.items() if v is not None}`
 
@@ -452,9 +425,7 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
 
     // set up method params
     await this._py
-      .ex`pms_QuadraticDiscriminantAnalysis_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_QuadraticDiscriminantAnalysis_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_QuadraticDiscriminantAnalysis_set_score_request = {k: v for k, v in pms_QuadraticDiscriminantAnalysis_set_score_request.items() if v is not None}`
 

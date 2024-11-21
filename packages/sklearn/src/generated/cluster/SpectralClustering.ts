@@ -55,7 +55,7 @@ export class SpectralClustering {
     n_init?: number
 
     /**
-      Kernel coefficient for rbf, poly, sigmoid, laplacian and chi2 kernels. Ignored for `affinity='nearest\_neighbors'`.
+      Kernel coefficient for rbf, poly, sigmoid, laplacian and chi2 kernels. Ignored for `affinity='nearest\_neighbors'`, `affinity='precomputed'` or `affinity='precomputed\_nearest\_neighbors'`.
 
       @defaultValue `1`
      */
@@ -109,7 +109,7 @@ export class SpectralClustering {
     kernel_params?: any
 
     /**
-      The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -164,25 +164,8 @@ except NameError: bridgeSpectralClustering = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SpectralClustering = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'eigen_solver': ${
-      this.opts['eigen_solver'] ?? undefined
-    }, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'affinity': ${
-      this.opts['affinity'] ?? undefined
-    }, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'eigen_tol': ${
-      this.opts['eigen_tol'] ?? undefined
-    }, 'assign_labels': ${this.opts['assign_labels'] ?? undefined}, 'degree': ${
-      this.opts['degree'] ?? undefined
-    }, 'coef0': ${this.opts['coef0'] ?? undefined}, 'kernel_params': ${
-      this.opts['kernel_params'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_SpectralClustering = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'affinity': ${this.opts['affinity'] ?? undefined}, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'eigen_tol': ${this.opts['eigen_tol'] ?? undefined}, 'assign_labels': ${this.opts['assign_labels'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'kernel_params': ${this.opts['kernel_params'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_SpectralClustering = {k: v for k, v in ctor_SpectralClustering.items() if v is not None}`
 
@@ -236,9 +219,8 @@ ctor_SpectralClustering = {k: v for k, v in ctor_SpectralClustering.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralClustering_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralClustering_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralClustering_fit = {k: v for k, v in pms_SpectralClustering_fit.items() if v is not None}`
 
@@ -278,9 +260,8 @@ pms_SpectralClustering_fit = {k: v for k, v in pms_SpectralClustering_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralClustering_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralClustering_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralClustering_fit_predict = {k: v for k, v in pms_SpectralClustering_fit_predict.items() if v is not None}`
 
@@ -318,9 +299,7 @@ pms_SpectralClustering_fit_predict = {k: v for k, v in pms_SpectralClustering_fi
 
     // set up method params
     await this._py
-      .ex`pms_SpectralClustering_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SpectralClustering_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SpectralClustering_get_metadata_routing = {k: v for k, v in pms_SpectralClustering_get_metadata_routing.items() if v is not None}`
 

@@ -104,17 +104,8 @@ except NameError: bridgeOrdinalEncoder = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OrdinalEncoder = {'categories': ${
-      this.opts['categories'] ?? undefined
-    }, 'dtype': ${this.opts['dtype'] ?? undefined}, 'handle_unknown': ${
-      this.opts['handle_unknown'] ?? undefined
-    }, 'unknown_value': ${
-      this.opts['unknown_value'] ?? undefined
-    }, 'encoded_missing_value': ${
-      this.opts['encoded_missing_value'] ?? undefined
-    }, 'min_frequency': ${
-      this.opts['min_frequency'] ?? undefined
-    }, 'max_categories': ${this.opts['max_categories'] ?? undefined}}
+    await this._py
+      .ex`ctor_OrdinalEncoder = {'categories': ${this.opts['categories'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'handle_unknown': ${this.opts['handle_unknown'] ?? undefined}, 'unknown_value': ${this.opts['unknown_value'] ?? undefined}, 'encoded_missing_value': ${this.opts['encoded_missing_value'] ?? undefined}, 'min_frequency': ${this.opts['min_frequency'] ?? undefined}, 'max_categories': ${this.opts['max_categories'] ?? undefined}}
 
 ctor_OrdinalEncoder = {k: v for k, v in ctor_OrdinalEncoder.items() if v is not None}`
 
@@ -166,9 +157,8 @@ ctor_OrdinalEncoder = {k: v for k, v in ctor_OrdinalEncoder.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_OrdinalEncoder_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_OrdinalEncoder_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_OrdinalEncoder_fit = {k: v for k, v in pms_OrdinalEncoder_fit.items() if v is not None}`
 
@@ -211,13 +201,8 @@ pms_OrdinalEncoder_fit = {k: v for k, v in pms_OrdinalEncoder_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_OrdinalEncoder_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OrdinalEncoder_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_OrdinalEncoder_fit_transform = {k: v for k, v in pms_OrdinalEncoder_fit_transform.items() if v is not None}`
 
@@ -251,9 +236,7 @@ pms_OrdinalEncoder_fit_transform = {k: v for k, v in pms_OrdinalEncoder_fit_tran
 
     // set up method params
     await this._py
-      .ex`pms_OrdinalEncoder_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_OrdinalEncoder_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_OrdinalEncoder_get_feature_names_out = {k: v for k, v in pms_OrdinalEncoder_get_feature_names_out.items() if v is not None}`
 
@@ -288,9 +271,8 @@ pms_OrdinalEncoder_get_feature_names_out = {k: v for k, v in pms_OrdinalEncoder_
     }
 
     // set up method params
-    await this._py.ex`pms_OrdinalEncoder_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OrdinalEncoder_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OrdinalEncoder_get_metadata_routing = {k: v for k, v in pms_OrdinalEncoder_get_metadata_routing.items() if v is not None}`
 
@@ -323,9 +305,8 @@ pms_OrdinalEncoder_get_metadata_routing = {k: v for k, v in pms_OrdinalEncoder_g
     }
 
     // set up method params
-    await this._py.ex`pms_OrdinalEncoder_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OrdinalEncoder_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OrdinalEncoder_inverse_transform = {k: v for k, v in pms_OrdinalEncoder_inverse_transform.items() if v is not None}`
 
@@ -347,7 +328,7 @@ pms_OrdinalEncoder_inverse_transform = {k: v for k, v in pms_OrdinalEncoder_inve
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OrdinalEncoder instance has already been disposed')
@@ -358,9 +339,8 @@ pms_OrdinalEncoder_inverse_transform = {k: v for k, v in pms_OrdinalEncoder_inve
     }
 
     // set up method params
-    await this._py.ex`pms_OrdinalEncoder_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OrdinalEncoder_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_OrdinalEncoder_set_output = {k: v for k, v in pms_OrdinalEncoder_set_output.items() if v is not None}`
 
@@ -391,9 +371,8 @@ pms_OrdinalEncoder_set_output = {k: v for k, v in pms_OrdinalEncoder_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_OrdinalEncoder_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OrdinalEncoder_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OrdinalEncoder_transform = {k: v for k, v in pms_OrdinalEncoder_transform.items() if v is not None}`
 

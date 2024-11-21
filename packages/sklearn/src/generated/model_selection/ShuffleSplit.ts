@@ -6,11 +6,11 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Random permutation cross-validator
+  Random permutation cross-validator.
 
   Yields indices to split data into training and test sets.
 
-  Note: contrary to other cross-validation strategies, random splits do not guarantee that all folds will be different, although this is still very likely for sizeable datasets.
+  Note: contrary to other cross-validation strategies, random splits do not guarantee that test sets across all folds will be mutually exclusive, and might include overlapping samples. However, this is still very likely for sizeable datasets.
 
   Read more in the [User Guide](../cross_validation.html#shufflesplit).
 
@@ -89,11 +89,8 @@ except NameError: bridgeShuffleSplit = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ShuffleSplit = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${
-      this.opts['train_size'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_ShuffleSplit = {'n_splits': ${this.opts['n_splits'] ?? undefined}, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${this.opts['train_size'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_ShuffleSplit = {k: v for k, v in ctor_ShuffleSplit.items() if v is not None}`
 
@@ -144,9 +141,8 @@ ctor_ShuffleSplit = {k: v for k, v in ctor_ShuffleSplit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_ShuffleSplit_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ShuffleSplit_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ShuffleSplit_get_metadata_routing = {k: v for k, v in pms_ShuffleSplit_get_metadata_routing.items() if v is not None}`
 
@@ -160,7 +156,7 @@ pms_ShuffleSplit_get_metadata_routing = {k: v for k, v in pms_ShuffleSplit_get_m
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -187,9 +183,8 @@ pms_ShuffleSplit_get_metadata_routing = {k: v for k, v in pms_ShuffleSplit_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_ShuffleSplit_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_ShuffleSplit_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_ShuffleSplit_get_n_splits = {k: v for k, v in pms_ShuffleSplit_get_n_splits.items() if v is not None}`
 
@@ -217,9 +212,9 @@ pms_ShuffleSplit_get_n_splits = {k: v for k, v in pms_ShuffleSplit_get_n_splits.
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set.
+      Always ignored, exists for compatibility.
      */
-    groups?: ArrayLike
+    groups?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This ShuffleSplit instance has already been disposed')
@@ -230,13 +225,8 @@ pms_ShuffleSplit_get_n_splits = {k: v for k, v in pms_ShuffleSplit_get_n_splits.
     }
 
     // set up method params
-    await this._py.ex`pms_ShuffleSplit_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_ShuffleSplit_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_ShuffleSplit_split = {k: v for k, v in pms_ShuffleSplit_split.items() if v is not None}`
 

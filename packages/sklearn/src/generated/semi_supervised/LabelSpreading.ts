@@ -66,7 +66,7 @@ export class LabelSpreading {
     tol?: number
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -110,15 +110,8 @@ except NameError: bridgeLabelSpreading = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LabelSpreading = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LabelSpreading = {'kernel': ${this.opts['kernel'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_LabelSpreading = {k: v for k, v in ctor_LabelSpreading.items() if v is not None}`
 
@@ -172,11 +165,8 @@ ctor_LabelSpreading = {k: v for k, v in ctor_LabelSpreading.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LabelSpreading_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelSpreading_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelSpreading_fit = {k: v for k, v in pms_LabelSpreading_fit.items() if v is not None}`
 
@@ -211,9 +201,8 @@ pms_LabelSpreading_fit = {k: v for k, v in pms_LabelSpreading_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_LabelSpreading_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelSpreading_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LabelSpreading_get_metadata_routing = {k: v for k, v in pms_LabelSpreading_get_metadata_routing.items() if v is not None}`
 
@@ -244,9 +233,8 @@ pms_LabelSpreading_get_metadata_routing = {k: v for k, v in pms_LabelSpreading_g
     }
 
     // set up method params
-    await this._py.ex`pms_LabelSpreading_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelSpreading_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LabelSpreading_predict = {k: v for k, v in pms_LabelSpreading_predict.items() if v is not None}`
 
@@ -279,9 +267,8 @@ pms_LabelSpreading_predict = {k: v for k, v in pms_LabelSpreading_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_LabelSpreading_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelSpreading_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LabelSpreading_predict_proba = {k: v for k, v in pms_LabelSpreading_predict_proba.items() if v is not None}`
 
@@ -324,13 +311,8 @@ pms_LabelSpreading_predict_proba = {k: v for k, v in pms_LabelSpreading_predict_
     }
 
     // set up method params
-    await this._py.ex`pms_LabelSpreading_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelSpreading_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LabelSpreading_score = {k: v for k, v in pms_LabelSpreading_score.items() if v is not None}`
 
@@ -368,9 +350,7 @@ pms_LabelSpreading_score = {k: v for k, v in pms_LabelSpreading_score.items() if
 
     // set up method params
     await this._py
-      .ex`pms_LabelSpreading_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LabelSpreading_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LabelSpreading_set_score_request = {k: v for k, v in pms_LabelSpreading_set_score_request.items() if v is not None}`
 

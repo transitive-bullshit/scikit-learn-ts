@@ -91,11 +91,8 @@ except NameError: bridgeMissingIndicator = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MissingIndicator = {'missing_values': ${
-      this.opts['missing_values'] ?? undefined
-    }, 'features': ${this.opts['features'] ?? undefined}, 'sparse': ${
-      this.opts['sparse'] ?? undefined
-    }, 'error_on_new': ${this.opts['error_on_new'] ?? undefined}}
+    await this._py
+      .ex`ctor_MissingIndicator = {'missing_values': ${this.opts['missing_values'] ?? undefined}, 'features': ${this.opts['features'] ?? undefined}, 'sparse': ${this.opts['sparse'] ?? undefined}, 'error_on_new': ${this.opts['error_on_new'] ?? undefined}}
 
 ctor_MissingIndicator = {k: v for k, v in ctor_MissingIndicator.items() if v is not None}`
 
@@ -149,9 +146,8 @@ ctor_MissingIndicator = {k: v for k, v in ctor_MissingIndicator.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_MissingIndicator_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MissingIndicator_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MissingIndicator_fit = {k: v for k, v in pms_MissingIndicator_fit.items() if v is not None}`
 
@@ -191,9 +187,8 @@ pms_MissingIndicator_fit = {k: v for k, v in pms_MissingIndicator_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_MissingIndicator_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MissingIndicator_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MissingIndicator_fit_transform = {k: v for k, v in pms_MissingIndicator_fit_transform.items() if v is not None}`
 
@@ -229,9 +224,7 @@ pms_MissingIndicator_fit_transform = {k: v for k, v in pms_MissingIndicator_fit_
 
     // set up method params
     await this._py
-      .ex`pms_MissingIndicator_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_MissingIndicator_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_MissingIndicator_get_feature_names_out = {k: v for k, v in pms_MissingIndicator_get_feature_names_out.items() if v is not None}`
 
@@ -268,9 +261,8 @@ pms_MissingIndicator_get_feature_names_out = {k: v for k, v in pms_MissingIndica
     }
 
     // set up method params
-    await this._py.ex`pms_MissingIndicator_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MissingIndicator_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MissingIndicator_get_metadata_routing = {k: v for k, v in pms_MissingIndicator_get_metadata_routing.items() if v is not None}`
 
@@ -292,7 +284,7 @@ pms_MissingIndicator_get_metadata_routing = {k: v for k, v in pms_MissingIndicat
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -305,9 +297,8 @@ pms_MissingIndicator_get_metadata_routing = {k: v for k, v in pms_MissingIndicat
     }
 
     // set up method params
-    await this._py.ex`pms_MissingIndicator_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MissingIndicator_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MissingIndicator_set_output = {k: v for k, v in pms_MissingIndicator_set_output.items() if v is not None}`
 
@@ -340,9 +331,8 @@ pms_MissingIndicator_set_output = {k: v for k, v in pms_MissingIndicator_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_MissingIndicator_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MissingIndicator_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MissingIndicator_transform = {k: v for k, v in pms_MissingIndicator_transform.items() if v is not None}`
 

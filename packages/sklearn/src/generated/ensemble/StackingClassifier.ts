@@ -112,15 +112,8 @@ except NameError: bridgeStackingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_StackingClassifier = {'estimators': ${
-      this.opts['estimators'] ?? undefined
-    }, 'final_estimator': ${this.opts['final_estimator'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'stack_method': ${this.opts['stack_method'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'passthrough': ${this.opts['passthrough'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_StackingClassifier = {'estimators': ${this.opts['estimators'] ?? undefined}, 'final_estimator': ${this.opts['final_estimator'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'stack_method': ${this.opts['stack_method'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'passthrough': ${this.opts['passthrough'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_StackingClassifier = {k: v for k, v in ctor_StackingClassifier.items() if v is not None}`
 
@@ -172,9 +165,7 @@ ctor_StackingClassifier = {k: v for k, v in ctor_StackingClassifier.items() if v
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_StackingClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_StackingClassifier_decision_function = {k: v for k, v in pms_StackingClassifier_decision_function.items() if v is not None}`
 
@@ -217,13 +208,8 @@ pms_StackingClassifier_decision_function = {k: v for k, v in pms_StackingClassif
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StackingClassifier_fit = {k: v for k, v in pms_StackingClassifier_fit.items() if v is not None}`
 
@@ -270,13 +256,8 @@ pms_StackingClassifier_fit = {k: v for k, v in pms_StackingClassifier_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingClassifier_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_StackingClassifier_fit_transform = {k: v for k, v in pms_StackingClassifier_fit_transform.items() if v is not None}`
 
@@ -312,9 +293,7 @@ pms_StackingClassifier_fit_transform = {k: v for k, v in pms_StackingClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_StackingClassifier_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_StackingClassifier_get_feature_names_out = {k: v for k, v in pms_StackingClassifier_get_feature_names_out.items() if v is not None}`
 
@@ -328,16 +307,11 @@ pms_StackingClassifier_get_feature_names_out = {k: v for k, v in pms_StackingCla
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -351,10 +325,7 @@ pms_StackingClassifier_get_feature_names_out = {k: v for k, v in pms_StackingCla
     }
 
     // set up method params
-    await this._py
-      .ex`pms_StackingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_StackingClassifier_get_metadata_routing = {}
 
 pms_StackingClassifier_get_metadata_routing = {k: v for k, v in pms_StackingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -392,11 +363,8 @@ pms_StackingClassifier_get_metadata_routing = {k: v for k, v in pms_StackingClas
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'predict_params': ${
-      opts['predict_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'predict_params': ${opts['predict_params'] ?? undefined}}
 
 pms_StackingClassifier_predict = {k: v for k, v in pms_StackingClassifier_predict.items() if v is not None}`
 
@@ -431,9 +399,8 @@ pms_StackingClassifier_predict = {k: v for k, v in pms_StackingClassifier_predic
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_StackingClassifier_predict_proba = {k: v for k, v in pms_StackingClassifier_predict_proba.items() if v is not None}`
 
@@ -478,13 +445,8 @@ pms_StackingClassifier_predict_proba = {k: v for k, v in pms_StackingClassifier_
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StackingClassifier_score = {k: v for k, v in pms_StackingClassifier_score.items() if v is not None}`
 
@@ -524,9 +486,7 @@ pms_StackingClassifier_score = {k: v for k, v in pms_StackingClassifier_score.it
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_StackingClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StackingClassifier_set_fit_request = {k: v for k, v in pms_StackingClassifier_set_fit_request.items() if v is not None}`
 
@@ -548,7 +508,7 @@ pms_StackingClassifier_set_fit_request = {k: v for k, v in pms_StackingClassifie
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -561,9 +521,8 @@ pms_StackingClassifier_set_fit_request = {k: v for k, v in pms_StackingClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingClassifier_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_StackingClassifier_set_output = {k: v for k, v in pms_StackingClassifier_set_output.items() if v is not None}`
 
@@ -603,9 +562,7 @@ pms_StackingClassifier_set_output = {k: v for k, v in pms_StackingClassifier_set
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_StackingClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StackingClassifier_set_score_request = {k: v for k, v in pms_StackingClassifier_set_score_request.items() if v is not None}`
 
@@ -638,9 +595,8 @@ pms_StackingClassifier_set_score_request = {k: v for k, v in pms_StackingClassif
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_StackingClassifier_transform = {k: v for k, v in pms_StackingClassifier_transform.items() if v is not None}`
 

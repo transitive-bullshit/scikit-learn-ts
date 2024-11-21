@@ -12,7 +12,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   For an example of usage, see [Classification of text documents using sparse features](../../auto_examples/text/plot_document_classification_20newsgroups.html#sphx-glr-auto-examples-text-plot-document-classification-20newsgroups-py).
 
-  For an efficiency comparision of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
+  For an efficiency comparison of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
+
+  For an example of document clustering and comparison with [`HashingVectorizer`](sklearn.feature_extraction.text.HashingVectorizer.html#sklearn.feature_extraction.text.HashingVectorizer "sklearn.feature_extraction.text.HashingVectorizer"), see [Clustering text documents using k-means](../../auto_examples/text/plot_document_clustering.html#sphx-glr-auto-examples-text-plot-document-clustering-py).
 
   Read more in the [User Guide](../feature_extraction.html#text-feature-extraction).
 
@@ -51,7 +53,7 @@ export class TfidfVectorizer {
     /**
       Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. `undefined` (default) means no character normalization is performed.
 
-      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.12)").
+      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.13)").
      */
     strip_accents?: 'ascii' | 'unicode'
 
@@ -208,31 +210,8 @@ except NameError: bridgeTfidfVectorizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TfidfVectorizer = {'input': ${
-      this.opts['input'] ?? undefined
-    }, 'encoding': ${this.opts['encoding'] ?? undefined}, 'decode_error': ${
-      this.opts['decode_error'] ?? undefined
-    }, 'strip_accents': ${
-      this.opts['strip_accents'] ?? undefined
-    }, 'lowercase': ${this.opts['lowercase'] ?? undefined}, 'preprocessor': ${
-      this.opts['preprocessor'] ?? undefined
-    }, 'tokenizer': ${this.opts['tokenizer'] ?? undefined}, 'analyzer': ${
-      this.opts['analyzer'] ?? undefined
-    }, 'stop_words': ${
-      this.opts['stop_words'] ?? undefined
-    }, 'token_pattern': ${
-      this.opts['token_pattern'] ?? undefined
-    }, 'ngram_range': ${this.opts['ngram_range'] ?? undefined}, 'max_df': ${
-      this.opts['max_df'] ?? undefined
-    }, 'min_df': ${this.opts['min_df'] ?? undefined}, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'vocabulary': ${this.opts['vocabulary'] ?? undefined}, 'binary': ${
-      this.opts['binary'] ?? undefined
-    }, 'dtype': ${this.opts['dtype'] ?? undefined}, 'norm': ${
-      this.opts['norm'] ?? undefined
-    }, 'use_idf': ${this.opts['use_idf'] ?? undefined}, 'smooth_idf': ${
-      this.opts['smooth_idf'] ?? undefined
-    }, 'sublinear_tf': ${this.opts['sublinear_tf'] ?? undefined}}
+    await this._py
+      .ex`ctor_TfidfVectorizer = {'input': ${this.opts['input'] ?? undefined}, 'encoding': ${this.opts['encoding'] ?? undefined}, 'decode_error': ${this.opts['decode_error'] ?? undefined}, 'strip_accents': ${this.opts['strip_accents'] ?? undefined}, 'lowercase': ${this.opts['lowercase'] ?? undefined}, 'preprocessor': ${this.opts['preprocessor'] ?? undefined}, 'tokenizer': ${this.opts['tokenizer'] ?? undefined}, 'analyzer': ${this.opts['analyzer'] ?? undefined}, 'stop_words': ${this.opts['stop_words'] ?? undefined}, 'token_pattern': ${this.opts['token_pattern'] ?? undefined}, 'ngram_range': ${this.opts['ngram_range'] ?? undefined}, 'max_df': ${this.opts['max_df'] ?? undefined}, 'min_df': ${this.opts['min_df'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'vocabulary': ${this.opts['vocabulary'] ?? undefined}, 'binary': ${this.opts['binary'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'norm': ${this.opts['norm'] ?? undefined}, 'use_idf': ${this.opts['use_idf'] ?? undefined}, 'smooth_idf': ${this.opts['smooth_idf'] ?? undefined}, 'sublinear_tf': ${this.opts['sublinear_tf'] ?? undefined}}
 
 ctor_TfidfVectorizer = {k: v for k, v in ctor_TfidfVectorizer.items() if v is not None}`
 
@@ -367,9 +346,8 @@ pms_TfidfVectorizer_build_tokenizer = {k: v for k, v in pms_TfidfVectorizer_buil
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_decode = {'doc': ${
-      opts['doc'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_decode = {'doc': ${opts['doc'] ?? undefined}}
 
 pms_TfidfVectorizer_decode = {k: v for k, v in pms_TfidfVectorizer_decode.items() if v is not None}`
 
@@ -405,9 +383,8 @@ pms_TfidfVectorizer_decode = {k: v for k, v in pms_TfidfVectorizer_decode.items(
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_fit = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TfidfVectorizer_fit = {'raw_documents': ${opts['raw_documents'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_TfidfVectorizer_fit = {k: v for k, v in pms_TfidfVectorizer_fit.items() if v is not None}`
 
@@ -445,9 +422,8 @@ pms_TfidfVectorizer_fit = {k: v for k, v in pms_TfidfVectorizer_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_fit_transform = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TfidfVectorizer_fit_transform = {'raw_documents': ${opts['raw_documents'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_TfidfVectorizer_fit_transform = {k: v for k, v in pms_TfidfVectorizer_fit_transform.items() if v is not None}`
 
@@ -481,9 +457,7 @@ pms_TfidfVectorizer_fit_transform = {k: v for k, v in pms_TfidfVectorizer_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_TfidfVectorizer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_TfidfVectorizer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_TfidfVectorizer_get_feature_names_out = {k: v for k, v in pms_TfidfVectorizer_get_feature_names_out.items() if v is not None}`
 
@@ -518,9 +492,8 @@ pms_TfidfVectorizer_get_feature_names_out = {k: v for k, v in pms_TfidfVectorize
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TfidfVectorizer_get_metadata_routing = {k: v for k, v in pms_TfidfVectorizer_get_metadata_routing.items() if v is not None}`
 
@@ -581,9 +554,8 @@ pms_TfidfVectorizer_get_stop_words = {k: v for k, v in pms_TfidfVectorizer_get_s
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_TfidfVectorizer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_TfidfVectorizer_inverse_transform = {k: v for k, v in pms_TfidfVectorizer_inverse_transform.items() if v is not None}`
 
@@ -620,9 +592,8 @@ pms_TfidfVectorizer_inverse_transform = {k: v for k, v in pms_TfidfVectorizer_in
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_set_fit_request = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_set_fit_request = {'raw_documents': ${opts['raw_documents'] ?? undefined}}
 
 pms_TfidfVectorizer_set_fit_request = {k: v for k, v in pms_TfidfVectorizer_set_fit_request.items() if v is not None}`
 
@@ -660,9 +631,7 @@ pms_TfidfVectorizer_set_fit_request = {k: v for k, v in pms_TfidfVectorizer_set_
 
     // set up method params
     await this._py
-      .ex`pms_TfidfVectorizer_set_transform_request = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }}
+      .ex`pms_TfidfVectorizer_set_transform_request = {'raw_documents': ${opts['raw_documents'] ?? undefined}}
 
 pms_TfidfVectorizer_set_transform_request = {k: v for k, v in pms_TfidfVectorizer_set_transform_request.items() if v is not None}`
 
@@ -695,9 +664,8 @@ pms_TfidfVectorizer_set_transform_request = {k: v for k, v in pms_TfidfVectorize
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_transform = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_transform = {'raw_documents': ${opts['raw_documents'] ?? undefined}}
 
 pms_TfidfVectorizer_transform = {k: v for k, v in pms_TfidfVectorizer_transform.items() if v is not None}`
 
@@ -757,31 +725,6 @@ pms_TfidfVectorizer_transform = {k: v for k, v in pms_TfidfVectorizer_transform.
       // convert the result from python to node.js
       return this
         ._py`attr_TfidfVectorizer_fixed_vocabulary_.tolist() if hasattr(attr_TfidfVectorizer_fixed_vocabulary_, 'tolist') else attr_TfidfVectorizer_fixed_vocabulary_`
-    })()
-  }
-
-  /**
-    Terms that were ignored because they either:
-   */
-  get stop_words_(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This TfidfVectorizer instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'TfidfVectorizer must call init() before accessing stop_words_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_TfidfVectorizer_stop_words_ = bridgeTfidfVectorizer[${this.id}].stop_words_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_TfidfVectorizer_stop_words_.tolist() if hasattr(attr_TfidfVectorizer_stop_words_, 'tolist') else attr_TfidfVectorizer_stop_words_`
     })()
   }
 }

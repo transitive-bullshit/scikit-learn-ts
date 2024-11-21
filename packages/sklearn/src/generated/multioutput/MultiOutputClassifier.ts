@@ -31,7 +31,7 @@ export class MultiOutputClassifier {
 
       When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -79,9 +79,8 @@ except NameError: bridgeMultiOutputClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MultiOutputClassifier = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_MultiOutputClassifier = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_MultiOutputClassifier = {k: v for k, v in ctor_MultiOutputClassifier.items() if v is not None}`
 
@@ -145,15 +144,8 @@ ctor_MultiOutputClassifier = {k: v for k, v in ctor_MultiOutputClassifier.items(
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiOutputClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_MultiOutputClassifier_fit = {k: v for k, v in pms_MultiOutputClassifier_fit.items() if v is not None}`
 
@@ -191,9 +183,7 @@ pms_MultiOutputClassifier_fit = {k: v for k, v in pms_MultiOutputClassifier_fit.
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MultiOutputClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MultiOutputClassifier_get_metadata_routing = {k: v for k, v in pms_MultiOutputClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -250,21 +240,8 @@ pms_MultiOutputClassifier_get_metadata_routing = {k: v for k, v in pms_MultiOutp
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputClassifier_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'classes': np.array(${
-      opts['classes'] ?? undefined
-    }) if ${
-      opts['classes'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${
-      opts['sample_weight'] !== undefined
-    } else None, 'partial_fit_params': ${
-      opts['partial_fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiOutputClassifier_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${opts['classes'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'partial_fit_params': ${opts['partial_fit_params'] ?? undefined}}
 
 pms_MultiOutputClassifier_partial_fit = {k: v for k, v in pms_MultiOutputClassifier_partial_fit.items() if v is not None}`
 
@@ -297,9 +274,8 @@ pms_MultiOutputClassifier_partial_fit = {k: v for k, v in pms_MultiOutputClassif
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiOutputClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MultiOutputClassifier_predict = {k: v for k, v in pms_MultiOutputClassifier_predict.items() if v is not None}`
 
@@ -337,9 +313,7 @@ pms_MultiOutputClassifier_predict = {k: v for k, v in pms_MultiOutputClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_MultiOutputClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MultiOutputClassifier_predict_proba = {k: v for k, v in pms_MultiOutputClassifier_predict_proba.items() if v is not None}`
 
@@ -377,11 +351,8 @@ pms_MultiOutputClassifier_predict_proba = {k: v for k, v in pms_MultiOutputClass
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiOutputClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_score.items() if v is not None}`
 
@@ -421,9 +392,7 @@ pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_sc
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiOutputClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputClassifier_set_fit_request = {k: v for k, v in pms_MultiOutputClassifier_set_fit_request.items() if v is not None}`
 
@@ -468,9 +437,7 @@ pms_MultiOutputClassifier_set_fit_request = {k: v for k, v in pms_MultiOutputCla
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputClassifier_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+      .ex`pms_MultiOutputClassifier_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputClassifier_set_partial_fit_request = {k: v for k, v in pms_MultiOutputClassifier_set_partial_fit_request.items() if v is not None}`
 

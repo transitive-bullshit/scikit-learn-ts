@@ -130,17 +130,8 @@ except NameError: bridgeRidgeClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RidgeClassifier = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_RidgeClassifier = {'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_RidgeClassifier = {k: v for k, v in ctor_RidgeClassifier.items() if v is not None}`
 
@@ -191,9 +182,8 @@ ctor_RidgeClassifier = {k: v for k, v in ctor_RidgeClassifier.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RidgeClassifier_decision_function = {k: v for k, v in pms_RidgeClassifier_decision_function.items() if v is not None}`
 
@@ -234,13 +224,8 @@ pms_RidgeClassifier_decision_function = {k: v for k, v in pms_RidgeClassifier_de
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RidgeClassifier_fit = {k: v for k, v in pms_RidgeClassifier_fit.items() if v is not None}`
 
@@ -275,9 +260,8 @@ pms_RidgeClassifier_fit = {k: v for k, v in pms_RidgeClassifier_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RidgeClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RidgeClassifier_get_metadata_routing = {k: v for k, v in pms_RidgeClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -308,9 +292,8 @@ pms_RidgeClassifier_get_metadata_routing = {k: v for k, v in pms_RidgeClassifier
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RidgeClassifier_predict = {k: v for k, v in pms_RidgeClassifier_predict.items() if v is not None}`
 
@@ -353,13 +336,8 @@ pms_RidgeClassifier_predict = {k: v for k, v in pms_RidgeClassifier_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() if v is not None}`
 
@@ -396,9 +374,8 @@ pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RidgeClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RidgeClassifier_set_fit_request = {k: v for k, v in pms_RidgeClassifier_set_fit_request.items() if v is not None}`
 
@@ -436,9 +413,7 @@ pms_RidgeClassifier_set_fit_request = {k: v for k, v in pms_RidgeClassifier_set_
 
     // set up method params
     await this._py
-      .ex`pms_RidgeClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RidgeClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RidgeClassifier_set_score_request = {k: v for k, v in pms_RidgeClassifier_set_score_request.items() if v is not None}`
 
@@ -573,6 +548,31 @@ pms_RidgeClassifier_set_score_request = {k: v for k, v in pms_RidgeClassifier_se
       // convert the result from python to node.js
       return this
         ._py`attr_RidgeClassifier_feature_names_in_.tolist() if hasattr(attr_RidgeClassifier_feature_names_in_, 'tolist') else attr_RidgeClassifier_feature_names_in_`
+    })()
+  }
+
+  /**
+    The solver that was used at fit time by the computational routines.
+   */
+  get solver_(): Promise<string> {
+    if (this._isDisposed) {
+      throw new Error('This RidgeClassifier instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RidgeClassifier must call init() before accessing solver_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_RidgeClassifier_solver_ = bridgeRidgeClassifier[${this.id}].solver_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_RidgeClassifier_solver_.tolist() if hasattr(attr_RidgeClassifier_solver_, 'tolist') else attr_RidgeClassifier_solver_`
     })()
   }
 }

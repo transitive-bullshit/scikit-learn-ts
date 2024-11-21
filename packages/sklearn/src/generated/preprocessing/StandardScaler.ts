@@ -82,11 +82,8 @@ except NameError: bridgeStandardScaler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_StandardScaler = {'copy': ${
-      this.opts['copy'] ?? undefined
-    }, 'with_mean': ${this.opts['with_mean'] ?? undefined}, 'with_std': ${
-      this.opts['with_std'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_StandardScaler = {'copy': ${this.opts['copy'] ?? undefined}, 'with_mean': ${this.opts['with_mean'] ?? undefined}, 'with_std': ${this.opts['with_std'] ?? undefined}}
 
 ctor_StandardScaler = {k: v for k, v in ctor_StandardScaler.items() if v is not None}`
 
@@ -143,13 +140,8 @@ ctor_StandardScaler = {k: v for k, v in ctor_StandardScaler.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_StandardScaler_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StandardScaler_fit = {k: v for k, v in pms_StandardScaler_fit.items() if v is not None}`
 
@@ -192,13 +184,8 @@ pms_StandardScaler_fit = {k: v for k, v in pms_StandardScaler_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StandardScaler_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_StandardScaler_fit_transform = {k: v for k, v in pms_StandardScaler_fit_transform.items() if v is not None}`
 
@@ -232,9 +219,7 @@ pms_StandardScaler_fit_transform = {k: v for k, v in pms_StandardScaler_fit_tran
 
     // set up method params
     await this._py
-      .ex`pms_StandardScaler_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_StandardScaler_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_StandardScaler_get_feature_names_out = {k: v for k, v in pms_StandardScaler_get_feature_names_out.items() if v is not None}`
 
@@ -269,9 +254,8 @@ pms_StandardScaler_get_feature_names_out = {k: v for k, v in pms_StandardScaler_
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StandardScaler_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_StandardScaler_get_metadata_routing = {k: v for k, v in pms_StandardScaler_get_metadata_routing.items() if v is not None}`
 
@@ -309,11 +293,8 @@ pms_StandardScaler_get_metadata_routing = {k: v for k, v in pms_StandardScaler_g
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StandardScaler_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_StandardScaler_inverse_transform = {k: v for k, v in pms_StandardScaler_inverse_transform.items() if v is not None}`
 
@@ -358,13 +339,8 @@ pms_StandardScaler_inverse_transform = {k: v for k, v in pms_StandardScaler_inve
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_StandardScaler_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StandardScaler_partial_fit = {k: v for k, v in pms_StandardScaler_partial_fit.items() if v is not None}`
 
@@ -401,9 +377,8 @@ pms_StandardScaler_partial_fit = {k: v for k, v in pms_StandardScaler_partial_fi
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StandardScaler_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StandardScaler_set_fit_request = {k: v for k, v in pms_StandardScaler_set_fit_request.items() if v is not None}`
 
@@ -441,9 +416,7 @@ pms_StandardScaler_set_fit_request = {k: v for k, v in pms_StandardScaler_set_fi
 
     // set up method params
     await this._py
-      .ex`pms_StandardScaler_set_inverse_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+      .ex`pms_StandardScaler_set_inverse_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_StandardScaler_set_inverse_transform_request = {k: v for k, v in pms_StandardScaler_set_inverse_transform_request.items() if v is not None}`
 
@@ -465,7 +438,7 @@ pms_StandardScaler_set_inverse_transform_request = {k: v for k, v in pms_Standar
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
@@ -476,9 +449,8 @@ pms_StandardScaler_set_inverse_transform_request = {k: v for k, v in pms_Standar
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StandardScaler_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_StandardScaler_set_output = {k: v for k, v in pms_StandardScaler_set_output.items() if v is not None}`
 
@@ -516,9 +488,7 @@ pms_StandardScaler_set_output = {k: v for k, v in pms_StandardScaler_set_output.
 
     // set up method params
     await this._py
-      .ex`pms_StandardScaler_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_StandardScaler_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StandardScaler_set_partial_fit_request = {k: v for k, v in pms_StandardScaler_set_partial_fit_request.items() if v is not None}`
 
@@ -555,9 +525,8 @@ pms_StandardScaler_set_partial_fit_request = {k: v for k, v in pms_StandardScale
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StandardScaler_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_StandardScaler_set_transform_request = {k: v for k, v in pms_StandardScaler_set_transform_request.items() if v is not None}`
 
@@ -593,11 +562,8 @@ pms_StandardScaler_set_transform_request = {k: v for k, v in pms_StandardScaler_
     }
 
     // set up method params
-    await this._py.ex`pms_StandardScaler_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StandardScaler_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.items() if v is not None}`
 

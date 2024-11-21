@@ -97,7 +97,7 @@ export class LocallyLinearEmbedding {
     random_state?: number
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -145,23 +145,8 @@ except NameError: bridgeLocallyLinearEmbedding = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LocallyLinearEmbedding = {'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'n_components': ${this.opts['n_components'] ?? undefined}, 'reg': ${
-      this.opts['reg'] ?? undefined
-    }, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'method': ${
-      this.opts['method'] ?? undefined
-    }, 'hessian_tol': ${
-      this.opts['hessian_tol'] ?? undefined
-    }, 'modified_tol': ${
-      this.opts['modified_tol'] ?? undefined
-    }, 'neighbors_algorithm': ${
-      this.opts['neighbors_algorithm'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LocallyLinearEmbedding = {'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'reg': ${this.opts['reg'] ?? undefined}, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'method': ${this.opts['method'] ?? undefined}, 'hessian_tol': ${this.opts['hessian_tol'] ?? undefined}, 'modified_tol': ${this.opts['modified_tol'] ?? undefined}, 'neighbors_algorithm': ${this.opts['neighbors_algorithm'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_LocallyLinearEmbedding = {k: v for k, v in ctor_LocallyLinearEmbedding.items() if v is not None}`
 
@@ -215,9 +200,8 @@ ctor_LocallyLinearEmbedding = {k: v for k, v in ctor_LocallyLinearEmbedding.item
     }
 
     // set up method params
-    await this._py.ex`pms_LocallyLinearEmbedding_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LocallyLinearEmbedding_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LocallyLinearEmbedding_fit = {k: v for k, v in pms_LocallyLinearEmbedding_fit.items() if v is not None}`
 
@@ -258,9 +242,7 @@ pms_LocallyLinearEmbedding_fit = {k: v for k, v in pms_LocallyLinearEmbedding_fi
 
     // set up method params
     await this._py
-      .ex`pms_LocallyLinearEmbedding_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+      .ex`pms_LocallyLinearEmbedding_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LocallyLinearEmbedding_fit_transform = {k: v for k, v in pms_LocallyLinearEmbedding_fit_transform.items() if v is not None}`
 
@@ -298,9 +280,7 @@ pms_LocallyLinearEmbedding_fit_transform = {k: v for k, v in pms_LocallyLinearEm
 
     // set up method params
     await this._py
-      .ex`pms_LocallyLinearEmbedding_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_LocallyLinearEmbedding_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_LocallyLinearEmbedding_get_feature_names_out = {k: v for k, v in pms_LocallyLinearEmbedding_get_feature_names_out.items() if v is not None}`
 
@@ -338,9 +318,7 @@ pms_LocallyLinearEmbedding_get_feature_names_out = {k: v for k, v in pms_Locally
 
     // set up method params
     await this._py
-      .ex`pms_LocallyLinearEmbedding_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LocallyLinearEmbedding_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LocallyLinearEmbedding_get_metadata_routing = {k: v for k, v in pms_LocallyLinearEmbedding_get_metadata_routing.items() if v is not None}`
 
@@ -362,7 +340,7 @@ pms_LocallyLinearEmbedding_get_metadata_routing = {k: v for k, v in pms_LocallyL
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -377,9 +355,8 @@ pms_LocallyLinearEmbedding_get_metadata_routing = {k: v for k, v in pms_LocallyL
     }
 
     // set up method params
-    await this._py.ex`pms_LocallyLinearEmbedding_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LocallyLinearEmbedding_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_LocallyLinearEmbedding_set_output = {k: v for k, v in pms_LocallyLinearEmbedding_set_output.items() if v is not None}`
 
@@ -414,9 +391,8 @@ pms_LocallyLinearEmbedding_set_output = {k: v for k, v in pms_LocallyLinearEmbed
     }
 
     // set up method params
-    await this._py.ex`pms_LocallyLinearEmbedding_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LocallyLinearEmbedding_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedding_transform.items() if v is not None}`
 

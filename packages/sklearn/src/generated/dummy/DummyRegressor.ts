@@ -80,11 +80,8 @@ except NameError: bridgeDummyRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DummyRegressor = {'strategy': ${
-      this.opts['strategy'] ?? undefined
-    }, 'constant': np.array(${this.opts['constant'] ?? undefined}) if ${
-      this.opts['constant'] !== undefined
-    } else None, 'quantile': ${this.opts['quantile'] ?? undefined}}
+    await this._py
+      .ex`ctor_DummyRegressor = {'strategy': ${this.opts['strategy'] ?? undefined}, 'constant': np.array(${this.opts['constant'] ?? undefined}) if ${this.opts['constant'] !== undefined} else None, 'quantile': ${this.opts['quantile'] ?? undefined}}
 
 ctor_DummyRegressor = {k: v for k, v in ctor_DummyRegressor.items() if v is not None}`
 
@@ -141,13 +138,8 @@ ctor_DummyRegressor = {k: v for k, v in ctor_DummyRegressor.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_DummyRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_DummyRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DummyRegressor_fit = {k: v for k, v in pms_DummyRegressor_fit.items() if v is not None}`
 
@@ -182,9 +174,8 @@ pms_DummyRegressor_fit = {k: v for k, v in pms_DummyRegressor_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_DummyRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DummyRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DummyRegressor_get_metadata_routing = {k: v for k, v in pms_DummyRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -222,11 +213,8 @@ pms_DummyRegressor_get_metadata_routing = {k: v for k, v in pms_DummyRegressor_g
     }
 
     // set up method params
-    await this._py.ex`pms_DummyRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'return_std': ${
-      opts['return_std'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DummyRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_DummyRegressor_predict = {k: v for k, v in pms_DummyRegressor_predict.items() if v is not None}`
 
@@ -269,13 +257,8 @@ pms_DummyRegressor_predict = {k: v for k, v in pms_DummyRegressor_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_DummyRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_DummyRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DummyRegressor_score = {k: v for k, v in pms_DummyRegressor_score.items() if v is not None}`
 
@@ -312,9 +295,8 @@ pms_DummyRegressor_score = {k: v for k, v in pms_DummyRegressor_score.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_DummyRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DummyRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DummyRegressor_set_fit_request = {k: v for k, v in pms_DummyRegressor_set_fit_request.items() if v is not None}`
 
@@ -351,9 +333,8 @@ pms_DummyRegressor_set_fit_request = {k: v for k, v in pms_DummyRegressor_set_fi
     }
 
     // set up method params
-    await this._py.ex`pms_DummyRegressor_set_predict_request = {'return_std': ${
-      opts['return_std'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DummyRegressor_set_predict_request = {'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_DummyRegressor_set_predict_request = {k: v for k, v in pms_DummyRegressor_set_predict_request.items() if v is not None}`
 
@@ -391,9 +372,7 @@ pms_DummyRegressor_set_predict_request = {k: v for k, v in pms_DummyRegressor_se
 
     // set up method params
     await this._py
-      .ex`pms_DummyRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_DummyRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DummyRegressor_set_score_request = {k: v for k, v in pms_DummyRegressor_set_score_request.items() if v is not None}`
 
@@ -428,6 +407,56 @@ pms_DummyRegressor_set_score_request = {k: v for k, v in pms_DummyRegressor_set_
       // convert the result from python to node.js
       return this
         ._py`attr_DummyRegressor_constant_.tolist() if hasattr(attr_DummyRegressor_constant_, 'tolist') else attr_DummyRegressor_constant_`
+    })()
+  }
+
+  /**
+    Number of features seen during [fit](../../glossary.html#term-fit).
+   */
+  get n_features_in_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error('This DummyRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'DummyRegressor must call init() before accessing n_features_in_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_DummyRegressor_n_features_in_ = bridgeDummyRegressor[${this.id}].n_features_in_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_DummyRegressor_n_features_in_.tolist() if hasattr(attr_DummyRegressor_n_features_in_, 'tolist') else attr_DummyRegressor_n_features_in_`
+    })()
+  }
+
+  /**
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+   */
+  get feature_names_in_(): Promise<NDArray> {
+    if (this._isDisposed) {
+      throw new Error('This DummyRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'DummyRegressor must call init() before accessing feature_names_in_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_DummyRegressor_feature_names_in_ = bridgeDummyRegressor[${this.id}].feature_names_in_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_DummyRegressor_feature_names_in_.tolist() if hasattr(attr_DummyRegressor_feature_names_in_, 'tolist') else attr_DummyRegressor_feature_names_in_`
     })()
   }
 

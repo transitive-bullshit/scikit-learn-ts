@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Sparse inverse covariance estimation with an l1-penalized estimator.
 
+  For a usage example see [Visualizing the stock market structure](../../auto_examples/applications/plot_stock_market.html#sphx-glr-auto-examples-applications-plot-stock-market-py).
+
   Read more in the [User Guide](../covariance.html#sparse-inverse-covariance).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.GraphicalLasso.html)
@@ -120,17 +122,8 @@ except NameError: bridgeGraphicalLasso = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GraphicalLasso = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'mode': ${this.opts['mode'] ?? undefined}, 'covariance': ${
-      this.opts['covariance'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'enet_tol': ${
-      this.opts['enet_tol'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'assume_centered': ${
-      this.opts['assume_centered'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GraphicalLasso = {'alpha': ${this.opts['alpha'] ?? undefined}, 'mode': ${this.opts['mode'] ?? undefined}, 'covariance': ${this.opts['covariance'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'enet_tol': ${this.opts['enet_tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}}
 
 ctor_GraphicalLasso = {k: v for k, v in ctor_GraphicalLasso.items() if v is not None}`
 
@@ -198,13 +191,8 @@ ctor_GraphicalLasso = {k: v for k, v in ctor_GraphicalLasso.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLasso_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLasso_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_GraphicalLasso_error_norm = {k: v for k, v in pms_GraphicalLasso_error_norm.items() if v is not None}`
 
@@ -240,9 +228,8 @@ pms_GraphicalLasso_error_norm = {k: v for k, v in pms_GraphicalLasso_error_norm.
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLasso_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GraphicalLasso_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GraphicalLasso_fit = {k: v for k, v in pms_GraphicalLasso_fit.items() if v is not None}`
 
@@ -277,9 +264,8 @@ pms_GraphicalLasso_fit = {k: v for k, v in pms_GraphicalLasso_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLasso_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLasso_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GraphicalLasso_get_metadata_routing = {k: v for k, v in pms_GraphicalLasso_get_metadata_routing.items() if v is not None}`
 
@@ -311,9 +297,7 @@ pms_GraphicalLasso_get_metadata_routing = {k: v for k, v in pms_GraphicalLasso_g
 
     // set up method params
     await this._py
-      .ex`pms_GraphicalLasso_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+      .ex`pms_GraphicalLasso_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_GraphicalLasso_get_precision = {k: v for k, v in pms_GraphicalLasso_get_precision.items() if v is not None}`
 
@@ -344,9 +328,8 @@ pms_GraphicalLasso_get_precision = {k: v for k, v in pms_GraphicalLasso_get_prec
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLasso_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GraphicalLasso_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GraphicalLasso_mahalanobis = {k: v for k, v in pms_GraphicalLasso_mahalanobis.items() if v is not None}`
 
@@ -384,11 +367,8 @@ pms_GraphicalLasso_mahalanobis = {k: v for k, v in pms_GraphicalLasso_mahalanobi
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLasso_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLasso_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if v is not None}`
 
@@ -425,9 +405,8 @@ pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLasso_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLasso_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_GraphicalLasso_set_score_request = {k: v for k, v in pms_GraphicalLasso_set_score_request.items() if v is not None}`
 

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This estimator is much faster than [`GradientBoostingRegressor`](sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor "sklearn.ensemble.GradientBoostingRegressor") for big datasets (n\_samples >= 10 000).
 
-  This estimator has native support for missing values (NaNs). During training, the tree grower learns at each split point whether samples with missing values should go to the left or right child, based on the potential gain. When predicting, samples with missing values are assigned to the left or right child consequently. If no missing values were encountered for a given feature during training, then samples with missing values are mapped to whichever child has the most samples.
+  This estimator has native support for missing values (NaNs). During training, the tree grower learns at each split point whether samples with missing values should go to the left or right child, based on the potential gain. When predicting, samples with missing values are assigned to the left or right child consequently. If no missing values were encountered for a given feature during training, then samples with missing values are mapped to whichever child has the most samples. See [Features in Histogram Gradient Boosting Trees](../../auto_examples/ensemble/plot_hgbt_regression.html#sphx-glr-auto-examples-ensemble-plot-hgbt-regression-py) for a usecase example of this feature.
 
   This implementation is inspired by [LightGBM](https://github.com/Microsoft/LightGBM).
 
@@ -73,11 +73,18 @@ export class HistGradientBoostingRegressor {
     min_samples_leaf?: number
 
     /**
-      The L2 regularization parameter. Use `0` for no regularization (default).
+      The L2 regularization parameter penalizing leaves with small hessians. Use `0` for no regularization (default).
 
       @defaultValue `0`
      */
     l2_regularization?: number
+
+    /**
+      Proportion of randomly chosen features in each and every node split. This is a form of regularization, smaller values make the trees weaker learners and might prevent overfitting. If interaction constraints from `interaction\_cst` are present, only allowed features are taken into account for the subsampling.
+
+      @defaultValue `1`
+     */
+    max_features?: number
 
     /**
       The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max\_bins` bins. In addition to the `max\_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255.
@@ -161,9 +168,7 @@ export class HistGradientBoostingRegressor {
      */
     random_state?: number
   }) {
-    this.id = `HistGradientBoostingRegressor${
-      crypto.randomUUID().split('-')[0]
-    }`
+    this.id = `HistGradientBoostingRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
 
@@ -207,43 +212,8 @@ except NameError: bridgeHistGradientBoostingRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HistGradientBoostingRegressor = {'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'quantile': ${this.opts['quantile'] ?? undefined}, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'l2_regularization': ${
-      this.opts['l2_regularization'] ?? undefined
-    }, 'max_bins': ${
-      this.opts['max_bins'] ?? undefined
-    }, 'categorical_features': np.array(${
-      this.opts['categorical_features'] ?? undefined
-    }) if ${
-      this.opts['categorical_features'] !== undefined
-    } else None, 'monotonic_cst': np.array(${
-      this.opts['monotonic_cst'] ?? undefined
-    }) if ${
-      this.opts['monotonic_cst'] !== undefined
-    } else None, 'interaction_cst': ${
-      this.opts['interaction_cst'] ?? undefined
-    }, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_HistGradientBoostingRegressor = {'loss': ${this.opts['loss'] ?? undefined}, 'quantile': ${this.opts['quantile'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'l2_regularization': ${this.opts['l2_regularization'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'max_bins': ${this.opts['max_bins'] ?? undefined}, 'categorical_features': np.array(${this.opts['categorical_features'] ?? undefined}) if ${this.opts['categorical_features'] !== undefined} else None, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None, 'interaction_cst': ${this.opts['interaction_cst'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_HistGradientBoostingRegressor = {k: v for k, v in ctor_HistGradientBoostingRegressor.items() if v is not None}`
 
@@ -304,13 +274,8 @@ ctor_HistGradientBoostingRegressor = {k: v for k, v in ctor_HistGradientBoosting
     }
 
     // set up method params
-    await this._py.ex`pms_HistGradientBoostingRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_HistGradientBoostingRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_HistGradientBoostingRegressor_fit = {k: v for k, v in pms_HistGradientBoostingRegressor_fit.items() if v is not None}`
 
@@ -348,9 +313,7 @@ pms_HistGradientBoostingRegressor_fit = {k: v for k, v in pms_HistGradientBoosti
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HistGradientBoostingRegressor_get_metadata_routing = {k: v for k, v in pms_HistGradientBoostingRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -385,9 +348,8 @@ pms_HistGradientBoostingRegressor_get_metadata_routing = {k: v for k, v in pms_H
     }
 
     // set up method params
-    await this._py.ex`pms_HistGradientBoostingRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HistGradientBoostingRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_HistGradientBoostingRegressor_predict = {k: v for k, v in pms_HistGradientBoostingRegressor_predict.items() if v is not None}`
 
@@ -435,13 +397,7 @@ pms_HistGradientBoostingRegressor_predict = {k: v for k, v in pms_HistGradientBo
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+      .ex`pms_HistGradientBoostingRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_HistGradientBoostingRegressor_score = {k: v for k, v in pms_HistGradientBoostingRegressor_score.items() if v is not None}`
 
@@ -481,9 +437,7 @@ pms_HistGradientBoostingRegressor_score = {k: v for k, v in pms_HistGradientBoos
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_HistGradientBoostingRegressor_set_fit_request = {k: v for k, v in pms_HistGradientBoostingRegressor_set_fit_request.items() if v is not None}`
 
@@ -523,9 +477,7 @@ pms_HistGradientBoostingRegressor_set_fit_request = {k: v for k, v in pms_HistGr
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_HistGradientBoostingRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_HistGradientBoostingRegressor_set_score_request = {k: v for k, v in pms_HistGradientBoostingRegressor_set_score_request.items() if v is not None}`
 
@@ -563,9 +515,7 @@ pms_HistGradientBoostingRegressor_set_score_request = {k: v for k, v in pms_Hist
 
     // set up method params
     await this._py
-      .ex`pms_HistGradientBoostingRegressor_staged_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_HistGradientBoostingRegressor_staged_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGradientBoostingRegressor_staged_predict.items() if v is not None}`
 

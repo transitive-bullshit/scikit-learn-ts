@@ -117,21 +117,8 @@ except NameError: bridgeGaussianProcessRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianProcessRegressor = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'alpha': np.array(${this.opts['alpha'] ?? undefined}) if ${
-      this.opts['alpha'] !== undefined
-    } else None, 'optimizer': ${
-      this.opts['optimizer'] ?? undefined
-    }, 'n_restarts_optimizer': ${
-      this.opts['n_restarts_optimizer'] ?? undefined
-    }, 'normalize_y': ${
-      this.opts['normalize_y'] ?? undefined
-    }, 'copy_X_train': ${
-      this.opts['copy_X_train'] ?? undefined
-    }, 'n_targets': ${this.opts['n_targets'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GaussianProcessRegressor = {'kernel': ${this.opts['kernel'] ?? undefined}, 'alpha': np.array(${this.opts['alpha'] ?? undefined}) if ${this.opts['alpha'] !== undefined} else None, 'optimizer': ${this.opts['optimizer'] ?? undefined}, 'n_restarts_optimizer': ${this.opts['n_restarts_optimizer'] ?? undefined}, 'normalize_y': ${this.opts['normalize_y'] ?? undefined}, 'copy_X_train': ${this.opts['copy_X_train'] ?? undefined}, 'n_targets': ${this.opts['n_targets'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_GaussianProcessRegressor = {k: v for k, v in ctor_GaussianProcessRegressor.items() if v is not None}`
 
@@ -185,11 +172,8 @@ ctor_GaussianProcessRegressor = {k: v for k, v in ctor_GaussianProcessRegressor.
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_GaussianProcessRegressor_fit = {k: v for k, v in pms_GaussianProcessRegressor_fit.items() if v is not None}`
 
@@ -227,9 +211,7 @@ pms_GaussianProcessRegressor_fit = {k: v for k, v in pms_GaussianProcessRegresso
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianProcessRegressor_get_metadata_routing = {k: v for k, v in pms_GaussianProcessRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -279,11 +261,7 @@ pms_GaussianProcessRegressor_get_metadata_routing = {k: v for k, v in pms_Gaussi
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_log_marginal_likelihood = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
+      .ex`pms_GaussianProcessRegressor_log_marginal_likelihood = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
 
 pms_GaussianProcessRegressor_log_marginal_likelihood = {k: v for k, v in pms_GaussianProcessRegressor_log_marginal_likelihood.items() if v is not None}`
 
@@ -334,11 +312,8 @@ pms_GaussianProcessRegressor_log_marginal_likelihood = {k: v for k, v in pms_Gau
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'return_std': ${
-      opts['return_std'] ?? undefined
-    }, 'return_cov': ${opts['return_cov'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'return_std': ${opts['return_std'] ?? undefined}, 'return_cov': ${opts['return_cov'] ?? undefined}}
 
 pms_GaussianProcessRegressor_predict = {k: v for k, v in pms_GaussianProcessRegressor_predict.items() if v is not None}`
 
@@ -387,11 +362,8 @@ pms_GaussianProcessRegressor_predict = {k: v for k, v in pms_GaussianProcessRegr
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_sample_y = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'n_samples': ${
-      opts['n_samples'] ?? undefined
-    }, 'random_state': ${opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_sample_y = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'n_samples': ${opts['n_samples'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}}
 
 pms_GaussianProcessRegressor_sample_y = {k: v for k, v in pms_GaussianProcessRegressor_sample_y.items() if v is not None}`
 
@@ -438,13 +410,8 @@ pms_GaussianProcessRegressor_sample_y = {k: v for k, v in pms_GaussianProcessReg
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegressor_score.items() if v is not None}`
 
@@ -489,9 +456,7 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_set_predict_request = {'return_cov': ${
-      opts['return_cov'] ?? undefined
-    }, 'return_std': ${opts['return_std'] ?? undefined}}
+      .ex`pms_GaussianProcessRegressor_set_predict_request = {'return_cov': ${opts['return_cov'] ?? undefined}, 'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_GaussianProcessRegressor_set_predict_request = {k: v for k, v in pms_GaussianProcessRegressor_set_predict_request.items() if v is not None}`
 
@@ -531,9 +496,7 @@ pms_GaussianProcessRegressor_set_predict_request = {k: v for k, v in pms_Gaussia
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GaussianProcessRegressor_set_score_request = {k: v for k, v in pms_GaussianProcessRegressor_set_score_request.items() if v is not None}`
 

@@ -90,7 +90,7 @@ export class MultiTaskElasticNetCV {
     verbose?: boolean | number
 
     /**
-      Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1\_ratio are given. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1\_ratio are given. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -150,21 +150,8 @@ except NameError: bridgeMultiTaskElasticNetCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MultiTaskElasticNetCV = {'l1_ratio': ${
-      this.opts['l1_ratio'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'n_alphas': ${
-      this.opts['n_alphas'] ?? undefined
-    }, 'alphas': ${this.opts['alphas'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'selection': ${this.opts['selection'] ?? undefined}}
+    await this._py
+      .ex`ctor_MultiTaskElasticNetCV = {'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'n_alphas': ${this.opts['n_alphas'] ?? undefined}, 'alphas': ${this.opts['alphas'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'selection': ${this.opts['selection'] ?? undefined}}
 
 ctor_MultiTaskElasticNetCV = {k: v for k, v in ctor_MultiTaskElasticNetCV.items() if v is not None}`
 
@@ -208,6 +195,11 @@ ctor_MultiTaskElasticNetCV = {k: v for k, v in ctor_MultiTaskElasticNetCV.items(
       Training target variable. Will be cast to X’s dtype if necessary.
      */
     y?: NDArray[]
+
+    /**
+      Parameters to be passed to the CV splitter.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -220,11 +212,8 @@ ctor_MultiTaskElasticNetCV = {k: v for k, v in ctor_MultiTaskElasticNetCV.items(
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_fit = {k: v for k, v in pms_MultiTaskElasticNetCV_fit.items() if v is not None}`
 
@@ -244,7 +233,7 @@ pms_MultiTaskElasticNetCV_fit = {k: v for k, v in pms_MultiTaskElasticNetCV_fit.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -262,9 +251,7 @@ pms_MultiTaskElasticNetCV_fit = {k: v for k, v in pms_MultiTaskElasticNetCV_fit.
 
     // set up method params
     await this._py
-      .ex`pms_MultiTaskElasticNetCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MultiTaskElasticNetCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTaskElasticNetCV_get_metadata_routing.items() if v is not None}`
 
@@ -319,7 +306,7 @@ pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTask
     /**
       List of alphas where to compute the models. If `undefined` alphas are set automatically.
      */
-    alphas?: NDArray
+    alphas?: ArrayLike
 
     /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
@@ -343,7 +330,7 @@ pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTask
     /**
       The initial values of the coefficients.
      */
-    coef_init?: NDArray
+    coef_init?: ArrayLike
 
     /**
       Amount of verbosity.
@@ -389,29 +376,8 @@ pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTask
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${
-      opts['l1_ratio'] ?? undefined
-    }, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${
-      opts['n_alphas'] ?? undefined
-    }, 'alphas': np.array(${opts['alphas'] ?? undefined}) if ${
-      opts['alphas'] !== undefined
-    } else None, 'precompute': np.array(${
-      opts['precompute'] ?? undefined
-    }) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${
-      opts['return_n_iter'] ?? undefined
-    }, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${opts['l1_ratio'] ?? undefined}, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': ${opts['alphas'] ?? undefined}, 'precompute': np.array(${opts['precompute'] ?? undefined}) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${opts['return_n_iter'] ?? undefined}, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${opts['check_input'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_path = {k: v for k, v in pms_MultiTaskElasticNetCV_path.items() if v is not None}`
 
@@ -444,9 +410,8 @@ pms_MultiTaskElasticNetCV_path = {k: v for k, v in pms_MultiTaskElasticNetCV_pat
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_predict = {k: v for k, v in pms_MultiTaskElasticNetCV_predict.items() if v is not None}`
 
@@ -491,13 +456,8 @@ pms_MultiTaskElasticNetCV_predict = {k: v for k, v in pms_MultiTaskElasticNetCV_
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MultiTaskElasticNetCV_score = {k: v for k, v in pms_MultiTaskElasticNetCV_score.items() if v is not None}`
 
@@ -537,9 +497,7 @@ pms_MultiTaskElasticNetCV_score = {k: v for k, v in pms_MultiTaskElasticNetCV_sc
 
     // set up method params
     await this._py
-      .ex`pms_MultiTaskElasticNetCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiTaskElasticNetCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_set_fit_request = {k: v for k, v in pms_MultiTaskElasticNetCV_set_fit_request.items() if v is not None}`
 
@@ -579,9 +537,7 @@ pms_MultiTaskElasticNetCV_set_fit_request = {k: v for k, v in pms_MultiTaskElast
 
     // set up method params
     await this._py
-      .ex`pms_MultiTaskElasticNetCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiTaskElasticNetCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_set_score_request = {k: v for k, v in pms_MultiTaskElasticNetCV_set_score_request.items() if v is not None}`
 

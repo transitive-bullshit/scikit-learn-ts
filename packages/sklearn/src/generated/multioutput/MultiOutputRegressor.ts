@@ -31,7 +31,7 @@ export class MultiOutputRegressor {
 
       When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -79,9 +79,8 @@ except NameError: bridgeMultiOutputRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MultiOutputRegressor = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_MultiOutputRegressor = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_MultiOutputRegressor = {k: v for k, v in ctor_MultiOutputRegressor.items() if v is not None}`
 
@@ -145,15 +144,8 @@ ctor_MultiOutputRegressor = {k: v for k, v in ctor_MultiOutputRegressor.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiOutputRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.items() if v is not None}`
 
@@ -191,9 +183,7 @@ pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.it
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MultiOutputRegressor_get_metadata_routing = {k: v for k, v in pms_MultiOutputRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -245,17 +235,8 @@ pms_MultiOutputRegressor_get_metadata_routing = {k: v for k, v in pms_MultiOutpu
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${
-      opts['sample_weight'] !== undefined
-    } else None, 'partial_fit_params': ${
-      opts['partial_fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiOutputRegressor_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'partial_fit_params': ${opts['partial_fit_params'] ?? undefined}}
 
 pms_MultiOutputRegressor_partial_fit = {k: v for k, v in pms_MultiOutputRegressor_partial_fit.items() if v is not None}`
 
@@ -288,9 +269,8 @@ pms_MultiOutputRegressor_partial_fit = {k: v for k, v in pms_MultiOutputRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiOutputRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MultiOutputRegressor_predict = {k: v for k, v in pms_MultiOutputRegressor_predict.items() if v is not None}`
 
@@ -335,13 +315,8 @@ pms_MultiOutputRegressor_predict = {k: v for k, v in pms_MultiOutputRegressor_pr
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiOutputRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_score.items() if v is not None}`
 
@@ -381,9 +356,7 @@ pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_scor
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputRegressor_set_fit_request = {k: v for k, v in pms_MultiOutputRegressor_set_fit_request.items() if v is not None}`
 
@@ -423,9 +396,7 @@ pms_MultiOutputRegressor_set_fit_request = {k: v for k, v in pms_MultiOutputRegr
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputRegressor_set_partial_fit_request = {k: v for k, v in pms_MultiOutputRegressor_set_partial_fit_request.items() if v is not None}`
 
@@ -465,9 +436,7 @@ pms_MultiOutputRegressor_set_partial_fit_request = {k: v for k, v in pms_MultiOu
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputRegressor_set_score_request = {k: v for k, v in pms_MultiOutputRegressor_set_score_request.items() if v is not None}`
 

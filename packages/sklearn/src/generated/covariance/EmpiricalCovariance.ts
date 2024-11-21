@@ -79,9 +79,8 @@ except NameError: bridgeEmpiricalCovariance = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_EmpiricalCovariance = {'store_precision': ${
-      this.opts['store_precision'] ?? undefined
-    }, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}}
+    await this._py
+      .ex`ctor_EmpiricalCovariance = {'store_precision': ${this.opts['store_precision'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}}
 
 ctor_EmpiricalCovariance = {k: v for k, v in ctor_EmpiricalCovariance.items() if v is not None}`
 
@@ -154,13 +153,7 @@ ctor_EmpiricalCovariance = {k: v for k, v in ctor_EmpiricalCovariance.items() if
 
     // set up method params
     await this._py
-      .ex`pms_EmpiricalCovariance_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+      .ex`pms_EmpiricalCovariance_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_EmpiricalCovariance_error_norm = {k: v for k, v in pms_EmpiricalCovariance_error_norm.items() if v is not None}`
 
@@ -198,9 +191,8 @@ pms_EmpiricalCovariance_error_norm = {k: v for k, v in pms_EmpiricalCovariance_e
     }
 
     // set up method params
-    await this._py.ex`pms_EmpiricalCovariance_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_EmpiricalCovariance_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_EmpiricalCovariance_fit = {k: v for k, v in pms_EmpiricalCovariance_fit.items() if v is not None}`
 
@@ -238,9 +230,7 @@ pms_EmpiricalCovariance_fit = {k: v for k, v in pms_EmpiricalCovariance_fit.item
 
     // set up method params
     await this._py
-      .ex`pms_EmpiricalCovariance_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_EmpiricalCovariance_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_EmpiricalCovariance_get_metadata_routing = {k: v for k, v in pms_EmpiricalCovariance_get_metadata_routing.items() if v is not None}`
 
@@ -276,9 +266,7 @@ pms_EmpiricalCovariance_get_metadata_routing = {k: v for k, v in pms_EmpiricalCo
 
     // set up method params
     await this._py
-      .ex`pms_EmpiricalCovariance_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+      .ex`pms_EmpiricalCovariance_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_EmpiricalCovariance_get_precision = {k: v for k, v in pms_EmpiricalCovariance_get_precision.items() if v is not None}`
 
@@ -313,9 +301,8 @@ pms_EmpiricalCovariance_get_precision = {k: v for k, v in pms_EmpiricalCovarianc
     }
 
     // set up method params
-    await this._py.ex`pms_EmpiricalCovariance_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_EmpiricalCovariance_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_EmpiricalCovariance_mahalanobis = {k: v for k, v in pms_EmpiricalCovariance_mahalanobis.items() if v is not None}`
 
@@ -355,11 +342,8 @@ pms_EmpiricalCovariance_mahalanobis = {k: v for k, v in pms_EmpiricalCovariance_
     }
 
     // set up method params
-    await this._py.ex`pms_EmpiricalCovariance_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_EmpiricalCovariance_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_EmpiricalCovariance_score = {k: v for k, v in pms_EmpiricalCovariance_score.items() if v is not None}`
 
@@ -398,9 +382,8 @@ pms_EmpiricalCovariance_score = {k: v for k, v in pms_EmpiricalCovariance_score.
     }
 
     // set up method params
-    await this._py.ex`pms_EmpiricalCovariance_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_EmpiricalCovariance_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_EmpiricalCovariance_set_score_request = {k: v for k, v in pms_EmpiricalCovariance_set_score_request.items() if v is not None}`
 

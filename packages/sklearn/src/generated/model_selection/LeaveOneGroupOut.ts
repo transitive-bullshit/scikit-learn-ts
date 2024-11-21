@@ -6,9 +6,9 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Leave One Group Out cross-validator
+  Leave One Group Out cross-validator.
 
-  Provides train/test indices to split data such that each training set is comprised of all samples except ones belonging to one specific group. Arbitrary domain specific group information is provided an array integers that encodes the group of each sample.
+  Provides train/test indices to split data such that each training set is comprised of all samples except ones belonging to one specific group. Arbitrary domain specific group information is provided as an array of integers that encodes the group of each sample.
 
   For instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.
 
@@ -72,9 +72,8 @@ except NameError: bridgeLeaveOneGroupOut = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LeaveOneGroupOut = {'routing': ${
-      this.opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LeaveOneGroupOut = {'routing': ${this.opts['routing'] ?? undefined}}
 
 ctor_LeaveOneGroupOut = {k: v for k, v in ctor_LeaveOneGroupOut.items() if v is not None}`
 
@@ -127,9 +126,8 @@ ctor_LeaveOneGroupOut = {k: v for k, v in ctor_LeaveOneGroupOut.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneGroupOut_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LeaveOneGroupOut_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LeaveOneGroupOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneGroupOut_get_metadata_routing.items() if v is not None}`
 
@@ -143,7 +141,7 @@ pms_LeaveOneGroupOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneGroupO
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -172,11 +170,8 @@ pms_LeaveOneGroupOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneGroupO
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneGroupOut_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_LeaveOneGroupOut_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_LeaveOneGroupOut_get_n_splits = {k: v for k, v in pms_LeaveOneGroupOut_get_n_splits.items() if v is not None}`
 
@@ -215,9 +210,8 @@ pms_LeaveOneGroupOut_get_n_splits = {k: v for k, v in pms_LeaveOneGroupOut_get_n
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneGroupOut_set_split_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LeaveOneGroupOut_set_split_request = {'groups': ${opts['groups'] ?? undefined}}
 
 pms_LeaveOneGroupOut_set_split_request = {k: v for k, v in pms_LeaveOneGroupOut_set_split_request.items() if v is not None}`
 
@@ -260,13 +254,8 @@ pms_LeaveOneGroupOut_set_split_request = {k: v for k, v in pms_LeaveOneGroupOut_
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneGroupOut_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_LeaveOneGroupOut_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_LeaveOneGroupOut_split = {k: v for k, v in pms_LeaveOneGroupOut_split.items() if v is not None}`
 

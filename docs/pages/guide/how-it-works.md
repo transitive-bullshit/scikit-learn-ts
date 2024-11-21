@@ -2,7 +2,7 @@
 
 This project uses a fork of [python-bridge](https://github.com/Submersible/node-python-bridge) to spawn a Python interpreter as a subprocess and communicates back and forth via standard Unix pipes. The IPC pipes don't interfere with `stdout`/`stderr`/`stdin`, so your Node.js code and the underlying Python code can print things normally.
 
-The TS library is **auto-generated** from the Python `scikit-learn` [API docs](https://scikit-learn.org/stable/modules/classes.html). By using the official Python docs as a source of truth, we can guarantee a certain level of compatibility and upgradeability.
+The TS library is **auto-generated** from the Python `scikit-learn` [API docs](https://scikit-learn.org/stable/api/index.html). By using the official Python docs as a source of truth, we can guarantee a certain level of compatibility and upgradeability.
 
 For each `scikit-learn` HTML page that belongs to an exported Python `class` or `function`, we first parse it's metadata, params, methods, attributes, etc using `cheerio`, then we convert the Python types into equivalent TypeScript types. We then generate a corresponding `TypeScript` file which wraps an instance of that Python declaration via a `PythonBridge`.
 

@@ -99,13 +99,8 @@ except NameError: bridgeSelectFromModel = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectFromModel = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'threshold': ${this.opts['threshold'] ?? undefined}, 'prefit': ${
-      this.opts['prefit'] ?? undefined
-    }, 'norm_order': ${this.opts['norm_order'] ?? undefined}, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelectFromModel = {'estimator': ${this.opts['estimator'] ?? undefined}, 'threshold': ${this.opts['threshold'] ?? undefined}, 'prefit': ${this.opts['prefit'] ?? undefined}, 'norm_order': ${this.opts['norm_order'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
 
 ctor_SelectFromModel = {k: v for k, v in ctor_SelectFromModel.items() if v is not None}`
 
@@ -149,7 +144,7 @@ ctor_SelectFromModel = {k: v for k, v in ctor_SelectFromModel.items() if v is no
     y?: ArrayLike
 
     /**
-      Other estimator specific parameters.
+      If `enable\_metadata\_routing=False` (default):
      */
     fit_params?: any
   }): Promise<any> {
@@ -162,13 +157,8 @@ ctor_SelectFromModel = {k: v for k, v in ctor_SelectFromModel.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectFromModel_fit = {k: v for k, v in pms_SelectFromModel_fit.items() if v is not None}`
 
@@ -211,13 +201,8 @@ pms_SelectFromModel_fit = {k: v for k, v in pms_SelectFromModel_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectFromModel_fit_transform = {k: v for k, v in pms_SelectFromModel_fit_transform.items() if v is not None}`
 
@@ -251,9 +236,7 @@ pms_SelectFromModel_fit_transform = {k: v for k, v in pms_SelectFromModel_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_SelectFromModel_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectFromModel_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectFromModel_get_feature_names_out = {k: v for k, v in pms_SelectFromModel_get_feature_names_out.items() if v is not None}`
 
@@ -273,7 +256,7 @@ pms_SelectFromModel_get_feature_names_out = {k: v for k, v in pms_SelectFromMode
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -288,9 +271,8 @@ pms_SelectFromModel_get_feature_names_out = {k: v for k, v in pms_SelectFromMode
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SelectFromModel_get_metadata_routing = {k: v for k, v in pms_SelectFromModel_get_metadata_routing.items() if v is not None}`
 
@@ -323,9 +305,8 @@ pms_SelectFromModel_get_metadata_routing = {k: v for k, v in pms_SelectFromModel
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectFromModel_get_support = {k: v for k, v in pms_SelectFromModel_get_support.items() if v is not None}`
 
@@ -358,9 +339,8 @@ pms_SelectFromModel_get_support = {k: v for k, v in pms_SelectFromModel_get_supp
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFromModel_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFromModel_inverse_transform = {k: v for k, v in pms_SelectFromModel_inverse_transform.items() if v is not None}`
 
@@ -388,9 +368,9 @@ pms_SelectFromModel_inverse_transform = {k: v for k, v in pms_SelectFromModel_in
     y?: ArrayLike
 
     /**
-      Other estimator specific parameters.
+      If `enable\_metadata\_routing=False` (default):
      */
-    fit_params?: any
+    partial_fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectFromModel instance has already been disposed')
@@ -401,13 +381,8 @@ pms_SelectFromModel_inverse_transform = {k: v for k, v in pms_SelectFromModel_in
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'partial_fit_params': ${opts['partial_fit_params'] ?? undefined}}
 
 pms_SelectFromModel_partial_fit = {k: v for k, v in pms_SelectFromModel_partial_fit.items() if v is not None}`
 
@@ -429,7 +404,7 @@ pms_SelectFromModel_partial_fit = {k: v for k, v in pms_SelectFromModel_partial_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectFromModel instance has already been disposed')
@@ -440,9 +415,8 @@ pms_SelectFromModel_partial_fit = {k: v for k, v in pms_SelectFromModel_partial_
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectFromModel_set_output = {k: v for k, v in pms_SelectFromModel_set_output.items() if v is not None}`
 
@@ -473,9 +447,8 @@ pms_SelectFromModel_set_output = {k: v for k, v in pms_SelectFromModel_set_outpu
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFromModel_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.items() if v is not None}`
 

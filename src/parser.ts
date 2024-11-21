@@ -1,3 +1,5 @@
+import assert from 'node:assert'
+
 import * as cheerio from 'cheerio'
 import { type Element } from 'domhandler'
 import got from 'got'
@@ -10,7 +12,7 @@ import { isValidPythonIdentifier } from './utils'
 const methodIgnoreList = new Set(['get_params', 'set_params'])
 
 export async function fetchScikitLearnIndex({
-  // indexUrl = 'https://scikit-learn.org/stable/modules/classes.html'
+  // indexUrl = 'https://scikit-learn.org/stable/api/index.html'
   indexUrl = 'https://scikit-learn.org/stable/api/index.html'
 }: { indexUrl?: string } = {}): Promise<string[]> {
   const res = await got(indexUrl).text()
@@ -86,10 +88,19 @@ export async function fetchAndParseScikitLearnDoc(
     return null
   }
 
-  const fullName = $('h1', $s).text().replaceAll('¶', '').trim()
-  const nameParts = fullName.split('.')
-  const namespace = nameParts.slice(0, -1).join('.')
-  const name = nameParts.at(-1)
+  const parsedUrl = new URL(url)
+  const namespace = parsedUrl.pathname
+    .split('/')
+    .at(-1)
+    .split('.')
+    .slice(0, -2)
+    .join('.')
+
+  const name = $('h1', $s)
+    .text()
+    .replaceAll('¶', '')
+    .replaceAll(/[\W_]+/g, '')
+    .trim()
 
   const desc = parseDesc($, $('dd', $body))
 
@@ -105,6 +116,13 @@ export async function fetchAndParseScikitLearnDoc(
     url,
     params
   }
+
+  assert(name)
+  assert(type)
+  assert(url)
+  assert(namespace)
+
+  console.log(namespace)
 
   if (type === 'function') {
     const $returns = $('dd:nth-child(4) dt', $l)
@@ -127,7 +145,7 @@ export async function fetchAndParseScikitLearnDoc(
         const id = $top.attr('id')
         const $body = $top.next()
         const desc = parseDesc($, $body)
-        const name = id.replace(fullName, '').replace(/^\./, '').trim()
+        const name = id.split('.').at(-1).trim()
 
         if (methodIgnoreList.has(name)) {
           return null

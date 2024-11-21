@@ -36,14 +36,9 @@ export class MiniBatchDictionaryLearning {
     alpha?: number
 
     /**
-      Total number of iterations over data batches to perform.
+      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics.
 
-      @defaultValue `1000`
-     */
-    n_iter?: number
-
-    /**
-      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
+      @defaultValue `1`
      */
     max_iter?: number
 
@@ -55,7 +50,7 @@ export class MiniBatchDictionaryLearning {
     fit_algorithm?: 'lars' | 'cd'
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -146,7 +141,7 @@ export class MiniBatchDictionaryLearning {
     callback?: any
 
     /**
-      Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not `undefined`.
+      Control early stopping based on the norm of the differences in the dictionary between 2 steps.
 
       To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
 
@@ -155,7 +150,7 @@ export class MiniBatchDictionaryLearning {
     tol?: number
 
     /**
-      Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not `undefined`.
+      Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function.
 
       To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
 
@@ -207,37 +202,8 @@ except NameError: bridgeMiniBatchDictionaryLearning = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MiniBatchDictionaryLearning = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'n_iter': ${
-      this.opts['n_iter'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'fit_algorithm': ${
-      this.opts['fit_algorithm'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'batch_size': ${
-      this.opts['batch_size'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'dict_init': np.array(${
-      this.opts['dict_init'] ?? undefined
-    }) if ${
-      this.opts['dict_init'] !== undefined
-    } else None, 'transform_algorithm': ${
-      this.opts['transform_algorithm'] ?? undefined
-    }, 'transform_n_nonzero_coefs': ${
-      this.opts['transform_n_nonzero_coefs'] ?? undefined
-    }, 'transform_alpha': ${
-      this.opts['transform_alpha'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'split_sign': ${
-      this.opts['split_sign'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'positive_code': ${
-      this.opts['positive_code'] ?? undefined
-    }, 'positive_dict': ${
-      this.opts['positive_dict'] ?? undefined
-    }, 'transform_max_iter': ${
-      this.opts['transform_max_iter'] ?? undefined
-    }, 'callback': ${this.opts['callback'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_no_improvement': ${this.opts['max_no_improvement'] ?? undefined}}
+    await this._py
+      .ex`ctor_MiniBatchDictionaryLearning = {'n_components': ${this.opts['n_components'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'fit_algorithm': ${this.opts['fit_algorithm'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'dict_init': np.array(${this.opts['dict_init'] ?? undefined}) if ${this.opts['dict_init'] !== undefined} else None, 'transform_algorithm': ${this.opts['transform_algorithm'] ?? undefined}, 'transform_n_nonzero_coefs': ${this.opts['transform_n_nonzero_coefs'] ?? undefined}, 'transform_alpha': ${this.opts['transform_alpha'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'split_sign': ${this.opts['split_sign'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'positive_code': ${this.opts['positive_code'] ?? undefined}, 'positive_dict': ${this.opts['positive_dict'] ?? undefined}, 'transform_max_iter': ${this.opts['transform_max_iter'] ?? undefined}, 'callback': ${this.opts['callback'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_no_improvement': ${this.opts['max_no_improvement'] ?? undefined}}
 
 ctor_MiniBatchDictionaryLearning = {k: v for k, v in ctor_MiniBatchDictionaryLearning.items() if v is not None}`
 
@@ -293,9 +259,8 @@ ctor_MiniBatchDictionaryLearning = {k: v for k, v in ctor_MiniBatchDictionaryLea
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchDictionaryLearning_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MiniBatchDictionaryLearning_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MiniBatchDictionaryLearning_fit = {k: v for k, v in pms_MiniBatchDictionaryLearning_fit.items() if v is not None}`
 
@@ -343,13 +308,7 @@ pms_MiniBatchDictionaryLearning_fit = {k: v for k, v in pms_MiniBatchDictionaryL
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchDictionaryLearning_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_MiniBatchDictionaryLearning_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_MiniBatchDictionaryLearning_fit_transform = {k: v for k, v in pms_MiniBatchDictionaryLearning_fit_transform.items() if v is not None}`
 
@@ -387,9 +346,7 @@ pms_MiniBatchDictionaryLearning_fit_transform = {k: v for k, v in pms_MiniBatchD
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchDictionaryLearning_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_MiniBatchDictionaryLearning_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_MiniBatchDictionaryLearning_get_feature_names_out = {k: v for k, v in pms_MiniBatchDictionaryLearning_get_feature_names_out.items() if v is not None}`
 
@@ -427,9 +384,7 @@ pms_MiniBatchDictionaryLearning_get_feature_names_out = {k: v for k, v in pms_Mi
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchDictionaryLearning_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MiniBatchDictionaryLearning_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MiniBatchDictionaryLearning_get_metadata_routing = {k: v for k, v in pms_MiniBatchDictionaryLearning_get_metadata_routing.items() if v is not None}`
 
@@ -470,9 +425,7 @@ pms_MiniBatchDictionaryLearning_get_metadata_routing = {k: v for k, v in pms_Min
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchDictionaryLearning_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+      .ex`pms_MiniBatchDictionaryLearning_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MiniBatchDictionaryLearning_partial_fit = {k: v for k, v in pms_MiniBatchDictionaryLearning_partial_fit.items() if v is not None}`
 
@@ -494,7 +447,7 @@ pms_MiniBatchDictionaryLearning_partial_fit = {k: v for k, v in pms_MiniBatchDic
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -510,9 +463,7 @@ pms_MiniBatchDictionaryLearning_partial_fit = {k: v for k, v in pms_MiniBatchDic
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchDictionaryLearning_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+      .ex`pms_MiniBatchDictionaryLearning_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MiniBatchDictionaryLearning_set_output = {k: v for k, v in pms_MiniBatchDictionaryLearning_set_output.items() if v is not None}`
 
@@ -550,9 +501,7 @@ pms_MiniBatchDictionaryLearning_set_output = {k: v for k, v in pms_MiniBatchDict
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchDictionaryLearning_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_MiniBatchDictionaryLearning_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MiniBatchDictionaryLearning_transform = {k: v for k, v in pms_MiniBatchDictionaryLearning_transform.items() if v is not None}`
 

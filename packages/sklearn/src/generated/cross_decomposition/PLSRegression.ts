@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   PLSRegression is also known as PLS2 or PLS1, depending on the number of targets.
 
+  For a comparison between other cross decomposition algorithms, see [Compare cross decomposition methods](../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html#sphx-glr-auto-examples-cross-decomposition-plot-compare-cross-decomposition-py).
+
   Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSRegression.html)
@@ -24,7 +26,7 @@ export class PLSRegression {
 
   constructor(opts?: {
     /**
-      Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+      Number of components to keep. Should be in `\[1, n\_features\]`.
 
       @defaultValue `2`
      */
@@ -98,13 +100,8 @@ except NameError: bridgePLSRegression = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PLSRegression = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'scale': ${this.opts['scale'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PLSRegression = {'n_components': ${this.opts['n_components'] ?? undefined}, 'scale': ${this.opts['scale'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_PLSRegression = {k: v for k, v in ctor_PLSRegression.items() if v is not None}`
 
@@ -145,6 +142,11 @@ ctor_PLSRegression = {k: v for k, v in ctor_PLSRegression.items() if v is not No
     /**
       Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
      */
+    y?: ArrayLike
+
+    /**
+      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+     */
     Y?: ArrayLike
   }): Promise<any> {
     if (this._isDisposed) {
@@ -156,11 +158,8 @@ ctor_PLSRegression = {k: v for k, v in ctor_PLSRegression.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSRegression_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSRegression_fit = {k: v for k, v in pms_PLSRegression_fit.items() if v is not None}`
 
@@ -196,11 +195,8 @@ pms_PLSRegression_fit = {k: v for k, v in pms_PLSRegression_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSRegression_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_PLSRegression_fit_transform = {k: v for k, v in pms_PLSRegression_fit_transform.items() if v is not None}`
 
@@ -236,9 +232,7 @@ pms_PLSRegression_fit_transform = {k: v for k, v in pms_PLSRegression_fit_transf
 
     // set up method params
     await this._py
-      .ex`pms_PLSRegression_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_PLSRegression_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PLSRegression_get_feature_names_out = {k: v for k, v in pms_PLSRegression_get_feature_names_out.items() if v is not None}`
 
@@ -273,9 +267,8 @@ pms_PLSRegression_get_feature_names_out = {k: v for k, v in pms_PLSRegression_ge
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSRegression_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PLSRegression_get_metadata_routing = {k: v for k, v in pms_PLSRegression_get_metadata_routing.items() if v is not None}`
 
@@ -300,6 +293,11 @@ pms_PLSRegression_get_metadata_routing = {k: v for k, v in pms_PLSRegression_get
     /**
       New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
      */
+    y?: ArrayLike
+
+    /**
+      New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+     */
     Y?: ArrayLike[]
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -313,11 +311,8 @@ pms_PLSRegression_get_metadata_routing = {k: v for k, v in pms_PLSRegression_get
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSRegression_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSRegression_inverse_transform = {k: v for k, v in pms_PLSRegression_inverse_transform.items() if v is not None}`
 
@@ -355,11 +350,8 @@ pms_PLSRegression_inverse_transform = {k: v for k, v in pms_PLSRegression_invers
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSRegression_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSRegression_predict = {k: v for k, v in pms_PLSRegression_predict.items() if v is not None}`
 
@@ -402,13 +394,8 @@ pms_PLSRegression_predict = {k: v for k, v in pms_PLSRegression_predict.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSRegression_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_PLSRegression_score = {k: v for k, v in pms_PLSRegression_score.items() if v is not None}`
 
@@ -430,7 +417,7 @@ pms_PLSRegression_score = {k: v for k, v in pms_PLSRegression_score.items() if v
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSRegression instance has already been disposed')
@@ -441,9 +428,8 @@ pms_PLSRegression_score = {k: v for k, v in pms_PLSRegression_score.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSRegression_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PLSRegression_set_output = {k: v for k, v in pms_PLSRegression_set_output.items() if v is not None}`
 
@@ -480,9 +466,8 @@ pms_PLSRegression_set_output = {k: v for k, v in pms_PLSRegression_set_output.it
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_set_predict_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSRegression_set_predict_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSRegression_set_predict_request = {k: v for k, v in pms_PLSRegression_set_predict_request.items() if v is not None}`
 
@@ -519,9 +504,8 @@ pms_PLSRegression_set_predict_request = {k: v for k, v in pms_PLSRegression_set_
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSRegression_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_PLSRegression_set_score_request = {k: v for k, v in pms_PLSRegression_set_score_request.items() if v is not None}`
 
@@ -558,9 +542,8 @@ pms_PLSRegression_set_score_request = {k: v for k, v in pms_PLSRegression_set_sc
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSRegression_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSRegression_set_transform_request = {k: v for k, v in pms_PLSRegression_set_transform_request.items() if v is not None}`
 
@@ -585,6 +568,11 @@ pms_PLSRegression_set_transform_request = {k: v for k, v in pms_PLSRegression_se
     /**
       Target vectors.
      */
+    y?: ArrayLike[]
+
+    /**
+      Target vectors.
+     */
     Y?: ArrayLike[]
 
     /**
@@ -603,13 +591,8 @@ pms_PLSRegression_set_transform_request = {k: v for k, v in pms_PLSRegression_se
     }
 
     // set up method params
-    await this._py.ex`pms_PLSRegression_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSRegression_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.items() if v is not None}`
 

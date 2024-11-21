@@ -131,19 +131,8 @@ except NameError: bridgeLasso = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Lasso = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${
-      this.opts['precompute'] !== undefined
-    } else None, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'selection': ${this.opts['selection'] ?? undefined}}
+    await this._py
+      .ex`ctor_Lasso = {'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${this.opts['precompute'] !== undefined} else None, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'selection': ${this.opts['selection'] ?? undefined}}
 
 ctor_Lasso = {k: v for k, v in ctor_Lasso.items() if v is not None}`
 
@@ -177,8 +166,10 @@ ctor_Lasso = {k: v for k, v in ctor_Lasso.items() if v is not None}`
   async fit(opts: {
     /**
       Data.
+
+      Note that large sparse matrices and arrays requiring `int64` indices are not accepted.
      */
-    X?: any
+    X?: SparseMatrix
 
     /**
       Target. Will be cast to X’s dtype if necessary.
@@ -206,15 +197,8 @@ ctor_Lasso = {k: v for k, v in ctor_Lasso.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Lasso_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Lasso_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_Lasso_fit = {k: v for k, v in pms_Lasso_fit.items() if v is not None}`
 
@@ -247,9 +231,8 @@ pms_Lasso_fit = {k: v for k, v in pms_Lasso_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Lasso_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Lasso_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Lasso_get_metadata_routing = {k: v for k, v in pms_Lasso_get_metadata_routing.items() if v is not None}`
 
@@ -304,7 +287,7 @@ pms_Lasso_get_metadata_routing = {k: v for k, v in pms_Lasso_get_metadata_routin
     /**
       List of alphas where to compute the models. If `undefined` alphas are set automatically.
      */
-    alphas?: NDArray
+    alphas?: ArrayLike
 
     /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
@@ -328,7 +311,7 @@ pms_Lasso_get_metadata_routing = {k: v for k, v in pms_Lasso_get_metadata_routin
     /**
       The initial values of the coefficients.
      */
-    coef_init?: NDArray
+    coef_init?: ArrayLike
 
     /**
       Amount of verbosity.
@@ -372,29 +355,8 @@ pms_Lasso_get_metadata_routing = {k: v for k, v in pms_Lasso_get_metadata_routin
     }
 
     // set up method params
-    await this._py.ex`pms_Lasso_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${
-      opts['l1_ratio'] ?? undefined
-    }, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${
-      opts['n_alphas'] ?? undefined
-    }, 'alphas': np.array(${opts['alphas'] ?? undefined}) if ${
-      opts['alphas'] !== undefined
-    } else None, 'precompute': np.array(${
-      opts['precompute'] ?? undefined
-    }) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${
-      opts['return_n_iter'] ?? undefined
-    }, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_Lasso_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${opts['l1_ratio'] ?? undefined}, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': ${opts['alphas'] ?? undefined}, 'precompute': np.array(${opts['precompute'] ?? undefined}) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${opts['return_n_iter'] ?? undefined}, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${opts['check_input'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Lasso_path = {k: v for k, v in pms_Lasso_path.items() if v is not None}`
 
@@ -468,13 +430,8 @@ pms_Lasso_predict = {k: v for k, v in pms_Lasso_predict.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_Lasso_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_Lasso_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_Lasso_score = {k: v for k, v in pms_Lasso_score.items() if v is not None}`
 
@@ -514,9 +471,8 @@ pms_Lasso_score = {k: v for k, v in pms_Lasso_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Lasso_set_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_Lasso_set_fit_request = {'check_input': ${opts['check_input'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Lasso_set_fit_request = {k: v for k, v in pms_Lasso_set_fit_request.items() if v is not None}`
 
@@ -551,9 +507,8 @@ pms_Lasso_set_fit_request = {k: v for k, v in pms_Lasso_set_fit_request.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_Lasso_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Lasso_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Lasso_set_score_request = {k: v for k, v in pms_Lasso_set_score_request.items() if v is not None}`
 

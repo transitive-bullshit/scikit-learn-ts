@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Finds the set of sparse components that can optimally reconstruct the data. The amount of sparseness is controllable by the coefficient of the L1 penalty, given by the parameter alpha.
 
+  For an example comparing sparse PCA to PCA, see [Faces dataset decompositions](../../auto_examples/decomposition/plot_faces_decomposition.html#sphx-glr-auto-examples-decomposition-plot-faces-decomposition-py)
+
   Read more in the [User Guide](../decomposition.html#sparsepca).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchSparsePCA.html)
@@ -43,14 +45,9 @@ export class MiniBatchSparsePCA {
     ridge_alpha?: number
 
     /**
-      Number of iterations to perform for each mini batch.
+      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics.
 
-      @defaultValue `100`
-     */
-    n_iter?: number
-
-    /**
-      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
+      @defaultValue `1`
      */
     max_iter?: number
 
@@ -81,7 +78,7 @@ export class MiniBatchSparsePCA {
     shuffle?: boolean
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -98,7 +95,7 @@ export class MiniBatchSparsePCA {
     random_state?: number
 
     /**
-      Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not `undefined`.
+      Control early stopping based on the norm of the differences in the dictionary between 2 steps.
 
       To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
 
@@ -107,7 +104,7 @@ export class MiniBatchSparsePCA {
     tol?: number
 
     /**
-      Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not `undefined`.
+      Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function.
 
       To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
 
@@ -159,21 +156,8 @@ except NameError: bridgeMiniBatchSparsePCA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MiniBatchSparsePCA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'ridge_alpha': ${
-      this.opts['ridge_alpha'] ?? undefined
-    }, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'callback': ${this.opts['callback'] ?? undefined}, 'batch_size': ${
-      this.opts['batch_size'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'shuffle': ${
-      this.opts['shuffle'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'method': ${
-      this.opts['method'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_no_improvement': ${this.opts['max_no_improvement'] ?? undefined}}
+    await this._py
+      .ex`ctor_MiniBatchSparsePCA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'ridge_alpha': ${this.opts['ridge_alpha'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'callback': ${this.opts['callback'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'method': ${this.opts['method'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_no_improvement': ${this.opts['max_no_improvement'] ?? undefined}}
 
 ctor_MiniBatchSparsePCA = {k: v for k, v in ctor_MiniBatchSparsePCA.items() if v is not None}`
 
@@ -227,9 +211,8 @@ ctor_MiniBatchSparsePCA = {k: v for k, v in ctor_MiniBatchSparsePCA.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchSparsePCA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MiniBatchSparsePCA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MiniBatchSparsePCA_fit = {k: v for k, v in pms_MiniBatchSparsePCA_fit.items() if v is not None}`
 
@@ -276,13 +259,8 @@ pms_MiniBatchSparsePCA_fit = {k: v for k, v in pms_MiniBatchSparsePCA_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchSparsePCA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MiniBatchSparsePCA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_MiniBatchSparsePCA_fit_transform = {k: v for k, v in pms_MiniBatchSparsePCA_fit_transform.items() if v is not None}`
 
@@ -320,9 +298,7 @@ pms_MiniBatchSparsePCA_fit_transform = {k: v for k, v in pms_MiniBatchSparsePCA_
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchSparsePCA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_MiniBatchSparsePCA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_MiniBatchSparsePCA_get_feature_names_out = {k: v for k, v in pms_MiniBatchSparsePCA_get_feature_names_out.items() if v is not None}`
 
@@ -360,9 +336,7 @@ pms_MiniBatchSparsePCA_get_feature_names_out = {k: v for k, v in pms_MiniBatchSp
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchSparsePCA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MiniBatchSparsePCA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MiniBatchSparsePCA_get_metadata_routing = {k: v for k, v in pms_MiniBatchSparsePCA_get_metadata_routing.items() if v is not None}`
 
@@ -400,9 +374,7 @@ pms_MiniBatchSparsePCA_get_metadata_routing = {k: v for k, v in pms_MiniBatchSpa
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchSparsePCA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_MiniBatchSparsePCA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MiniBatchSparsePCA_inverse_transform = {k: v for k, v in pms_MiniBatchSparsePCA_inverse_transform.items() if v is not None}`
 
@@ -424,7 +396,7 @@ pms_MiniBatchSparsePCA_inverse_transform = {k: v for k, v in pms_MiniBatchSparse
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -437,9 +409,8 @@ pms_MiniBatchSparsePCA_inverse_transform = {k: v for k, v in pms_MiniBatchSparse
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchSparsePCA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MiniBatchSparsePCA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MiniBatchSparsePCA_set_output = {k: v for k, v in pms_MiniBatchSparsePCA_set_output.items() if v is not None}`
 
@@ -476,9 +447,8 @@ pms_MiniBatchSparsePCA_set_output = {k: v for k, v in pms_MiniBatchSparsePCA_set
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchSparsePCA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MiniBatchSparsePCA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MiniBatchSparsePCA_transform = {k: v for k, v in pms_MiniBatchSparsePCA_transform.items() if v is not None}`
 

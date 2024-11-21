@@ -6,11 +6,15 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Kernel Principal component analysis (KPCA) [\[1\]](#r396fc7d924b8-1).
+  Kernel Principal component analysis (KPCA).
 
-  Non-linear dimensionality reduction through the use of kernels (see [Pairwise metrics, Affinities and Kernels](../metrics.html#metrics)).
+  Non-linear dimensionality reduction through the use of kernels [\[1\]](#r396fc7d924b8-1), see also [Pairwise metrics, Affinities and Kernels](../metrics.html#metrics).
 
-  It uses the [`scipy.linalg.eigh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html#scipy.linalg.eigh "(in SciPy v1.11.3)") LAPACK implementation of the full SVD or the [`scipy.sparse.linalg.eigsh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html#scipy.sparse.linalg.eigsh "(in SciPy v1.11.3)") ARPACK implementation of the truncated SVD, depending on the shape of the input data and the number of components to extract. It can also use a randomized truncated SVD by the method proposed in [\[3\]](#r396fc7d924b8-3), see `eigen\_solver`.
+  It uses the [`scipy.linalg.eigh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html#scipy.linalg.eigh "(in SciPy v1.14.1)") LAPACK implementation of the full SVD or the [`scipy.sparse.linalg.eigsh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html#scipy.sparse.linalg.eigsh "(in SciPy v1.14.1)") ARPACK implementation of the truncated SVD, depending on the shape of the input data and the number of components to extract. It can also use a randomized truncated SVD by the method proposed in [\[3\]](#r396fc7d924b8-3), see `eigen\_solver`.
+
+  For a usage example and comparison between Principal Components Analysis (PCA) and its kernelized version (KPCA), see [Kernel PCA](../../auto_examples/decomposition/plot_kernel_pca.html#sphx-glr-auto-examples-decomposition-plot-kernel-pca-py).
+
+  For a usage example in denoising images using KPCA, see [Image denoising using kernel PCA](../../auto_examples/applications/plot_digits_denoising.html#sphx-glr-auto-examples-applications-plot-digits-denoising-py).
 
   Read more in the [User Guide](../decomposition.html#kernel-pca).
 
@@ -121,7 +125,7 @@ export class KernelPCA {
     copy_X?: boolean
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -165,25 +169,8 @@ except NameError: bridgeKernelPCA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KernelPCA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'kernel': ${this.opts['kernel'] ?? undefined}, 'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'coef0': ${
-      this.opts['coef0'] ?? undefined
-    }, 'kernel_params': ${this.opts['kernel_params'] ?? undefined}, 'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'fit_inverse_transform': ${
-      this.opts['fit_inverse_transform'] ?? undefined
-    }, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'iterated_power': ${
-      this.opts['iterated_power'] ?? undefined
-    }, 'remove_zero_eig': ${
-      this.opts['remove_zero_eig'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_KernelPCA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'kernel': ${this.opts['kernel'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'kernel_params': ${this.opts['kernel_params'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_inverse_transform': ${this.opts['fit_inverse_transform'] ?? undefined}, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'iterated_power': ${this.opts['iterated_power'] ?? undefined}, 'remove_zero_eig': ${this.opts['remove_zero_eig'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_KernelPCA = {k: v for k, v in ctor_KernelPCA.items() if v is not None}`
 
@@ -234,9 +221,8 @@ ctor_KernelPCA = {k: v for k, v in ctor_KernelPCA.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KernelPCA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelPCA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_KernelPCA_fit = {k: v for k, v in pms_KernelPCA_fit.items() if v is not None}`
 
@@ -277,11 +263,8 @@ pms_KernelPCA_fit = {k: v for k, v in pms_KernelPCA_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_KernelPCA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelPCA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_KernelPCA_fit_transform = {k: v for k, v in pms_KernelPCA_fit_transform.items() if v is not None}`
 
@@ -317,9 +300,7 @@ pms_KernelPCA_fit_transform = {k: v for k, v in pms_KernelPCA_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_KernelPCA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_KernelPCA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_KernelPCA_get_feature_names_out = {k: v for k, v in pms_KernelPCA_get_feature_names_out.items() if v is not None}`
 
@@ -354,9 +335,8 @@ pms_KernelPCA_get_feature_names_out = {k: v for k, v in pms_KernelPCA_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_KernelPCA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelPCA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KernelPCA_get_metadata_routing = {k: v for k, v in pms_KernelPCA_get_metadata_routing.items() if v is not None}`
 
@@ -389,9 +369,8 @@ pms_KernelPCA_get_metadata_routing = {k: v for k, v in pms_KernelPCA_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_KernelPCA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KernelPCA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KernelPCA_inverse_transform = {k: v for k, v in pms_KernelPCA_inverse_transform.items() if v is not None}`
 
@@ -413,7 +392,7 @@ pms_KernelPCA_inverse_transform = {k: v for k, v in pms_KernelPCA_inverse_transf
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KernelPCA instance has already been disposed')
@@ -424,9 +403,8 @@ pms_KernelPCA_inverse_transform = {k: v for k, v in pms_KernelPCA_inverse_transf
     }
 
     // set up method params
-    await this._py.ex`pms_KernelPCA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelPCA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_KernelPCA_set_output = {k: v for k, v in pms_KernelPCA_set_output.items() if v is not None}`
 
@@ -457,9 +435,8 @@ pms_KernelPCA_set_output = {k: v for k, v in pms_KernelPCA_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KernelPCA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KernelPCA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v is not None}`
 

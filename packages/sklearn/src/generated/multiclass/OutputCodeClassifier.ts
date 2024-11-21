@@ -43,7 +43,7 @@ export class OutputCodeClassifier {
     /**
       The number of jobs to use for the computation: the multiclass problems are computed in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -91,11 +91,8 @@ except NameError: bridgeOutputCodeClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OutputCodeClassifier = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'code_size': ${this.opts['code_size'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_OutputCodeClassifier = {'estimator': ${this.opts['estimator'] ?? undefined}, 'code_size': ${this.opts['code_size'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_OutputCodeClassifier = {k: v for k, v in ctor_OutputCodeClassifier.items() if v is not None}`
 
@@ -137,6 +134,11 @@ ctor_OutputCodeClassifier = {k: v for k, v in ctor_OutputCodeClassifier.items() 
       Multi-class targets.
      */
     y?: ArrayLike
+
+    /**
+      Parameters passed to the `estimator.fit` method of each sub-estimator.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -149,11 +151,8 @@ ctor_OutputCodeClassifier = {k: v for k, v in ctor_OutputCodeClassifier.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_OutputCodeClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_OutputCodeClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_OutputCodeClassifier_fit = {k: v for k, v in pms_OutputCodeClassifier_fit.items() if v is not None}`
 
@@ -173,7 +172,7 @@ pms_OutputCodeClassifier_fit = {k: v for k, v in pms_OutputCodeClassifier_fit.it
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -191,9 +190,7 @@ pms_OutputCodeClassifier_fit = {k: v for k, v in pms_OutputCodeClassifier_fit.it
 
     // set up method params
     await this._py
-      .ex`pms_OutputCodeClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_OutputCodeClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OutputCodeClassifier_get_metadata_routing = {k: v for k, v in pms_OutputCodeClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -226,9 +223,8 @@ pms_OutputCodeClassifier_get_metadata_routing = {k: v for k, v in pms_OutputCode
     }
 
     // set up method params
-    await this._py.ex`pms_OutputCodeClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OutputCodeClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OutputCodeClassifier_predict = {k: v for k, v in pms_OutputCodeClassifier_predict.items() if v is not None}`
 
@@ -273,13 +269,8 @@ pms_OutputCodeClassifier_predict = {k: v for k, v in pms_OutputCodeClassifier_pr
     }
 
     // set up method params
-    await this._py.ex`pms_OutputCodeClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_OutputCodeClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_OutputCodeClassifier_score = {k: v for k, v in pms_OutputCodeClassifier_score.items() if v is not None}`
 
@@ -319,9 +310,7 @@ pms_OutputCodeClassifier_score = {k: v for k, v in pms_OutputCodeClassifier_scor
 
     // set up method params
     await this._py
-      .ex`pms_OutputCodeClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_OutputCodeClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_OutputCodeClassifier_set_score_request = {k: v for k, v in pms_OutputCodeClassifier_set_score_request.items() if v is not None}`
 

@@ -76,11 +76,8 @@ except NameError: bridgePatchExtractor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PatchExtractor = {'patch_size': ${
-      this.opts['patch_size'] ?? undefined
-    }, 'max_patches': ${
-      this.opts['max_patches'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_PatchExtractor = {'patch_size': ${this.opts['patch_size'] ?? undefined}, 'max_patches': ${this.opts['max_patches'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_PatchExtractor = {k: v for k, v in ctor_PatchExtractor.items() if v is not None}`
 
@@ -134,9 +131,8 @@ ctor_PatchExtractor = {k: v for k, v in ctor_PatchExtractor.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PatchExtractor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v is not None}`
 
@@ -179,13 +175,8 @@ pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PatchExtractor_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_PatchExtractor_fit_transform = {k: v for k, v in pms_PatchExtractor_fit_transform.items() if v is not None}`
 
@@ -220,9 +211,8 @@ pms_PatchExtractor_fit_transform = {k: v for k, v in pms_PatchExtractor_fit_tran
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PatchExtractor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PatchExtractor_get_metadata_routing = {k: v for k, v in pms_PatchExtractor_get_metadata_routing.items() if v is not None}`
 
@@ -244,7 +234,7 @@ pms_PatchExtractor_get_metadata_routing = {k: v for k, v in pms_PatchExtractor_g
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PatchExtractor instance has already been disposed')
@@ -255,9 +245,8 @@ pms_PatchExtractor_get_metadata_routing = {k: v for k, v in pms_PatchExtractor_g
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PatchExtractor_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PatchExtractor_set_output = {k: v for k, v in pms_PatchExtractor_set_output.items() if v is not None}`
 
@@ -288,9 +277,8 @@ pms_PatchExtractor_set_output = {k: v for k, v in pms_PatchExtractor_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PatchExtractor_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PatchExtractor_transform = {k: v for k, v in pms_PatchExtractor_transform.items() if v is not None}`
 

@@ -80,7 +80,7 @@ export class GaussianProcessClassifier {
     multi_class?: 'one_vs_rest' | 'one_vs_one'
 
     /**
-      The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -128,21 +128,8 @@ except NameError: bridgeGaussianProcessClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianProcessClassifier = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'optimizer': ${
-      this.opts['optimizer'] ?? undefined
-    }, 'n_restarts_optimizer': ${
-      this.opts['n_restarts_optimizer'] ?? undefined
-    }, 'max_iter_predict': ${
-      this.opts['max_iter_predict'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'copy_X_train': ${
-      this.opts['copy_X_train'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'multi_class': ${this.opts['multi_class'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GaussianProcessClassifier = {'kernel': ${this.opts['kernel'] ?? undefined}, 'optimizer': ${this.opts['optimizer'] ?? undefined}, 'n_restarts_optimizer': ${this.opts['n_restarts_optimizer'] ?? undefined}, 'max_iter_predict': ${this.opts['max_iter_predict'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'copy_X_train': ${this.opts['copy_X_train'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'multi_class': ${this.opts['multi_class'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_GaussianProcessClassifier = {k: v for k, v in ctor_GaussianProcessClassifier.items() if v is not None}`
 
@@ -196,11 +183,8 @@ ctor_GaussianProcessClassifier = {k: v for k, v in ctor_GaussianProcessClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_fit = {k: v for k, v in pms_GaussianProcessClassifier_fit.items() if v is not None}`
 
@@ -238,9 +222,7 @@ pms_GaussianProcessClassifier_fit = {k: v for k, v in pms_GaussianProcessClassif
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianProcessClassifier_get_metadata_routing = {k: v for k, v in pms_GaussianProcessClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -292,11 +274,7 @@ pms_GaussianProcessClassifier_get_metadata_routing = {k: v for k, v in pms_Gauss
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_log_marginal_likelihood = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
+      .ex`pms_GaussianProcessClassifier_log_marginal_likelihood = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
 
 pms_GaussianProcessClassifier_log_marginal_likelihood = {k: v for k, v in pms_GaussianProcessClassifier_log_marginal_likelihood.items() if v is not None}`
 
@@ -331,9 +309,8 @@ pms_GaussianProcessClassifier_log_marginal_likelihood = {k: v for k, v in pms_Ga
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_predict = {k: v for k, v in pms_GaussianProcessClassifier_predict.items() if v is not None}`
 
@@ -369,9 +346,7 @@ pms_GaussianProcessClassifier_predict = {k: v for k, v in pms_GaussianProcessCla
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GaussianProcessClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_predict_proba = {k: v for k, v in pms_GaussianProcessClassifier_predict_proba.items() if v is not None}`
 
@@ -418,13 +393,8 @@ pms_GaussianProcessClassifier_predict_proba = {k: v for k, v in pms_GaussianProc
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClassifier_score.items() if v is not None}`
 
@@ -464,9 +434,7 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GaussianProcessClassifier_set_score_request = {k: v for k, v in pms_GaussianProcessClassifier_set_score_request.items() if v is not None}`
 

@@ -20,9 +20,9 @@ export class MiniBatchNMF {
 
   constructor(opts?: {
     /**
-      Number of components, if `n\_components` is not set all features are kept.
+      Number of components, if `n\_components` is not set all features are kept. If `n\_components='auto'`, the number of components is automatically inferred from W or H shapes.
      */
-    n_components?: number
+    n_components?: number | 'auto'
 
     /**
       Method used to initialize the procedure. Valid options:
@@ -163,29 +163,8 @@ except NameError: bridgeMiniBatchNMF = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MiniBatchNMF = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'init': ${this.opts['init'] ?? undefined}, 'batch_size': ${
-      this.opts['batch_size'] ?? undefined
-    }, 'beta_loss': ${this.opts['beta_loss'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_no_improvement': ${
-      this.opts['max_no_improvement'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'alpha_W': ${
-      this.opts['alpha_W'] ?? undefined
-    }, 'alpha_H': ${this.opts['alpha_H'] ?? undefined}, 'l1_ratio': ${
-      this.opts['l1_ratio'] ?? undefined
-    }, 'forget_factor': ${
-      this.opts['forget_factor'] ?? undefined
-    }, 'fresh_restarts': ${
-      this.opts['fresh_restarts'] ?? undefined
-    }, 'fresh_restarts_max_iter': ${
-      this.opts['fresh_restarts_max_iter'] ?? undefined
-    }, 'transform_max_iter': ${
-      this.opts['transform_max_iter'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_MiniBatchNMF = {'n_components': ${this.opts['n_components'] ?? undefined}, 'init': ${this.opts['init'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'beta_loss': ${this.opts['beta_loss'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_no_improvement': ${this.opts['max_no_improvement'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'alpha_W': ${this.opts['alpha_W'] ?? undefined}, 'alpha_H': ${this.opts['alpha_H'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'forget_factor': ${this.opts['forget_factor'] ?? undefined}, 'fresh_restarts': ${this.opts['fresh_restarts'] ?? undefined}, 'fresh_restarts_max_iter': ${this.opts['fresh_restarts_max_iter'] ?? undefined}, 'transform_max_iter': ${this.opts['transform_max_iter'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_MiniBatchNMF = {k: v for k, v in ctor_MiniBatchNMF.items() if v is not None}`
 
@@ -242,11 +221,8 @@ ctor_MiniBatchNMF = {k: v for k, v in ctor_MiniBatchNMF.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchNMF_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_MiniBatchNMF_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_MiniBatchNMF_fit = {k: v for k, v in pms_MiniBatchNMF_fit.items() if v is not None}`
 
@@ -294,15 +270,8 @@ pms_MiniBatchNMF_fit = {k: v for k, v in pms_MiniBatchNMF_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchNMF_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'W': np.array(${opts['W'] ?? undefined}) if ${
-      opts['W'] !== undefined
-    } else None, 'H': np.array(${opts['H'] ?? undefined}) if ${
-      opts['H'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MiniBatchNMF_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'W': np.array(${opts['W'] ?? undefined}) if ${opts['W'] !== undefined} else None, 'H': np.array(${opts['H'] ?? undefined}) if ${opts['H'] !== undefined} else None}
 
 pms_MiniBatchNMF_fit_transform = {k: v for k, v in pms_MiniBatchNMF_fit_transform.items() if v is not None}`
 
@@ -338,9 +307,7 @@ pms_MiniBatchNMF_fit_transform = {k: v for k, v in pms_MiniBatchNMF_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_MiniBatchNMF_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_MiniBatchNMF_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_MiniBatchNMF_get_feature_names_out = {k: v for k, v in pms_MiniBatchNMF_get_feature_names_out.items() if v is not None}`
 
@@ -375,9 +342,8 @@ pms_MiniBatchNMF_get_feature_names_out = {k: v for k, v in pms_MiniBatchNMF_get_
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchNMF_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MiniBatchNMF_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MiniBatchNMF_get_metadata_routing = {k: v for k, v in pms_MiniBatchNMF_get_metadata_routing.items() if v is not None}`
 
@@ -397,13 +363,13 @@ pms_MiniBatchNMF_get_metadata_routing = {k: v for k, v in pms_MiniBatchNMF_get_m
     /**
       Transformed data matrix.
      */
-    Xt?: NDArray | SparseMatrix[]
+    X?: NDArray | SparseMatrix[]
 
     /**
-      Use `Xt` instead.
+      Transformed data matrix.
      */
-    W?: any
-  }): Promise<NDArray | SparseMatrix[]> {
+    Xt?: NDArray | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -415,9 +381,8 @@ pms_MiniBatchNMF_get_metadata_routing = {k: v for k, v in pms_MiniBatchNMF_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchNMF_inverse_transform = {'Xt': np.array(${
-      opts['Xt'] ?? undefined
-    }) if ${opts['Xt'] !== undefined} else None, 'W': ${opts['W'] ?? undefined}}
+    await this._py
+      .ex`pms_MiniBatchNMF_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Xt': np.array(${opts['Xt'] ?? undefined}) if ${opts['Xt'] !== undefined} else None}
 
 pms_MiniBatchNMF_inverse_transform = {k: v for k, v in pms_MiniBatchNMF_inverse_transform.items() if v is not None}`
 
@@ -467,15 +432,8 @@ pms_MiniBatchNMF_inverse_transform = {k: v for k, v in pms_MiniBatchNMF_inverse_
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchNMF_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'W': np.array(${opts['W'] ?? undefined}) if ${
-      opts['W'] !== undefined
-    } else None, 'H': np.array(${opts['H'] ?? undefined}) if ${
-      opts['H'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MiniBatchNMF_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'W': np.array(${opts['W'] ?? undefined}) if ${opts['W'] !== undefined} else None, 'H': np.array(${opts['H'] ?? undefined}) if ${opts['H'] !== undefined} else None}
 
 pms_MiniBatchNMF_partial_fit = {k: v for k, v in pms_MiniBatchNMF_partial_fit.items() if v is not None}`
 
@@ -497,7 +455,7 @@ pms_MiniBatchNMF_partial_fit = {k: v for k, v in pms_MiniBatchNMF_partial_fit.it
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
@@ -508,9 +466,8 @@ pms_MiniBatchNMF_partial_fit = {k: v for k, v in pms_MiniBatchNMF_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchNMF_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MiniBatchNMF_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MiniBatchNMF_set_output = {k: v for k, v in pms_MiniBatchNMF_set_output.items() if v is not None}`
 
@@ -521,50 +478,6 @@ pms_MiniBatchNMF_set_output = {k: v for k, v in pms_MiniBatchNMF_set_output.item
     // convert the result from python to node.js
     return this
       ._py`res_MiniBatchNMF_set_output.tolist() if hasattr(res_MiniBatchNMF_set_output, 'tolist') else res_MiniBatchNMF_set_output`
-  }
-
-  /**
-    Request metadata passed to the `partial\_fit` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_partial_fit_request(opts: {
-    /**
-      Metadata routing for `H` parameter in `partial\_fit`.
-     */
-    H?: string | boolean
-
-    /**
-      Metadata routing for `W` parameter in `partial\_fit`.
-     */
-    W?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This MiniBatchNMF instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'MiniBatchNMF must call init() before set_partial_fit_request()'
-      )
-    }
-
-    // set up method params
-    await this._py.ex`pms_MiniBatchNMF_set_partial_fit_request = {'H': ${
-      opts['H'] ?? undefined
-    }, 'W': ${opts['W'] ?? undefined}}
-
-pms_MiniBatchNMF_set_partial_fit_request = {k: v for k, v in pms_MiniBatchNMF_set_partial_fit_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_MiniBatchNMF_set_partial_fit_request = bridgeMiniBatchNMF[${this.id}].set_partial_fit_request(**pms_MiniBatchNMF_set_partial_fit_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_MiniBatchNMF_set_partial_fit_request.tolist() if hasattr(res_MiniBatchNMF_set_partial_fit_request, 'tolist') else res_MiniBatchNMF_set_partial_fit_request`
   }
 
   /**
@@ -585,9 +498,8 @@ pms_MiniBatchNMF_set_partial_fit_request = {k: v for k, v in pms_MiniBatchNMF_se
     }
 
     // set up method params
-    await this._py.ex`pms_MiniBatchNMF_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MiniBatchNMF_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MiniBatchNMF_transform = {k: v for k, v in pms_MiniBatchNMF_transform.items() if v is not None}`
 

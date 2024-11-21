@@ -63,7 +63,7 @@ export class KNeighborsTransformer {
     metric?: string
 
     /**
-      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used. This parameter is expected to be positive.
 
       @defaultValue `2`
      */
@@ -123,15 +123,8 @@ except NameError: bridgeKNeighborsTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KNeighborsTransformer = {'mode': ${
-      this.opts['mode'] ?? undefined
-    }, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_KNeighborsTransformer = {'mode': ${this.opts['mode'] ?? undefined}, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_KNeighborsTransformer = {k: v for k, v in ctor_KNeighborsTransformer.items() if v is not None}`
 
@@ -185,9 +178,8 @@ ctor_KNeighborsTransformer = {k: v for k, v in ctor_KNeighborsTransformer.items(
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_KNeighborsTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_KNeighborsTransformer_fit = {k: v for k, v in pms_KNeighborsTransformer_fit.items() if v is not None}`
 
@@ -230,9 +222,7 @@ pms_KNeighborsTransformer_fit = {k: v for k, v in pms_KNeighborsTransformer_fit.
 
     // set up method params
     await this._py
-      .ex`pms_KNeighborsTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+      .ex`pms_KNeighborsTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_KNeighborsTransformer_fit_transform = {k: v for k, v in pms_KNeighborsTransformer_fit_transform.items() if v is not None}`
 
@@ -270,9 +260,7 @@ pms_KNeighborsTransformer_fit_transform = {k: v for k, v in pms_KNeighborsTransf
 
     // set up method params
     await this._py
-      .ex`pms_KNeighborsTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_KNeighborsTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_KNeighborsTransformer_get_feature_names_out = {k: v for k, v in pms_KNeighborsTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -310,9 +298,7 @@ pms_KNeighborsTransformer_get_feature_names_out = {k: v for k, v in pms_KNeighbo
 
     // set up method params
     await this._py
-      .ex`pms_KNeighborsTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_KNeighborsTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KNeighborsTransformer_get_metadata_routing = {k: v for k, v in pms_KNeighborsTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -361,11 +347,8 @@ pms_KNeighborsTransformer_get_metadata_routing = {k: v for k, v in pms_KNeighbor
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsTransformer_kneighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KNeighborsTransformer_kneighbors = {'X': ${opts['X'] ?? undefined}, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}}
 
 pms_KNeighborsTransformer_kneighbors = {k: v for k, v in pms_KNeighborsTransformer_kneighbors.items() if v is not None}`
 
@@ -413,11 +396,7 @@ pms_KNeighborsTransformer_kneighbors = {k: v for k, v in pms_KNeighborsTransform
 
     // set up method params
     await this._py
-      .ex`pms_KNeighborsTransformer_kneighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${
-      opts['n_neighbors'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}}
+      .ex`pms_KNeighborsTransformer_kneighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}}
 
 pms_KNeighborsTransformer_kneighbors_graph = {k: v for k, v in pms_KNeighborsTransformer_kneighbors_graph.items() if v is not None}`
 
@@ -439,7 +418,7 @@ pms_KNeighborsTransformer_kneighbors_graph = {k: v for k, v in pms_KNeighborsTra
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -454,9 +433,8 @@ pms_KNeighborsTransformer_kneighbors_graph = {k: v for k, v in pms_KNeighborsTra
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KNeighborsTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_KNeighborsTransformer_set_output = {k: v for k, v in pms_KNeighborsTransformer_set_output.items() if v is not None}`
 
@@ -491,9 +469,8 @@ pms_KNeighborsTransformer_set_output = {k: v for k, v in pms_KNeighborsTransform
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KNeighborsTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KNeighborsTransformer_transform = {k: v for k, v in pms_KNeighborsTransformer_transform.items() if v is not None}`
 

@@ -27,7 +27,7 @@ export class GenericUnivariateSelect {
     score_func?: any
 
     /**
-      Feature selection mode.
+      Feature selection mode. Note that the `'percentile'` and `'kbest'` modes are supporting unsupervised feature selection (when `y` is `undefined`).
 
       @defaultValue `'percentile'`
      */
@@ -84,11 +84,8 @@ except NameError: bridgeGenericUnivariateSelect = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GenericUnivariateSelect = {'score_func': ${
-      this.opts['score_func'] ?? undefined
-    }, 'mode': ${this.opts['mode'] ?? undefined}, 'param': ${
-      this.opts['param'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GenericUnivariateSelect = {'score_func': ${this.opts['score_func'] ?? undefined}, 'mode': ${this.opts['mode'] ?? undefined}, 'param': ${this.opts['param'] ?? undefined}}
 
 ctor_GenericUnivariateSelect = {k: v for k, v in ctor_GenericUnivariateSelect.items() if v is not None}`
 
@@ -127,7 +124,7 @@ ctor_GenericUnivariateSelect = {k: v for k, v in ctor_GenericUnivariateSelect.it
     X?: ArrayLike[]
 
     /**
-      The target values (class labels in classification, real numbers in regression).
+      The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`.
      */
     y?: ArrayLike
   }): Promise<any> {
@@ -142,11 +139,8 @@ ctor_GenericUnivariateSelect = {k: v for k, v in ctor_GenericUnivariateSelect.it
     }
 
     // set up method params
-    await this._py.ex`pms_GenericUnivariateSelect_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_GenericUnivariateSelect_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_GenericUnivariateSelect_fit = {k: v for k, v in pms_GenericUnivariateSelect_fit.items() if v is not None}`
 
@@ -194,13 +188,7 @@ pms_GenericUnivariateSelect_fit = {k: v for k, v in pms_GenericUnivariateSelect_
 
     // set up method params
     await this._py
-      .ex`pms_GenericUnivariateSelect_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_GenericUnivariateSelect_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_GenericUnivariateSelect_fit_transform = {k: v for k, v in pms_GenericUnivariateSelect_fit_transform.items() if v is not None}`
 
@@ -236,9 +224,7 @@ pms_GenericUnivariateSelect_fit_transform = {k: v for k, v in pms_GenericUnivari
 
     // set up method params
     await this._py
-      .ex`pms_GenericUnivariateSelect_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_GenericUnivariateSelect_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_GenericUnivariateSelect_get_feature_names_out = {k: v for k, v in pms_GenericUnivariateSelect_get_feature_names_out.items() if v is not None}`
 
@@ -276,9 +262,7 @@ pms_GenericUnivariateSelect_get_feature_names_out = {k: v for k, v in pms_Generi
 
     // set up method params
     await this._py
-      .ex`pms_GenericUnivariateSelect_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GenericUnivariateSelect_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GenericUnivariateSelect_get_metadata_routing = {k: v for k, v in pms_GenericUnivariateSelect_get_metadata_routing.items() if v is not None}`
 
@@ -315,9 +299,8 @@ pms_GenericUnivariateSelect_get_metadata_routing = {k: v for k, v in pms_Generic
     }
 
     // set up method params
-    await this._py.ex`pms_GenericUnivariateSelect_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GenericUnivariateSelect_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_GenericUnivariateSelect_get_support = {k: v for k, v in pms_GenericUnivariateSelect_get_support.items() if v is not None}`
 
@@ -353,9 +336,7 @@ pms_GenericUnivariateSelect_get_support = {k: v for k, v in pms_GenericUnivariat
 
     // set up method params
     await this._py
-      .ex`pms_GenericUnivariateSelect_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GenericUnivariateSelect_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GenericUnivariateSelect_inverse_transform = {k: v for k, v in pms_GenericUnivariateSelect_inverse_transform.items() if v is not None}`
 
@@ -377,7 +358,7 @@ pms_GenericUnivariateSelect_inverse_transform = {k: v for k, v in pms_GenericUni
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -392,9 +373,8 @@ pms_GenericUnivariateSelect_inverse_transform = {k: v for k, v in pms_GenericUni
     }
 
     // set up method params
-    await this._py.ex`pms_GenericUnivariateSelect_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GenericUnivariateSelect_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_GenericUnivariateSelect_set_output = {k: v for k, v in pms_GenericUnivariateSelect_set_output.items() if v is not None}`
 
@@ -429,9 +409,8 @@ pms_GenericUnivariateSelect_set_output = {k: v for k, v in pms_GenericUnivariate
     }
 
     // set up method params
-    await this._py.ex`pms_GenericUnivariateSelect_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GenericUnivariateSelect_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GenericUnivariateSelect_transform = {k: v for k, v in pms_GenericUnivariateSelect_transform.items() if v is not None}`
 

@@ -43,6 +43,7 @@ async function main() {
   //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html',
   //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html',
   //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html'
+  // 'https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html'
   // ]
 
   console.log(`\nfetching ${sources.length} docs...\n`)
@@ -73,12 +74,12 @@ async function main() {
   console.log(`\nprocessing ${docs.length} docs...\n`)
   // console.log(
   //   JSON.stringify(
-  //     docs.map((doc) => doc.name.split('.').slice(-1)[0]),
+  //     docs.map((doc) => doc.name.split('.').at(-1)),
   //     null,
   //     2
   //   )
   // )
-  // // console.log(JSON.stringify(docs[0], null, 2))
+  // console.log(JSON.stringify(docs[0], null, 2))
 
   const errors: string[] = []
   const generatedDirs: any = {}

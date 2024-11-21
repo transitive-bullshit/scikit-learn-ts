@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Leave P Group(s) Out cross-validator
+  Leave P Group(s) Out cross-validator.
 
   Provides train/test indices to split data according to a third-party provided group. This group information can be used to encode arbitrary domain specific stratifications of the samples as integers.
 
@@ -72,9 +72,8 @@ except NameError: bridgeLeavePGroupsOut = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LeavePGroupsOut = {'n_groups': ${
-      this.opts['n_groups'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LeavePGroupsOut = {'n_groups': ${this.opts['n_groups'] ?? undefined}}
 
 ctor_LeavePGroupsOut = {k: v for k, v in ctor_LeavePGroupsOut.items() if v is not None}`
 
@@ -125,9 +124,8 @@ ctor_LeavePGroupsOut = {k: v for k, v in ctor_LeavePGroupsOut.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_LeavePGroupsOut_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LeavePGroupsOut_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LeavePGroupsOut_get_metadata_routing = {k: v for k, v in pms_LeavePGroupsOut_get_metadata_routing.items() if v is not None}`
 
@@ -141,7 +139,7 @@ pms_LeavePGroupsOut_get_metadata_routing = {k: v for k, v in pms_LeavePGroupsOut
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -168,11 +166,8 @@ pms_LeavePGroupsOut_get_metadata_routing = {k: v for k, v in pms_LeavePGroupsOut
     }
 
     // set up method params
-    await this._py.ex`pms_LeavePGroupsOut_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_LeavePGroupsOut_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_LeavePGroupsOut_get_n_splits = {k: v for k, v in pms_LeavePGroupsOut_get_n_splits.items() if v is not None}`
 
@@ -209,9 +204,8 @@ pms_LeavePGroupsOut_get_n_splits = {k: v for k, v in pms_LeavePGroupsOut_get_n_s
     }
 
     // set up method params
-    await this._py.ex`pms_LeavePGroupsOut_set_split_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LeavePGroupsOut_set_split_request = {'groups': ${opts['groups'] ?? undefined}}
 
 pms_LeavePGroupsOut_set_split_request = {k: v for k, v in pms_LeavePGroupsOut_set_split_request.items() if v is not None}`
 
@@ -252,13 +246,8 @@ pms_LeavePGroupsOut_set_split_request = {k: v for k, v in pms_LeavePGroupsOut_se
     }
 
     // set up method params
-    await this._py.ex`pms_LeavePGroupsOut_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_LeavePGroupsOut_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_LeavePGroupsOut_split = {k: v for k, v in pms_LeavePGroupsOut_split.items() if v is not None}`
 

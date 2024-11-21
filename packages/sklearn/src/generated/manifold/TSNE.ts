@@ -58,7 +58,7 @@ export class TSNE {
 
       @defaultValue `1000`
      */
-    n_iter?: number
+    max_iter?: number
 
     /**
       Maximum number of iterations without progress before we abort the optimization, used after 250 initial iterations with early exaggeration. Note that progress is only checked every 50 iterations so this value is rounded to the next multiple of 50.
@@ -120,9 +120,14 @@ export class TSNE {
     angle?: number
 
     /**
-      The number of parallel jobs to run for neighbors search. This parameter has no impact when `metric="precomputed"` or (`metric="euclidean"` and `method="exact"`). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run for neighbors search. This parameter has no impact when `metric="precomputed"` or (`metric="euclidean"` and `method="exact"`). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
+
+    /**
+      Maximum number of iterations for the optimization. Should be at least 250.
+     */
+    n_iter?: number
   }) {
     this.id = `TSNE${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -164,29 +169,8 @@ except NameError: bridgeTSNE = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TSNE = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'perplexity': ${
-      this.opts['perplexity'] ?? undefined
-    }, 'early_exaggeration': ${
-      this.opts['early_exaggeration'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'n_iter': ${
-      this.opts['n_iter'] ?? undefined
-    }, 'n_iter_without_progress': ${
-      this.opts['n_iter_without_progress'] ?? undefined
-    }, 'min_grad_norm': ${this.opts['min_grad_norm'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'init': np.array(${this.opts['init'] ?? undefined}) if ${
-      this.opts['init'] !== undefined
-    } else None, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'method': ${
-      this.opts['method'] ?? undefined
-    }, 'angle': ${this.opts['angle'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_TSNE = {'n_components': ${this.opts['n_components'] ?? undefined}, 'perplexity': ${this.opts['perplexity'] ?? undefined}, 'early_exaggeration': ${this.opts['early_exaggeration'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'n_iter_without_progress': ${this.opts['n_iter_without_progress'] ?? undefined}, 'min_grad_norm': ${this.opts['min_grad_norm'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'init': np.array(${this.opts['init'] ?? undefined}) if ${this.opts['init'] !== undefined} else None, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'method': ${this.opts['method'] ?? undefined}, 'angle': ${this.opts['angle'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}}
 
 ctor_TSNE = {k: v for k, v in ctor_TSNE.items() if v is not None}`
 
@@ -227,7 +211,7 @@ ctor_TSNE = {k: v for k, v in ctor_TSNE.items() if v is not None}`
       Ignored.
      */
     y?: any
-  }): Promise<any[]> {
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TSNE instance has already been disposed')
     }
@@ -237,9 +221,8 @@ ctor_TSNE = {k: v for k, v in ctor_TSNE.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_TSNE_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TSNE_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_TSNE_fit = {k: v for k, v in pms_TSNE_fit.items() if v is not None}`
 
@@ -274,9 +257,8 @@ pms_TSNE_fit = {k: v for k, v in pms_TSNE_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_TSNE_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TSNE_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_TSNE_fit_transform = {k: v for k, v in pms_TSNE_fit_transform.items() if v is not None}`
 
@@ -309,9 +291,8 @@ pms_TSNE_fit_transform = {k: v for k, v in pms_TSNE_fit_transform.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_TSNE_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TSNE_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_TSNE_get_feature_names_out = {k: v for k, v in pms_TSNE_get_feature_names_out.items() if v is not None}`
 
@@ -344,9 +325,8 @@ pms_TSNE_get_feature_names_out = {k: v for k, v in pms_TSNE_get_feature_names_ou
     }
 
     // set up method params
-    await this._py.ex`pms_TSNE_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TSNE_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TSNE_get_metadata_routing = {k: v for k, v in pms_TSNE_get_metadata_routing.items() if v is not None}`
 
@@ -368,7 +348,7 @@ pms_TSNE_get_metadata_routing = {k: v for k, v in pms_TSNE_get_metadata_routing.
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TSNE instance has already been disposed')
@@ -379,9 +359,8 @@ pms_TSNE_get_metadata_routing = {k: v for k, v in pms_TSNE_get_metadata_routing.
     }
 
     // set up method params
-    await this._py.ex`pms_TSNE_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TSNE_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_TSNE_set_output = {k: v for k, v in pms_TSNE_set_output.items() if v is not None}`
 

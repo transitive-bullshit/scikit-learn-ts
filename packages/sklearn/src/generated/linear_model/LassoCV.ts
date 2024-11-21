@@ -92,7 +92,7 @@ export class LassoCV {
     verbose?: boolean | number
 
     /**
-      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -155,23 +155,8 @@ except NameError: bridgeLassoCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LassoCV = {'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'n_alphas': ${this.opts['n_alphas'] ?? undefined}, 'alphas': ${
-      this.opts['alphas'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${
-      this.opts['precompute'] !== undefined
-    } else None, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'selection': ${this.opts['selection'] ?? undefined}}
+    await this._py
+      .ex`ctor_LassoCV = {'eps': ${this.opts['eps'] ?? undefined}, 'n_alphas': ${this.opts['n_alphas'] ?? undefined}, 'alphas': ${this.opts['alphas'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${this.opts['precompute'] !== undefined} else None, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'selection': ${this.opts['selection'] ?? undefined}}
 
 ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
 
@@ -200,13 +185,13 @@ ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
   }
 
   /**
-    Fit linear model with coordinate descent.
+    Fit Lasso model with coordinate descent.
 
     Fit is on grid of alphas and best alpha estimated by cross-validation.
    */
   async fit(opts: {
     /**
-      Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output, X can be sparse.
+      Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output, X can be sparse. Note that large sparse matrices and arrays requiring `int64` indices are not accepted.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -219,6 +204,11 @@ ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
       Sample weights used for fitting and evaluation of the weighted mean squared error of each cv-fold. Note that the cross validated MSE that is finally used to find the best model is the unweighted mean over the (weighted) MSEs of each test fold.
      */
     sample_weight?: number | ArrayLike
+
+    /**
+      Parameters to be passed to the CV splitter.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LassoCV instance has already been disposed')
@@ -229,13 +219,8 @@ ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LassoCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_LassoCV_fit = {k: v for k, v in pms_LassoCV_fit.items() if v is not None}`
 
@@ -255,7 +240,7 @@ pms_LassoCV_fit = {k: v for k, v in pms_LassoCV_fit.items() if v is not None}`
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -268,9 +253,8 @@ pms_LassoCV_fit = {k: v for k, v in pms_LassoCV_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_routing.items() if v is not None}`
 
@@ -318,7 +302,7 @@ pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_ro
     /**
       List of alphas where to compute the models. If `undefined` alphas are set automatically.
      */
-    alphas?: NDArray
+    alphas?: ArrayLike
 
     /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
@@ -342,7 +326,7 @@ pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_ro
     /**
       The initial values of the coefficients.
      */
-    coef_init?: NDArray
+    coef_init?: ArrayLike
 
     /**
       Amount of verbosity.
@@ -379,27 +363,8 @@ pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_ro
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'eps': ${
-      opts['eps'] ?? undefined
-    }, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': np.array(${
-      opts['alphas'] ?? undefined
-    }) if ${opts['alphas'] !== undefined} else None, 'precompute': np.array(${
-      opts['precompute'] ?? undefined
-    }) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${
-      opts['return_n_iter'] ?? undefined
-    }, 'positive': ${opts['positive'] ?? undefined}, 'params': ${
-      opts['params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': ${opts['alphas'] ?? undefined}, 'precompute': np.array(${opts['precompute'] ?? undefined}) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${opts['return_n_iter'] ?? undefined}, 'positive': ${opts['positive'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_LassoCV_path = {k: v for k, v in pms_LassoCV_path.items() if v is not None}`
 
@@ -473,13 +438,8 @@ pms_LassoCV_predict = {k: v for k, v in pms_LassoCV_predict.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LassoCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None}`
 
@@ -514,9 +474,8 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LassoCV_set_fit_request = {k: v for k, v in pms_LassoCV_set_fit_request.items() if v is not None}`
 
@@ -551,9 +510,8 @@ pms_LassoCV_set_fit_request = {k: v for k, v in pms_LassoCV_set_fit_request.item
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LassoCV_set_score_request = {k: v for k, v in pms_LassoCV_set_score_request.items() if v is not None}`
 

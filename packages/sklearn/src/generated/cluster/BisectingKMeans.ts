@@ -135,17 +135,8 @@ except NameError: bridgeBisectingKMeans = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_BisectingKMeans = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'init': ${this.opts['init'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'copy_x': ${this.opts['copy_x'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'bisecting_strategy': ${this.opts['bisecting_strategy'] ?? undefined}}
+    await this._py
+      .ex`ctor_BisectingKMeans = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'init': ${this.opts['init'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'copy_x': ${this.opts['copy_x'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'bisecting_strategy': ${this.opts['bisecting_strategy'] ?? undefined}}
 
 ctor_BisectingKMeans = {k: v for k, v in ctor_BisectingKMeans.items() if v is not None}`
 
@@ -202,13 +193,8 @@ ctor_BisectingKMeans = {k: v for k, v in ctor_BisectingKMeans.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_BisectingKMeans_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BisectingKMeans_fit = {k: v for k, v in pms_BisectingKMeans_fit.items() if v is not None}`
 
@@ -251,13 +237,8 @@ pms_BisectingKMeans_fit = {k: v for k, v in pms_BisectingKMeans_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_BisectingKMeans_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BisectingKMeans_fit_predict = {k: v for k, v in pms_BisectingKMeans_fit_predict.items() if v is not None}`
 
@@ -300,13 +281,8 @@ pms_BisectingKMeans_fit_predict = {k: v for k, v in pms_BisectingKMeans_fit_pred
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_BisectingKMeans_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BisectingKMeans_fit_transform = {k: v for k, v in pms_BisectingKMeans_fit_transform.items() if v is not None}`
 
@@ -342,9 +318,7 @@ pms_BisectingKMeans_fit_transform = {k: v for k, v in pms_BisectingKMeans_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_BisectingKMeans_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_BisectingKMeans_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_BisectingKMeans_get_feature_names_out = {k: v for k, v in pms_BisectingKMeans_get_feature_names_out.items() if v is not None}`
 
@@ -379,9 +353,8 @@ pms_BisectingKMeans_get_feature_names_out = {k: v for k, v in pms_BisectingKMean
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BisectingKMeans_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_BisectingKMeans_get_metadata_routing = {k: v for k, v in pms_BisectingKMeans_get_metadata_routing.items() if v is not None}`
 
@@ -416,9 +389,8 @@ pms_BisectingKMeans_get_metadata_routing = {k: v for k, v in pms_BisectingKMeans
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BisectingKMeans_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BisectingKMeans_predict = {k: v for k, v in pms_BisectingKMeans_predict.items() if v is not None}`
 
@@ -459,13 +431,8 @@ pms_BisectingKMeans_predict = {k: v for k, v in pms_BisectingKMeans_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_BisectingKMeans_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BisectingKMeans_score = {k: v for k, v in pms_BisectingKMeans_score.items() if v is not None}`
 
@@ -502,9 +469,8 @@ pms_BisectingKMeans_score = {k: v for k, v in pms_BisectingKMeans_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BisectingKMeans_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BisectingKMeans_set_fit_request = {k: v for k, v in pms_BisectingKMeans_set_fit_request.items() if v is not None}`
 
@@ -526,7 +492,7 @@ pms_BisectingKMeans_set_fit_request = {k: v for k, v in pms_BisectingKMeans_set_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
@@ -537,9 +503,8 @@ pms_BisectingKMeans_set_fit_request = {k: v for k, v in pms_BisectingKMeans_set_
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BisectingKMeans_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_BisectingKMeans_set_output = {k: v for k, v in pms_BisectingKMeans_set_output.items() if v is not None}`
 
@@ -550,46 +515,6 @@ pms_BisectingKMeans_set_output = {k: v for k, v in pms_BisectingKMeans_set_outpu
     // convert the result from python to node.js
     return this
       ._py`res_BisectingKMeans_set_output.tolist() if hasattr(res_BisectingKMeans_set_output, 'tolist') else res_BisectingKMeans_set_output`
-  }
-
-  /**
-    Request metadata passed to the `predict` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_predict_request(opts: {
-    /**
-      Metadata routing for `sample\_weight` parameter in `predict`.
-     */
-    sample_weight?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This BisectingKMeans instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'BisectingKMeans must call init() before set_predict_request()'
-      )
-    }
-
-    // set up method params
-    await this._py
-      .ex`pms_BisectingKMeans_set_predict_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
-
-pms_BisectingKMeans_set_predict_request = {k: v for k, v in pms_BisectingKMeans_set_predict_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_BisectingKMeans_set_predict_request = bridgeBisectingKMeans[${this.id}].set_predict_request(**pms_BisectingKMeans_set_predict_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_BisectingKMeans_set_predict_request.tolist() if hasattr(res_BisectingKMeans_set_predict_request, 'tolist') else res_BisectingKMeans_set_predict_request`
   }
 
   /**
@@ -617,9 +542,7 @@ pms_BisectingKMeans_set_predict_request = {k: v for k, v in pms_BisectingKMeans_
 
     // set up method params
     await this._py
-      .ex`pms_BisectingKMeans_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_BisectingKMeans_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BisectingKMeans_set_score_request = {k: v for k, v in pms_BisectingKMeans_set_score_request.items() if v is not None}`
 
@@ -652,9 +575,8 @@ pms_BisectingKMeans_set_score_request = {k: v for k, v in pms_BisectingKMeans_se
     }
 
     // set up method params
-    await this._py.ex`pms_BisectingKMeans_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BisectingKMeans_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BisectingKMeans_transform = {k: v for k, v in pms_BisectingKMeans_transform.items() if v is not None}`
 

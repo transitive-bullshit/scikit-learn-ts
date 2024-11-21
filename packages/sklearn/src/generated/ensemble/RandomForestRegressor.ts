@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   A random forest regressor.
 
-  A random forest is a meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the `max\_samples` parameter if `bootstrap=True` (default), otherwise the whole dataset is used to build each tree.
+  A random forest is a meta estimator that fits a number of decision tree regressors on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. Trees in the forest use the best split strategy, i.e. equivalent to passing `splitter="best"` to the underlying [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor"). The sub-sample size is controlled with the `max\_samples` parameter if `bootstrap=True` (default), otherwise the whole dataset is used to build each tree.
 
   For a comparison between tree-based ensemble models see the example [Comparing Random Forests and Histogram Gradient Boosting models](../../auto_examples/ensemble/plot_forest_hist_grad_boosting_comparison.html#sphx-glr-auto-examples-ensemble-plot-forest-hist-grad-boosting-comparison-py).
 
@@ -101,7 +101,7 @@ export class RandomForestRegressor {
     oob_score?: boolean
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomForestRegressor.fit "sklearn.ensemble.RandomForestRegressor.fit"), [`predict`](#sklearn.ensemble.RandomForestRegressor.predict "sklearn.ensemble.RandomForestRegressor.predict"), [`decision\_path`](#sklearn.ensemble.RandomForestRegressor.decision_path "sklearn.ensemble.RandomForestRegressor.decision_path") and [`apply`](#sklearn.ensemble.RandomForestRegressor.apply "sklearn.ensemble.RandomForestRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomForestRegressor.fit "sklearn.ensemble.RandomForestRegressor.fit"), [`predict`](#sklearn.ensemble.RandomForestRegressor.predict "sklearn.ensemble.RandomForestRegressor.predict"), [`decision\_path`](#sklearn.ensemble.RandomForestRegressor.decision_path "sklearn.ensemble.RandomForestRegressor.decision_path") and [`apply`](#sklearn.ensemble.RandomForestRegressor.apply "sklearn.ensemble.RandomForestRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -118,7 +118,7 @@ export class RandomForestRegressor {
     verbose?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional trees](../ensemble.html#tree-ensemble-warm-start) for details.
 
       @defaultValue `false`
      */
@@ -135,6 +135,11 @@ export class RandomForestRegressor {
       If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
      */
     max_samples?: number
+
+    /**
+      1: monotonically increasing
+     */
+    monotonic_cst?: any[]
   }) {
     this.id = `RandomForestRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -180,31 +185,8 @@ except NameError: bridgeRandomForestRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RandomForestRegressor = {'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'criterion': ${this.opts['criterion'] ?? undefined}, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'oob_score': ${
-      this.opts['oob_score'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'max_samples': ${
-      this.opts['max_samples'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_RandomForestRegressor = {'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'criterion': ${this.opts['criterion'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'oob_score': ${this.opts['oob_score'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'max_samples': ${this.opts['max_samples'] ?? undefined}, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None}
 
 ctor_RandomForestRegressor = {k: v for k, v in ctor_RandomForestRegressor.items() if v is not None}`
 
@@ -253,9 +235,8 @@ ctor_RandomForestRegressor = {k: v for k, v in ctor_RandomForestRegressor.items(
     }
 
     // set up method params
-    await this._py.ex`pms_RandomForestRegressor_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomForestRegressor_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RandomForestRegressor_apply = {k: v for k, v in pms_RandomForestRegressor_apply.items() if v is not None}`
 
@@ -291,9 +272,7 @@ pms_RandomForestRegressor_apply = {k: v for k, v in pms_RandomForestRegressor_ap
 
     // set up method params
     await this._py
-      .ex`pms_RandomForestRegressor_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_RandomForestRegressor_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RandomForestRegressor_decision_path = {k: v for k, v in pms_RandomForestRegressor_decision_path.items() if v is not None}`
 
@@ -336,13 +315,8 @@ pms_RandomForestRegressor_decision_path = {k: v for k, v in pms_RandomForestRegr
     }
 
     // set up method params
-    await this._py.ex`pms_RandomForestRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomForestRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RandomForestRegressor_fit = {k: v for k, v in pms_RandomForestRegressor_fit.items() if v is not None}`
 
@@ -380,9 +354,7 @@ pms_RandomForestRegressor_fit = {k: v for k, v in pms_RandomForestRegressor_fit.
 
     // set up method params
     await this._py
-      .ex`pms_RandomForestRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RandomForestRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RandomForestRegressor_get_metadata_routing = {k: v for k, v in pms_RandomForestRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -417,9 +389,8 @@ pms_RandomForestRegressor_get_metadata_routing = {k: v for k, v in pms_RandomFor
     }
 
     // set up method params
-    await this._py.ex`pms_RandomForestRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomForestRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RandomForestRegressor_predict = {k: v for k, v in pms_RandomForestRegressor_predict.items() if v is not None}`
 
@@ -464,13 +435,8 @@ pms_RandomForestRegressor_predict = {k: v for k, v in pms_RandomForestRegressor_
     }
 
     // set up method params
-    await this._py.ex`pms_RandomForestRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomForestRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RandomForestRegressor_score = {k: v for k, v in pms_RandomForestRegressor_score.items() if v is not None}`
 
@@ -510,9 +476,7 @@ pms_RandomForestRegressor_score = {k: v for k, v in pms_RandomForestRegressor_sc
 
     // set up method params
     await this._py
-      .ex`pms_RandomForestRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RandomForestRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RandomForestRegressor_set_fit_request = {k: v for k, v in pms_RandomForestRegressor_set_fit_request.items() if v is not None}`
 
@@ -552,9 +516,7 @@ pms_RandomForestRegressor_set_fit_request = {k: v for k, v in pms_RandomForestRe
 
     // set up method params
     await this._py
-      .ex`pms_RandomForestRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RandomForestRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RandomForestRegressor_set_score_request = {k: v for k, v in pms_RandomForestRegressor_set_score_request.items() if v is not None}`
 

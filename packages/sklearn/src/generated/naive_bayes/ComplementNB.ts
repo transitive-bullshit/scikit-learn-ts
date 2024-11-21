@@ -33,7 +33,7 @@ export class ComplementNB {
     /**
       If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
 
-      @defaultValue `false`
+      @defaultValue `true`
      */
     force_alpha?: boolean
 
@@ -96,15 +96,8 @@ except NameError: bridgeComplementNB = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ComplementNB = {'alpha': np.array(${
-      this.opts['alpha'] ?? undefined
-    }) if ${this.opts['alpha'] !== undefined} else None, 'force_alpha': ${
-      this.opts['force_alpha'] ?? undefined
-    }, 'fit_prior': ${
-      this.opts['fit_prior'] ?? undefined
-    }, 'class_prior': np.array(${this.opts['class_prior'] ?? undefined}) if ${
-      this.opts['class_prior'] !== undefined
-    } else None, 'norm': ${this.opts['norm'] ?? undefined}}
+    await this._py
+      .ex`ctor_ComplementNB = {'alpha': np.array(${this.opts['alpha'] ?? undefined}) if ${this.opts['alpha'] !== undefined} else None, 'force_alpha': ${this.opts['force_alpha'] ?? undefined}, 'fit_prior': ${this.opts['fit_prior'] ?? undefined}, 'class_prior': np.array(${this.opts['class_prior'] ?? undefined}) if ${this.opts['class_prior'] !== undefined} else None, 'norm': ${this.opts['norm'] ?? undefined}}
 
 ctor_ComplementNB = {k: v for k, v in ctor_ComplementNB.items() if v is not None}`
 
@@ -161,13 +154,8 @@ ctor_ComplementNB = {k: v for k, v in ctor_ComplementNB.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ComplementNB_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ComplementNB_fit = {k: v for k, v in pms_ComplementNB_fit.items() if v is not None}`
 
@@ -202,9 +190,8 @@ pms_ComplementNB_fit = {k: v for k, v in pms_ComplementNB_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ComplementNB_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ComplementNB_get_metadata_routing = {k: v for k, v in pms_ComplementNB_get_metadata_routing.items() if v is not None}`
 
@@ -258,17 +245,8 @@ pms_ComplementNB_get_metadata_routing = {k: v for k, v in pms_ComplementNB_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'classes': np.array(${
-      opts['classes'] ?? undefined
-    }) if ${
-      opts['classes'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ComplementNB_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${opts['classes'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ComplementNB_partial_fit = {k: v for k, v in pms_ComplementNB_partial_fit.items() if v is not None}`
 
@@ -299,9 +277,8 @@ pms_ComplementNB_partial_fit = {k: v for k, v in pms_ComplementNB_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ComplementNB_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ComplementNB_predict = {k: v for k, v in pms_ComplementNB_predict.items() if v is not None}`
 
@@ -337,9 +314,7 @@ pms_ComplementNB_predict = {k: v for k, v in pms_ComplementNB_predict.items() if
 
     // set up method params
     await this._py
-      .ex`pms_ComplementNB_predict_joint_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_ComplementNB_predict_joint_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ComplementNB_predict_joint_log_proba = {k: v for k, v in pms_ComplementNB_predict_joint_log_proba.items() if v is not None}`
 
@@ -372,9 +347,8 @@ pms_ComplementNB_predict_joint_log_proba = {k: v for k, v in pms_ComplementNB_pr
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ComplementNB_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ComplementNB_predict_log_proba = {k: v for k, v in pms_ComplementNB_predict_log_proba.items() if v is not None}`
 
@@ -405,9 +379,8 @@ pms_ComplementNB_predict_log_proba = {k: v for k, v in pms_ComplementNB_predict_
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ComplementNB_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ComplementNB_predict_proba = {k: v for k, v in pms_ComplementNB_predict_proba.items() if v is not None}`
 
@@ -450,13 +423,8 @@ pms_ComplementNB_predict_proba = {k: v for k, v in pms_ComplementNB_predict_prob
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ComplementNB_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ComplementNB_score = {k: v for k, v in pms_ComplementNB_score.items() if v is not None}`
 
@@ -491,9 +459,8 @@ pms_ComplementNB_score = {k: v for k, v in pms_ComplementNB_score.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ComplementNB_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ComplementNB_set_fit_request = {k: v for k, v in pms_ComplementNB_set_fit_request.items() if v is not None}`
 
@@ -535,9 +502,8 @@ pms_ComplementNB_set_fit_request = {k: v for k, v in pms_ComplementNB_set_fit_re
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_ComplementNB_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ComplementNB_set_partial_fit_request = {k: v for k, v in pms_ComplementNB_set_partial_fit_request.items() if v is not None}`
 
@@ -574,9 +540,8 @@ pms_ComplementNB_set_partial_fit_request = {k: v for k, v in pms_ComplementNB_se
     }
 
     // set up method params
-    await this._py.ex`pms_ComplementNB_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ComplementNB_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ComplementNB_set_score_request = {k: v for k, v in pms_ComplementNB_set_score_request.items() if v is not None}`
 

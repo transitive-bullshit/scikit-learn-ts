@@ -73,9 +73,8 @@ except NameError: bridgeDotProduct = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DotProduct = {'sigma_0': ${
-      this.opts['sigma_0'] ?? undefined
-    }, 'sigma_0_bounds': ${this.opts['sigma_0_bounds'] ?? undefined}}
+    await this._py
+      .ex`ctor_DotProduct = {'sigma_0': ${this.opts['sigma_0'] ?? undefined}, 'sigma_0_bounds': ${this.opts['sigma_0_bounds'] ?? undefined}}
 
 ctor_DotProduct = {k: v for k, v in ctor_DotProduct.items() if v is not None}`
 
@@ -134,13 +133,8 @@ ctor_DotProduct = {k: v for k, v in ctor_DotProduct.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_DotProduct___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DotProduct___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_DotProduct___call__ = {k: v for k, v in pms_DotProduct___call__.items() if v is not None}`
 
@@ -171,9 +165,8 @@ pms_DotProduct___call__ = {k: v for k, v in pms_DotProduct___call__.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_DotProduct_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+    await this._py
+      .ex`pms_DotProduct_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_DotProduct_clone_with_theta = {k: v for k, v in pms_DotProduct_clone_with_theta.items() if v is not None}`
 
@@ -206,9 +199,8 @@ pms_DotProduct_clone_with_theta = {k: v for k, v in pms_DotProduct_clone_with_th
     }
 
     // set up method params
-    await this._py.ex`pms_DotProduct_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_DotProduct_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_DotProduct_diag = {k: v for k, v in pms_DotProduct_diag.items() if v is not None}`
 
@@ -245,27 +237,5 @@ pms_DotProduct_is_stationary = {k: v for k, v in pms_DotProduct_is_stationary.it
     // convert the result from python to node.js
     return this
       ._py`res_DotProduct_is_stationary.tolist() if hasattr(res_DotProduct_is_stationary, 'tolist') else res_DotProduct_is_stationary`
-  }
-
-  get hyperparameter_sigma_0(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This DotProduct instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'DotProduct must call init() before accessing hyperparameter_sigma_0'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_DotProduct_hyperparameter_sigma_0 = bridgeDotProduct[${this.id}].hyperparameter_sigma_0`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_DotProduct_hyperparameter_sigma_0.tolist() if hasattr(attr_DotProduct_hyperparameter_sigma_0, 'tolist') else attr_DotProduct_hyperparameter_sigma_0`
-    })()
   }
 }

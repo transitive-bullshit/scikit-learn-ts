@@ -114,15 +114,8 @@ except NameError: bridgePoissonRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PoissonRegressor = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PoissonRegressor = {'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_PoissonRegressor = {k: v for k, v in ctor_PoissonRegressor.items() if v is not None}`
 
@@ -181,13 +174,8 @@ ctor_PoissonRegressor = {k: v for k, v in ctor_PoissonRegressor.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_PoissonRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_PoissonRegressor_fit = {k: v for k, v in pms_PoissonRegressor_fit.items() if v is not None}`
 
@@ -224,9 +212,8 @@ pms_PoissonRegressor_fit = {k: v for k, v in pms_PoissonRegressor_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PoissonRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PoissonRegressor_get_metadata_routing = {k: v for k, v in pms_PoissonRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -259,9 +246,8 @@ pms_PoissonRegressor_get_metadata_routing = {k: v for k, v in pms_PoissonRegress
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PoissonRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PoissonRegressor_predict = {k: v for k, v in pms_PoissonRegressor_predict.items() if v is not None}`
 
@@ -308,13 +294,8 @@ pms_PoissonRegressor_predict = {k: v for k, v in pms_PoissonRegressor_predict.it
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_PoissonRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_PoissonRegressor_score = {k: v for k, v in pms_PoissonRegressor_score.items() if v is not None}`
 
@@ -354,9 +335,7 @@ pms_PoissonRegressor_score = {k: v for k, v in pms_PoissonRegressor_score.items(
 
     // set up method params
     await this._py
-      .ex`pms_PoissonRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_PoissonRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_PoissonRegressor_set_fit_request = {k: v for k, v in pms_PoissonRegressor_set_fit_request.items() if v is not None}`
 
@@ -396,9 +375,7 @@ pms_PoissonRegressor_set_fit_request = {k: v for k, v in pms_PoissonRegressor_se
 
     // set up method params
     await this._py
-      .ex`pms_PoissonRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_PoissonRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_PoissonRegressor_set_score_request = {k: v for k, v in pms_PoissonRegressor_set_score_request.items() if v is not None}`
 

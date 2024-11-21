@@ -166,25 +166,8 @@ except NameError: bridgeNuSVC = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NuSVC = {'nu': ${
-      this.opts['nu'] ?? undefined
-    }, 'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${
-      this.opts['degree'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${
-      this.opts['coef0'] ?? undefined
-    }, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'probability': ${
-      this.opts['probability'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${
-      this.opts['cache_size'] ?? undefined
-    }, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'decision_function_shape': ${
-      this.opts['decision_function_shape'] ?? undefined
-    }, 'break_ties': ${this.opts['break_ties'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_NuSVC = {'nu': ${this.opts['nu'] ?? undefined}, 'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'probability': ${this.opts['probability'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'decision_function_shape': ${this.opts['decision_function_shape'] ?? undefined}, 'break_ties': ${this.opts['break_ties'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_NuSVC = {k: v for k, v in ctor_NuSVC.items() if v is not None}`
 
@@ -230,9 +213,8 @@ ctor_NuSVC = {k: v for k, v in ctor_NuSVC.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_decision_function = {k: v for k, v in pms_NuSVC_decision_function.items() if v is not None}`
 
@@ -273,13 +255,8 @@ pms_NuSVC_decision_function = {k: v for k, v in pms_NuSVC_decision_function.item
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NuSVC_fit = {k: v for k, v in pms_NuSVC_fit.items() if v is not None}`
 
@@ -312,9 +289,8 @@ pms_NuSVC_fit = {k: v for k, v in pms_NuSVC_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVC_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NuSVC_get_metadata_routing = {k: v for k, v in pms_NuSVC_get_metadata_routing.items() if v is not None}`
 
@@ -347,9 +323,8 @@ pms_NuSVC_get_metadata_routing = {k: v for k, v in pms_NuSVC_get_metadata_routin
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_predict = {k: v for k, v in pms_NuSVC_predict.items() if v is not None}`
 
@@ -382,9 +357,8 @@ pms_NuSVC_predict = {k: v for k, v in pms_NuSVC_predict.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_predict_log_proba = {k: v for k, v in pms_NuSVC_predict_log_proba.items() if v is not None}`
 
@@ -417,9 +391,8 @@ pms_NuSVC_predict_log_proba = {k: v for k, v in pms_NuSVC_predict_log_proba.item
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_predict_proba = {k: v for k, v in pms_NuSVC_predict_proba.items() if v is not None}`
 
@@ -462,13 +435,8 @@ pms_NuSVC_predict_proba = {k: v for k, v in pms_NuSVC_predict_proba.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
 
@@ -503,9 +471,8 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVC_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NuSVC_set_fit_request = {k: v for k, v in pms_NuSVC_set_fit_request.items() if v is not None}`
 
@@ -540,9 +507,8 @@ pms_NuSVC_set_fit_request = {k: v for k, v in pms_NuSVC_set_fit_request.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVC_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NuSVC_set_score_request = {k: v for k, v in pms_NuSVC_set_score_request.items() if v is not None}`
 

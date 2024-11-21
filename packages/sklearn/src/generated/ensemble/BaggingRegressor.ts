@@ -80,7 +80,7 @@ export class BaggingRegressor {
     warm_start?: boolean
 
     /**
-      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -95,13 +95,6 @@ export class BaggingRegressor {
       @defaultValue `0`
      */
     verbose?: number
-
-    /**
-      Use `estimator` instead.
-
-      @defaultValue `'deprecated'`
-     */
-    base_estimator?: any
   }) {
     this.id = `BaggingRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -145,25 +138,8 @@ except NameError: bridgeBaggingRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_BaggingRegressor = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'max_samples': ${
-      this.opts['max_samples'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'bootstrap': ${
-      this.opts['bootstrap'] ?? undefined
-    }, 'bootstrap_features': ${
-      this.opts['bootstrap_features'] ?? undefined
-    }, 'oob_score': ${this.opts['oob_score'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'base_estimator': ${
-      this.opts['base_estimator'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_BaggingRegressor = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'max_samples': ${this.opts['max_samples'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'bootstrap_features': ${this.opts['bootstrap_features'] ?? undefined}, 'oob_score': ${this.opts['oob_score'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_BaggingRegressor = {k: v for k, v in ctor_BaggingRegressor.items() if v is not None}`
 
@@ -210,6 +186,11 @@ ctor_BaggingRegressor = {k: v for k, v in ctor_BaggingRegressor.items() if v is 
       Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the underlying estimators.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -222,13 +203,8 @@ ctor_BaggingRegressor = {k: v for k, v in ctor_BaggingRegressor.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_BaggingRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_BaggingRegressor_fit = {k: v for k, v in pms_BaggingRegressor_fit.items() if v is not None}`
 
@@ -248,7 +224,7 @@ pms_BaggingRegressor_fit = {k: v for k, v in pms_BaggingRegressor_fit.items() if
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -265,9 +241,8 @@ pms_BaggingRegressor_fit = {k: v for k, v in pms_BaggingRegressor_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BaggingRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_BaggingRegressor_get_metadata_routing = {k: v for k, v in pms_BaggingRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -302,9 +277,8 @@ pms_BaggingRegressor_get_metadata_routing = {k: v for k, v in pms_BaggingRegress
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BaggingRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BaggingRegressor_predict = {k: v for k, v in pms_BaggingRegressor_predict.items() if v is not None}`
 
@@ -349,13 +323,8 @@ pms_BaggingRegressor_predict = {k: v for k, v in pms_BaggingRegressor_predict.it
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_BaggingRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items() if v is not None}`
 
@@ -395,9 +364,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
 
     // set up method params
     await this._py
-      .ex`pms_BaggingRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_BaggingRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BaggingRegressor_set_fit_request = {k: v for k, v in pms_BaggingRegressor_set_fit_request.items() if v is not None}`
 
@@ -437,9 +404,7 @@ pms_BaggingRegressor_set_fit_request = {k: v for k, v in pms_BaggingRegressor_se
 
     // set up method params
     await this._py
-      .ex`pms_BaggingRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_BaggingRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BaggingRegressor_set_score_request = {k: v for k, v in pms_BaggingRegressor_set_score_request.items() if v is not None}`
 

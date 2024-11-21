@@ -38,7 +38,7 @@ export class MinCovDet {
     assume_centered?: boolean
 
     /**
-      The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_sample + n\_features + 1) / 2`. The parameter must be in the range (0, 1\].
+      The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_samples + n\_features + 1) / 2 \* n\_samples`. The parameter must be in the range (0, 1\].
      */
     support_fraction?: number
 
@@ -87,13 +87,8 @@ except NameError: bridgeMinCovDet = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MinCovDet = {'store_precision': ${
-      this.opts['store_precision'] ?? undefined
-    }, 'assume_centered': ${
-      this.opts['assume_centered'] ?? undefined
-    }, 'support_fraction': ${
-      this.opts['support_fraction'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_MinCovDet = {'store_precision': ${this.opts['store_precision'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}, 'support_fraction': ${this.opts['support_fraction'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_MinCovDet = {k: v for k, v in ctor_MinCovDet.items() if v is not None}`
 
@@ -141,9 +136,8 @@ ctor_MinCovDet = {k: v for k, v in ctor_MinCovDet.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_correct_covariance = {'data': np.array(${
-      opts['data'] ?? undefined
-    }) if ${opts['data'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_correct_covariance = {'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_MinCovDet_correct_covariance = {k: v for k, v in pms_MinCovDet_correct_covariance.items() if v is not None}`
 
@@ -195,13 +189,8 @@ pms_MinCovDet_correct_covariance = {k: v for k, v in pms_MinCovDet_correct_covar
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_MinCovDet_error_norm = {k: v for k, v in pms_MinCovDet_error_norm.items() if v is not None}`
 
@@ -237,9 +226,8 @@ pms_MinCovDet_error_norm = {k: v for k, v in pms_MinCovDet_error_norm.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MinCovDet_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MinCovDet_fit = {k: v for k, v in pms_MinCovDet_fit.items() if v is not None}`
 
@@ -274,9 +262,8 @@ pms_MinCovDet_fit = {k: v for k, v in pms_MinCovDet_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MinCovDet_get_metadata_routing = {k: v for k, v in pms_MinCovDet_get_metadata_routing.items() if v is not None}`
 
@@ -307,9 +294,8 @@ pms_MinCovDet_get_metadata_routing = {k: v for k, v in pms_MinCovDet_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_MinCovDet_get_precision = {k: v for k, v in pms_MinCovDet_get_precision.items() if v is not None}`
 
@@ -340,9 +326,8 @@ pms_MinCovDet_get_precision = {k: v for k, v in pms_MinCovDet_get_precision.item
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MinCovDet_mahalanobis = {k: v for k, v in pms_MinCovDet_mahalanobis.items() if v is not None}`
 
@@ -375,9 +360,8 @@ pms_MinCovDet_mahalanobis = {k: v for k, v in pms_MinCovDet_mahalanobis.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_reweight_covariance = {'data': np.array(${
-      opts['data'] ?? undefined
-    }) if ${opts['data'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_reweight_covariance = {'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_MinCovDet_reweight_covariance = {k: v for k, v in pms_MinCovDet_reweight_covariance.items() if v is not None}`
 
@@ -415,11 +399,8 @@ pms_MinCovDet_reweight_covariance = {k: v for k, v in pms_MinCovDet_reweight_cov
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not None}`
 
@@ -454,9 +435,8 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_MinCovDet_set_score_request = {k: v for k, v in pms_MinCovDet_set_score_request.items() if v is not None}`
 

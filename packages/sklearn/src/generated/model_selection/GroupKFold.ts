@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each group will appear exactly once in the test set across all folds (the number of distinct groups has to be at least equal to the number of folds).
 
-  The folds are approximately balanced in the sense that the number of distinct groups is approximately the same in each fold.
+  The folds are approximately balanced in the sense that the number of samples is approximately the same in each test fold.
 
   Read more in the [User Guide](../cross_validation.html#group-k-fold).
 
@@ -74,9 +74,8 @@ except NameError: bridgeGroupKFold = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GroupKFold = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GroupKFold = {'n_splits': ${this.opts['n_splits'] ?? undefined}}
 
 ctor_GroupKFold = {k: v for k, v in ctor_GroupKFold.items() if v is not None}`
 
@@ -127,9 +126,8 @@ ctor_GroupKFold = {k: v for k, v in ctor_GroupKFold.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_GroupKFold_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GroupKFold_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GroupKFold_get_metadata_routing = {k: v for k, v in pms_GroupKFold_get_metadata_routing.items() if v is not None}`
 
@@ -143,7 +141,7 @@ pms_GroupKFold_get_metadata_routing = {k: v for k, v in pms_GroupKFold_get_metad
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -170,9 +168,8 @@ pms_GroupKFold_get_metadata_routing = {k: v for k, v in pms_GroupKFold_get_metad
     }
 
     // set up method params
-    await this._py.ex`pms_GroupKFold_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_GroupKFold_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_GroupKFold_get_n_splits = {k: v for k, v in pms_GroupKFold_get_n_splits.items() if v is not None}`
 
@@ -207,9 +204,8 @@ pms_GroupKFold_get_n_splits = {k: v for k, v in pms_GroupKFold_get_n_splits.item
     }
 
     // set up method params
-    await this._py.ex`pms_GroupKFold_set_split_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GroupKFold_set_split_request = {'groups': ${opts['groups'] ?? undefined}}
 
 pms_GroupKFold_set_split_request = {k: v for k, v in pms_GroupKFold_set_split_request.items() if v is not None}`
 
@@ -250,13 +246,8 @@ pms_GroupKFold_set_split_request = {k: v for k, v in pms_GroupKFold_set_split_re
     }
 
     // set up method params
-    await this._py.ex`pms_GroupKFold_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_GroupKFold_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_GroupKFold_split = {k: v for k, v in pms_GroupKFold_split.items() if v is not None}`
 

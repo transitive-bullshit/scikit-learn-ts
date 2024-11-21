@@ -130,17 +130,8 @@ except NameError: bridgeKernelDensity = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KernelDensity = {'bandwidth': ${
-      this.opts['bandwidth'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'atol': ${
-      this.opts['atol'] ?? undefined
-    }, 'rtol': ${this.opts['rtol'] ?? undefined}, 'breadth_first': ${
-      this.opts['breadth_first'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_KernelDensity = {'bandwidth': ${this.opts['bandwidth'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'kernel': ${this.opts['kernel'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'atol': ${this.opts['atol'] ?? undefined}, 'rtol': ${this.opts['rtol'] ?? undefined}, 'breadth_first': ${this.opts['breadth_first'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}}
 
 ctor_KernelDensity = {k: v for k, v in ctor_KernelDensity.items() if v is not None}`
 
@@ -197,13 +188,8 @@ ctor_KernelDensity = {k: v for k, v in ctor_KernelDensity.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KernelDensity_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KernelDensity_fit = {k: v for k, v in pms_KernelDensity_fit.items() if v is not None}`
 
@@ -238,9 +224,8 @@ pms_KernelDensity_fit = {k: v for k, v in pms_KernelDensity_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelDensity_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KernelDensity_get_metadata_routing = {k: v for k, v in pms_KernelDensity_get_metadata_routing.items() if v is not None}`
 
@@ -280,9 +265,8 @@ pms_KernelDensity_get_metadata_routing = {k: v for k, v in pms_KernelDensity_get
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_sample = {'n_samples': ${
-      opts['n_samples'] ?? undefined
-    }, 'random_state': ${opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelDensity_sample = {'n_samples': ${opts['n_samples'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}}
 
 pms_KernelDensity_sample = {k: v for k, v in pms_KernelDensity_sample.items() if v is not None}`
 
@@ -318,9 +302,8 @@ pms_KernelDensity_sample = {k: v for k, v in pms_KernelDensity_sample.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelDensity_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_KernelDensity_score = {k: v for k, v in pms_KernelDensity_score.items() if v is not None}`
 
@@ -351,9 +334,8 @@ pms_KernelDensity_score = {k: v for k, v in pms_KernelDensity_score.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KernelDensity_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samples.items() if v is not None}`
 
@@ -388,9 +370,8 @@ pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samp
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelDensity_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KernelDensity_set_fit_request = {k: v for k, v in pms_KernelDensity_set_fit_request.items() if v is not None}`
 

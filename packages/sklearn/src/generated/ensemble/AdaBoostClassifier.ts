@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   An AdaBoost classifier.
 
-  An AdaBoost \[1\] classifier is a meta-estimator that begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
+  An AdaBoost [\[1\]](#r33e4ec8c4ad5-1) classifier is a meta-estimator that begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
 
-  This class implements the algorithm known as AdaBoost-SAMME \[2\].
+  This class implements the algorithm based on [\[2\]](#r33e4ec8c4ad5-2).
 
   Read more in the [User Guide](../ensemble.html#adaboost).
 
@@ -55,11 +55,6 @@ export class AdaBoostClassifier {
       Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
      */
     random_state?: number
-
-    /**
-      The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
-     */
-    base_estimator?: any
   }) {
     this.id = `AdaBoostClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -105,15 +100,8 @@ except NameError: bridgeAdaBoostClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_AdaBoostClassifier = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'base_estimator': ${this.opts['base_estimator'] ?? undefined}}
+    await this._py
+      .ex`ctor_AdaBoostClassifier = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_AdaBoostClassifier = {k: v for k, v in ctor_AdaBoostClassifier.items() if v is not None}`
 
@@ -165,9 +153,7 @@ ctor_AdaBoostClassifier = {k: v for k, v in ctor_AdaBoostClassifier.items() if v
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_AdaBoostClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostClassifier_decision_function = {k: v for k, v in pms_AdaBoostClassifier_decision_function.items() if v is not None}`
 
@@ -210,13 +196,8 @@ pms_AdaBoostClassifier_decision_function = {k: v for k, v in pms_AdaBoostClassif
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostClassifier_fit = {k: v for k, v in pms_AdaBoostClassifier_fit.items() if v is not None}`
 
@@ -230,16 +211,11 @@ pms_AdaBoostClassifier_fit = {k: v for k, v in pms_AdaBoostClassifier_fit.items(
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -253,10 +229,7 @@ pms_AdaBoostClassifier_fit = {k: v for k, v in pms_AdaBoostClassifier_fit.items(
     }
 
     // set up method params
-    await this._py
-      .ex`pms_AdaBoostClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_AdaBoostClassifier_get_metadata_routing = {}
 
 pms_AdaBoostClassifier_get_metadata_routing = {k: v for k, v in pms_AdaBoostClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -291,9 +264,8 @@ pms_AdaBoostClassifier_get_metadata_routing = {k: v for k, v in pms_AdaBoostClas
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostClassifier_predict = {k: v for k, v in pms_AdaBoostClassifier_predict.items() if v is not None}`
 
@@ -331,9 +303,7 @@ pms_AdaBoostClassifier_predict = {k: v for k, v in pms_AdaBoostClassifier_predic
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_AdaBoostClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostClassifier_predict_log_proba = {k: v for k, v in pms_AdaBoostClassifier_predict_log_proba.items() if v is not None}`
 
@@ -370,9 +340,8 @@ pms_AdaBoostClassifier_predict_log_proba = {k: v for k, v in pms_AdaBoostClassif
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostClassifier_predict_proba = {k: v for k, v in pms_AdaBoostClassifier_predict_proba.items() if v is not None}`
 
@@ -417,13 +386,8 @@ pms_AdaBoostClassifier_predict_proba = {k: v for k, v in pms_AdaBoostClassifier_
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostClassifier_score = {k: v for k, v in pms_AdaBoostClassifier_score.items() if v is not None}`
 
@@ -463,9 +427,7 @@ pms_AdaBoostClassifier_score = {k: v for k, v in pms_AdaBoostClassifier_score.it
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_AdaBoostClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_AdaBoostClassifier_set_fit_request = {k: v for k, v in pms_AdaBoostClassifier_set_fit_request.items() if v is not None}`
 
@@ -505,9 +467,7 @@ pms_AdaBoostClassifier_set_fit_request = {k: v for k, v in pms_AdaBoostClassifie
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_AdaBoostClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_AdaBoostClassifier_set_score_request = {k: v for k, v in pms_AdaBoostClassifier_set_score_request.items() if v is not None}`
 
@@ -545,9 +505,7 @@ pms_AdaBoostClassifier_set_score_request = {k: v for k, v in pms_AdaBoostClassif
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostClassifier_staged_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_AdaBoostClassifier_staged_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostClassifier_staged_decision_function = {k: v for k, v in pms_AdaBoostClassifier_staged_decision_function.items() if v is not None}`
 
@@ -586,9 +544,8 @@ pms_AdaBoostClassifier_staged_decision_function = {k: v for k, v in pms_AdaBoost
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostClassifier_staged_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostClassifier_staged_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostClassifier_staged_predict = {k: v for k, v in pms_AdaBoostClassifier_staged_predict.items() if v is not None}`
 
@@ -628,9 +585,7 @@ pms_AdaBoostClassifier_staged_predict = {k: v for k, v in pms_AdaBoostClassifier
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostClassifier_staged_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_AdaBoostClassifier_staged_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostClassifier_staged_predict_proba = {k: v for k, v in pms_AdaBoostClassifier_staged_predict_proba.items() if v is not None}`
 
@@ -677,13 +632,8 @@ pms_AdaBoostClassifier_staged_predict_proba = {k: v for k, v in pms_AdaBoostClas
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostClassifier_staged_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostClassifier_staged_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostClassifier_staged_score = {k: v for k, v in pms_AdaBoostClassifier_staged_score.items() if v is not None}`
 

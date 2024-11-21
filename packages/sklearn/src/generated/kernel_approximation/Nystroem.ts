@@ -65,7 +65,7 @@ export class Nystroem {
     /**
       The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n\_jobs` even slices and computing them in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -109,17 +109,8 @@ except NameError: bridgeNystroem = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Nystroem = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${
-      this.opts['coef0'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'kernel_params': ${
-      this.opts['kernel_params'] ?? undefined
-    }, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Nystroem = {'kernel': ${this.opts['kernel'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'kernel_params': ${this.opts['kernel_params'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_Nystroem = {k: v for k, v in ctor_Nystroem.items() if v is not None}`
 
@@ -172,9 +163,8 @@ ctor_Nystroem = {k: v for k, v in ctor_Nystroem.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Nystroem_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_Nystroem_fit = {k: v for k, v in pms_Nystroem_fit.items() if v is not None}`
 
@@ -217,13 +207,8 @@ pms_Nystroem_fit = {k: v for k, v in pms_Nystroem_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items() if v is not None}`
 
@@ -258,9 +243,8 @@ pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items(
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_names_out.items() if v is not None}`
 
@@ -293,9 +277,8 @@ pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Nystroem_get_metadata_routing = {k: v for k, v in pms_Nystroem_get_metadata_routing.items() if v is not None}`
 
@@ -317,7 +300,7 @@ pms_Nystroem_get_metadata_routing = {k: v for k, v in pms_Nystroem_get_metadata_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Nystroem instance has already been disposed')
@@ -328,9 +311,8 @@ pms_Nystroem_get_metadata_routing = {k: v for k, v in pms_Nystroem_get_metadata_
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Nystroem_set_output = {k: v for k, v in pms_Nystroem_set_output.items() if v is not None}`
 
@@ -363,9 +345,8 @@ pms_Nystroem_set_output = {k: v for k, v in pms_Nystroem_set_output.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Nystroem_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v is not None}`
 

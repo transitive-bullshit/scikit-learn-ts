@@ -153,29 +153,8 @@ except NameError: bridgeGaussianMixture = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianMixture = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'covariance_type': ${
-      this.opts['covariance_type'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'reg_covar': ${
-      this.opts['reg_covar'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'init_params': ${
-      this.opts['init_params'] ?? undefined
-    }, 'weights_init': np.array(${this.opts['weights_init'] ?? undefined}) if ${
-      this.opts['weights_init'] !== undefined
-    } else None, 'means_init': np.array(${
-      this.opts['means_init'] ?? undefined
-    }) if ${
-      this.opts['means_init'] !== undefined
-    } else None, 'precisions_init': ${
-      this.opts['precisions_init'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'verbose_interval': ${this.opts['verbose_interval'] ?? undefined}}
+    await this._py
+      .ex`ctor_GaussianMixture = {'n_components': ${this.opts['n_components'] ?? undefined}, 'covariance_type': ${this.opts['covariance_type'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'reg_covar': ${this.opts['reg_covar'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'init_params': ${this.opts['init_params'] ?? undefined}, 'weights_init': np.array(${this.opts['weights_init'] ?? undefined}) if ${this.opts['weights_init'] !== undefined} else None, 'means_init': np.array(${this.opts['means_init'] ?? undefined}) if ${this.opts['means_init'] !== undefined} else None, 'precisions_init': ${this.opts['precisions_init'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'verbose_interval': ${this.opts['verbose_interval'] ?? undefined}}
 
 ctor_GaussianMixture = {k: v for k, v in ctor_GaussianMixture.items() if v is not None}`
 
@@ -224,9 +203,8 @@ ctor_GaussianMixture = {k: v for k, v in ctor_GaussianMixture.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_aic = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_aic = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_aic = {k: v for k, v in pms_GaussianMixture_aic.items() if v is not None}`
 
@@ -259,9 +237,8 @@ pms_GaussianMixture_aic = {k: v for k, v in pms_GaussianMixture_aic.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_bic = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_bic = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v is not None}`
 
@@ -299,9 +276,8 @@ pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianMixture_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GaussianMixture_fit = {k: v for k, v in pms_GaussianMixture_fit.items() if v is not None}`
 
@@ -339,9 +315,8 @@ pms_GaussianMixture_fit = {k: v for k, v in pms_GaussianMixture_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianMixture_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GaussianMixture_fit_predict = {k: v for k, v in pms_GaussianMixture_fit_predict.items() if v is not None}`
 
@@ -376,9 +351,8 @@ pms_GaussianMixture_fit_predict = {k: v for k, v in pms_GaussianMixture_fit_pred
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianMixture_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianMixture_get_metadata_routing = {k: v for k, v in pms_GaussianMixture_get_metadata_routing.items() if v is not None}`
 
@@ -409,9 +383,8 @@ pms_GaussianMixture_get_metadata_routing = {k: v for k, v in pms_GaussianMixture
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_predict = {k: v for k, v in pms_GaussianMixture_predict.items() if v is not None}`
 
@@ -442,9 +415,8 @@ pms_GaussianMixture_predict = {k: v for k, v in pms_GaussianMixture_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_predict_proba = {k: v for k, v in pms_GaussianMixture_predict_proba.items() if v is not None}`
 
@@ -477,9 +449,8 @@ pms_GaussianMixture_predict_proba = {k: v for k, v in pms_GaussianMixture_predic
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_sample = {'n_samples': ${
-      opts['n_samples'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianMixture_sample = {'n_samples': ${opts['n_samples'] ?? undefined}}
 
 pms_GaussianMixture_sample = {k: v for k, v in pms_GaussianMixture_sample.items() if v is not None}`
 
@@ -515,9 +486,8 @@ pms_GaussianMixture_sample = {k: v for k, v in pms_GaussianMixture_sample.items(
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianMixture_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GaussianMixture_score = {k: v for k, v in pms_GaussianMixture_score.items() if v is not None}`
 
@@ -548,9 +518,8 @@ pms_GaussianMixture_score = {k: v for k, v in pms_GaussianMixture_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_samples.items() if v is not None}`
 
@@ -689,7 +658,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    True when convergence was reached in fit(), `false` otherwise.
+    True when convergence of the best fit of EM was reached, `false` otherwise.
    */
   get converged_(): Promise<boolean> {
     if (this._isDisposed) {

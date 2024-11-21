@@ -86,13 +86,8 @@ except NameError: bridgeDummyClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DummyClassifier = {'strategy': ${
-      this.opts['strategy'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'constant': np.array(${this.opts['constant'] ?? undefined}) if ${
-      this.opts['constant'] !== undefined
-    } else None}
+    await this._py
+      .ex`ctor_DummyClassifier = {'strategy': ${this.opts['strategy'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'constant': np.array(${this.opts['constant'] ?? undefined}) if ${this.opts['constant'] !== undefined} else None}
 
 ctor_DummyClassifier = {k: v for k, v in ctor_DummyClassifier.items() if v is not None}`
 
@@ -149,13 +144,8 @@ ctor_DummyClassifier = {k: v for k, v in ctor_DummyClassifier.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_DummyClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_DummyClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DummyClassifier_fit = {k: v for k, v in pms_DummyClassifier_fit.items() if v is not None}`
 
@@ -190,9 +180,8 @@ pms_DummyClassifier_fit = {k: v for k, v in pms_DummyClassifier_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_DummyClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DummyClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DummyClassifier_get_metadata_routing = {k: v for k, v in pms_DummyClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -223,9 +212,8 @@ pms_DummyClassifier_get_metadata_routing = {k: v for k, v in pms_DummyClassifier
     }
 
     // set up method params
-    await this._py.ex`pms_DummyClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_DummyClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_DummyClassifier_predict = {k: v for k, v in pms_DummyClassifier_predict.items() if v is not None}`
 
@@ -258,9 +246,8 @@ pms_DummyClassifier_predict = {k: v for k, v in pms_DummyClassifier_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_DummyClassifier_predict_log_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DummyClassifier_predict_log_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_DummyClassifier_predict_log_proba = {k: v for k, v in pms_DummyClassifier_predict_log_proba.items() if v is not None}`
 
@@ -291,9 +278,8 @@ pms_DummyClassifier_predict_log_proba = {k: v for k, v in pms_DummyClassifier_pr
     }
 
     // set up method params
-    await this._py.ex`pms_DummyClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_DummyClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_DummyClassifier_predict_proba = {k: v for k, v in pms_DummyClassifier_predict_proba.items() if v is not None}`
 
@@ -336,13 +322,8 @@ pms_DummyClassifier_predict_proba = {k: v for k, v in pms_DummyClassifier_predic
     }
 
     // set up method params
-    await this._py.ex`pms_DummyClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_DummyClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DummyClassifier_score = {k: v for k, v in pms_DummyClassifier_score.items() if v is not None}`
 
@@ -379,9 +360,8 @@ pms_DummyClassifier_score = {k: v for k, v in pms_DummyClassifier_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_DummyClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DummyClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DummyClassifier_set_fit_request = {k: v for k, v in pms_DummyClassifier_set_fit_request.items() if v is not None}`
 
@@ -419,9 +399,7 @@ pms_DummyClassifier_set_fit_request = {k: v for k, v in pms_DummyClassifier_set_
 
     // set up method params
     await this._py
-      .ex`pms_DummyClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_DummyClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DummyClassifier_set_score_request = {k: v for k, v in pms_DummyClassifier_set_score_request.items() if v is not None}`
 
@@ -506,6 +484,56 @@ pms_DummyClassifier_set_score_request = {k: v for k, v in pms_DummyClassifier_se
       // convert the result from python to node.js
       return this
         ._py`attr_DummyClassifier_class_prior_.tolist() if hasattr(attr_DummyClassifier_class_prior_, 'tolist') else attr_DummyClassifier_class_prior_`
+    })()
+  }
+
+  /**
+    Number of features seen during [fit](../../glossary.html#term-fit).
+   */
+  get n_features_in_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error('This DummyClassifier instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'DummyClassifier must call init() before accessing n_features_in_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_DummyClassifier_n_features_in_ = bridgeDummyClassifier[${this.id}].n_features_in_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_DummyClassifier_n_features_in_.tolist() if hasattr(attr_DummyClassifier_n_features_in_, 'tolist') else attr_DummyClassifier_n_features_in_`
+    })()
+  }
+
+  /**
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+   */
+  get feature_names_in_(): Promise<NDArray> {
+    if (this._isDisposed) {
+      throw new Error('This DummyClassifier instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'DummyClassifier must call init() before accessing feature_names_in_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_DummyClassifier_feature_names_in_ = bridgeDummyClassifier[${this.id}].feature_names_in_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_DummyClassifier_feature_names_in_.tolist() if hasattr(attr_DummyClassifier_feature_names_in_, 'tolist') else attr_DummyClassifier_feature_names_in_`
     })()
   }
 

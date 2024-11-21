@@ -31,14 +31,9 @@ export class FeatureAgglomeration {
     n_clusters?: number
 
     /**
-      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
+      Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
 
       @defaultValue `'euclidean'`
-     */
-    affinity?: string
-
-    /**
-      Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
      */
     metric?: string
 
@@ -127,19 +122,8 @@ except NameError: bridgeFeatureAgglomeration = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_FeatureAgglomeration = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'affinity': ${this.opts['affinity'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'memory': ${this.opts['memory'] ?? undefined}, 'connectivity': ${
-      this.opts['connectivity'] ?? undefined
-    }, 'compute_full_tree': ${
-      this.opts['compute_full_tree'] ?? undefined
-    }, 'linkage': ${this.opts['linkage'] ?? undefined}, 'pooling_func': ${
-      this.opts['pooling_func'] ?? undefined
-    }, 'distance_threshold': ${
-      this.opts['distance_threshold'] ?? undefined
-    }, 'compute_distances': ${this.opts['compute_distances'] ?? undefined}}
+    await this._py
+      .ex`ctor_FeatureAgglomeration = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'memory': ${this.opts['memory'] ?? undefined}, 'connectivity': ${this.opts['connectivity'] ?? undefined}, 'compute_full_tree': ${this.opts['compute_full_tree'] ?? undefined}, 'linkage': ${this.opts['linkage'] ?? undefined}, 'pooling_func': ${this.opts['pooling_func'] ?? undefined}, 'distance_threshold': ${this.opts['distance_threshold'] ?? undefined}, 'compute_distances': ${this.opts['compute_distances'] ?? undefined}}
 
 ctor_FeatureAgglomeration = {k: v for k, v in ctor_FeatureAgglomeration.items() if v is not None}`
 
@@ -193,9 +177,8 @@ ctor_FeatureAgglomeration = {k: v for k, v in ctor_FeatureAgglomeration.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureAgglomeration_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_FeatureAgglomeration_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_FeatureAgglomeration_fit = {k: v for k, v in pms_FeatureAgglomeration_fit.items() if v is not None}`
 
@@ -242,13 +225,8 @@ pms_FeatureAgglomeration_fit = {k: v for k, v in pms_FeatureAgglomeration_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureAgglomeration_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureAgglomeration_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_FeatureAgglomeration_fit_transform = {k: v for k, v in pms_FeatureAgglomeration_fit_transform.items() if v is not None}`
 
@@ -286,9 +264,7 @@ pms_FeatureAgglomeration_fit_transform = {k: v for k, v in pms_FeatureAgglomerat
 
     // set up method params
     await this._py
-      .ex`pms_FeatureAgglomeration_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_FeatureAgglomeration_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_FeatureAgglomeration_get_feature_names_out = {k: v for k, v in pms_FeatureAgglomeration_get_feature_names_out.items() if v is not None}`
 
@@ -326,9 +302,7 @@ pms_FeatureAgglomeration_get_feature_names_out = {k: v for k, v in pms_FeatureAg
 
     // set up method params
     await this._py
-      .ex`pms_FeatureAgglomeration_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_FeatureAgglomeration_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_FeatureAgglomeration_get_metadata_routing = {k: v for k, v in pms_FeatureAgglomeration_get_metadata_routing.items() if v is not None}`
 
@@ -348,12 +322,12 @@ pms_FeatureAgglomeration_get_metadata_routing = {k: v for k, v in pms_FeatureAgg
     /**
       The values to be assigned to each cluster of samples.
      */
-    Xt?: ArrayLike[]
+    X?: ArrayLike[]
 
     /**
-      Use `Xt` instead.
+      The values to be assigned to each cluster of samples.
      */
-    Xred?: any
+    Xt?: ArrayLike[]
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
@@ -369,11 +343,7 @@ pms_FeatureAgglomeration_get_metadata_routing = {k: v for k, v in pms_FeatureAgg
 
     // set up method params
     await this._py
-      .ex`pms_FeatureAgglomeration_inverse_transform = {'Xt': np.array(${
-      opts['Xt'] ?? undefined
-    }) if ${opts['Xt'] !== undefined} else None, 'Xred': ${
-      opts['Xred'] ?? undefined
-    }}
+      .ex`pms_FeatureAgglomeration_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Xt': np.array(${opts['Xt'] ?? undefined}) if ${opts['Xt'] !== undefined} else None}
 
 pms_FeatureAgglomeration_inverse_transform = {k: v for k, v in pms_FeatureAgglomeration_inverse_transform.items() if v is not None}`
 
@@ -395,7 +365,7 @@ pms_FeatureAgglomeration_inverse_transform = {k: v for k, v in pms_FeatureAgglom
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -410,9 +380,8 @@ pms_FeatureAgglomeration_inverse_transform = {k: v for k, v in pms_FeatureAgglom
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureAgglomeration_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureAgglomeration_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_FeatureAgglomeration_set_output = {k: v for k, v in pms_FeatureAgglomeration_set_output.items() if v is not None}`
 
@@ -447,9 +416,8 @@ pms_FeatureAgglomeration_set_output = {k: v for k, v in pms_FeatureAgglomeration
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureAgglomeration_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_FeatureAgglomeration_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_transform.items() if v is not None}`
 

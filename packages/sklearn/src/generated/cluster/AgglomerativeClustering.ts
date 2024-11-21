@@ -31,14 +31,9 @@ export class AgglomerativeClustering {
     n_clusters?: number
 
     /**
-      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
+      Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
 
       @defaultValue `'euclidean'`
-     */
-    affinity?: string
-
-    /**
-      Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
      */
     metric?: string
 
@@ -49,6 +44,8 @@ export class AgglomerativeClustering {
 
     /**
       Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
+
+      For an example of connectivity matrix using [`kneighbors\_graph`](sklearn.neighbors.kneighbors_graph.html#sklearn.neighbors.kneighbors_graph "sklearn.neighbors.kneighbors_graph"), see [Agglomerative clustering with and without structure](../../auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py).
      */
     connectivity?: ArrayLike
 
@@ -122,17 +119,8 @@ except NameError: bridgeAgglomerativeClustering = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_AgglomerativeClustering = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'affinity': ${this.opts['affinity'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'memory': ${this.opts['memory'] ?? undefined}, 'connectivity': ${
-      this.opts['connectivity'] ?? undefined
-    }, 'compute_full_tree': ${
-      this.opts['compute_full_tree'] ?? undefined
-    }, 'linkage': ${this.opts['linkage'] ?? undefined}, 'distance_threshold': ${
-      this.opts['distance_threshold'] ?? undefined
-    }, 'compute_distances': ${this.opts['compute_distances'] ?? undefined}}
+    await this._py
+      .ex`ctor_AgglomerativeClustering = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'memory': ${this.opts['memory'] ?? undefined}, 'connectivity': ${this.opts['connectivity'] ?? undefined}, 'compute_full_tree': ${this.opts['compute_full_tree'] ?? undefined}, 'linkage': ${this.opts['linkage'] ?? undefined}, 'distance_threshold': ${this.opts['distance_threshold'] ?? undefined}, 'compute_distances': ${this.opts['compute_distances'] ?? undefined}}
 
 ctor_AgglomerativeClustering = {k: v for k, v in ctor_AgglomerativeClustering.items() if v is not None}`
 
@@ -186,9 +174,8 @@ ctor_AgglomerativeClustering = {k: v for k, v in ctor_AgglomerativeClustering.it
     }
 
     // set up method params
-    await this._py.ex`pms_AgglomerativeClustering_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_AgglomerativeClustering_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_AgglomerativeClustering_fit = {k: v for k, v in pms_AgglomerativeClustering_fit.items() if v is not None}`
 
@@ -231,9 +218,7 @@ pms_AgglomerativeClustering_fit = {k: v for k, v in pms_AgglomerativeClustering_
 
     // set up method params
     await this._py
-      .ex`pms_AgglomerativeClustering_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+      .ex`pms_AgglomerativeClustering_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClustering_fit_predict.items() if v is not None}`
 
@@ -271,9 +256,7 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
 
     // set up method params
     await this._py
-      .ex`pms_AgglomerativeClustering_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_AgglomerativeClustering_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_AgglomerativeClustering_get_metadata_routing = {k: v for k, v in pms_AgglomerativeClustering_get_metadata_routing.items() if v is not None}`
 

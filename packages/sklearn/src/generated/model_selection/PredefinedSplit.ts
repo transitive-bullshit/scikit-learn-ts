@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Predefined split cross-validator
+  Predefined split cross-validator.
 
   Provides train/test indices to split data into train/test sets using a predefined scheme specified by the user with the `test\_fold` parameter.
 
@@ -68,9 +68,8 @@ except NameError: bridgePredefinedSplit = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PredefinedSplit = {'test_fold': np.array(${
-      this.opts['test_fold'] ?? undefined
-    }) if ${this.opts['test_fold'] !== undefined} else None}
+    await this._py
+      .ex`ctor_PredefinedSplit = {'test_fold': np.array(${this.opts['test_fold'] ?? undefined}) if ${this.opts['test_fold'] !== undefined} else None}
 
 ctor_PredefinedSplit = {k: v for k, v in ctor_PredefinedSplit.items() if v is not None}`
 
@@ -121,9 +120,8 @@ ctor_PredefinedSplit = {k: v for k, v in ctor_PredefinedSplit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_PredefinedSplit_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PredefinedSplit_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PredefinedSplit_get_metadata_routing = {k: v for k, v in pms_PredefinedSplit_get_metadata_routing.items() if v is not None}`
 
@@ -137,7 +135,7 @@ pms_PredefinedSplit_get_metadata_routing = {k: v for k, v in pms_PredefinedSplit
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -164,9 +162,8 @@ pms_PredefinedSplit_get_metadata_routing = {k: v for k, v in pms_PredefinedSplit
     }
 
     // set up method params
-    await this._py.ex`pms_PredefinedSplit_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_PredefinedSplit_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_PredefinedSplit_get_n_splits = {k: v for k, v in pms_PredefinedSplit_get_n_splits.items() if v is not None}`
 
@@ -207,9 +204,8 @@ pms_PredefinedSplit_get_n_splits = {k: v for k, v in pms_PredefinedSplit_get_n_s
     }
 
     // set up method params
-    await this._py.ex`pms_PredefinedSplit_split = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_PredefinedSplit_split = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_PredefinedSplit_split = {k: v for k, v in pms_PredefinedSplit_split.items() if v is not None}`
 

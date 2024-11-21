@@ -94,13 +94,8 @@ except NameError: bridgePairwiseKernel = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PairwiseKernel = {'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'gamma_bounds': ${this.opts['gamma_bounds'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'pairwise_kernels_kwargs': ${
-      this.opts['pairwise_kernels_kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PairwiseKernel = {'gamma': ${this.opts['gamma'] ?? undefined}, 'gamma_bounds': ${this.opts['gamma_bounds'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'pairwise_kernels_kwargs': ${this.opts['pairwise_kernels_kwargs'] ?? undefined}}
 
 ctor_PairwiseKernel = {k: v for k, v in ctor_PairwiseKernel.items() if v is not None}`
 
@@ -159,13 +154,8 @@ ctor_PairwiseKernel = {k: v for k, v in ctor_PairwiseKernel.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_PairwiseKernel___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PairwiseKernel___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_PairwiseKernel___call__ = {k: v for k, v in pms_PairwiseKernel___call__.items() if v is not None}`
 
@@ -199,9 +189,7 @@ pms_PairwiseKernel___call__ = {k: v for k, v in pms_PairwiseKernel___call__.item
 
     // set up method params
     await this._py
-      .ex`pms_PairwiseKernel_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+      .ex`pms_PairwiseKernel_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_PairwiseKernel_clone_with_theta = {k: v for k, v in pms_PairwiseKernel_clone_with_theta.items() if v is not None}`
 
@@ -234,9 +222,8 @@ pms_PairwiseKernel_clone_with_theta = {k: v for k, v in pms_PairwiseKernel_clone
     }
 
     // set up method params
-    await this._py.ex`pms_PairwiseKernel_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PairwiseKernel_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PairwiseKernel_diag = {k: v for k, v in pms_PairwiseKernel_diag.items() if v is not None}`
 
@@ -273,27 +260,5 @@ pms_PairwiseKernel_is_stationary = {k: v for k, v in pms_PairwiseKernel_is_stati
     // convert the result from python to node.js
     return this
       ._py`res_PairwiseKernel_is_stationary.tolist() if hasattr(res_PairwiseKernel_is_stationary, 'tolist') else res_PairwiseKernel_is_stationary`
-  }
-
-  get hyperparameter_gamma(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This PairwiseKernel instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'PairwiseKernel must call init() before accessing hyperparameter_gamma'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_PairwiseKernel_hyperparameter_gamma = bridgePairwiseKernel[${this.id}].hyperparameter_gamma`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_PairwiseKernel_hyperparameter_gamma.tolist() if hasattr(attr_PairwiseKernel_hyperparameter_gamma, 'tolist') else attr_PairwiseKernel_hyperparameter_gamma`
-    })()
   }
 }

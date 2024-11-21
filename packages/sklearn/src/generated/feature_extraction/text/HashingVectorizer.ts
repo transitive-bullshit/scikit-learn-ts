@@ -49,7 +49,7 @@ export class HashingVectorizer {
     /**
       Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any character. `undefined` (default) means no character normalization is performed.
 
-      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.12)").
+      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.13)").
      */
     strip_accents?: 'ascii' | 'unicode'
 
@@ -171,25 +171,8 @@ except NameError: bridgeHashingVectorizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HashingVectorizer = {'input': ${
-      this.opts['input'] ?? undefined
-    }, 'encoding': ${this.opts['encoding'] ?? undefined}, 'decode_error': ${
-      this.opts['decode_error'] ?? undefined
-    }, 'strip_accents': ${
-      this.opts['strip_accents'] ?? undefined
-    }, 'lowercase': ${this.opts['lowercase'] ?? undefined}, 'preprocessor': ${
-      this.opts['preprocessor'] ?? undefined
-    }, 'tokenizer': ${this.opts['tokenizer'] ?? undefined}, 'stop_words': ${
-      this.opts['stop_words'] ?? undefined
-    }, 'token_pattern': ${
-      this.opts['token_pattern'] ?? undefined
-    }, 'ngram_range': ${this.opts['ngram_range'] ?? undefined}, 'analyzer': ${
-      this.opts['analyzer'] ?? undefined
-    }, 'n_features': ${this.opts['n_features'] ?? undefined}, 'binary': ${
-      this.opts['binary'] ?? undefined
-    }, 'norm': ${this.opts['norm'] ?? undefined}, 'alternate_sign': ${
-      this.opts['alternate_sign'] ?? undefined
-    }, 'dtype': ${this.opts['dtype'] ?? undefined}}
+    await this._py
+      .ex`ctor_HashingVectorizer = {'input': ${this.opts['input'] ?? undefined}, 'encoding': ${this.opts['encoding'] ?? undefined}, 'decode_error': ${this.opts['decode_error'] ?? undefined}, 'strip_accents': ${this.opts['strip_accents'] ?? undefined}, 'lowercase': ${this.opts['lowercase'] ?? undefined}, 'preprocessor': ${this.opts['preprocessor'] ?? undefined}, 'tokenizer': ${this.opts['tokenizer'] ?? undefined}, 'stop_words': ${this.opts['stop_words'] ?? undefined}, 'token_pattern': ${this.opts['token_pattern'] ?? undefined}, 'ngram_range': ${this.opts['ngram_range'] ?? undefined}, 'analyzer': ${this.opts['analyzer'] ?? undefined}, 'n_features': ${this.opts['n_features'] ?? undefined}, 'binary': ${this.opts['binary'] ?? undefined}, 'norm': ${this.opts['norm'] ?? undefined}, 'alternate_sign': ${this.opts['alternate_sign'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}}
 
 ctor_HashingVectorizer = {k: v for k, v in ctor_HashingVectorizer.items() if v is not None}`
 
@@ -332,9 +315,8 @@ pms_HashingVectorizer_build_tokenizer = {k: v for k, v in pms_HashingVectorizer_
     }
 
     // set up method params
-    await this._py.ex`pms_HashingVectorizer_decode = {'doc': ${
-      opts['doc'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HashingVectorizer_decode = {'doc': ${opts['doc'] ?? undefined}}
 
 pms_HashingVectorizer_decode = {k: v for k, v in pms_HashingVectorizer_decode.items() if v is not None}`
 
@@ -374,9 +356,8 @@ pms_HashingVectorizer_decode = {k: v for k, v in pms_HashingVectorizer_decode.it
     }
 
     // set up method params
-    await this._py.ex`pms_HashingVectorizer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_HashingVectorizer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_HashingVectorizer_fit = {k: v for k, v in pms_HashingVectorizer_fit.items() if v is not None}`
 
@@ -416,9 +397,8 @@ pms_HashingVectorizer_fit = {k: v for k, v in pms_HashingVectorizer_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_HashingVectorizer_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_HashingVectorizer_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_HashingVectorizer_fit_transform = {k: v for k, v in pms_HashingVectorizer_fit_transform.items() if v is not None}`
 
@@ -456,9 +436,7 @@ pms_HashingVectorizer_fit_transform = {k: v for k, v in pms_HashingVectorizer_fi
 
     // set up method params
     await this._py
-      .ex`pms_HashingVectorizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_HashingVectorizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HashingVectorizer_get_metadata_routing = {k: v for k, v in pms_HashingVectorizer_get_metadata_routing.items() if v is not None}`
 
@@ -528,9 +506,8 @@ pms_HashingVectorizer_get_stop_words = {k: v for k, v in pms_HashingVectorizer_g
     }
 
     // set up method params
-    await this._py.ex`pms_HashingVectorizer_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_HashingVectorizer_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_HashingVectorizer_partial_fit = {k: v for k, v in pms_HashingVectorizer_partial_fit.items() if v is not None}`
 
@@ -552,7 +529,7 @@ pms_HashingVectorizer_partial_fit = {k: v for k, v in pms_HashingVectorizer_part
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -565,9 +542,8 @@ pms_HashingVectorizer_partial_fit = {k: v for k, v in pms_HashingVectorizer_part
     }
 
     // set up method params
-    await this._py.ex`pms_HashingVectorizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HashingVectorizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_HashingVectorizer_set_output = {k: v for k, v in pms_HashingVectorizer_set_output.items() if v is not None}`
 
@@ -600,9 +576,8 @@ pms_HashingVectorizer_set_output = {k: v for k, v in pms_HashingVectorizer_set_o
     }
 
     // set up method params
-    await this._py.ex`pms_HashingVectorizer_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HashingVectorizer_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_HashingVectorizer_transform = {k: v for k, v in pms_HashingVectorizer_transform.items() if v is not None}`
 

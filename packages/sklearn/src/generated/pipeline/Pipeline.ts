@@ -6,9 +6,11 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Pipeline of transforms with a final estimator.
+  A sequence of data transformers with an optional final predictor.
 
-  Sequentially apply a list of transforms and a final estimator. Intermediate steps of the pipeline must be ‘transforms’, that is, they must implement `fit` and `transform` methods. The final estimator only needs to implement `fit`. The transformers in the pipeline can be cached using `memory` argument.
+  `Pipeline` allows you to sequentially apply a list of transformers to preprocess the data and, if desired, conclude the sequence with a final [predictor](../../glossary.html#term-predictor) for predictive modeling.
+
+  Intermediate steps of the pipeline must be ‘transforms’, that is, they must implement `fit` and `transform` methods. The final [estimator](../../glossary.html#term-estimator) only needs to implement `fit`. The transformers in the pipeline can be cached using `memory` argument.
 
   The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters. For this, it enables setting parameters of the various steps using their names and the parameter name separated by a `'\_\_'`, as in the example below. A step’s estimator may be replaced entirely by setting the parameter with its name to another estimator, or a transformer removed by setting it to `'passthrough'` or `undefined`.
 
@@ -28,7 +30,7 @@ export class Pipeline {
 
   constructor(opts?: {
     /**
-      List of (name, transform) tuples (implementing `fit`/`transform`) that are chained in sequential order. The last transform must be an estimator.
+      List of (name of step, estimator) tuples that are to be chained in sequential order. To be compatible with the scikit-learn API, all steps must define `fit`. All non-last steps must also define `transform`. See [Combining Estimators](../compose.html#combining-estimators) for more details.
      */
     steps?: any
 
@@ -84,11 +86,8 @@ except NameError: bridgePipeline = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Pipeline = {'steps': ${
-      this.opts['steps'] ?? undefined
-    }, 'memory': ${this.opts['memory'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Pipeline = {'steps': ${this.opts['steps'] ?? undefined}, 'memory': ${this.opts['memory'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_Pipeline = {k: v for k, v in ctor_Pipeline.items() if v is not None}`
 
@@ -126,6 +125,11 @@ ctor_Pipeline = {k: v for k, v in ctor_Pipeline.items() if v is not None}`
       Data to predict on. Must fulfill input requirements of first step of the pipeline.
      */
     X?: any
+
+    /**
+      Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+     */
+    params?: any
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -136,9 +140,8 @@ ctor_Pipeline = {k: v for k, v in ctor_Pipeline.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_decision_function = {'X': ${opts['X'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_decision_function = {k: v for k, v in pms_Pipeline_decision_function.items() if v is not None}`
 
@@ -154,7 +157,7 @@ pms_Pipeline_decision_function = {k: v for k, v in pms_Pipeline_decision_functio
   /**
     Fit the model.
 
-    Fit all the transformers one after the other and transform the data. Finally, fit the transformed data using the final estimator.
+    Fit all the transformers one after the other and sequentially transform the data. Finally, fit the transformed data using the final estimator.
    */
   async fit(opts: {
     /**
@@ -168,9 +171,9 @@ pms_Pipeline_decision_function = {k: v for k, v in pms_Pipeline_decision_functio
     y?: any
 
     /**
-      Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
+      If `enable\_metadata\_routing=False` (default):
      */
-    fit_params?: any
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -181,11 +184,8 @@ pms_Pipeline_decision_function = {k: v for k, v in pms_Pipeline_decision_functio
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_fit = {k: v for k, v in pms_Pipeline_fit.items() if v is not None}`
 
@@ -215,9 +215,9 @@ pms_Pipeline_fit = {k: v for k, v in pms_Pipeline_fit.items() if v is not None}`
     y?: any
 
     /**
-      Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
+      If `enable\_metadata\_routing=False` (default):
      */
-    fit_params?: any
+    params?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -228,11 +228,8 @@ pms_Pipeline_fit = {k: v for k, v in pms_Pipeline_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_fit_predict = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_fit_predict = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_fit_predict = {k: v for k, v in pms_Pipeline_fit_predict.items() if v is not None}`
 
@@ -248,7 +245,7 @@ pms_Pipeline_fit_predict = {k: v for k, v in pms_Pipeline_fit_predict.items() if
   /**
     Fit the model and transform with the final estimator.
 
-    Fits all the transformers one after the other and transform the data. Then uses `fit\_transform` on transformed data with the final estimator.
+    Fit all the transformers one after the other and sequentially transform the data. Only valid if the final estimator either implements `fit\_transform` or `fit` and `transform`.
    */
   async fit_transform(opts: {
     /**
@@ -262,9 +259,9 @@ pms_Pipeline_fit_predict = {k: v for k, v in pms_Pipeline_fit_predict.items() if
     y?: any
 
     /**
-      Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
+      If `enable\_metadata\_routing=False` (default):
      */
-    fit_params?: any
+    params?: any
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -275,11 +272,8 @@ pms_Pipeline_fit_predict = {k: v for k, v in pms_Pipeline_fit_predict.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_fit_transform = {k: v for k, v in pms_Pipeline_fit_transform.items() if v is not None}`
 
@@ -314,9 +308,8 @@ pms_Pipeline_fit_transform = {k: v for k, v in pms_Pipeline_fit_transform.items(
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Pipeline_get_feature_names_out = {k: v for k, v in pms_Pipeline_get_feature_names_out.items() if v is not None}`
 
@@ -336,7 +329,7 @@ pms_Pipeline_get_feature_names_out = {k: v for k, v in pms_Pipeline_get_feature_
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -349,9 +342,8 @@ pms_Pipeline_get_feature_names_out = {k: v for k, v in pms_Pipeline_get_feature_
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Pipeline_get_metadata_routing = {k: v for k, v in pms_Pipeline_get_metadata_routing.items() if v is not None}`
 
@@ -373,7 +365,17 @@ pms_Pipeline_get_metadata_routing = {k: v for k, v in pms_Pipeline_get_metadata_
     /**
       Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method.
      */
+    X?: ArrayLike[]
+
+    /**
+      Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method.
+     */
     Xt?: ArrayLike[]
+
+    /**
+      Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+     */
+    params?: any
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -384,9 +386,8 @@ pms_Pipeline_get_metadata_routing = {k: v for k, v in pms_Pipeline_get_metadata_
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_inverse_transform = {'Xt': np.array(${
-      opts['Xt'] ?? undefined
-    }) if ${opts['Xt'] !== undefined} else None}
+    await this._py
+      .ex`pms_Pipeline_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Xt': np.array(${opts['Xt'] ?? undefined}) if ${opts['Xt'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_inverse_transform = {k: v for k, v in pms_Pipeline_inverse_transform.items() if v is not None}`
 
@@ -411,9 +412,9 @@ pms_Pipeline_inverse_transform = {k: v for k, v in pms_Pipeline_inverse_transfor
     X?: any
 
     /**
-      Parameters to the `predict` called at the end of all transformations in the pipeline. Note that while this may be used to return uncertainties from some models with return\_std or return\_cov, uncertainties that are generated by the transformations in the pipeline are not propagated to the final estimator.
+      If `enable\_metadata\_routing=False` (default):
      */
-    predict_params?: any
+    params?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -424,9 +425,8 @@ pms_Pipeline_inverse_transform = {k: v for k, v in pms_Pipeline_inverse_transfor
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_predict = {'X': ${
-      opts['X'] ?? undefined
-    }, 'predict_params': ${opts['predict_params'] ?? undefined}}
+    await this._py
+      .ex`pms_Pipeline_predict = {'X': ${opts['X'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_predict = {k: v for k, v in pms_Pipeline_predict.items() if v is not None}`
 
@@ -451,9 +451,9 @@ pms_Pipeline_predict = {k: v for k, v in pms_Pipeline_predict.items() if v is no
     X?: any
 
     /**
-      Parameters to the `predict\_log\_proba` called at the end of all transformations in the pipeline.
+      If `enable\_metadata\_routing=False` (default):
      */
-    predict_log_proba_params?: any
+    params?: any
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -464,11 +464,8 @@ pms_Pipeline_predict = {k: v for k, v in pms_Pipeline_predict.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_predict_log_proba = {'X': ${
-      opts['X'] ?? undefined
-    }, 'predict_log_proba_params': ${
-      opts['predict_log_proba_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_predict_log_proba = {'X': ${opts['X'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_predict_log_proba = {k: v for k, v in pms_Pipeline_predict_log_proba.items() if v is not None}`
 
@@ -493,9 +490,9 @@ pms_Pipeline_predict_log_proba = {k: v for k, v in pms_Pipeline_predict_log_prob
     X?: any
 
     /**
-      Parameters to the `predict\_proba` called at the end of all transformations in the pipeline.
+      If `enable\_metadata\_routing=False` (default):
      */
-    predict_proba_params?: any
+    params?: any
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -506,9 +503,8 @@ pms_Pipeline_predict_log_proba = {k: v for k, v in pms_Pipeline_predict_log_prob
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }, 'predict_proba_params': ${opts['predict_proba_params'] ?? undefined}}
+    await this._py
+      .ex`pms_Pipeline_predict_proba = {'X': ${opts['X'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_predict_proba = {k: v for k, v in pms_Pipeline_predict_proba.items() if v is not None}`
 
@@ -541,6 +537,11 @@ pms_Pipeline_predict_proba = {k: v for k, v in pms_Pipeline_predict_proba.items(
       If not `undefined`, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+     */
+    params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -551,11 +552,8 @@ pms_Pipeline_predict_proba = {k: v for k, v in pms_Pipeline_predict_proba.items(
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_score = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_score = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_score = {k: v for k, v in pms_Pipeline_score.items() if v is not None}`
 
@@ -588,9 +586,8 @@ pms_Pipeline_score = {k: v for k, v in pms_Pipeline_score.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_Pipeline_score_samples = {k: v for k, v in pms_Pipeline_score_samples.items() if v is not None}`
 
@@ -612,7 +609,7 @@ pms_Pipeline_score_samples = {k: v for k, v in pms_Pipeline_score_samples.items(
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -623,9 +620,8 @@ pms_Pipeline_score_samples = {k: v for k, v in pms_Pipeline_score_samples.items(
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Pipeline_set_output = {k: v for k, v in pms_Pipeline_set_output.items() if v is not None}`
 
@@ -660,9 +656,8 @@ pms_Pipeline_set_output = {k: v for k, v in pms_Pipeline_set_output.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Pipeline_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Pipeline_set_score_request = {k: v for k, v in pms_Pipeline_set_score_request.items() if v is not None}`
 
@@ -687,6 +682,11 @@ pms_Pipeline_set_score_request = {k: v for k, v in pms_Pipeline_set_score_reques
       Data to transform. Must fulfill input requirements of first step of the pipeline.
      */
     X?: any
+
+    /**
+      Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+     */
+    params?: any
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
@@ -697,7 +697,8 @@ pms_Pipeline_set_score_request = {k: v for k, v in pms_Pipeline_set_score_reques
     }
 
     // set up method params
-    await this._py.ex`pms_Pipeline_transform = {'X': ${opts['X'] ?? undefined}}
+    await this._py
+      .ex`pms_Pipeline_transform = {'X': ${opts['X'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_Pipeline_transform = {k: v for k, v in pms_Pipeline_transform.items() if v is not None}`
 

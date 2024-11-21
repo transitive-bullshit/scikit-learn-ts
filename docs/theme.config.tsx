@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
+import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import React from 'react'
 
 const siteHost = 'sklearn.vercel.app'
@@ -31,7 +31,7 @@ const config: DocsThemeConfig = {
   docsRepositoryBase:
     'https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/docs',
   editLink: {
-    text: 'Edit this page on GitHub'
+    content: 'Edit this page on GitHub'
   },
   useNextSeoProps() {
     const { asPath } = useRouter()
@@ -46,9 +46,9 @@ const config: DocsThemeConfig = {
     }
   },
   sidebar: {
-    titleComponent,
     toggleButton: true
   },
+  title: titleComponent,
   head: function useHead() {
     const config = useConfig()
     const { asPath } = useRouter()

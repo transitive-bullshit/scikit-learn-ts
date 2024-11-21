@@ -92,19 +92,8 @@ except NameError: bridgeValidationCurveDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ValidationCurveDisplay = {'param_name': ${
-      this.opts['param_name'] ?? undefined
-    }, 'param_range': np.array(${this.opts['param_range'] ?? undefined}) if ${
-      this.opts['param_range'] !== undefined
-    } else None, 'train_scores': np.array(${
-      this.opts['train_scores'] ?? undefined
-    }) if ${
-      this.opts['train_scores'] !== undefined
-    } else None, 'test_scores': np.array(${
-      this.opts['test_scores'] ?? undefined
-    }) if ${this.opts['test_scores'] !== undefined} else None, 'score_name': ${
-      this.opts['score_name'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ValidationCurveDisplay = {'param_name': ${this.opts['param_name'] ?? undefined}, 'param_range': np.array(${this.opts['param_range'] ?? undefined}) if ${this.opts['param_range'] !== undefined} else None, 'train_scores': np.array(${this.opts['train_scores'] ?? undefined}) if ${this.opts['train_scores'] !== undefined} else None, 'test_scores': np.array(${this.opts['test_scores'] ?? undefined}) if ${this.opts['test_scores'] !== undefined} else None, 'score_name': ${this.opts['score_name'] ?? undefined}}
 
 ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.items() if v is not None}`
 
@@ -180,7 +169,7 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
     scoring?: string
 
     /**
-      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -268,33 +257,7 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
 
     // set up method params
     await this._py
-      .ex`pms_ValidationCurveDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'param_name': ${
-      opts['param_name'] ?? undefined
-    }, 'param_range': np.array(${opts['param_range'] ?? undefined}) if ${
-      opts['param_range'] !== undefined
-    } else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${
-      opts['groups'] !== undefined
-    } else None, 'cv': ${opts['cv'] ?? undefined}, 'scoring': ${
-      opts['scoring'] ?? undefined
-    }, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'pre_dispatch': ${
-      opts['pre_dispatch'] ?? undefined
-    }, 'verbose': ${opts['verbose'] ?? undefined}, 'error_score': ${
-      opts['error_score'] ?? undefined
-    }, 'fit_params': ${opts['fit_params'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${
-      opts['score_name'] ?? undefined
-    }, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${
-      opts['std_display_style'] ?? undefined
-    }, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${
-      opts['fill_between_kw'] ?? undefined
-    }, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
+      .ex`pms_ValidationCurveDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'param_name': ${opts['param_name'] ?? undefined}, 'param_range': np.array(${opts['param_range'] ?? undefined}) if ${opts['param_range'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None, 'cv': ${opts['cv'] ?? undefined}, 'scoring': ${opts['scoring'] ?? undefined}, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'pre_dispatch': ${opts['pre_dispatch'] ?? undefined}, 'verbose': ${opts['verbose'] ?? undefined}, 'error_score': ${opts['error_score'] ?? undefined}, 'fit_params': ${opts['fit_params'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${opts['score_name'] ?? undefined}, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${opts['std_display_style'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${opts['fill_between_kw'] ?? undefined}, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
 
 pms_ValidationCurveDisplay_from_estimator = {k: v for k, v in pms_ValidationCurveDisplay_from_estimator.items() if v is not None}`
 
@@ -368,15 +331,8 @@ pms_ValidationCurveDisplay_from_estimator = {k: v for k, v in pms_ValidationCurv
     }
 
     // set up method params
-    await this._py.ex`pms_ValidationCurveDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${
-      opts['score_name'] ?? undefined
-    }, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${
-      opts['std_display_style'] ?? undefined
-    }, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${
-      opts['fill_between_kw'] ?? undefined
-    }, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
+    await this._py
+      .ex`pms_ValidationCurveDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${opts['score_name'] ?? undefined}, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${opts['std_display_style'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${opts['fill_between_kw'] ?? undefined}, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
 
 pms_ValidationCurveDisplay_plot = {k: v for k, v in pms_ValidationCurveDisplay_plot.items() if v is not None}`
 

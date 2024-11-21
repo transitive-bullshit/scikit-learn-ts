@@ -125,19 +125,8 @@ except NameError: bridgeFastICA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_FastICA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'whiten': ${
-      this.opts['whiten'] ?? undefined
-    }, 'fun': ${this.opts['fun'] ?? undefined}, 'fun_args': ${
-      this.opts['fun_args'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'w_init': np.array(${this.opts['w_init'] ?? undefined}) if ${
-      this.opts['w_init'] !== undefined
-    } else None, 'whiten_solver': ${
-      this.opts['whiten_solver'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_FastICA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'whiten': ${this.opts['whiten'] ?? undefined}, 'fun': ${this.opts['fun'] ?? undefined}, 'fun_args': ${this.opts['fun_args'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'w_init': np.array(${this.opts['w_init'] ?? undefined}) if ${this.opts['w_init'] !== undefined} else None, 'whiten_solver': ${this.opts['whiten_solver'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_FastICA = {k: v for k, v in ctor_FastICA.items() if v is not None}`
 
@@ -188,9 +177,8 @@ ctor_FastICA = {k: v for k, v in ctor_FastICA.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_FastICA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_FastICA_fit = {k: v for k, v in pms_FastICA_fit.items() if v is not None}`
 
@@ -226,9 +214,8 @@ pms_FastICA_fit = {k: v for k, v in pms_FastICA_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_FastICA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_FastICA_fit_transform = {k: v for k, v in pms_FastICA_fit_transform.items() if v is not None}`
 
@@ -261,9 +248,8 @@ pms_FastICA_fit_transform = {k: v for k, v in pms_FastICA_fit_transform.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FastICA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_FastICA_get_feature_names_out = {k: v for k, v in pms_FastICA_get_feature_names_out.items() if v is not None}`
 
@@ -296,9 +282,8 @@ pms_FastICA_get_feature_names_out = {k: v for k, v in pms_FastICA_get_feature_na
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FastICA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_FastICA_get_metadata_routing = {k: v for k, v in pms_FastICA_get_metadata_routing.items() if v is not None}`
 
@@ -336,11 +321,8 @@ pms_FastICA_get_metadata_routing = {k: v for k, v in pms_FastICA_get_metadata_ro
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FastICA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_FastICA_inverse_transform = {k: v for k, v in pms_FastICA_inverse_transform.items() if v is not None}`
 
@@ -377,9 +359,8 @@ pms_FastICA_inverse_transform = {k: v for k, v in pms_FastICA_inverse_transform.
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_set_inverse_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FastICA_set_inverse_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_FastICA_set_inverse_transform_request = {k: v for k, v in pms_FastICA_set_inverse_transform_request.items() if v is not None}`
 
@@ -401,7 +382,7 @@ pms_FastICA_set_inverse_transform_request = {k: v for k, v in pms_FastICA_set_in
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FastICA instance has already been disposed')
@@ -412,9 +393,8 @@ pms_FastICA_set_inverse_transform_request = {k: v for k, v in pms_FastICA_set_in
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FastICA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_FastICA_set_output = {k: v for k, v in pms_FastICA_set_output.items() if v is not None}`
 
@@ -449,9 +429,8 @@ pms_FastICA_set_output = {k: v for k, v in pms_FastICA_set_output.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FastICA_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_FastICA_set_transform_request = {k: v for k, v in pms_FastICA_set_transform_request.items() if v is not None}`
 
@@ -489,11 +468,8 @@ pms_FastICA_set_transform_request = {k: v for k, v in pms_FastICA_set_transform_
     }
 
     // set up method params
-    await this._py.ex`pms_FastICA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FastICA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is not None}`
 

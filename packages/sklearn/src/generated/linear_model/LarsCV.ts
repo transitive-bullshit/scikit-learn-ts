@@ -45,13 +45,6 @@ export class LarsCV {
     max_iter?: number
 
     /**
-      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-      @defaultValue `false`
-     */
-    normalize?: boolean
-
-    /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix cannot be passed as argument since we will use only subsets of X.
 
       @defaultValue `'auto'`
@@ -71,7 +64,7 @@ export class LarsCV {
     max_n_alphas?: number
 
     /**
-      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -127,17 +120,8 @@ except NameError: bridgeLarsCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LarsCV = {'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'normalize': ${this.opts['normalize'] ?? undefined}, 'precompute': ${
-      this.opts['precompute'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'max_n_alphas': ${
-      this.opts['max_n_alphas'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'copy_X': ${this.opts['copy_X'] ?? undefined}}
+    await this._py
+      .ex`ctor_LarsCV = {'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'precompute': ${this.opts['precompute'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'max_n_alphas': ${this.opts['max_n_alphas'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}}
 
 ctor_LarsCV = {k: v for k, v in ctor_LarsCV.items() if v is not None}`
 
@@ -178,6 +162,11 @@ ctor_LarsCV = {k: v for k, v in ctor_LarsCV.items() if v is not None}`
       Target values.
      */
     y?: ArrayLike
+
+    /**
+      Parameters to be passed to the CV splitter.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LarsCV instance has already been disposed')
@@ -188,11 +177,8 @@ ctor_LarsCV = {k: v for k, v in ctor_LarsCV.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LarsCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LarsCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_LarsCV_fit = {k: v for k, v in pms_LarsCV_fit.items() if v is not None}`
 
@@ -212,7 +198,7 @@ pms_LarsCV_fit = {k: v for k, v in pms_LarsCV_fit.items() if v is not None}`
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -225,9 +211,8 @@ pms_LarsCV_fit = {k: v for k, v in pms_LarsCV_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LarsCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LarsCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LarsCV_get_metadata_routing = {k: v for k, v in pms_LarsCV_get_metadata_routing.items() if v is not None}`
 
@@ -301,13 +286,8 @@ pms_LarsCV_predict = {k: v for k, v in pms_LarsCV_predict.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_LarsCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LarsCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LarsCV_score = {k: v for k, v in pms_LarsCV_score.items() if v is not None}`
 
@@ -342,9 +322,8 @@ pms_LarsCV_score = {k: v for k, v in pms_LarsCV_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LarsCV_set_fit_request = {'Xy': ${
-      opts['Xy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LarsCV_set_fit_request = {'Xy': ${opts['Xy'] ?? undefined}}
 
 pms_LarsCV_set_fit_request = {k: v for k, v in pms_LarsCV_set_fit_request.items() if v is not None}`
 
@@ -379,9 +358,8 @@ pms_LarsCV_set_fit_request = {k: v for k, v in pms_LarsCV_set_fit_request.items(
     }
 
     // set up method params
-    await this._py.ex`pms_LarsCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LarsCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LarsCV_set_score_request = {k: v for k, v in pms_LarsCV_set_score_request.items() if v is not None}`
 

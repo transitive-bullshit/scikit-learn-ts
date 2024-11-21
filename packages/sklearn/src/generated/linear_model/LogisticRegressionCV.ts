@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
 
-  This class implements logistic regression using liblinear, newton-cg, sag of lbfgs optimizer. The newton-cg, sag and lbfgs solvers support only L2 regularization with primal formulation. The liblinear solver supports both L1 and L2 regularization, with a dual formulation only for the L2 penalty. Elastic-Net penalty is only supported by the saga solver.
+  This class implements logistic regression using liblinear, newton-cg, sag or lbfgs optimizer. The newton-cg, sag and lbfgs solvers support only L2 regularization with primal formulation. The liblinear solver supports both L1 and L2 regularization, with a dual formulation only for the L2 penalty. Elastic-Net penalty is only supported by the saga solver.
 
   For the grid of `Cs` values and `l1\_ratios` values, the best hyperparameter is selected by the cross-validator [`StratifiedKFold`](sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold "sklearn.model_selection.StratifiedKFold"), but it can be changed using the [cv](../../glossary.html#term-cv) parameter. The ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ solvers can warm-start the coefficients (see [Glossary](../../glossary.html#term-warm_start)).
 
@@ -42,7 +42,7 @@ export class LogisticRegressionCV {
     fit_intercept?: boolean
 
     /**
-      The default cross-validation generator used is Stratified K-Folds. If an integer is provided, then it is the number of folds used. See the module [`sklearn.model\_selection`](../classes.html#module-sklearn.model_selection "sklearn.model_selection") module for the list of possible cross-validation objects.
+      The default cross-validation generator used is Stratified K-Folds. If an integer is provided, then it is the number of folds used. See the module [`sklearn.model\_selection`](../../api/sklearn.model_selection.html#module-sklearn.model_selection "sklearn.model_selection") module for the list of possible cross-validation objects.
      */
     cv?: number
 
@@ -61,7 +61,7 @@ export class LogisticRegressionCV {
     penalty?: 'l1' | 'l2' | 'elasticnet'
 
     /**
-      A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. For a list of scoring functions that can be used, look at [`sklearn.metrics`](../classes.html#module-sklearn.metrics "sklearn.metrics"). The default scoring option used is ‘accuracy’.
+      A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. For a list of scoring functions that can be used, look at [`sklearn.metrics`](../../api/sklearn.metrics.html#module-sklearn.metrics "sklearn.metrics"). The default scoring option used is ‘accuracy’.
      */
     scoring?: string
 
@@ -102,7 +102,7 @@ export class LogisticRegressionCV {
     class_weight?: any | 'balanced'
 
     /**
-      Number of CPU cores used during the cross-validation loop. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPU cores used during the cross-validation loop. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -190,27 +190,8 @@ except NameError: bridgeLogisticRegressionCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LogisticRegressionCV = {'Cs': ${
-      this.opts['Cs'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'dual': ${this.opts['dual'] ?? undefined}, 'penalty': ${
-      this.opts['penalty'] ?? undefined
-    }, 'scoring': ${this.opts['scoring'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'refit': ${
-      this.opts['refit'] ?? undefined
-    }, 'intercept_scaling': ${
-      this.opts['intercept_scaling'] ?? undefined
-    }, 'multi_class': ${
-      this.opts['multi_class'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'l1_ratios': ${this.opts['l1_ratios'] ?? undefined}}
+    await this._py
+      .ex`ctor_LogisticRegressionCV = {'Cs': ${this.opts['Cs'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'dual': ${this.opts['dual'] ?? undefined}, 'penalty': ${this.opts['penalty'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'refit': ${this.opts['refit'] ?? undefined}, 'intercept_scaling': ${this.opts['intercept_scaling'] ?? undefined}, 'multi_class': ${this.opts['multi_class'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'l1_ratios': ${this.opts['l1_ratios'] ?? undefined}}
 
 ctor_LogisticRegressionCV = {k: v for k, v in ctor_LogisticRegressionCV.items() if v is not None}`
 
@@ -264,9 +245,7 @@ ctor_LogisticRegressionCV = {k: v for k, v in ctor_LogisticRegressionCV.items() 
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegressionCV_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LogisticRegressionCV_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegressionCV_decision_function = {k: v for k, v in pms_LogisticRegressionCV_decision_function.items() if v is not None}`
 
@@ -327,6 +306,11 @@ pms_LogisticRegressionCV_densify = {k: v for k, v in pms_LogisticRegressionCV_de
       Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
      */
     sample_weight?: any
+
+    /**
+      Parameters to pass to the underlying splitter and scorer.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -339,13 +323,8 @@ pms_LogisticRegressionCV_densify = {k: v for k, v in pms_LogisticRegressionCV_de
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegressionCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegressionCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_LogisticRegressionCV_fit = {k: v for k, v in pms_LogisticRegressionCV_fit.items() if v is not None}`
 
@@ -365,7 +344,7 @@ pms_LogisticRegressionCV_fit = {k: v for k, v in pms_LogisticRegressionCV_fit.it
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -383,9 +362,7 @@ pms_LogisticRegressionCV_fit = {k: v for k, v in pms_LogisticRegressionCV_fit.it
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegressionCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LogisticRegressionCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LogisticRegressionCV_get_metadata_routing = {k: v for k, v in pms_LogisticRegressionCV_get_metadata_routing.items() if v is not None}`
 
@@ -418,9 +395,8 @@ pms_LogisticRegressionCV_get_metadata_routing = {k: v for k, v in pms_LogisticRe
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegressionCV_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegressionCV_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegressionCV_predict = {k: v for k, v in pms_LogisticRegressionCV_predict.items() if v is not None}`
 
@@ -458,9 +434,7 @@ pms_LogisticRegressionCV_predict = {k: v for k, v in pms_LogisticRegressionCV_pr
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegressionCV_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LogisticRegressionCV_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegressionCV_predict_log_proba = {k: v for k, v in pms_LogisticRegressionCV_predict_log_proba.items() if v is not None}`
 
@@ -478,7 +452,7 @@ pms_LogisticRegressionCV_predict_log_proba = {k: v for k, v in pms_LogisticRegre
 
     The returned estimates for all classes are ordered by the label of classes.
 
-    For a multi\_class problem, if multi\_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e calculate the probability of each class assuming it to be positive using the logistic function. and normalize these values across all the classes.
+    For a multi\_class problem, if multi\_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e. calculate the probability of each class assuming it to be positive using the logistic function and normalize these values across all the classes.
    */
   async predict_proba(opts: {
     /**
@@ -499,9 +473,8 @@ pms_LogisticRegressionCV_predict_log_proba = {k: v for k, v in pms_LogisticRegre
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegressionCV_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegressionCV_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegressionCV_predict_proba = {k: v for k, v in pms_LogisticRegressionCV_predict_proba.items() if v is not None}`
 
@@ -532,6 +505,11 @@ pms_LogisticRegressionCV_predict_proba = {k: v for k, v in pms_LogisticRegressio
       Sample weights.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the `score` method of the underlying scorer.
+     */
+    score_params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
@@ -544,13 +522,8 @@ pms_LogisticRegressionCV_predict_proba = {k: v for k, v in pms_LogisticRegressio
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegressionCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegressionCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'score_params': ${opts['score_params'] ?? undefined}}
 
 pms_LogisticRegressionCV_score = {k: v for k, v in pms_LogisticRegressionCV_score.items() if v is not None}`
 
@@ -590,9 +563,7 @@ pms_LogisticRegressionCV_score = {k: v for k, v in pms_LogisticRegressionCV_scor
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegressionCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LogisticRegressionCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LogisticRegressionCV_set_fit_request = {k: v for k, v in pms_LogisticRegressionCV_set_fit_request.items() if v is not None}`
 
@@ -632,9 +603,7 @@ pms_LogisticRegressionCV_set_fit_request = {k: v for k, v in pms_LogisticRegress
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegressionCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LogisticRegressionCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LogisticRegressionCV_set_score_request = {k: v for k, v in pms_LogisticRegressionCV_set_score_request.items() if v is not None}`
 

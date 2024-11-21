@@ -105,15 +105,8 @@ except NameError: bridgeBernoulliRBM = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_BernoulliRBM = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'n_iter': ${
-      this.opts['n_iter'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_BernoulliRBM = {'n_components': ${this.opts['n_components'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_BernoulliRBM = {k: v for k, v in ctor_BernoulliRBM.items() if v is not None}`
 
@@ -165,11 +158,8 @@ ctor_BernoulliRBM = {k: v for k, v in ctor_BernoulliRBM.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_BernoulliRBM_fit = {k: v for k, v in pms_BernoulliRBM_fit.items() if v is not None}`
 
@@ -212,13 +202,8 @@ pms_BernoulliRBM_fit = {k: v for k, v in pms_BernoulliRBM_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BernoulliRBM_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_BernoulliRBM_fit_transform = {k: v for k, v in pms_BernoulliRBM_fit_transform.items() if v is not None}`
 
@@ -254,9 +239,7 @@ pms_BernoulliRBM_fit_transform = {k: v for k, v in pms_BernoulliRBM_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_BernoulliRBM_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_BernoulliRBM_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_BernoulliRBM_get_feature_names_out = {k: v for k, v in pms_BernoulliRBM_get_feature_names_out.items() if v is not None}`
 
@@ -291,9 +274,8 @@ pms_BernoulliRBM_get_feature_names_out = {k: v for k, v in pms_BernoulliRBM_get_
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BernoulliRBM_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_BernoulliRBM_get_metadata_routing = {k: v for k, v in pms_BernoulliRBM_get_metadata_routing.items() if v is not None}`
 
@@ -324,9 +306,8 @@ pms_BernoulliRBM_get_metadata_routing = {k: v for k, v in pms_BernoulliRBM_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_gibbs = {'v': np.array(${
-      opts['v'] ?? undefined
-    }) if ${opts['v'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_gibbs = {'v': np.array(${opts['v'] ?? undefined}) if ${opts['v'] !== undefined} else None}
 
 pms_BernoulliRBM_gibbs = {k: v for k, v in pms_BernoulliRBM_gibbs.items() if v is not None}`
 
@@ -362,11 +343,8 @@ pms_BernoulliRBM_gibbs = {k: v for k, v in pms_BernoulliRBM_gibbs.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_BernoulliRBM_partial_fit = {k: v for k, v in pms_BernoulliRBM_partial_fit.items() if v is not None}`
 
@@ -397,9 +375,8 @@ pms_BernoulliRBM_partial_fit = {k: v for k, v in pms_BernoulliRBM_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_samples.items() if v is not None}`
 
@@ -421,7 +398,7 @@ pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_sample
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
@@ -432,9 +409,8 @@ pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_sample
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BernoulliRBM_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_BernoulliRBM_set_output = {k: v for k, v in pms_BernoulliRBM_set_output.items() if v is not None}`
 
@@ -465,9 +441,8 @@ pms_BernoulliRBM_set_output = {k: v for k, v in pms_BernoulliRBM_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items() if v is not None}`
 

@@ -73,9 +73,8 @@ except NameError: bridgeSelectFwe = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectFwe = {'score_func': ${
-      this.opts['score_func'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelectFwe = {'score_func': ${this.opts['score_func'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}}
 
 ctor_SelectFwe = {k: v for k, v in ctor_SelectFwe.items() if v is not None}`
 
@@ -113,7 +112,7 @@ ctor_SelectFwe = {k: v for k, v in ctor_SelectFwe.items() if v is not None}`
     X?: ArrayLike[]
 
     /**
-      The target values (class labels in classification, real numbers in regression).
+      The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`.
      */
     y?: ArrayLike
   }): Promise<any> {
@@ -126,11 +125,8 @@ ctor_SelectFwe = {k: v for k, v in ctor_SelectFwe.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFwe_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFwe_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SelectFwe_fit = {k: v for k, v in pms_SelectFwe_fit.items() if v is not None}`
 
@@ -173,13 +169,8 @@ pms_SelectFwe_fit = {k: v for k, v in pms_SelectFwe_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFwe_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFwe_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectFwe_fit_transform = {k: v for k, v in pms_SelectFwe_fit_transform.items() if v is not None}`
 
@@ -213,9 +204,7 @@ pms_SelectFwe_fit_transform = {k: v for k, v in pms_SelectFwe_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_SelectFwe_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectFwe_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectFwe_get_feature_names_out = {k: v for k, v in pms_SelectFwe_get_feature_names_out.items() if v is not None}`
 
@@ -250,9 +239,8 @@ pms_SelectFwe_get_feature_names_out = {k: v for k, v in pms_SelectFwe_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFwe_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFwe_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SelectFwe_get_metadata_routing = {k: v for k, v in pms_SelectFwe_get_metadata_routing.items() if v is not None}`
 
@@ -285,9 +273,8 @@ pms_SelectFwe_get_metadata_routing = {k: v for k, v in pms_SelectFwe_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFwe_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFwe_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectFwe_get_support = {k: v for k, v in pms_SelectFwe_get_support.items() if v is not None}`
 
@@ -318,9 +305,8 @@ pms_SelectFwe_get_support = {k: v for k, v in pms_SelectFwe_get_support.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFwe_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFwe_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFwe_inverse_transform = {k: v for k, v in pms_SelectFwe_inverse_transform.items() if v is not None}`
 
@@ -342,7 +328,7 @@ pms_SelectFwe_inverse_transform = {k: v for k, v in pms_SelectFwe_inverse_transf
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectFwe instance has already been disposed')
@@ -353,9 +339,8 @@ pms_SelectFwe_inverse_transform = {k: v for k, v in pms_SelectFwe_inverse_transf
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFwe_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFwe_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectFwe_set_output = {k: v for k, v in pms_SelectFwe_set_output.items() if v is not None}`
 
@@ -386,9 +371,8 @@ pms_SelectFwe_set_output = {k: v for k, v in pms_SelectFwe_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFwe_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFwe_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFwe_transform = {k: v for k, v in pms_SelectFwe_transform.items() if v is not None}`
 

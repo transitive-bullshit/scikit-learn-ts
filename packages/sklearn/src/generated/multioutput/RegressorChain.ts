@@ -90,13 +90,8 @@ except NameError: bridgeRegressorChain = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RegressorChain = {'base_estimator': ${
-      this.opts['base_estimator'] ?? undefined
-    }, 'order': np.array(${this.opts['order'] ?? undefined}) if ${
-      this.opts['order'] !== undefined
-    } else None, 'cv': ${this.opts['cv'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_RegressorChain = {'base_estimator': ${this.opts['base_estimator'] ?? undefined}, 'order': np.array(${this.opts['order'] ?? undefined}) if ${this.opts['order'] !== undefined} else None, 'cv': ${this.opts['cv'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_RegressorChain = {k: v for k, v in ctor_RegressorChain.items() if v is not None}`
 
@@ -153,13 +148,8 @@ ctor_RegressorChain = {k: v for k, v in ctor_RegressorChain.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_RegressorChain_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RegressorChain_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RegressorChain_fit = {k: v for k, v in pms_RegressorChain_fit.items() if v is not None}`
 
@@ -194,9 +184,8 @@ pms_RegressorChain_fit = {k: v for k, v in pms_RegressorChain_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_RegressorChain_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RegressorChain_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RegressorChain_get_metadata_routing = {k: v for k, v in pms_RegressorChain_get_metadata_routing.items() if v is not None}`
 
@@ -227,9 +216,8 @@ pms_RegressorChain_get_metadata_routing = {k: v for k, v in pms_RegressorChain_g
     }
 
     // set up method params
-    await this._py.ex`pms_RegressorChain_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RegressorChain_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RegressorChain_predict = {k: v for k, v in pms_RegressorChain_predict.items() if v is not None}`
 
@@ -272,13 +260,8 @@ pms_RegressorChain_predict = {k: v for k, v in pms_RegressorChain_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_RegressorChain_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RegressorChain_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RegressorChain_score = {k: v for k, v in pms_RegressorChain_score.items() if v is not None}`
 
@@ -316,9 +299,7 @@ pms_RegressorChain_score = {k: v for k, v in pms_RegressorChain_score.items() if
 
     // set up method params
     await this._py
-      .ex`pms_RegressorChain_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RegressorChain_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RegressorChain_set_score_request = {k: v for k, v in pms_RegressorChain_set_score_request.items() if v is not None}`
 

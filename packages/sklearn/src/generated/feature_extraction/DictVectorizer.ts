@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Features that do not occur in a sample (mapping) will have a zero value in the resulting array/matrix.
 
-  For an efficiency comparision of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
+  For an efficiency comparison of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
 
   Read more in the [User Guide](../feature_extraction.html#dict-feature-extraction).
 
@@ -99,11 +99,8 @@ except NameError: bridgeDictVectorizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DictVectorizer = {'dtype': ${
-      this.opts['dtype'] ?? undefined
-    }, 'separator': ${this.opts['separator'] ?? undefined}, 'sparse': ${
-      this.opts['sparse'] ?? undefined
-    }, 'sort': ${this.opts['sort'] ?? undefined}}
+    await this._py
+      .ex`ctor_DictVectorizer = {'dtype': ${this.opts['dtype'] ?? undefined}, 'separator': ${this.opts['separator'] ?? undefined}, 'sparse': ${this.opts['sparse'] ?? undefined}, 'sort': ${this.opts['sort'] ?? undefined}}
 
 ctor_DictVectorizer = {k: v for k, v in ctor_DictVectorizer.items() if v is not None}`
 
@@ -155,9 +152,8 @@ ctor_DictVectorizer = {k: v for k, v in ctor_DictVectorizer.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_DictVectorizer_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_DictVectorizer_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_DictVectorizer_fit = {k: v for k, v in pms_DictVectorizer_fit.items() if v is not None}`
 
@@ -195,9 +191,8 @@ pms_DictVectorizer_fit = {k: v for k, v in pms_DictVectorizer_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_DictVectorizer_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_DictVectorizer_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_DictVectorizer_fit_transform = {k: v for k, v in pms_DictVectorizer_fit_transform.items() if v is not None}`
 
@@ -231,9 +226,7 @@ pms_DictVectorizer_fit_transform = {k: v for k, v in pms_DictVectorizer_fit_tran
 
     // set up method params
     await this._py
-      .ex`pms_DictVectorizer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_DictVectorizer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_DictVectorizer_get_feature_names_out = {k: v for k, v in pms_DictVectorizer_get_feature_names_out.items() if v is not None}`
 
@@ -268,9 +261,8 @@ pms_DictVectorizer_get_feature_names_out = {k: v for k, v in pms_DictVectorizer_
     }
 
     // set up method params
-    await this._py.ex`pms_DictVectorizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DictVectorizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DictVectorizer_get_metadata_routing = {k: v for k, v in pms_DictVectorizer_get_metadata_routing.items() if v is not None}`
 
@@ -312,11 +304,8 @@ pms_DictVectorizer_get_metadata_routing = {k: v for k, v in pms_DictVectorizer_g
     }
 
     // set up method params
-    await this._py.ex`pms_DictVectorizer_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'dict_type': ${
-      opts['dict_type'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DictVectorizer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'dict_type': ${opts['dict_type'] ?? undefined}}
 
 pms_DictVectorizer_inverse_transform = {k: v for k, v in pms_DictVectorizer_inverse_transform.items() if v is not None}`
 
@@ -356,9 +345,8 @@ pms_DictVectorizer_inverse_transform = {k: v for k, v in pms_DictVectorizer_inve
     }
 
     // set up method params
-    await this._py.ex`pms_DictVectorizer_restrict = {'support': ${
-      opts['support'] ?? undefined
-    }, 'indices': ${opts['indices'] ?? undefined}}
+    await this._py
+      .ex`pms_DictVectorizer_restrict = {'support': ${opts['support'] ?? undefined}, 'indices': ${opts['indices'] ?? undefined}}
 
 pms_DictVectorizer_restrict = {k: v for k, v in pms_DictVectorizer_restrict.items() if v is not None}`
 
@@ -396,9 +384,7 @@ pms_DictVectorizer_restrict = {k: v for k, v in pms_DictVectorizer_restrict.item
 
     // set up method params
     await this._py
-      .ex`pms_DictVectorizer_set_inverse_transform_request = {'dict_type': ${
-      opts['dict_type'] ?? undefined
-    }}
+      .ex`pms_DictVectorizer_set_inverse_transform_request = {'dict_type': ${opts['dict_type'] ?? undefined}}
 
 pms_DictVectorizer_set_inverse_transform_request = {k: v for k, v in pms_DictVectorizer_set_inverse_transform_request.items() if v is not None}`
 
@@ -420,7 +406,7 @@ pms_DictVectorizer_set_inverse_transform_request = {k: v for k, v in pms_DictVec
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
@@ -431,9 +417,8 @@ pms_DictVectorizer_set_inverse_transform_request = {k: v for k, v in pms_DictVec
     }
 
     // set up method params
-    await this._py.ex`pms_DictVectorizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DictVectorizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_DictVectorizer_set_output = {k: v for k, v in pms_DictVectorizer_set_output.items() if v is not None}`
 
@@ -466,9 +451,8 @@ pms_DictVectorizer_set_output = {k: v for k, v in pms_DictVectorizer_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_DictVectorizer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_DictVectorizer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_DictVectorizer_transform = {k: v for k, v in pms_DictVectorizer_transform.items() if v is not None}`
 

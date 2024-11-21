@@ -99,7 +99,7 @@ export class ExtraTreesRegressor {
     oob_score?: boolean
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesRegressor.fit "sklearn.ensemble.ExtraTreesRegressor.fit"), [`predict`](#sklearn.ensemble.ExtraTreesRegressor.predict "sklearn.ensemble.ExtraTreesRegressor.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesRegressor.decision_path "sklearn.ensemble.ExtraTreesRegressor.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesRegressor.apply "sklearn.ensemble.ExtraTreesRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesRegressor.fit "sklearn.ensemble.ExtraTreesRegressor.fit"), [`predict`](#sklearn.ensemble.ExtraTreesRegressor.predict "sklearn.ensemble.ExtraTreesRegressor.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesRegressor.decision_path "sklearn.ensemble.ExtraTreesRegressor.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesRegressor.apply "sklearn.ensemble.ExtraTreesRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -116,7 +116,7 @@ export class ExtraTreesRegressor {
     verbose?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional trees](../ensemble.html#tree-ensemble-warm-start) for details.
 
       @defaultValue `false`
      */
@@ -133,6 +133,11 @@ export class ExtraTreesRegressor {
       If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
      */
     max_samples?: number
+
+    /**
+      1: monotonically increasing
+     */
+    monotonic_cst?: any[]
   }) {
     this.id = `ExtraTreesRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -178,31 +183,8 @@ except NameError: bridgeExtraTreesRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ExtraTreesRegressor = {'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'criterion': ${this.opts['criterion'] ?? undefined}, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'oob_score': ${
-      this.opts['oob_score'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'max_samples': ${
-      this.opts['max_samples'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ExtraTreesRegressor = {'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'criterion': ${this.opts['criterion'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'oob_score': ${this.opts['oob_score'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'max_samples': ${this.opts['max_samples'] ?? undefined}, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None}
 
 ctor_ExtraTreesRegressor = {k: v for k, v in ctor_ExtraTreesRegressor.items() if v is not None}`
 
@@ -251,9 +233,8 @@ ctor_ExtraTreesRegressor = {k: v for k, v in ctor_ExtraTreesRegressor.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesRegressor_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesRegressor_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesRegressor_apply = {k: v for k, v in pms_ExtraTreesRegressor_apply.items() if v is not None}`
 
@@ -288,9 +269,8 @@ pms_ExtraTreesRegressor_apply = {k: v for k, v in pms_ExtraTreesRegressor_apply.
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesRegressor_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesRegressor_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesRegressor_decision_path = {k: v for k, v in pms_ExtraTreesRegressor_decision_path.items() if v is not None}`
 
@@ -333,13 +313,8 @@ pms_ExtraTreesRegressor_decision_path = {k: v for k, v in pms_ExtraTreesRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ExtraTreesRegressor_fit = {k: v for k, v in pms_ExtraTreesRegressor_fit.items() if v is not None}`
 
@@ -377,9 +352,7 @@ pms_ExtraTreesRegressor_fit = {k: v for k, v in pms_ExtraTreesRegressor_fit.item
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreesRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_ExtraTreesRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ExtraTreesRegressor_get_metadata_routing = {k: v for k, v in pms_ExtraTreesRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -414,9 +387,8 @@ pms_ExtraTreesRegressor_get_metadata_routing = {k: v for k, v in pms_ExtraTreesR
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ExtraTreesRegressor_predict = {k: v for k, v in pms_ExtraTreesRegressor_predict.items() if v is not None}`
 
@@ -461,13 +433,8 @@ pms_ExtraTreesRegressor_predict = {k: v for k, v in pms_ExtraTreesRegressor_pred
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreesRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreesRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ExtraTreesRegressor_score = {k: v for k, v in pms_ExtraTreesRegressor_score.items() if v is not None}`
 
@@ -507,9 +474,7 @@ pms_ExtraTreesRegressor_score = {k: v for k, v in pms_ExtraTreesRegressor_score.
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreesRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_ExtraTreesRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ExtraTreesRegressor_set_fit_request = {k: v for k, v in pms_ExtraTreesRegressor_set_fit_request.items() if v is not None}`
 
@@ -549,9 +514,7 @@ pms_ExtraTreesRegressor_set_fit_request = {k: v for k, v in pms_ExtraTreesRegres
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreesRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_ExtraTreesRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ExtraTreesRegressor_set_score_request = {k: v for k, v in pms_ExtraTreesRegressor_set_score_request.items() if v is not None}`
 

@@ -127,7 +127,7 @@ export class LogisticRegression {
     warm_start?: boolean
 
     /**
-      Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -180,25 +180,8 @@ except NameError: bridgeLogisticRegression = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LogisticRegression = {'penalty': ${
-      this.opts['penalty'] ?? undefined
-    }, 'dual': ${this.opts['dual'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'C': ${this.opts['C'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'intercept_scaling': ${
-      this.opts['intercept_scaling'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'multi_class': ${
-      this.opts['multi_class'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'l1_ratio': ${
-      this.opts['l1_ratio'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LogisticRegression = {'penalty': ${this.opts['penalty'] ?? undefined}, 'dual': ${this.opts['dual'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${this.opts['C'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'intercept_scaling': ${this.opts['intercept_scaling'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'multi_class': ${this.opts['multi_class'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}}
 
 ctor_LogisticRegression = {k: v for k, v in ctor_LogisticRegression.items() if v is not None}`
 
@@ -252,9 +235,7 @@ ctor_LogisticRegression = {k: v for k, v in ctor_LogisticRegression.items() if v
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegression_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LogisticRegression_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegression_decision_function = {k: v for k, v in pms_LogisticRegression_decision_function.items() if v is not None}`
 
@@ -327,13 +308,8 @@ pms_LogisticRegression_densify = {k: v for k, v in pms_LogisticRegression_densif
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegression_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegression_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LogisticRegression_fit = {k: v for k, v in pms_LogisticRegression_fit.items() if v is not None}`
 
@@ -371,9 +347,7 @@ pms_LogisticRegression_fit = {k: v for k, v in pms_LogisticRegression_fit.items(
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegression_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LogisticRegression_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LogisticRegression_get_metadata_routing = {k: v for k, v in pms_LogisticRegression_get_metadata_routing.items() if v is not None}`
 
@@ -406,9 +380,8 @@ pms_LogisticRegression_get_metadata_routing = {k: v for k, v in pms_LogisticRegr
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegression_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegression_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegression_predict = {k: v for k, v in pms_LogisticRegression_predict.items() if v is not None}`
 
@@ -446,9 +419,7 @@ pms_LogisticRegression_predict = {k: v for k, v in pms_LogisticRegression_predic
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegression_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LogisticRegression_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegression_predict_log_proba = {k: v for k, v in pms_LogisticRegression_predict_log_proba.items() if v is not None}`
 
@@ -466,7 +437,7 @@ pms_LogisticRegression_predict_log_proba = {k: v for k, v in pms_LogisticRegress
 
     The returned estimates for all classes are ordered by the label of classes.
 
-    For a multi\_class problem, if multi\_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e calculate the probability of each class assuming it to be positive using the logistic function. and normalize these values across all the classes.
+    For a multi\_class problem, if multi\_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e. calculate the probability of each class assuming it to be positive using the logistic function and normalize these values across all the classes.
    */
   async predict_proba(opts: {
     /**
@@ -487,9 +458,8 @@ pms_LogisticRegression_predict_log_proba = {k: v for k, v in pms_LogisticRegress
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegression_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegression_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LogisticRegression_predict_proba = {k: v for k, v in pms_LogisticRegression_predict_proba.items() if v is not None}`
 
@@ -534,13 +504,8 @@ pms_LogisticRegression_predict_proba = {k: v for k, v in pms_LogisticRegression_
     }
 
     // set up method params
-    await this._py.ex`pms_LogisticRegression_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LogisticRegression_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LogisticRegression_score = {k: v for k, v in pms_LogisticRegression_score.items() if v is not None}`
 
@@ -580,9 +545,7 @@ pms_LogisticRegression_score = {k: v for k, v in pms_LogisticRegression_score.it
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegression_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LogisticRegression_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LogisticRegression_set_fit_request = {k: v for k, v in pms_LogisticRegression_set_fit_request.items() if v is not None}`
 
@@ -622,9 +585,7 @@ pms_LogisticRegression_set_fit_request = {k: v for k, v in pms_LogisticRegressio
 
     // set up method params
     await this._py
-      .ex`pms_LogisticRegression_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LogisticRegression_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LogisticRegression_set_score_request = {k: v for k, v in pms_LogisticRegression_set_score_request.items() if v is not None}`
 

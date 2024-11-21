@@ -50,7 +50,7 @@ export class RadiusNeighborsClassifier {
     leaf_size?: number
 
     /**
-      Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+      Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used. This parameter is expected to be positive.
 
       @defaultValue `2`
      */
@@ -78,7 +78,7 @@ export class RadiusNeighborsClassifier {
     metric_params?: any
 
     /**
-      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -126,17 +126,8 @@ except NameError: bridgeRadiusNeighborsClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RadiusNeighborsClassifier = {'radius': ${
-      this.opts['radius'] ?? undefined
-    }, 'weights': ${this.opts['weights'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'p': ${
-      this.opts['p'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'outlier_label': ${
-      this.opts['outlier_label'] ?? undefined
-    }, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_RadiusNeighborsClassifier = {'radius': ${this.opts['radius'] ?? undefined}, 'weights': ${this.opts['weights'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'outlier_label': ${this.opts['outlier_label'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_RadiusNeighborsClassifier = {k: v for k, v in ctor_RadiusNeighborsClassifier.items() if v is not None}`
 
@@ -190,11 +181,8 @@ ctor_RadiusNeighborsClassifier = {k: v for k, v in ctor_RadiusNeighborsClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_RadiusNeighborsClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_RadiusNeighborsClassifier_fit = {k: v for k, v in pms_RadiusNeighborsClassifier_fit.items() if v is not None}`
 
@@ -232,9 +220,7 @@ pms_RadiusNeighborsClassifier_fit = {k: v for k, v in pms_RadiusNeighborsClassif
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RadiusNeighborsClassifier_get_metadata_routing = {k: v for k, v in pms_RadiusNeighborsClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -269,9 +255,8 @@ pms_RadiusNeighborsClassifier_get_metadata_routing = {k: v for k, v in pms_Radiu
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RadiusNeighborsClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RadiusNeighborsClassifier_predict = {k: v for k, v in pms_RadiusNeighborsClassifier_predict.items() if v is not None}`
 
@@ -307,9 +292,7 @@ pms_RadiusNeighborsClassifier_predict = {k: v for k, v in pms_RadiusNeighborsCla
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_RadiusNeighborsClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RadiusNeighborsClassifier_predict_proba = {k: v for k, v in pms_RadiusNeighborsClassifier_predict_proba.items() if v is not None}`
 
@@ -367,11 +350,8 @@ pms_RadiusNeighborsClassifier_predict_proba = {k: v for k, v in pms_RadiusNeighb
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsClassifier_radius_neighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }, 'sort_results': ${opts['sort_results'] ?? undefined}}
+    await this._py
+      .ex`pms_RadiusNeighborsClassifier_radius_neighbors = {'X': ${opts['X'] ?? undefined}, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_RadiusNeighborsClassifier_radius_neighbors = {k: v for k, v in pms_RadiusNeighborsClassifier_radius_neighbors.items() if v is not None}`
 
@@ -428,13 +408,7 @@ pms_RadiusNeighborsClassifier_radius_neighbors = {k: v for k, v in pms_RadiusNei
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsClassifier_radius_neighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'radius': ${
-      opts['radius'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${
-      opts['sort_results'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsClassifier_radius_neighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'radius': ${opts['radius'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_RadiusNeighborsClassifier_radius_neighbors_graph = {k: v for k, v in pms_RadiusNeighborsClassifier_radius_neighbors_graph.items() if v is not None}`
 
@@ -481,13 +455,8 @@ pms_RadiusNeighborsClassifier_radius_neighbors_graph = {k: v for k, v in pms_Rad
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RadiusNeighborsClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClassifier_score.items() if v is not None}`
 
@@ -527,9 +496,7 @@ pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClass
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RadiusNeighborsClassifier_set_score_request = {k: v for k, v in pms_RadiusNeighborsClassifier_set_score_request.items() if v is not None}`
 

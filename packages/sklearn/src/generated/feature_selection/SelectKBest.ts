@@ -73,9 +73,8 @@ except NameError: bridgeSelectKBest = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectKBest = {'score_func': ${
-      this.opts['score_func'] ?? undefined
-    }, 'k': ${this.opts['k'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelectKBest = {'score_func': ${this.opts['score_func'] ?? undefined}, 'k': ${this.opts['k'] ?? undefined}}
 
 ctor_SelectKBest = {k: v for k, v in ctor_SelectKBest.items() if v is not None}`
 
@@ -114,7 +113,7 @@ ctor_SelectKBest = {k: v for k, v in ctor_SelectKBest.items() if v is not None}`
     X?: ArrayLike[]
 
     /**
-      The target values (class labels in classification, real numbers in regression).
+      The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`.
      */
     y?: ArrayLike
   }): Promise<any> {
@@ -127,11 +126,8 @@ ctor_SelectKBest = {k: v for k, v in ctor_SelectKBest.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SelectKBest_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectKBest_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SelectKBest_fit = {k: v for k, v in pms_SelectKBest_fit.items() if v is not None}`
 
@@ -174,13 +170,8 @@ pms_SelectKBest_fit = {k: v for k, v in pms_SelectKBest_fit.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_SelectKBest_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectKBest_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectKBest_fit_transform = {k: v for k, v in pms_SelectKBest_fit_transform.items() if v is not None}`
 
@@ -214,9 +205,7 @@ pms_SelectKBest_fit_transform = {k: v for k, v in pms_SelectKBest_fit_transform.
 
     // set up method params
     await this._py
-      .ex`pms_SelectKBest_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectKBest_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectKBest_get_feature_names_out = {k: v for k, v in pms_SelectKBest_get_feature_names_out.items() if v is not None}`
 
@@ -251,9 +240,8 @@ pms_SelectKBest_get_feature_names_out = {k: v for k, v in pms_SelectKBest_get_fe
     }
 
     // set up method params
-    await this._py.ex`pms_SelectKBest_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectKBest_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SelectKBest_get_metadata_routing = {k: v for k, v in pms_SelectKBest_get_metadata_routing.items() if v is not None}`
 
@@ -286,9 +274,8 @@ pms_SelectKBest_get_metadata_routing = {k: v for k, v in pms_SelectKBest_get_met
     }
 
     // set up method params
-    await this._py.ex`pms_SelectKBest_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectKBest_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectKBest_get_support = {k: v for k, v in pms_SelectKBest_get_support.items() if v is not None}`
 
@@ -319,9 +306,8 @@ pms_SelectKBest_get_support = {k: v for k, v in pms_SelectKBest_get_support.item
     }
 
     // set up method params
-    await this._py.ex`pms_SelectKBest_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectKBest_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectKBest_inverse_transform = {k: v for k, v in pms_SelectKBest_inverse_transform.items() if v is not None}`
 
@@ -343,7 +329,7 @@ pms_SelectKBest_inverse_transform = {k: v for k, v in pms_SelectKBest_inverse_tr
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
@@ -354,9 +340,8 @@ pms_SelectKBest_inverse_transform = {k: v for k, v in pms_SelectKBest_inverse_tr
     }
 
     // set up method params
-    await this._py.ex`pms_SelectKBest_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectKBest_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectKBest_set_output = {k: v for k, v in pms_SelectKBest_set_output.items() if v is not None}`
 
@@ -387,9 +372,8 @@ pms_SelectKBest_set_output = {k: v for k, v in pms_SelectKBest_set_output.items(
     }
 
     // set up method params
-    await this._py.ex`pms_SelectKBest_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectKBest_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectKBest_transform = {k: v for k, v in pms_SelectKBest_transform.items() if v is not None}`
 

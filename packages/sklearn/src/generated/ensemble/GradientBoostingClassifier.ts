@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This algorithm builds an additive model in a forward stage-wise fashion; it allows for the optimization of arbitrary differentiable loss functions. In each stage `n\_classes\_` regression trees are fit on the negative gradient of the loss function, e.g. binary or multiclass log loss. Binary classification is a special case where only a single regression tree is induced.
 
-  [`sklearn.ensemble.HistGradientBoostingClassifier`](sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier "sklearn.ensemble.HistGradientBoostingClassifier") is a much faster variant of this algorithm for intermediate datasets (`n\_samples >= 10\_000`).
+  [`HistGradientBoostingClassifier`](sklearn.ensemble.HistGradientBoostingClassifier.html#sklearn.ensemble.HistGradientBoostingClassifier "sklearn.ensemble.HistGradientBoostingClassifier") is a much faster variant of this algorithm for intermediate and large datasets (`n\_samples >= 10\_000`) and supports monotonic constraints.
 
   Read more in the [User Guide](../ensemble.html#gradient-boosting).
 
@@ -139,7 +139,7 @@ export class GradientBoostingClassifier {
     validation_fraction?: number
 
     /**
-      `n\_iter\_no\_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation\_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n\_iter\_no\_change` numbers of iterations. The split is stratified. Values must be in the range `\[1, inf)`.
+      `n\_iter\_no\_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation\_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n\_iter\_no\_change` numbers of iterations. The split is stratified. Values must be in the range `\[1, inf)`. See [Early stopping in Gradient Boosting](../../auto_examples/ensemble/plot_gradient_boosting_early_stopping.html#sphx-glr-auto-examples-ensemble-plot-gradient-boosting-early-stopping-py).
      */
     n_iter_no_change?: number
 
@@ -201,39 +201,8 @@ except NameError: bridgeGradientBoostingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GradientBoostingClassifier = {'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'subsample': ${this.opts['subsample'] ?? undefined}, 'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'init': ${this.opts['init'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'max_features': ${this.opts['max_features'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'ccp_alpha': ${
-      this.opts['ccp_alpha'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GradientBoostingClassifier = {'loss': ${this.opts['loss'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'subsample': ${this.opts['subsample'] ?? undefined}, 'criterion': ${this.opts['criterion'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'init': ${this.opts['init'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}}
 
 ctor_GradientBoostingClassifier = {k: v for k, v in ctor_GradientBoostingClassifier.items() if v is not None}`
 
@@ -284,9 +253,8 @@ ctor_GradientBoostingClassifier = {k: v for k, v in ctor_GradientBoostingClassif
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingClassifier_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GradientBoostingClassifier_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_apply = {k: v for k, v in pms_GradientBoostingClassifier_apply.items() if v is not None}`
 
@@ -322,9 +290,7 @@ pms_GradientBoostingClassifier_apply = {k: v for k, v in pms_GradientBoostingCla
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GradientBoostingClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_decision_function = {k: v for k, v in pms_GradientBoostingClassifier_decision_function.items() if v is not None}`
 
@@ -357,7 +323,7 @@ pms_GradientBoostingClassifier_decision_function = {k: v for k, v in pms_Gradien
     sample_weight?: ArrayLike
 
     /**
-      The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `\_fit\_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshoting.
+      The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `\_fit\_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshotting.
      */
     monitor?: any
   }): Promise<any> {
@@ -374,15 +340,8 @@ pms_GradientBoostingClassifier_decision_function = {k: v for k, v in pms_Gradien
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'monitor': ${
-      opts['monitor'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GradientBoostingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'monitor': ${opts['monitor'] ?? undefined}}
 
 pms_GradientBoostingClassifier_fit = {k: v for k, v in pms_GradientBoostingClassifier_fit.items() if v is not None}`
 
@@ -420,9 +379,7 @@ pms_GradientBoostingClassifier_fit = {k: v for k, v in pms_GradientBoostingClass
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GradientBoostingClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GradientBoostingClassifier_get_metadata_routing = {k: v for k, v in pms_GradientBoostingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -457,9 +414,8 @@ pms_GradientBoostingClassifier_get_metadata_routing = {k: v for k, v in pms_Grad
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GradientBoostingClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_predict = {k: v for k, v in pms_GradientBoostingClassifier_predict.items() if v is not None}`
 
@@ -495,9 +451,7 @@ pms_GradientBoostingClassifier_predict = {k: v for k, v in pms_GradientBoostingC
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GradientBoostingClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_predict_log_proba = {k: v for k, v in pms_GradientBoostingClassifier_predict_log_proba.items() if v is not None}`
 
@@ -533,9 +487,7 @@ pms_GradientBoostingClassifier_predict_log_proba = {k: v for k, v in pms_Gradien
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GradientBoostingClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_predict_proba = {k: v for k, v in pms_GradientBoostingClassifier_predict_proba.items() if v is not None}`
 
@@ -582,13 +534,8 @@ pms_GradientBoostingClassifier_predict_proba = {k: v for k, v in pms_GradientBoo
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GradientBoostingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_score = {k: v for k, v in pms_GradientBoostingClassifier_score.items() if v is not None}`
 
@@ -633,9 +580,7 @@ pms_GradientBoostingClassifier_score = {k: v for k, v in pms_GradientBoostingCla
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_set_fit_request = {'monitor': ${
-      opts['monitor'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+      .ex`pms_GradientBoostingClassifier_set_fit_request = {'monitor': ${opts['monitor'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GradientBoostingClassifier_set_fit_request = {k: v for k, v in pms_GradientBoostingClassifier_set_fit_request.items() if v is not None}`
 
@@ -675,9 +620,7 @@ pms_GradientBoostingClassifier_set_fit_request = {k: v for k, v in pms_GradientB
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_GradientBoostingClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GradientBoostingClassifier_set_score_request = {k: v for k, v in pms_GradientBoostingClassifier_set_score_request.items() if v is not None}`
 
@@ -715,9 +658,7 @@ pms_GradientBoostingClassifier_set_score_request = {k: v for k, v in pms_Gradien
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_staged_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GradientBoostingClassifier_staged_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_staged_decision_function = {k: v for k, v in pms_GradientBoostingClassifier_staged_decision_function.items() if v is not None}`
 
@@ -755,9 +696,7 @@ pms_GradientBoostingClassifier_staged_decision_function = {k: v for k, v in pms_
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_staged_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GradientBoostingClassifier_staged_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_staged_predict = {k: v for k, v in pms_GradientBoostingClassifier_staged_predict.items() if v is not None}`
 
@@ -795,9 +734,7 @@ pms_GradientBoostingClassifier_staged_predict = {k: v for k, v in pms_GradientBo
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingClassifier_staged_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GradientBoostingClassifier_staged_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingClassifier_staged_predict_proba = {k: v for k, v in pms_GradientBoostingClassifier_staged_predict_proba.items() if v is not None}`
 
@@ -834,6 +771,33 @@ pms_GradientBoostingClassifier_staged_predict_proba = {k: v for k, v in pms_Grad
       // convert the result from python to node.js
       return this
         ._py`attr_GradientBoostingClassifier_n_estimators_.tolist() if hasattr(attr_GradientBoostingClassifier_n_estimators_, 'tolist') else attr_GradientBoostingClassifier_n_estimators_`
+    })()
+  }
+
+  /**
+    The number of trees that are built at each iteration. For binary classifiers, this is always 1.
+   */
+  get n_trees_per_iteration_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingClassifier must call init() before accessing n_trees_per_iteration_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_GradientBoostingClassifier_n_trees_per_iteration_ = bridgeGradientBoostingClassifier[${this.id}].n_trees_per_iteration_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_GradientBoostingClassifier_n_trees_per_iteration_.tolist() if hasattr(attr_GradientBoostingClassifier_n_trees_per_iteration_, 'tolist') else attr_GradientBoostingClassifier_n_trees_per_iteration_`
     })()
   }
 
@@ -946,7 +910,7 @@ pms_GradientBoostingClassifier_staged_predict_proba = {k: v for k, v in pms_Grad
   }
 
   /**
-    The estimator that provides the initial predictions. Set via the `init` argument or `loss.init\_estimator`.
+    The estimator that provides the initial predictions. Set via the `init` argument.
    */
   get init_(): Promise<any> {
     if (this._isDisposed) {
@@ -973,7 +937,7 @@ pms_GradientBoostingClassifier_staged_predict_proba = {k: v for k, v in pms_Grad
   }
 
   /**
-    The collection of fitted sub-estimators. `loss\_.K` is 1 for binary classification, otherwise n\_classes.
+    The collection of fitted sub-estimators. `n\_trees\_per\_iteration\_` is 1 for binary classification, otherwise `n\_classes`.
    */
   get estimators_(): Promise<any[]> {
     if (this._isDisposed) {

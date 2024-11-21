@@ -69,9 +69,8 @@ except NameError: bridgeExponentiation = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Exponentiation = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'exponent': ${this.opts['exponent'] ?? undefined}}
+    await this._py
+      .ex`ctor_Exponentiation = {'kernel': ${this.opts['kernel'] ?? undefined}, 'exponent': ${this.opts['exponent'] ?? undefined}}
 
 ctor_Exponentiation = {k: v for k, v in ctor_Exponentiation.items() if v is not None}`
 
@@ -130,13 +129,8 @@ ctor_Exponentiation = {k: v for k, v in ctor_Exponentiation.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_Exponentiation___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Exponentiation___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_Exponentiation___call__ = {k: v for k, v in pms_Exponentiation___call__.items() if v is not None}`
 
@@ -170,9 +164,7 @@ pms_Exponentiation___call__ = {k: v for k, v in pms_Exponentiation___call__.item
 
     // set up method params
     await this._py
-      .ex`pms_Exponentiation_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+      .ex`pms_Exponentiation_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_Exponentiation_clone_with_theta = {k: v for k, v in pms_Exponentiation_clone_with_theta.items() if v is not None}`
 
@@ -205,9 +197,8 @@ pms_Exponentiation_clone_with_theta = {k: v for k, v in pms_Exponentiation_clone
     }
 
     // set up method params
-    await this._py.ex`pms_Exponentiation_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Exponentiation_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Exponentiation_diag = {k: v for k, v in pms_Exponentiation_diag.items() if v is not None}`
 

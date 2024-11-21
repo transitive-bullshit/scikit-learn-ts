@@ -98,13 +98,8 @@ except NameError: bridgePolynomialCountSketch = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PolynomialCountSketch = {'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'coef0': ${
-      this.opts['coef0'] ?? undefined
-    }, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_PolynomialCountSketch = {'gamma': ${this.opts['gamma'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_PolynomialCountSketch = {k: v for k, v in ctor_PolynomialCountSketch.items() if v is not None}`
 
@@ -160,11 +155,8 @@ ctor_PolynomialCountSketch = {k: v for k, v in ctor_PolynomialCountSketch.items(
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialCountSketch_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PolynomialCountSketch_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_PolynomialCountSketch_fit = {k: v for k, v in pms_PolynomialCountSketch_fit.items() if v is not None}`
 
@@ -212,13 +204,7 @@ pms_PolynomialCountSketch_fit = {k: v for k, v in pms_PolynomialCountSketch_fit.
 
     // set up method params
     await this._py
-      .ex`pms_PolynomialCountSketch_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_PolynomialCountSketch_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_PolynomialCountSketch_fit_transform = {k: v for k, v in pms_PolynomialCountSketch_fit_transform.items() if v is not None}`
 
@@ -256,9 +242,7 @@ pms_PolynomialCountSketch_fit_transform = {k: v for k, v in pms_PolynomialCountS
 
     // set up method params
     await this._py
-      .ex`pms_PolynomialCountSketch_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_PolynomialCountSketch_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PolynomialCountSketch_get_feature_names_out = {k: v for k, v in pms_PolynomialCountSketch_get_feature_names_out.items() if v is not None}`
 
@@ -296,9 +280,7 @@ pms_PolynomialCountSketch_get_feature_names_out = {k: v for k, v in pms_Polynomi
 
     // set up method params
     await this._py
-      .ex`pms_PolynomialCountSketch_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_PolynomialCountSketch_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PolynomialCountSketch_get_metadata_routing = {k: v for k, v in pms_PolynomialCountSketch_get_metadata_routing.items() if v is not None}`
 
@@ -320,7 +302,7 @@ pms_PolynomialCountSketch_get_metadata_routing = {k: v for k, v in pms_Polynomia
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -335,9 +317,8 @@ pms_PolynomialCountSketch_get_metadata_routing = {k: v for k, v in pms_Polynomia
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialCountSketch_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PolynomialCountSketch_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PolynomialCountSketch_set_output = {k: v for k, v in pms_PolynomialCountSketch_set_output.items() if v is not None}`
 
@@ -372,9 +353,8 @@ pms_PolynomialCountSketch_set_output = {k: v for k, v in pms_PolynomialCountSket
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialCountSketch_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PolynomialCountSketch_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_PolynomialCountSketch_transform = {k: v for k, v in pms_PolynomialCountSketch_transform.items() if v is not None}`
 

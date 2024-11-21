@@ -133,27 +133,8 @@ except NameError: bridgeRANSACRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RANSACRegressor = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'min_samples': ${
-      this.opts['min_samples'] ?? undefined
-    }, 'residual_threshold': ${
-      this.opts['residual_threshold'] ?? undefined
-    }, 'is_data_valid': ${
-      this.opts['is_data_valid'] ?? undefined
-    }, 'is_model_valid': ${
-      this.opts['is_model_valid'] ?? undefined
-    }, 'max_trials': ${this.opts['max_trials'] ?? undefined}, 'max_skips': ${
-      this.opts['max_skips'] ?? undefined
-    }, 'stop_n_inliers': ${
-      this.opts['stop_n_inliers'] ?? undefined
-    }, 'stop_score': ${
-      this.opts['stop_score'] ?? undefined
-    }, 'stop_probability': ${
-      this.opts['stop_probability'] ?? undefined
-    }, 'loss': ${this.opts['loss'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_RANSACRegressor = {'estimator': ${this.opts['estimator'] ?? undefined}, 'min_samples': ${this.opts['min_samples'] ?? undefined}, 'residual_threshold': ${this.opts['residual_threshold'] ?? undefined}, 'is_data_valid': ${this.opts['is_data_valid'] ?? undefined}, 'is_model_valid': ${this.opts['is_model_valid'] ?? undefined}, 'max_trials': ${this.opts['max_trials'] ?? undefined}, 'max_skips': ${this.opts['max_skips'] ?? undefined}, 'stop_n_inliers': ${this.opts['stop_n_inliers'] ?? undefined}, 'stop_score': ${this.opts['stop_score'] ?? undefined}, 'stop_probability': ${this.opts['stop_probability'] ?? undefined}, 'loss': ${this.opts['loss'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_RANSACRegressor = {k: v for k, v in ctor_RANSACRegressor.items() if v is not None}`
 
@@ -200,6 +181,11 @@ ctor_RANSACRegressor = {k: v for k, v in ctor_RANSACRegressor.items() if v is no
       Individual weights for each sample raises error if sample\_weight is passed and estimator fit method does not support it.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters routed to the `fit` method of the sub-estimator via the metadata routing API.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RANSACRegressor instance has already been disposed')
@@ -210,13 +196,8 @@ ctor_RANSACRegressor = {k: v for k, v in ctor_RANSACRegressor.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_RANSACRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RANSACRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RANSACRegressor_fit = {k: v for k, v in pms_RANSACRegressor_fit.items() if v is not None}`
 
@@ -236,7 +217,7 @@ pms_RANSACRegressor_fit = {k: v for k, v in pms_RANSACRegressor_fit.items() if v
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -251,9 +232,8 @@ pms_RANSACRegressor_fit = {k: v for k, v in pms_RANSACRegressor_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_RANSACRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RANSACRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RANSACRegressor_get_metadata_routing = {k: v for k, v in pms_RANSACRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -276,6 +256,11 @@ pms_RANSACRegressor_get_metadata_routing = {k: v for k, v in pms_RANSACRegressor
       Input data.
      */
     X?: any[]
+
+    /**
+      Parameters routed to the `predict` method of the sub-estimator via the metadata routing API.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RANSACRegressor instance has already been disposed')
@@ -286,9 +271,8 @@ pms_RANSACRegressor_get_metadata_routing = {k: v for k, v in pms_RANSACRegressor
     }
 
     // set up method params
-    await this._py.ex`pms_RANSACRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RANSACRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RANSACRegressor_predict = {k: v for k, v in pms_RANSACRegressor_predict.items() if v is not None}`
 
@@ -316,6 +300,11 @@ pms_RANSACRegressor_predict = {k: v for k, v in pms_RANSACRegressor_predict.item
       Target values.
      */
     y?: ArrayLike
+
+    /**
+      Parameters routed to the `score` method of the sub-estimator via the metadata routing API.
+     */
+    params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This RANSACRegressor instance has already been disposed')
@@ -326,11 +315,8 @@ pms_RANSACRegressor_predict = {k: v for k, v in pms_RANSACRegressor_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_RANSACRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_RANSACRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() if v is not None}`
 
@@ -367,9 +353,8 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_RANSACRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RANSACRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RANSACRegressor_set_fit_request = {k: v for k, v in pms_RANSACRegressor_set_fit_request.items() if v is not None}`
 

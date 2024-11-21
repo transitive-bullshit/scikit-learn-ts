@@ -63,7 +63,7 @@ export class RadiusNeighborsTransformer {
     metric?: string
 
     /**
-      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used. This parameter is expected to be positive.
 
       @defaultValue `2`
      */
@@ -123,15 +123,8 @@ except NameError: bridgeRadiusNeighborsTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RadiusNeighborsTransformer = {'mode': ${
-      this.opts['mode'] ?? undefined
-    }, 'radius': ${this.opts['radius'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_RadiusNeighborsTransformer = {'mode': ${this.opts['mode'] ?? undefined}, 'radius': ${this.opts['radius'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_RadiusNeighborsTransformer = {k: v for k, v in ctor_RadiusNeighborsTransformer.items() if v is not None}`
 
@@ -187,9 +180,8 @@ ctor_RadiusNeighborsTransformer = {k: v for k, v in ctor_RadiusNeighborsTransfor
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_RadiusNeighborsTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_RadiusNeighborsTransformer_fit = {k: v for k, v in pms_RadiusNeighborsTransformer_fit.items() if v is not None}`
 
@@ -232,9 +224,7 @@ pms_RadiusNeighborsTransformer_fit = {k: v for k, v in pms_RadiusNeighborsTransf
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+      .ex`pms_RadiusNeighborsTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_RadiusNeighborsTransformer_fit_transform = {k: v for k, v in pms_RadiusNeighborsTransformer_fit_transform.items() if v is not None}`
 
@@ -272,9 +262,7 @@ pms_RadiusNeighborsTransformer_fit_transform = {k: v for k, v in pms_RadiusNeigh
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_RadiusNeighborsTransformer_get_feature_names_out = {k: v for k, v in pms_RadiusNeighborsTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -312,9 +300,7 @@ pms_RadiusNeighborsTransformer_get_feature_names_out = {k: v for k, v in pms_Rad
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RadiusNeighborsTransformer_get_metadata_routing = {k: v for k, v in pms_RadiusNeighborsTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -372,11 +358,8 @@ pms_RadiusNeighborsTransformer_get_metadata_routing = {k: v for k, v in pms_Radi
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsTransformer_radius_neighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }, 'sort_results': ${opts['sort_results'] ?? undefined}}
+    await this._py
+      .ex`pms_RadiusNeighborsTransformer_radius_neighbors = {'X': ${opts['X'] ?? undefined}, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_RadiusNeighborsTransformer_radius_neighbors = {k: v for k, v in pms_RadiusNeighborsTransformer_radius_neighbors.items() if v is not None}`
 
@@ -433,13 +416,7 @@ pms_RadiusNeighborsTransformer_radius_neighbors = {k: v for k, v in pms_RadiusNe
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsTransformer_radius_neighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'radius': ${
-      opts['radius'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${
-      opts['sort_results'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsTransformer_radius_neighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'radius': ${opts['radius'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_RadiusNeighborsTransformer_radius_neighbors_graph = {k: v for k, v in pms_RadiusNeighborsTransformer_radius_neighbors_graph.items() if v is not None}`
 
@@ -461,7 +438,7 @@ pms_RadiusNeighborsTransformer_radius_neighbors_graph = {k: v for k, v in pms_Ra
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -477,9 +454,7 @@ pms_RadiusNeighborsTransformer_radius_neighbors_graph = {k: v for k, v in pms_Ra
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_RadiusNeighborsTransformer_set_output = {k: v for k, v in pms_RadiusNeighborsTransformer_set_output.items() if v is not None}`
 
@@ -515,9 +490,7 @@ pms_RadiusNeighborsTransformer_set_output = {k: v for k, v in pms_RadiusNeighbor
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_RadiusNeighborsTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RadiusNeighborsTransformer_transform = {k: v for k, v in pms_RadiusNeighborsTransformer_transform.items() if v is not None}`
 

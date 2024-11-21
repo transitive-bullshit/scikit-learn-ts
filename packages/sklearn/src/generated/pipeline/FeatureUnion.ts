@@ -31,7 +31,7 @@ export class FeatureUnion {
     transformer_list?: any
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -46,6 +46,13 @@ export class FeatureUnion {
       @defaultValue `false`
      */
     verbose?: boolean
+
+    /**
+      If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_feature_names_out "sklearn.pipeline.FeatureUnion.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_feature_names_out "sklearn.pipeline.FeatureUnion.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
+
+      @defaultValue `true`
+     */
+    verbose_feature_names_out?: boolean
   }) {
     this.id = `FeatureUnion${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -87,11 +94,8 @@ except NameError: bridgeFeatureUnion = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_FeatureUnion = {'transformer_list': ${
-      this.opts['transformer_list'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'transformer_weights': ${
-      this.opts['transformer_weights'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_FeatureUnion = {'transformer_list': ${this.opts['transformer_list'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'transformer_weights': ${this.opts['transformer_weights'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'verbose_feature_names_out': ${this.opts['verbose_feature_names_out'] ?? undefined}}
 
 ctor_FeatureUnion = {k: v for k, v in ctor_FeatureUnion.items() if v is not None}`
 
@@ -135,7 +139,7 @@ ctor_FeatureUnion = {k: v for k, v in ctor_FeatureUnion.items() if v is not None
     y?: ArrayLike[]
 
     /**
-      Parameters to pass to the fit method of the estimator.
+      If `enable\_metadata\_routing=False` (default): Parameters directly passed to the `fit` methods of the sub-transformers.
      */
     fit_params?: any
   }): Promise<any> {
@@ -148,11 +152,8 @@ ctor_FeatureUnion = {k: v for k, v in ctor_FeatureUnion.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureUnion_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
+    await this._py
+      .ex`pms_FeatureUnion_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_FeatureUnion_fit = {k: v for k, v in pms_FeatureUnion_fit.items() if v is not None}`
 
@@ -180,9 +181,9 @@ pms_FeatureUnion_fit = {k: v for k, v in pms_FeatureUnion_fit.items() if v is no
     y?: ArrayLike[]
 
     /**
-      Parameters to pass to the fit method of the estimator.
+      If `enable\_metadata\_routing=False` (default): Parameters directly passed to the `fit` methods of the sub-transformers.
      */
-    fit_params?: any
+    params?: any
   }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This FeatureUnion instance has already been disposed')
@@ -193,11 +194,8 @@ pms_FeatureUnion_fit = {k: v for k, v in pms_FeatureUnion_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureUnion_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
+    await this._py
+      .ex`pms_FeatureUnion_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_FeatureUnion_fit_transform = {k: v for k, v in pms_FeatureUnion_fit_transform.items() if v is not None}`
 
@@ -231,9 +229,7 @@ pms_FeatureUnion_fit_transform = {k: v for k, v in pms_FeatureUnion_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_FeatureUnion_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_FeatureUnion_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_FeatureUnion_get_feature_names_out = {k: v for k, v in pms_FeatureUnion_get_feature_names_out.items() if v is not None}`
 
@@ -253,7 +249,7 @@ pms_FeatureUnion_get_feature_names_out = {k: v for k, v in pms_FeatureUnion_get_
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -268,9 +264,8 @@ pms_FeatureUnion_get_feature_names_out = {k: v for k, v in pms_FeatureUnion_get_
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureUnion_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureUnion_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_FeatureUnion_get_metadata_routing = {k: v for k, v in pms_FeatureUnion_get_metadata_routing.items() if v is not None}`
 
@@ -292,7 +287,7 @@ pms_FeatureUnion_get_metadata_routing = {k: v for k, v in pms_FeatureUnion_get_m
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FeatureUnion instance has already been disposed')
@@ -303,9 +298,8 @@ pms_FeatureUnion_get_metadata_routing = {k: v for k, v in pms_FeatureUnion_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureUnion_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureUnion_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_FeatureUnion_set_output = {k: v for k, v in pms_FeatureUnion_set_output.items() if v is not None}`
 
@@ -326,6 +320,11 @@ pms_FeatureUnion_set_output = {k: v for k, v in pms_FeatureUnion_set_output.item
       Input data to be transformed.
      */
     X?: ArrayLike
+
+    /**
+      Parameters routed to the `transform` method of the sub-transformers via the metadata routing API. See [Metadata Routing User Guide](../../metadata_routing.html#metadata-routing) for more details.
+     */
+    params?: any
   }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This FeatureUnion instance has already been disposed')
@@ -336,9 +335,8 @@ pms_FeatureUnion_set_output = {k: v for k, v in pms_FeatureUnion_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureUnion_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureUnion_transform = {'X': ${opts['X'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_FeatureUnion_transform = {k: v for k, v in pms_FeatureUnion_transform.items() if v is not None}`
 

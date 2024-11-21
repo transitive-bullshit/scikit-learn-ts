@@ -67,7 +67,7 @@ export class IsolationForest {
     bootstrap?: boolean
 
     /**
-      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -132,19 +132,8 @@ except NameError: bridgeIsolationForest = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_IsolationForest = {'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'max_samples': ${
-      this.opts['max_samples'] ?? undefined
-    }, 'contamination': ${
-      this.opts['contamination'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
+    await this._py
+      .ex`ctor_IsolationForest = {'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'max_samples': ${this.opts['max_samples'] ?? undefined}, 'contamination': ${this.opts['contamination'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
 
 ctor_IsolationForest = {k: v for k, v in ctor_IsolationForest.items() if v is not None}`
 
@@ -197,9 +186,8 @@ ctor_IsolationForest = {k: v for k, v in ctor_IsolationForest.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsolationForest_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IsolationForest_decision_function = {k: v for k, v in pms_IsolationForest_decision_function.items() if v is not None}`
 
@@ -240,13 +228,8 @@ pms_IsolationForest_decision_function = {k: v for k, v in pms_IsolationForest_de
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_IsolationForest_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_IsolationForest_fit = {k: v for k, v in pms_IsolationForest_fit.items() if v is not None}`
 
@@ -274,6 +257,11 @@ pms_IsolationForest_fit = {k: v for k, v in pms_IsolationForest_fit.items() if v
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This IsolationForest instance has already been disposed')
@@ -284,9 +272,8 @@ pms_IsolationForest_fit = {k: v for k, v in pms_IsolationForest_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_IsolationForest_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_IsolationForest_fit_predict = {k: v for k, v in pms_IsolationForest_fit_predict.items() if v is not None}`
 
@@ -306,7 +293,7 @@ pms_IsolationForest_fit_predict = {k: v for k, v in pms_IsolationForest_fit_pred
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -321,9 +308,8 @@ pms_IsolationForest_fit_predict = {k: v for k, v in pms_IsolationForest_fit_pred
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsolationForest_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_IsolationForest_get_metadata_routing = {k: v for k, v in pms_IsolationForest_get_metadata_routing.items() if v is not None}`
 
@@ -354,9 +340,8 @@ pms_IsolationForest_get_metadata_routing = {k: v for k, v in pms_IsolationForest
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsolationForest_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IsolationForest_predict = {k: v for k, v in pms_IsolationForest_predict.items() if v is not None}`
 
@@ -391,9 +376,8 @@ pms_IsolationForest_predict = {k: v for k, v in pms_IsolationForest_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsolationForest_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_samples.items() if v is not None}`
 
@@ -430,9 +414,8 @@ pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsolationForest_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_IsolationForest_set_fit_request = {k: v for k, v in pms_IsolationForest_set_fit_request.items() if v is not None}`
 

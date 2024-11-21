@@ -90,7 +90,7 @@ export class LatentDirichletAllocation {
     total_samples?: number
 
     /**
-      Perplexity tolerance in batch learning. Only used when `evaluate\_every` is greater than 0.
+      Perplexity tolerance. Only used when `evaluate\_every` is greater than 0.
 
       @defaultValue `0.1`
      */
@@ -111,7 +111,7 @@ export class LatentDirichletAllocation {
     max_doc_update_iter?: number
 
     /**
-      The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -171,31 +171,8 @@ except NameError: bridgeLatentDirichletAllocation = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LatentDirichletAllocation = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'doc_topic_prior': ${
-      this.opts['doc_topic_prior'] ?? undefined
-    }, 'topic_word_prior': ${
-      this.opts['topic_word_prior'] ?? undefined
-    }, 'learning_method': ${
-      this.opts['learning_method'] ?? undefined
-    }, 'learning_decay': ${
-      this.opts['learning_decay'] ?? undefined
-    }, 'learning_offset': ${
-      this.opts['learning_offset'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'batch_size': ${
-      this.opts['batch_size'] ?? undefined
-    }, 'evaluate_every': ${
-      this.opts['evaluate_every'] ?? undefined
-    }, 'total_samples': ${
-      this.opts['total_samples'] ?? undefined
-    }, 'perp_tol': ${this.opts['perp_tol'] ?? undefined}, 'mean_change_tol': ${
-      this.opts['mean_change_tol'] ?? undefined
-    }, 'max_doc_update_iter': ${
-      this.opts['max_doc_update_iter'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_LatentDirichletAllocation = {'n_components': ${this.opts['n_components'] ?? undefined}, 'doc_topic_prior': ${this.opts['doc_topic_prior'] ?? undefined}, 'topic_word_prior': ${this.opts['topic_word_prior'] ?? undefined}, 'learning_method': ${this.opts['learning_method'] ?? undefined}, 'learning_decay': ${this.opts['learning_decay'] ?? undefined}, 'learning_offset': ${this.opts['learning_offset'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'evaluate_every': ${this.opts['evaluate_every'] ?? undefined}, 'total_samples': ${this.opts['total_samples'] ?? undefined}, 'perp_tol': ${this.opts['perp_tol'] ?? undefined}, 'mean_change_tol': ${this.opts['mean_change_tol'] ?? undefined}, 'max_doc_update_iter': ${this.opts['max_doc_update_iter'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_LatentDirichletAllocation = {k: v for k, v in ctor_LatentDirichletAllocation.items() if v is not None}`
 
@@ -251,9 +228,8 @@ ctor_LatentDirichletAllocation = {k: v for k, v in ctor_LatentDirichletAllocatio
     }
 
     // set up method params
-    await this._py.ex`pms_LatentDirichletAllocation_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LatentDirichletAllocation_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LatentDirichletAllocation_fit = {k: v for k, v in pms_LatentDirichletAllocation_fit.items() if v is not None}`
 
@@ -301,13 +277,7 @@ pms_LatentDirichletAllocation_fit = {k: v for k, v in pms_LatentDirichletAllocat
 
     // set up method params
     await this._py
-      .ex`pms_LatentDirichletAllocation_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_LatentDirichletAllocation_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_LatentDirichletAllocation_fit_transform = {k: v for k, v in pms_LatentDirichletAllocation_fit_transform.items() if v is not None}`
 
@@ -345,9 +315,7 @@ pms_LatentDirichletAllocation_fit_transform = {k: v for k, v in pms_LatentDirich
 
     // set up method params
     await this._py
-      .ex`pms_LatentDirichletAllocation_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_LatentDirichletAllocation_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_LatentDirichletAllocation_get_feature_names_out = {k: v for k, v in pms_LatentDirichletAllocation_get_feature_names_out.items() if v is not None}`
 
@@ -385,9 +353,7 @@ pms_LatentDirichletAllocation_get_feature_names_out = {k: v for k, v in pms_Late
 
     // set up method params
     await this._py
-      .ex`pms_LatentDirichletAllocation_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LatentDirichletAllocation_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LatentDirichletAllocation_get_metadata_routing = {k: v for k, v in pms_LatentDirichletAllocation_get_metadata_routing.items() if v is not None}`
 
@@ -428,9 +394,7 @@ pms_LatentDirichletAllocation_get_metadata_routing = {k: v for k, v in pms_Laten
 
     // set up method params
     await this._py
-      .ex`pms_LatentDirichletAllocation_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+      .ex`pms_LatentDirichletAllocation_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LatentDirichletAllocation_partial_fit = {k: v for k, v in pms_LatentDirichletAllocation_partial_fit.items() if v is not None}`
 
@@ -473,11 +437,7 @@ pms_LatentDirichletAllocation_partial_fit = {k: v for k, v in pms_LatentDirichle
 
     // set up method params
     await this._py
-      .ex`pms_LatentDirichletAllocation_perplexity = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'sub_sampling': ${
-      opts['sub_sampling'] ?? undefined
-    }}
+      .ex`pms_LatentDirichletAllocation_perplexity = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'sub_sampling': ${opts['sub_sampling'] ?? undefined}}
 
 pms_LatentDirichletAllocation_perplexity = {k: v for k, v in pms_LatentDirichletAllocation_perplexity.items() if v is not None}`
 
@@ -517,9 +477,8 @@ pms_LatentDirichletAllocation_perplexity = {k: v for k, v in pms_LatentDirichlet
     }
 
     // set up method params
-    await this._py.ex`pms_LatentDirichletAllocation_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LatentDirichletAllocation_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LatentDirichletAllocation_score = {k: v for k, v in pms_LatentDirichletAllocation_score.items() if v is not None}`
 
@@ -541,7 +500,7 @@ pms_LatentDirichletAllocation_score = {k: v for k, v in pms_LatentDirichletAlloc
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -557,9 +516,7 @@ pms_LatentDirichletAllocation_score = {k: v for k, v in pms_LatentDirichletAlloc
 
     // set up method params
     await this._py
-      .ex`pms_LatentDirichletAllocation_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+      .ex`pms_LatentDirichletAllocation_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_LatentDirichletAllocation_set_output = {k: v for k, v in pms_LatentDirichletAllocation_set_output.items() if v is not None}`
 
@@ -595,9 +552,7 @@ pms_LatentDirichletAllocation_set_output = {k: v for k, v in pms_LatentDirichlet
 
     // set up method params
     await this._py
-      .ex`pms_LatentDirichletAllocation_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LatentDirichletAllocation_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LatentDirichletAllocation_transform = {k: v for k, v in pms_LatentDirichletAllocation_transform.items() if v is not None}`
 

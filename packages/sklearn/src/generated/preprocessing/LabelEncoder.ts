@@ -68,9 +68,8 @@ except NameError: bridgeLabelEncoder = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LabelEncoder = {'classes_': np.array(${
-      this.opts['classes_'] ?? undefined
-    }) if ${this.opts['classes_'] !== undefined} else None}
+    await this._py
+      .ex`ctor_LabelEncoder = {'classes_': np.array(${this.opts['classes_'] ?? undefined}) if ${this.opts['classes_'] !== undefined} else None}
 
 ctor_LabelEncoder = {k: v for k, v in ctor_LabelEncoder.items() if v is not None}`
 
@@ -117,9 +116,8 @@ ctor_LabelEncoder = {k: v for k, v in ctor_LabelEncoder.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_LabelEncoder_fit = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelEncoder_fit = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelEncoder_fit = {k: v for k, v in pms_LabelEncoder_fit.items() if v is not None}`
 
@@ -150,9 +148,8 @@ pms_LabelEncoder_fit = {k: v for k, v in pms_LabelEncoder_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_LabelEncoder_fit_transform = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelEncoder_fit_transform = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelEncoder_fit_transform = {k: v for k, v in pms_LabelEncoder_fit_transform.items() if v is not None}`
 
@@ -187,9 +184,8 @@ pms_LabelEncoder_fit_transform = {k: v for k, v in pms_LabelEncoder_fit_transfor
     }
 
     // set up method params
-    await this._py.ex`pms_LabelEncoder_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelEncoder_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LabelEncoder_get_metadata_routing = {k: v for k, v in pms_LabelEncoder_get_metadata_routing.items() if v is not None}`
 
@@ -222,9 +218,8 @@ pms_LabelEncoder_get_metadata_routing = {k: v for k, v in pms_LabelEncoder_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_LabelEncoder_inverse_transform = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelEncoder_inverse_transform = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelEncoder_inverse_transform = {k: v for k, v in pms_LabelEncoder_inverse_transform.items() if v is not None}`
 
@@ -246,7 +241,7 @@ pms_LabelEncoder_inverse_transform = {k: v for k, v in pms_LabelEncoder_inverse_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelEncoder instance has already been disposed')
@@ -257,9 +252,8 @@ pms_LabelEncoder_inverse_transform = {k: v for k, v in pms_LabelEncoder_inverse_
     }
 
     // set up method params
-    await this._py.ex`pms_LabelEncoder_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelEncoder_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_LabelEncoder_set_output = {k: v for k, v in pms_LabelEncoder_set_output.items() if v is not None}`
 
@@ -290,9 +284,8 @@ pms_LabelEncoder_set_output = {k: v for k, v in pms_LabelEncoder_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_LabelEncoder_transform = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelEncoder_transform = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelEncoder_transform = {k: v for k, v in pms_LabelEncoder_transform.items() if v is not None}`
 

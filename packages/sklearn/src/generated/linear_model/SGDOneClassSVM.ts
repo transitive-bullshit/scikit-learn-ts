@@ -38,14 +38,14 @@ export class SGDOneClassSVM {
     fit_intercept?: boolean
 
     /**
-      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the `partial\_fit`. Defaults to 1000.
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the `partial\_fit`. Defaults to 1000. Values must be in the range `\[1, inf)`.
 
       @defaultValue `1000`
      */
     max_iter?: number
 
     /**
-      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol). Defaults to 1e-3.
+      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol). Defaults to 1e-3. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.001`
      */
@@ -78,14 +78,14 @@ export class SGDOneClassSVM {
     learning_rate?: 'constant' | 'optimal' | 'invscaling' | 'adaptive'
 
     /**
-      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’.
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0`
      */
     eta0?: number
 
     /**
-      The exponent for inverse scaling learning rate \[default 0.5\].
+      The exponent for inverse scaling learning rate. Values must be in the range `(-inf, inf)`.
 
       @defaultValue `0.5`
      */
@@ -147,21 +147,8 @@ except NameError: bridgeSGDOneClassSVM = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SGDOneClassSVM = {'nu': ${
-      this.opts['nu'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${
-      this.opts['eta0'] ?? undefined
-    }, 'power_t': ${this.opts['power_t'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'average': ${this.opts['average'] ?? undefined}}
+    await this._py
+      .ex`ctor_SGDOneClassSVM = {'nu': ${this.opts['nu'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${this.opts['eta0'] ?? undefined}, 'power_t': ${this.opts['power_t'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${this.opts['average'] ?? undefined}}
 
 ctor_SGDOneClassSVM = {k: v for k, v in ctor_SGDOneClassSVM.items() if v is not None}`
 
@@ -212,9 +199,8 @@ ctor_SGDOneClassSVM = {k: v for k, v in ctor_SGDOneClassSVM.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDOneClassSVM_decision_function = {k: v for k, v in pms_SGDOneClassSVM_decision_function.items() if v is not None}`
 
@@ -295,13 +281,8 @@ pms_SGDOneClassSVM_densify = {k: v for k, v in pms_SGDOneClassSVM_densify.items(
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'coef_init': ${opts['coef_init'] ?? undefined}, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_fit = {k: v for k, v in pms_SGDOneClassSVM_fit.items() if v is not None}`
 
@@ -329,6 +310,11 @@ pms_SGDOneClassSVM_fit = {k: v for k, v in pms_SGDOneClassSVM_fit.items() if v i
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
@@ -339,9 +325,8 @@ pms_SGDOneClassSVM_fit = {k: v for k, v in pms_SGDOneClassSVM_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDOneClassSVM_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_SGDOneClassSVM_fit_predict = {k: v for k, v in pms_SGDOneClassSVM_fit_predict.items() if v is not None}`
 
@@ -376,9 +361,8 @@ pms_SGDOneClassSVM_fit_predict = {k: v for k, v in pms_SGDOneClassSVM_fit_predic
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SGDOneClassSVM_get_metadata_routing = {k: v for k, v in pms_SGDOneClassSVM_get_metadata_routing.items() if v is not None}`
 
@@ -419,11 +403,8 @@ pms_SGDOneClassSVM_get_metadata_routing = {k: v for k, v in pms_SGDOneClassSVM_g
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_partial_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_partial_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_partial_fit = {k: v for k, v in pms_SGDOneClassSVM_partial_fit.items() if v is not None}`
 
@@ -454,9 +435,8 @@ pms_SGDOneClassSVM_partial_fit = {k: v for k, v in pms_SGDOneClassSVM_partial_fi
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDOneClassSVM_predict = {k: v for k, v in pms_SGDOneClassSVM_predict.items() if v is not None}`
 
@@ -487,9 +467,8 @@ pms_SGDOneClassSVM_predict = {k: v for k, v in pms_SGDOneClassSVM_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDOneClassSVM_score_samples = {k: v for k, v in pms_SGDOneClassSVM_score_samples.items() if v is not None}`
 
@@ -536,11 +515,8 @@ pms_SGDOneClassSVM_score_samples = {k: v for k, v in pms_SGDOneClassSVM_score_sa
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_set_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_fit_request.items() if v is not None}`
 
@@ -578,9 +554,7 @@ pms_SGDOneClassSVM_set_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_fi
 
     // set up method params
     await this._py
-      .ex`pms_SGDOneClassSVM_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_SGDOneClassSVM_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_set_partial_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_partial_fit_request.items() if v is not None}`
 
@@ -719,6 +693,9 @@ pms_SGDOneClassSVM_sparsify = {k: v for k, v in pms_SGDOneClassSVM_sparsify.item
     })()
   }
 
+  /**
+    Deprecated since version 1.4: `loss\_function\_` was deprecated in version 1.4 and will be removed in 1.6.
+   */
   get loss_function_(): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')

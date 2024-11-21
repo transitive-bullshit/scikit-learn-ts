@@ -43,7 +43,7 @@ export class ElasticNet {
     fit_intercept?: boolean
 
     /**
-      Whether to use a precomputed Gram matrix to speed up calculations. The Gram matrix can also be passed as argument. For sparse input this option is always `false` to preserve sparsity.
+      Whether to use a precomputed Gram matrix to speed up calculations. The Gram matrix can also be passed as argument. For sparse input this option is always `false` to preserve sparsity. Check [an example on how to use a precomputed Gram Matrix in ElasticNet](../../auto_examples/linear_model/plot_elastic_net_precomputed_gram_matrix_with_weighted_samples.html#sphx-glr-auto-examples-linear-model-plot-elastic-net-precomputed-gram-matrix-with-weighted-samples-py) for details.
 
       @defaultValue `false`
      */
@@ -136,19 +136,8 @@ except NameError: bridgeElasticNet = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ElasticNet = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${
-      this.opts['precompute'] !== undefined
-    } else None, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'selection': ${this.opts['selection'] ?? undefined}}
+    await this._py
+      .ex`ctor_ElasticNet = {'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${this.opts['precompute'] !== undefined} else None, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'selection': ${this.opts['selection'] ?? undefined}}
 
 ctor_ElasticNet = {k: v for k, v in ctor_ElasticNet.items() if v is not None}`
 
@@ -183,8 +172,10 @@ ctor_ElasticNet = {k: v for k, v in ctor_ElasticNet.items() if v is not None}`
   async fit(opts: {
     /**
       Data.
+
+      Note that large sparse matrices and arrays requiring `int64` indices are not accepted.
      */
-    X?: any
+    X?: SparseMatrix
 
     /**
       Target. Will be cast to X’s dtype if necessary.
@@ -212,15 +203,8 @@ ctor_ElasticNet = {k: v for k, v in ctor_ElasticNet.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_ElasticNet_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ElasticNet_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_ElasticNet_fit = {k: v for k, v in pms_ElasticNet_fit.items() if v is not None}`
 
@@ -255,9 +239,8 @@ pms_ElasticNet_fit = {k: v for k, v in pms_ElasticNet_fit.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_ElasticNet_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ElasticNet_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ElasticNet_get_metadata_routing = {k: v for k, v in pms_ElasticNet_get_metadata_routing.items() if v is not None}`
 
@@ -312,7 +295,7 @@ pms_ElasticNet_get_metadata_routing = {k: v for k, v in pms_ElasticNet_get_metad
     /**
       List of alphas where to compute the models. If `undefined` alphas are set automatically.
      */
-    alphas?: NDArray
+    alphas?: ArrayLike
 
     /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
@@ -336,7 +319,7 @@ pms_ElasticNet_get_metadata_routing = {k: v for k, v in pms_ElasticNet_get_metad
     /**
       The initial values of the coefficients.
      */
-    coef_init?: NDArray
+    coef_init?: ArrayLike
 
     /**
       Amount of verbosity.
@@ -380,29 +363,8 @@ pms_ElasticNet_get_metadata_routing = {k: v for k, v in pms_ElasticNet_get_metad
     }
 
     // set up method params
-    await this._py.ex`pms_ElasticNet_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${
-      opts['l1_ratio'] ?? undefined
-    }, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${
-      opts['n_alphas'] ?? undefined
-    }, 'alphas': np.array(${opts['alphas'] ?? undefined}) if ${
-      opts['alphas'] !== undefined
-    } else None, 'precompute': np.array(${
-      opts['precompute'] ?? undefined
-    }) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${
-      opts['return_n_iter'] ?? undefined
-    }, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_ElasticNet_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${opts['l1_ratio'] ?? undefined}, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': ${opts['alphas'] ?? undefined}, 'precompute': np.array(${opts['precompute'] ?? undefined}) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${opts['return_n_iter'] ?? undefined}, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${opts['check_input'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_ElasticNet_path = {k: v for k, v in pms_ElasticNet_path.items() if v is not None}`
 
@@ -476,13 +438,8 @@ pms_ElasticNet_predict = {k: v for k, v in pms_ElasticNet_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_ElasticNet_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ElasticNet_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ElasticNet_score = {k: v for k, v in pms_ElasticNet_score.items() if v is not None}`
 
@@ -522,9 +479,8 @@ pms_ElasticNet_score = {k: v for k, v in pms_ElasticNet_score.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_ElasticNet_set_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_ElasticNet_set_fit_request = {'check_input': ${opts['check_input'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ElasticNet_set_fit_request = {k: v for k, v in pms_ElasticNet_set_fit_request.items() if v is not None}`
 
@@ -559,9 +515,8 @@ pms_ElasticNet_set_fit_request = {k: v for k, v in pms_ElasticNet_set_fit_reques
     }
 
     // set up method params
-    await this._py.ex`pms_ElasticNet_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ElasticNet_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ElasticNet_set_score_request = {k: v for k, v in pms_ElasticNet_set_score_request.items() if v is not None}`
 

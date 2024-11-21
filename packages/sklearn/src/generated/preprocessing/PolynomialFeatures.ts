@@ -95,13 +95,8 @@ except NameError: bridgePolynomialFeatures = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PolynomialFeatures = {'degree': ${
-      this.opts['degree'] ?? undefined
-    }, 'interaction_only': ${
-      this.opts['interaction_only'] ?? undefined
-    }, 'include_bias': ${this.opts['include_bias'] ?? undefined}, 'order': ${
-      this.opts['order'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PolynomialFeatures = {'degree': ${this.opts['degree'] ?? undefined}, 'interaction_only': ${this.opts['interaction_only'] ?? undefined}, 'include_bias': ${this.opts['include_bias'] ?? undefined}, 'order': ${this.opts['order'] ?? undefined}}
 
 ctor_PolynomialFeatures = {k: v for k, v in ctor_PolynomialFeatures.items() if v is not None}`
 
@@ -155,9 +150,8 @@ ctor_PolynomialFeatures = {k: v for k, v in ctor_PolynomialFeatures.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PolynomialFeatures_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PolynomialFeatures_fit = {k: v for k, v in pms_PolynomialFeatures_fit.items() if v is not None}`
 
@@ -204,13 +198,8 @@ pms_PolynomialFeatures_fit = {k: v for k, v in pms_PolynomialFeatures_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PolynomialFeatures_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_PolynomialFeatures_fit_transform = {k: v for k, v in pms_PolynomialFeatures_fit_transform.items() if v is not None}`
 
@@ -246,9 +235,7 @@ pms_PolynomialFeatures_fit_transform = {k: v for k, v in pms_PolynomialFeatures_
 
     // set up method params
     await this._py
-      .ex`pms_PolynomialFeatures_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_PolynomialFeatures_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PolynomialFeatures_get_feature_names_out = {k: v for k, v in pms_PolynomialFeatures_get_feature_names_out.items() if v is not None}`
 
@@ -286,9 +273,7 @@ pms_PolynomialFeatures_get_feature_names_out = {k: v for k, v in pms_PolynomialF
 
     // set up method params
     await this._py
-      .ex`pms_PolynomialFeatures_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_PolynomialFeatures_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PolynomialFeatures_get_metadata_routing = {k: v for k, v in pms_PolynomialFeatures_get_metadata_routing.items() if v is not None}`
 
@@ -310,7 +295,7 @@ pms_PolynomialFeatures_get_metadata_routing = {k: v for k, v in pms_PolynomialFe
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -323,9 +308,8 @@ pms_PolynomialFeatures_get_metadata_routing = {k: v for k, v in pms_PolynomialFe
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PolynomialFeatures_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PolynomialFeatures_set_output = {k: v for k, v in pms_PolynomialFeatures_set_output.items() if v is not None}`
 
@@ -362,9 +346,8 @@ pms_PolynomialFeatures_set_output = {k: v for k, v in pms_PolynomialFeatures_set
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PolynomialFeatures_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_transform.items() if v is not None}`
 

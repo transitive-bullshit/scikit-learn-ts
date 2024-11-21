@@ -71,7 +71,7 @@ export class GraphicalLassoCV {
     mode?: 'cd' | 'lars'
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -136,19 +136,8 @@ except NameError: bridgeGraphicalLassoCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GraphicalLassoCV = {'alphas': np.array(${
-      this.opts['alphas'] ?? undefined
-    }) if ${this.opts['alphas'] !== undefined} else None, 'n_refinements': ${
-      this.opts['n_refinements'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'enet_tol': ${this.opts['enet_tol'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'mode': ${this.opts['mode'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}}
+    await this._py
+      .ex`ctor_GraphicalLassoCV = {'alphas': np.array(${this.opts['alphas'] ?? undefined}) if ${this.opts['alphas'] !== undefined} else None, 'n_refinements': ${this.opts['n_refinements'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'enet_tol': ${this.opts['enet_tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'mode': ${this.opts['mode'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}}
 
 ctor_GraphicalLassoCV = {k: v for k, v in ctor_GraphicalLassoCV.items() if v is not None}`
 
@@ -218,13 +207,8 @@ ctor_GraphicalLassoCV = {k: v for k, v in ctor_GraphicalLassoCV.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_GraphicalLassoCV_error_norm = {k: v for k, v in pms_GraphicalLassoCV_error_norm.items() if v is not None}`
 
@@ -250,6 +234,11 @@ pms_GraphicalLassoCV_error_norm = {k: v for k, v in pms_GraphicalLassoCV_error_n
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Parameters to be passed to the CV splitter and the cross\_val\_score function.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -262,9 +251,8 @@ pms_GraphicalLassoCV_error_norm = {k: v for k, v in pms_GraphicalLassoCV_error_n
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GraphicalLassoCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_GraphicalLassoCV_fit = {k: v for k, v in pms_GraphicalLassoCV_fit.items() if v is not None}`
 
@@ -284,7 +272,7 @@ pms_GraphicalLassoCV_fit = {k: v for k, v in pms_GraphicalLassoCV_fit.items() if
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -301,9 +289,8 @@ pms_GraphicalLassoCV_fit = {k: v for k, v in pms_GraphicalLassoCV_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GraphicalLassoCV_get_metadata_routing = {k: v for k, v in pms_GraphicalLassoCV_get_metadata_routing.items() if v is not None}`
 
@@ -339,9 +326,7 @@ pms_GraphicalLassoCV_get_metadata_routing = {k: v for k, v in pms_GraphicalLasso
 
     // set up method params
     await this._py
-      .ex`pms_GraphicalLassoCV_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+      .ex`pms_GraphicalLassoCV_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_GraphicalLassoCV_get_precision = {k: v for k, v in pms_GraphicalLassoCV_get_precision.items() if v is not None}`
 
@@ -374,9 +359,8 @@ pms_GraphicalLassoCV_get_precision = {k: v for k, v in pms_GraphicalLassoCV_get_
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GraphicalLassoCV_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GraphicalLassoCV_mahalanobis = {k: v for k, v in pms_GraphicalLassoCV_mahalanobis.items() if v is not None}`
 
@@ -416,11 +400,8 @@ pms_GraphicalLassoCV_mahalanobis = {k: v for k, v in pms_GraphicalLassoCV_mahala
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items() if v is not None}`
 
@@ -459,9 +440,8 @@ pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items(
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_GraphicalLassoCV_set_score_request = {k: v for k, v in pms_GraphicalLassoCV_set_score_request.items() if v is not None}`
 

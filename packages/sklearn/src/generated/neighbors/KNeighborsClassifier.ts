@@ -50,7 +50,7 @@ export class KNeighborsClassifier {
     leaf_size?: number
 
     /**
-      Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+      Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used. This parameter is expected to be positive.
 
       @defaultValue `2`
      */
@@ -73,7 +73,7 @@ export class KNeighborsClassifier {
     metric_params?: any
 
     /**
-      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsClassifier.fit "sklearn.neighbors.KNeighborsClassifier.fit") method.
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsClassifier.fit "sklearn.neighbors.KNeighborsClassifier.fit") method.
      */
     n_jobs?: number
   }) {
@@ -121,15 +121,8 @@ except NameError: bridgeKNeighborsClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KNeighborsClassifier = {'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'weights': ${this.opts['weights'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'p': ${
-      this.opts['p'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_KNeighborsClassifier = {'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'weights': ${this.opts['weights'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_KNeighborsClassifier = {k: v for k, v in ctor_KNeighborsClassifier.items() if v is not None}`
 
@@ -183,11 +176,8 @@ ctor_KNeighborsClassifier = {k: v for k, v in ctor_KNeighborsClassifier.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_KNeighborsClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_KNeighborsClassifier_fit = {k: v for k, v in pms_KNeighborsClassifier_fit.items() if v is not None}`
 
@@ -225,9 +215,7 @@ pms_KNeighborsClassifier_fit = {k: v for k, v in pms_KNeighborsClassifier_fit.it
 
     // set up method params
     await this._py
-      .ex`pms_KNeighborsClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_KNeighborsClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KNeighborsClassifier_get_metadata_routing = {k: v for k, v in pms_KNeighborsClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -276,11 +264,8 @@ pms_KNeighborsClassifier_get_metadata_routing = {k: v for k, v in pms_KNeighbors
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsClassifier_kneighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KNeighborsClassifier_kneighbors = {'X': ${opts['X'] ?? undefined}, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}}
 
 pms_KNeighborsClassifier_kneighbors = {k: v for k, v in pms_KNeighborsClassifier_kneighbors.items() if v is not None}`
 
@@ -328,11 +313,7 @@ pms_KNeighborsClassifier_kneighbors = {k: v for k, v in pms_KNeighborsClassifier
 
     // set up method params
     await this._py
-      .ex`pms_KNeighborsClassifier_kneighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${
-      opts['n_neighbors'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}}
+      .ex`pms_KNeighborsClassifier_kneighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}}
 
 pms_KNeighborsClassifier_kneighbors_graph = {k: v for k, v in pms_KNeighborsClassifier_kneighbors_graph.items() if v is not None}`
 
@@ -365,9 +346,8 @@ pms_KNeighborsClassifier_kneighbors_graph = {k: v for k, v in pms_KNeighborsClas
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KNeighborsClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KNeighborsClassifier_predict = {k: v for k, v in pms_KNeighborsClassifier_predict.items() if v is not None}`
 
@@ -402,9 +382,8 @@ pms_KNeighborsClassifier_predict = {k: v for k, v in pms_KNeighborsClassifier_pr
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KNeighborsClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KNeighborsClassifier_predict_proba = {k: v for k, v in pms_KNeighborsClassifier_predict_proba.items() if v is not None}`
 
@@ -449,13 +428,8 @@ pms_KNeighborsClassifier_predict_proba = {k: v for k, v in pms_KNeighborsClassif
     }
 
     // set up method params
-    await this._py.ex`pms_KNeighborsClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_KNeighborsClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_score.items() if v is not None}`
 
@@ -495,9 +469,7 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
 
     // set up method params
     await this._py
-      .ex`pms_KNeighborsClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_KNeighborsClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KNeighborsClassifier_set_score_request = {k: v for k, v in pms_KNeighborsClassifier_set_score_request.items() if v is not None}`
 

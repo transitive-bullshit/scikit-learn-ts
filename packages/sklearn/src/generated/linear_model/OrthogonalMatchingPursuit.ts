@@ -22,7 +22,7 @@ export class OrthogonalMatchingPursuit {
 
   constructor(opts?: {
     /**
-      Desired number of non-zero entries in the solution. If `undefined` (by default) this value is set to 10% of n\_features.
+      Desired number of non-zero entries in the solution. Ignored if `tol` is set. When `undefined` and `tol` is also `undefined`, this value is either set to 10% of `n\_features` or 1, whichever is greater.
      */
     n_nonzero_coefs?: number
 
@@ -37,13 +37,6 @@ export class OrthogonalMatchingPursuit {
       @defaultValue `true`
      */
     fit_intercept?: boolean
-
-    /**
-      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-      @defaultValue `false`
-     */
-    normalize?: boolean
 
     /**
       Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improves performance when [n\_targets](../../glossary.html#term-n_targets) or [n\_samples](../../glossary.html#term-n_samples) is very large. Note that if you already have such matrices, you can pass them directly to the fit method.
@@ -96,13 +89,8 @@ except NameError: bridgeOrthogonalMatchingPursuit = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OrthogonalMatchingPursuit = {'n_nonzero_coefs': ${
-      this.opts['n_nonzero_coefs'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'normalize': ${this.opts['normalize'] ?? undefined}, 'precompute': ${
-      this.opts['precompute'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_OrthogonalMatchingPursuit = {'n_nonzero_coefs': ${this.opts['n_nonzero_coefs'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'precompute': ${this.opts['precompute'] ?? undefined}}
 
 ctor_OrthogonalMatchingPursuit = {k: v for k, v in ctor_OrthogonalMatchingPursuit.items() if v is not None}`
 
@@ -156,11 +144,8 @@ ctor_OrthogonalMatchingPursuit = {k: v for k, v in ctor_OrthogonalMatchingPursui
     }
 
     // set up method params
-    await this._py.ex`pms_OrthogonalMatchingPursuit_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_OrthogonalMatchingPursuit_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_OrthogonalMatchingPursuit_fit = {k: v for k, v in pms_OrthogonalMatchingPursuit_fit.items() if v is not None}`
 
@@ -198,9 +183,7 @@ pms_OrthogonalMatchingPursuit_fit = {k: v for k, v in pms_OrthogonalMatchingPurs
 
     // set up method params
     await this._py
-      .ex`pms_OrthogonalMatchingPursuit_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_OrthogonalMatchingPursuit_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OrthogonalMatchingPursuit_get_metadata_routing = {k: v for k, v in pms_OrthogonalMatchingPursuit_get_metadata_routing.items() if v is not None}`
 
@@ -235,9 +218,8 @@ pms_OrthogonalMatchingPursuit_get_metadata_routing = {k: v for k, v in pms_Ortho
     }
 
     // set up method params
-    await this._py.ex`pms_OrthogonalMatchingPursuit_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OrthogonalMatchingPursuit_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_OrthogonalMatchingPursuit_predict = {k: v for k, v in pms_OrthogonalMatchingPursuit_predict.items() if v is not None}`
 
@@ -284,13 +266,8 @@ pms_OrthogonalMatchingPursuit_predict = {k: v for k, v in pms_OrthogonalMatching
     }
 
     // set up method params
-    await this._py.ex`pms_OrthogonalMatchingPursuit_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_OrthogonalMatchingPursuit_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPursuit_score.items() if v is not None}`
 
@@ -330,9 +307,7 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
 
     // set up method params
     await this._py
-      .ex`pms_OrthogonalMatchingPursuit_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_OrthogonalMatchingPursuit_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_OrthogonalMatchingPursuit_set_score_request = {k: v for k, v in pms_OrthogonalMatchingPursuit_set_score_request.items() if v is not None}`
 
@@ -427,7 +402,7 @@ pms_OrthogonalMatchingPursuit_set_score_request = {k: v for k, v in pms_Orthogon
   }
 
   /**
-    The number of non-zero coefficients in the solution. If `n\_nonzero\_coefs` is `undefined` and `tol` is `undefined` this value is either set to 10% of `n\_features` or 1, whichever is greater.
+    The number of non-zero coefficients in the solution or `undefined` when `tol` is set. If `n\_nonzero\_coefs` is `undefined` and `tol` is `undefined` this value is either set to 10% of `n\_features` or 1, whichever is greater.
    */
   get n_nonzero_coefs_(): Promise<number> {
     if (this._isDisposed) {

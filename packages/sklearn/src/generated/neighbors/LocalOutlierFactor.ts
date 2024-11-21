@@ -80,7 +80,7 @@ export class LocalOutlierFactor {
     novelty?: boolean
 
     /**
-      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -128,19 +128,8 @@ except NameError: bridgeLocalOutlierFactor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LocalOutlierFactor = {'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${
-      this.opts['leaf_size'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${
-      this.opts['p'] ?? undefined
-    }, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'contamination': ${
-      this.opts['contamination'] ?? undefined
-    }, 'novelty': ${this.opts['novelty'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LocalOutlierFactor = {'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'contamination': ${this.opts['contamination'] ?? undefined}, 'novelty': ${this.opts['novelty'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_LocalOutlierFactor = {k: v for k, v in ctor_LocalOutlierFactor.items() if v is not None}`
 
@@ -196,9 +185,7 @@ ctor_LocalOutlierFactor = {k: v for k, v in ctor_LocalOutlierFactor.items() if v
 
     // set up method params
     await this._py
-      .ex`pms_LocalOutlierFactor_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LocalOutlierFactor_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LocalOutlierFactor_decision_function = {k: v for k, v in pms_LocalOutlierFactor_decision_function.items() if v is not None}`
 
@@ -236,9 +223,8 @@ pms_LocalOutlierFactor_decision_function = {k: v for k, v in pms_LocalOutlierFac
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LocalOutlierFactor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LocalOutlierFactor_fit = {k: v for k, v in pms_LocalOutlierFactor_fit.items() if v is not None}`
 
@@ -280,9 +266,8 @@ pms_LocalOutlierFactor_fit = {k: v for k, v in pms_LocalOutlierFactor_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LocalOutlierFactor_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LocalOutlierFactor_fit_predict = {k: v for k, v in pms_LocalOutlierFactor_fit_predict.items() if v is not None}`
 
@@ -320,9 +305,7 @@ pms_LocalOutlierFactor_fit_predict = {k: v for k, v in pms_LocalOutlierFactor_fi
 
     // set up method params
     await this._py
-      .ex`pms_LocalOutlierFactor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LocalOutlierFactor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LocalOutlierFactor_get_metadata_routing = {k: v for k, v in pms_LocalOutlierFactor_get_metadata_routing.items() if v is not None}`
 
@@ -369,11 +352,8 @@ pms_LocalOutlierFactor_get_metadata_routing = {k: v for k, v in pms_LocalOutlier
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_kneighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LocalOutlierFactor_kneighbors = {'X': ${opts['X'] ?? undefined}, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}}
 
 pms_LocalOutlierFactor_kneighbors = {k: v for k, v in pms_LocalOutlierFactor_kneighbors.items() if v is not None}`
 
@@ -421,11 +401,7 @@ pms_LocalOutlierFactor_kneighbors = {k: v for k, v in pms_LocalOutlierFactor_kne
 
     // set up method params
     await this._py
-      .ex`pms_LocalOutlierFactor_kneighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${
-      opts['n_neighbors'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}}
+      .ex`pms_LocalOutlierFactor_kneighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}}
 
 pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFactor_kneighbors_graph.items() if v is not None}`
 
@@ -460,9 +436,8 @@ pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFact
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LocalOutlierFactor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predict.items() if v is not None}`
 
@@ -501,9 +476,8 @@ pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predic
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LocalOutlierFactor_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_score_samples.items() if v is not None}`
 

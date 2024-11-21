@@ -34,7 +34,7 @@ export class VotingRegressor {
     weights?: ArrayLike
 
     /**
-      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -85,13 +85,8 @@ except NameError: bridgeVotingRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_VotingRegressor = {'estimators': ${
-      this.opts['estimators'] ?? undefined
-    }, 'weights': np.array(${this.opts['weights'] ?? undefined}) if ${
-      this.opts['weights'] !== undefined
-    } else None, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_VotingRegressor = {'estimators': ${this.opts['estimators'] ?? undefined}, 'weights': np.array(${this.opts['weights'] ?? undefined}) if ${this.opts['weights'] !== undefined} else None, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is not None}`
 
@@ -138,6 +133,11 @@ ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is no
       Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the underlying estimators.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
@@ -148,13 +148,8 @@ ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingRegressor_fit = {k: v for k, v in pms_VotingRegressor_fit.items() if v is not None}`
 
@@ -197,13 +192,8 @@ pms_VotingRegressor_fit = {k: v for k, v in pms_VotingRegressor_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingRegressor_fit_transform = {k: v for k, v in pms_VotingRegressor_fit_transform.items() if v is not None}`
 
@@ -237,9 +227,7 @@ pms_VotingRegressor_fit_transform = {k: v for k, v in pms_VotingRegressor_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_VotingRegressor_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_VotingRegressor_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_VotingRegressor_get_feature_names_out = {k: v for k, v in pms_VotingRegressor_get_feature_names_out.items() if v is not None}`
 
@@ -259,7 +247,7 @@ pms_VotingRegressor_get_feature_names_out = {k: v for k, v in pms_VotingRegresso
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -274,9 +262,8 @@ pms_VotingRegressor_get_feature_names_out = {k: v for k, v in pms_VotingRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_VotingRegressor_get_metadata_routing = {k: v for k, v in pms_VotingRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -309,9 +296,8 @@ pms_VotingRegressor_get_metadata_routing = {k: v for k, v in pms_VotingRegressor
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingRegressor_predict = {k: v for k, v in pms_VotingRegressor_predict.items() if v is not None}`
 
@@ -354,13 +340,8 @@ pms_VotingRegressor_predict = {k: v for k, v in pms_VotingRegressor_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_VotingRegressor_score = {k: v for k, v in pms_VotingRegressor_score.items() if v is not None}`
 
@@ -397,9 +378,8 @@ pms_VotingRegressor_score = {k: v for k, v in pms_VotingRegressor_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingRegressor_set_fit_request = {k: v for k, v in pms_VotingRegressor_set_fit_request.items() if v is not None}`
 
@@ -421,7 +401,7 @@ pms_VotingRegressor_set_fit_request = {k: v for k, v in pms_VotingRegressor_set_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
@@ -432,9 +412,8 @@ pms_VotingRegressor_set_fit_request = {k: v for k, v in pms_VotingRegressor_set_
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_VotingRegressor_set_output = {k: v for k, v in pms_VotingRegressor_set_output.items() if v is not None}`
 
@@ -472,9 +451,7 @@ pms_VotingRegressor_set_output = {k: v for k, v in pms_VotingRegressor_set_outpu
 
     // set up method params
     await this._py
-      .ex`pms_VotingRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_VotingRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingRegressor_set_score_request = {k: v for k, v in pms_VotingRegressor_set_score_request.items() if v is not None}`
 
@@ -505,9 +482,8 @@ pms_VotingRegressor_set_score_request = {k: v for k, v in pms_VotingRegressor_se
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingRegressor_transform = {k: v for k, v in pms_VotingRegressor_transform.items() if v is not None}`
 

@@ -88,15 +88,8 @@ except NameError: bridgeRocCurveDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RocCurveDisplay = {'fpr': np.array(${
-      this.opts['fpr'] ?? undefined
-    }) if ${this.opts['fpr'] !== undefined} else None, 'tpr': np.array(${
-      this.opts['tpr'] ?? undefined
-    }) if ${this.opts['tpr'] !== undefined} else None, 'roc_auc': ${
-      this.opts['roc_auc'] ?? undefined
-    }, 'estimator_name': ${
-      this.opts['estimator_name'] ?? undefined
-    }, 'pos_label': ${this.opts['pos_label'] ?? undefined}}
+    await this._py
+      .ex`ctor_RocCurveDisplay = {'fpr': np.array(${this.opts['fpr'] ?? undefined}) if ${this.opts['fpr'] !== undefined} else None, 'tpr': np.array(${this.opts['tpr'] ?? undefined}) if ${this.opts['tpr'] !== undefined} else None, 'roc_auc': ${this.opts['roc_auc'] ?? undefined}, 'estimator_name': ${this.opts['estimator_name'] ?? undefined}, 'pos_label': ${this.opts['pos_label'] ?? undefined}}
 
 ctor_RocCurveDisplay = {k: v for k, v in ctor_RocCurveDisplay.items() if v is not None}`
 
@@ -204,27 +197,8 @@ ctor_RocCurveDisplay = {k: v for k, v in ctor_RocCurveDisplay.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_RocCurveDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${
-      opts['sample_weight'] !== undefined
-    } else None, 'drop_intermediate': ${
-      opts['drop_intermediate'] ?? undefined
-    }, 'response_method': ${
-      opts['response_method'] ?? undefined
-    }, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${
-      opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RocCurveDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'drop_intermediate': ${opts['drop_intermediate'] ?? undefined}, 'response_method': ${opts['response_method'] ?? undefined}, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_RocCurveDisplay_from_estimator = {k: v for k, v in pms_RocCurveDisplay_from_estimator.items() if v is not None}`
 
@@ -309,25 +283,7 @@ pms_RocCurveDisplay_from_estimator = {k: v for k, v in pms_RocCurveDisplay_from_
 
     // set up method params
     await this._py
-      .ex`pms_RocCurveDisplay_from_predictions = {'y_true': np.array(${
-      opts['y_true'] ?? undefined
-    }) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${
-      opts['y_pred'] ?? undefined
-    }) if ${
-      opts['y_pred'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${
-      opts['sample_weight'] !== undefined
-    } else None, 'drop_intermediate': ${
-      opts['drop_intermediate'] ?? undefined
-    }, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${
-      opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+      .ex`pms_RocCurveDisplay_from_predictions = {'y_true': np.array(${opts['y_true'] ?? undefined}) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${opts['y_pred'] ?? undefined}) if ${opts['y_pred'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'drop_intermediate': ${opts['drop_intermediate'] ?? undefined}, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_RocCurveDisplay_from_predictions = {k: v for k, v in pms_RocCurveDisplay_from_predictions.items() if v is not None}`
 
@@ -382,13 +338,8 @@ pms_RocCurveDisplay_from_predictions = {k: v for k, v in pms_RocCurveDisplay_fro
     }
 
     // set up method params
-    await this._py.ex`pms_RocCurveDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RocCurveDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_RocCurveDisplay_plot = {k: v for k, v in pms_RocCurveDisplay_plot.items() if v is not None}`
 

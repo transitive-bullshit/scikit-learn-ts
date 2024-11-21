@@ -38,13 +38,6 @@ export class OrthogonalMatchingPursuitCV {
     fit_intercept?: boolean
 
     /**
-      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-      @defaultValue `false`
-     */
-    normalize?: boolean
-
-    /**
       Maximum numbers of iterations to perform, therefore maximum features to include. 10% of `n\_features` but at least 5 if available.
      */
     max_iter?: number
@@ -55,7 +48,7 @@ export class OrthogonalMatchingPursuitCV {
     cv?: number
 
     /**
-      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -110,15 +103,8 @@ except NameError: bridgeOrthogonalMatchingPursuitCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OrthogonalMatchingPursuitCV = {'copy': ${
-      this.opts['copy'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'normalize': ${this.opts['normalize'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_OrthogonalMatchingPursuitCV = {'copy': ${this.opts['copy'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_OrthogonalMatchingPursuitCV = {k: v for k, v in ctor_OrthogonalMatchingPursuitCV.items() if v is not None}`
 
@@ -160,6 +146,11 @@ ctor_OrthogonalMatchingPursuitCV = {k: v for k, v in ctor_OrthogonalMatchingPurs
       Target values. Will be cast to X’s dtype if necessary.
      */
     y?: ArrayLike
+
+    /**
+      Parameters to pass to the underlying splitter.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -174,11 +165,8 @@ ctor_OrthogonalMatchingPursuitCV = {k: v for k, v in ctor_OrthogonalMatchingPurs
     }
 
     // set up method params
-    await this._py.ex`pms_OrthogonalMatchingPursuitCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_OrthogonalMatchingPursuitCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_OrthogonalMatchingPursuitCV_fit = {k: v for k, v in pms_OrthogonalMatchingPursuitCV_fit.items() if v is not None}`
 
@@ -198,7 +186,7 @@ pms_OrthogonalMatchingPursuitCV_fit = {k: v for k, v in pms_OrthogonalMatchingPu
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -216,9 +204,7 @@ pms_OrthogonalMatchingPursuitCV_fit = {k: v for k, v in pms_OrthogonalMatchingPu
 
     // set up method params
     await this._py
-      .ex`pms_OrthogonalMatchingPursuitCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_OrthogonalMatchingPursuitCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OrthogonalMatchingPursuitCV_get_metadata_routing = {k: v for k, v in pms_OrthogonalMatchingPursuitCV_get_metadata_routing.items() if v is not None}`
 
@@ -253,9 +239,8 @@ pms_OrthogonalMatchingPursuitCV_get_metadata_routing = {k: v for k, v in pms_Ort
     }
 
     // set up method params
-    await this._py.ex`pms_OrthogonalMatchingPursuitCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OrthogonalMatchingPursuitCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_OrthogonalMatchingPursuitCV_predict = {k: v for k, v in pms_OrthogonalMatchingPursuitCV_predict.items() if v is not None}`
 
@@ -302,13 +287,8 @@ pms_OrthogonalMatchingPursuitCV_predict = {k: v for k, v in pms_OrthogonalMatchi
     }
 
     // set up method params
-    await this._py.ex`pms_OrthogonalMatchingPursuitCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_OrthogonalMatchingPursuitCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_OrthogonalMatchingPursuitCV_score = {k: v for k, v in pms_OrthogonalMatchingPursuitCV_score.items() if v is not None}`
 
@@ -348,9 +328,7 @@ pms_OrthogonalMatchingPursuitCV_score = {k: v for k, v in pms_OrthogonalMatching
 
     // set up method params
     await this._py
-      .ex`pms_OrthogonalMatchingPursuitCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_OrthogonalMatchingPursuitCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_OrthogonalMatchingPursuitCV_set_score_request = {k: v for k, v in pms_OrthogonalMatchingPursuitCV_set_score_request.items() if v is not None}`
 

@@ -6,17 +6,19 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Shuffle-Group(s)-Out cross-validation iterator
+  Shuffle-Group(s)-Out cross-validation iterator.
 
   Provides randomized train/test indices to split data according to a third-party provided group. This group information can be used to encode arbitrary domain specific stratifications of the samples as integers.
 
   For instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.
 
-  The difference between LeavePGroupsOut and GroupShuffleSplit is that the former generates splits using all subsets of size `p` unique groups, whereas GroupShuffleSplit generates a user-determined number of random test splits, each with a user-determined fraction of unique groups.
+  The difference between [`LeavePGroupsOut`](sklearn.model_selection.LeavePGroupsOut.html#sklearn.model_selection.LeavePGroupsOut "sklearn.model_selection.LeavePGroupsOut") and `GroupShuffleSplit` is that the former generates splits using all subsets of size `p` unique groups, whereas `GroupShuffleSplit` generates a user-determined number of random test splits, each with a user-determined fraction of unique groups.
 
   For example, a less computationally intensive alternative to `LeavePGroupsOut(p=10)` would be `GroupShuffleSplit(test\_size=10, n\_splits=100)`.
 
-  Note: The parameters `test\_size` and `train\_size` refer to groups, and not to samples, as in ShuffleSplit.
+  Contrary to other cross-validation strategies, the random splits do not guarantee that test sets across all folds will be mutually exclusive, and might include overlapping samples. However, this is still very likely for sizeable datasets.
+
+  Note: The parameters `test\_size` and `train\_size` refer to groups, and not to samples as in [`ShuffleSplit`](sklearn.model_selection.ShuffleSplit.html#sklearn.model_selection.ShuffleSplit "sklearn.model_selection.ShuffleSplit").
 
   Read more in the [User Guide](../cross_validation.html#group-shuffle-split).
 
@@ -41,9 +43,7 @@ export class GroupShuffleSplit {
     n_splits?: number
 
     /**
-      If float, should be between 0.0 and 1.0 and represent the proportion of groups to include in the test split (rounded up). If int, represents the absolute number of test groups. If `undefined`, the value is set to the complement of the train size. The default will change in version 0.21. It will remain 0.2 only if `train\_size` is unspecified, otherwise it will complement the specified `train\_size`.
-
-      @defaultValue `0.2`
+      If float, should be between 0.0 and 1.0 and represent the proportion of groups to include in the test split (rounded up). If int, represents the absolute number of test groups. If `undefined`, the value is set to the complement of the train size. If `train\_size` is also `undefined`, it will be set to 0.2.
      */
     test_size?: number
 
@@ -99,11 +99,8 @@ except NameError: bridgeGroupShuffleSplit = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GroupShuffleSplit = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${
-      this.opts['train_size'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_GroupShuffleSplit = {'n_splits': ${this.opts['n_splits'] ?? undefined}, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${this.opts['train_size'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_GroupShuffleSplit = {k: v for k, v in ctor_GroupShuffleSplit.items() if v is not None}`
 
@@ -157,9 +154,7 @@ ctor_GroupShuffleSplit = {k: v for k, v in ctor_GroupShuffleSplit.items() if v i
 
     // set up method params
     await this._py
-      .ex`pms_GroupShuffleSplit_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GroupShuffleSplit_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GroupShuffleSplit_get_metadata_routing = {k: v for k, v in pms_GroupShuffleSplit_get_metadata_routing.items() if v is not None}`
 
@@ -173,7 +168,7 @@ pms_GroupShuffleSplit_get_metadata_routing = {k: v for k, v in pms_GroupShuffleS
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -204,9 +199,8 @@ pms_GroupShuffleSplit_get_metadata_routing = {k: v for k, v in pms_GroupShuffleS
     }
 
     // set up method params
-    await this._py.ex`pms_GroupShuffleSplit_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_GroupShuffleSplit_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_GroupShuffleSplit_get_n_splits = {k: v for k, v in pms_GroupShuffleSplit_get_n_splits.items() if v is not None}`
 
@@ -245,9 +239,8 @@ pms_GroupShuffleSplit_get_n_splits = {k: v for k, v in pms_GroupShuffleSplit_get
     }
 
     // set up method params
-    await this._py.ex`pms_GroupShuffleSplit_set_split_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GroupShuffleSplit_set_split_request = {'groups': ${opts['groups'] ?? undefined}}
 
 pms_GroupShuffleSplit_set_split_request = {k: v for k, v in pms_GroupShuffleSplit_set_split_request.items() if v is not None}`
 
@@ -290,13 +283,8 @@ pms_GroupShuffleSplit_set_split_request = {k: v for k, v in pms_GroupShuffleSpli
     }
 
     // set up method params
-    await this._py.ex`pms_GroupShuffleSplit_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_GroupShuffleSplit_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_GroupShuffleSplit_split = {k: v for k, v in pms_GroupShuffleSplit_split.items() if v is not None}`
 

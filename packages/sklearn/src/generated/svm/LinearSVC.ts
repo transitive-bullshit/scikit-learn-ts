@@ -44,7 +44,7 @@ export class LinearSVC {
     /**
       Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features. `dual="auto"` will choose the value of the parameter automatically, based on the values of `n\_samples`, `n\_features`, `loss`, `multi\_class` and `penalty`. If `n\_samples` < `n\_features` and optimizer supports chosen `loss`, `multi\_class` and `penalty`, then dual will be set to `true`, otherwise it will be set to `false`.
 
-      @defaultValue `true`
+      @defaultValue `'auto'`
      */
     dual?: 'auto' | boolean
 
@@ -56,7 +56,7 @@ export class LinearSVC {
     tol?: number
 
     /**
-      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive.
+      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. For an intuitive visualization of the effects of scaling the regularization parameter C, see [Scaling the regularization parameter for SVCs](../../auto_examples/svm/plot_svm_scale_c.html#sphx-glr-auto-examples-svm-plot-svm-scale-c-py).
 
       @defaultValue `1`
      */
@@ -147,23 +147,8 @@ except NameError: bridgeLinearSVC = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LinearSVC = {'penalty': ${
-      this.opts['penalty'] ?? undefined
-    }, 'loss': ${this.opts['loss'] ?? undefined}, 'dual': ${
-      this.opts['dual'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${
-      this.opts['C'] ?? undefined
-    }, 'multi_class': ${
-      this.opts['multi_class'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'intercept_scaling': ${
-      this.opts['intercept_scaling'] ?? undefined
-    }, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LinearSVC = {'penalty': ${this.opts['penalty'] ?? undefined}, 'loss': ${this.opts['loss'] ?? undefined}, 'dual': ${this.opts['dual'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${this.opts['C'] ?? undefined}, 'multi_class': ${this.opts['multi_class'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'intercept_scaling': ${this.opts['intercept_scaling'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_LinearSVC = {k: v for k, v in ctor_LinearSVC.items() if v is not None}`
 
@@ -211,9 +196,8 @@ ctor_LinearSVC = {k: v for k, v in ctor_LinearSVC.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVC_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVC_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearSVC_decision_function = {k: v for k, v in pms_LinearSVC_decision_function.items() if v is not None}`
 
@@ -282,13 +266,8 @@ pms_LinearSVC_densify = {k: v for k, v in pms_LinearSVC_densify.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVC_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVC_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearSVC_fit = {k: v for k, v in pms_LinearSVC_fit.items() if v is not None}`
 
@@ -323,9 +302,8 @@ pms_LinearSVC_fit = {k: v for k, v in pms_LinearSVC_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVC_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVC_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LinearSVC_get_metadata_routing = {k: v for k, v in pms_LinearSVC_get_metadata_routing.items() if v is not None}`
 
@@ -356,9 +334,8 @@ pms_LinearSVC_get_metadata_routing = {k: v for k, v in pms_LinearSVC_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVC_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVC_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearSVC_predict = {k: v for k, v in pms_LinearSVC_predict.items() if v is not None}`
 
@@ -401,13 +378,8 @@ pms_LinearSVC_predict = {k: v for k, v in pms_LinearSVC_predict.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVC_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVC_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearSVC_score = {k: v for k, v in pms_LinearSVC_score.items() if v is not None}`
 
@@ -442,9 +414,8 @@ pms_LinearSVC_score = {k: v for k, v in pms_LinearSVC_score.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVC_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVC_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearSVC_set_fit_request = {k: v for k, v in pms_LinearSVC_set_fit_request.items() if v is not None}`
 
@@ -479,9 +450,8 @@ pms_LinearSVC_set_fit_request = {k: v for k, v in pms_LinearSVC_set_fit_request.
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVC_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVC_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearSVC_set_score_request = {k: v for k, v in pms_LinearSVC_set_score_request.items() if v is not None}`
 

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   DBSCAN - Density-Based Spatial Clustering of Applications with Noise. Finds core samples of high density and expands clusters from them. Good for data which contains clusters of similar density.
 
-  The worst case memory complexity of DBSCAN is \\(O({n}^2)\\), which can occur when the `eps` param is large and `min\_samples` is low.
+  This implementation has a worst case memory complexity of \\(O({n}^2)\\), which can occur when the `eps` param is large and `min\_samples` is low, while the original DBSCAN only uses linear memory. For further details, see the Notes below.
 
   Read more in the [User Guide](../clustering.html#dbscan).
 
@@ -71,7 +71,7 @@ export class DBSCAN {
     p?: number
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -115,17 +115,8 @@ except NameError: bridgeDBSCAN = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DBSCAN = {'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'min_samples': ${this.opts['min_samples'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${
-      this.opts['leaf_size'] ?? undefined
-    }, 'p': ${this.opts['p'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_DBSCAN = {'eps': ${this.opts['eps'] ?? undefined}, 'min_samples': ${this.opts['min_samples'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_DBSCAN = {k: v for k, v in ctor_DBSCAN.items() if v is not None}`
 
@@ -181,13 +172,8 @@ ctor_DBSCAN = {k: v for k, v in ctor_DBSCAN.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_DBSCAN_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_DBSCAN_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DBSCAN_fit = {k: v for k, v in pms_DBSCAN_fit.items() if v is not None}`
 
@@ -228,13 +214,8 @@ pms_DBSCAN_fit = {k: v for k, v in pms_DBSCAN_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_DBSCAN_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_DBSCAN_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DBSCAN_fit_predict = {k: v for k, v in pms_DBSCAN_fit_predict.items() if v is not None}`
 
@@ -267,9 +248,8 @@ pms_DBSCAN_fit_predict = {k: v for k, v in pms_DBSCAN_fit_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_DBSCAN_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DBSCAN_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DBSCAN_get_metadata_routing = {k: v for k, v in pms_DBSCAN_get_metadata_routing.items() if v is not None}`
 
@@ -304,9 +284,8 @@ pms_DBSCAN_get_metadata_routing = {k: v for k, v in pms_DBSCAN_get_metadata_rout
     }
 
     // set up method params
-    await this._py.ex`pms_DBSCAN_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DBSCAN_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DBSCAN_set_fit_request = {k: v for k, v in pms_DBSCAN_set_fit_request.items() if v is not None}`
 

@@ -72,7 +72,7 @@ export class LinearSVR {
     /**
       Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features. `dual="auto"` will choose the value of the parameter automatically, based on the values of `n\_samples`, `n\_features` and `loss`. If `n\_samples` < `n\_features` and optimizer supports chosen `loss`, then dual will be set to `true`, otherwise it will be set to `false`.
 
-      @defaultValue `true`
+      @defaultValue `'auto'`
      */
     dual?: 'auto' | boolean
 
@@ -135,19 +135,8 @@ except NameError: bridgeLinearSVR = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LinearSVR = {'epsilon': ${
-      this.opts['epsilon'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${
-      this.opts['C'] ?? undefined
-    }, 'loss': ${this.opts['loss'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'intercept_scaling': ${
-      this.opts['intercept_scaling'] ?? undefined
-    }, 'dual': ${this.opts['dual'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LinearSVR = {'epsilon': ${this.opts['epsilon'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${this.opts['C'] ?? undefined}, 'loss': ${this.opts['loss'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'intercept_scaling': ${this.opts['intercept_scaling'] ?? undefined}, 'dual': ${this.opts['dual'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_LinearSVR = {k: v for k, v in ctor_LinearSVR.items() if v is not None}`
 
@@ -203,13 +192,8 @@ ctor_LinearSVR = {k: v for k, v in ctor_LinearSVR.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVR_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearSVR_fit = {k: v for k, v in pms_LinearSVR_fit.items() if v is not None}`
 
@@ -244,9 +228,8 @@ pms_LinearSVR_fit = {k: v for k, v in pms_LinearSVR_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVR_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LinearSVR_get_metadata_routing = {k: v for k, v in pms_LinearSVR_get_metadata_routing.items() if v is not None}`
 
@@ -320,13 +303,8 @@ pms_LinearSVR_predict = {k: v for k, v in pms_LinearSVR_predict.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVR_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not None}`
 
@@ -361,9 +339,8 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVR_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearSVR_set_fit_request = {k: v for k, v in pms_LinearSVR_set_fit_request.items() if v is not None}`
 
@@ -398,9 +375,8 @@ pms_LinearSVR_set_fit_request = {k: v for k, v in pms_LinearSVR_set_fit_request.
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVR_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearSVR_set_score_request = {k: v for k, v in pms_LinearSVR_set_score_request.items() if v is not None}`
 

@@ -88,11 +88,8 @@ except NameError: bridgeLabelBinarizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LabelBinarizer = {'neg_label': ${
-      this.opts['neg_label'] ?? undefined
-    }, 'pos_label': ${this.opts['pos_label'] ?? undefined}, 'sparse_output': ${
-      this.opts['sparse_output'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LabelBinarizer = {'neg_label': ${this.opts['neg_label'] ?? undefined}, 'pos_label': ${this.opts['pos_label'] ?? undefined}, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}}
 
 ctor_LabelBinarizer = {k: v for k, v in ctor_LabelBinarizer.items() if v is not None}`
 
@@ -139,9 +136,8 @@ ctor_LabelBinarizer = {k: v for k, v in ctor_LabelBinarizer.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_fit = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelBinarizer_fit = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelBinarizer_fit = {k: v for k, v in pms_LabelBinarizer_fit.items() if v is not None}`
 
@@ -174,9 +170,8 @@ pms_LabelBinarizer_fit = {k: v for k, v in pms_LabelBinarizer_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_fit_transform = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelBinarizer_fit_transform = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_transform.items() if v is not None}`
 
@@ -211,9 +206,8 @@ pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_tran
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelBinarizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LabelBinarizer_get_metadata_routing = {k: v for k, v in pms_LabelBinarizer_get_metadata_routing.items() if v is not None}`
 
@@ -255,11 +249,8 @@ pms_LabelBinarizer_get_metadata_routing = {k: v for k, v in pms_LabelBinarizer_g
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_inverse_transform = {'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'threshold': ${
-      opts['threshold'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelBinarizer_inverse_transform = {'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'threshold': ${opts['threshold'] ?? undefined}}
 
 pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inverse_transform.items() if v is not None}`
 
@@ -297,9 +288,7 @@ pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inve
 
     // set up method params
     await this._py
-      .ex`pms_LabelBinarizer_set_inverse_transform_request = {'threshold': ${
-      opts['threshold'] ?? undefined
-    }}
+      .ex`pms_LabelBinarizer_set_inverse_transform_request = {'threshold': ${opts['threshold'] ?? undefined}}
 
 pms_LabelBinarizer_set_inverse_transform_request = {k: v for k, v in pms_LabelBinarizer_set_inverse_transform_request.items() if v is not None}`
 
@@ -321,7 +310,7 @@ pms_LabelBinarizer_set_inverse_transform_request = {k: v for k, v in pms_LabelBi
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelBinarizer instance has already been disposed')
@@ -332,9 +321,8 @@ pms_LabelBinarizer_set_inverse_transform_request = {k: v for k, v in pms_LabelBi
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelBinarizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_LabelBinarizer_set_output = {k: v for k, v in pms_LabelBinarizer_set_output.items() if v is not None}`
 
@@ -367,9 +355,8 @@ pms_LabelBinarizer_set_output = {k: v for k, v in pms_LabelBinarizer_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_transform = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelBinarizer_transform = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.items() if v is not None}`
 

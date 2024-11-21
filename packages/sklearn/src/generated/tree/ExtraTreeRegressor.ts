@@ -70,7 +70,7 @@ export class ExtraTreeRegressor {
 
       @defaultValue `1`
      */
-    max_features?: number | 'sqrt'
+    max_features?: number
 
     /**
       Used to pick randomly the `max\_features` used at each split. See [Glossary](../../glossary.html#term-random_state) for details.
@@ -97,6 +97,11 @@ export class ExtraTreeRegressor {
       @defaultValue `0`
      */
     ccp_alpha?: any
+
+    /**
+      1: monotonic increase
+     */
+    monotonic_cst?: any[]
   }) {
     this.id = `ExtraTreeRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -142,25 +147,8 @@ except NameError: bridgeExtraTreeRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ExtraTreeRegressor = {'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}}
+    await this._py
+      .ex`ctor_ExtraTreeRegressor = {'criterion': ${this.opts['criterion'] ?? undefined}, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None}
 
 ctor_ExtraTreeRegressor = {k: v for k, v in ctor_ExtraTreeRegressor.items() if v is not None}`
 
@@ -216,11 +204,8 @@ ctor_ExtraTreeRegressor = {k: v for k, v in ctor_ExtraTreeRegressor.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreeRegressor_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ExtraTreeRegressor_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_ExtraTreeRegressor_apply = {k: v for k, v in pms_ExtraTreeRegressor_apply.items() if v is not None}`
 
@@ -268,13 +253,7 @@ pms_ExtraTreeRegressor_apply = {k: v for k, v in pms_ExtraTreeRegressor_apply.it
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreeRegressor_cost_complexity_pruning_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+      .ex`pms_ExtraTreeRegressor_cost_complexity_pruning_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ExtraTreeRegressor_cost_complexity_pruning_path = {k: v for k, v in pms_ExtraTreeRegressor_cost_complexity_pruning_path.items() if v is not None}`
 
@@ -316,11 +295,8 @@ pms_ExtraTreeRegressor_cost_complexity_pruning_path = {k: v for k, v in pms_Extr
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreeRegressor_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ExtraTreeRegressor_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_ExtraTreeRegressor_decision_path = {k: v for k, v in pms_ExtraTreeRegressor_decision_path.items() if v is not None}`
 
@@ -370,15 +346,8 @@ pms_ExtraTreeRegressor_decision_path = {k: v for k, v in pms_ExtraTreeRegressor_
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreeRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ExtraTreeRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_ExtraTreeRegressor_fit = {k: v for k, v in pms_ExtraTreeRegressor_fit.items() if v is not None}`
 
@@ -446,9 +415,7 @@ pms_ExtraTreeRegressor_get_depth = {k: v for k, v in pms_ExtraTreeRegressor_get_
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreeRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_ExtraTreeRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ExtraTreeRegressor_get_metadata_routing = {k: v for k, v in pms_ExtraTreeRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -520,11 +487,8 @@ pms_ExtraTreeRegressor_get_n_leaves = {k: v for k, v in pms_ExtraTreeRegressor_g
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreeRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ExtraTreeRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_ExtraTreeRegressor_predict = {k: v for k, v in pms_ExtraTreeRegressor_predict.items() if v is not None}`
 
@@ -569,13 +533,8 @@ pms_ExtraTreeRegressor_predict = {k: v for k, v in pms_ExtraTreeRegressor_predic
     }
 
     // set up method params
-    await this._py.ex`pms_ExtraTreeRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ExtraTreeRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.items() if v is not None}`
 
@@ -620,9 +579,7 @@ pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.it
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreeRegressor_set_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+      .ex`pms_ExtraTreeRegressor_set_fit_request = {'check_input': ${opts['check_input'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ExtraTreeRegressor_set_fit_request = {k: v for k, v in pms_ExtraTreeRegressor_set_fit_request.items() if v is not None}`
 
@@ -662,9 +619,7 @@ pms_ExtraTreeRegressor_set_fit_request = {k: v for k, v in pms_ExtraTreeRegresso
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreeRegressor_set_predict_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_ExtraTreeRegressor_set_predict_request = {'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_ExtraTreeRegressor_set_predict_request = {k: v for k, v in pms_ExtraTreeRegressor_set_predict_request.items() if v is not None}`
 
@@ -704,9 +659,7 @@ pms_ExtraTreeRegressor_set_predict_request = {k: v for k, v in pms_ExtraTreeRegr
 
     // set up method params
     await this._py
-      .ex`pms_ExtraTreeRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_ExtraTreeRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ExtraTreeRegressor_set_score_request = {k: v for k, v in pms_ExtraTreeRegressor_set_score_request.items() if v is not None}`
 

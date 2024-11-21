@@ -115,19 +115,8 @@ except NameError: bridgeFunctionTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_FunctionTransformer = {'func': ${
-      this.opts['func'] ?? undefined
-    }, 'inverse_func': ${this.opts['inverse_func'] ?? undefined}, 'validate': ${
-      this.opts['validate'] ?? undefined
-    }, 'accept_sparse': ${
-      this.opts['accept_sparse'] ?? undefined
-    }, 'check_inverse': ${
-      this.opts['check_inverse'] ?? undefined
-    }, 'feature_names_out': ${
-      this.opts['feature_names_out'] ?? undefined
-    }, 'kw_args': ${this.opts['kw_args'] ?? undefined}, 'inv_kw_args': ${
-      this.opts['inv_kw_args'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_FunctionTransformer = {'func': ${this.opts['func'] ?? undefined}, 'inverse_func': ${this.opts['inverse_func'] ?? undefined}, 'validate': ${this.opts['validate'] ?? undefined}, 'accept_sparse': ${this.opts['accept_sparse'] ?? undefined}, 'check_inverse': ${this.opts['check_inverse'] ?? undefined}, 'feature_names_out': ${this.opts['feature_names_out'] ?? undefined}, 'kw_args': ${this.opts['kw_args'] ?? undefined}, 'inv_kw_args': ${this.opts['inv_kw_args'] ?? undefined}}
 
 ctor_FunctionTransformer = {k: v for k, v in ctor_FunctionTransformer.items() if v is not None}`
 
@@ -183,9 +172,8 @@ ctor_FunctionTransformer = {k: v for k, v in ctor_FunctionTransformer.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_FunctionTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_FunctionTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_FunctionTransformer_fit = {k: v for k, v in pms_FunctionTransformer_fit.items() if v is not None}`
 
@@ -232,13 +220,8 @@ pms_FunctionTransformer_fit = {k: v for k, v in pms_FunctionTransformer_fit.item
     }
 
     // set up method params
-    await this._py.ex`pms_FunctionTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FunctionTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_FunctionTransformer_fit_transform = {k: v for k, v in pms_FunctionTransformer_fit_transform.items() if v is not None}`
 
@@ -276,9 +259,7 @@ pms_FunctionTransformer_fit_transform = {k: v for k, v in pms_FunctionTransforme
 
     // set up method params
     await this._py
-      .ex`pms_FunctionTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_FunctionTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_FunctionTransformer_get_feature_names_out = {k: v for k, v in pms_FunctionTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -316,9 +297,7 @@ pms_FunctionTransformer_get_feature_names_out = {k: v for k, v in pms_FunctionTr
 
     // set up method params
     await this._py
-      .ex`pms_FunctionTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_FunctionTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_FunctionTransformer_get_metadata_routing = {k: v for k, v in pms_FunctionTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -354,9 +333,7 @@ pms_FunctionTransformer_get_metadata_routing = {k: v for k, v in pms_FunctionTra
 
     // set up method params
     await this._py
-      .ex`pms_FunctionTransformer_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_FunctionTransformer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_FunctionTransformer_inverse_transform = {k: v for k, v in pms_FunctionTransformer_inverse_transform.items() if v is not None}`
 
@@ -378,7 +355,7 @@ pms_FunctionTransformer_inverse_transform = {k: v for k, v in pms_FunctionTransf
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -393,9 +370,8 @@ pms_FunctionTransformer_inverse_transform = {k: v for k, v in pms_FunctionTransf
     }
 
     // set up method params
-    await this._py.ex`pms_FunctionTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FunctionTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_FunctionTransformer_set_output = {k: v for k, v in pms_FunctionTransformer_set_output.items() if v is not None}`
 
@@ -428,9 +404,8 @@ pms_FunctionTransformer_set_output = {k: v for k, v in pms_FunctionTransformer_s
     }
 
     // set up method params
-    await this._py.ex`pms_FunctionTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_FunctionTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_FunctionTransformer_transform = {k: v for k, v in pms_FunctionTransformer_transform.items() if v is not None}`
 

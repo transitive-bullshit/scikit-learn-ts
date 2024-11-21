@@ -16,6 +16,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The computational overhead of each SVD is `O(batch\_size \* n\_features \*\* 2)`, but only 2 \* batch\_size samples remain in memory at a time. There will be `n\_samples / batch\_size` SVD computations to get the principal components, versus 1 large SVD of complexity `O(n\_samples \* n\_features \*\* 2)` for PCA.
 
+  For a usage example, see [Incremental PCA](../../auto_examples/decomposition/plot_incremental_pca.html#sphx-glr-auto-examples-decomposition-plot-incremental-pca-py).
+
   Read more in the [User Guide](../decomposition.html#incrementalpca).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html)
@@ -95,11 +97,8 @@ except NameError: bridgeIncrementalPCA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_IncrementalPCA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'whiten': ${this.opts['whiten'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }, 'batch_size': ${this.opts['batch_size'] ?? undefined}}
+    await this._py
+      .ex`ctor_IncrementalPCA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'whiten': ${this.opts['whiten'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}}
 
 ctor_IncrementalPCA = {k: v for k, v in ctor_IncrementalPCA.items() if v is not None}`
 
@@ -151,9 +150,8 @@ ctor_IncrementalPCA = {k: v for k, v in ctor_IncrementalPCA.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_IncrementalPCA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_IncrementalPCA_fit = {k: v for k, v in pms_IncrementalPCA_fit.items() if v is not None}`
 
@@ -196,13 +194,8 @@ pms_IncrementalPCA_fit = {k: v for k, v in pms_IncrementalPCA_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IncrementalPCA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_IncrementalPCA_fit_transform = {k: v for k, v in pms_IncrementalPCA_fit_transform.items() if v is not None}`
 
@@ -235,9 +228,8 @@ pms_IncrementalPCA_fit_transform = {k: v for k, v in pms_IncrementalPCA_fit_tran
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_get_covariance = {'cov': np.array(${
-      opts['cov'] ?? undefined
-    }) if ${opts['cov'] !== undefined} else None}
+    await this._py
+      .ex`pms_IncrementalPCA_get_covariance = {'cov': np.array(${opts['cov'] ?? undefined}) if ${opts['cov'] !== undefined} else None}
 
 pms_IncrementalPCA_get_covariance = {k: v for k, v in pms_IncrementalPCA_get_covariance.items() if v is not None}`
 
@@ -273,9 +265,7 @@ pms_IncrementalPCA_get_covariance = {k: v for k, v in pms_IncrementalPCA_get_cov
 
     // set up method params
     await this._py
-      .ex`pms_IncrementalPCA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_IncrementalPCA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_IncrementalPCA_get_feature_names_out = {k: v for k, v in pms_IncrementalPCA_get_feature_names_out.items() if v is not None}`
 
@@ -310,9 +300,8 @@ pms_IncrementalPCA_get_feature_names_out = {k: v for k, v in pms_IncrementalPCA_
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IncrementalPCA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_IncrementalPCA_get_metadata_routing = {k: v for k, v in pms_IncrementalPCA_get_metadata_routing.items() if v is not None}`
 
@@ -345,9 +334,8 @@ pms_IncrementalPCA_get_metadata_routing = {k: v for k, v in pms_IncrementalPCA_g
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_get_precision = {'precision': ${
-      opts['precision'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IncrementalPCA_get_precision = {'precision': ${opts['precision'] ?? undefined}}
 
 pms_IncrementalPCA_get_precision = {k: v for k, v in pms_IncrementalPCA_get_precision.items() if v is not None}`
 
@@ -382,9 +370,8 @@ pms_IncrementalPCA_get_precision = {k: v for k, v in pms_IncrementalPCA_get_prec
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IncrementalPCA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IncrementalPCA_inverse_transform = {k: v for k, v in pms_IncrementalPCA_inverse_transform.items() if v is not None}`
 
@@ -427,11 +414,8 @@ pms_IncrementalPCA_inverse_transform = {k: v for k, v in pms_IncrementalPCA_inve
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'check_input': ${opts['check_input'] ?? undefined}}
+    await this._py
+      .ex`pms_IncrementalPCA_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_IncrementalPCA_partial_fit = {k: v for k, v in pms_IncrementalPCA_partial_fit.items() if v is not None}`
 
@@ -453,7 +437,7 @@ pms_IncrementalPCA_partial_fit = {k: v for k, v in pms_IncrementalPCA_partial_fi
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
@@ -464,9 +448,8 @@ pms_IncrementalPCA_partial_fit = {k: v for k, v in pms_IncrementalPCA_partial_fi
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IncrementalPCA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_IncrementalPCA_set_output = {k: v for k, v in pms_IncrementalPCA_set_output.items() if v is not None}`
 
@@ -504,9 +487,7 @@ pms_IncrementalPCA_set_output = {k: v for k, v in pms_IncrementalPCA_set_output.
 
     // set up method params
     await this._py
-      .ex`pms_IncrementalPCA_set_partial_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_IncrementalPCA_set_partial_fit_request = {'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_IncrementalPCA_set_partial_fit_request = {k: v for k, v in pms_IncrementalPCA_set_partial_fit_request.items() if v is not None}`
 
@@ -539,9 +520,8 @@ pms_IncrementalPCA_set_partial_fit_request = {k: v for k, v in pms_IncrementalPC
     }
 
     // set up method params
-    await this._py.ex`pms_IncrementalPCA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IncrementalPCA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.items() if v is not None}`
 

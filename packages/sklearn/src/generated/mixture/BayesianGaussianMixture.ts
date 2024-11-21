@@ -176,33 +176,8 @@ except NameError: bridgeBayesianGaussianMixture = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_BayesianGaussianMixture = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'covariance_type': ${
-      this.opts['covariance_type'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'reg_covar': ${
-      this.opts['reg_covar'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'init_params': ${
-      this.opts['init_params'] ?? undefined
-    }, 'weight_concentration_prior_type': ${
-      this.opts['weight_concentration_prior_type'] ?? undefined
-    }, 'weight_concentration_prior': ${
-      this.opts['weight_concentration_prior'] ?? undefined
-    }, 'mean_precision_prior': ${
-      this.opts['mean_precision_prior'] ?? undefined
-    }, 'mean_prior': ${
-      this.opts['mean_prior'] ?? undefined
-    }, 'degrees_of_freedom_prior': ${
-      this.opts['degrees_of_freedom_prior'] ?? undefined
-    }, 'covariance_prior': ${
-      this.opts['covariance_prior'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'verbose_interval': ${this.opts['verbose_interval'] ?? undefined}}
+    await this._py
+      .ex`ctor_BayesianGaussianMixture = {'n_components': ${this.opts['n_components'] ?? undefined}, 'covariance_type': ${this.opts['covariance_type'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'reg_covar': ${this.opts['reg_covar'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'init_params': ${this.opts['init_params'] ?? undefined}, 'weight_concentration_prior_type': ${this.opts['weight_concentration_prior_type'] ?? undefined}, 'weight_concentration_prior': ${this.opts['weight_concentration_prior'] ?? undefined}, 'mean_precision_prior': ${this.opts['mean_precision_prior'] ?? undefined}, 'mean_prior': ${this.opts['mean_prior'] ?? undefined}, 'degrees_of_freedom_prior': ${this.opts['degrees_of_freedom_prior'] ?? undefined}, 'covariance_prior': ${this.opts['covariance_prior'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'verbose_interval': ${this.opts['verbose_interval'] ?? undefined}}
 
 ctor_BayesianGaussianMixture = {k: v for k, v in ctor_BayesianGaussianMixture.items() if v is not None}`
 
@@ -258,9 +233,8 @@ ctor_BayesianGaussianMixture = {k: v for k, v in ctor_BayesianGaussianMixture.it
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianGaussianMixture_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_BayesianGaussianMixture_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_BayesianGaussianMixture_fit = {k: v for k, v in pms_BayesianGaussianMixture_fit.items() if v is not None}`
 
@@ -303,9 +277,7 @@ pms_BayesianGaussianMixture_fit = {k: v for k, v in pms_BayesianGaussianMixture_
 
     // set up method params
     await this._py
-      .ex`pms_BayesianGaussianMixture_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+      .ex`pms_BayesianGaussianMixture_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_BayesianGaussianMixture_fit_predict = {k: v for k, v in pms_BayesianGaussianMixture_fit_predict.items() if v is not None}`
 
@@ -343,9 +315,7 @@ pms_BayesianGaussianMixture_fit_predict = {k: v for k, v in pms_BayesianGaussian
 
     // set up method params
     await this._py
-      .ex`pms_BayesianGaussianMixture_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_BayesianGaussianMixture_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_BayesianGaussianMixture_get_metadata_routing = {k: v for k, v in pms_BayesianGaussianMixture_get_metadata_routing.items() if v is not None}`
 
@@ -380,9 +350,8 @@ pms_BayesianGaussianMixture_get_metadata_routing = {k: v for k, v in pms_Bayesia
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianGaussianMixture_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BayesianGaussianMixture_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BayesianGaussianMixture_predict = {k: v for k, v in pms_BayesianGaussianMixture_predict.items() if v is not None}`
 
@@ -418,9 +387,7 @@ pms_BayesianGaussianMixture_predict = {k: v for k, v in pms_BayesianGaussianMixt
 
     // set up method params
     await this._py
-      .ex`pms_BayesianGaussianMixture_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_BayesianGaussianMixture_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BayesianGaussianMixture_predict_proba = {k: v for k, v in pms_BayesianGaussianMixture_predict_proba.items() if v is not None}`
 
@@ -457,9 +424,8 @@ pms_BayesianGaussianMixture_predict_proba = {k: v for k, v in pms_BayesianGaussi
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianGaussianMixture_sample = {'n_samples': ${
-      opts['n_samples'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BayesianGaussianMixture_sample = {'n_samples': ${opts['n_samples'] ?? undefined}}
 
 pms_BayesianGaussianMixture_sample = {k: v for k, v in pms_BayesianGaussianMixture_sample.items() if v is not None}`
 
@@ -497,9 +463,8 @@ pms_BayesianGaussianMixture_sample = {k: v for k, v in pms_BayesianGaussianMixtu
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianGaussianMixture_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_BayesianGaussianMixture_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_BayesianGaussianMixture_score = {k: v for k, v in pms_BayesianGaussianMixture_score.items() if v is not None}`
 
@@ -535,9 +500,7 @@ pms_BayesianGaussianMixture_score = {k: v for k, v in pms_BayesianGaussianMixtur
 
     // set up method params
     await this._py
-      .ex`pms_BayesianGaussianMixture_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_BayesianGaussianMixture_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussianMixture_score_samples.items() if v is not None}`
 
@@ -686,7 +649,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    True when convergence was reached in fit(), `false` otherwise.
+    True when convergence of the best fit of inference was reached, `false` otherwise.
    */
   get converged_(): Promise<boolean> {
     if (this._isDisposed) {

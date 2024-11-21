@@ -24,7 +24,9 @@ export class ARDRegression {
 
   constructor(opts?: {
     /**
-      Maximum number of iterations. If `undefined`, it corresponds to `max\_iter=300`.
+      Maximum number of iterations.
+
+      @defaultValue `300`
      */
     max_iter?: number
 
@@ -97,11 +99,6 @@ export class ARDRegression {
       @defaultValue `false`
      */
     verbose?: boolean
-
-    /**
-      Maximum number of iterations.
-     */
-    n_iter?: number
   }) {
     this.id = `ARDRegression${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -143,21 +140,8 @@ except NameError: bridgeARDRegression = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ARDRegression = {'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'alpha_1': ${
-      this.opts['alpha_1'] ?? undefined
-    }, 'alpha_2': ${this.opts['alpha_2'] ?? undefined}, 'lambda_1': ${
-      this.opts['lambda_1'] ?? undefined
-    }, 'lambda_2': ${this.opts['lambda_2'] ?? undefined}, 'compute_score': ${
-      this.opts['compute_score'] ?? undefined
-    }, 'threshold_lambda': ${
-      this.opts['threshold_lambda'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_iter': ${
-      this.opts['n_iter'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ARDRegression = {'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'alpha_1': ${this.opts['alpha_1'] ?? undefined}, 'alpha_2': ${this.opts['alpha_2'] ?? undefined}, 'lambda_1': ${this.opts['lambda_1'] ?? undefined}, 'lambda_2': ${this.opts['lambda_2'] ?? undefined}, 'compute_score': ${this.opts['compute_score'] ?? undefined}, 'threshold_lambda': ${this.opts['threshold_lambda'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_ARDRegression = {k: v for k, v in ctor_ARDRegression.items() if v is not None}`
 
@@ -211,11 +195,8 @@ ctor_ARDRegression = {k: v for k, v in ctor_ARDRegression.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_ARDRegression_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_ARDRegression_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_ARDRegression_fit = {k: v for k, v in pms_ARDRegression_fit.items() if v is not None}`
 
@@ -250,9 +231,8 @@ pms_ARDRegression_fit = {k: v for k, v in pms_ARDRegression_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_ARDRegression_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ARDRegression_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ARDRegression_get_metadata_routing = {k: v for k, v in pms_ARDRegression_get_metadata_routing.items() if v is not None}`
 
@@ -292,11 +272,8 @@ pms_ARDRegression_get_metadata_routing = {k: v for k, v in pms_ARDRegression_get
     }
 
     // set up method params
-    await this._py.ex`pms_ARDRegression_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'return_std': ${
-      opts['return_std'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ARDRegression_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_ARDRegression_predict = {k: v for k, v in pms_ARDRegression_predict.items() if v is not None}`
 
@@ -339,13 +316,8 @@ pms_ARDRegression_predict = {k: v for k, v in pms_ARDRegression_predict.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_ARDRegression_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ARDRegression_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v is not None}`
 
@@ -382,9 +354,8 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_ARDRegression_set_predict_request = {'return_std': ${
-      opts['return_std'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ARDRegression_set_predict_request = {'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_ARDRegression_set_predict_request = {k: v for k, v in pms_ARDRegression_set_predict_request.items() if v is not None}`
 
@@ -421,9 +392,8 @@ pms_ARDRegression_set_predict_request = {k: v for k, v in pms_ARDRegression_set_
     }
 
     // set up method params
-    await this._py.ex`pms_ARDRegression_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ARDRegression_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ARDRegression_set_score_request = {k: v for k, v in pms_ARDRegression_set_score_request.items() if v is not None}`
 

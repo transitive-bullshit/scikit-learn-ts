@@ -18,7 +18,12 @@ export class Kernel {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: {}) {
+  constructor(opts?: {
+    /**
+      The log-transformed bounds on the kernel’s hyperparameters theta
+     */
+    bounds?: NDArray[]
+  }) {
     this.id = `Kernel${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -59,7 +64,8 @@ except NameError: bridgeKernel = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Kernel = {}
+    await this._py
+      .ex`ctor_Kernel = {'bounds': np.array(${this.opts['bounds'] ?? undefined}) if ${this.opts['bounds'] !== undefined} else None}
 
 ctor_Kernel = {k: v for k, v in ctor_Kernel.items() if v is not None}`
 
@@ -131,9 +137,8 @@ pms_Kernel___call__ = {k: v for k, v in pms_Kernel___call__.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_Kernel_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+    await this._py
+      .ex`pms_Kernel_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_Kernel_clone_with_theta = {k: v for k, v in pms_Kernel_clone_with_theta.items() if v is not None}`
 
@@ -166,9 +171,8 @@ pms_Kernel_clone_with_theta = {k: v for k, v in pms_Kernel_clone_with_theta.item
     }
 
     // set up method params
-    await this._py.ex`pms_Kernel_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Kernel_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Kernel_diag = {k: v for k, v in pms_Kernel_diag.items() if v is not None}`
 

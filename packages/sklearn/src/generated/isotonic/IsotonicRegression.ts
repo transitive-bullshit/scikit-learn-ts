@@ -89,11 +89,8 @@ except NameError: bridgeIsotonicRegression = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_IsotonicRegression = {'y_min': ${
-      this.opts['y_min'] ?? undefined
-    }, 'y_max': ${this.opts['y_max'] ?? undefined}, 'increasing': ${
-      this.opts['increasing'] ?? undefined
-    }, 'out_of_bounds': ${this.opts['out_of_bounds'] ?? undefined}}
+    await this._py
+      .ex`ctor_IsotonicRegression = {'y_min': ${this.opts['y_min'] ?? undefined}, 'y_max': ${this.opts['y_max'] ?? undefined}, 'increasing': ${this.opts['increasing'] ?? undefined}, 'out_of_bounds': ${this.opts['out_of_bounds'] ?? undefined}}
 
 ctor_IsotonicRegression = {k: v for k, v in ctor_IsotonicRegression.items() if v is not None}`
 
@@ -152,13 +149,8 @@ ctor_IsotonicRegression = {k: v for k, v in ctor_IsotonicRegression.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsotonicRegression_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_IsotonicRegression_fit = {k: v for k, v in pms_IsotonicRegression_fit.items() if v is not None}`
 
@@ -205,13 +197,8 @@ pms_IsotonicRegression_fit = {k: v for k, v in pms_IsotonicRegression_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsotonicRegression_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_IsotonicRegression_fit_transform = {k: v for k, v in pms_IsotonicRegression_fit_transform.items() if v is not None}`
 
@@ -247,9 +234,7 @@ pms_IsotonicRegression_fit_transform = {k: v for k, v in pms_IsotonicRegression_
 
     // set up method params
     await this._py
-      .ex`pms_IsotonicRegression_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_IsotonicRegression_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_IsotonicRegression_get_feature_names_out = {k: v for k, v in pms_IsotonicRegression_get_feature_names_out.items() if v is not None}`
 
@@ -287,9 +272,7 @@ pms_IsotonicRegression_get_feature_names_out = {k: v for k, v in pms_IsotonicReg
 
     // set up method params
     await this._py
-      .ex`pms_IsotonicRegression_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_IsotonicRegression_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_IsotonicRegression_get_metadata_routing = {k: v for k, v in pms_IsotonicRegression_get_metadata_routing.items() if v is not None}`
 
@@ -322,9 +305,8 @@ pms_IsotonicRegression_get_metadata_routing = {k: v for k, v in pms_IsotonicRegr
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_predict = {'T': np.array(${
-      opts['T'] ?? undefined
-    }) if ${opts['T'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsotonicRegression_predict = {'T': np.array(${opts['T'] ?? undefined}) if ${opts['T'] !== undefined} else None}
 
 pms_IsotonicRegression_predict = {k: v for k, v in pms_IsotonicRegression_predict.items() if v is not None}`
 
@@ -369,13 +351,8 @@ pms_IsotonicRegression_predict = {k: v for k, v in pms_IsotonicRegression_predic
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsotonicRegression_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_IsotonicRegression_score = {k: v for k, v in pms_IsotonicRegression_score.items() if v is not None}`
 
@@ -415,9 +392,7 @@ pms_IsotonicRegression_score = {k: v for k, v in pms_IsotonicRegression_score.it
 
     // set up method params
     await this._py
-      .ex`pms_IsotonicRegression_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_IsotonicRegression_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_IsotonicRegression_set_fit_request = {k: v for k, v in pms_IsotonicRegression_set_fit_request.items() if v is not None}`
 
@@ -439,7 +414,7 @@ pms_IsotonicRegression_set_fit_request = {k: v for k, v in pms_IsotonicRegressio
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -452,9 +427,8 @@ pms_IsotonicRegression_set_fit_request = {k: v for k, v in pms_IsotonicRegressio
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsotonicRegression_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_IsotonicRegression_set_output = {k: v for k, v in pms_IsotonicRegression_set_output.items() if v is not None}`
 
@@ -493,9 +467,8 @@ pms_IsotonicRegression_set_output = {k: v for k, v in pms_IsotonicRegression_set
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_set_predict_request = {'T': ${
-      opts['T'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsotonicRegression_set_predict_request = {'T': ${opts['T'] ?? undefined}}
 
 pms_IsotonicRegression_set_predict_request = {k: v for k, v in pms_IsotonicRegression_set_predict_request.items() if v is not None}`
 
@@ -535,9 +508,7 @@ pms_IsotonicRegression_set_predict_request = {k: v for k, v in pms_IsotonicRegre
 
     // set up method params
     await this._py
-      .ex`pms_IsotonicRegression_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_IsotonicRegression_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_IsotonicRegression_set_score_request = {k: v for k, v in pms_IsotonicRegression_set_score_request.items() if v is not None}`
 
@@ -576,9 +547,8 @@ pms_IsotonicRegression_set_score_request = {k: v for k, v in pms_IsotonicRegress
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_set_transform_request = {'T': ${
-      opts['T'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsotonicRegression_set_transform_request = {'T': ${opts['T'] ?? undefined}}
 
 pms_IsotonicRegression_set_transform_request = {k: v for k, v in pms_IsotonicRegression_set_transform_request.items() if v is not None}`
 
@@ -611,9 +581,8 @@ pms_IsotonicRegression_set_transform_request = {k: v for k, v in pms_IsotonicReg
     }
 
     // set up method params
-    await this._py.ex`pms_IsotonicRegression_transform = {'T': np.array(${
-      opts['T'] ?? undefined
-    }) if ${opts['T'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsotonicRegression_transform = {'T': np.array(${opts['T'] ?? undefined}) if ${opts['T'] !== undefined} else None}
 
 pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_transform.items() if v is not None}`
 

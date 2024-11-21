@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Stratified K-Folds cross-validator.
+  Stratified K-Fold cross-validator.
 
   Provides train/test indices to split data in train/test sets.
 
@@ -86,11 +86,8 @@ except NameError: bridgeStratifiedKFold = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_StratifiedKFold = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_StratifiedKFold = {'n_splits': ${this.opts['n_splits'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_StratifiedKFold = {k: v for k, v in ctor_StratifiedKFold.items() if v is not None}`
 
@@ -141,9 +138,8 @@ ctor_StratifiedKFold = {k: v for k, v in ctor_StratifiedKFold.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_StratifiedKFold_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StratifiedKFold_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_StratifiedKFold_get_metadata_routing = {k: v for k, v in pms_StratifiedKFold_get_metadata_routing.items() if v is not None}`
 
@@ -157,7 +153,7 @@ pms_StratifiedKFold_get_metadata_routing = {k: v for k, v in pms_StratifiedKFold
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -184,9 +180,8 @@ pms_StratifiedKFold_get_metadata_routing = {k: v for k, v in pms_StratifiedKFold
     }
 
     // set up method params
-    await this._py.ex`pms_StratifiedKFold_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_StratifiedKFold_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_StratifiedKFold_get_n_splits = {k: v for k, v in pms_StratifiedKFold_get_n_splits.items() if v is not None}`
 
@@ -229,13 +224,8 @@ pms_StratifiedKFold_get_n_splits = {k: v for k, v in pms_StratifiedKFold_get_n_s
     }
 
     // set up method params
-    await this._py.ex`pms_StratifiedKFold_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': ${
-      opts['groups'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StratifiedKFold_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_StratifiedKFold_split = {k: v for k, v in pms_StratifiedKFold_split.items() if v is not None}`
 

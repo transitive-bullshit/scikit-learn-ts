@@ -72,9 +72,8 @@ except NameError: bridgeParameterGrid = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ParameterGrid = {'param_grid': ${
-      this.opts['param_grid'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ParameterGrid = {'param_grid': ${this.opts['param_grid'] ?? undefined}}
 
 ctor_ParameterGrid = {k: v for k, v in ctor_ParameterGrid.items() if v is not None}`
 

@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This class is a low-memory alternative to DictVectorizer and CountVectorizer, intended for large-scale (online) learning and situations where memory is tight, e.g. when running prediction code on embedded devices.
 
-  For an efficiency comparision of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
+  For an efficiency comparison of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
 
   Read more in the [User Guide](../feature_extraction.html#feature-hashing).
 
@@ -95,11 +95,8 @@ except NameError: bridgeFeatureHasher = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_FeatureHasher = {'n_features': ${
-      this.opts['n_features'] ?? undefined
-    }, 'input_type': ${this.opts['input_type'] ?? undefined}, 'dtype': ${
-      this.opts['dtype'] ?? undefined
-    }, 'alternate_sign': ${this.opts['alternate_sign'] ?? undefined}}
+    await this._py
+      .ex`ctor_FeatureHasher = {'n_features': ${this.opts['n_features'] ?? undefined}, 'input_type': ${this.opts['input_type'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'alternate_sign': ${this.opts['alternate_sign'] ?? undefined}}
 
 ctor_FeatureHasher = {k: v for k, v in ctor_FeatureHasher.items() if v is not None}`
 
@@ -153,9 +150,8 @@ ctor_FeatureHasher = {k: v for k, v in ctor_FeatureHasher.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureHasher_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_FeatureHasher_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_FeatureHasher_fit = {k: v for k, v in pms_FeatureHasher_fit.items() if v is not None}`
 
@@ -198,13 +194,8 @@ pms_FeatureHasher_fit = {k: v for k, v in pms_FeatureHasher_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureHasher_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureHasher_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_FeatureHasher_fit_transform = {k: v for k, v in pms_FeatureHasher_fit_transform.items() if v is not None}`
 
@@ -239,9 +230,8 @@ pms_FeatureHasher_fit_transform = {k: v for k, v in pms_FeatureHasher_fit_transf
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureHasher_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureHasher_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_FeatureHasher_get_metadata_routing = {k: v for k, v in pms_FeatureHasher_get_metadata_routing.items() if v is not None}`
 
@@ -263,7 +253,7 @@ pms_FeatureHasher_get_metadata_routing = {k: v for k, v in pms_FeatureHasher_get
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FeatureHasher instance has already been disposed')
@@ -274,9 +264,8 @@ pms_FeatureHasher_get_metadata_routing = {k: v for k, v in pms_FeatureHasher_get
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureHasher_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureHasher_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_FeatureHasher_set_output = {k: v for k, v in pms_FeatureHasher_set_output.items() if v is not None}`
 
@@ -313,9 +302,8 @@ pms_FeatureHasher_set_output = {k: v for k, v in pms_FeatureHasher_set_output.it
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureHasher_set_transform_request = {'raw_X': ${
-      opts['raw_X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureHasher_set_transform_request = {'raw_X': ${opts['raw_X'] ?? undefined}}
 
 pms_FeatureHasher_set_transform_request = {k: v for k, v in pms_FeatureHasher_set_transform_request.items() if v is not None}`
 
@@ -346,9 +334,8 @@ pms_FeatureHasher_set_transform_request = {k: v for k, v in pms_FeatureHasher_se
     }
 
     // set up method params
-    await this._py.ex`pms_FeatureHasher_transform = {'raw_X': ${
-      opts['raw_X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FeatureHasher_transform = {'raw_X': ${opts['raw_X'] ?? undefined}}
 
 pms_FeatureHasher_transform = {k: v for k, v in pms_FeatureHasher_transform.items() if v is not None}`
 

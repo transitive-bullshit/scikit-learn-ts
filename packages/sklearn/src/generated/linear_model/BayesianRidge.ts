@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Fit a Bayesian ridge model. See the Notes section for details on this implementation and the optimization of the regularization parameters lambda (precision of the weights) and alpha (precision of the noise).
 
-  Read more in the [User Guide](../linear_model.html#bayesian-regression).
+  Read more in the [User Guide](../linear_model.html#bayesian-regression). For an intuitive visualization of how the sinusoid is approximated by a polynomial using different pairs of initial values, see [Curve Fitting with Bayesian Ridge Regression](../../auto_examples/linear_model/plot_bayesian_ridge_curvefit.html#sphx-glr-auto-examples-linear-model-plot-bayesian-ridge-curvefit-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.BayesianRidge.html)
  */
@@ -24,7 +24,9 @@ export class BayesianRidge {
 
   constructor(opts?: {
     /**
-      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion. If `undefined`, it corresponds to `max\_iter=300`.
+      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion.
+
+      @defaultValue `300`
      */
     max_iter?: number
 
@@ -100,11 +102,6 @@ export class BayesianRidge {
       @defaultValue `false`
      */
     verbose?: boolean
-
-    /**
-      Maximum number of iterations. Should be greater than or equal to 1.
-     */
-    n_iter?: number
   }) {
     this.id = `BayesianRidge${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -146,23 +143,8 @@ except NameError: bridgeBayesianRidge = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_BayesianRidge = {'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'alpha_1': ${
-      this.opts['alpha_1'] ?? undefined
-    }, 'alpha_2': ${this.opts['alpha_2'] ?? undefined}, 'lambda_1': ${
-      this.opts['lambda_1'] ?? undefined
-    }, 'lambda_2': ${this.opts['lambda_2'] ?? undefined}, 'alpha_init': ${
-      this.opts['alpha_init'] ?? undefined
-    }, 'lambda_init': ${
-      this.opts['lambda_init'] ?? undefined
-    }, 'compute_score': ${
-      this.opts['compute_score'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_iter': ${
-      this.opts['n_iter'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_BayesianRidge = {'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'alpha_1': ${this.opts['alpha_1'] ?? undefined}, 'alpha_2': ${this.opts['alpha_2'] ?? undefined}, 'lambda_1': ${this.opts['lambda_1'] ?? undefined}, 'lambda_2': ${this.opts['lambda_2'] ?? undefined}, 'alpha_init': ${this.opts['alpha_init'] ?? undefined}, 'lambda_init': ${this.opts['lambda_init'] ?? undefined}, 'compute_score': ${this.opts['compute_score'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_BayesianRidge = {k: v for k, v in ctor_BayesianRidge.items() if v is not None}`
 
@@ -219,13 +201,8 @@ ctor_BayesianRidge = {k: v for k, v in ctor_BayesianRidge.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianRidge_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_BayesianRidge_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BayesianRidge_fit = {k: v for k, v in pms_BayesianRidge_fit.items() if v is not None}`
 
@@ -260,9 +237,8 @@ pms_BayesianRidge_fit = {k: v for k, v in pms_BayesianRidge_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianRidge_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BayesianRidge_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_BayesianRidge_get_metadata_routing = {k: v for k, v in pms_BayesianRidge_get_metadata_routing.items() if v is not None}`
 
@@ -302,11 +278,8 @@ pms_BayesianRidge_get_metadata_routing = {k: v for k, v in pms_BayesianRidge_get
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianRidge_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'return_std': ${
-      opts['return_std'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BayesianRidge_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_BayesianRidge_predict = {k: v for k, v in pms_BayesianRidge_predict.items() if v is not None}`
 
@@ -349,13 +322,8 @@ pms_BayesianRidge_predict = {k: v for k, v in pms_BayesianRidge_predict.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianRidge_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_BayesianRidge_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BayesianRidge_score = {k: v for k, v in pms_BayesianRidge_score.items() if v is not None}`
 
@@ -390,9 +358,8 @@ pms_BayesianRidge_score = {k: v for k, v in pms_BayesianRidge_score.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianRidge_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BayesianRidge_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BayesianRidge_set_fit_request = {k: v for k, v in pms_BayesianRidge_set_fit_request.items() if v is not None}`
 
@@ -429,9 +396,8 @@ pms_BayesianRidge_set_fit_request = {k: v for k, v in pms_BayesianRidge_set_fit_
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianRidge_set_predict_request = {'return_std': ${
-      opts['return_std'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BayesianRidge_set_predict_request = {'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_BayesianRidge_set_predict_request = {k: v for k, v in pms_BayesianRidge_set_predict_request.items() if v is not None}`
 
@@ -468,9 +434,8 @@ pms_BayesianRidge_set_predict_request = {k: v for k, v in pms_BayesianRidge_set_
     }
 
     // set up method params
-    await this._py.ex`pms_BayesianRidge_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BayesianRidge_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BayesianRidge_set_score_request = {k: v for k, v in pms_BayesianRidge_set_score_request.items() if v is not None}`
 

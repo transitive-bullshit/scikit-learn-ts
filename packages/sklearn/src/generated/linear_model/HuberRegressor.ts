@@ -107,15 +107,8 @@ except NameError: bridgeHuberRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HuberRegressor = {'epsilon': ${
-      this.opts['epsilon'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_HuberRegressor = {'epsilon': ${this.opts['epsilon'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}}
 
 ctor_HuberRegressor = {k: v for k, v in ctor_HuberRegressor.items() if v is not None}`
 
@@ -172,11 +165,8 @@ ctor_HuberRegressor = {k: v for k, v in ctor_HuberRegressor.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_HuberRegressor_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HuberRegressor_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_HuberRegressor_fit = {k: v for k, v in pms_HuberRegressor_fit.items() if v is not None}`
 
@@ -211,9 +201,8 @@ pms_HuberRegressor_fit = {k: v for k, v in pms_HuberRegressor_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_HuberRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HuberRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HuberRegressor_get_metadata_routing = {k: v for k, v in pms_HuberRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -244,9 +233,8 @@ pms_HuberRegressor_get_metadata_routing = {k: v for k, v in pms_HuberRegressor_g
     }
 
     // set up method params
-    await this._py.ex`pms_HuberRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HuberRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_HuberRegressor_predict = {k: v for k, v in pms_HuberRegressor_predict.items() if v is not None}`
 
@@ -289,13 +277,8 @@ pms_HuberRegressor_predict = {k: v for k, v in pms_HuberRegressor_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_HuberRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_HuberRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if v is not None}`
 
@@ -332,9 +315,8 @@ pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_HuberRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HuberRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_HuberRegressor_set_fit_request = {k: v for k, v in pms_HuberRegressor_set_fit_request.items() if v is not None}`
 
@@ -372,9 +354,7 @@ pms_HuberRegressor_set_fit_request = {k: v for k, v in pms_HuberRegressor_set_fi
 
     // set up method params
     await this._py
-      .ex`pms_HuberRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_HuberRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_HuberRegressor_set_score_request = {k: v for k, v in pms_HuberRegressor_set_score_request.items() if v is not None}`
 

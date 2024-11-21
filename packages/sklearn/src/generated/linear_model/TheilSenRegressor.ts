@@ -69,7 +69,7 @@ export class TheilSenRegressor {
     random_state?: number
 
     /**
-      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -122,17 +122,8 @@ except NameError: bridgeTheilSenRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TheilSenRegressor = {'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_subpopulation': ${
-      this.opts['max_subpopulation'] ?? undefined
-    }, 'n_subsamples': ${this.opts['n_subsamples'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_TheilSenRegressor = {'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_subpopulation': ${this.opts['max_subpopulation'] ?? undefined}, 'n_subsamples': ${this.opts['n_subsamples'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_TheilSenRegressor = {k: v for k, v in ctor_TheilSenRegressor.items() if v is not None}`
 
@@ -186,11 +177,8 @@ ctor_TheilSenRegressor = {k: v for k, v in ctor_TheilSenRegressor.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_TheilSenRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_TheilSenRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_TheilSenRegressor_fit = {k: v for k, v in pms_TheilSenRegressor_fit.items() if v is not None}`
 
@@ -228,9 +216,7 @@ pms_TheilSenRegressor_fit = {k: v for k, v in pms_TheilSenRegressor_fit.items() 
 
     // set up method params
     await this._py
-      .ex`pms_TheilSenRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_TheilSenRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TheilSenRegressor_get_metadata_routing = {k: v for k, v in pms_TheilSenRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -263,9 +249,8 @@ pms_TheilSenRegressor_get_metadata_routing = {k: v for k, v in pms_TheilSenRegre
     }
 
     // set up method params
-    await this._py.ex`pms_TheilSenRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TheilSenRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_TheilSenRegressor_predict = {k: v for k, v in pms_TheilSenRegressor_predict.items() if v is not None}`
 
@@ -310,13 +295,8 @@ pms_TheilSenRegressor_predict = {k: v for k, v in pms_TheilSenRegressor_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_TheilSenRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_TheilSenRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_TheilSenRegressor_score = {k: v for k, v in pms_TheilSenRegressor_score.items() if v is not None}`
 
@@ -356,9 +336,7 @@ pms_TheilSenRegressor_score = {k: v for k, v in pms_TheilSenRegressor_score.item
 
     // set up method params
     await this._py
-      .ex`pms_TheilSenRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_TheilSenRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_TheilSenRegressor_set_score_request = {k: v for k, v in pms_TheilSenRegressor_set_score_request.items() if v is not None}`
 

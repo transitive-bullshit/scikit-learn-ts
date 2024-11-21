@@ -36,13 +36,6 @@ export class Lars {
     verbose?: boolean | number
 
     /**
-      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-      @defaultValue `false`
-     */
-    normalize?: boolean
-
-    /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
       @defaultValue `'auto'`
@@ -125,19 +118,8 @@ except NameError: bridgeLars = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Lars = {'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'normalize': ${
-      this.opts['normalize'] ?? undefined
-    }, 'precompute': ${
-      this.opts['precompute'] ?? undefined
-    }, 'n_nonzero_coefs': ${
-      this.opts['n_nonzero_coefs'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'fit_path': ${this.opts['fit_path'] ?? undefined}, 'jitter': ${
-      this.opts['jitter'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_Lars = {'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'precompute': ${this.opts['precompute'] ?? undefined}, 'n_nonzero_coefs': ${this.opts['n_nonzero_coefs'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'fit_path': ${this.opts['fit_path'] ?? undefined}, 'jitter': ${this.opts['jitter'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_Lars = {k: v for k, v in ctor_Lars.items() if v is not None}`
 
@@ -193,13 +175,8 @@ ctor_Lars = {k: v for k, v in ctor_Lars.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Lars_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None}
+    await this._py
+      .ex`pms_Lars_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None}
 
 pms_Lars_fit = {k: v for k, v in pms_Lars_fit.items() if v is not None}`
 
@@ -231,9 +208,8 @@ pms_Lars_fit = {k: v for k, v in pms_Lars_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Lars_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Lars_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Lars_get_metadata_routing = {k: v for k, v in pms_Lars_get_metadata_routing.items() if v is not None}`
 
@@ -307,13 +283,8 @@ pms_Lars_predict = {k: v for k, v in pms_Lars_predict.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Lars_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_Lars_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_Lars_score = {k: v for k, v in pms_Lars_score.items() if v is not None}`
 
@@ -348,9 +319,8 @@ pms_Lars_score = {k: v for k, v in pms_Lars_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Lars_set_fit_request = {'Xy': ${
-      opts['Xy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Lars_set_fit_request = {'Xy': ${opts['Xy'] ?? undefined}}
 
 pms_Lars_set_fit_request = {k: v for k, v in pms_Lars_set_fit_request.items() if v is not None}`
 
@@ -385,9 +355,8 @@ pms_Lars_set_fit_request = {k: v for k, v in pms_Lars_set_fit_request.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_Lars_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Lars_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Lars_set_score_request = {k: v for k, v in pms_Lars_set_score_request.items() if v is not None}`
 

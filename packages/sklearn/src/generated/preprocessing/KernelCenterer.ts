@@ -81,15 +81,8 @@ except NameError: bridgeKernelCenterer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KernelCenterer = {'K_fit_rows_': np.array(${
-      this.opts['K_fit_rows_'] ?? undefined
-    }) if ${this.opts['K_fit_rows_'] !== undefined} else None, 'K_fit_all_': ${
-      this.opts['K_fit_all_'] ?? undefined
-    }, 'n_features_in_': ${
-      this.opts['n_features_in_'] ?? undefined
-    }, 'feature_names_in_': np.array(${
-      this.opts['feature_names_in_'] ?? undefined
-    }) if ${this.opts['feature_names_in_'] !== undefined} else None}
+    await this._py
+      .ex`ctor_KernelCenterer = {'K_fit_rows_': np.array(${this.opts['K_fit_rows_'] ?? undefined}) if ${this.opts['K_fit_rows_'] !== undefined} else None, 'K_fit_all_': ${this.opts['K_fit_all_'] ?? undefined}, 'n_features_in_': ${this.opts['n_features_in_'] ?? undefined}, 'feature_names_in_': np.array(${this.opts['feature_names_in_'] ?? undefined}) if ${this.opts['feature_names_in_'] !== undefined} else None}
 
 ctor_KernelCenterer = {k: v for k, v in ctor_KernelCenterer.items() if v is not None}`
 
@@ -141,9 +134,8 @@ ctor_KernelCenterer = {k: v for k, v in ctor_KernelCenterer.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_KernelCenterer_fit = {'K': np.array(${
-      opts['K'] ?? undefined
-    }) if ${opts['K'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelCenterer_fit = {'K': np.array(${opts['K'] ?? undefined}) if ${opts['K'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_KernelCenterer_fit = {k: v for k, v in pms_KernelCenterer_fit.items() if v is not None}`
 
@@ -186,13 +178,8 @@ pms_KernelCenterer_fit = {k: v for k, v in pms_KernelCenterer_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_KernelCenterer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelCenterer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_KernelCenterer_fit_transform = {k: v for k, v in pms_KernelCenterer_fit_transform.items() if v is not None}`
 
@@ -228,9 +215,7 @@ pms_KernelCenterer_fit_transform = {k: v for k, v in pms_KernelCenterer_fit_tran
 
     // set up method params
     await this._py
-      .ex`pms_KernelCenterer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_KernelCenterer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_KernelCenterer_get_feature_names_out = {k: v for k, v in pms_KernelCenterer_get_feature_names_out.items() if v is not None}`
 
@@ -265,9 +250,8 @@ pms_KernelCenterer_get_feature_names_out = {k: v for k, v in pms_KernelCenterer_
     }
 
     // set up method params
-    await this._py.ex`pms_KernelCenterer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelCenterer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KernelCenterer_get_metadata_routing = {k: v for k, v in pms_KernelCenterer_get_metadata_routing.items() if v is not None}`
 
@@ -304,9 +288,8 @@ pms_KernelCenterer_get_metadata_routing = {k: v for k, v in pms_KernelCenterer_g
     }
 
     // set up method params
-    await this._py.ex`pms_KernelCenterer_set_fit_request = {'K': ${
-      opts['K'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelCenterer_set_fit_request = {'K': ${opts['K'] ?? undefined}}
 
 pms_KernelCenterer_set_fit_request = {k: v for k, v in pms_KernelCenterer_set_fit_request.items() if v is not None}`
 
@@ -328,7 +311,7 @@ pms_KernelCenterer_set_fit_request = {k: v for k, v in pms_KernelCenterer_set_fi
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KernelCenterer instance has already been disposed')
@@ -339,9 +322,8 @@ pms_KernelCenterer_set_fit_request = {k: v for k, v in pms_KernelCenterer_set_fi
     }
 
     // set up method params
-    await this._py.ex`pms_KernelCenterer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelCenterer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_KernelCenterer_set_output = {k: v for k, v in pms_KernelCenterer_set_output.items() if v is not None}`
 
@@ -383,9 +365,8 @@ pms_KernelCenterer_set_output = {k: v for k, v in pms_KernelCenterer_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_KernelCenterer_set_transform_request = {'K': ${
-      opts['K'] ?? undefined
-    }, 'copy': ${opts['copy'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelCenterer_set_transform_request = {'K': ${opts['K'] ?? undefined}, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_KernelCenterer_set_transform_request = {k: v for k, v in pms_KernelCenterer_set_transform_request.items() if v is not None}`
 
@@ -423,11 +404,8 @@ pms_KernelCenterer_set_transform_request = {k: v for k, v in pms_KernelCenterer_
     }
 
     // set up method params
-    await this._py.ex`pms_KernelCenterer_transform = {'K': np.array(${
-      opts['K'] ?? undefined
-    }) if ${opts['K'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelCenterer_transform = {'K': np.array(${opts['K'] ?? undefined}) if ${opts['K'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_KernelCenterer_transform = {k: v for k, v in pms_KernelCenterer_transform.items() if v is not None}`
 

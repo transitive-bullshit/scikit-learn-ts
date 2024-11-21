@@ -41,6 +41,17 @@ export class ClassifierChain {
     cv?: number
 
     /**
+      Prediction method to be used by estimators in the chain for the ‘prediction’ features of previous estimators in the chain.
+
+      @defaultValue `'predict'`
+     */
+    chain_method?:
+      | 'predict'
+      | 'predict_proba'
+      | 'predict_log_proba'
+      | 'decision_function'
+
+    /**
       If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
      */
     random_state?: number
@@ -92,13 +103,8 @@ except NameError: bridgeClassifierChain = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ClassifierChain = {'base_estimator': ${
-      this.opts['base_estimator'] ?? undefined
-    }, 'order': np.array(${this.opts['order'] ?? undefined}) if ${
-      this.opts['order'] !== undefined
-    } else None, 'cv': ${this.opts['cv'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_ClassifierChain = {'base_estimator': ${this.opts['base_estimator'] ?? undefined}, 'order': np.array(${this.opts['order'] ?? undefined}) if ${this.opts['order'] !== undefined} else None, 'cv': ${this.opts['cv'] ?? undefined}, 'chain_method': ${this.opts['chain_method'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_ClassifierChain = {k: v for k, v in ctor_ClassifierChain.items() if v is not None}`
 
@@ -147,9 +153,8 @@ ctor_ClassifierChain = {k: v for k, v in ctor_ClassifierChain.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_ClassifierChain_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ClassifierChain_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ClassifierChain_decision_function = {k: v for k, v in pms_ClassifierChain_decision_function.items() if v is not None}`
 
@@ -192,13 +197,8 @@ pms_ClassifierChain_decision_function = {k: v for k, v in pms_ClassifierChain_de
     }
 
     // set up method params
-    await this._py.ex`pms_ClassifierChain_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ClassifierChain_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_ClassifierChain_fit = {k: v for k, v in pms_ClassifierChain_fit.items() if v is not None}`
 
@@ -233,9 +233,8 @@ pms_ClassifierChain_fit = {k: v for k, v in pms_ClassifierChain_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_ClassifierChain_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ClassifierChain_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ClassifierChain_get_metadata_routing = {k: v for k, v in pms_ClassifierChain_get_metadata_routing.items() if v is not None}`
 
@@ -266,9 +265,8 @@ pms_ClassifierChain_get_metadata_routing = {k: v for k, v in pms_ClassifierChain
     }
 
     // set up method params
-    await this._py.ex`pms_ClassifierChain_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ClassifierChain_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ClassifierChain_predict = {k: v for k, v in pms_ClassifierChain_predict.items() if v is not None}`
 
@@ -279,6 +277,40 @@ pms_ClassifierChain_predict = {k: v for k, v in pms_ClassifierChain_predict.item
     // convert the result from python to node.js
     return this
       ._py`res_ClassifierChain_predict.tolist() if hasattr(res_ClassifierChain_predict, 'tolist') else res_ClassifierChain_predict`
+  }
+
+  /**
+    Predict logarithm of probability estimates.
+   */
+  async predict_log_proba(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike[]> {
+    if (this._isDisposed) {
+      throw new Error('This ClassifierChain instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ClassifierChain must call init() before predict_log_proba()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_ClassifierChain_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
+
+pms_ClassifierChain_predict_log_proba = {k: v for k, v in pms_ClassifierChain_predict_log_proba.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ClassifierChain_predict_log_proba = bridgeClassifierChain[${this.id}].predict_log_proba(**pms_ClassifierChain_predict_log_proba)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ClassifierChain_predict_log_proba.tolist() if hasattr(res_ClassifierChain_predict_log_proba, 'tolist') else res_ClassifierChain_predict_log_proba`
   }
 
   /**
@@ -299,9 +331,8 @@ pms_ClassifierChain_predict = {k: v for k, v in pms_ClassifierChain_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_ClassifierChain_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ClassifierChain_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ClassifierChain_predict_proba = {k: v for k, v in pms_ClassifierChain_predict_proba.items() if v is not None}`
 
@@ -344,13 +375,8 @@ pms_ClassifierChain_predict_proba = {k: v for k, v in pms_ClassifierChain_predic
     }
 
     // set up method params
-    await this._py.ex`pms_ClassifierChain_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_ClassifierChain_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() if v is not None}`
 
@@ -388,9 +414,7 @@ pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() 
 
     // set up method params
     await this._py
-      .ex`pms_ClassifierChain_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_ClassifierChain_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_ClassifierChain_set_score_request = {k: v for k, v in pms_ClassifierChain_set_score_request.items() if v is not None}`
 
@@ -475,6 +499,31 @@ pms_ClassifierChain_set_score_request = {k: v for k, v in pms_ClassifierChain_se
       // convert the result from python to node.js
       return this
         ._py`attr_ClassifierChain_order_.tolist() if hasattr(attr_ClassifierChain_order_, 'tolist') else attr_ClassifierChain_order_`
+    })()
+  }
+
+  /**
+    Prediction method used by estimators in the chain for the prediction features.
+   */
+  get chain_method_(): Promise<string> {
+    if (this._isDisposed) {
+      throw new Error('This ClassifierChain instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ClassifierChain must call init() before accessing chain_method_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_ClassifierChain_chain_method_ = bridgeClassifierChain[${this.id}].chain_method_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_ClassifierChain_chain_method_.tolist() if hasattr(attr_ClassifierChain_chain_method_, 'tolist') else attr_ClassifierChain_chain_method_`
     })()
   }
 

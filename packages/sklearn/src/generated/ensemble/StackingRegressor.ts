@@ -101,13 +101,8 @@ except NameError: bridgeStackingRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_StackingRegressor = {'estimators': ${
-      this.opts['estimators'] ?? undefined
-    }, 'final_estimator': ${this.opts['final_estimator'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'passthrough': ${
-      this.opts['passthrough'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_StackingRegressor = {'estimators': ${this.opts['estimators'] ?? undefined}, 'final_estimator': ${this.opts['final_estimator'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'passthrough': ${this.opts['passthrough'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_StackingRegressor = {k: v for k, v in ctor_StackingRegressor.items() if v is not None}`
 
@@ -166,13 +161,8 @@ ctor_StackingRegressor = {k: v for k, v in ctor_StackingRegressor.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_StackingRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StackingRegressor_fit = {k: v for k, v in pms_StackingRegressor_fit.items() if v is not None}`
 
@@ -217,13 +207,8 @@ pms_StackingRegressor_fit = {k: v for k, v in pms_StackingRegressor_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_StackingRegressor_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingRegressor_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StackingRegressor_fit_transform = {k: v for k, v in pms_StackingRegressor_fit_transform.items() if v is not None}`
 
@@ -259,9 +244,7 @@ pms_StackingRegressor_fit_transform = {k: v for k, v in pms_StackingRegressor_fi
 
     // set up method params
     await this._py
-      .ex`pms_StackingRegressor_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_StackingRegressor_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_StackingRegressor_get_feature_names_out = {k: v for k, v in pms_StackingRegressor_get_feature_names_out.items() if v is not None}`
 
@@ -275,16 +258,11 @@ pms_StackingRegressor_get_feature_names_out = {k: v for k, v in pms_StackingRegr
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -298,10 +276,7 @@ pms_StackingRegressor_get_feature_names_out = {k: v for k, v in pms_StackingRegr
     }
 
     // set up method params
-    await this._py
-      .ex`pms_StackingRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_StackingRegressor_get_metadata_routing = {}
 
 pms_StackingRegressor_get_metadata_routing = {k: v for k, v in pms_StackingRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -339,11 +314,8 @@ pms_StackingRegressor_get_metadata_routing = {k: v for k, v in pms_StackingRegre
     }
 
     // set up method params
-    await this._py.ex`pms_StackingRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'predict_params': ${
-      opts['predict_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'predict_params': ${opts['predict_params'] ?? undefined}}
 
 pms_StackingRegressor_predict = {k: v for k, v in pms_StackingRegressor_predict.items() if v is not None}`
 
@@ -388,13 +360,8 @@ pms_StackingRegressor_predict = {k: v for k, v in pms_StackingRegressor_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_StackingRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StackingRegressor_score = {k: v for k, v in pms_StackingRegressor_score.items() if v is not None}`
 
@@ -434,9 +401,7 @@ pms_StackingRegressor_score = {k: v for k, v in pms_StackingRegressor_score.item
 
     // set up method params
     await this._py
-      .ex`pms_StackingRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_StackingRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StackingRegressor_set_fit_request = {k: v for k, v in pms_StackingRegressor_set_fit_request.items() if v is not None}`
 
@@ -458,7 +423,7 @@ pms_StackingRegressor_set_fit_request = {k: v for k, v in pms_StackingRegressor_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -471,9 +436,8 @@ pms_StackingRegressor_set_fit_request = {k: v for k, v in pms_StackingRegressor_
     }
 
     // set up method params
-    await this._py.ex`pms_StackingRegressor_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingRegressor_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_StackingRegressor_set_output = {k: v for k, v in pms_StackingRegressor_set_output.items() if v is not None}`
 
@@ -513,9 +477,7 @@ pms_StackingRegressor_set_output = {k: v for k, v in pms_StackingRegressor_set_o
 
     // set up method params
     await this._py
-      .ex`pms_StackingRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_StackingRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StackingRegressor_set_score_request = {k: v for k, v in pms_StackingRegressor_set_score_request.items() if v is not None}`
 
@@ -548,9 +510,8 @@ pms_StackingRegressor_set_score_request = {k: v for k, v in pms_StackingRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_StackingRegressor_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingRegressor_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_StackingRegressor_transform = {k: v for k, v in pms_StackingRegressor_transform.items() if v is not None}`
 

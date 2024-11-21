@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Seeding is performed using a binning technique for scalability.
 
+  For an example of how to use MeanShift clustering, refer to: [A demo of the mean-shift clustering algorithm](../../auto_examples/cluster/plot_mean_shift.html#sphx-glr-auto-examples-cluster-plot-mean-shift-py).
+
   Read more in the [User Guide](../clustering.html#mean-shift).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html)
@@ -110,17 +112,8 @@ except NameError: bridgeMeanShift = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MeanShift = {'bandwidth': ${
-      this.opts['bandwidth'] ?? undefined
-    }, 'seeds': np.array(${this.opts['seeds'] ?? undefined}) if ${
-      this.opts['seeds'] !== undefined
-    } else None, 'bin_seeding': ${
-      this.opts['bin_seeding'] ?? undefined
-    }, 'min_bin_freq': ${
-      this.opts['min_bin_freq'] ?? undefined
-    }, 'cluster_all': ${this.opts['cluster_all'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
+    await this._py
+      .ex`ctor_MeanShift = {'bandwidth': ${this.opts['bandwidth'] ?? undefined}, 'seeds': np.array(${this.opts['seeds'] ?? undefined}) if ${this.opts['seeds'] !== undefined} else None, 'bin_seeding': ${this.opts['bin_seeding'] ?? undefined}, 'min_bin_freq': ${this.opts['min_bin_freq'] ?? undefined}, 'cluster_all': ${this.opts['cluster_all'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_MeanShift = {k: v for k, v in ctor_MeanShift.items() if v is not None}`
 
@@ -171,9 +164,8 @@ ctor_MeanShift = {k: v for k, v in ctor_MeanShift.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_MeanShift_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MeanShift_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MeanShift_fit = {k: v for k, v in pms_MeanShift_fit.items() if v is not None}`
 
@@ -199,6 +191,11 @@ pms_MeanShift_fit = {k: v for k, v in pms_MeanShift_fit.items() if v is not None
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MeanShift instance has already been disposed')
@@ -209,9 +206,8 @@ pms_MeanShift_fit = {k: v for k, v in pms_MeanShift_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_MeanShift_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MeanShift_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_MeanShift_fit_predict = {k: v for k, v in pms_MeanShift_fit_predict.items() if v is not None}`
 
@@ -246,9 +242,8 @@ pms_MeanShift_fit_predict = {k: v for k, v in pms_MeanShift_fit_predict.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_MeanShift_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MeanShift_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MeanShift_get_metadata_routing = {k: v for k, v in pms_MeanShift_get_metadata_routing.items() if v is not None}`
 
@@ -279,9 +274,8 @@ pms_MeanShift_get_metadata_routing = {k: v for k, v in pms_MeanShift_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_MeanShift_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MeanShift_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MeanShift_predict = {k: v for k, v in pms_MeanShift_predict.items() if v is not None}`
 

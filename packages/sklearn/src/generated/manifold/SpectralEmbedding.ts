@@ -71,7 +71,7 @@ export class SpectralEmbedding {
     n_neighbors?: number
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -117,17 +117,8 @@ except NameError: bridgeSpectralEmbedding = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SpectralEmbedding = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'affinity': ${this.opts['affinity'] ?? undefined}, 'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'eigen_solver': ${
-      this.opts['eigen_solver'] ?? undefined
-    }, 'eigen_tol': ${this.opts['eigen_tol'] ?? undefined}, 'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_SpectralEmbedding = {'n_components': ${this.opts['n_components'] ?? undefined}, 'affinity': ${this.opts['affinity'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'eigen_tol': ${this.opts['eigen_tol'] ?? undefined}, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_SpectralEmbedding = {k: v for k, v in ctor_SpectralEmbedding.items() if v is not None}`
 
@@ -183,9 +174,8 @@ ctor_SpectralEmbedding = {k: v for k, v in ctor_SpectralEmbedding.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralEmbedding_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralEmbedding_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralEmbedding_fit = {k: v for k, v in pms_SpectralEmbedding_fit.items() if v is not None}`
 
@@ -227,9 +217,8 @@ pms_SpectralEmbedding_fit = {k: v for k, v in pms_SpectralEmbedding_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralEmbedding_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralEmbedding_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fit_transform.items() if v is not None}`
 
@@ -267,9 +256,7 @@ pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fi
 
     // set up method params
     await this._py
-      .ex`pms_SpectralEmbedding_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SpectralEmbedding_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SpectralEmbedding_get_metadata_routing = {k: v for k, v in pms_SpectralEmbedding_get_metadata_routing.items() if v is not None}`
 

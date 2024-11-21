@@ -82,13 +82,8 @@ except NameError: bridgeMatern = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Matern = {'length_scale': np.array(${
-      this.opts['length_scale'] ?? undefined
-    }) if ${
-      this.opts['length_scale'] !== undefined
-    } else None, 'length_scale_bounds': ${
-      this.opts['length_scale_bounds'] ?? undefined
-    }, 'nu': ${this.opts['nu'] ?? undefined}}
+    await this._py
+      .ex`ctor_Matern = {'length_scale': np.array(${this.opts['length_scale'] ?? undefined}) if ${this.opts['length_scale'] !== undefined} else None, 'length_scale_bounds': ${this.opts['length_scale_bounds'] ?? undefined}, 'nu': ${this.opts['nu'] ?? undefined}}
 
 ctor_Matern = {k: v for k, v in ctor_Matern.items() if v is not None}`
 
@@ -146,13 +141,8 @@ ctor_Matern = {k: v for k, v in ctor_Matern.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Matern___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Matern___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_Matern___call__ = {k: v for k, v in pms_Matern___call__.items() if v is not None}`
 
@@ -183,9 +173,8 @@ pms_Matern___call__ = {k: v for k, v in pms_Matern___call__.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_Matern_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+    await this._py
+      .ex`pms_Matern_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_Matern_clone_with_theta = {k: v for k, v in pms_Matern_clone_with_theta.items() if v is not None}`
 
@@ -218,9 +207,8 @@ pms_Matern_clone_with_theta = {k: v for k, v in pms_Matern_clone_with_theta.item
     }
 
     // set up method params
-    await this._py.ex`pms_Matern_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Matern_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Matern_diag = {k: v for k, v in pms_Matern_diag.items() if v is not None}`
 
@@ -257,47 +245,5 @@ pms_Matern_is_stationary = {k: v for k, v in pms_Matern_is_stationary.items() if
     // convert the result from python to node.js
     return this
       ._py`res_Matern_is_stationary.tolist() if hasattr(res_Matern_is_stationary, 'tolist') else res_Matern_is_stationary`
-  }
-
-  get anisotropic(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This Matern instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('Matern must call init() before accessing anisotropic')
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_Matern_anisotropic = bridgeMatern[${this.id}].anisotropic`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_Matern_anisotropic.tolist() if hasattr(attr_Matern_anisotropic, 'tolist') else attr_Matern_anisotropic`
-    })()
-  }
-
-  get hyperparameter_length_scale(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This Matern instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'Matern must call init() before accessing hyperparameter_length_scale'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_Matern_hyperparameter_length_scale = bridgeMatern[${this.id}].hyperparameter_length_scale`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_Matern_hyperparameter_length_scale.tolist() if hasattr(attr_Matern_hyperparameter_length_scale, 'tolist') else attr_Matern_hyperparameter_length_scale`
-    })()
   }
 }

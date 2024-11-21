@@ -86,7 +86,7 @@ export class Isomap {
     neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -149,21 +149,8 @@ except NameError: bridgeIsomap = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Isomap = {'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'radius': ${this.opts['radius'] ?? undefined}, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'path_method': ${
-      this.opts['path_method'] ?? undefined
-    }, 'neighbors_algorithm': ${
-      this.opts['neighbors_algorithm'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Isomap = {'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'radius': ${this.opts['radius'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'path_method': ${this.opts['path_method'] ?? undefined}, 'neighbors_algorithm': ${this.opts['neighbors_algorithm'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}}
 
 ctor_Isomap = {k: v for k, v in ctor_Isomap.items() if v is not None}`
 
@@ -214,9 +201,8 @@ ctor_Isomap = {k: v for k, v in ctor_Isomap.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_Isomap_fit = {k: v for k, v in pms_Isomap_fit.items() if v is not None}`
 
@@ -252,9 +238,8 @@ pms_Isomap_fit = {k: v for k, v in pms_Isomap_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Isomap_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_Isomap_fit_transform = {k: v for k, v in pms_Isomap_fit_transform.items() if v is not None}`
 
@@ -287,9 +272,8 @@ pms_Isomap_fit_transform = {k: v for k, v in pms_Isomap_fit_transform.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Isomap_get_feature_names_out = {k: v for k, v in pms_Isomap_get_feature_names_out.items() if v is not None}`
 
@@ -322,9 +306,8 @@ pms_Isomap_get_feature_names_out = {k: v for k, v in pms_Isomap_get_feature_name
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Isomap_get_metadata_routing = {k: v for k, v in pms_Isomap_get_metadata_routing.items() if v is not None}`
 
@@ -356,9 +339,7 @@ pms_Isomap_get_metadata_routing = {k: v for k, v in pms_Isomap_get_metadata_rout
 
     // set up method params
     await this._py
-      .ex`pms_Isomap_reconstruction_error = {'reconstruction_error': ${
-      opts['reconstruction_error'] ?? undefined
-    }}
+      .ex`pms_Isomap_reconstruction_error = {'reconstruction_error': ${opts['reconstruction_error'] ?? undefined}}
 
 pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_error.items() if v is not None}`
 
@@ -380,7 +361,7 @@ pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_er
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
@@ -391,9 +372,8 @@ pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_er
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Isomap_set_output = {k: v for k, v in pms_Isomap_set_output.items() if v is not None}`
 

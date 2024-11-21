@@ -87,19 +87,8 @@ except NameError: bridgeLearningCurveDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LearningCurveDisplay = {'train_sizes': np.array(${
-      this.opts['train_sizes'] ?? undefined
-    }) if ${
-      this.opts['train_sizes'] !== undefined
-    } else None, 'train_scores': np.array(${
-      this.opts['train_scores'] ?? undefined
-    }) if ${
-      this.opts['train_scores'] !== undefined
-    } else None, 'test_scores': np.array(${
-      this.opts['test_scores'] ?? undefined
-    }) if ${this.opts['test_scores'] !== undefined} else None, 'score_name': ${
-      this.opts['score_name'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LearningCurveDisplay = {'train_sizes': np.array(${this.opts['train_sizes'] ?? undefined}) if ${this.opts['train_sizes'] !== undefined} else None, 'train_scores': np.array(${this.opts['train_scores'] ?? undefined}) if ${this.opts['train_scores'] !== undefined} else None, 'test_scores': np.array(${this.opts['test_scores'] ?? undefined}) if ${this.opts['test_scores'] !== undefined} else None, 'score_name': ${this.opts['score_name'] ?? undefined}}
 
 ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() if v is not None}`
 
@@ -177,7 +166,7 @@ ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() 
     exploit_incremental_learning?: boolean
 
     /**
-      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -242,13 +231,6 @@ ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() 
     score_type?: 'test' | 'train' | 'both'
 
     /**
-      Whether or not to use a logarithmic scale for the x-axis.
-
-      @defaultValue `'deprecated'`
-     */
-    log_scale?: boolean
-
-    /**
       The style used to display the score standard deviation around the mean score. If `undefined`, no representation of the standard deviation is displayed.
 
       @defaultValue `'fill_between'`
@@ -283,39 +265,8 @@ ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_LearningCurveDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${
-      opts['groups'] !== undefined
-    } else None, 'train_sizes': np.array(${
-      opts['train_sizes'] ?? undefined
-    }) if ${opts['train_sizes'] !== undefined} else None, 'cv': ${
-      opts['cv'] ?? undefined
-    }, 'scoring': ${
-      opts['scoring'] ?? undefined
-    }, 'exploit_incremental_learning': ${
-      opts['exploit_incremental_learning'] ?? undefined
-    }, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'pre_dispatch': ${
-      opts['pre_dispatch'] ?? undefined
-    }, 'verbose': ${opts['verbose'] ?? undefined}, 'shuffle': ${
-      opts['shuffle'] ?? undefined
-    }, 'random_state': ${opts['random_state'] ?? undefined}, 'error_score': ${
-      opts['error_score'] ?? undefined
-    }, 'fit_params': ${opts['fit_params'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${
-      opts['score_name'] ?? undefined
-    }, 'score_type': ${opts['score_type'] ?? undefined}, 'log_scale': ${
-      opts['log_scale'] ?? undefined
-    }, 'std_display_style': ${
-      opts['std_display_style'] ?? undefined
-    }, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${
-      opts['fill_between_kw'] ?? undefined
-    }, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
+    await this._py
+      .ex`pms_LearningCurveDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None, 'train_sizes': np.array(${opts['train_sizes'] ?? undefined}) if ${opts['train_sizes'] !== undefined} else None, 'cv': ${opts['cv'] ?? undefined}, 'scoring': ${opts['scoring'] ?? undefined}, 'exploit_incremental_learning': ${opts['exploit_incremental_learning'] ?? undefined}, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'pre_dispatch': ${opts['pre_dispatch'] ?? undefined}, 'verbose': ${opts['verbose'] ?? undefined}, 'shuffle': ${opts['shuffle'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}, 'error_score': ${opts['error_score'] ?? undefined}, 'fit_params': ${opts['fit_params'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${opts['score_name'] ?? undefined}, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${opts['std_display_style'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${opts['fill_between_kw'] ?? undefined}, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
 
 pms_LearningCurveDisplay_from_estimator = {k: v for k, v in pms_LearningCurveDisplay_from_estimator.items() if v is not None}`
 
@@ -357,13 +308,6 @@ pms_LearningCurveDisplay_from_estimator = {k: v for k, v in pms_LearningCurveDis
     score_type?: 'test' | 'train' | 'both'
 
     /**
-      Whether or not to use a logarithmic scale for the x-axis.
-
-      @defaultValue `'deprecated'`
-     */
-    log_scale?: boolean
-
-    /**
       The style used to display the score standard deviation around the mean score. If `undefined`, no standard deviation representation is displayed.
 
       @defaultValue `'fill_between'`
@@ -396,17 +340,8 @@ pms_LearningCurveDisplay_from_estimator = {k: v for k, v in pms_LearningCurveDis
     }
 
     // set up method params
-    await this._py.ex`pms_LearningCurveDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${
-      opts['score_name'] ?? undefined
-    }, 'score_type': ${opts['score_type'] ?? undefined}, 'log_scale': ${
-      opts['log_scale'] ?? undefined
-    }, 'std_display_style': ${
-      opts['std_display_style'] ?? undefined
-    }, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${
-      opts['fill_between_kw'] ?? undefined
-    }, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
+    await this._py
+      .ex`pms_LearningCurveDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${opts['score_name'] ?? undefined}, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${opts['std_display_style'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${opts['fill_between_kw'] ?? undefined}, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
 
 pms_LearningCurveDisplay_plot = {k: v for k, v in pms_LearningCurveDisplay_plot.items() if v is not None}`
 

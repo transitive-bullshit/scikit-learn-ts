@@ -80,11 +80,8 @@ except NameError: bridgeParameterSampler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ParameterSampler = {'param_distributions': ${
-      this.opts['param_distributions'] ?? undefined
-    }, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ParameterSampler = {'param_distributions': ${this.opts['param_distributions'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_ParameterSampler = {k: v for k, v in ctor_ParameterSampler.items() if v is not None}`
 

@@ -62,7 +62,7 @@ export class NeighborhoodComponentsAnalysis {
     callback?: any
 
     /**
-      If 0, no progress messages will be printed. If 1, progress messages will be printed to stdout. If > 1, progress messages will be printed and the `disp` parameter of [`scipy.optimize.minimize`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize "(in SciPy v1.11.3)") will be set to `verbose \- 2`.
+      If 0, no progress messages will be printed. If 1, progress messages will be printed to stdout. If > 1, progress messages will be printed and the `disp` parameter of [`scipy.optimize.minimize`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize "(in SciPy v1.14.1)") will be set to `verbose \- 2`.
 
       @defaultValue `0`
      */
@@ -73,9 +73,7 @@ export class NeighborhoodComponentsAnalysis {
      */
     random_state?: number
   }) {
-    this.id = `NeighborhoodComponentsAnalysis${
-      crypto.randomUUID().split('-')[0]
-    }`
+    this.id = `NeighborhoodComponentsAnalysis${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
 
@@ -119,17 +117,8 @@ except NameError: bridgeNeighborhoodComponentsAnalysis = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NeighborhoodComponentsAnalysis = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'init': np.array(${this.opts['init'] ?? undefined}) if ${
-      this.opts['init'] !== undefined
-    } else None, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'callback': ${this.opts['callback'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_NeighborhoodComponentsAnalysis = {'n_components': ${this.opts['n_components'] ?? undefined}, 'init': np.array(${this.opts['init'] ?? undefined}) if ${this.opts['init'] !== undefined} else None, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'callback': ${this.opts['callback'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_NeighborhoodComponentsAnalysis = {k: v for k, v in ctor_NeighborhoodComponentsAnalysis.items() if v is not None}`
 
@@ -185,11 +174,8 @@ ctor_NeighborhoodComponentsAnalysis = {k: v for k, v in ctor_NeighborhoodCompone
     }
 
     // set up method params
-    await this._py.ex`pms_NeighborhoodComponentsAnalysis_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_NeighborhoodComponentsAnalysis_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_NeighborhoodComponentsAnalysis_fit = {k: v for k, v in pms_NeighborhoodComponentsAnalysis_fit.items() if v is not None}`
 
@@ -237,13 +223,7 @@ pms_NeighborhoodComponentsAnalysis_fit = {k: v for k, v in pms_NeighborhoodCompo
 
     // set up method params
     await this._py
-      .ex`pms_NeighborhoodComponentsAnalysis_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_NeighborhoodComponentsAnalysis_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_NeighborhoodComponentsAnalysis_fit_transform = {k: v for k, v in pms_NeighborhoodComponentsAnalysis_fit_transform.items() if v is not None}`
 
@@ -281,9 +261,7 @@ pms_NeighborhoodComponentsAnalysis_fit_transform = {k: v for k, v in pms_Neighbo
 
     // set up method params
     await this._py
-      .ex`pms_NeighborhoodComponentsAnalysis_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_NeighborhoodComponentsAnalysis_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_NeighborhoodComponentsAnalysis_get_feature_names_out = {k: v for k, v in pms_NeighborhoodComponentsAnalysis_get_feature_names_out.items() if v is not None}`
 
@@ -321,9 +299,7 @@ pms_NeighborhoodComponentsAnalysis_get_feature_names_out = {k: v for k, v in pms
 
     // set up method params
     await this._py
-      .ex`pms_NeighborhoodComponentsAnalysis_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_NeighborhoodComponentsAnalysis_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NeighborhoodComponentsAnalysis_get_metadata_routing = {k: v for k, v in pms_NeighborhoodComponentsAnalysis_get_metadata_routing.items() if v is not None}`
 
@@ -345,7 +321,7 @@ pms_NeighborhoodComponentsAnalysis_get_metadata_routing = {k: v for k, v in pms_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -361,9 +337,7 @@ pms_NeighborhoodComponentsAnalysis_get_metadata_routing = {k: v for k, v in pms_
 
     // set up method params
     await this._py
-      .ex`pms_NeighborhoodComponentsAnalysis_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+      .ex`pms_NeighborhoodComponentsAnalysis_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_NeighborhoodComponentsAnalysis_set_output = {k: v for k, v in pms_NeighborhoodComponentsAnalysis_set_output.items() if v is not None}`
 
@@ -399,9 +373,7 @@ pms_NeighborhoodComponentsAnalysis_set_output = {k: v for k, v in pms_Neighborho
 
     // set up method params
     await this._py
-      .ex`pms_NeighborhoodComponentsAnalysis_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_NeighborhoodComponentsAnalysis_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NeighborhoodComponentsAnalysis_transform = {k: v for k, v in pms_NeighborhoodComponentsAnalysis_transform.items() if v is not None}`
 

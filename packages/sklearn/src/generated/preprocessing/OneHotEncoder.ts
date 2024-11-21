@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Encode categorical features as a one-hot numeric array.
 
-  The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. The features are encoded using a one-hot (aka ‘one-of-K’ or ‘dummy’) encoding scheme. This creates a binary column for each category and returns a sparse matrix or dense array (depending on the `sparse\_output` parameter)
+  The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. The features are encoded using a one-hot (aka ‘one-of-K’ or ‘dummy’) encoding scheme. This creates a binary column for each category and returns a sparse matrix or dense array (depending on the `sparse\_output` parameter).
 
   By default, the encoder derives the categories based on the unique values in each feature. Alternatively, you can also specify the `categories` manually.
 
@@ -44,14 +44,7 @@ export class OneHotEncoder {
     drop?: 'first' | 'if_binary' | any[]
 
     /**
-      Will return sparse matrix if set `true` else will return an array.
-
-      @defaultValue `true`
-     */
-    sparse?: boolean
-
-    /**
-      Will return sparse matrix if set `true` else will return an array.
+      When `true`, it returns a [`scipy.sparse.csr\_matrix`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html#scipy.sparse.csr_matrix "(in SciPy v1.14.1)"), i.e. a sparse matrix in “Compressed Sparse Row” (CSR) format.
 
       @defaultValue `true`
      */
@@ -128,23 +121,8 @@ except NameError: bridgeOneHotEncoder = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OneHotEncoder = {'categories': ${
-      this.opts['categories'] ?? undefined
-    }, 'drop': np.array(${this.opts['drop'] ?? undefined}) if ${
-      this.opts['drop'] !== undefined
-    } else None, 'sparse': ${
-      this.opts['sparse'] ?? undefined
-    }, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}, 'dtype': ${
-      this.opts['dtype'] ?? undefined
-    }, 'handle_unknown': ${
-      this.opts['handle_unknown'] ?? undefined
-    }, 'min_frequency': ${
-      this.opts['min_frequency'] ?? undefined
-    }, 'max_categories': ${
-      this.opts['max_categories'] ?? undefined
-    }, 'feature_name_combiner': ${
-      this.opts['feature_name_combiner'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_OneHotEncoder = {'categories': ${this.opts['categories'] ?? undefined}, 'drop': np.array(${this.opts['drop'] ?? undefined}) if ${this.opts['drop'] !== undefined} else None, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'handle_unknown': ${this.opts['handle_unknown'] ?? undefined}, 'min_frequency': ${this.opts['min_frequency'] ?? undefined}, 'max_categories': ${this.opts['max_categories'] ?? undefined}, 'feature_name_combiner': ${this.opts['feature_name_combiner'] ?? undefined}}
 
 ctor_OneHotEncoder = {k: v for k, v in ctor_OneHotEncoder.items() if v is not None}`
 
@@ -196,9 +174,8 @@ ctor_OneHotEncoder = {k: v for k, v in ctor_OneHotEncoder.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_OneHotEncoder_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_OneHotEncoder_fit = {k: v for k, v in pms_OneHotEncoder_fit.items() if v is not None}`
 
@@ -241,13 +218,8 @@ pms_OneHotEncoder_fit = {k: v for k, v in pms_OneHotEncoder_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneHotEncoder_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_OneHotEncoder_fit_transform = {k: v for k, v in pms_OneHotEncoder_fit_transform.items() if v is not None}`
 
@@ -281,9 +253,7 @@ pms_OneHotEncoder_fit_transform = {k: v for k, v in pms_OneHotEncoder_fit_transf
 
     // set up method params
     await this._py
-      .ex`pms_OneHotEncoder_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_OneHotEncoder_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_get_feature_names_out.items() if v is not None}`
 
@@ -318,9 +288,8 @@ pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_ge
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneHotEncoder_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OneHotEncoder_get_metadata_routing = {k: v for k, v in pms_OneHotEncoder_get_metadata_routing.items() if v is not None}`
 
@@ -357,9 +326,8 @@ pms_OneHotEncoder_get_metadata_routing = {k: v for k, v in pms_OneHotEncoder_get
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneHotEncoder_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_inverse_transform.items() if v is not None}`
 
@@ -381,7 +349,7 @@ pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_invers
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
@@ -392,9 +360,8 @@ pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_invers
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneHotEncoder_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_OneHotEncoder_set_output = {k: v for k, v in pms_OneHotEncoder_set_output.items() if v is not None}`
 
@@ -410,7 +377,9 @@ pms_OneHotEncoder_set_output = {k: v for k, v in pms_OneHotEncoder_set_output.it
   /**
     Transform X using one-hot encoding.
 
-    If there are infrequent categories for a feature, the infrequent categories will be grouped into a single category.
+    If `sparse\_output=True` (default), it returns an instance of [`scipy.sparse.\_csr.csr\_matrix`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html#scipy.sparse.csr_matrix "(in SciPy v1.14.1)") (CSR format).
+
+    If there are infrequent categories for a feature, set by specifying `max\_categories` or `min\_frequency`, the infrequent categories are grouped into a single category.
    */
   async transform(opts: {
     /**
@@ -427,9 +396,8 @@ pms_OneHotEncoder_set_output = {k: v for k, v in pms_OneHotEncoder_set_output.it
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneHotEncoder_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.items() if v is not None}`
 

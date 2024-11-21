@@ -116,7 +116,7 @@ export class HalvingRandomSearchCV {
     random_state?: number
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -169,27 +169,8 @@ except NameError: bridgeHalvingRandomSearchCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HalvingRandomSearchCV = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'param_distributions': ${
-      this.opts['param_distributions'] ?? undefined
-    }, 'n_candidates': ${this.opts['n_candidates'] ?? undefined}, 'factor': ${
-      this.opts['factor'] ?? undefined
-    }, 'resource': ${this.opts['resource'] ?? undefined}, 'max_resources': ${
-      this.opts['max_resources'] ?? undefined
-    }, 'min_resources': ${
-      this.opts['min_resources'] ?? undefined
-    }, 'aggressive_elimination': ${
-      this.opts['aggressive_elimination'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'refit': ${this.opts['refit'] ?? undefined}, 'error_score': ${
-      this.opts['error_score'] ?? undefined
-    }, 'return_train_score': ${
-      this.opts['return_train_score'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_HalvingRandomSearchCV = {'estimator': ${this.opts['estimator'] ?? undefined}, 'param_distributions': ${this.opts['param_distributions'] ?? undefined}, 'n_candidates': ${this.opts['n_candidates'] ?? undefined}, 'factor': ${this.opts['factor'] ?? undefined}, 'resource': ${this.opts['resource'] ?? undefined}, 'max_resources': ${this.opts['max_resources'] ?? undefined}, 'min_resources': ${this.opts['min_resources'] ?? undefined}, 'aggressive_elimination': ${this.opts['aggressive_elimination'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'refit': ${this.opts['refit'] ?? undefined}, 'error_score': ${this.opts['error_score'] ?? undefined}, 'return_train_score': ${this.opts['return_train_score'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_HalvingRandomSearchCV = {k: v for k, v in ctor_HalvingRandomSearchCV.items() if v is not None}`
 
@@ -242,9 +223,8 @@ ctor_HalvingRandomSearchCV = {k: v for k, v in ctor_HalvingRandomSearchCV.items(
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRandomSearchCV_decision_function.items() if v is not None}`
 
@@ -272,14 +252,9 @@ pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRando
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-     */
-    groups?: ArrayLike
-
-    /**
       Parameters passed to the `fit` method of the estimator.
      */
-    fit_params?: any
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -292,13 +267,8 @@ pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRando
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_fit = {k: v for k, v in pms_HalvingRandomSearchCV_fit.items() if v is not None}`
 
@@ -318,7 +288,7 @@ pms_HalvingRandomSearchCV_fit = {k: v for k, v in pms_HalvingRandomSearchCV_fit.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -336,9 +306,7 @@ pms_HalvingRandomSearchCV_fit = {k: v for k, v in pms_HalvingRandomSearchCV_fit.
 
     // set up method params
     await this._py
-      .ex`pms_HalvingRandomSearchCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_HalvingRandomSearchCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingRandomSearchCV_get_metadata_routing.items() if v is not None}`
 
@@ -360,6 +328,11 @@ pms_HalvingRandomSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingRa
     /**
       Must fulfill the input assumptions of the underlying estimator.
      */
+    X?: any
+
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
     Xt?: any
   }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
@@ -375,9 +348,8 @@ pms_HalvingRandomSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingRa
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_inverse_transform = {'Xt': ${
-      opts['Xt'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_inverse_transform = {'X': ${opts['X'] ?? undefined}, 'Xt': ${opts['Xt'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_inverse_transform = {k: v for k, v in pms_HalvingRandomSearchCV_inverse_transform.items() if v is not None}`
 
@@ -412,9 +384,8 @@ pms_HalvingRandomSearchCV_inverse_transform = {k: v for k, v in pms_HalvingRando
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_predict = {k: v for k, v in pms_HalvingRandomSearchCV_predict.items() if v is not None}`
 
@@ -451,9 +422,8 @@ pms_HalvingRandomSearchCV_predict = {k: v for k, v in pms_HalvingRandomSearchCV_
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_predict_log_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_predict_log_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingRandomSearchCV_predict_log_proba.items() if v is not None}`
 
@@ -490,9 +460,8 @@ pms_HalvingRandomSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingRando
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_predict_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSearchCV_predict_proba.items() if v is not None}`
 
@@ -520,6 +489,11 @@ pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSea
       Target relative to X for classification or regression; `undefined` for unsupervised learning.
      */
     y?: ArrayLike[]
+
+    /**
+      Parameters to be passed to the underlying scorer(s).
+     */
+    params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
@@ -532,11 +506,8 @@ pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSea
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_score = {k: v for k, v in pms_HalvingRandomSearchCV_score.items() if v is not None}`
 
@@ -573,9 +544,8 @@ pms_HalvingRandomSearchCV_score = {k: v for k, v in pms_HalvingRandomSearchCV_sc
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_score_samples = {k: v for k, v in pms_HalvingRandomSearchCV_score_samples.items() if v is not None}`
 
@@ -586,47 +556,6 @@ pms_HalvingRandomSearchCV_score_samples = {k: v for k, v in pms_HalvingRandomSea
     // convert the result from python to node.js
     return this
       ._py`res_HalvingRandomSearchCV_score_samples.tolist() if hasattr(res_HalvingRandomSearchCV_score_samples, 'tolist') else res_HalvingRandomSearchCV_score_samples`
-  }
-
-  /**
-    Request metadata passed to the `fit` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_fit_request(opts: {
-    /**
-      Metadata routing for `groups` parameter in `fit`.
-     */
-    groups?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This HalvingRandomSearchCV instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'HalvingRandomSearchCV must call init() before set_fit_request()'
-      )
-    }
-
-    // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_set_fit_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
-
-pms_HalvingRandomSearchCV_set_fit_request = {k: v for k, v in pms_HalvingRandomSearchCV_set_fit_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_HalvingRandomSearchCV_set_fit_request = bridgeHalvingRandomSearchCV[${this.id}].set_fit_request(**pms_HalvingRandomSearchCV_set_fit_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_HalvingRandomSearchCV_set_fit_request.tolist() if hasattr(res_HalvingRandomSearchCV_set_fit_request, 'tolist') else res_HalvingRandomSearchCV_set_fit_request`
   }
 
   /**
@@ -653,9 +582,8 @@ pms_HalvingRandomSearchCV_set_fit_request = {k: v for k, v in pms_HalvingRandomS
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchCV_transform.items() if v is not None}`
 

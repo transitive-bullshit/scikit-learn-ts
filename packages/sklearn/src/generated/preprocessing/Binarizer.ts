@@ -81,9 +81,8 @@ except NameError: bridgeBinarizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Binarizer = {'threshold': ${
-      this.opts['threshold'] ?? undefined
-    }, 'copy': ${this.opts['copy'] ?? undefined}}
+    await this._py
+      .ex`ctor_Binarizer = {'threshold': ${this.opts['threshold'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_Binarizer = {k: v for k, v in ctor_Binarizer.items() if v is not None}`
 
@@ -136,9 +135,8 @@ ctor_Binarizer = {k: v for k, v in ctor_Binarizer.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Binarizer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_Binarizer_fit = {k: v for k, v in pms_Binarizer_fit.items() if v is not None}`
 
@@ -181,13 +179,8 @@ pms_Binarizer_fit = {k: v for k, v in pms_Binarizer_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_Binarizer_fit_transform = {k: v for k, v in pms_Binarizer_fit_transform.items() if v is not None}`
 
@@ -221,9 +214,7 @@ pms_Binarizer_fit_transform = {k: v for k, v in pms_Binarizer_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_Binarizer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_Binarizer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Binarizer_get_feature_names_out = {k: v for k, v in pms_Binarizer_get_feature_names_out.items() if v is not None}`
 
@@ -258,9 +249,8 @@ pms_Binarizer_get_feature_names_out = {k: v for k, v in pms_Binarizer_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Binarizer_get_metadata_routing = {k: v for k, v in pms_Binarizer_get_metadata_routing.items() if v is not None}`
 
@@ -282,7 +272,7 @@ pms_Binarizer_get_metadata_routing = {k: v for k, v in pms_Binarizer_get_metadat
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Binarizer instance has already been disposed')
@@ -293,9 +283,8 @@ pms_Binarizer_get_metadata_routing = {k: v for k, v in pms_Binarizer_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Binarizer_set_output = {k: v for k, v in pms_Binarizer_set_output.items() if v is not None}`
 
@@ -332,9 +321,8 @@ pms_Binarizer_set_output = {k: v for k, v in pms_Binarizer_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_Binarizer_set_transform_request = {k: v for k, v in pms_Binarizer_set_transform_request.items() if v is not None}`
 
@@ -370,11 +358,8 @@ pms_Binarizer_set_transform_request = {k: v for k, v in pms_Binarizer_set_transf
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_Binarizer_transform = {k: v for k, v in pms_Binarizer_transform.items() if v is not None}`
 

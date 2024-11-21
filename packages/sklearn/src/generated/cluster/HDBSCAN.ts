@@ -31,7 +31,7 @@ export class HDBSCAN {
     min_cluster_size?: number
 
     /**
-      The number of samples in a neighborhood for a point to be considered as a core point. This includes the point itself. When `undefined`, defaults to `min\_cluster\_size`.
+      The parameter `k` used to calculate the distance between a point `x\_p` and its k-th nearest neighbor. When `undefined`, defaults to `min\_cluster\_size`.
      */
     min_samples?: number
 
@@ -67,13 +67,13 @@ export class HDBSCAN {
     alpha?: number
 
     /**
-      Exactly which algorithm to use for computing core distances; By default this is set to `"auto"` which attempts to use a [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") tree if possible, otherwise it uses a [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") tree. Both `"KDTree"` and `"BallTree"` algorithms use the [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") estimator.
+      Exactly which algorithm to use for computing core distances; By default this is set to `"auto"` which attempts to use a [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") tree if possible, otherwise it uses a [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") tree. Both `"kd\_tree"` and `"ball\_tree"` algorithms use the [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") estimator.
 
       If the `X` passed during `fit` is sparse or `metric` is invalid for both [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") and [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree"), then it resolves to use the `"brute"` algorithm.
 
       @defaultValue `'auto'`
      */
-    algorithm?: 'auto' | 'brute' | 'kdtree' | 'balltree'
+    algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
     /**
       Leaf size for trees responsible for fast nearest neighbour queries when a KDTree or a BallTree are used as core-distance algorithms. A large dataset size and small `leaf\_size` may induce excessive memory usage. If you are running out of memory consider increasing the `leaf\_size` parameter. Ignored for `algorithm="brute"`.
@@ -83,7 +83,7 @@ export class HDBSCAN {
     leaf_size?: number
 
     /**
-      Number of jobs to run in parallel to calculate distances. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel to calculate distances. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -153,27 +153,8 @@ except NameError: bridgeHDBSCAN = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HDBSCAN = {'min_cluster_size': ${
-      this.opts['min_cluster_size'] ?? undefined
-    }, 'min_samples': ${
-      this.opts['min_samples'] ?? undefined
-    }, 'cluster_selection_epsilon': ${
-      this.opts['cluster_selection_epsilon'] ?? undefined
-    }, 'max_cluster_size': ${
-      this.opts['max_cluster_size'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'cluster_selection_method': ${
-      this.opts['cluster_selection_method'] ?? undefined
-    }, 'allow_single_cluster': ${
-      this.opts['allow_single_cluster'] ?? undefined
-    }, 'store_centers': ${this.opts['store_centers'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_HDBSCAN = {'min_cluster_size': ${this.opts['min_cluster_size'] ?? undefined}, 'min_samples': ${this.opts['min_samples'] ?? undefined}, 'cluster_selection_epsilon': ${this.opts['cluster_selection_epsilon'] ?? undefined}, 'max_cluster_size': ${this.opts['max_cluster_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'cluster_selection_method': ${this.opts['cluster_selection_method'] ?? undefined}, 'allow_single_cluster': ${this.opts['allow_single_cluster'] ?? undefined}, 'store_centers': ${this.opts['store_centers'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_HDBSCAN = {k: v for k, v in ctor_HDBSCAN.items() if v is not None}`
 
@@ -232,9 +213,8 @@ ctor_HDBSCAN = {k: v for k, v in ctor_HDBSCAN.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_dbscan_clustering = {'cut_distance': ${
-      opts['cut_distance'] ?? undefined
-    }, 'min_cluster_size': ${opts['min_cluster_size'] ?? undefined}}
+    await this._py
+      .ex`pms_HDBSCAN_dbscan_clustering = {'cut_distance': ${opts['cut_distance'] ?? undefined}, 'min_cluster_size': ${opts['min_cluster_size'] ?? undefined}}
 
 pms_HDBSCAN_dbscan_clustering = {k: v for k, v in pms_HDBSCAN_dbscan_clustering.items() if v is not None}`
 
@@ -270,9 +250,8 @@ pms_HDBSCAN_dbscan_clustering = {k: v for k, v in pms_HDBSCAN_dbscan_clustering.
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_HDBSCAN_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_HDBSCAN_fit = {k: v for k, v in pms_HDBSCAN_fit.items() if v is not None}`
 
@@ -308,9 +287,8 @@ pms_HDBSCAN_fit = {k: v for k, v in pms_HDBSCAN_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_HDBSCAN_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_HDBSCAN_fit_predict = {k: v for k, v in pms_HDBSCAN_fit_predict.items() if v is not None}`
 
@@ -343,9 +321,8 @@ pms_HDBSCAN_fit_predict = {k: v for k, v in pms_HDBSCAN_fit_predict.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HDBSCAN_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HDBSCAN_get_metadata_routing = {k: v for k, v in pms_HDBSCAN_get_metadata_routing.items() if v is not None}`
 

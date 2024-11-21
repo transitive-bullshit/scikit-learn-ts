@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This transformer performs linear dimensionality reduction by means of truncated singular value decomposition (SVD). Contrary to PCA, this estimator does not center the data before computing the singular value decomposition. This means it can work with sparse matrices efficiently.
 
-  In particular, truncated SVD works on term count/tf-idf matrices as returned by the vectorizers in [`sklearn.feature\_extraction.text`](../classes.html#module-sklearn.feature_extraction.text "sklearn.feature_extraction.text"). In that context, it is known as latent semantic analysis (LSA).
+  In particular, truncated SVD works on term count/tf-idf matrices as returned by the vectorizers in [`sklearn.feature\_extraction.text`](../../api/sklearn.feature_extraction.html#module-sklearn.feature_extraction.text "sklearn.feature_extraction.text"). In that context, it is known as latent semantic analysis (LSA).
 
   This estimator supports two algorithms: a fast randomized SVD solver, and a “naive” algorithm that uses ARPACK as an eigensolver on `X \* X.T` or `X.T \* X`, whichever is more efficient.
 
@@ -114,17 +114,8 @@ except NameError: bridgeTruncatedSVD = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TruncatedSVD = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'n_iter': ${
-      this.opts['n_iter'] ?? undefined
-    }, 'n_oversamples': ${
-      this.opts['n_oversamples'] ?? undefined
-    }, 'power_iteration_normalizer': ${
-      this.opts['power_iteration_normalizer'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_TruncatedSVD = {'n_components': ${this.opts['n_components'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'n_oversamples': ${this.opts['n_oversamples'] ?? undefined}, 'power_iteration_normalizer': ${this.opts['power_iteration_normalizer'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}}
 
 ctor_TruncatedSVD = {k: v for k, v in ctor_TruncatedSVD.items() if v is not None}`
 
@@ -176,9 +167,8 @@ ctor_TruncatedSVD = {k: v for k, v in ctor_TruncatedSVD.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_TruncatedSVD_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TruncatedSVD_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_TruncatedSVD_fit = {k: v for k, v in pms_TruncatedSVD_fit.items() if v is not None}`
 
@@ -214,9 +204,8 @@ pms_TruncatedSVD_fit = {k: v for k, v in pms_TruncatedSVD_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_TruncatedSVD_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TruncatedSVD_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_TruncatedSVD_fit_transform = {k: v for k, v in pms_TruncatedSVD_fit_transform.items() if v is not None}`
 
@@ -252,9 +241,7 @@ pms_TruncatedSVD_fit_transform = {k: v for k, v in pms_TruncatedSVD_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_TruncatedSVD_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_TruncatedSVD_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_TruncatedSVD_get_feature_names_out = {k: v for k, v in pms_TruncatedSVD_get_feature_names_out.items() if v is not None}`
 
@@ -289,9 +276,8 @@ pms_TruncatedSVD_get_feature_names_out = {k: v for k, v in pms_TruncatedSVD_get_
     }
 
     // set up method params
-    await this._py.ex`pms_TruncatedSVD_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TruncatedSVD_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TruncatedSVD_get_metadata_routing = {k: v for k, v in pms_TruncatedSVD_get_metadata_routing.items() if v is not None}`
 
@@ -326,9 +312,8 @@ pms_TruncatedSVD_get_metadata_routing = {k: v for k, v in pms_TruncatedSVD_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_TruncatedSVD_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_TruncatedSVD_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_TruncatedSVD_inverse_transform = {k: v for k, v in pms_TruncatedSVD_inverse_transform.items() if v is not None}`
 
@@ -350,7 +335,7 @@ pms_TruncatedSVD_inverse_transform = {k: v for k, v in pms_TruncatedSVD_inverse_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TruncatedSVD instance has already been disposed')
@@ -361,9 +346,8 @@ pms_TruncatedSVD_inverse_transform = {k: v for k, v in pms_TruncatedSVD_inverse_
     }
 
     // set up method params
-    await this._py.ex`pms_TruncatedSVD_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TruncatedSVD_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_TruncatedSVD_set_output = {k: v for k, v in pms_TruncatedSVD_set_output.items() if v is not None}`
 
@@ -394,9 +378,8 @@ pms_TruncatedSVD_set_output = {k: v for k, v in pms_TruncatedSVD_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_TruncatedSVD_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_TruncatedSVD_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_TruncatedSVD_transform = {k: v for k, v in pms_TruncatedSVD_transform.items() if v is not None}`
 

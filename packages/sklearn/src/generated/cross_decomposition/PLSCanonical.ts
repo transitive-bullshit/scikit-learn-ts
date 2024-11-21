@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Partial Least Squares transformer and regressor.
 
+  For a comparison between other cross decomposition algorithms, see [Compare cross decomposition methods](../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html#sphx-glr-auto-examples-cross-decomposition-plot-compare-cross-decomposition-py).
+
   Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSCanonical.html)
@@ -103,13 +105,8 @@ except NameError: bridgePLSCanonical = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PLSCanonical = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'scale': ${this.opts['scale'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'copy': ${this.opts['copy'] ?? undefined}}
+    await this._py
+      .ex`ctor_PLSCanonical = {'n_components': ${this.opts['n_components'] ?? undefined}, 'scale': ${this.opts['scale'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_PLSCanonical = {k: v for k, v in ctor_PLSCanonical.items() if v is not None}`
 
@@ -150,6 +147,11 @@ ctor_PLSCanonical = {k: v for k, v in ctor_PLSCanonical.items() if v is not None
     /**
       Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
      */
+    y?: ArrayLike
+
+    /**
+      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+     */
     Y?: ArrayLike
   }): Promise<any> {
     if (this._isDisposed) {
@@ -161,11 +163,8 @@ ctor_PLSCanonical = {k: v for k, v in ctor_PLSCanonical.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSCanonical_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSCanonical_fit = {k: v for k, v in pms_PLSCanonical_fit.items() if v is not None}`
 
@@ -201,11 +200,8 @@ pms_PLSCanonical_fit = {k: v for k, v in pms_PLSCanonical_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSCanonical_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_PLSCanonical_fit_transform = {k: v for k, v in pms_PLSCanonical_fit_transform.items() if v is not None}`
 
@@ -241,9 +237,7 @@ pms_PLSCanonical_fit_transform = {k: v for k, v in pms_PLSCanonical_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_PLSCanonical_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_PLSCanonical_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PLSCanonical_get_feature_names_out = {k: v for k, v in pms_PLSCanonical_get_feature_names_out.items() if v is not None}`
 
@@ -278,9 +272,8 @@ pms_PLSCanonical_get_feature_names_out = {k: v for k, v in pms_PLSCanonical_get_
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSCanonical_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PLSCanonical_get_metadata_routing = {k: v for k, v in pms_PLSCanonical_get_metadata_routing.items() if v is not None}`
 
@@ -305,6 +298,11 @@ pms_PLSCanonical_get_metadata_routing = {k: v for k, v in pms_PLSCanonical_get_m
     /**
       New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
      */
+    y?: ArrayLike
+
+    /**
+      New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+     */
     Y?: ArrayLike[]
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -318,11 +316,8 @@ pms_PLSCanonical_get_metadata_routing = {k: v for k, v in pms_PLSCanonical_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSCanonical_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSCanonical_inverse_transform = {k: v for k, v in pms_PLSCanonical_inverse_transform.items() if v is not None}`
 
@@ -360,11 +355,8 @@ pms_PLSCanonical_inverse_transform = {k: v for k, v in pms_PLSCanonical_inverse_
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSCanonical_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSCanonical_predict = {k: v for k, v in pms_PLSCanonical_predict.items() if v is not None}`
 
@@ -407,13 +399,8 @@ pms_PLSCanonical_predict = {k: v for k, v in pms_PLSCanonical_predict.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSCanonical_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_PLSCanonical_score = {k: v for k, v in pms_PLSCanonical_score.items() if v is not None}`
 
@@ -435,7 +422,7 @@ pms_PLSCanonical_score = {k: v for k, v in pms_PLSCanonical_score.items() if v i
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
@@ -446,9 +433,8 @@ pms_PLSCanonical_score = {k: v for k, v in pms_PLSCanonical_score.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSCanonical_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PLSCanonical_set_output = {k: v for k, v in pms_PLSCanonical_set_output.items() if v is not None}`
 
@@ -485,9 +471,8 @@ pms_PLSCanonical_set_output = {k: v for k, v in pms_PLSCanonical_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_set_predict_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSCanonical_set_predict_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSCanonical_set_predict_request = {k: v for k, v in pms_PLSCanonical_set_predict_request.items() if v is not None}`
 
@@ -524,9 +509,8 @@ pms_PLSCanonical_set_predict_request = {k: v for k, v in pms_PLSCanonical_set_pr
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSCanonical_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_PLSCanonical_set_score_request = {k: v for k, v in pms_PLSCanonical_set_score_request.items() if v is not None}`
 
@@ -563,9 +547,8 @@ pms_PLSCanonical_set_score_request = {k: v for k, v in pms_PLSCanonical_set_scor
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSCanonical_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSCanonical_set_transform_request = {k: v for k, v in pms_PLSCanonical_set_transform_request.items() if v is not None}`
 
@@ -590,6 +573,11 @@ pms_PLSCanonical_set_transform_request = {k: v for k, v in pms_PLSCanonical_set_
     /**
       Target vectors.
      */
+    y?: ArrayLike[]
+
+    /**
+      Target vectors.
+     */
     Y?: ArrayLike[]
 
     /**
@@ -608,13 +596,8 @@ pms_PLSCanonical_set_transform_request = {k: v for k, v in pms_PLSCanonical_set_
     }
 
     // set up method params
-    await this._py.ex`pms_PLSCanonical_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSCanonical_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_PLSCanonical_transform = {k: v for k, v in pms_PLSCanonical_transform.items() if v is not None}`
 

@@ -98,15 +98,8 @@ except NameError: bridgeBirch = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Birch = {'threshold': ${
-      this.opts['threshold'] ?? undefined
-    }, 'branching_factor': ${
-      this.opts['branching_factor'] ?? undefined
-    }, 'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'compute_labels': ${this.opts['compute_labels'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Birch = {'threshold': ${this.opts['threshold'] ?? undefined}, 'branching_factor': ${this.opts['branching_factor'] ?? undefined}, 'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'compute_labels': ${this.opts['compute_labels'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_Birch = {k: v for k, v in ctor_Birch.items() if v is not None}`
 
@@ -157,9 +150,8 @@ ctor_Birch = {k: v for k, v in ctor_Birch.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Birch_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_Birch_fit = {k: v for k, v in pms_Birch_fit.items() if v is not None}`
 
@@ -185,6 +177,11 @@ pms_Birch_fit = {k: v for k, v in pms_Birch_fit.items() if v is not None}`
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
@@ -195,9 +192,8 @@ pms_Birch_fit = {k: v for k, v in pms_Birch_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Birch_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_Birch_fit_predict = {k: v for k, v in pms_Birch_fit_predict.items() if v is not None}`
 
@@ -240,13 +236,8 @@ pms_Birch_fit_predict = {k: v for k, v in pms_Birch_fit_predict.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Birch_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_Birch_fit_transform = {k: v for k, v in pms_Birch_fit_transform.items() if v is not None}`
 
@@ -279,9 +270,8 @@ pms_Birch_fit_transform = {k: v for k, v in pms_Birch_fit_transform.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Birch_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Birch_get_feature_names_out = {k: v for k, v in pms_Birch_get_feature_names_out.items() if v is not None}`
 
@@ -314,9 +304,8 @@ pms_Birch_get_feature_names_out = {k: v for k, v in pms_Birch_get_feature_names_
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Birch_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Birch_get_metadata_routing = {k: v for k, v in pms_Birch_get_metadata_routing.items() if v is not None}`
 
@@ -352,9 +341,8 @@ pms_Birch_get_metadata_routing = {k: v for k, v in pms_Birch_get_metadata_routin
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Birch_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_Birch_partial_fit = {k: v for k, v in pms_Birch_partial_fit.items() if v is not None}`
 
@@ -387,9 +375,8 @@ pms_Birch_partial_fit = {k: v for k, v in pms_Birch_partial_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Birch_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Birch_predict = {k: v for k, v in pms_Birch_predict.items() if v is not None}`
 
@@ -411,7 +398,7 @@ pms_Birch_predict = {k: v for k, v in pms_Birch_predict.items() if v is not None
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
@@ -422,9 +409,8 @@ pms_Birch_predict = {k: v for k, v in pms_Birch_predict.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Birch_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Birch_set_output = {k: v for k, v in pms_Birch_set_output.items() if v is not None}`
 
@@ -457,9 +443,8 @@ pms_Birch_set_output = {k: v for k, v in pms_Birch_set_output.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_Birch_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Birch_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Birch_transform = {k: v for k, v in pms_Birch_transform.items() if v is not None}`
 

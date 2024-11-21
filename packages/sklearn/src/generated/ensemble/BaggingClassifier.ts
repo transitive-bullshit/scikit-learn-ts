@@ -80,7 +80,7 @@ export class BaggingClassifier {
     warm_start?: boolean
 
     /**
-      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -95,13 +95,6 @@ export class BaggingClassifier {
       @defaultValue `0`
      */
     verbose?: number
-
-    /**
-      Use `estimator` instead.
-
-      @defaultValue `'deprecated'`
-     */
-    base_estimator?: any
   }) {
     this.id = `BaggingClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -145,25 +138,8 @@ except NameError: bridgeBaggingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_BaggingClassifier = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'max_samples': ${
-      this.opts['max_samples'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'bootstrap': ${
-      this.opts['bootstrap'] ?? undefined
-    }, 'bootstrap_features': ${
-      this.opts['bootstrap_features'] ?? undefined
-    }, 'oob_score': ${this.opts['oob_score'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'base_estimator': ${
-      this.opts['base_estimator'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_BaggingClassifier = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'max_samples': ${this.opts['max_samples'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'bootstrap_features': ${this.opts['bootstrap_features'] ?? undefined}, 'oob_score': ${this.opts['oob_score'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_BaggingClassifier = {k: v for k, v in ctor_BaggingClassifier.items() if v is not None}`
 
@@ -215,9 +191,7 @@ ctor_BaggingClassifier = {k: v for k, v in ctor_BaggingClassifier.items() if v i
 
     // set up method params
     await this._py
-      .ex`pms_BaggingClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_BaggingClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BaggingClassifier_decision_function = {k: v for k, v in pms_BaggingClassifier_decision_function.items() if v is not None}`
 
@@ -248,6 +222,11 @@ pms_BaggingClassifier_decision_function = {k: v for k, v in pms_BaggingClassifie
       Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the underlying estimators.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -260,13 +239,8 @@ pms_BaggingClassifier_decision_function = {k: v for k, v in pms_BaggingClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_BaggingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_BaggingClassifier_fit = {k: v for k, v in pms_BaggingClassifier_fit.items() if v is not None}`
 
@@ -286,7 +260,7 @@ pms_BaggingClassifier_fit = {k: v for k, v in pms_BaggingClassifier_fit.items() 
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -304,9 +278,7 @@ pms_BaggingClassifier_fit = {k: v for k, v in pms_BaggingClassifier_fit.items() 
 
     // set up method params
     await this._py
-      .ex`pms_BaggingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_BaggingClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_BaggingClassifier_get_metadata_routing = {k: v for k, v in pms_BaggingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -341,9 +313,8 @@ pms_BaggingClassifier_get_metadata_routing = {k: v for k, v in pms_BaggingClassi
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BaggingClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BaggingClassifier_predict = {k: v for k, v in pms_BaggingClassifier_predict.items() if v is not None}`
 
@@ -381,9 +352,7 @@ pms_BaggingClassifier_predict = {k: v for k, v in pms_BaggingClassifier_predict.
 
     // set up method params
     await this._py
-      .ex`pms_BaggingClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_BaggingClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BaggingClassifier_predict_log_proba = {k: v for k, v in pms_BaggingClassifier_predict_log_proba.items() if v is not None}`
 
@@ -420,9 +389,8 @@ pms_BaggingClassifier_predict_log_proba = {k: v for k, v in pms_BaggingClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BaggingClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BaggingClassifier_predict_proba = {k: v for k, v in pms_BaggingClassifier_predict_proba.items() if v is not None}`
 
@@ -467,13 +435,8 @@ pms_BaggingClassifier_predict_proba = {k: v for k, v in pms_BaggingClassifier_pr
     }
 
     // set up method params
-    await this._py.ex`pms_BaggingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_BaggingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.items() if v is not None}`
 
@@ -513,9 +476,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
 
     // set up method params
     await this._py
-      .ex`pms_BaggingClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_BaggingClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BaggingClassifier_set_fit_request = {k: v for k, v in pms_BaggingClassifier_set_fit_request.items() if v is not None}`
 
@@ -555,9 +516,7 @@ pms_BaggingClassifier_set_fit_request = {k: v for k, v in pms_BaggingClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_BaggingClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_BaggingClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_BaggingClassifier_set_score_request = {k: v for k, v in pms_BaggingClassifier_set_score_request.items() if v is not None}`
 

@@ -39,7 +39,7 @@ export class VotingClassifier {
     weights?: ArrayLike
 
     /**
-      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -99,15 +99,8 @@ except NameError: bridgeVotingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_VotingClassifier = {'estimators': ${
-      this.opts['estimators'] ?? undefined
-    }, 'voting': ${this.opts['voting'] ?? undefined}, 'weights': np.array(${
-      this.opts['weights'] ?? undefined
-    }) if ${this.opts['weights'] !== undefined} else None, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'flatten_transform': ${
-      this.opts['flatten_transform'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_VotingClassifier = {'estimators': ${this.opts['estimators'] ?? undefined}, 'voting': ${this.opts['voting'] ?? undefined}, 'weights': np.array(${this.opts['weights'] ?? undefined}) if ${this.opts['weights'] !== undefined} else None, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'flatten_transform': ${this.opts['flatten_transform'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is not None}`
 
@@ -154,6 +147,11 @@ ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is 
       Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the underlying estimators.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -166,13 +164,8 @@ ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingClassifier_fit = {k: v for k, v in pms_VotingClassifier_fit.items() if v is not None}`
 
@@ -219,13 +212,8 @@ pms_VotingClassifier_fit = {k: v for k, v in pms_VotingClassifier_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingClassifier_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingClassifier_fit_transform = {k: v for k, v in pms_VotingClassifier_fit_transform.items() if v is not None}`
 
@@ -261,9 +249,7 @@ pms_VotingClassifier_fit_transform = {k: v for k, v in pms_VotingClassifier_fit_
 
     // set up method params
     await this._py
-      .ex`pms_VotingClassifier_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_VotingClassifier_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_VotingClassifier_get_feature_names_out = {k: v for k, v in pms_VotingClassifier_get_feature_names_out.items() if v is not None}`
 
@@ -283,7 +269,7 @@ pms_VotingClassifier_get_feature_names_out = {k: v for k, v in pms_VotingClassif
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -300,9 +286,8 @@ pms_VotingClassifier_get_feature_names_out = {k: v for k, v in pms_VotingClassif
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_VotingClassifier_get_metadata_routing = {k: v for k, v in pms_VotingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -335,9 +320,8 @@ pms_VotingClassifier_get_metadata_routing = {k: v for k, v in pms_VotingClassifi
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingClassifier_predict = {k: v for k, v in pms_VotingClassifier_predict.items() if v is not None}`
 
@@ -372,9 +356,8 @@ pms_VotingClassifier_predict = {k: v for k, v in pms_VotingClassifier_predict.it
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingClassifier_predict_proba = {k: v for k, v in pms_VotingClassifier_predict_proba.items() if v is not None}`
 
@@ -419,13 +402,8 @@ pms_VotingClassifier_predict_proba = {k: v for k, v in pms_VotingClassifier_pred
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_VotingClassifier_score = {k: v for k, v in pms_VotingClassifier_score.items() if v is not None}`
 
@@ -465,9 +443,7 @@ pms_VotingClassifier_score = {k: v for k, v in pms_VotingClassifier_score.items(
 
     // set up method params
     await this._py
-      .ex`pms_VotingClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_VotingClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingClassifier_set_fit_request = {k: v for k, v in pms_VotingClassifier_set_fit_request.items() if v is not None}`
 
@@ -489,7 +465,7 @@ pms_VotingClassifier_set_fit_request = {k: v for k, v in pms_VotingClassifier_se
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -502,9 +478,8 @@ pms_VotingClassifier_set_fit_request = {k: v for k, v in pms_VotingClassifier_se
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingClassifier_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_VotingClassifier_set_output = {k: v for k, v in pms_VotingClassifier_set_output.items() if v is not None}`
 
@@ -544,9 +519,7 @@ pms_VotingClassifier_set_output = {k: v for k, v in pms_VotingClassifier_set_out
 
     // set up method params
     await this._py
-      .ex`pms_VotingClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_VotingClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingClassifier_set_score_request = {k: v for k, v in pms_VotingClassifier_set_score_request.items() if v is not None}`
 
@@ -579,9 +552,8 @@ pms_VotingClassifier_set_score_request = {k: v for k, v in pms_VotingClassifier_
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingClassifier_transform = {k: v for k, v in pms_VotingClassifier_transform.items() if v is not None}`
 

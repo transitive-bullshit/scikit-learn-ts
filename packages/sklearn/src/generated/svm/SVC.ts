@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   For details on the precise mathematical formulation of the provided kernel functions and how `gamma`, `coef0` and `degree` affect each other, see the corresponding section in the narrative documentation: [Kernel functions](../svm.html#svm-kernels).
 
+  To learn how to tune SVC’s hyperparameters, see the following example: [Nested versus non-nested cross-validation](../../auto_examples/model_selection/plot_nested_cross_validation_iris.html#sphx-glr-auto-examples-model-selection-plot-nested-cross-validation-iris-py)
+
   Read more in the [User Guide](../svm.html#svm-classification).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
@@ -28,7 +30,7 @@ export class SVC {
 
   constructor(opts?: {
     /**
-      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2 penalty.
+      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2 penalty. For an intuitive visualization of the effects of scaling the regularization parameter C, see [Scaling the regularization parameter for SVCs](../../auto_examples/svm/plot_svm_scale_c.html#sphx-glr-auto-examples-svm-plot-svm-scale-c-py).
 
       @defaultValue `1`
      */
@@ -168,25 +170,8 @@ except NameError: bridgeSVC = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SVC = {'C': ${
-      this.opts['C'] ?? undefined
-    }, 'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${
-      this.opts['degree'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${
-      this.opts['coef0'] ?? undefined
-    }, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'probability': ${
-      this.opts['probability'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${
-      this.opts['cache_size'] ?? undefined
-    }, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'decision_function_shape': ${
-      this.opts['decision_function_shape'] ?? undefined
-    }, 'break_ties': ${this.opts['break_ties'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_SVC = {'C': ${this.opts['C'] ?? undefined}, 'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'probability': ${this.opts['probability'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'decision_function_shape': ${this.opts['decision_function_shape'] ?? undefined}, 'break_ties': ${this.opts['break_ties'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SVC = {k: v for k, v in ctor_SVC.items() if v is not None}`
 
@@ -232,9 +217,8 @@ ctor_SVC = {k: v for k, v in ctor_SVC.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVC_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SVC_decision_function = {k: v for k, v in pms_SVC_decision_function.items() if v is not None}`
 
@@ -275,13 +259,8 @@ pms_SVC_decision_function = {k: v for k, v in pms_SVC_decision_function.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVC_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SVC_fit = {k: v for k, v in pms_SVC_fit.items() if v is not None}`
 
@@ -313,9 +292,8 @@ pms_SVC_fit = {k: v for k, v in pms_SVC_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SVC_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SVC_get_metadata_routing = {k: v for k, v in pms_SVC_get_metadata_routing.items() if v is not None}`
 
@@ -348,9 +326,8 @@ pms_SVC_get_metadata_routing = {k: v for k, v in pms_SVC_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVC_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SVC_predict = {k: v for k, v in pms_SVC_predict.items() if v is not None}`
 
@@ -383,9 +360,8 @@ pms_SVC_predict = {k: v for k, v in pms_SVC_predict.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVC_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SVC_predict_log_proba = {k: v for k, v in pms_SVC_predict_log_proba.items() if v is not None}`
 
@@ -418,9 +394,8 @@ pms_SVC_predict_log_proba = {k: v for k, v in pms_SVC_predict_log_proba.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVC_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SVC_predict_proba = {k: v for k, v in pms_SVC_predict_proba.items() if v is not None}`
 
@@ -463,13 +438,8 @@ pms_SVC_predict_proba = {k: v for k, v in pms_SVC_predict_proba.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVC_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
 
@@ -504,9 +474,8 @@ pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SVC_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SVC_set_fit_request = {k: v for k, v in pms_SVC_set_fit_request.items() if v is not None}`
 
@@ -541,9 +510,8 @@ pms_SVC_set_fit_request = {k: v for k, v in pms_SVC_set_fit_request.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_SVC_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SVC_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SVC_set_score_request = {k: v for k, v in pms_SVC_set_score_request.items() if v is not None}`
 

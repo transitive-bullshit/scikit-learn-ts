@@ -58,7 +58,7 @@ export class SparseCoder {
     split_sign?: boolean
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -116,21 +116,8 @@ except NameError: bridgeSparseCoder = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SparseCoder = {'dictionary': np.array(${
-      this.opts['dictionary'] ?? undefined
-    }) if ${
-      this.opts['dictionary'] !== undefined
-    } else None, 'transform_algorithm': ${
-      this.opts['transform_algorithm'] ?? undefined
-    }, 'transform_n_nonzero_coefs': ${
-      this.opts['transform_n_nonzero_coefs'] ?? undefined
-    }, 'transform_alpha': ${
-      this.opts['transform_alpha'] ?? undefined
-    }, 'split_sign': ${this.opts['split_sign'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'positive_code': ${
-      this.opts['positive_code'] ?? undefined
-    }, 'transform_max_iter': ${this.opts['transform_max_iter'] ?? undefined}}
+    await this._py
+      .ex`ctor_SparseCoder = {'dictionary': np.array(${this.opts['dictionary'] ?? undefined}) if ${this.opts['dictionary'] !== undefined} else None, 'transform_algorithm': ${this.opts['transform_algorithm'] ?? undefined}, 'transform_n_nonzero_coefs': ${this.opts['transform_n_nonzero_coefs'] ?? undefined}, 'transform_alpha': ${this.opts['transform_alpha'] ?? undefined}, 'split_sign': ${this.opts['split_sign'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'positive_code': ${this.opts['positive_code'] ?? undefined}, 'transform_max_iter': ${this.opts['transform_max_iter'] ?? undefined}}
 
 ctor_SparseCoder = {k: v for k, v in ctor_SparseCoder.items() if v is not None}`
 
@@ -184,9 +171,8 @@ ctor_SparseCoder = {k: v for k, v in ctor_SparseCoder.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SparseCoder_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SparseCoder_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_SparseCoder_fit = {k: v for k, v in pms_SparseCoder_fit.items() if v is not None}`
 
@@ -229,13 +215,8 @@ pms_SparseCoder_fit = {k: v for k, v in pms_SparseCoder_fit.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_SparseCoder_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparseCoder_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SparseCoder_fit_transform = {k: v for k, v in pms_SparseCoder_fit_transform.items() if v is not None}`
 
@@ -271,9 +252,7 @@ pms_SparseCoder_fit_transform = {k: v for k, v in pms_SparseCoder_fit_transform.
 
     // set up method params
     await this._py
-      .ex`pms_SparseCoder_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SparseCoder_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SparseCoder_get_feature_names_out = {k: v for k, v in pms_SparseCoder_get_feature_names_out.items() if v is not None}`
 
@@ -308,9 +287,8 @@ pms_SparseCoder_get_feature_names_out = {k: v for k, v in pms_SparseCoder_get_fe
     }
 
     // set up method params
-    await this._py.ex`pms_SparseCoder_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparseCoder_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SparseCoder_get_metadata_routing = {k: v for k, v in pms_SparseCoder_get_metadata_routing.items() if v is not None}`
 
@@ -332,7 +310,7 @@ pms_SparseCoder_get_metadata_routing = {k: v for k, v in pms_SparseCoder_get_met
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparseCoder instance has already been disposed')
@@ -343,9 +321,8 @@ pms_SparseCoder_get_metadata_routing = {k: v for k, v in pms_SparseCoder_get_met
     }
 
     // set up method params
-    await this._py.ex`pms_SparseCoder_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparseCoder_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SparseCoder_set_output = {k: v for k, v in pms_SparseCoder_set_output.items() if v is not None}`
 
@@ -383,9 +360,8 @@ pms_SparseCoder_set_output = {k: v for k, v in pms_SparseCoder_set_output.items(
     }
 
     // set up method params
-    await this._py.ex`pms_SparseCoder_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SparseCoder_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SparseCoder_transform = {k: v for k, v in pms_SparseCoder_transform.items() if v is not None}`
 

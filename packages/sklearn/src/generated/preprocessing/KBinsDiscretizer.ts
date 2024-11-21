@@ -48,9 +48,9 @@ export class KBinsDiscretizer {
     dtype?: any
 
     /**
-      Maximum number of samples, used to fit the model, for computational efficiency. Defaults to 200\_000 when `strategy='quantile'` and to `undefined` when `strategy='uniform'` or `strategy='kmeans'`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
+      Maximum number of samples, used to fit the model, for computational efficiency. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
 
-      @defaultValue `'warn'`
+      @defaultValue `200`
      */
     subsample?: number
 
@@ -101,15 +101,8 @@ except NameError: bridgeKBinsDiscretizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KBinsDiscretizer = {'n_bins': np.array(${
-      this.opts['n_bins'] ?? undefined
-    }) if ${this.opts['n_bins'] !== undefined} else None, 'encode': ${
-      this.opts['encode'] ?? undefined
-    }, 'strategy': ${this.opts['strategy'] ?? undefined}, 'dtype': ${
-      this.opts['dtype'] ?? undefined
-    }, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_KBinsDiscretizer = {'n_bins': np.array(${this.opts['n_bins'] ?? undefined}) if ${this.opts['n_bins'] !== undefined} else None, 'encode': ${this.opts['encode'] ?? undefined}, 'strategy': ${this.opts['strategy'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is not None}`
 
@@ -153,7 +146,7 @@ ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is 
     y?: any
 
     /**
-      Contains weight values to be associated with each sample. Only possible when `strategy` is set to `"quantile"`.
+      Contains weight values to be associated with each sample. Cannot be used when `strategy` is set to `"uniform"`.
      */
     sample_weight?: NDArray
   }): Promise<any> {
@@ -168,13 +161,8 @@ ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KBinsDiscretizer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if v is not None}`
 
@@ -221,13 +209,8 @@ pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KBinsDiscretizer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_KBinsDiscretizer_fit_transform = {k: v for k, v in pms_KBinsDiscretizer_fit_transform.items() if v is not None}`
 
@@ -263,9 +246,7 @@ pms_KBinsDiscretizer_fit_transform = {k: v for k, v in pms_KBinsDiscretizer_fit_
 
     // set up method params
     await this._py
-      .ex`pms_KBinsDiscretizer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_KBinsDiscretizer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_KBinsDiscretizer_get_feature_names_out = {k: v for k, v in pms_KBinsDiscretizer_get_feature_names_out.items() if v is not None}`
 
@@ -302,9 +283,8 @@ pms_KBinsDiscretizer_get_feature_names_out = {k: v for k, v in pms_KBinsDiscreti
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KBinsDiscretizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KBinsDiscretizer_get_metadata_routing = {k: v for k, v in pms_KBinsDiscretizer_get_metadata_routing.items() if v is not None}`
 
@@ -326,6 +306,11 @@ pms_KBinsDiscretizer_get_metadata_routing = {k: v for k, v in pms_KBinsDiscretiz
     /**
       Transformed data in the binned space.
      */
+    X?: ArrayLike[]
+
+    /**
+      Transformed data in the binned space.
+     */
     Xt?: ArrayLike[]
   }): Promise<NDArray> {
     if (this._isDisposed) {
@@ -342,9 +327,7 @@ pms_KBinsDiscretizer_get_metadata_routing = {k: v for k, v in pms_KBinsDiscretiz
 
     // set up method params
     await this._py
-      .ex`pms_KBinsDiscretizer_inverse_transform = {'Xt': np.array(${
-      opts['Xt'] ?? undefined
-    }) if ${opts['Xt'] !== undefined} else None}
+      .ex`pms_KBinsDiscretizer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Xt': np.array(${opts['Xt'] ?? undefined}) if ${opts['Xt'] !== undefined} else None}
 
 pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_inverse_transform.items() if v is not None}`
 
@@ -384,9 +367,7 @@ pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_
 
     // set up method params
     await this._py
-      .ex`pms_KBinsDiscretizer_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_KBinsDiscretizer_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KBinsDiscretizer_set_fit_request = {k: v for k, v in pms_KBinsDiscretizer_set_fit_request.items() if v is not None}`
 
@@ -408,7 +389,7 @@ pms_KBinsDiscretizer_set_fit_request = {k: v for k, v in pms_KBinsDiscretizer_se
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -421,9 +402,8 @@ pms_KBinsDiscretizer_set_fit_request = {k: v for k, v in pms_KBinsDiscretizer_se
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KBinsDiscretizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_KBinsDiscretizer_set_output = {k: v for k, v in pms_KBinsDiscretizer_set_output.items() if v is not None}`
 
@@ -456,9 +436,8 @@ pms_KBinsDiscretizer_set_output = {k: v for k, v in pms_KBinsDiscretizer_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KBinsDiscretizer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transform.items() if v is not None}`
 

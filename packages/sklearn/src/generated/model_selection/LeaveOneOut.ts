@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Leave-One-Out cross-validator
+  Leave-One-Out cross-validator.
 
   Provides train/test indices to split data in train/test sets. Each sample is used once as a test set (singleton) while the remaining samples form the training set.
 
@@ -72,9 +72,8 @@ except NameError: bridgeLeaveOneOut = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LeaveOneOut = {'routing': ${
-      this.opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LeaveOneOut = {'routing': ${this.opts['routing'] ?? undefined}}
 
 ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
 
@@ -125,9 +124,8 @@ ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneOut_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LeaveOneOut_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LeaveOneOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneOut_get_metadata_routing.items() if v is not None}`
 
@@ -141,7 +139,7 @@ pms_LeaveOneOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneOut_get_met
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -168,11 +166,8 @@ pms_LeaveOneOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneOut_get_met
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneOut_get_n_splits = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_LeaveOneOut_get_n_splits = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.items() if v is not None}`
 
@@ -200,9 +195,9 @@ pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.it
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set.
+      Always ignored, exists for compatibility.
      */
-    groups?: ArrayLike
+    groups?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LeaveOneOut instance has already been disposed')
@@ -213,13 +208,8 @@ pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.it
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneOut_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_LeaveOneOut_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_LeaveOneOut_split = {k: v for k, v in pms_LeaveOneOut_split.items() if v is not None}`
 

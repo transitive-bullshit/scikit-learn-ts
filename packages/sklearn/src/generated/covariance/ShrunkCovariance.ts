@@ -84,11 +84,8 @@ except NameError: bridgeShrunkCovariance = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ShrunkCovariance = {'store_precision': ${
-      this.opts['store_precision'] ?? undefined
-    }, 'assume_centered': ${
-      this.opts['assume_centered'] ?? undefined
-    }, 'shrinkage': ${this.opts['shrinkage'] ?? undefined}}
+    await this._py
+      .ex`ctor_ShrunkCovariance = {'store_precision': ${this.opts['store_precision'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}, 'shrinkage': ${this.opts['shrinkage'] ?? undefined}}
 
 ctor_ShrunkCovariance = {k: v for k, v in ctor_ShrunkCovariance.items() if v is not None}`
 
@@ -158,13 +155,8 @@ ctor_ShrunkCovariance = {k: v for k, v in ctor_ShrunkCovariance.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_ShrunkCovariance_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ShrunkCovariance_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_ShrunkCovariance_error_norm = {k: v for k, v in pms_ShrunkCovariance_error_norm.items() if v is not None}`
 
@@ -202,9 +194,8 @@ pms_ShrunkCovariance_error_norm = {k: v for k, v in pms_ShrunkCovariance_error_n
     }
 
     // set up method params
-    await this._py.ex`pms_ShrunkCovariance_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_ShrunkCovariance_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_ShrunkCovariance_fit = {k: v for k, v in pms_ShrunkCovariance_fit.items() if v is not None}`
 
@@ -241,9 +232,8 @@ pms_ShrunkCovariance_fit = {k: v for k, v in pms_ShrunkCovariance_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_ShrunkCovariance_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ShrunkCovariance_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ShrunkCovariance_get_metadata_routing = {k: v for k, v in pms_ShrunkCovariance_get_metadata_routing.items() if v is not None}`
 
@@ -279,9 +269,7 @@ pms_ShrunkCovariance_get_metadata_routing = {k: v for k, v in pms_ShrunkCovarian
 
     // set up method params
     await this._py
-      .ex`pms_ShrunkCovariance_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+      .ex`pms_ShrunkCovariance_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_ShrunkCovariance_get_precision = {k: v for k, v in pms_ShrunkCovariance_get_precision.items() if v is not None}`
 
@@ -314,9 +302,8 @@ pms_ShrunkCovariance_get_precision = {k: v for k, v in pms_ShrunkCovariance_get_
     }
 
     // set up method params
-    await this._py.ex`pms_ShrunkCovariance_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ShrunkCovariance_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_ShrunkCovariance_mahalanobis = {k: v for k, v in pms_ShrunkCovariance_mahalanobis.items() if v is not None}`
 
@@ -356,11 +343,8 @@ pms_ShrunkCovariance_mahalanobis = {k: v for k, v in pms_ShrunkCovariance_mahala
     }
 
     // set up method params
-    await this._py.ex`pms_ShrunkCovariance_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ShrunkCovariance_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_ShrunkCovariance_score = {k: v for k, v in pms_ShrunkCovariance_score.items() if v is not None}`
 
@@ -399,9 +383,8 @@ pms_ShrunkCovariance_score = {k: v for k, v in pms_ShrunkCovariance_score.items(
     }
 
     // set up method params
-    await this._py.ex`pms_ShrunkCovariance_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ShrunkCovariance_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_ShrunkCovariance_set_score_request = {k: v for k, v in pms_ShrunkCovariance_set_score_request.items() if v is not None}`
 

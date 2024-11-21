@@ -22,7 +22,7 @@ export class DecisionTreeRegressor {
 
   constructor(opts?: {
     /**
-      The function to measure the quality of a split. Supported criteria are “squared\_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman\_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute\_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in Poisson deviance to find splits.
+      The function to measure the quality of a split. Supported criteria are “squared\_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman\_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute\_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in the half mean Poisson deviance to find splits.
 
       @defaultValue `'squared_error'`
      */
@@ -64,7 +64,7 @@ export class DecisionTreeRegressor {
     /**
       The number of features to consider when looking for the best split:
      */
-    max_features?: number | 'auto' | 'sqrt' | 'log2'
+    max_features?: number | 'sqrt' | 'log2'
 
     /**
       Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
@@ -91,6 +91,11 @@ export class DecisionTreeRegressor {
       @defaultValue `0`
      */
     ccp_alpha?: any
+
+    /**
+      1: monotonic increase
+     */
+    monotonic_cst?: any[]
   }) {
     this.id = `DecisionTreeRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -136,25 +141,8 @@ except NameError: bridgeDecisionTreeRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DecisionTreeRegressor = {'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}}
+    await this._py
+      .ex`ctor_DecisionTreeRegressor = {'criterion': ${this.opts['criterion'] ?? undefined}, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None}
 
 ctor_DecisionTreeRegressor = {k: v for k, v in ctor_DecisionTreeRegressor.items() if v is not None}`
 
@@ -210,11 +198,8 @@ ctor_DecisionTreeRegressor = {k: v for k, v in ctor_DecisionTreeRegressor.items(
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeRegressor_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeRegressor_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeRegressor_apply = {k: v for k, v in pms_DecisionTreeRegressor_apply.items() if v is not None}`
 
@@ -262,13 +247,7 @@ pms_DecisionTreeRegressor_apply = {k: v for k, v in pms_DecisionTreeRegressor_ap
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeRegressor_cost_complexity_pruning_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+      .ex`pms_DecisionTreeRegressor_cost_complexity_pruning_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DecisionTreeRegressor_cost_complexity_pruning_path = {k: v for k, v in pms_DecisionTreeRegressor_cost_complexity_pruning_path.items() if v is not None}`
 
@@ -311,11 +290,7 @@ pms_DecisionTreeRegressor_cost_complexity_pruning_path = {k: v for k, v in pms_D
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeRegressor_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeRegressor_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeRegressor_decision_path = {k: v for k, v in pms_DecisionTreeRegressor_decision_path.items() if v is not None}`
 
@@ -365,15 +340,8 @@ pms_DecisionTreeRegressor_decision_path = {k: v for k, v in pms_DecisionTreeRegr
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeRegressor_fit = {k: v for k, v in pms_DecisionTreeRegressor_fit.items() if v is not None}`
 
@@ -443,9 +411,7 @@ pms_DecisionTreeRegressor_get_depth = {k: v for k, v in pms_DecisionTreeRegresso
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DecisionTreeRegressor_get_metadata_routing = {k: v for k, v in pms_DecisionTreeRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -517,11 +483,8 @@ pms_DecisionTreeRegressor_get_n_leaves = {k: v for k, v in pms_DecisionTreeRegre
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeRegressor_predict = {k: v for k, v in pms_DecisionTreeRegressor_predict.items() if v is not None}`
 
@@ -566,13 +529,8 @@ pms_DecisionTreeRegressor_predict = {k: v for k, v in pms_DecisionTreeRegressor_
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_DecisionTreeRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DecisionTreeRegressor_score = {k: v for k, v in pms_DecisionTreeRegressor_score.items() if v is not None}`
 
@@ -617,9 +575,7 @@ pms_DecisionTreeRegressor_score = {k: v for k, v in pms_DecisionTreeRegressor_sc
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeRegressor_set_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+      .ex`pms_DecisionTreeRegressor_set_fit_request = {'check_input': ${opts['check_input'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DecisionTreeRegressor_set_fit_request = {k: v for k, v in pms_DecisionTreeRegressor_set_fit_request.items() if v is not None}`
 
@@ -659,9 +615,7 @@ pms_DecisionTreeRegressor_set_fit_request = {k: v for k, v in pms_DecisionTreeRe
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeRegressor_set_predict_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeRegressor_set_predict_request = {'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeRegressor_set_predict_request = {k: v for k, v in pms_DecisionTreeRegressor_set_predict_request.items() if v is not None}`
 
@@ -701,9 +655,7 @@ pms_DecisionTreeRegressor_set_predict_request = {k: v for k, v in pms_DecisionTr
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DecisionTreeRegressor_set_score_request = {k: v for k, v in pms_DecisionTreeRegressor_set_score_request.items() if v is not None}`
 

@@ -107,7 +107,7 @@ export class HalvingGridSearchCV {
     random_state?: number
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -160,25 +160,8 @@ except NameError: bridgeHalvingGridSearchCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HalvingGridSearchCV = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'param_grid': ${this.opts['param_grid'] ?? undefined}, 'factor': ${
-      this.opts['factor'] ?? undefined
-    }, 'resource': ${this.opts['resource'] ?? undefined}, 'max_resources': ${
-      this.opts['max_resources'] ?? undefined
-    }, 'min_resources': ${
-      this.opts['min_resources'] ?? undefined
-    }, 'aggressive_elimination': ${
-      this.opts['aggressive_elimination'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'refit': ${this.opts['refit'] ?? undefined}, 'error_score': ${
-      this.opts['error_score'] ?? undefined
-    }, 'return_train_score': ${
-      this.opts['return_train_score'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_HalvingGridSearchCV = {'estimator': ${this.opts['estimator'] ?? undefined}, 'param_grid': ${this.opts['param_grid'] ?? undefined}, 'factor': ${this.opts['factor'] ?? undefined}, 'resource': ${this.opts['resource'] ?? undefined}, 'max_resources': ${this.opts['max_resources'] ?? undefined}, 'min_resources': ${this.opts['min_resources'] ?? undefined}, 'aggressive_elimination': ${this.opts['aggressive_elimination'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'refit': ${this.opts['refit'] ?? undefined}, 'error_score': ${this.opts['error_score'] ?? undefined}, 'return_train_score': ${this.opts['return_train_score'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_HalvingGridSearchCV = {k: v for k, v in ctor_HalvingGridSearchCV.items() if v is not None}`
 
@@ -231,9 +214,8 @@ ctor_HalvingGridSearchCV = {k: v for k, v in ctor_HalvingGridSearchCV.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingGridSearchCV_decision_function = {k: v for k, v in pms_HalvingGridSearchCV_decision_function.items() if v is not None}`
 
@@ -261,14 +243,9 @@ pms_HalvingGridSearchCV_decision_function = {k: v for k, v in pms_HalvingGridSea
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-     */
-    groups?: ArrayLike
-
-    /**
       Parameters passed to the `fit` method of the estimator.
      */
-    fit_params?: any
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -281,13 +258,8 @@ pms_HalvingGridSearchCV_decision_function = {k: v for k, v in pms_HalvingGridSea
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_HalvingGridSearchCV_fit = {k: v for k, v in pms_HalvingGridSearchCV_fit.items() if v is not None}`
 
@@ -307,7 +279,7 @@ pms_HalvingGridSearchCV_fit = {k: v for k, v in pms_HalvingGridSearchCV_fit.item
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -325,9 +297,7 @@ pms_HalvingGridSearchCV_fit = {k: v for k, v in pms_HalvingGridSearchCV_fit.item
 
     // set up method params
     await this._py
-      .ex`pms_HalvingGridSearchCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_HalvingGridSearchCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HalvingGridSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingGridSearchCV_get_metadata_routing.items() if v is not None}`
 
@@ -349,6 +319,11 @@ pms_HalvingGridSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingGrid
     /**
       Must fulfill the input assumptions of the underlying estimator.
      */
+    X?: any
+
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
     Xt?: any
   }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
@@ -364,9 +339,8 @@ pms_HalvingGridSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingGrid
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_inverse_transform = {'Xt': ${
-      opts['Xt'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_inverse_transform = {'X': ${opts['X'] ?? undefined}, 'Xt': ${opts['Xt'] ?? undefined}}
 
 pms_HalvingGridSearchCV_inverse_transform = {k: v for k, v in pms_HalvingGridSearchCV_inverse_transform.items() if v is not None}`
 
@@ -401,9 +375,8 @@ pms_HalvingGridSearchCV_inverse_transform = {k: v for k, v in pms_HalvingGridSea
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingGridSearchCV_predict = {k: v for k, v in pms_HalvingGridSearchCV_predict.items() if v is not None}`
 
@@ -440,9 +413,8 @@ pms_HalvingGridSearchCV_predict = {k: v for k, v in pms_HalvingGridSearchCV_pred
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_predict_log_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_predict_log_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingGridSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingGridSearchCV_predict_log_proba.items() if v is not None}`
 
@@ -479,9 +451,8 @@ pms_HalvingGridSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingGridSea
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_predict_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingGridSearchCV_predict_proba = {k: v for k, v in pms_HalvingGridSearchCV_predict_proba.items() if v is not None}`
 
@@ -509,6 +480,11 @@ pms_HalvingGridSearchCV_predict_proba = {k: v for k, v in pms_HalvingGridSearchC
       Target relative to X for classification or regression; `undefined` for unsupervised learning.
      */
     y?: ArrayLike[]
+
+    /**
+      Parameters to be passed to the underlying scorer(s).
+     */
+    params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
@@ -521,11 +497,8 @@ pms_HalvingGridSearchCV_predict_proba = {k: v for k, v in pms_HalvingGridSearchC
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_HalvingGridSearchCV_score = {k: v for k, v in pms_HalvingGridSearchCV_score.items() if v is not None}`
 
@@ -562,9 +535,8 @@ pms_HalvingGridSearchCV_score = {k: v for k, v in pms_HalvingGridSearchCV_score.
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingGridSearchCV_score_samples = {k: v for k, v in pms_HalvingGridSearchCV_score_samples.items() if v is not None}`
 
@@ -575,47 +547,6 @@ pms_HalvingGridSearchCV_score_samples = {k: v for k, v in pms_HalvingGridSearchC
     // convert the result from python to node.js
     return this
       ._py`res_HalvingGridSearchCV_score_samples.tolist() if hasattr(res_HalvingGridSearchCV_score_samples, 'tolist') else res_HalvingGridSearchCV_score_samples`
-  }
-
-  /**
-    Request metadata passed to the `fit` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_fit_request(opts: {
-    /**
-      Metadata routing for `groups` parameter in `fit`.
-     */
-    groups?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This HalvingGridSearchCV instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'HalvingGridSearchCV must call init() before set_fit_request()'
-      )
-    }
-
-    // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_set_fit_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
-
-pms_HalvingGridSearchCV_set_fit_request = {k: v for k, v in pms_HalvingGridSearchCV_set_fit_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_HalvingGridSearchCV_set_fit_request = bridgeHalvingGridSearchCV[${this.id}].set_fit_request(**pms_HalvingGridSearchCV_set_fit_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_HalvingGridSearchCV_set_fit_request.tolist() if hasattr(res_HalvingGridSearchCV_set_fit_request, 'tolist') else res_HalvingGridSearchCV_set_fit_request`
   }
 
   /**
@@ -640,9 +571,8 @@ pms_HalvingGridSearchCV_set_fit_request = {k: v for k, v in pms_HalvingGridSearc
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingGridSearchCV_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingGridSearchCV_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingGridSearchCV_transform = {k: v for k, v in pms_HalvingGridSearchCV_transform.items() if v is not None}`
 

@@ -99,11 +99,8 @@ except NameError: bridgeGaussianRandomProjection = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianRandomProjection = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'compute_inverse_components': ${
-      this.opts['compute_inverse_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_GaussianRandomProjection = {'n_components': ${this.opts['n_components'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'compute_inverse_components': ${this.opts['compute_inverse_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_GaussianRandomProjection = {k: v for k, v in ctor_GaussianRandomProjection.items() if v is not None}`
 
@@ -157,9 +154,8 @@ ctor_GaussianRandomProjection = {k: v for k, v in ctor_GaussianRandomProjection.
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianRandomProjection_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianRandomProjection_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GaussianRandomProjection_fit = {k: v for k, v in pms_GaussianRandomProjection_fit.items() if v is not None}`
 
@@ -207,13 +203,7 @@ pms_GaussianRandomProjection_fit = {k: v for k, v in pms_GaussianRandomProjectio
 
     // set up method params
     await this._py
-      .ex`pms_GaussianRandomProjection_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_GaussianRandomProjection_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_GaussianRandomProjection_fit_transform = {k: v for k, v in pms_GaussianRandomProjection_fit_transform.items() if v is not None}`
 
@@ -251,9 +241,7 @@ pms_GaussianRandomProjection_fit_transform = {k: v for k, v in pms_GaussianRando
 
     // set up method params
     await this._py
-      .ex`pms_GaussianRandomProjection_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_GaussianRandomProjection_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_GaussianRandomProjection_get_feature_names_out = {k: v for k, v in pms_GaussianRandomProjection_get_feature_names_out.items() if v is not None}`
 
@@ -291,9 +279,7 @@ pms_GaussianRandomProjection_get_feature_names_out = {k: v for k, v in pms_Gauss
 
     // set up method params
     await this._py
-      .ex`pms_GaussianRandomProjection_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GaussianRandomProjection_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianRandomProjection_get_metadata_routing = {k: v for k, v in pms_GaussianRandomProjection_get_metadata_routing.items() if v is not None}`
 
@@ -333,9 +319,7 @@ pms_GaussianRandomProjection_get_metadata_routing = {k: v for k, v in pms_Gaussi
 
     // set up method params
     await this._py
-      .ex`pms_GaussianRandomProjection_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GaussianRandomProjection_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianRandomProjection_inverse_transform = {k: v for k, v in pms_GaussianRandomProjection_inverse_transform.items() if v is not None}`
 
@@ -357,7 +341,7 @@ pms_GaussianRandomProjection_inverse_transform = {k: v for k, v in pms_GaussianR
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -372,9 +356,8 @@ pms_GaussianRandomProjection_inverse_transform = {k: v for k, v in pms_GaussianR
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianRandomProjection_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianRandomProjection_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_GaussianRandomProjection_set_output = {k: v for k, v in pms_GaussianRandomProjection_set_output.items() if v is not None}`
 
@@ -409,9 +392,8 @@ pms_GaussianRandomProjection_set_output = {k: v for k, v in pms_GaussianRandomPr
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianRandomProjection_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianRandomProjection_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianRandomProjection_transform = {k: v for k, v in pms_GaussianRandomProjection_transform.items() if v is not None}`
 

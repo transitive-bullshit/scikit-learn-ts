@@ -126,23 +126,8 @@ except NameError: bridgeFactorAnalysis = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_FactorAnalysis = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'noise_variance_init': np.array(${
-      this.opts['noise_variance_init'] ?? undefined
-    }) if ${
-      this.opts['noise_variance_init'] !== undefined
-    } else None, 'svd_method': ${
-      this.opts['svd_method'] ?? undefined
-    }, 'iterated_power': ${
-      this.opts['iterated_power'] ?? undefined
-    }, 'rotation': ${this.opts['rotation'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_FactorAnalysis = {'n_components': ${this.opts['n_components'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'noise_variance_init': np.array(${this.opts['noise_variance_init'] ?? undefined}) if ${this.opts['noise_variance_init'] !== undefined} else None, 'svd_method': ${this.opts['svd_method'] ?? undefined}, 'iterated_power': ${this.opts['iterated_power'] ?? undefined}, 'rotation': ${this.opts['rotation'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_FactorAnalysis = {k: v for k, v in ctor_FactorAnalysis.items() if v is not None}`
 
@@ -194,9 +179,8 @@ ctor_FactorAnalysis = {k: v for k, v in ctor_FactorAnalysis.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_FactorAnalysis_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_FactorAnalysis_fit = {k: v for k, v in pms_FactorAnalysis_fit.items() if v is not None}`
 
@@ -239,13 +223,8 @@ pms_FactorAnalysis_fit = {k: v for k, v in pms_FactorAnalysis_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FactorAnalysis_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_FactorAnalysis_fit_transform = {k: v for k, v in pms_FactorAnalysis_fit_transform.items() if v is not None}`
 
@@ -278,9 +257,8 @@ pms_FactorAnalysis_fit_transform = {k: v for k, v in pms_FactorAnalysis_fit_tran
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_get_covariance = {'cov': np.array(${
-      opts['cov'] ?? undefined
-    }) if ${opts['cov'] !== undefined} else None}
+    await this._py
+      .ex`pms_FactorAnalysis_get_covariance = {'cov': np.array(${opts['cov'] ?? undefined}) if ${opts['cov'] !== undefined} else None}
 
 pms_FactorAnalysis_get_covariance = {k: v for k, v in pms_FactorAnalysis_get_covariance.items() if v is not None}`
 
@@ -316,9 +294,7 @@ pms_FactorAnalysis_get_covariance = {k: v for k, v in pms_FactorAnalysis_get_cov
 
     // set up method params
     await this._py
-      .ex`pms_FactorAnalysis_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_FactorAnalysis_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_FactorAnalysis_get_feature_names_out = {k: v for k, v in pms_FactorAnalysis_get_feature_names_out.items() if v is not None}`
 
@@ -353,9 +329,8 @@ pms_FactorAnalysis_get_feature_names_out = {k: v for k, v in pms_FactorAnalysis_
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FactorAnalysis_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_FactorAnalysis_get_metadata_routing = {k: v for k, v in pms_FactorAnalysis_get_metadata_routing.items() if v is not None}`
 
@@ -387,9 +362,7 @@ pms_FactorAnalysis_get_metadata_routing = {k: v for k, v in pms_FactorAnalysis_g
 
     // set up method params
     await this._py
-      .ex`pms_FactorAnalysis_get_precision = {'precision': np.array(${
-      opts['precision'] ?? undefined
-    }) if ${opts['precision'] !== undefined} else None}
+      .ex`pms_FactorAnalysis_get_precision = {'precision': np.array(${opts['precision'] ?? undefined}) if ${opts['precision'] !== undefined} else None}
 
 pms_FactorAnalysis_get_precision = {k: v for k, v in pms_FactorAnalysis_get_precision.items() if v is not None}`
 
@@ -425,9 +398,8 @@ pms_FactorAnalysis_get_precision = {k: v for k, v in pms_FactorAnalysis_get_prec
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_FactorAnalysis_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_FactorAnalysis_score = {k: v for k, v in pms_FactorAnalysis_score.items() if v is not None}`
 
@@ -458,9 +430,8 @@ pms_FactorAnalysis_score = {k: v for k, v in pms_FactorAnalysis_score.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_FactorAnalysis_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_FactorAnalysis_score_samples = {k: v for k, v in pms_FactorAnalysis_score_samples.items() if v is not None}`
 
@@ -482,7 +453,7 @@ pms_FactorAnalysis_score_samples = {k: v for k, v in pms_FactorAnalysis_score_sa
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
@@ -493,9 +464,8 @@ pms_FactorAnalysis_score_samples = {k: v for k, v in pms_FactorAnalysis_score_sa
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_FactorAnalysis_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_FactorAnalysis_set_output = {k: v for k, v in pms_FactorAnalysis_set_output.items() if v is not None}`
 
@@ -528,9 +498,8 @@ pms_FactorAnalysis_set_output = {k: v for k, v in pms_FactorAnalysis_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_FactorAnalysis_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_FactorAnalysis_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_FactorAnalysis_transform = {k: v for k, v in pms_FactorAnalysis_transform.items() if v is not None}`
 

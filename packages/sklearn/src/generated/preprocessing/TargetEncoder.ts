@@ -8,11 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Target Encoder for regression and classification targets.
 
-  Each category is encoded based on a shrunk estimate of the average target values for observations belonging to the category. The encoding scheme mixes the global target mean with the target mean conditioned on the value of the category. [\[MIC\]](#rf862141e5a0c-mic)
+  Each category is encoded based on a shrunk estimate of the average target values for observations belonging to the category. The encoding scheme mixes the global target mean with the target mean conditioned on the value of the category (see [\[MIC\]](#rf862141e5a0c-mic)).
+
+  When the target type is “multiclass”, encodings are based on the conditional probability estimate for each class. The target is first binarized using the “one-vs-all” scheme via [`LabelBinarizer`](sklearn.preprocessing.LabelBinarizer.html#sklearn.preprocessing.LabelBinarizer "sklearn.preprocessing.LabelBinarizer"), then the average target value for each class and each category is used for encoding, resulting in `n\_features` \* `n\_classes` encoded output features.
 
   [`TargetEncoder`](#sklearn.preprocessing.TargetEncoder "sklearn.preprocessing.TargetEncoder") considers missing values, such as `np.nan` or `undefined`, as another category and encodes them like any other category. Categories that are not seen during [`fit`](#sklearn.preprocessing.TargetEncoder.fit "sklearn.preprocessing.TargetEncoder.fit") are encoded with the target mean, i.e. `target\_mean\_`.
 
-  For a demo on the importance of the `TargetEncoder` internal cross-fitting, see ref:`sphx\_glr\_auto\_examples\_preprocessing\_plot\_target\_encoder\_cross\_val.py`. For a comparison of different encoders, refer to [Comparing Target Encoder with Other Encoders](../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py). Read more in the [User Guide](../preprocessing.html#target-encoder).
+  For a demo on the importance of the `TargetEncoder` internal cross-fitting, see [Target Encoder’s Internal Cross fitting](../../auto_examples/preprocessing/plot_target_encoder_cross_val.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-cross-val-py). For a comparison of different encoders, refer to [Comparing Target Encoder with Other Encoders](../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py). Read more in the [User Guide](../preprocessing.html#target-encoder).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.TargetEncoder.html)
  */
@@ -37,7 +39,7 @@ export class TargetEncoder {
 
       @defaultValue `'auto'`
      */
-    target_type?: 'auto' | 'continuous' | 'binary'
+    target_type?: 'auto' | 'continuous' | 'binary' | 'multiclass'
 
     /**
       The amount of mixing of the target mean conditioned on the value of the category with the global target mean. A larger `smooth` value will put more weight on the global target mean. If `"auto"`, then `smooth` is set to an empirical Bayes estimate.
@@ -105,15 +107,8 @@ except NameError: bridgeTargetEncoder = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TargetEncoder = {'categories': np.array(${
-      this.opts['categories'] ?? undefined
-    }) if ${this.opts['categories'] !== undefined} else None, 'target_type': ${
-      this.opts['target_type'] ?? undefined
-    }, 'smooth': ${this.opts['smooth'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_TargetEncoder = {'categories': np.array(${this.opts['categories'] ?? undefined}) if ${this.opts['categories'] !== undefined} else None, 'target_type': ${this.opts['target_type'] ?? undefined}, 'smooth': ${this.opts['smooth'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_TargetEncoder = {k: v for k, v in ctor_TargetEncoder.items() if v is not None}`
 
@@ -165,11 +160,8 @@ ctor_TargetEncoder = {k: v for k, v in ctor_TargetEncoder.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_TargetEncoder_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_TargetEncoder_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_TargetEncoder_fit = {k: v for k, v in pms_TargetEncoder_fit.items() if v is not None}`
 
@@ -205,11 +197,8 @@ pms_TargetEncoder_fit = {k: v for k, v in pms_TargetEncoder_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_TargetEncoder_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_TargetEncoder_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_TargetEncoder_fit_transform = {k: v for k, v in pms_TargetEncoder_fit_transform.items() if v is not None}`
 
@@ -227,7 +216,7 @@ pms_TargetEncoder_fit_transform = {k: v for k, v in pms_TargetEncoder_fit_transf
    */
   async get_feature_names_out(opts: {
     /**
-      Input features.
+      Not used, present here for API consistency by convention.
      */
     input_features?: any
   }): Promise<any> {
@@ -243,9 +232,7 @@ pms_TargetEncoder_fit_transform = {k: v for k, v in pms_TargetEncoder_fit_transf
 
     // set up method params
     await this._py
-      .ex`pms_TargetEncoder_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_TargetEncoder_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_TargetEncoder_get_feature_names_out = {k: v for k, v in pms_TargetEncoder_get_feature_names_out.items() if v is not None}`
 
@@ -280,9 +267,8 @@ pms_TargetEncoder_get_feature_names_out = {k: v for k, v in pms_TargetEncoder_ge
     }
 
     // set up method params
-    await this._py.ex`pms_TargetEncoder_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TargetEncoder_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TargetEncoder_get_metadata_routing = {k: v for k, v in pms_TargetEncoder_get_metadata_routing.items() if v is not None}`
 
@@ -304,7 +290,7 @@ pms_TargetEncoder_get_metadata_routing = {k: v for k, v in pms_TargetEncoder_get
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TargetEncoder instance has already been disposed')
@@ -315,9 +301,8 @@ pms_TargetEncoder_get_metadata_routing = {k: v for k, v in pms_TargetEncoder_get
     }
 
     // set up method params
-    await this._py.ex`pms_TargetEncoder_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TargetEncoder_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_TargetEncoder_set_output = {k: v for k, v in pms_TargetEncoder_set_output.items() if v is not None}`
 
@@ -348,9 +333,8 @@ pms_TargetEncoder_set_output = {k: v for k, v in pms_TargetEncoder_set_output.it
     }
 
     // set up method params
-    await this._py.ex`pms_TargetEncoder_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_TargetEncoder_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_TargetEncoder_transform = {k: v for k, v in pms_TargetEncoder_transform.items() if v is not None}`
 
@@ -364,9 +348,9 @@ pms_TargetEncoder_transform = {k: v for k, v in pms_TargetEncoder_transform.item
   }
 
   /**
-    Encodings learnt on all of `X`. For feature `i`, `encodings\_\[i\]` are the encodings matching the categories listed in `categories\_\[i\]`.
+    Encodings learnt on all of `X`. For feature `i`, `encodings\_\[i\]` are the encodings matching the categories listed in `categories\_\[i\]`. When `target\_type\_` is “multiclass”, the encoding for feature `i` and class `j` is stored in `encodings\_\[j + (i \* len(classes\_))\]`. E.g., for 2 features (f) and 3 classes (c), encodings are ordered: f0\_c0, f0\_c1, f0\_c2, f1\_c0, f1\_c1, f1\_c2,
    */
-  get encodings_(): Promise<any> {
+  get encodings_(): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This TargetEncoder instance has already been disposed')
     }
@@ -389,7 +373,7 @@ pms_TargetEncoder_transform = {k: v for k, v in pms_TargetEncoder_transform.item
   }
 
   /**
-    The categories of each feature determined during fitting or specified in `categories` (in order of the features in `X` and corresponding with the output of [`transform`](#sklearn.preprocessing.TargetEncoder.transform "sklearn.preprocessing.TargetEncoder.transform")).
+    The categories of each input feature determined during fitting or specified in `categories` (in order of the features in `X` and corresponding with the output of [`transform`](#sklearn.preprocessing.TargetEncoder.transform "sklearn.preprocessing.TargetEncoder.transform")).
    */
   get categories_(): Promise<any> {
     if (this._isDisposed) {
@@ -510,6 +494,31 @@ pms_TargetEncoder_transform = {k: v for k, v in pms_TargetEncoder_transform.item
       // convert the result from python to node.js
       return this
         ._py`attr_TargetEncoder_feature_names_in_.tolist() if hasattr(attr_TargetEncoder_feature_names_in_, 'tolist') else attr_TargetEncoder_feature_names_in_`
+    })()
+  }
+
+  /**
+    If `target\_type\_` is ‘binary’ or ‘multiclass’, holds the label for each class, otherwise `undefined`.
+   */
+  get classes_(): Promise<NDArray> {
+    if (this._isDisposed) {
+      throw new Error('This TargetEncoder instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'TargetEncoder must call init() before accessing classes_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_TargetEncoder_classes_ = bridgeTargetEncoder[${this.id}].classes_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_TargetEncoder_classes_.tolist() if hasattr(attr_TargetEncoder_classes_, 'tolist') else attr_TargetEncoder_classes_`
     })()
   }
 }

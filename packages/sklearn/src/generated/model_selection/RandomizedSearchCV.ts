@@ -54,7 +54,7 @@ export class RandomizedSearchCV {
     scoring?: string | any[] | any
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -153,23 +153,8 @@ except NameError: bridgeRandomizedSearchCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RandomizedSearchCV = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'param_distributions': ${
-      this.opts['param_distributions'] ?? undefined
-    }, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'refit': ${
-      this.opts['refit'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'pre_dispatch': ${
-      this.opts['pre_dispatch'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'error_score': ${
-      this.opts['error_score'] ?? undefined
-    }, 'return_train_score': ${this.opts['return_train_score'] ?? undefined}}
+    await this._py
+      .ex`ctor_RandomizedSearchCV = {'estimator': ${this.opts['estimator'] ?? undefined}, 'param_distributions': ${this.opts['param_distributions'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'refit': ${this.opts['refit'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'pre_dispatch': ${this.opts['pre_dispatch'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'error_score': ${this.opts['error_score'] ?? undefined}, 'return_train_score': ${this.opts['return_train_score'] ?? undefined}}
 
 ctor_RandomizedSearchCV = {k: v for k, v in ctor_RandomizedSearchCV.items() if v is not None}`
 
@@ -222,9 +207,8 @@ ctor_RandomizedSearchCV = {k: v for k, v in ctor_RandomizedSearchCV.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearchCV_decision_function.items() if v is not None}`
 
@@ -242,7 +226,7 @@ pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearc
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For precomputed kernel or distance matrix, the expected shape of X is (n\_samples, n\_samples).
      */
     X?: ArrayLike[]
 
@@ -252,16 +236,11 @@ pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearc
     y?: ArrayLike[]
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-     */
-    groups?: ArrayLike
-
-    /**
-      Parameters passed to the `fit` method of the estimator.
+      Parameters passed to the `fit` method of the estimator, the scorer, and the CV splitter.
 
       If a fit parameter is an array-like whose length is equal to `num\_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample\_weight](../../glossary.html#term-sample_weight) parameter is split because `len(sample\_weights) \= len(X)`.
      */
-    fit_params?: any
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -274,15 +253,8 @@ pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearc
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RandomizedSearchCV_fit = {k: v for k, v in pms_RandomizedSearchCV_fit.items() if v is not None}`
 
@@ -302,7 +274,7 @@ pms_RandomizedSearchCV_fit = {k: v for k, v in pms_RandomizedSearchCV_fit.items(
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -320,9 +292,7 @@ pms_RandomizedSearchCV_fit = {k: v for k, v in pms_RandomizedSearchCV_fit.items(
 
     // set up method params
     await this._py
-      .ex`pms_RandomizedSearchCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RandomizedSearchCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RandomizedSearchCV_get_metadata_routing = {k: v for k, v in pms_RandomizedSearchCV_get_metadata_routing.items() if v is not None}`
 
@@ -344,6 +314,11 @@ pms_RandomizedSearchCV_get_metadata_routing = {k: v for k, v in pms_RandomizedSe
     /**
       Must fulfill the input assumptions of the underlying estimator.
      */
+    X?: any
+
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
     Xt?: any
   }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
@@ -359,9 +334,8 @@ pms_RandomizedSearchCV_get_metadata_routing = {k: v for k, v in pms_RandomizedSe
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_inverse_transform = {'Xt': ${
-      opts['Xt'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_inverse_transform = {'X': ${opts['X'] ?? undefined}, 'Xt': ${opts['Xt'] ?? undefined}}
 
 pms_RandomizedSearchCV_inverse_transform = {k: v for k, v in pms_RandomizedSearchCV_inverse_transform.items() if v is not None}`
 
@@ -396,9 +370,8 @@ pms_RandomizedSearchCV_inverse_transform = {k: v for k, v in pms_RandomizedSearc
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_predict = {k: v for k, v in pms_RandomizedSearchCV_predict.items() if v is not None}`
 
@@ -435,9 +408,8 @@ pms_RandomizedSearchCV_predict = {k: v for k, v in pms_RandomizedSearchCV_predic
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_predict_log_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_predict_log_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_predict_log_proba = {k: v for k, v in pms_RandomizedSearchCV_predict_log_proba.items() if v is not None}`
 
@@ -474,9 +446,8 @@ pms_RandomizedSearchCV_predict_log_proba = {k: v for k, v in pms_RandomizedSearc
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_predict_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_predict_proba.items() if v is not None}`
 
@@ -504,6 +475,11 @@ pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_
       Target relative to X for classification or regression; `undefined` for unsupervised learning.
      */
     y?: ArrayLike[]
+
+    /**
+      Parameters to be passed to the underlying scorer(s).
+     */
+    params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
@@ -516,11 +492,8 @@ pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomizedSearchCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RandomizedSearchCV_score = {k: v for k, v in pms_RandomizedSearchCV_score.items() if v is not None}`
 
@@ -557,9 +530,8 @@ pms_RandomizedSearchCV_score = {k: v for k, v in pms_RandomizedSearchCV_score.it
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_score_samples = {k: v for k, v in pms_RandomizedSearchCV_score_samples.items() if v is not None}`
 
@@ -570,47 +542,6 @@ pms_RandomizedSearchCV_score_samples = {k: v for k, v in pms_RandomizedSearchCV_
     // convert the result from python to node.js
     return this
       ._py`res_RandomizedSearchCV_score_samples.tolist() if hasattr(res_RandomizedSearchCV_score_samples, 'tolist') else res_RandomizedSearchCV_score_samples`
-  }
-
-  /**
-    Request metadata passed to the `fit` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_fit_request(opts: {
-    /**
-      Metadata routing for `groups` parameter in `fit`.
-     */
-    groups?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This RandomizedSearchCV instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'RandomizedSearchCV must call init() before set_fit_request()'
-      )
-    }
-
-    // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_set_fit_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
-
-pms_RandomizedSearchCV_set_fit_request = {k: v for k, v in pms_RandomizedSearchCV_set_fit_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_RandomizedSearchCV_set_fit_request = bridgeRandomizedSearchCV[${this.id}].set_fit_request(**pms_RandomizedSearchCV_set_fit_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_RandomizedSearchCV_set_fit_request.tolist() if hasattr(res_RandomizedSearchCV_set_fit_request, 'tolist') else res_RandomizedSearchCV_set_fit_request`
   }
 
   /**
@@ -635,9 +566,8 @@ pms_RandomizedSearchCV_set_fit_request = {k: v for k, v in pms_RandomizedSearchC
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_transform.items() if v is not None}`
 

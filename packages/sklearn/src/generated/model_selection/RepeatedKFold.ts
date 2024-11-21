@@ -82,11 +82,8 @@ except NameError: bridgeRepeatedKFold = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RepeatedKFold = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }, 'n_repeats': ${this.opts['n_repeats'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_RepeatedKFold = {'n_splits': ${this.opts['n_splits'] ?? undefined}, 'n_repeats': ${this.opts['n_repeats'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_RepeatedKFold = {k: v for k, v in ctor_RepeatedKFold.items() if v is not None}`
 
@@ -137,9 +134,8 @@ ctor_RepeatedKFold = {k: v for k, v in ctor_RepeatedKFold.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_RepeatedKFold_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RepeatedKFold_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RepeatedKFold_get_metadata_routing = {k: v for k, v in pms_RepeatedKFold_get_metadata_routing.items() if v is not None}`
 
@@ -153,7 +149,7 @@ pms_RepeatedKFold_get_metadata_routing = {k: v for k, v in pms_RepeatedKFold_get
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -180,11 +176,8 @@ pms_RepeatedKFold_get_metadata_routing = {k: v for k, v in pms_RepeatedKFold_get
     }
 
     // set up method params
-    await this._py.ex`pms_RepeatedKFold_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_RepeatedKFold_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_RepeatedKFold_get_n_splits = {k: v for k, v in pms_RepeatedKFold_get_n_splits.items() if v is not None}`
 
@@ -198,7 +191,7 @@ pms_RepeatedKFold_get_n_splits = {k: v for k, v in pms_RepeatedKFold_get_n_split
   }
 
   /**
-    Generates indices to split data into training and test set.
+    Generate indices to split data into training and test set.
    */
   async split(opts: {
     /**
@@ -212,9 +205,9 @@ pms_RepeatedKFold_get_n_splits = {k: v for k, v in pms_RepeatedKFold_get_n_split
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set.
+      Always ignored, exists for compatibility.
      */
-    groups?: ArrayLike
+    groups?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This RepeatedKFold instance has already been disposed')
@@ -225,13 +218,8 @@ pms_RepeatedKFold_get_n_splits = {k: v for k, v in pms_RepeatedKFold_get_n_split
     }
 
     // set up method params
-    await this._py.ex`pms_RepeatedKFold_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_RepeatedKFold_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_RepeatedKFold_split = {k: v for k, v in pms_RepeatedKFold_split.items() if v is not None}`
 

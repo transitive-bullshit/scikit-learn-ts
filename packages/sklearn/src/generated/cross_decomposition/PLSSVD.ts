@@ -84,11 +84,8 @@ except NameError: bridgePLSSVD = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PLSSVD = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'scale': ${this.opts['scale'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PLSSVD = {'n_components': ${this.opts['n_components'] ?? undefined}, 'scale': ${this.opts['scale'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_PLSSVD = {k: v for k, v in ctor_PLSSVD.items() if v is not None}`
 
@@ -128,6 +125,11 @@ ctor_PLSSVD = {k: v for k, v in ctor_PLSSVD.items() if v is not None}`
     /**
       Targets.
      */
+    y?: ArrayLike
+
+    /**
+      Targets.
+     */
     Y?: ArrayLike
   }): Promise<any> {
     if (this._isDisposed) {
@@ -139,11 +141,8 @@ ctor_PLSSVD = {k: v for k, v in ctor_PLSSVD.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSSVD_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSSVD_fit = {k: v for k, v in pms_PLSSVD_fit.items() if v is not None}`
 
@@ -179,11 +178,8 @@ pms_PLSSVD_fit = {k: v for k, v in pms_PLSSVD_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSSVD_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_PLSSVD_fit_transform = {k: v for k, v in pms_PLSSVD_fit_transform.items() if v is not None}`
 
@@ -216,9 +212,8 @@ pms_PLSSVD_fit_transform = {k: v for k, v in pms_PLSSVD_fit_transform.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSSVD_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PLSSVD_get_feature_names_out = {k: v for k, v in pms_PLSSVD_get_feature_names_out.items() if v is not None}`
 
@@ -251,9 +246,8 @@ pms_PLSSVD_get_feature_names_out = {k: v for k, v in pms_PLSSVD_get_feature_name
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSSVD_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PLSSVD_get_metadata_routing = {k: v for k, v in pms_PLSSVD_get_metadata_routing.items() if v is not None}`
 
@@ -275,7 +269,7 @@ pms_PLSSVD_get_metadata_routing = {k: v for k, v in pms_PLSSVD_get_metadata_rout
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSSVD instance has already been disposed')
@@ -286,9 +280,8 @@ pms_PLSSVD_get_metadata_routing = {k: v for k, v in pms_PLSSVD_get_metadata_rout
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSSVD_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PLSSVD_set_output = {k: v for k, v in pms_PLSSVD_set_output.items() if v is not None}`
 
@@ -313,6 +306,11 @@ pms_PLSSVD_set_output = {k: v for k, v in pms_PLSSVD_set_output.items() if v is 
     /**
       Targets.
      */
+    y?: ArrayLike
+
+    /**
+      Targets.
+     */
     Y?: ArrayLike
   }): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -324,11 +322,8 @@ pms_PLSSVD_set_output = {k: v for k, v in pms_PLSSVD_set_output.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSSVD_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is not None}`
 

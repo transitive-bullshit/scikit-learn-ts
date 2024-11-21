@@ -64,7 +64,7 @@ export class DecisionTreeClassifier {
     /**
       The number of features to consider when looking for the best split:
      */
-    max_features?: number | 'auto' | 'sqrt' | 'log2'
+    max_features?: number | 'sqrt' | 'log2'
 
     /**
       Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
@@ -104,6 +104,11 @@ export class DecisionTreeClassifier {
       @defaultValue `0`
      */
     ccp_alpha?: any
+
+    /**
+      1: monotonic increase
+     */
+    monotonic_cst?: any[]
   }) {
     this.id = `DecisionTreeClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -149,27 +154,8 @@ except NameError: bridgeDecisionTreeClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DecisionTreeClassifier = {'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}}
+    await this._py
+      .ex`ctor_DecisionTreeClassifier = {'criterion': ${this.opts['criterion'] ?? undefined}, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None}
 
 ctor_DecisionTreeClassifier = {k: v for k, v in ctor_DecisionTreeClassifier.items() if v is not None}`
 
@@ -225,11 +211,8 @@ ctor_DecisionTreeClassifier = {k: v for k, v in ctor_DecisionTreeClassifier.item
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_apply = {k: v for k, v in pms_DecisionTreeClassifier_apply.items() if v is not None}`
 
@@ -277,13 +260,7 @@ pms_DecisionTreeClassifier_apply = {k: v for k, v in pms_DecisionTreeClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_cost_complexity_pruning_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+      .ex`pms_DecisionTreeClassifier_cost_complexity_pruning_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DecisionTreeClassifier_cost_complexity_pruning_path = {k: v for k, v in pms_DecisionTreeClassifier_cost_complexity_pruning_path.items() if v is not None}`
 
@@ -326,11 +303,7 @@ pms_DecisionTreeClassifier_cost_complexity_pruning_path = {k: v for k, v in pms_
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_decision_path = {k: v for k, v in pms_DecisionTreeClassifier_decision_path.items() if v is not None}`
 
@@ -380,15 +353,8 @@ pms_DecisionTreeClassifier_decision_path = {k: v for k, v in pms_DecisionTreeCla
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_fit = {k: v for k, v in pms_DecisionTreeClassifier_fit.items() if v is not None}`
 
@@ -458,9 +424,7 @@ pms_DecisionTreeClassifier_get_depth = {k: v for k, v in pms_DecisionTreeClassif
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DecisionTreeClassifier_get_metadata_routing = {k: v for k, v in pms_DecisionTreeClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -534,11 +498,8 @@ pms_DecisionTreeClassifier_get_n_leaves = {k: v for k, v in pms_DecisionTreeClas
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_predict = {k: v for k, v in pms_DecisionTreeClassifier_predict.items() if v is not None}`
 
@@ -574,9 +535,7 @@ pms_DecisionTreeClassifier_predict = {k: v for k, v in pms_DecisionTreeClassifie
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_DecisionTreeClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_DecisionTreeClassifier_predict_log_proba = {k: v for k, v in pms_DecisionTreeClassifier_predict_log_proba.items() if v is not None}`
 
@@ -621,11 +580,7 @@ pms_DecisionTreeClassifier_predict_log_proba = {k: v for k, v in pms_DecisionTre
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_predict_proba = {k: v for k, v in pms_DecisionTreeClassifier_predict_proba.items() if v is not None}`
 
@@ -670,13 +625,8 @@ pms_DecisionTreeClassifier_predict_proba = {k: v for k, v in pms_DecisionTreeCla
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DecisionTreeClassifier_score = {k: v for k, v in pms_DecisionTreeClassifier_score.items() if v is not None}`
 
@@ -721,9 +671,7 @@ pms_DecisionTreeClassifier_score = {k: v for k, v in pms_DecisionTreeClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+      .ex`pms_DecisionTreeClassifier_set_fit_request = {'check_input': ${opts['check_input'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_fit_request = {k: v for k, v in pms_DecisionTreeClassifier_set_fit_request.items() if v is not None}`
 
@@ -763,9 +711,7 @@ pms_DecisionTreeClassifier_set_fit_request = {k: v for k, v in pms_DecisionTreeC
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_predict_proba_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_set_predict_proba_request = {'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_predict_proba_request = {k: v for k, v in pms_DecisionTreeClassifier_set_predict_proba_request.items() if v is not None}`
 
@@ -805,9 +751,7 @@ pms_DecisionTreeClassifier_set_predict_proba_request = {k: v for k, v in pms_Dec
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_predict_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_set_predict_request = {'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_predict_request = {k: v for k, v in pms_DecisionTreeClassifier_set_predict_request.items() if v is not None}`
 
@@ -847,9 +791,7 @@ pms_DecisionTreeClassifier_set_predict_request = {k: v for k, v in pms_DecisionT
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_score_request = {k: v for k, v in pms_DecisionTreeClassifier_set_score_request.items() if v is not None}`
 

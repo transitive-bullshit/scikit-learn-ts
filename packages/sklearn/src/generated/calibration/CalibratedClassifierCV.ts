@@ -8,13 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Probability calibration with isotonic regression or logistic regression.
 
-  This class uses cross-validation to both estimate the parameters of a classifier and subsequently calibrate a classifier. With default `ensemble=True`, for each cv split it fits a copy of the base estimator to the training subset, and calibrates it using the testing subset. For prediction, predicted probabilities are averaged across these individual calibrated classifiers. When `ensemble=False`, cross-validation is used to obtain unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. For prediction, the base estimator, trained using all the data, is used. This is the method implemented when `probabilities=True` for [`sklearn.svm`](../classes.html#module-sklearn.svm "sklearn.svm") estimators.
+  This class uses cross-validation to both estimate the parameters of a classifier and subsequently calibrate a classifier. With default `ensemble=True`, for each cv split it fits a copy of the base estimator to the training subset, and calibrates it using the testing subset. For prediction, predicted probabilities are averaged across these individual calibrated classifiers. When `ensemble=False`, cross-validation is used to obtain unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. For prediction, the base estimator, trained using all the data, is used. This is the prediction method implemented when `probabilities=True` for [`SVC`](sklearn.svm.SVC.html#sklearn.svm.SVC "sklearn.svm.SVC") and [`NuSVC`](sklearn.svm.NuSVC.html#sklearn.svm.NuSVC "sklearn.svm.NuSVC") estimators (see [User Guide](../svm.html#scores-probabilities) for details).
 
   Already fitted classifiers can be calibrated via the parameter `cv="prefit"`. In this case, no cross-validation is used and all provided data is used for calibration. The user has to take care manually that data for model fitting and calibration are disjoint.
 
   The calibration is based on the [decision\_function](../../glossary.html#term-decision_function) method of the `estimator` if it exists, else on [predict\_proba](../../glossary.html#term-predict_proba).
 
-  Read more in the [User Guide](../calibration.html#calibration).
+  Read more in the [User Guide](../calibration.html#calibration). In order to learn more on the CalibratedClassifierCV class, see the following calibration examples: [Probability calibration of classifiers](../../auto_examples/calibration/plot_calibration.html#sphx-glr-auto-examples-calibration-plot-calibration-py), [Probability Calibration curves](../../auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py), and [Probability Calibration for 3-class classification](../../auto_examples/calibration/plot_calibration_multiclass.html#sphx-glr-auto-examples-calibration-plot-calibration-multiclass-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html)
  */
@@ -45,7 +45,7 @@ export class CalibratedClassifierCV {
     cv?: number | 'prefit'
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors.
 
       Base estimator clones are fitted in parallel across cross-validation iterations. Therefore parallelism happens only when `cv != "prefit"`.
 
@@ -58,16 +58,11 @@ export class CalibratedClassifierCV {
 
       If `true`, the `estimator` is fitted using training data, and calibrated using testing data, for each `cv` fold. The final estimator is an ensemble of `n\_cv` fitted classifier and calibrator pairs, where `n\_cv` is the number of cross-validation folds. The output is the average predicted probabilities of all pairs.
 
-      If `false`, `cv` is used to compute unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. At prediction time, the classifier used is the `estimator` trained on all the data. Note that this method is also internally implemented in [`sklearn.svm`](../classes.html#module-sklearn.svm "sklearn.svm") estimators with the `probabilities=True` parameter.
+      If `false`, `cv` is used to compute unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. At prediction time, the classifier used is the `estimator` trained on all the data. Note that this method is also internally implemented in [`sklearn.svm`](../../api/sklearn.svm.html#module-sklearn.svm "sklearn.svm") estimators with the `probabilities=True` parameter.
 
       @defaultValue `true`
      */
     ensemble?: boolean
-
-    /**
-      This parameter is deprecated. Use `estimator` instead.
-     */
-    base_estimator?: any
   }) {
     this.id = `CalibratedClassifierCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -113,13 +108,8 @@ except NameError: bridgeCalibratedClassifierCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_CalibratedClassifierCV = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'method': ${this.opts['method'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'ensemble': ${
-      this.opts['ensemble'] ?? undefined
-    }, 'base_estimator': ${this.opts['base_estimator'] ?? undefined}}
+    await this._py
+      .ex`ctor_CalibratedClassifierCV = {'estimator': ${this.opts['estimator'] ?? undefined}, 'method': ${this.opts['method'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'ensemble': ${this.opts['ensemble'] ?? undefined}}
 
 ctor_CalibratedClassifierCV = {k: v for k, v in ctor_CalibratedClassifierCV.items() if v is not None}`
 
@@ -183,15 +173,8 @@ ctor_CalibratedClassifierCV = {k: v for k, v in ctor_CalibratedClassifierCV.item
     }
 
     // set up method params
-    await this._py.ex`pms_CalibratedClassifierCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CalibratedClassifierCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_CalibratedClassifierCV_fit = {k: v for k, v in pms_CalibratedClassifierCV_fit.items() if v is not None}`
 
@@ -229,9 +212,7 @@ pms_CalibratedClassifierCV_fit = {k: v for k, v in pms_CalibratedClassifierCV_fi
 
     // set up method params
     await this._py
-      .ex`pms_CalibratedClassifierCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_CalibratedClassifierCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_CalibratedClassifierCV_get_metadata_routing = {k: v for k, v in pms_CalibratedClassifierCV_get_metadata_routing.items() if v is not None}`
 
@@ -268,9 +249,8 @@ pms_CalibratedClassifierCV_get_metadata_routing = {k: v for k, v in pms_Calibrat
     }
 
     // set up method params
-    await this._py.ex`pms_CalibratedClassifierCV_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_CalibratedClassifierCV_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_CalibratedClassifierCV_predict = {k: v for k, v in pms_CalibratedClassifierCV_predict.items() if v is not None}`
 
@@ -308,9 +288,7 @@ pms_CalibratedClassifierCV_predict = {k: v for k, v in pms_CalibratedClassifierC
 
     // set up method params
     await this._py
-      .ex`pms_CalibratedClassifierCV_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_CalibratedClassifierCV_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_CalibratedClassifierCV_predict_proba = {k: v for k, v in pms_CalibratedClassifierCV_predict_proba.items() if v is not None}`
 
@@ -355,13 +333,8 @@ pms_CalibratedClassifierCV_predict_proba = {k: v for k, v in pms_CalibratedClass
     }
 
     // set up method params
-    await this._py.ex`pms_CalibratedClassifierCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_CalibratedClassifierCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_CalibratedClassifierCV_score = {k: v for k, v in pms_CalibratedClassifierCV_score.items() if v is not None}`
 
@@ -401,9 +374,7 @@ pms_CalibratedClassifierCV_score = {k: v for k, v in pms_CalibratedClassifierCV_
 
     // set up method params
     await this._py
-      .ex`pms_CalibratedClassifierCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_CalibratedClassifierCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_CalibratedClassifierCV_set_fit_request = {k: v for k, v in pms_CalibratedClassifierCV_set_fit_request.items() if v is not None}`
 
@@ -443,9 +414,7 @@ pms_CalibratedClassifierCV_set_fit_request = {k: v for k, v in pms_CalibratedCla
 
     // set up method params
     await this._py
-      .ex`pms_CalibratedClassifierCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_CalibratedClassifierCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_CalibratedClassifierCV_set_score_request = {k: v for k, v in pms_CalibratedClassifierCV_set_score_request.items() if v is not None}`
 

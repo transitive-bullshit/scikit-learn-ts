@@ -168,35 +168,8 @@ except NameError: bridgeIterativeImputer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_IterativeImputer = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'missing_values': ${
-      this.opts['missing_values'] ?? undefined
-    }, 'sample_posterior': ${
-      this.opts['sample_posterior'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'n_nearest_features': ${
-      this.opts['n_nearest_features'] ?? undefined
-    }, 'initial_strategy': ${
-      this.opts['initial_strategy'] ?? undefined
-    }, 'fill_value': ${
-      this.opts['fill_value'] ?? undefined
-    }, 'imputation_order': ${
-      this.opts['imputation_order'] ?? undefined
-    }, 'skip_complete': ${
-      this.opts['skip_complete'] ?? undefined
-    }, 'min_value': np.array(${this.opts['min_value'] ?? undefined}) if ${
-      this.opts['min_value'] !== undefined
-    } else None, 'max_value': np.array(${
-      this.opts['max_value'] ?? undefined
-    }) if ${this.opts['max_value'] !== undefined} else None, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'add_indicator': ${
-      this.opts['add_indicator'] ?? undefined
-    }, 'keep_empty_features': ${this.opts['keep_empty_features'] ?? undefined}}
+    await this._py
+      .ex`ctor_IterativeImputer = {'estimator': ${this.opts['estimator'] ?? undefined}, 'missing_values': ${this.opts['missing_values'] ?? undefined}, 'sample_posterior': ${this.opts['sample_posterior'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'n_nearest_features': ${this.opts['n_nearest_features'] ?? undefined}, 'initial_strategy': ${this.opts['initial_strategy'] ?? undefined}, 'fill_value': ${this.opts['fill_value'] ?? undefined}, 'imputation_order': ${this.opts['imputation_order'] ?? undefined}, 'skip_complete': ${this.opts['skip_complete'] ?? undefined}, 'min_value': np.array(${this.opts['min_value'] ?? undefined}) if ${this.opts['min_value'] !== undefined} else None, 'max_value': np.array(${this.opts['max_value'] ?? undefined}) if ${this.opts['max_value'] !== undefined} else None, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'add_indicator': ${this.opts['add_indicator'] ?? undefined}, 'keep_empty_features': ${this.opts['keep_empty_features'] ?? undefined}}
 
 ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is not None}`
 
@@ -238,6 +211,11 @@ ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is 
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Parameters routed to the `fit` method of the sub-estimator via the metadata routing API.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -250,9 +228,8 @@ ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_IterativeImputer_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if v is not None}`
 
@@ -278,6 +255,11 @@ pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Parameters routed to the `fit` method of the sub-estimator via the metadata routing API.
+     */
+    params?: any
   }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
@@ -292,9 +274,8 @@ pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_IterativeImputer_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_IterativeImputer_fit_transform = {k: v for k, v in pms_IterativeImputer_fit_transform.items() if v is not None}`
 
@@ -330,9 +311,7 @@ pms_IterativeImputer_fit_transform = {k: v for k, v in pms_IterativeImputer_fit_
 
     // set up method params
     await this._py
-      .ex`pms_IterativeImputer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_IterativeImputer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImputer_get_feature_names_out.items() if v is not None}`
 
@@ -352,7 +331,7 @@ pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImpu
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -369,9 +348,8 @@ pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImpu
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IterativeImputer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_IterativeImputer_get_metadata_routing = {k: v for k, v in pms_IterativeImputer_get_metadata_routing.items() if v is not None}`
 
@@ -393,7 +371,7 @@ pms_IterativeImputer_get_metadata_routing = {k: v for k, v in pms_IterativeImput
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -406,9 +384,8 @@ pms_IterativeImputer_get_metadata_routing = {k: v for k, v in pms_IterativeImput
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IterativeImputer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_IterativeImputer_set_output = {k: v for k, v in pms_IterativeImputer_set_output.items() if v is not None}`
 
@@ -443,9 +420,8 @@ pms_IterativeImputer_set_output = {k: v for k, v in pms_IterativeImputer_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IterativeImputer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transform.items() if v is not None}`
 

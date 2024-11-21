@@ -43,13 +43,6 @@ export class LassoLarsIC {
     verbose?: boolean | number
 
     /**
-      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-      @defaultValue `false`
-     */
-    normalize?: boolean
-
-    /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
       @defaultValue `'auto'`
@@ -127,19 +120,8 @@ except NameError: bridgeLassoLarsIC = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LassoLarsIC = {'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'normalize': ${
-      this.opts['normalize'] ?? undefined
-    }, 'precompute': ${this.opts['precompute'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}, 'noise_variance': ${
-      this.opts['noise_variance'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LassoLarsIC = {'criterion': ${this.opts['criterion'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'precompute': ${this.opts['precompute'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}, 'noise_variance': ${this.opts['noise_variance'] ?? undefined}}
 
 ctor_LassoLarsIC = {k: v for k, v in ctor_LassoLarsIC.items() if v is not None}`
 
@@ -196,13 +178,8 @@ ctor_LassoLarsIC = {k: v for k, v in ctor_LassoLarsIC.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LassoLarsIC_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoLarsIC_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}}
 
 pms_LassoLarsIC_fit = {k: v for k, v in pms_LassoLarsIC_fit.items() if v is not None}`
 
@@ -237,9 +214,8 @@ pms_LassoLarsIC_fit = {k: v for k, v in pms_LassoLarsIC_fit.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LassoLarsIC_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoLarsIC_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LassoLarsIC_get_metadata_routing = {k: v for k, v in pms_LassoLarsIC_get_metadata_routing.items() if v is not None}`
 
@@ -313,13 +289,8 @@ pms_LassoLarsIC_predict = {k: v for k, v in pms_LassoLarsIC_predict.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_LassoLarsIC_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LassoLarsIC_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is not None}`
 
@@ -354,9 +325,8 @@ pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LassoLarsIC_set_fit_request = {'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoLarsIC_set_fit_request = {'copy_X': ${opts['copy_X'] ?? undefined}}
 
 pms_LassoLarsIC_set_fit_request = {k: v for k, v in pms_LassoLarsIC_set_fit_request.items() if v is not None}`
 
@@ -391,9 +361,8 @@ pms_LassoLarsIC_set_fit_request = {k: v for k, v in pms_LassoLarsIC_set_fit_requ
     }
 
     // set up method params
-    await this._py.ex`pms_LassoLarsIC_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoLarsIC_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LassoLarsIC_set_score_request = {k: v for k, v in pms_LassoLarsIC_set_score_request.items() if v is not None}`
 

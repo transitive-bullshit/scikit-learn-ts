@@ -112,15 +112,8 @@ except NameError: bridgeGammaRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GammaRegressor = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GammaRegressor = {'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_GammaRegressor = {k: v for k, v in ctor_GammaRegressor.items() if v is not None}`
 
@@ -177,13 +170,8 @@ ctor_GammaRegressor = {k: v for k, v in ctor_GammaRegressor.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_GammaRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GammaRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GammaRegressor_fit = {k: v for k, v in pms_GammaRegressor_fit.items() if v is not None}`
 
@@ -218,9 +206,8 @@ pms_GammaRegressor_fit = {k: v for k, v in pms_GammaRegressor_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_GammaRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GammaRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GammaRegressor_get_metadata_routing = {k: v for k, v in pms_GammaRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -251,9 +238,8 @@ pms_GammaRegressor_get_metadata_routing = {k: v for k, v in pms_GammaRegressor_g
     }
 
     // set up method params
-    await this._py.ex`pms_GammaRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GammaRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GammaRegressor_predict = {k: v for k, v in pms_GammaRegressor_predict.items() if v is not None}`
 
@@ -298,13 +284,8 @@ pms_GammaRegressor_predict = {k: v for k, v in pms_GammaRegressor_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_GammaRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GammaRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GammaRegressor_score = {k: v for k, v in pms_GammaRegressor_score.items() if v is not None}`
 
@@ -341,9 +322,8 @@ pms_GammaRegressor_score = {k: v for k, v in pms_GammaRegressor_score.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_GammaRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GammaRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GammaRegressor_set_fit_request = {k: v for k, v in pms_GammaRegressor_set_fit_request.items() if v is not None}`
 
@@ -381,9 +361,7 @@ pms_GammaRegressor_set_fit_request = {k: v for k, v in pms_GammaRegressor_set_fi
 
     // set up method params
     await this._py
-      .ex`pms_GammaRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_GammaRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GammaRegressor_set_score_request = {k: v for k, v in pms_GammaRegressor_set_score_request.items() if v is not None}`
 

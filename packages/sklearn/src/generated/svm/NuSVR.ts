@@ -33,7 +33,7 @@ export class NuSVR {
     nu?: number
 
     /**
-      Penalty parameter C of the error term.
+      Penalty parameter C of the error term. For an intuitive visualization of the effects of scaling the regularization parameter C, see [Scaling the regularization parameter for SVCs](../../auto_examples/svm/plot_svm_scale_c.html#sphx-glr-auto-examples-svm-plot-svm-scale-c-py).
 
       @defaultValue `1`
      */
@@ -142,19 +142,8 @@ except NameError: bridgeNuSVR = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NuSVR = {'nu': ${
-      this.opts['nu'] ?? undefined
-    }, 'C': ${this.opts['C'] ?? undefined}, 'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'coef0': ${this.opts['coef0'] ?? undefined}, 'shrinking': ${
-      this.opts['shrinking'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${
-      this.opts['cache_size'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_NuSVR = {'nu': ${this.opts['nu'] ?? undefined}, 'C': ${this.opts['C'] ?? undefined}, 'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_NuSVR = {k: v for k, v in ctor_NuSVR.items() if v is not None}`
 
@@ -210,13 +199,8 @@ ctor_NuSVR = {k: v for k, v in ctor_NuSVR.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVR_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVR_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NuSVR_fit = {k: v for k, v in pms_NuSVR_fit.items() if v is not None}`
 
@@ -249,9 +233,8 @@ pms_NuSVR_fit = {k: v for k, v in pms_NuSVR_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVR_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVR_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NuSVR_get_metadata_routing = {k: v for k, v in pms_NuSVR_get_metadata_routing.items() if v is not None}`
 
@@ -284,9 +267,8 @@ pms_NuSVR_get_metadata_routing = {k: v for k, v in pms_NuSVR_get_metadata_routin
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVR_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVR_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVR_predict = {k: v for k, v in pms_NuSVR_predict.items() if v is not None}`
 
@@ -329,13 +311,8 @@ pms_NuSVR_predict = {k: v for k, v in pms_NuSVR_predict.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVR_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVR_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NuSVR_score = {k: v for k, v in pms_NuSVR_score.items() if v is not None}`
 
@@ -370,9 +347,8 @@ pms_NuSVR_score = {k: v for k, v in pms_NuSVR_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVR_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVR_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NuSVR_set_fit_request = {k: v for k, v in pms_NuSVR_set_fit_request.items() if v is not None}`
 
@@ -407,9 +383,8 @@ pms_NuSVR_set_fit_request = {k: v for k, v in pms_NuSVR_set_fit_request.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVR_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVR_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NuSVR_set_score_request = {k: v for k, v in pms_NuSVR_set_score_request.items() if v is not None}`
 
@@ -420,29 +395,6 @@ pms_NuSVR_set_score_request = {k: v for k, v in pms_NuSVR_set_score_request.item
     // convert the result from python to node.js
     return this
       ._py`res_NuSVR_set_score_request.tolist() if hasattr(res_NuSVR_set_score_request, 'tolist') else res_NuSVR_set_score_request`
-  }
-
-  /**
-    Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
-   */
-  get class_weight_(): Promise<NDArray> {
-    if (this._isDisposed) {
-      throw new Error('This NuSVR instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('NuSVR must call init() before accessing class_weight_')
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_NuSVR_class_weight_ = bridgeNuSVR[${this.id}].class_weight_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_NuSVR_class_weight_.tolist() if hasattr(attr_NuSVR_class_weight_, 'tolist') else attr_NuSVR_class_weight_`
-    })()
   }
 
   /**

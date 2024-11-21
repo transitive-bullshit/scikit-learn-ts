@@ -55,11 +55,6 @@ export class AdaBoostRegressor {
       Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. In addition, it controls the bootstrap of the weights used to train the `estimator` at each boosting iteration. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
      */
     random_state?: number
-
-    /**
-      The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
-     */
-    base_estimator?: any
   }) {
     this.id = `AdaBoostRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -103,15 +98,8 @@ except NameError: bridgeAdaBoostRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_AdaBoostRegressor = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'base_estimator': ${this.opts['base_estimator'] ?? undefined}}
+    await this._py
+      .ex`ctor_AdaBoostRegressor = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'loss': ${this.opts['loss'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_AdaBoostRegressor = {k: v for k, v in ctor_AdaBoostRegressor.items() if v is not None}`
 
@@ -170,13 +158,8 @@ ctor_AdaBoostRegressor = {k: v for k, v in ctor_AdaBoostRegressor.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostRegressor_fit = {k: v for k, v in pms_AdaBoostRegressor_fit.items() if v is not None}`
 
@@ -190,16 +173,11 @@ pms_AdaBoostRegressor_fit = {k: v for k, v in pms_AdaBoostRegressor_fit.items() 
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostRegressor instance has already been disposed'
@@ -213,10 +191,7 @@ pms_AdaBoostRegressor_fit = {k: v for k, v in pms_AdaBoostRegressor_fit.items() 
     }
 
     // set up method params
-    await this._py
-      .ex`pms_AdaBoostRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_AdaBoostRegressor_get_metadata_routing = {}
 
 pms_AdaBoostRegressor_get_metadata_routing = {k: v for k, v in pms_AdaBoostRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -251,9 +226,8 @@ pms_AdaBoostRegressor_get_metadata_routing = {k: v for k, v in pms_AdaBoostRegre
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostRegressor_predict = {k: v for k, v in pms_AdaBoostRegressor_predict.items() if v is not None}`
 
@@ -298,13 +272,8 @@ pms_AdaBoostRegressor_predict = {k: v for k, v in pms_AdaBoostRegressor_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostRegressor_score = {k: v for k, v in pms_AdaBoostRegressor_score.items() if v is not None}`
 
@@ -344,9 +313,7 @@ pms_AdaBoostRegressor_score = {k: v for k, v in pms_AdaBoostRegressor_score.item
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_AdaBoostRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_AdaBoostRegressor_set_fit_request = {k: v for k, v in pms_AdaBoostRegressor_set_fit_request.items() if v is not None}`
 
@@ -386,9 +353,7 @@ pms_AdaBoostRegressor_set_fit_request = {k: v for k, v in pms_AdaBoostRegressor_
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_AdaBoostRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_AdaBoostRegressor_set_score_request = {k: v for k, v in pms_AdaBoostRegressor_set_score_request.items() if v is not None}`
 
@@ -427,9 +392,8 @@ pms_AdaBoostRegressor_set_score_request = {k: v for k, v in pms_AdaBoostRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_staged_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_staged_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostRegressor_staged_predict = {k: v for k, v in pms_AdaBoostRegressor_staged_predict.items() if v is not None}`
 
@@ -476,13 +440,8 @@ pms_AdaBoostRegressor_staged_predict = {k: v for k, v in pms_AdaBoostRegressor_s
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_staged_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_staged_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostRegressor_staged_score = {k: v for k, v in pms_AdaBoostRegressor_staged_score.items() if v is not None}`
 

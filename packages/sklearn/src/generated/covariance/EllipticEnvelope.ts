@@ -36,7 +36,7 @@ export class EllipticEnvelope {
     assume_centered?: boolean
 
     /**
-      The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support\_fraction will be used within the algorithm: `\[n\_sample + n\_features + 1\] / 2`. Range is (0, 1).
+      The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support\_fraction will be used within the algorithm: `(n\_samples + n\_features + 1) / 2 \* n\_samples`. Range is (0, 1).
      */
     support_fraction?: number
 
@@ -94,15 +94,8 @@ except NameError: bridgeEllipticEnvelope = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_EllipticEnvelope = {'store_precision': ${
-      this.opts['store_precision'] ?? undefined
-    }, 'assume_centered': ${
-      this.opts['assume_centered'] ?? undefined
-    }, 'support_fraction': ${
-      this.opts['support_fraction'] ?? undefined
-    }, 'contamination': ${
-      this.opts['contamination'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_EllipticEnvelope = {'store_precision': ${this.opts['store_precision'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}, 'support_fraction': ${this.opts['support_fraction'] ?? undefined}, 'contamination': ${this.opts['contamination'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_EllipticEnvelope = {k: v for k, v in ctor_EllipticEnvelope.items() if v is not None}`
 
@@ -156,9 +149,7 @@ ctor_EllipticEnvelope = {k: v for k, v in ctor_EllipticEnvelope.items() if v is 
 
     // set up method params
     await this._py
-      .ex`pms_EllipticEnvelope_correct_covariance = {'data': np.array(${
-      opts['data'] ?? undefined
-    }) if ${opts['data'] !== undefined} else None}
+      .ex`pms_EllipticEnvelope_correct_covariance = {'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_EllipticEnvelope_correct_covariance = {k: v for k, v in pms_EllipticEnvelope_correct_covariance.items() if v is not None}`
 
@@ -193,9 +184,8 @@ pms_EllipticEnvelope_correct_covariance = {k: v for k, v in pms_EllipticEnvelope
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_EllipticEnvelope_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_EllipticEnvelope_decision_function = {k: v for k, v in pms_EllipticEnvelope_decision_function.items() if v is not None}`
 
@@ -249,13 +239,8 @@ pms_EllipticEnvelope_decision_function = {k: v for k, v in pms_EllipticEnvelope_
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_EllipticEnvelope_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_EllipticEnvelope_error_norm = {k: v for k, v in pms_EllipticEnvelope_error_norm.items() if v is not None}`
 
@@ -293,9 +278,8 @@ pms_EllipticEnvelope_error_norm = {k: v for k, v in pms_EllipticEnvelope_error_n
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_EllipticEnvelope_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_EllipticEnvelope_fit = {k: v for k, v in pms_EllipticEnvelope_fit.items() if v is not None}`
 
@@ -323,6 +307,11 @@ pms_EllipticEnvelope_fit = {k: v for k, v in pms_EllipticEnvelope_fit.items() if
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
@@ -335,9 +324,8 @@ pms_EllipticEnvelope_fit = {k: v for k, v in pms_EllipticEnvelope_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_EllipticEnvelope_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_EllipticEnvelope_fit_predict = {k: v for k, v in pms_EllipticEnvelope_fit_predict.items() if v is not None}`
 
@@ -374,9 +362,8 @@ pms_EllipticEnvelope_fit_predict = {k: v for k, v in pms_EllipticEnvelope_fit_pr
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_EllipticEnvelope_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_EllipticEnvelope_get_metadata_routing = {k: v for k, v in pms_EllipticEnvelope_get_metadata_routing.items() if v is not None}`
 
@@ -412,9 +399,7 @@ pms_EllipticEnvelope_get_metadata_routing = {k: v for k, v in pms_EllipticEnvelo
 
     // set up method params
     await this._py
-      .ex`pms_EllipticEnvelope_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+      .ex`pms_EllipticEnvelope_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_EllipticEnvelope_get_precision = {k: v for k, v in pms_EllipticEnvelope_get_precision.items() if v is not None}`
 
@@ -447,9 +432,8 @@ pms_EllipticEnvelope_get_precision = {k: v for k, v in pms_EllipticEnvelope_get_
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_EllipticEnvelope_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_EllipticEnvelope_mahalanobis = {k: v for k, v in pms_EllipticEnvelope_mahalanobis.items() if v is not None}`
 
@@ -482,9 +466,8 @@ pms_EllipticEnvelope_mahalanobis = {k: v for k, v in pms_EllipticEnvelope_mahala
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_EllipticEnvelope_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_EllipticEnvelope_predict = {k: v for k, v in pms_EllipticEnvelope_predict.items() if v is not None}`
 
@@ -522,9 +505,7 @@ pms_EllipticEnvelope_predict = {k: v for k, v in pms_EllipticEnvelope_predict.it
 
     // set up method params
     await this._py
-      .ex`pms_EllipticEnvelope_reweight_covariance = {'data': np.array(${
-      opts['data'] ?? undefined
-    }) if ${opts['data'] !== undefined} else None}
+      .ex`pms_EllipticEnvelope_reweight_covariance = {'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_EllipticEnvelope_reweight_covariance = {k: v for k, v in pms_EllipticEnvelope_reweight_covariance.items() if v is not None}`
 
@@ -569,13 +550,8 @@ pms_EllipticEnvelope_reweight_covariance = {k: v for k, v in pms_EllipticEnvelop
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_EllipticEnvelope_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_EllipticEnvelope_score = {k: v for k, v in pms_EllipticEnvelope_score.items() if v is not None}`
 
@@ -610,9 +586,8 @@ pms_EllipticEnvelope_score = {k: v for k, v in pms_EllipticEnvelope_score.items(
     }
 
     // set up method params
-    await this._py.ex`pms_EllipticEnvelope_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_EllipticEnvelope_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_score_samples.items() if v is not None}`
 
@@ -652,9 +627,7 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
 
     // set up method params
     await this._py
-      .ex`pms_EllipticEnvelope_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_EllipticEnvelope_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_EllipticEnvelope_set_score_request = {k: v for k, v in pms_EllipticEnvelope_set_score_request.items() if v is not None}`
 

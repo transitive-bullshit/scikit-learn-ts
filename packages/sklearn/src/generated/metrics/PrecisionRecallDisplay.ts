@@ -97,21 +97,8 @@ except NameError: bridgePrecisionRecallDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PrecisionRecallDisplay = {'precision': np.array(${
-      this.opts['precision'] ?? undefined
-    }) if ${
-      this.opts['precision'] !== undefined
-    } else None, 'recall': np.array(${this.opts['recall'] ?? undefined}) if ${
-      this.opts['recall'] !== undefined
-    } else None, 'average_precision': ${
-      this.opts['average_precision'] ?? undefined
-    }, 'estimator_name': ${
-      this.opts['estimator_name'] ?? undefined
-    }, 'pos_label': ${
-      this.opts['pos_label'] ?? undefined
-    }, 'prevalence_pos_label': ${
-      this.opts['prevalence_pos_label'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PrecisionRecallDisplay = {'precision': np.array(${this.opts['precision'] ?? undefined}) if ${this.opts['precision'] !== undefined} else None, 'recall': np.array(${this.opts['recall'] ?? undefined}) if ${this.opts['recall'] !== undefined} else None, 'average_precision': ${this.opts['average_precision'] ?? undefined}, 'estimator_name': ${this.opts['estimator_name'] ?? undefined}, 'pos_label': ${this.opts['pos_label'] ?? undefined}, 'prevalence_pos_label': ${this.opts['prevalence_pos_label'] ?? undefined}}
 
 ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.items() if v is not None}`
 
@@ -224,25 +211,7 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
 
     // set up method params
     await this._py
-      .ex`pms_PrecisionRecallDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${
-      opts['pos_label'] ?? undefined
-    }, 'drop_intermediate': ${
-      opts['drop_intermediate'] ?? undefined
-    }, 'response_method': ${opts['response_method'] ?? undefined}, 'name': ${
-      opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+      .ex`pms_PrecisionRecallDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${opts['pos_label'] ?? undefined}, 'drop_intermediate': ${opts['drop_intermediate'] ?? undefined}, 'response_method': ${opts['response_method'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecallDisplay_from_estimator.items() if v is not None}`
 
@@ -327,25 +296,7 @@ pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecal
 
     // set up method params
     await this._py
-      .ex`pms_PrecisionRecallDisplay_from_predictions = {'y_true': np.array(${
-      opts['y_true'] ?? undefined
-    }) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${
-      opts['y_pred'] ?? undefined
-    }) if ${
-      opts['y_pred'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${
-      opts['pos_label'] ?? undefined
-    }, 'drop_intermediate': ${
-      opts['drop_intermediate'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+      .ex`pms_PrecisionRecallDisplay_from_predictions = {'y_true': np.array(${opts['y_true'] ?? undefined}) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${opts['y_pred'] ?? undefined}) if ${opts['y_pred'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${opts['pos_label'] ?? undefined}, 'drop_intermediate': ${opts['drop_intermediate'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRecallDisplay_from_predictions.items() if v is not None}`
 
@@ -402,13 +353,8 @@ pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRec
     }
 
     // set up method params
-    await this._py.ex`pms_PrecisionRecallDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PrecisionRecallDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_PrecisionRecallDisplay_plot = {k: v for k, v in pms_PrecisionRecallDisplay_plot.items() if v is not None}`
 

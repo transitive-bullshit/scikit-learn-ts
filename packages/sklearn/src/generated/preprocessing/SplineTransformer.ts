@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Generate a new feature matrix consisting of `n\_splines=n\_knots + degree \- 1` (`n\_knots \- 1` for `extrapolation="periodic"`) spline basis functions (B-splines) of polynomial order=\`degree\` for each feature.
 
+  In order to learn more about the SplineTransformer class go to: [Time-related feature engineering](../../auto_examples/applications/plot_cyclical_feature_engineering.html#sphx-glr-auto-examples-applications-plot-cyclical-feature-engineering-py)
+
   Read more in the [User Guide](../preprocessing.html#spline-transformer).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.SplineTransformer.html)
@@ -45,7 +47,7 @@ export class SplineTransformer {
     knots?: 'uniform' | 'quantile' | ArrayLike[]
 
     /**
-      If ‘error’, values outside the min and max values of the training features raises a `ValueError`. If ‘constant’, the value of the splines at minimum and maximum value of the features is used as constant extrapolation. If ‘linear’, a linear extrapolation is used. If ‘continue’, the splines are extrapolated as is, i.e. option `extrapolate=True` in [`scipy.interpolate.BSpline`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.BSpline.html#scipy.interpolate.BSpline "(in SciPy v1.11.3)"). If ‘periodic’, periodic splines with a periodicity equal to the distance between the first and last knot are used. Periodic splines enforce equal function values and derivatives at the first and last knot. For example, this makes it possible to avoid introducing an arbitrary jump between Dec 31st and Jan 1st in spline features derived from a naturally periodic “day-of-year” input feature. In this case it is recommended to manually set the knot values to control the period.
+      If ‘error’, values outside the min and max values of the training features raises a `ValueError`. If ‘constant’, the value of the splines at minimum and maximum value of the features is used as constant extrapolation. If ‘linear’, a linear extrapolation is used. If ‘continue’, the splines are extrapolated as is, i.e. option `extrapolate=True` in [`scipy.interpolate.BSpline`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.BSpline.html#scipy.interpolate.BSpline "(in SciPy v1.14.1)"). If ‘periodic’, periodic splines with a periodicity equal to the distance between the first and last knot are used. Periodic splines enforce equal function values and derivatives at the first and last knot. For example, this makes it possible to avoid introducing an arbitrary jump between Dec 31st and Jan 1st in spline features derived from a naturally periodic “day-of-year” input feature. In this case it is recommended to manually set the knot values to control the period.
 
       @defaultValue `'constant'`
      */
@@ -114,15 +116,8 @@ except NameError: bridgeSplineTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SplineTransformer = {'n_knots': ${
-      this.opts['n_knots'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'knots': np.array(${
-      this.opts['knots'] ?? undefined
-    }) if ${this.opts['knots'] !== undefined} else None, 'extrapolation': ${
-      this.opts['extrapolation'] ?? undefined
-    }, 'include_bias': ${this.opts['include_bias'] ?? undefined}, 'order': ${
-      this.opts['order'] ?? undefined
-    }, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}}
+    await this._py
+      .ex`ctor_SplineTransformer = {'n_knots': ${this.opts['n_knots'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'knots': np.array(${this.opts['knots'] ?? undefined}) if ${this.opts['knots'] !== undefined} else None, 'extrapolation': ${this.opts['extrapolation'] ?? undefined}, 'include_bias': ${this.opts['include_bias'] ?? undefined}, 'order': ${this.opts['order'] ?? undefined}, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}}
 
 ctor_SplineTransformer = {k: v for k, v in ctor_SplineTransformer.items() if v is not None}`
 
@@ -181,13 +176,8 @@ ctor_SplineTransformer = {k: v for k, v in ctor_SplineTransformer.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SplineTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_SplineTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SplineTransformer_fit = {k: v for k, v in pms_SplineTransformer_fit.items() if v is not None}`
 
@@ -234,13 +224,8 @@ pms_SplineTransformer_fit = {k: v for k, v in pms_SplineTransformer_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SplineTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SplineTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SplineTransformer_fit_transform = {k: v for k, v in pms_SplineTransformer_fit_transform.items() if v is not None}`
 
@@ -276,9 +261,7 @@ pms_SplineTransformer_fit_transform = {k: v for k, v in pms_SplineTransformer_fi
 
     // set up method params
     await this._py
-      .ex`pms_SplineTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SplineTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SplineTransformer_get_feature_names_out = {k: v for k, v in pms_SplineTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -316,9 +299,7 @@ pms_SplineTransformer_get_feature_names_out = {k: v for k, v in pms_SplineTransf
 
     // set up method params
     await this._py
-      .ex`pms_SplineTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SplineTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SplineTransformer_get_metadata_routing = {k: v for k, v in pms_SplineTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -358,9 +339,7 @@ pms_SplineTransformer_get_metadata_routing = {k: v for k, v in pms_SplineTransfo
 
     // set up method params
     await this._py
-      .ex`pms_SplineTransformer_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_SplineTransformer_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SplineTransformer_set_fit_request = {k: v for k, v in pms_SplineTransformer_set_fit_request.items() if v is not None}`
 
@@ -382,7 +361,7 @@ pms_SplineTransformer_set_fit_request = {k: v for k, v in pms_SplineTransformer_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -395,9 +374,8 @@ pms_SplineTransformer_set_fit_request = {k: v for k, v in pms_SplineTransformer_
     }
 
     // set up method params
-    await this._py.ex`pms_SplineTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SplineTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SplineTransformer_set_output = {k: v for k, v in pms_SplineTransformer_set_output.items() if v is not None}`
 
@@ -430,9 +408,8 @@ pms_SplineTransformer_set_output = {k: v for k, v in pms_SplineTransformer_set_o
     }
 
     // set up method params
-    await this._py.ex`pms_SplineTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SplineTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SplineTransformer_transform = {k: v for k, v in pms_SplineTransformer_transform.items() if v is not None}`
 

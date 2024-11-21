@@ -75,7 +75,7 @@ export class RadiusNeighborsRegressor {
     metric_params?: any
 
     /**
-      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -123,15 +123,8 @@ except NameError: bridgeRadiusNeighborsRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RadiusNeighborsRegressor = {'radius': ${
-      this.opts['radius'] ?? undefined
-    }, 'weights': ${this.opts['weights'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'p': ${
-      this.opts['p'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_RadiusNeighborsRegressor = {'radius': ${this.opts['radius'] ?? undefined}, 'weights': ${this.opts['weights'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_RadiusNeighborsRegressor = {k: v for k, v in ctor_RadiusNeighborsRegressor.items() if v is not None}`
 
@@ -185,11 +178,8 @@ ctor_RadiusNeighborsRegressor = {k: v for k, v in ctor_RadiusNeighborsRegressor.
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_RadiusNeighborsRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_RadiusNeighborsRegressor_fit = {k: v for k, v in pms_RadiusNeighborsRegressor_fit.items() if v is not None}`
 
@@ -227,9 +217,7 @@ pms_RadiusNeighborsRegressor_fit = {k: v for k, v in pms_RadiusNeighborsRegresso
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RadiusNeighborsRegressor_get_metadata_routing = {k: v for k, v in pms_RadiusNeighborsRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -264,9 +252,8 @@ pms_RadiusNeighborsRegressor_get_metadata_routing = {k: v for k, v in pms_Radius
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RadiusNeighborsRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RadiusNeighborsRegressor_predict = {k: v for k, v in pms_RadiusNeighborsRegressor_predict.items() if v is not None}`
 
@@ -324,11 +311,8 @@ pms_RadiusNeighborsRegressor_predict = {k: v for k, v in pms_RadiusNeighborsRegr
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsRegressor_radius_neighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }, 'sort_results': ${opts['sort_results'] ?? undefined}}
+    await this._py
+      .ex`pms_RadiusNeighborsRegressor_radius_neighbors = {'X': ${opts['X'] ?? undefined}, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_RadiusNeighborsRegressor_radius_neighbors = {k: v for k, v in pms_RadiusNeighborsRegressor_radius_neighbors.items() if v is not None}`
 
@@ -385,13 +369,7 @@ pms_RadiusNeighborsRegressor_radius_neighbors = {k: v for k, v in pms_RadiusNeig
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsRegressor_radius_neighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'radius': ${
-      opts['radius'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${
-      opts['sort_results'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsRegressor_radius_neighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'radius': ${opts['radius'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_RadiusNeighborsRegressor_radius_neighbors_graph = {k: v for k, v in pms_RadiusNeighborsRegressor_radius_neighbors_graph.items() if v is not None}`
 
@@ -438,13 +416,8 @@ pms_RadiusNeighborsRegressor_radius_neighbors_graph = {k: v for k, v in pms_Radi
     }
 
     // set up method params
-    await this._py.ex`pms_RadiusNeighborsRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RadiusNeighborsRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegressor_score.items() if v is not None}`
 
@@ -484,9 +457,7 @@ pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegres
 
     // set up method params
     await this._py
-      .ex`pms_RadiusNeighborsRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RadiusNeighborsRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RadiusNeighborsRegressor_set_score_request = {k: v for k, v in pms_RadiusNeighborsRegressor_set_score_request.items() if v is not None}`
 

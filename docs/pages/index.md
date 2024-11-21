@@ -16,7 +16,7 @@ This project enables Node.js devs to use Python's powerful [scikit-learn](https:
 ## Features
 
 - **All TS classes are auto-generated from the official python scikit-learn docs!**
-- All [257 classes](https://scikit-learn.org/stable/modules/classes.html) are supported along with proper TS types and docs
+- All [257 classes](https://scikit-learn.org/stable/api/index.html) are supported along with proper TS types and docs
   - `KMeans`
   - `TSNE`
   - `PCA`

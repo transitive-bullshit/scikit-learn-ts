@@ -75,9 +75,8 @@ except NameError: bridgeSelectPercentile = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectPercentile = {'score_func': ${
-      this.opts['score_func'] ?? undefined
-    }, 'percentile': ${this.opts['percentile'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelectPercentile = {'score_func': ${this.opts['score_func'] ?? undefined}, 'percentile': ${this.opts['percentile'] ?? undefined}}
 
 ctor_SelectPercentile = {k: v for k, v in ctor_SelectPercentile.items() if v is not None}`
 
@@ -116,7 +115,7 @@ ctor_SelectPercentile = {k: v for k, v in ctor_SelectPercentile.items() if v is 
     X?: ArrayLike[]
 
     /**
-      The target values (class labels in classification, real numbers in regression).
+      The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`.
      */
     y?: ArrayLike
   }): Promise<any> {
@@ -131,11 +130,8 @@ ctor_SelectPercentile = {k: v for k, v in ctor_SelectPercentile.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_SelectPercentile_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectPercentile_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SelectPercentile_fit = {k: v for k, v in pms_SelectPercentile_fit.items() if v is not None}`
 
@@ -182,13 +178,8 @@ pms_SelectPercentile_fit = {k: v for k, v in pms_SelectPercentile_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SelectPercentile_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectPercentile_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectPercentile_fit_transform = {k: v for k, v in pms_SelectPercentile_fit_transform.items() if v is not None}`
 
@@ -224,9 +215,7 @@ pms_SelectPercentile_fit_transform = {k: v for k, v in pms_SelectPercentile_fit_
 
     // set up method params
     await this._py
-      .ex`pms_SelectPercentile_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectPercentile_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectPercentile_get_feature_names_out = {k: v for k, v in pms_SelectPercentile_get_feature_names_out.items() if v is not None}`
 
@@ -263,9 +252,8 @@ pms_SelectPercentile_get_feature_names_out = {k: v for k, v in pms_SelectPercent
     }
 
     // set up method params
-    await this._py.ex`pms_SelectPercentile_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectPercentile_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SelectPercentile_get_metadata_routing = {k: v for k, v in pms_SelectPercentile_get_metadata_routing.items() if v is not None}`
 
@@ -300,9 +288,8 @@ pms_SelectPercentile_get_metadata_routing = {k: v for k, v in pms_SelectPercenti
     }
 
     // set up method params
-    await this._py.ex`pms_SelectPercentile_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectPercentile_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectPercentile_get_support = {k: v for k, v in pms_SelectPercentile_get_support.items() if v is not None}`
 
@@ -337,9 +324,8 @@ pms_SelectPercentile_get_support = {k: v for k, v in pms_SelectPercentile_get_su
     }
 
     // set up method params
-    await this._py.ex`pms_SelectPercentile_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectPercentile_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectPercentile_inverse_transform = {k: v for k, v in pms_SelectPercentile_inverse_transform.items() if v is not None}`
 
@@ -361,7 +347,7 @@ pms_SelectPercentile_inverse_transform = {k: v for k, v in pms_SelectPercentile_
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -374,9 +360,8 @@ pms_SelectPercentile_inverse_transform = {k: v for k, v in pms_SelectPercentile_
     }
 
     // set up method params
-    await this._py.ex`pms_SelectPercentile_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectPercentile_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectPercentile_set_output = {k: v for k, v in pms_SelectPercentile_set_output.items() if v is not None}`
 
@@ -409,9 +394,8 @@ pms_SelectPercentile_set_output = {k: v for k, v in pms_SelectPercentile_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_SelectPercentile_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectPercentile_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectPercentile_transform = {k: v for k, v in pms_SelectPercentile_transform.items() if v is not None}`
 

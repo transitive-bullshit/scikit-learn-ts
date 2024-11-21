@@ -73,11 +73,8 @@ except NameError: bridgeGaussianNB = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianNB = {'priors': np.array(${
-      this.opts['priors'] ?? undefined
-    }) if ${this.opts['priors'] !== undefined} else None, 'var_smoothing': ${
-      this.opts['var_smoothing'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GaussianNB = {'priors': np.array(${this.opts['priors'] ?? undefined}) if ${this.opts['priors'] !== undefined} else None, 'var_smoothing': ${this.opts['var_smoothing'] ?? undefined}}
 
 ctor_GaussianNB = {k: v for k, v in ctor_GaussianNB.items() if v is not None}`
 
@@ -134,13 +131,8 @@ ctor_GaussianNB = {k: v for k, v in ctor_GaussianNB.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianNB_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GaussianNB_fit = {k: v for k, v in pms_GaussianNB_fit.items() if v is not None}`
 
@@ -175,9 +167,8 @@ pms_GaussianNB_fit = {k: v for k, v in pms_GaussianNB_fit.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianNB_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianNB_get_metadata_routing = {k: v for k, v in pms_GaussianNB_get_metadata_routing.items() if v is not None}`
 
@@ -231,17 +222,8 @@ pms_GaussianNB_get_metadata_routing = {k: v for k, v in pms_GaussianNB_get_metad
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'classes': np.array(${
-      opts['classes'] ?? undefined
-    }) if ${
-      opts['classes'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianNB_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${opts['classes'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GaussianNB_partial_fit = {k: v for k, v in pms_GaussianNB_partial_fit.items() if v is not None}`
 
@@ -272,9 +254,8 @@ pms_GaussianNB_partial_fit = {k: v for k, v in pms_GaussianNB_partial_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianNB_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianNB_predict = {k: v for k, v in pms_GaussianNB_predict.items() if v is not None}`
 
@@ -309,9 +290,8 @@ pms_GaussianNB_predict = {k: v for k, v in pms_GaussianNB_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_predict_joint_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianNB_predict_joint_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianNB_predict_joint_log_proba = {k: v for k, v in pms_GaussianNB_predict_joint_log_proba.items() if v is not None}`
 
@@ -342,9 +322,8 @@ pms_GaussianNB_predict_joint_log_proba = {k: v for k, v in pms_GaussianNB_predic
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianNB_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianNB_predict_log_proba = {k: v for k, v in pms_GaussianNB_predict_log_proba.items() if v is not None}`
 
@@ -375,9 +354,8 @@ pms_GaussianNB_predict_log_proba = {k: v for k, v in pms_GaussianNB_predict_log_
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianNB_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianNB_predict_proba = {k: v for k, v in pms_GaussianNB_predict_proba.items() if v is not None}`
 
@@ -420,13 +398,8 @@ pms_GaussianNB_predict_proba = {k: v for k, v in pms_GaussianNB_predict_proba.it
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianNB_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GaussianNB_score = {k: v for k, v in pms_GaussianNB_score.items() if v is not None}`
 
@@ -461,9 +434,8 @@ pms_GaussianNB_score = {k: v for k, v in pms_GaussianNB_score.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianNB_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GaussianNB_set_fit_request = {k: v for k, v in pms_GaussianNB_set_fit_request.items() if v is not None}`
 
@@ -505,9 +477,8 @@ pms_GaussianNB_set_fit_request = {k: v for k, v in pms_GaussianNB_set_fit_reques
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianNB_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GaussianNB_set_partial_fit_request = {k: v for k, v in pms_GaussianNB_set_partial_fit_request.items() if v is not None}`
 
@@ -542,9 +513,8 @@ pms_GaussianNB_set_partial_fit_request = {k: v for k, v in pms_GaussianNB_set_pa
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianNB_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianNB_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GaussianNB_set_score_request = {k: v for k, v in pms_GaussianNB_set_score_request.items() if v is not None}`
 

@@ -49,7 +49,7 @@ export class QuantileTransformer {
     ignore_implicit_zeros?: boolean
 
     /**
-      Maximum number of samples used to estimate the quantiles for computational efficiency. Note that the subsampling procedure may differ for value-identical sparse and dense matrices.
+      Maximum number of samples used to estimate the quantiles for computational efficiency. Note that the subsampling procedure may differ for value-identical sparse and dense matrices. Disable subsampling by setting `subsample=None`.
 
       @defaultValue `10`
      */
@@ -111,15 +111,8 @@ except NameError: bridgeQuantileTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_QuantileTransformer = {'n_quantiles': ${
-      this.opts['n_quantiles'] ?? undefined
-    }, 'output_distribution': ${
-      this.opts['output_distribution'] ?? undefined
-    }, 'ignore_implicit_zeros': ${
-      this.opts['ignore_implicit_zeros'] ?? undefined
-    }, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'copy': ${this.opts['copy'] ?? undefined}}
+    await this._py
+      .ex`ctor_QuantileTransformer = {'n_quantiles': ${this.opts['n_quantiles'] ?? undefined}, 'output_distribution': ${this.opts['output_distribution'] ?? undefined}, 'ignore_implicit_zeros': ${this.opts['ignore_implicit_zeros'] ?? undefined}, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_QuantileTransformer = {k: v for k, v in ctor_QuantileTransformer.items() if v is not None}`
 
@@ -173,9 +166,8 @@ ctor_QuantileTransformer = {k: v for k, v in ctor_QuantileTransformer.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_QuantileTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_QuantileTransformer_fit = {k: v for k, v in pms_QuantileTransformer_fit.items() if v is not None}`
 
@@ -222,13 +214,8 @@ pms_QuantileTransformer_fit = {k: v for k, v in pms_QuantileTransformer_fit.item
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_QuantileTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_QuantileTransformer_fit_transform = {k: v for k, v in pms_QuantileTransformer_fit_transform.items() if v is not None}`
 
@@ -264,9 +251,7 @@ pms_QuantileTransformer_fit_transform = {k: v for k, v in pms_QuantileTransforme
 
     // set up method params
     await this._py
-      .ex`pms_QuantileTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_QuantileTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_QuantileTransformer_get_feature_names_out = {k: v for k, v in pms_QuantileTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -304,9 +289,7 @@ pms_QuantileTransformer_get_feature_names_out = {k: v for k, v in pms_QuantileTr
 
     // set up method params
     await this._py
-      .ex`pms_QuantileTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_QuantileTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_QuantileTransformer_get_metadata_routing = {k: v for k, v in pms_QuantileTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -342,9 +325,7 @@ pms_QuantileTransformer_get_metadata_routing = {k: v for k, v in pms_QuantileTra
 
     // set up method params
     await this._py
-      .ex`pms_QuantileTransformer_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_QuantileTransformer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_QuantileTransformer_inverse_transform = {k: v for k, v in pms_QuantileTransformer_inverse_transform.items() if v is not None}`
 
@@ -366,7 +347,7 @@ pms_QuantileTransformer_inverse_transform = {k: v for k, v in pms_QuantileTransf
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -381,9 +362,8 @@ pms_QuantileTransformer_inverse_transform = {k: v for k, v in pms_QuantileTransf
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_QuantileTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_QuantileTransformer_set_output = {k: v for k, v in pms_QuantileTransformer_set_output.items() if v is not None}`
 
@@ -416,9 +396,8 @@ pms_QuantileTransformer_set_output = {k: v for k, v in pms_QuantileTransformer_s
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_QuantileTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_QuantileTransformer_transform = {k: v for k, v in pms_QuantileTransformer_transform.items() if v is not None}`
 

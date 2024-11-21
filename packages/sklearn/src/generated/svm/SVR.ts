@@ -61,7 +61,7 @@ export class SVR {
     tol?: number
 
     /**
-      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2 penalty.
+      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2. For an intuitive visualization of the effects of scaling the regularization parameter C, see [Scaling the regularization parameter for SVCs](../../auto_examples/svm/plot_svm_scale_c.html#sphx-glr-auto-examples-svm-plot-svm-scale-c-py).
 
       @defaultValue `1`
      */
@@ -142,19 +142,8 @@ except NameError: bridgeSVR = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SVR = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'coef0': ${this.opts['coef0'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'C': ${this.opts['C'] ?? undefined}, 'epsilon': ${
-      this.opts['epsilon'] ?? undefined
-    }, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'cache_size': ${
-      this.opts['cache_size'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_SVR = {'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${this.opts['C'] ?? undefined}, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_SVR = {k: v for k, v in ctor_SVR.items() if v is not None}`
 
@@ -210,13 +199,8 @@ ctor_SVR = {k: v for k, v in ctor_SVR.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVR_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVR_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SVR_fit = {k: v for k, v in pms_SVR_fit.items() if v is not None}`
 
@@ -248,9 +232,8 @@ pms_SVR_fit = {k: v for k, v in pms_SVR_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVR_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SVR_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SVR_get_metadata_routing = {k: v for k, v in pms_SVR_get_metadata_routing.items() if v is not None}`
 
@@ -283,9 +266,8 @@ pms_SVR_get_metadata_routing = {k: v for k, v in pms_SVR_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_SVR_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVR_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SVR_predict = {k: v for k, v in pms_SVR_predict.items() if v is not None}`
 
@@ -328,13 +310,8 @@ pms_SVR_predict = {k: v for k, v in pms_SVR_predict.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVR_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_SVR_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
 
@@ -369,9 +346,8 @@ pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SVR_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SVR_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SVR_set_fit_request = {k: v for k, v in pms_SVR_set_fit_request.items() if v is not None}`
 
@@ -406,9 +382,8 @@ pms_SVR_set_fit_request = {k: v for k, v in pms_SVR_set_fit_request.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_SVR_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SVR_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SVR_set_score_request = {k: v for k, v in pms_SVR_set_score_request.items() if v is not None}`
 
@@ -419,29 +394,6 @@ pms_SVR_set_score_request = {k: v for k, v in pms_SVR_set_score_request.items() 
     // convert the result from python to node.js
     return this
       ._py`res_SVR_set_score_request.tolist() if hasattr(res_SVR_set_score_request, 'tolist') else res_SVR_set_score_request`
-  }
-
-  /**
-    Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
-   */
-  get class_weight_(): Promise<NDArray> {
-    if (this._isDisposed) {
-      throw new Error('This SVR instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('SVR must call init() before accessing class_weight_')
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_SVR_class_weight_ = bridgeSVR[${this.id}].class_weight_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_SVR_class_weight_.tolist() if hasattr(attr_SVR_class_weight_, 'tolist') else attr_SVR_class_weight_`
-    })()
   }
 
   /**

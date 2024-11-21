@@ -135,17 +135,8 @@ except NameError: bridgeOneClassSVM = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OneClassSVM = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'coef0': ${this.opts['coef0'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'nu': ${this.opts['nu'] ?? undefined}, 'shrinking': ${
-      this.opts['shrinking'] ?? undefined
-    }, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
+    await this._py
+      .ex`ctor_OneClassSVM = {'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'nu': ${this.opts['nu'] ?? undefined}, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_OneClassSVM = {k: v for k, v in ctor_OneClassSVM.items() if v is not None}`
 
@@ -194,9 +185,8 @@ ctor_OneClassSVM = {k: v for k, v in ctor_OneClassSVM.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneClassSVM_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneClassSVM_decision_function = {k: v for k, v in pms_OneClassSVM_decision_function.items() if v is not None}`
 
@@ -237,13 +227,8 @@ pms_OneClassSVM_decision_function = {k: v for k, v in pms_OneClassSVM_decision_f
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_OneClassSVM_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_OneClassSVM_fit = {k: v for k, v in pms_OneClassSVM_fit.items() if v is not None}`
 
@@ -271,6 +256,11 @@ pms_OneClassSVM_fit = {k: v for k, v in pms_OneClassSVM_fit.items() if v is not 
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OneClassSVM instance has already been disposed')
@@ -281,9 +271,8 @@ pms_OneClassSVM_fit = {k: v for k, v in pms_OneClassSVM_fit.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_OneClassSVM_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_OneClassSVM_fit_predict = {k: v for k, v in pms_OneClassSVM_fit_predict.items() if v is not None}`
 
@@ -318,9 +307,8 @@ pms_OneClassSVM_fit_predict = {k: v for k, v in pms_OneClassSVM_fit_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneClassSVM_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OneClassSVM_get_metadata_routing = {k: v for k, v in pms_OneClassSVM_get_metadata_routing.items() if v is not None}`
 
@@ -353,9 +341,8 @@ pms_OneClassSVM_get_metadata_routing = {k: v for k, v in pms_OneClassSVM_get_met
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneClassSVM_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneClassSVM_predict = {k: v for k, v in pms_OneClassSVM_predict.items() if v is not None}`
 
@@ -386,9 +373,8 @@ pms_OneClassSVM_predict = {k: v for k, v in pms_OneClassSVM_predict.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneClassSVM_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.items() if v is not None}`
 
@@ -423,9 +409,8 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneClassSVM_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_request.items() if v is not None}`
 
@@ -436,31 +421,6 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
     // convert the result from python to node.js
     return this
       ._py`res_OneClassSVM_set_fit_request.tolist() if hasattr(res_OneClassSVM_set_fit_request, 'tolist') else res_OneClassSVM_set_fit_request`
-  }
-
-  /**
-    Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
-   */
-  get class_weight_(): Promise<NDArray> {
-    if (this._isDisposed) {
-      throw new Error('This OneClassSVM instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'OneClassSVM must call init() before accessing class_weight_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_OneClassSVM_class_weight_ = bridgeOneClassSVM[${this.id}].class_weight_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_OneClassSVM_class_weight_.tolist() if hasattr(attr_OneClassSVM_class_weight_, 'tolist') else attr_OneClassSVM_class_weight_`
-    })()
   }
 
   /**

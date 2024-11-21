@@ -120,17 +120,8 @@ except NameError: bridgePartialDependenceDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PartialDependenceDisplay = {'pd_results': ${
-      this.opts['pd_results'] ?? undefined
-    }, 'features': ${this.opts['features'] ?? undefined}, 'feature_names': ${
-      this.opts['feature_names'] ?? undefined
-    }, 'target_idx': ${this.opts['target_idx'] ?? undefined}, 'deciles': ${
-      this.opts['deciles'] ?? undefined
-    }, 'kind': ${this.opts['kind'] ?? undefined}, 'subsample': ${
-      this.opts['subsample'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'is_categorical': ${this.opts['is_categorical'] ?? undefined}}
+    await this._py
+      .ex`ctor_PartialDependenceDisplay = {'pd_results': ${this.opts['pd_results'] ?? undefined}, 'features': ${this.opts['features'] ?? undefined}, 'feature_names': ${this.opts['feature_names'] ?? undefined}, 'target_idx': ${this.opts['target_idx'] ?? undefined}, 'deciles': ${this.opts['deciles'] ?? undefined}, 'kind': ${this.opts['kind'] ?? undefined}, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'is_categorical': ${this.opts['is_categorical'] ?? undefined}}
 
 ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.items() if v is not None}`
 
@@ -238,7 +229,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     /**
       The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -316,39 +307,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
 
     // set up method params
     await this._py
-      .ex`pms_PartialDependenceDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'features': ${
-      opts['features'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None, 'categorical_features': np.array(${
-      opts['categorical_features'] ?? undefined
-    }) if ${
-      opts['categorical_features'] !== undefined
-    } else None, 'feature_names': np.array(${
-      opts['feature_names'] ?? undefined
-    }) if ${opts['feature_names'] !== undefined} else None, 'target': ${
-      opts['target'] ?? undefined
-    }, 'response_method': ${opts['response_method'] ?? undefined}, 'n_cols': ${
-      opts['n_cols'] ?? undefined
-    }, 'grid_resolution': ${
-      opts['grid_resolution'] ?? undefined
-    }, 'percentiles': ${opts['percentiles'] ?? undefined}, 'method': ${
-      opts['method'] ?? undefined
-    }, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'verbose': ${
-      opts['verbose'] ?? undefined
-    }, 'line_kw': ${opts['line_kw'] ?? undefined}, 'ice_lines_kw': ${
-      opts['ice_lines_kw'] ?? undefined
-    }, 'pd_line_kw': ${opts['pd_line_kw'] ?? undefined}, 'contour_kw': ${
-      opts['contour_kw'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'kind': ${
-      opts['kind'] ?? undefined
-    }, 'centered': ${opts['centered'] ?? undefined}, 'subsample': ${
-      opts['subsample'] ?? undefined
-    }, 'random_state': ${opts['random_state'] ?? undefined}}
+      .ex`pms_PartialDependenceDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'features': ${opts['features'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'categorical_features': np.array(${opts['categorical_features'] ?? undefined}) if ${opts['categorical_features'] !== undefined} else None, 'feature_names': np.array(${opts['feature_names'] ?? undefined}) if ${opts['feature_names'] !== undefined} else None, 'target': ${opts['target'] ?? undefined}, 'response_method': ${opts['response_method'] ?? undefined}, 'n_cols': ${opts['n_cols'] ?? undefined}, 'grid_resolution': ${opts['grid_resolution'] ?? undefined}, 'percentiles': ${opts['percentiles'] ?? undefined}, 'method': ${opts['method'] ?? undefined}, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'verbose': ${opts['verbose'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'ice_lines_kw': ${opts['ice_lines_kw'] ?? undefined}, 'pd_line_kw': ${opts['pd_line_kw'] ?? undefined}, 'contour_kw': ${opts['contour_kw'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'kind': ${opts['kind'] ?? undefined}, 'centered': ${opts['centered'] ?? undefined}, 'subsample': ${opts['subsample'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}}
 
 pms_PartialDependenceDisplay_from_estimator = {k: v for k, v in pms_PartialDependenceDisplay_from_estimator.items() if v is not None}`
 
@@ -430,17 +389,8 @@ pms_PartialDependenceDisplay_from_estimator = {k: v for k, v in pms_PartialDepen
     }
 
     // set up method params
-    await this._py.ex`pms_PartialDependenceDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'n_cols': ${opts['n_cols'] ?? undefined}, 'line_kw': ${
-      opts['line_kw'] ?? undefined
-    }, 'ice_lines_kw': ${opts['ice_lines_kw'] ?? undefined}, 'pd_line_kw': ${
-      opts['pd_line_kw'] ?? undefined
-    }, 'contour_kw': ${opts['contour_kw'] ?? undefined}, 'bar_kw': ${
-      opts['bar_kw'] ?? undefined
-    }, 'heatmap_kw': ${opts['heatmap_kw'] ?? undefined}, 'pdp_lim': ${
-      opts['pdp_lim'] ?? undefined
-    }, 'centered': ${opts['centered'] ?? undefined}}
+    await this._py
+      .ex`pms_PartialDependenceDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'n_cols': ${opts['n_cols'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'ice_lines_kw': ${opts['ice_lines_kw'] ?? undefined}, 'pd_line_kw': ${opts['pd_line_kw'] ?? undefined}, 'contour_kw': ${opts['contour_kw'] ?? undefined}, 'bar_kw': ${opts['bar_kw'] ?? undefined}, 'heatmap_kw': ${opts['heatmap_kw'] ?? undefined}, 'pdp_lim': ${opts['pdp_lim'] ?? undefined}, 'centered': ${opts['centered'] ?? undefined}}
 
 pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDisplay_plot.items() if v is not None}`
 

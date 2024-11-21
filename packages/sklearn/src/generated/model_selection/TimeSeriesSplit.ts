@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Time Series cross-validator
+  Time Series cross-validator.
 
   Provides train/test indices to split time series data samples that are observed at fixed time intervals, in train/test sets. In each split, test indices must be higher than before, and thus shuffling in cross validator is inappropriate.
 
@@ -93,13 +93,8 @@ except NameError: bridgeTimeSeriesSplit = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TimeSeriesSplit = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }, 'max_train_size': ${
-      this.opts['max_train_size'] ?? undefined
-    }, 'test_size': ${this.opts['test_size'] ?? undefined}, 'gap': ${
-      this.opts['gap'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_TimeSeriesSplit = {'n_splits': ${this.opts['n_splits'] ?? undefined}, 'max_train_size': ${this.opts['max_train_size'] ?? undefined}, 'test_size': ${this.opts['test_size'] ?? undefined}, 'gap': ${this.opts['gap'] ?? undefined}}
 
 ctor_TimeSeriesSplit = {k: v for k, v in ctor_TimeSeriesSplit.items() if v is not None}`
 
@@ -150,9 +145,8 @@ ctor_TimeSeriesSplit = {k: v for k, v in ctor_TimeSeriesSplit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_TimeSeriesSplit_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TimeSeriesSplit_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TimeSeriesSplit_get_metadata_routing = {k: v for k, v in pms_TimeSeriesSplit_get_metadata_routing.items() if v is not None}`
 
@@ -166,7 +160,7 @@ pms_TimeSeriesSplit_get_metadata_routing = {k: v for k, v in pms_TimeSeriesSplit
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -193,9 +187,8 @@ pms_TimeSeriesSplit_get_metadata_routing = {k: v for k, v in pms_TimeSeriesSplit
     }
 
     // set up method params
-    await this._py.ex`pms_TimeSeriesSplit_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_TimeSeriesSplit_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_TimeSeriesSplit_get_n_splits = {k: v for k, v in pms_TimeSeriesSplit_get_n_splits.items() if v is not None}`
 
@@ -236,13 +229,8 @@ pms_TimeSeriesSplit_get_n_splits = {k: v for k, v in pms_TimeSeriesSplit_get_n_s
     }
 
     // set up method params
-    await this._py.ex`pms_TimeSeriesSplit_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_TimeSeriesSplit_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None}
 
 pms_TimeSeriesSplit_split = {k: v for k, v in pms_TimeSeriesSplit_split.items() if v is not None}`
 

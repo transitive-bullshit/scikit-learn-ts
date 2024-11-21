@@ -98,13 +98,8 @@ except NameError: bridgeRFE = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RFE = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_features_to_select': ${
-      this.opts['n_features_to_select'] ?? undefined
-    }, 'step': ${this.opts['step'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
+    await this._py
+      .ex`ctor_RFE = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_features_to_select': ${this.opts['n_features_to_select'] ?? undefined}, 'step': ${this.opts['step'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
 
 ctor_RFE = {k: v for k, v in ctor_RFE.items() if v is not None}`
 
@@ -150,9 +145,8 @@ ctor_RFE = {k: v for k, v in ctor_RFE.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFE_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFE_decision_function = {k: v for k, v in pms_RFE_decision_function.items() if v is not None}`
 
@@ -193,13 +187,8 @@ pms_RFE_decision_function = {k: v for k, v in pms_RFE_decision_function.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFE_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RFE_fit = {k: v for k, v in pms_RFE_fit.items() if v is not None}`
 
@@ -241,13 +230,8 @@ pms_RFE_fit = {k: v for k, v in pms_RFE_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFE_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RFE_fit_transform = {k: v for k, v in pms_RFE_fit_transform.items() if v is not None}`
 
@@ -278,9 +262,8 @@ pms_RFE_fit_transform = {k: v for k, v in pms_RFE_fit_transform.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFE_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_RFE_get_feature_names_out = {k: v for k, v in pms_RFE_get_feature_names_out.items() if v is not None}`
 
@@ -294,16 +277,11 @@ pms_RFE_get_feature_names_out = {k: v for k, v in pms_RFE_get_feature_names_out.
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -313,9 +291,7 @@ pms_RFE_get_feature_names_out = {k: v for k, v in pms_RFE_get_feature_names_out.
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_RFE_get_metadata_routing = {}
 
 pms_RFE_get_metadata_routing = {k: v for k, v in pms_RFE_get_metadata_routing.items() if v is not None}`
 
@@ -348,9 +324,8 @@ pms_RFE_get_metadata_routing = {k: v for k, v in pms_RFE_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFE_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_RFE_get_support = {k: v for k, v in pms_RFE_get_support.items() if v is not None}`
 
@@ -381,9 +356,8 @@ pms_RFE_get_support = {k: v for k, v in pms_RFE_get_support.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFE_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFE_inverse_transform = {k: v for k, v in pms_RFE_inverse_transform.items() if v is not None}`
 
@@ -414,9 +388,8 @@ pms_RFE_inverse_transform = {k: v for k, v in pms_RFE_inverse_transform.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFE_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFE_predict = {k: v for k, v in pms_RFE_predict.items() if v is not None}`
 
@@ -447,9 +420,8 @@ pms_RFE_predict = {k: v for k, v in pms_RFE_predict.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFE_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFE_predict_log_proba = {k: v for k, v in pms_RFE_predict_log_proba.items() if v is not None}`
 
@@ -480,9 +452,8 @@ pms_RFE_predict_log_proba = {k: v for k, v in pms_RFE_predict_log_proba.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFE_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFE_predict_proba = {k: v for k, v in pms_RFE_predict_proba.items() if v is not None}`
 
@@ -523,13 +494,8 @@ pms_RFE_predict_proba = {k: v for k, v in pms_RFE_predict_proba.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFE_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RFE_score = {k: v for k, v in pms_RFE_score.items() if v is not None}`
 
@@ -551,7 +517,7 @@ pms_RFE_score = {k: v for k, v in pms_RFE_score.items() if v is not None}`
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
@@ -562,9 +528,8 @@ pms_RFE_score = {k: v for k, v in pms_RFE_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RFE_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_RFE_set_output = {k: v for k, v in pms_RFE_set_output.items() if v is not None}`
 
@@ -595,9 +560,8 @@ pms_RFE_set_output = {k: v for k, v in pms_RFE_set_output.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_RFE_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RFE_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RFE_transform = {k: v for k, v in pms_RFE_transform.items() if v is not None}`
 

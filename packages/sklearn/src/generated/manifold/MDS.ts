@@ -66,7 +66,7 @@ export class MDS {
     /**
       The number of jobs to use for the computation. If multiple initializations are used (`n\_init`), each run of the algorithm is computed in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -85,7 +85,7 @@ export class MDS {
     /**
       Whether use and return normed stress value (Stress-1) instead of raw stress calculated by default. Only supported in non-metric MDS.
      */
-    normalized_stress?: boolean
+    normalized_stress?: boolean | 'auto” default=”auto'
   }) {
     this.id = `MDS${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -127,19 +127,8 @@ except NameError: bridgeMDS = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MDS = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'dissimilarity': ${
-      this.opts['dissimilarity'] ?? undefined
-    }, 'normalized_stress': ${this.opts['normalized_stress'] ?? undefined}}
+    await this._py
+      .ex`ctor_MDS = {'n_components': ${this.opts['n_components'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'dissimilarity': ${this.opts['dissimilarity'] ?? undefined}, 'normalized_stress': ${this.opts['normalized_stress'] ?? undefined}}
 
 ctor_MDS = {k: v for k, v in ctor_MDS.items() if v is not None}`
 
@@ -195,13 +184,8 @@ ctor_MDS = {k: v for k, v in ctor_MDS.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'init': np.array(${opts['init'] ?? undefined}) if ${
-      opts['init'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MDS_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'init': np.array(${opts['init'] ?? undefined}) if ${opts['init'] !== undefined} else None}
 
 pms_MDS_fit = {k: v for k, v in pms_MDS_fit.items() if v is not None}`
 
@@ -241,13 +225,8 @@ pms_MDS_fit = {k: v for k, v in pms_MDS_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'init': np.array(${opts['init'] ?? undefined}) if ${
-      opts['init'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MDS_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'init': np.array(${opts['init'] ?? undefined}) if ${opts['init'] !== undefined} else None}
 
 pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is not None}`
 
@@ -280,9 +259,8 @@ pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MDS_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MDS_get_metadata_routing = {k: v for k, v in pms_MDS_get_metadata_routing.items() if v is not None}`
 
@@ -317,9 +295,8 @@ pms_MDS_get_metadata_routing = {k: v for k, v in pms_MDS_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_set_fit_request = {'init': ${
-      opts['init'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MDS_set_fit_request = {'init': ${opts['init'] ?? undefined}}
 
 pms_MDS_set_fit_request = {k: v for k, v in pms_MDS_set_fit_request.items() if v is not None}`
 

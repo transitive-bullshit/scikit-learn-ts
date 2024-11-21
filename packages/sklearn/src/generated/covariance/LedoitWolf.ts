@@ -84,11 +84,8 @@ except NameError: bridgeLedoitWolf = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LedoitWolf = {'store_precision': ${
-      this.opts['store_precision'] ?? undefined
-    }, 'assume_centered': ${
-      this.opts['assume_centered'] ?? undefined
-    }, 'block_size': ${this.opts['block_size'] ?? undefined}}
+    await this._py
+      .ex`ctor_LedoitWolf = {'store_precision': ${this.opts['store_precision'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}, 'block_size': ${this.opts['block_size'] ?? undefined}}
 
 ctor_LedoitWolf = {k: v for k, v in ctor_LedoitWolf.items() if v is not None}`
 
@@ -156,13 +153,8 @@ ctor_LedoitWolf = {k: v for k, v in ctor_LedoitWolf.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_LedoitWolf_error_norm = {k: v for k, v in pms_LedoitWolf_error_norm.items() if v is not None}`
 
@@ -198,9 +190,8 @@ pms_LedoitWolf_error_norm = {k: v for k, v in pms_LedoitWolf_error_norm.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LedoitWolf_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LedoitWolf_fit = {k: v for k, v in pms_LedoitWolf_fit.items() if v is not None}`
 
@@ -235,9 +226,8 @@ pms_LedoitWolf_fit = {k: v for k, v in pms_LedoitWolf_fit.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LedoitWolf_get_metadata_routing = {k: v for k, v in pms_LedoitWolf_get_metadata_routing.items() if v is not None}`
 
@@ -268,9 +258,8 @@ pms_LedoitWolf_get_metadata_routing = {k: v for k, v in pms_LedoitWolf_get_metad
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+    await this._py
+      .ex`pms_LedoitWolf_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_LedoitWolf_get_precision = {k: v for k, v in pms_LedoitWolf_get_precision.items() if v is not None}`
 
@@ -301,9 +290,8 @@ pms_LedoitWolf_get_precision = {k: v for k, v in pms_LedoitWolf_get_precision.it
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LedoitWolf_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LedoitWolf_mahalanobis = {k: v for k, v in pms_LedoitWolf_mahalanobis.items() if v is not None}`
 
@@ -341,11 +329,8 @@ pms_LedoitWolf_mahalanobis = {k: v for k, v in pms_LedoitWolf_mahalanobis.items(
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LedoitWolf_score = {k: v for k, v in pms_LedoitWolf_score.items() if v is not None}`
 
@@ -380,9 +365,8 @@ pms_LedoitWolf_score = {k: v for k, v in pms_LedoitWolf_score.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_LedoitWolf_set_score_request = {k: v for k, v in pms_LedoitWolf_set_score_request.items() if v is not None}`
 

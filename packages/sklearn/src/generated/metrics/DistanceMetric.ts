@@ -82,11 +82,8 @@ except NameError: bridgeDistanceMetric = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DistanceMetric = {'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'dtype': ${this.opts['dtype'] ?? undefined}, 'kwargs': ${
-      this.opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_DistanceMetric = {'metric': ${this.opts['metric'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'kwargs': ${this.opts['kwargs'] ?? undefined}}
 
 ctor_DistanceMetric = {k: v for k, v in ctor_DistanceMetric.items() if v is not None}`
 
@@ -145,11 +142,8 @@ ctor_DistanceMetric = {k: v for k, v in ctor_DistanceMetric.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_DistanceMetric_get_metric = {'metric': ${
-      opts['metric'] ?? undefined
-    }, 'dtype': ${opts['dtype'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DistanceMetric_get_metric = {'metric': ${opts['metric'] ?? undefined}, 'dtype': ${opts['dtype'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_DistanceMetric_get_metric = {k: v for k, v in pms_DistanceMetric_get_metric.items() if v is not None}`
 

@@ -44,6 +44,8 @@ export class LinearDiscriminantAnalysis {
 
     /**
       Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If `undefined`, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
+
+      For a usage example, see [Comparison of LDA and PCA 2D projection of Iris dataset](../../auto_examples/decomposition/plot_pca_vs_lda.html#sphx-glr-auto-examples-decomposition-plot-pca-vs-lda-py).
      */
     n_components?: number
 
@@ -62,7 +64,7 @@ export class LinearDiscriminantAnalysis {
     tol?: number
 
     /**
-      If not `undefined`, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../classes.html#module-sklearn.covariance "sklearn.covariance"). if `undefined` the shrinkage parameter drives the estimate.
+      If not `undefined`, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../../api/sklearn.covariance.html#module-sklearn.covariance "sklearn.covariance"). if `undefined` the shrinkage parameter drives the estimate.
 
       This should be left to `undefined` if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
      */
@@ -112,19 +114,8 @@ except NameError: bridgeLinearDiscriminantAnalysis = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LinearDiscriminantAnalysis = {'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'shrinkage': ${
-      this.opts['shrinkage'] ?? undefined
-    }, 'priors': np.array(${this.opts['priors'] ?? undefined}) if ${
-      this.opts['priors'] !== undefined
-    } else None, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'store_covariance': ${
-      this.opts['store_covariance'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'covariance_estimator': ${
-      this.opts['covariance_estimator'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LinearDiscriminantAnalysis = {'solver': ${this.opts['solver'] ?? undefined}, 'shrinkage': ${this.opts['shrinkage'] ?? undefined}, 'priors': np.array(${this.opts['priors'] ?? undefined}) if ${this.opts['priors'] !== undefined} else None, 'n_components': ${this.opts['n_components'] ?? undefined}, 'store_covariance': ${this.opts['store_covariance'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'covariance_estimator': ${this.opts['covariance_estimator'] ?? undefined}}
 
 ctor_LinearDiscriminantAnalysis = {k: v for k, v in ctor_LinearDiscriminantAnalysis.items() if v is not None}`
 
@@ -178,9 +169,7 @@ ctor_LinearDiscriminantAnalysis = {k: v for k, v in ctor_LinearDiscriminantAnaly
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_decision_function = {k: v for k, v in pms_LinearDiscriminantAnalysis_decision_function.items() if v is not None}`
 
@@ -220,11 +209,8 @@ pms_LinearDiscriminantAnalysis_decision_function = {k: v for k, v in pms_LinearD
     }
 
     // set up method params
-    await this._py.ex`pms_LinearDiscriminantAnalysis_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearDiscriminantAnalysis_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_fit = {k: v for k, v in pms_LinearDiscriminantAnalysis_fit.items() if v is not None}`
 
@@ -272,13 +258,7 @@ pms_LinearDiscriminantAnalysis_fit = {k: v for k, v in pms_LinearDiscriminantAna
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_fit_transform = {k: v for k, v in pms_LinearDiscriminantAnalysis_fit_transform.items() if v is not None}`
 
@@ -316,9 +296,7 @@ pms_LinearDiscriminantAnalysis_fit_transform = {k: v for k, v in pms_LinearDiscr
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_get_feature_names_out = {k: v for k, v in pms_LinearDiscriminantAnalysis_get_feature_names_out.items() if v is not None}`
 
@@ -356,9 +334,7 @@ pms_LinearDiscriminantAnalysis_get_feature_names_out = {k: v for k, v in pms_Lin
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_get_metadata_routing = {k: v for k, v in pms_LinearDiscriminantAnalysis_get_metadata_routing.items() if v is not None}`
 
@@ -393,9 +369,8 @@ pms_LinearDiscriminantAnalysis_get_metadata_routing = {k: v for k, v in pms_Line
     }
 
     // set up method params
-    await this._py.ex`pms_LinearDiscriminantAnalysis_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearDiscriminantAnalysis_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_predict = {k: v for k, v in pms_LinearDiscriminantAnalysis_predict.items() if v is not None}`
 
@@ -431,9 +406,7 @@ pms_LinearDiscriminantAnalysis_predict = {k: v for k, v in pms_LinearDiscriminan
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_LinearDiscriminantAnalysis_predict_log_proba.items() if v is not None}`
 
@@ -469,9 +442,7 @@ pms_LinearDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_LinearD
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_LinearDiscriminantAnalysis_predict_proba.items() if v is not None}`
 
@@ -518,13 +489,8 @@ pms_LinearDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_LinearDiscr
     }
 
     // set up method params
-    await this._py.ex`pms_LinearDiscriminantAnalysis_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearDiscriminantAnalysis_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantAnalysis_score.items() if v is not None}`
 
@@ -546,7 +512,7 @@ pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantA
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -562,9 +528,7 @@ pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantA
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_set_output = {k: v for k, v in pms_LinearDiscriminantAnalysis_set_output.items() if v is not None}`
 
@@ -604,9 +568,7 @@ pms_LinearDiscriminantAnalysis_set_output = {k: v for k, v in pms_LinearDiscrimi
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_set_score_request = {k: v for k, v in pms_LinearDiscriminantAnalysis_set_score_request.items() if v is not None}`
 
@@ -642,9 +604,7 @@ pms_LinearDiscriminantAnalysis_set_score_request = {k: v for k, v in pms_LinearD
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscriminantAnalysis_transform.items() if v is not None}`
 

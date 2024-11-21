@@ -117,17 +117,8 @@ except NameError: bridgeAffinityPropagation = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_AffinityPropagation = {'damping': ${
-      this.opts['damping'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'convergence_iter': ${
-      this.opts['convergence_iter'] ?? undefined
-    }, 'copy': ${this.opts['copy'] ?? undefined}, 'preference': np.array(${
-      this.opts['preference'] ?? undefined
-    }) if ${this.opts['preference'] !== undefined} else None, 'affinity': ${
-      this.opts['affinity'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_AffinityPropagation = {'damping': ${this.opts['damping'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'convergence_iter': ${this.opts['convergence_iter'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}, 'preference': np.array(${this.opts['preference'] ?? undefined}) if ${this.opts['preference'] !== undefined} else None, 'affinity': ${this.opts['affinity'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_AffinityPropagation = {k: v for k, v in ctor_AffinityPropagation.items() if v is not None}`
 
@@ -181,9 +172,8 @@ ctor_AffinityPropagation = {k: v for k, v in ctor_AffinityPropagation.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_AffinityPropagation_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_AffinityPropagation_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_AffinityPropagation_fit = {k: v for k, v in pms_AffinityPropagation_fit.items() if v is not None}`
 
@@ -223,9 +213,8 @@ pms_AffinityPropagation_fit = {k: v for k, v in pms_AffinityPropagation_fit.item
     }
 
     // set up method params
-    await this._py.ex`pms_AffinityPropagation_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_AffinityPropagation_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_AffinityPropagation_fit_predict = {k: v for k, v in pms_AffinityPropagation_fit_predict.items() if v is not None}`
 
@@ -263,9 +252,7 @@ pms_AffinityPropagation_fit_predict = {k: v for k, v in pms_AffinityPropagation_
 
     // set up method params
     await this._py
-      .ex`pms_AffinityPropagation_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_AffinityPropagation_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_AffinityPropagation_get_metadata_routing = {k: v for k, v in pms_AffinityPropagation_get_metadata_routing.items() if v is not None}`
 
@@ -298,9 +285,8 @@ pms_AffinityPropagation_get_metadata_routing = {k: v for k, v in pms_AffinityPro
     }
 
     // set up method params
-    await this._py.ex`pms_AffinityPropagation_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AffinityPropagation_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_predict.items() if v is not None}`
 

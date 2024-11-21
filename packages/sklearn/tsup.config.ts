@@ -9,6 +9,5 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   minify: false,
-  shims: false,
-  dts: true
+  shims: false
 })

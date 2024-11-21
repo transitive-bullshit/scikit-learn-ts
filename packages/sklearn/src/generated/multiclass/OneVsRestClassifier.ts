@@ -33,12 +33,12 @@ export class OneVsRestClassifier {
     /**
       The number of jobs to use for the computation: the `n\_classes` one-vs-rest problems are computed in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      The verbosity level, if non zero, progress messages are printed. Below 50, the output is sent to stderr. Otherwise, the output is sent to stdout. The frequency of the messages increases with the verbosity level, reporting all iterations at 10. See [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.4.dev0)") for more details.
+      The verbosity level, if non zero, progress messages are printed. Below 50, the output is sent to stderr. Otherwise, the output is sent to stdout. The frequency of the messages increases with the verbosity level, reporting all iterations at 10. See [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.5.dev0)") for more details.
 
       @defaultValue `0`
      */
@@ -88,11 +88,8 @@ except NameError: bridgeOneVsRestClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OneVsRestClassifier = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_OneVsRestClassifier = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_OneVsRestClassifier = {k: v for k, v in ctor_OneVsRestClassifier.items() if v is not None}`
 
@@ -146,9 +143,7 @@ ctor_OneVsRestClassifier = {k: v for k, v in ctor_OneVsRestClassifier.items() if
 
     // set up method params
     await this._py
-      .ex`pms_OneVsRestClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_OneVsRestClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneVsRestClassifier_decision_function = {k: v for k, v in pms_OneVsRestClassifier_decision_function.items() if v is not None}`
 
@@ -174,6 +169,11 @@ pms_OneVsRestClassifier_decision_function = {k: v for k, v in pms_OneVsRestClass
       Multi-class targets. An indicator matrix turns on multilabel classification.
      */
     y?: ArrayLike | SparseMatrix
+
+    /**
+      Parameters passed to the `estimator.fit` method of each sub-estimator.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -186,11 +186,8 @@ pms_OneVsRestClassifier_decision_function = {k: v for k, v in pms_OneVsRestClass
     }
 
     // set up method params
-    await this._py.ex`pms_OneVsRestClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneVsRestClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_OneVsRestClassifier_fit = {k: v for k, v in pms_OneVsRestClassifier_fit.items() if v is not None}`
 
@@ -210,7 +207,7 @@ pms_OneVsRestClassifier_fit = {k: v for k, v in pms_OneVsRestClassifier_fit.item
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -228,9 +225,7 @@ pms_OneVsRestClassifier_fit = {k: v for k, v in pms_OneVsRestClassifier_fit.item
 
     // set up method params
     await this._py
-      .ex`pms_OneVsRestClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_OneVsRestClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OneVsRestClassifier_get_metadata_routing = {k: v for k, v in pms_OneVsRestClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -246,7 +241,7 @@ pms_OneVsRestClassifier_get_metadata_routing = {k: v for k, v in pms_OneVsRestCl
   /**
     Partially fit underlying estimators.
 
-    Should be used when memory is inefficient to train all data. Chunks of data can be passed in several iteration.
+    Should be used when memory is inefficient to train all data. Chunks of data can be passed in several iterations.
    */
   async partial_fit(opts: {
     /**
@@ -263,6 +258,11 @@ pms_OneVsRestClassifier_get_metadata_routing = {k: v for k, v in pms_OneVsRestCl
       Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls.
      */
     classes?: any
+
+    /**
+      Parameters passed to the `estimator.partial\_fit` method of each sub-estimator.
+     */
+    partial_fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -277,13 +277,8 @@ pms_OneVsRestClassifier_get_metadata_routing = {k: v for k, v in pms_OneVsRestCl
     }
 
     // set up method params
-    await this._py.ex`pms_OneVsRestClassifier_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'classes': ${
-      opts['classes'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneVsRestClassifier_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': ${opts['classes'] ?? undefined}, 'partial_fit_params': ${opts['partial_fit_params'] ?? undefined}}
 
 pms_OneVsRestClassifier_partial_fit = {k: v for k, v in pms_OneVsRestClassifier_partial_fit.items() if v is not None}`
 
@@ -316,9 +311,8 @@ pms_OneVsRestClassifier_partial_fit = {k: v for k, v in pms_OneVsRestClassifier_
     }
 
     // set up method params
-    await this._py.ex`pms_OneVsRestClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneVsRestClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneVsRestClassifier_predict = {k: v for k, v in pms_OneVsRestClassifier_predict.items() if v is not None}`
 
@@ -359,9 +353,8 @@ pms_OneVsRestClassifier_predict = {k: v for k, v in pms_OneVsRestClassifier_pred
     }
 
     // set up method params
-    await this._py.ex`pms_OneVsRestClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneVsRestClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneVsRestClassifier_predict_proba = {k: v for k, v in pms_OneVsRestClassifier_predict_proba.items() if v is not None}`
 
@@ -406,13 +399,8 @@ pms_OneVsRestClassifier_predict_proba = {k: v for k, v in pms_OneVsRestClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_OneVsRestClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneVsRestClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_OneVsRestClassifier_score = {k: v for k, v in pms_OneVsRestClassifier_score.items() if v is not None}`
 
@@ -452,9 +440,7 @@ pms_OneVsRestClassifier_score = {k: v for k, v in pms_OneVsRestClassifier_score.
 
     // set up method params
     await this._py
-      .ex`pms_OneVsRestClassifier_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }}
+      .ex`pms_OneVsRestClassifier_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}}
 
 pms_OneVsRestClassifier_set_partial_fit_request = {k: v for k, v in pms_OneVsRestClassifier_set_partial_fit_request.items() if v is not None}`
 
@@ -494,9 +480,7 @@ pms_OneVsRestClassifier_set_partial_fit_request = {k: v for k, v in pms_OneVsRes
 
     // set up method params
     await this._py
-      .ex`pms_OneVsRestClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_OneVsRestClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_OneVsRestClassifier_set_score_request = {k: v for k, v in pms_OneVsRestClassifier_set_score_request.items() if v is not None}`
 

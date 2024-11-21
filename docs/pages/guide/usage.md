@@ -25,7 +25,7 @@ await model.dispose()
 await py.disconnect()
 ```
 
-Since the TS classes are auto-generated from the Python docs, the code will look almost identical to the Python version, so use their excellent [API docs](https://scikit-learn.org/stable/modules/classes.html) as a reference.
+Since the TS classes are auto-generated from the Python docs, the code will look almost identical to the Python version, so use their excellent [API docs](https://scikit-learn.org/stable/api/index.html) as a reference.
 
 All class names, method names, attribute (accessor) names and types are the same as the official Python version.
 

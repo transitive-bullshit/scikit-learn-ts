@@ -73,9 +73,8 @@ except NameError: bridgeWhiteKernel = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_WhiteKernel = {'noise_level': ${
-      this.opts['noise_level'] ?? undefined
-    }, 'noise_level_bounds': ${this.opts['noise_level_bounds'] ?? undefined}}
+    await this._py
+      .ex`ctor_WhiteKernel = {'noise_level': ${this.opts['noise_level'] ?? undefined}, 'noise_level_bounds': ${this.opts['noise_level_bounds'] ?? undefined}}
 
 ctor_WhiteKernel = {k: v for k, v in ctor_WhiteKernel.items() if v is not None}`
 
@@ -134,13 +133,8 @@ ctor_WhiteKernel = {k: v for k, v in ctor_WhiteKernel.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_WhiteKernel___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_WhiteKernel___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_WhiteKernel___call__ = {k: v for k, v in pms_WhiteKernel___call__.items() if v is not None}`
 
@@ -171,9 +165,8 @@ pms_WhiteKernel___call__ = {k: v for k, v in pms_WhiteKernel___call__.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_WhiteKernel_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+    await this._py
+      .ex`pms_WhiteKernel_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_WhiteKernel_clone_with_theta = {k: v for k, v in pms_WhiteKernel_clone_with_theta.items() if v is not None}`
 
@@ -206,9 +199,8 @@ pms_WhiteKernel_clone_with_theta = {k: v for k, v in pms_WhiteKernel_clone_with_
     }
 
     // set up method params
-    await this._py.ex`pms_WhiteKernel_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_WhiteKernel_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_WhiteKernel_diag = {k: v for k, v in pms_WhiteKernel_diag.items() if v is not None}`
 
@@ -245,27 +237,5 @@ pms_WhiteKernel_is_stationary = {k: v for k, v in pms_WhiteKernel_is_stationary.
     // convert the result from python to node.js
     return this
       ._py`res_WhiteKernel_is_stationary.tolist() if hasattr(res_WhiteKernel_is_stationary, 'tolist') else res_WhiteKernel_is_stationary`
-  }
-
-  get hyperparameter_noise_level(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This WhiteKernel instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'WhiteKernel must call init() before accessing hyperparameter_noise_level'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_WhiteKernel_hyperparameter_noise_level = bridgeWhiteKernel[${this.id}].hyperparameter_noise_level`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_WhiteKernel_hyperparameter_noise_level.tolist() if hasattr(attr_WhiteKernel_hyperparameter_noise_level, 'tolist') else attr_WhiteKernel_hyperparameter_noise_level`
-    })()
   }
 }

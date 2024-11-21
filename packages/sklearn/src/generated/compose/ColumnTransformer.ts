@@ -43,7 +43,7 @@ export class ColumnTransformer {
     sparse_threshold?: number
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -65,6 +65,13 @@ export class ColumnTransformer {
       @defaultValue `true`
      */
     verbose_feature_names_out?: boolean
+
+    /**
+      Force the columns of the last entry of `transformers\_`, which corresponds to the “remainder” transformer, to always be stored as indices (int) rather than column names (str). See description of the `transformers\_` attribute for details.
+
+      @defaultValue `true`
+     */
+    force_int_remainder_cols?: boolean
   }) {
     this.id = `ColumnTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -108,19 +115,8 @@ except NameError: bridgeColumnTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ColumnTransformer = {'transformers': ${
-      this.opts['transformers'] ?? undefined
-    }, 'remainder': ${
-      this.opts['remainder'] ?? undefined
-    }, 'sparse_threshold': ${
-      this.opts['sparse_threshold'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'transformer_weights': ${
-      this.opts['transformer_weights'] ?? undefined
-    }, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'verbose_feature_names_out': ${
-      this.opts['verbose_feature_names_out'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ColumnTransformer = {'transformers': ${this.opts['transformers'] ?? undefined}, 'remainder': ${this.opts['remainder'] ?? undefined}, 'sparse_threshold': ${this.opts['sparse_threshold'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'transformer_weights': ${this.opts['transformer_weights'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'verbose_feature_names_out': ${this.opts['verbose_feature_names_out'] ?? undefined}, 'force_int_remainder_cols': ${this.opts['force_int_remainder_cols'] ?? undefined}}
 
 ctor_ColumnTransformer = {k: v for k, v in ctor_ColumnTransformer.items() if v is not None}`
 
@@ -162,6 +158,13 @@ ctor_ColumnTransformer = {k: v for k, v in ctor_ColumnTransformer.items() if v i
       Targets for supervised learning.
      */
     y?: ArrayLike[]
+
+    /**
+      Parameters to be passed to the underlying transformers’ `fit` and `transform` methods.
+
+      You can only pass this if metadata routing is enabled, which you can enable using `sklearn.set\_config(enable\_metadata\_routing=`true`)`.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -174,11 +177,8 @@ ctor_ColumnTransformer = {k: v for k, v in ctor_ColumnTransformer.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_ColumnTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_ColumnTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_ColumnTransformer_fit = {k: v for k, v in pms_ColumnTransformer_fit.items() if v is not None}`
 
@@ -204,6 +204,13 @@ pms_ColumnTransformer_fit = {k: v for k, v in pms_ColumnTransformer_fit.items() 
       Targets for supervised learning.
      */
     y?: ArrayLike
+
+    /**
+      Parameters to be passed to the underlying transformers’ `fit` and `transform` methods.
+
+      You can only pass this if metadata routing is enabled, which you can enable using `sklearn.set\_config(enable\_metadata\_routing=`true`)`.
+     */
+    params?: any
   }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
@@ -218,11 +225,8 @@ pms_ColumnTransformer_fit = {k: v for k, v in pms_ColumnTransformer_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_ColumnTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_ColumnTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_ColumnTransformer_fit_transform = {k: v for k, v in pms_ColumnTransformer_fit_transform.items() if v is not None}`
 
@@ -258,9 +262,7 @@ pms_ColumnTransformer_fit_transform = {k: v for k, v in pms_ColumnTransformer_fi
 
     // set up method params
     await this._py
-      .ex`pms_ColumnTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_ColumnTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_ColumnTransformer_get_feature_names_out = {k: v for k, v in pms_ColumnTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -280,7 +282,7 @@ pms_ColumnTransformer_get_feature_names_out = {k: v for k, v in pms_ColumnTransf
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -298,9 +300,7 @@ pms_ColumnTransformer_get_feature_names_out = {k: v for k, v in pms_ColumnTransf
 
     // set up method params
     await this._py
-      .ex`pms_ColumnTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_ColumnTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ColumnTransformer_get_metadata_routing = {k: v for k, v in pms_ColumnTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -322,7 +322,7 @@ pms_ColumnTransformer_get_metadata_routing = {k: v for k, v in pms_ColumnTransfo
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -335,9 +335,8 @@ pms_ColumnTransformer_get_metadata_routing = {k: v for k, v in pms_ColumnTransfo
     }
 
     // set up method params
-    await this._py.ex`pms_ColumnTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ColumnTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_ColumnTransformer_set_output = {k: v for k, v in pms_ColumnTransformer_set_output.items() if v is not None}`
 
@@ -358,6 +357,13 @@ pms_ColumnTransformer_set_output = {k: v for k, v in pms_ColumnTransformer_set_o
       The data to be transformed by subset.
      */
     X?: ArrayLike[]
+
+    /**
+      Parameters to be passed to the underlying transformers’ `transform` method.
+
+      You can only pass this if metadata routing is enabled, which you can enable using `sklearn.set\_config(enable\_metadata\_routing=`true`)`.
+     */
+    params?: any
   }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
@@ -370,9 +376,8 @@ pms_ColumnTransformer_set_output = {k: v for k, v in pms_ColumnTransformer_set_o
     }
 
     // set up method params
-    await this._py.ex`pms_ColumnTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_ColumnTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_ColumnTransformer_transform = {k: v for k, v in pms_ColumnTransformer_transform.items() if v is not None}`
 
@@ -386,7 +391,7 @@ pms_ColumnTransformer_transform = {k: v for k, v in pms_ColumnTransformer_transf
   }
 
   /**
-    The collection of fitted transformers as tuples of (name, fitted\_transformer, column). `fitted\_transformer` can be an estimator, ‘drop’, or ‘passthrough’. In case there were no columns selected, this will be the unfitted transformer. If there are remaining columns, the final element is a tuple of the form: (‘remainder’, transformer, remaining\_columns) corresponding to the `remainder` parameter. If there are remaining columns, then `len(transformers\_)==len(transformers)+1`, otherwise `len(transformers\_)==len(transformers)`.
+    The collection of fitted transformers as tuples of (name, fitted\_transformer, column). `fitted\_transformer` can be an estimator, or `'drop'`; `'passthrough'` is replaced with an equivalent [`FunctionTransformer`](sklearn.preprocessing.FunctionTransformer.html#sklearn.preprocessing.FunctionTransformer "sklearn.preprocessing.FunctionTransformer"). In case there were no columns selected, this will be the unfitted transformer. If there are remaining columns, the final element is a tuple of the form: (‘remainder’, transformer, remaining\_columns) corresponding to the `remainder` parameter. If there are remaining columns, then `len(transformers\_)==len(transformers)+1`, otherwise `len(transformers\_)==len(transformers)`.
    */
   get transformers_(): Promise<any[]> {
     if (this._isDisposed) {

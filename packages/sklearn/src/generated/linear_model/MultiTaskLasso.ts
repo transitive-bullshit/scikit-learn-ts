@@ -115,15 +115,8 @@ except NameError: bridgeMultiTaskLasso = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MultiTaskLasso = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'selection': ${this.opts['selection'] ?? undefined}}
+    await this._py
+      .ex`ctor_MultiTaskLasso = {'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'selection': ${this.opts['selection'] ?? undefined}}
 
 ctor_MultiTaskLasso = {k: v for k, v in ctor_MultiTaskLasso.items() if v is not None}`
 
@@ -175,11 +168,8 @@ ctor_MultiTaskLasso = {k: v for k, v in ctor_MultiTaskLasso.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskLasso_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiTaskLasso_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_MultiTaskLasso_fit = {k: v for k, v in pms_MultiTaskLasso_fit.items() if v is not None}`
 
@@ -214,9 +204,8 @@ pms_MultiTaskLasso_fit = {k: v for k, v in pms_MultiTaskLasso_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskLasso_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiTaskLasso_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MultiTaskLasso_get_metadata_routing = {k: v for k, v in pms_MultiTaskLasso_get_metadata_routing.items() if v is not None}`
 
@@ -271,7 +260,7 @@ pms_MultiTaskLasso_get_metadata_routing = {k: v for k, v in pms_MultiTaskLasso_g
     /**
       List of alphas where to compute the models. If `undefined` alphas are set automatically.
      */
-    alphas?: NDArray
+    alphas?: ArrayLike
 
     /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
@@ -295,7 +284,7 @@ pms_MultiTaskLasso_get_metadata_routing = {k: v for k, v in pms_MultiTaskLasso_g
     /**
       The initial values of the coefficients.
      */
-    coef_init?: NDArray
+    coef_init?: ArrayLike
 
     /**
       Amount of verbosity.
@@ -339,29 +328,8 @@ pms_MultiTaskLasso_get_metadata_routing = {k: v for k, v in pms_MultiTaskLasso_g
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskLasso_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${
-      opts['l1_ratio'] ?? undefined
-    }, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${
-      opts['n_alphas'] ?? undefined
-    }, 'alphas': np.array(${opts['alphas'] ?? undefined}) if ${
-      opts['alphas'] !== undefined
-    } else None, 'precompute': np.array(${
-      opts['precompute'] ?? undefined
-    }) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${
-      opts['return_n_iter'] ?? undefined
-    }, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_MultiTaskLasso_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${opts['l1_ratio'] ?? undefined}, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': ${opts['alphas'] ?? undefined}, 'precompute': np.array(${opts['precompute'] ?? undefined}) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${opts['return_n_iter'] ?? undefined}, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${opts['check_input'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_MultiTaskLasso_path = {k: v for k, v in pms_MultiTaskLasso_path.items() if v is not None}`
 
@@ -392,9 +360,8 @@ pms_MultiTaskLasso_path = {k: v for k, v in pms_MultiTaskLasso_path.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskLasso_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiTaskLasso_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_MultiTaskLasso_predict = {k: v for k, v in pms_MultiTaskLasso_predict.items() if v is not None}`
 
@@ -437,13 +404,8 @@ pms_MultiTaskLasso_predict = {k: v for k, v in pms_MultiTaskLasso_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskLasso_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiTaskLasso_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MultiTaskLasso_score = {k: v for k, v in pms_MultiTaskLasso_score.items() if v is not None}`
 
@@ -485,9 +447,8 @@ pms_MultiTaskLasso_score = {k: v for k, v in pms_MultiTaskLasso_score.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskLasso_set_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_MultiTaskLasso_set_fit_request = {'check_input': ${opts['check_input'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiTaskLasso_set_fit_request = {k: v for k, v in pms_MultiTaskLasso_set_fit_request.items() if v is not None}`
 
@@ -525,9 +486,7 @@ pms_MultiTaskLasso_set_fit_request = {k: v for k, v in pms_MultiTaskLasso_set_fi
 
     // set up method params
     await this._py
-      .ex`pms_MultiTaskLasso_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiTaskLasso_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiTaskLasso_set_score_request = {k: v for k, v in pms_MultiTaskLasso_set_score_request.items() if v is not None}`
 

@@ -113,7 +113,7 @@ export class OPTICS {
     memory?: string
 
     /**
-      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -157,23 +157,8 @@ except NameError: bridgeOPTICS = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OPTICS = {'min_samples': ${
-      this.opts['min_samples'] ?? undefined
-    }, 'max_eps': ${this.opts['max_eps'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'cluster_method': ${this.opts['cluster_method'] ?? undefined}, 'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'xi': ${this.opts['xi'] ?? undefined}, 'predecessor_correction': ${
-      this.opts['predecessor_correction'] ?? undefined
-    }, 'min_cluster_size': ${
-      this.opts['min_cluster_size'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${
-      this.opts['leaf_size'] ?? undefined
-    }, 'memory': ${this.opts['memory'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_OPTICS = {'min_samples': ${this.opts['min_samples'] ?? undefined}, 'max_eps': ${this.opts['max_eps'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'cluster_method': ${this.opts['cluster_method'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'xi': ${this.opts['xi'] ?? undefined}, 'predecessor_correction': ${this.opts['predecessor_correction'] ?? undefined}, 'min_cluster_size': ${this.opts['min_cluster_size'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'memory': ${this.opts['memory'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_OPTICS = {k: v for k, v in ctor_OPTICS.items() if v is not None}`
 
@@ -226,9 +211,8 @@ ctor_OPTICS = {k: v for k, v in ctor_OPTICS.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_OPTICS_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_OPTICS_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_OPTICS_fit = {k: v for k, v in pms_OPTICS_fit.items() if v is not None}`
 
@@ -254,6 +238,11 @@ pms_OPTICS_fit = {k: v for k, v in pms_OPTICS_fit.items() if v is not None}`
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OPTICS instance has already been disposed')
@@ -264,9 +253,8 @@ pms_OPTICS_fit = {k: v for k, v in pms_OPTICS_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_OPTICS_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_OPTICS_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v is not None}`
 
@@ -299,9 +287,8 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_OPTICS_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OPTICS_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OPTICS_get_metadata_routing = {k: v for k, v in pms_OPTICS_get_metadata_routing.items() if v is not None}`
 

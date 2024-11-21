@@ -47,13 +47,13 @@ export class QuantileRegressor {
     fit_intercept?: boolean
 
     /**
-      Method used by [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.11.3)") to solve the linear programming formulation.
+      Method used by [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.14.1)") to solve the linear programming formulation.
 
       From `scipy>=1.6.0`, it is recommended to use the highs methods because they are the fastest ones. Solvers “highs-ds”, “highs-ipm” and “highs” support sparse input data and, in fact, always convert to sparse csc.
 
       From `scipy>=1.11.0`, “interior-point” is not available anymore.
 
-      @defaultValue `'interior-point'`
+      @defaultValue `'highs'`
      */
     solver?:
       | 'highs-ds'
@@ -63,7 +63,7 @@ export class QuantileRegressor {
       | 'revised simplex'
 
     /**
-      Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.11.3)") as options. If `undefined` and if `solver='interior-point'`, then `{"lstsq": `true`}` is passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.11.3)") for the sake of stability.
+      Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.14.1)") as options. If `undefined` and if `solver='interior-point'`, then `{"lstsq": `true`}` is passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.14.1)") for the sake of stability.
      */
     solver_options?: any
   }) {
@@ -109,13 +109,8 @@ except NameError: bridgeQuantileRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_QuantileRegressor = {'quantile': ${
-      this.opts['quantile'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'solver': ${this.opts['solver'] ?? undefined}, 'solver_options': ${
-      this.opts['solver_options'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_QuantileRegressor = {'quantile': ${this.opts['quantile'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'solver_options': ${this.opts['solver_options'] ?? undefined}}
 
 ctor_QuantileRegressor = {k: v for k, v in ctor_QuantileRegressor.items() if v is not None}`
 
@@ -174,13 +169,8 @@ ctor_QuantileRegressor = {k: v for k, v in ctor_QuantileRegressor.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_QuantileRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_QuantileRegressor_fit = {k: v for k, v in pms_QuantileRegressor_fit.items() if v is not None}`
 
@@ -218,9 +208,7 @@ pms_QuantileRegressor_fit = {k: v for k, v in pms_QuantileRegressor_fit.items() 
 
     // set up method params
     await this._py
-      .ex`pms_QuantileRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_QuantileRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_QuantileRegressor_get_metadata_routing = {k: v for k, v in pms_QuantileRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -253,9 +241,8 @@ pms_QuantileRegressor_get_metadata_routing = {k: v for k, v in pms_QuantileRegre
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_QuantileRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_QuantileRegressor_predict = {k: v for k, v in pms_QuantileRegressor_predict.items() if v is not None}`
 
@@ -300,13 +287,8 @@ pms_QuantileRegressor_predict = {k: v for k, v in pms_QuantileRegressor_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_QuantileRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_QuantileRegressor_score = {k: v for k, v in pms_QuantileRegressor_score.items() if v is not None}`
 
@@ -346,9 +328,7 @@ pms_QuantileRegressor_score = {k: v for k, v in pms_QuantileRegressor_score.item
 
     // set up method params
     await this._py
-      .ex`pms_QuantileRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_QuantileRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_QuantileRegressor_set_fit_request = {k: v for k, v in pms_QuantileRegressor_set_fit_request.items() if v is not None}`
 
@@ -388,9 +368,7 @@ pms_QuantileRegressor_set_fit_request = {k: v for k, v in pms_QuantileRegressor_
 
     // set up method params
     await this._py
-      .ex`pms_QuantileRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_QuantileRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_QuantileRegressor_set_score_request = {k: v for k, v in pms_QuantileRegressor_set_score_request.items() if v is not None}`
 

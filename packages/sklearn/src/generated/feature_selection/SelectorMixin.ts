@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This mixin provides a feature selector implementation with `transform` and `inverse\_transform` functionality given an implementation of `\_get\_support\_mask`.
 
-  Methods
+  Examples
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectorMixin.html)
  */
@@ -78,13 +78,8 @@ except NameError: bridgeSelectorMixin = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectorMixin = {'X': np.array(${
-      this.opts['X'] ?? undefined
-    }) if ${this.opts['X'] !== undefined} else None, 'y': np.array(${
-      this.opts['y'] ?? undefined
-    }) if ${this.opts['y'] !== undefined} else None, 'fit_params': ${
-      this.opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_SelectorMixin = {'X': np.array(${this.opts['X'] ?? undefined}) if ${this.opts['X'] !== undefined} else None, 'y': np.array(${this.opts['y'] ?? undefined}) if ${this.opts['y'] !== undefined} else None, 'fit_params': ${this.opts['fit_params'] ?? undefined}}
 
 ctor_SelectorMixin = {k: v for k, v in ctor_SelectorMixin.items() if v is not None}`
 
@@ -143,13 +138,8 @@ ctor_SelectorMixin = {k: v for k, v in ctor_SelectorMixin.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_SelectorMixin_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectorMixin_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectorMixin_fit_transform = {k: v for k, v in pms_SelectorMixin_fit_transform.items() if v is not None}`
 
@@ -183,9 +173,7 @@ pms_SelectorMixin_fit_transform = {k: v for k, v in pms_SelectorMixin_fit_transf
 
     // set up method params
     await this._py
-      .ex`pms_SelectorMixin_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectorMixin_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectorMixin_get_feature_names_out = {k: v for k, v in pms_SelectorMixin_get_feature_names_out.items() if v is not None}`
 
@@ -218,9 +206,8 @@ pms_SelectorMixin_get_feature_names_out = {k: v for k, v in pms_SelectorMixin_ge
     }
 
     // set up method params
-    await this._py.ex`pms_SelectorMixin_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectorMixin_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectorMixin_get_support = {k: v for k, v in pms_SelectorMixin_get_support.items() if v is not None}`
 
@@ -253,9 +240,8 @@ pms_SelectorMixin_get_support = {k: v for k, v in pms_SelectorMixin_get_support.
     }
 
     // set up method params
-    await this._py.ex`pms_SelectorMixin_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectorMixin_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectorMixin_inverse_transform = {k: v for k, v in pms_SelectorMixin_inverse_transform.items() if v is not None}`
 
@@ -277,7 +263,7 @@ pms_SelectorMixin_inverse_transform = {k: v for k, v in pms_SelectorMixin_invers
     /**
       Configure output of `transform` and `fit\_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectorMixin instance has already been disposed')
@@ -288,9 +274,8 @@ pms_SelectorMixin_inverse_transform = {k: v for k, v in pms_SelectorMixin_invers
     }
 
     // set up method params
-    await this._py.ex`pms_SelectorMixin_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectorMixin_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectorMixin_set_output = {k: v for k, v in pms_SelectorMixin_set_output.items() if v is not None}`
 
@@ -321,9 +306,8 @@ pms_SelectorMixin_set_output = {k: v for k, v in pms_SelectorMixin_set_output.it
     }
 
     // set up method params
-    await this._py.ex`pms_SelectorMixin_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectorMixin_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectorMixin_transform = {k: v for k, v in pms_SelectorMixin_transform.items() if v is not None}`
 
