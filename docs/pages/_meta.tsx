@@ -1,7 +1,11 @@
 export default {
   index: 'Home',
-  guide: 'Guide',
-  docs: 'Documentation',
+  guide: {
+    title: <b>Guide</b>
+  },
+  docs: {
+    title: <b>Documentation</b>
+  },
   '-- Project': {
     type: 'separator',
     title: 'Project'

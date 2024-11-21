@@ -33,19 +33,6 @@ const config: DocsThemeConfig = {
   editLink: {
     content: 'Edit this page on GitHub'
   },
-  // TODO
-  // useNextSeoProps() {
-  //   const { asPath } = useRouter()
-  //   if (asPath === '/') {
-  //     return {
-  //       titleTemplate: siteTitle
-  //     }
-  //   } else {
-  //     return {
-  //       titleTemplate: `%s – ${siteTitle}`
-  //     }
-  //   }
-  // },
   sidebar: {
     toggleButton: true
   },
@@ -104,20 +91,5 @@ const config: DocsThemeConfig = {
     component: null
   }
 }
-
-// // TODO: get memoization working here
-// function titleComponent({
-//   title
-// }: {
-//   title: string
-//   type: string
-//   route: string
-// }) {
-//   if (title === 'Guide' || title === 'Documentation') {
-//     return <b>{title}</b>
-//   }
-
-//   return <span>{title}</span>
-// }
 
 export default config
