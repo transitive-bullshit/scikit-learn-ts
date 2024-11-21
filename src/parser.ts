@@ -9,7 +9,8 @@ import { isValidPythonIdentifier } from './utils'
 const methodIgnoreList = new Set(['get_params', 'set_params'])
 
 export async function fetchScikitLearnIndex({
-  indexUrl = 'https://scikit-learn.org/stable/modules/classes.html'
+  // indexUrl = 'https://scikit-learn.org/stable/modules/classes.html'
+  indexUrl = 'https://scikit-learn.org/stable/api/index.html'
 }: { indexUrl?: string } = {}): Promise<string[]> {
   const res = await got(indexUrl).text()
   // console.log(res)

@@ -11,7 +11,7 @@ export type { PythonBridge }
  * Other versions may work, but there may be minor differences in the generated
  * types. We recommend against using other major versions.
  */
-export const SCIKIT_LEARN_VERSION = '1.2.1'
+export const SCIKIT_LEARN_VERSION = '1.5.2'
 
 const PB = pythonBridge as any
 const [scikitLearnVersionMajor, scikitLearnVersionMinor] =
