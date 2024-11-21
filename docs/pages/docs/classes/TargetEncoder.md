@@ -74,7 +74,7 @@ Type of target.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L29)
+[generated/preprocessing/TargetEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L29)
 
 ## Properties
 
@@ -84,7 +84,7 @@ Type of target.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L27)
+[generated/preprocessing/TargetEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L27)
 
 ***
 
@@ -94,7 +94,7 @@ Type of target.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L26)
+[generated/preprocessing/TargetEncoder.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L26)
 
 ***
 
@@ -104,7 +104,7 @@ Type of target.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L25)
+[generated/preprocessing/TargetEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L25)
 
 ***
 
@@ -114,7 +114,7 @@ Type of target.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L22)
+[generated/preprocessing/TargetEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L22)
 
 ***
 
@@ -124,7 +124,7 @@ Type of target.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L23)
+[generated/preprocessing/TargetEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L23)
 
 ## Accessors
 
@@ -142,7 +142,7 @@ The categories of each input feature determined during fitting or specified in `
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L378)
+[generated/preprocessing/TargetEncoder.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L378)
 
 ***
 
@@ -160,7 +160,7 @@ If `target\_type\_` is ‘binary’ or ‘multiclass’, holds the label for eac
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L503)
+[generated/preprocessing/TargetEncoder.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L503)
 
 ***
 
@@ -178,7 +178,7 @@ Encodings learnt on all of `X`. For feature `i`, `encodings\_\[i\]` are the enco
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L353)
+[generated/preprocessing/TargetEncoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L353)
 
 ***
 
@@ -196,7 +196,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L478)
+[generated/preprocessing/TargetEncoder.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L478)
 
 ***
 
@@ -214,7 +214,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L453)
+[generated/preprocessing/TargetEncoder.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L453)
 
 ***
 
@@ -242,7 +242,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L74)
+[generated/preprocessing/TargetEncoder.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L74)
 
 ***
 
@@ -260,7 +260,7 @@ The overall mean of the target. This value is only used in [`transform`](#sklear
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L428)
+[generated/preprocessing/TargetEncoder.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L428)
 
 ***
 
@@ -278,7 +278,7 @@ Type of target.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L403)
+[generated/preprocessing/TargetEncoder.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L403)
 
 ## Methods
 
@@ -296,7 +296,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L126)
+[generated/preprocessing/TargetEncoder.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L126)
 
 ***
 
@@ -324,7 +324,7 @@ The target data used to encode the categories.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L143)
+[generated/preprocessing/TargetEncoder.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L143)
 
 ***
 
@@ -352,7 +352,7 @@ The target data used to encode the categories.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L180)
+[generated/preprocessing/TargetEncoder.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L180)
 
 ***
 
@@ -376,7 +376,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L217)
+[generated/preprocessing/TargetEncoder.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L217)
 
 ***
 
@@ -402,7 +402,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L253)
+[generated/preprocessing/TargetEncoder.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L253)
 
 ***
 
@@ -424,7 +424,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L87)
+[generated/preprocessing/TargetEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L87)
 
 ***
 
@@ -450,7 +450,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L289)
+[generated/preprocessing/TargetEncoder.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L289)
 
 ***
 
@@ -474,4 +474,4 @@ The data to determine the categories of each feature.
 
 #### Defined in
 
-[generated/preprocessing/TargetEncoder.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L321)
+[generated/preprocessing/TargetEncoder.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L321)

@@ -70,7 +70,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L27)
+[generated/ensemble/StackingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L27)
 
 ## Properties
 
@@ -80,7 +80,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L25)
+[generated/ensemble/StackingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L25)
 
 ***
 
@@ -90,7 +90,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L24)
+[generated/ensemble/StackingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L24)
 
 ***
 
@@ -100,7 +100,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L23)
+[generated/ensemble/StackingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L23)
 
 ***
 
@@ -110,7 +110,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L20)
+[generated/ensemble/StackingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L20)
 
 ***
 
@@ -120,7 +120,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L21)
+[generated/ensemble/StackingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L21)
 
 ## Accessors
 
@@ -138,7 +138,7 @@ Class labels.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L615)
+[generated/ensemble/StackingClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L615)
 
 ***
 
@@ -156,7 +156,7 @@ The elements of the `estimators` parameter, having been fitted on the training d
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L642)
+[generated/ensemble/StackingClassifier.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L642)
 
 ***
 
@@ -174,7 +174,7 @@ Names of features seen during fit. Only defined if the underlying estimators exp
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L696)
+[generated/ensemble/StackingClassifier.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L696)
 
 ***
 
@@ -192,7 +192,7 @@ The classifier which predicts given the output of `estimators\_`.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L723)
+[generated/ensemble/StackingClassifier.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L723)
 
 ***
 
@@ -210,7 +210,7 @@ Attribute to access any fitted sub-estimators by name.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L669)
+[generated/ensemble/StackingClassifier.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L669)
 
 ***
 
@@ -238,7 +238,7 @@ Attribute to access any fitted sub-estimators by name.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L75)
+[generated/ensemble/StackingClassifier.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L75)
 
 ***
 
@@ -256,7 +256,7 @@ The method used by each base estimator.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:750](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L750)
+[generated/ensemble/StackingClassifier.ts:750](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L750)
 
 ## Methods
 
@@ -280,7 +280,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L148)
+[generated/ensemble/StackingClassifier.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L148)
 
 ***
 
@@ -298,7 +298,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L131)
+[generated/ensemble/StackingClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L131)
 
 ***
 
@@ -330,7 +330,7 @@ Target values. Note that `y` will be internally encoded in numerically increasin
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L184)
+[generated/ensemble/StackingClassifier.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L184)
 
 ***
 
@@ -364,7 +364,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L230)
+[generated/ensemble/StackingClassifier.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L230)
 
 ***
 
@@ -388,7 +388,7 @@ Input features. The input feature names are only used when `passthrough` is `tru
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L276)
+[generated/ensemble/StackingClassifier.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L276)
 
 ***
 
@@ -410,7 +410,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L314)
+[generated/ensemble/StackingClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L314)
 
 ***
 
@@ -432,7 +432,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L88)
+[generated/ensemble/StackingClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L88)
 
 ***
 
@@ -460,7 +460,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L344)
+[generated/ensemble/StackingClassifier.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L344)
 
 ***
 
@@ -484,7 +484,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L383)
+[generated/ensemble/StackingClassifier.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L383)
 
 ***
 
@@ -518,7 +518,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L421)
+[generated/ensemble/StackingClassifier.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L421)
 
 ***
 
@@ -546,7 +546,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L469)
+[generated/ensemble/StackingClassifier.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L469)
 
 ***
 
@@ -572,7 +572,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L507)
+[generated/ensemble/StackingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L507)
 
 ***
 
@@ -600,7 +600,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L545)
+[generated/ensemble/StackingClassifier.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L545)
 
 ***
 
@@ -624,4 +624,4 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/ensemble/StackingClassifier.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L581)
+[generated/ensemble/StackingClassifier.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L581)

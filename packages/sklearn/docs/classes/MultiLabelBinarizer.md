@@ -36,7 +36,7 @@ Set to `true` if output binary array is desired in CSR sparse format.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
+[generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Set to `true` if output binary array is desired in CSR sparse format.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21)
+[generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ Set to `true` if output binary array is desired in CSR sparse format.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20)
+[generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ Set to `true` if output binary array is desired in CSR sparse format.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19)
+[generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ Set to `true` if output binary array is desired in CSR sparse format.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16)
+[generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ Set to `true` if output binary array is desired in CSR sparse format.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17)
+[generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ A copy of the `classes` parameter when provided. Otherwise it corresponds to the
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L329)
+[generated/preprocessing/MultiLabelBinarizer.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L329)
 
 ***
 
@@ -132,7 +132,7 @@ A copy of the `classes` parameter when provided. Otherwise it corresponds to the
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40)
+[generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40)
 
 ## Methods
 
@@ -150,7 +150,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L96)
+[generated/preprocessing/MultiLabelBinarizer.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L96)
 
 ***
 
@@ -174,7 +174,7 @@ A set of labels (any orderable and hashable object) for each sample. If the `cla
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L113)
+[generated/preprocessing/MultiLabelBinarizer.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L113)
 
 ***
 
@@ -198,7 +198,7 @@ A set of labels (any orderable and hashable object) for each sample. If the `cla
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L147)
+[generated/preprocessing/MultiLabelBinarizer.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L147)
 
 ***
 
@@ -224,7 +224,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L185)
+[generated/preprocessing/MultiLabelBinarizer.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L185)
 
 ***
 
@@ -246,7 +246,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L53)
+[generated/preprocessing/MultiLabelBinarizer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L53)
 
 ***
 
@@ -270,7 +270,7 @@ A matrix containing only 1s ands 0s.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L221)
+[generated/preprocessing/MultiLabelBinarizer.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L221)
 
 ***
 
@@ -296,7 +296,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L259)
+[generated/preprocessing/MultiLabelBinarizer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L259)
 
 ***
 
@@ -320,4 +320,4 @@ A set of labels (any orderable and hashable object) for each sample. If the `cla
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L295)
+[generated/preprocessing/MultiLabelBinarizer.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L295)

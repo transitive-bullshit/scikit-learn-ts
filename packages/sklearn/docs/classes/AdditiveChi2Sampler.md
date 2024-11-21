@@ -42,7 +42,7 @@ Gives the number of (complex) sampling points.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L29)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L29)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Gives the number of (complex) sampling points.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L27)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L27)
 
 ***
 
@@ -62,7 +62,7 @@ Gives the number of (complex) sampling points.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L26)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L26)
 
 ***
 
@@ -72,7 +72,7 @@ Gives the number of (complex) sampling points.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L25)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L25)
 
 ***
 
@@ -82,7 +82,7 @@ Gives the number of (complex) sampling points.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L22)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L22)
 
 ***
 
@@ -92,7 +92,7 @@ Gives the number of (complex) sampling points.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L23)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L23)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L381)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L381)
 
 ***
 
@@ -128,7 +128,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L354)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L354)
 
 ***
 
@@ -156,7 +156,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L46)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L46)
 
 ## Methods
 
@@ -174,7 +174,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L102)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L102)
 
 ***
 
@@ -204,7 +204,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L121)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L121)
 
 ***
 
@@ -238,7 +238,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L162)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L162)
 
 ***
 
@@ -262,7 +262,7 @@ Only used to validate feature names with the names seen in [`fit`](#sklearn.kern
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L208)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L208)
 
 ***
 
@@ -288,7 +288,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L246)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L246)
 
 ***
 
@@ -310,7 +310,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L59)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L59)
 
 ***
 
@@ -336,7 +336,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L284)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L284)
 
 ***
 
@@ -360,4 +360,4 @@ Training data, where `n\_samples` is the number of samples and `n\_features` is 
 
 #### Defined in
 
-[generated/kernel\_approximation/AdditiveChi2Sampler.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L320)
+[generated/kernel\_approximation/AdditiveChi2Sampler.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L320)

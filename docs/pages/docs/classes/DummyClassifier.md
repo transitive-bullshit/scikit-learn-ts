@@ -48,7 +48,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L31)
+[generated/dummy/DummyClassifier.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L31)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L29)
+[generated/dummy/DummyClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L29)
 
 ***
 
@@ -68,7 +68,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L28)
+[generated/dummy/DummyClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L28)
 
 ***
 
@@ -78,7 +78,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L27)
+[generated/dummy/DummyClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L27)
 
 ***
 
@@ -88,7 +88,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L24)
+[generated/dummy/DummyClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L24)
 
 ***
 
@@ -98,7 +98,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L25)
+[generated/dummy/DummyClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L25)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Frequency of each class observed in `y`. For multioutput classification problems
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L468)
+[generated/dummy/DummyClassifier.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L468)
 
 ***
 
@@ -134,7 +134,7 @@ Unique class labels observed in `y`. For multi-output classification problems, t
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L418)
+[generated/dummy/DummyClassifier.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L418)
 
 ***
 
@@ -152,7 +152,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L518)
+[generated/dummy/DummyClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L518)
 
 ***
 
@@ -170,7 +170,7 @@ Number of label for each output.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L443)
+[generated/dummy/DummyClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L443)
 
 ***
 
@@ -188,7 +188,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L493)
+[generated/dummy/DummyClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L493)
 
 ***
 
@@ -206,7 +206,7 @@ Number of outputs.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L543)
+[generated/dummy/DummyClassifier.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L543)
 
 ***
 
@@ -234,7 +234,7 @@ Number of outputs.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L53)
+[generated/dummy/DummyClassifier.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L53)
 
 ***
 
@@ -252,7 +252,7 @@ True if the array returned from predict is to be in sparse CSC format. Is automa
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L568)
+[generated/dummy/DummyClassifier.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L568)
 
 ## Methods
 
@@ -270,7 +270,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L105)
+[generated/dummy/DummyClassifier.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L105)
 
 ***
 
@@ -302,7 +302,7 @@ Target values.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L122)
+[generated/dummy/DummyClassifier.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L122)
 
 ***
 
@@ -328,7 +328,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L166)
+[generated/dummy/DummyClassifier.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L166)
 
 ***
 
@@ -350,7 +350,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L66)
+[generated/dummy/DummyClassifier.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L66)
 
 ***
 
@@ -374,7 +374,7 @@ Test data.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L200)
+[generated/dummy/DummyClassifier.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L200)
 
 ***
 
@@ -398,7 +398,7 @@ Training data.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L232)
+[generated/dummy/DummyClassifier.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L232)
 
 ***
 
@@ -422,7 +422,7 @@ Test data.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L266)
+[generated/dummy/DummyClassifier.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L266)
 
 ***
 
@@ -456,7 +456,7 @@ True labels for X.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L300)
+[generated/dummy/DummyClassifier.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L300)
 
 ***
 
@@ -484,7 +484,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L346)
+[generated/dummy/DummyClassifier.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L346)
 
 ***
 
@@ -512,4 +512,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/dummy/DummyClassifier.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L384)
+[generated/dummy/DummyClassifier.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L384)

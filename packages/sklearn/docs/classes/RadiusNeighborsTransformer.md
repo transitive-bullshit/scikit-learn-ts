@@ -86,7 +86,7 @@ Radius of neighborhood in the transformed sparse graph.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L25)
+[generated/neighbors/RadiusNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L25)
 
 ## Properties
 
@@ -96,7 +96,7 @@ Radius of neighborhood in the transformed sparse graph.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L23)
+[generated/neighbors/RadiusNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L23)
 
 ***
 
@@ -106,7 +106,7 @@ Radius of neighborhood in the transformed sparse graph.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L22)
+[generated/neighbors/RadiusNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L22)
 
 ***
 
@@ -116,7 +116,7 @@ Radius of neighborhood in the transformed sparse graph.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L21)
+[generated/neighbors/RadiusNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L21)
 
 ***
 
@@ -126,7 +126,7 @@ Radius of neighborhood in the transformed sparse graph.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L18)
+[generated/neighbors/RadiusNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L18)
 
 ***
 
@@ -136,7 +136,7 @@ Radius of neighborhood in the transformed sparse graph.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L19)
+[generated/neighbors/RadiusNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L19)
 
 ## Accessors
 
@@ -154,7 +154,7 @@ The distance metric used. It will be same as the `metric` parameter or a synonym
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L509)
+[generated/neighbors/RadiusNeighborsTransformer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L509)
 
 ***
 
@@ -172,7 +172,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L536)
+[generated/neighbors/RadiusNeighborsTransformer.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L536)
 
 ***
 
@@ -190,7 +190,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L590)
+[generated/neighbors/RadiusNeighborsTransformer.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L590)
 
 ***
 
@@ -208,7 +208,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L563)
+[generated/neighbors/RadiusNeighborsTransformer.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L563)
 
 ***
 
@@ -226,7 +226,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L617)
+[generated/neighbors/RadiusNeighborsTransformer.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L617)
 
 ***
 
@@ -254,7 +254,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L86)
+[generated/neighbors/RadiusNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L86)
 
 ## Methods
 
@@ -272,7 +272,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L142)
+[generated/neighbors/RadiusNeighborsTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L142)
 
 ***
 
@@ -300,7 +300,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L159)
+[generated/neighbors/RadiusNeighborsTransformer.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L159)
 
 ***
 
@@ -330,7 +330,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L202)
+[generated/neighbors/RadiusNeighborsTransformer.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L202)
 
 ***
 
@@ -356,7 +356,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L245)
+[generated/neighbors/RadiusNeighborsTransformer.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L245)
 
 ***
 
@@ -382,7 +382,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L283)
+[generated/neighbors/RadiusNeighborsTransformer.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L283)
 
 ***
 
@@ -404,7 +404,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L99)
+[generated/neighbors/RadiusNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L99)
 
 ***
 
@@ -452,7 +452,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L323)
+[generated/neighbors/RadiusNeighborsTransformer.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L323)
 
 ***
 
@@ -498,7 +498,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L380)
+[generated/neighbors/RadiusNeighborsTransformer.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L380)
 
 ***
 
@@ -524,7 +524,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L437)
+[generated/neighbors/RadiusNeighborsTransformer.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L437)
 
 ***
 
@@ -548,4 +548,4 @@ Sample data.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsTransformer.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L473)
+[generated/neighbors/RadiusNeighborsTransformer.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L473)

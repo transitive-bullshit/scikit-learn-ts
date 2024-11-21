@@ -78,7 +78,7 @@ Controls verbosity of output.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L25)
+[generated/feature\_selection/RFECV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L25)
 
 ## Properties
 
@@ -88,7 +88,7 @@ Controls verbosity of output.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L23)
+[generated/feature\_selection/RFECV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L23)
 
 ***
 
@@ -98,7 +98,7 @@ Controls verbosity of output.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L22)
+[generated/feature\_selection/RFECV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L22)
 
 ***
 
@@ -108,7 +108,7 @@ Controls verbosity of output.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L21)
+[generated/feature\_selection/RFECV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L21)
 
 ***
 
@@ -118,7 +118,7 @@ Controls verbosity of output.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L18)
+[generated/feature\_selection/RFECV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L18)
 
 ***
 
@@ -128,7 +128,7 @@ Controls verbosity of output.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L19)
+[generated/feature\_selection/RFECV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L19)
 
 ## Accessors
 
@@ -146,7 +146,7 @@ All arrays (values of the dictionary) are sorted in ascending order by the numbe
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L657)
+[generated/feature\_selection/RFECV.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L657)
 
 ***
 
@@ -164,7 +164,7 @@ The fitted estimator used to select features.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L634)
+[generated/feature\_selection/RFECV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L634)
 
 ***
 
@@ -182,7 +182,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L726)
+[generated/feature\_selection/RFECV.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L726)
 
 ***
 
@@ -200,7 +200,7 @@ The number of selected features with cross-validation.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L680)
+[generated/feature\_selection/RFECV.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L680)
 
 ***
 
@@ -218,7 +218,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L703)
+[generated/feature\_selection/RFECV.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L703)
 
 ***
 
@@ -246,7 +246,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L82)
+[generated/feature\_selection/RFECV.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L82)
 
 ***
 
@@ -264,7 +264,7 @@ The feature ranking, such that `ranking\_\[i\]` corresponds to the ranking posit
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L751)
+[generated/feature\_selection/RFECV.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L751)
 
 ***
 
@@ -282,7 +282,7 @@ The mask of selected features.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L773)
+[generated/feature\_selection/RFECV.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L773)
 
 ## Methods
 
@@ -306,7 +306,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L150)
+[generated/feature\_selection/RFECV.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L150)
 
 ***
 
@@ -324,7 +324,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L133)
+[generated/feature\_selection/RFECV.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L133)
 
 ***
 
@@ -356,7 +356,7 @@ Target values (integers for classification, real numbers for regression).
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L182)
+[generated/feature\_selection/RFECV.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L182)
 
 ***
 
@@ -390,7 +390,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L226)
+[generated/feature\_selection/RFECV.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L226)
 
 ***
 
@@ -414,7 +414,7 @@ Input features.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L268)
+[generated/feature\_selection/RFECV.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L268)
 
 ***
 
@@ -436,7 +436,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L302)
+[generated/feature\_selection/RFECV.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L302)
 
 ***
 
@@ -464,7 +464,7 @@ If `true`, the return value will be an array of integers, rather than a boolean 
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L328)
+[generated/feature\_selection/RFECV.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L328)
 
 ***
 
@@ -486,7 +486,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L95)
+[generated/feature\_selection/RFECV.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L95)
 
 ***
 
@@ -510,7 +510,7 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L362)
+[generated/feature\_selection/RFECV.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L362)
 
 ***
 
@@ -534,7 +534,7 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L394)
+[generated/feature\_selection/RFECV.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L394)
 
 ***
 
@@ -558,7 +558,7 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L426)
+[generated/feature\_selection/RFECV.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L426)
 
 ***
 
@@ -582,7 +582,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L458)
+[generated/feature\_selection/RFECV.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L458)
 
 ***
 
@@ -614,7 +614,7 @@ The target values.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L490)
+[generated/feature\_selection/RFECV.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L490)
 
 ***
 
@@ -642,7 +642,7 @@ Metadata routing for `groups` parameter in `fit`.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L536)
+[generated/feature\_selection/RFECV.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L536)
 
 ***
 
@@ -668,7 +668,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L570)
+[generated/feature\_selection/RFECV.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L570)
 
 ***
 
@@ -692,4 +692,4 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/RFECV.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/RFECV.ts#L602)
+[generated/feature\_selection/RFECV.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/RFECV.ts#L602)

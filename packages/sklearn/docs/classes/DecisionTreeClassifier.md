@@ -114,7 +114,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L23)
+[generated/tree/DecisionTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L23)
 
 ## Properties
 
@@ -124,7 +124,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L21)
+[generated/tree/DecisionTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L21)
 
 ***
 
@@ -134,7 +134,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L20)
+[generated/tree/DecisionTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L20)
 
 ***
 
@@ -144,7 +144,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L19)
+[generated/tree/DecisionTreeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L19)
 
 ***
 
@@ -154,7 +154,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L16)
+[generated/tree/DecisionTreeClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L16)
 
 ***
 
@@ -164,7 +164,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L17)
+[generated/tree/DecisionTreeClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L17)
 
 ## Accessors
 
@@ -182,7 +182,7 @@ The classes labels (single output problem), or a list of arrays of class labels 
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L810)
+[generated/tree/DecisionTreeClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L810)
 
 ***
 
@@ -200,7 +200,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:918](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L918)
+[generated/tree/DecisionTreeClassifier.ts:918](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L918)
 
 ***
 
@@ -218,7 +218,7 @@ The inferred value of max\_features.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L837)
+[generated/tree/DecisionTreeClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L837)
 
 ***
 
@@ -236,7 +236,7 @@ The number of classes (for single output problems), or a list containing the num
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L864)
+[generated/tree/DecisionTreeClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L864)
 
 ***
 
@@ -254,7 +254,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L891)
+[generated/tree/DecisionTreeClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L891)
 
 ***
 
@@ -272,7 +272,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:945](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L945)
+[generated/tree/DecisionTreeClassifier.ts:945](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L945)
 
 ***
 
@@ -300,7 +300,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L117)
+[generated/tree/DecisionTreeClassifier.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L117)
 
 ***
 
@@ -318,7 +318,7 @@ The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:972](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L972)
+[generated/tree/DecisionTreeClassifier.ts:972](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L972)
 
 ## Methods
 
@@ -350,7 +350,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L190)
+[generated/tree/DecisionTreeClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L190)
 
 ***
 
@@ -384,7 +384,7 @@ The target values (class labels) as integers or strings.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L233)
+[generated/tree/DecisionTreeClassifier.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L233)
 
 ***
 
@@ -416,7 +416,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L279)
+[generated/tree/DecisionTreeClassifier.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L279)
 
 ***
 
@@ -434,7 +434,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L173)
+[generated/tree/DecisionTreeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L173)
 
 ***
 
@@ -474,7 +474,7 @@ The target values (class labels) as integers or strings.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L322)
+[generated/tree/DecisionTreeClassifier.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L322)
 
 ***
 
@@ -496,7 +496,7 @@ The depth of a tree is the maximum distance between the root and any leaf.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L375)
+[generated/tree/DecisionTreeClassifier.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L375)
 
 ***
 
@@ -522,7 +522,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L407)
+[generated/tree/DecisionTreeClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L407)
 
 ***
 
@@ -542,7 +542,7 @@ Return the number of leaves of the decision tree.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L443)
+[generated/tree/DecisionTreeClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L443)
 
 ***
 
@@ -564,7 +564,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L130)
+[generated/tree/DecisionTreeClassifier.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L130)
 
 ***
 
@@ -598,7 +598,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L475)
+[generated/tree/DecisionTreeClassifier.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L475)
 
 ***
 
@@ -622,7 +622,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L518)
+[generated/tree/DecisionTreeClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L518)
 
 ***
 
@@ -656,7 +656,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L556)
+[generated/tree/DecisionTreeClassifier.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L556)
 
 ***
 
@@ -690,7 +690,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L601)
+[generated/tree/DecisionTreeClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L601)
 
 ***
 
@@ -722,7 +722,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L649)
+[generated/tree/DecisionTreeClassifier.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L649)
 
 ***
 
@@ -750,7 +750,7 @@ Metadata routing for `check\_input` parameter in `predict\_proba`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L694)
+[generated/tree/DecisionTreeClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L694)
 
 ***
 
@@ -778,7 +778,7 @@ Metadata routing for `check\_input` parameter in `predict`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L734)
+[generated/tree/DecisionTreeClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L734)
 
 ***
 
@@ -806,4 +806,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/tree/DecisionTreeClassifier.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L774)
+[generated/tree/DecisionTreeClassifier.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L774)

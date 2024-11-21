@@ -8,7 +8,7 @@ const withNextra = nextra({
   // flexsearch: {
   //   codeblocks: false
   // },
-  flexsearch: false,
+  // flexsearch: false,
   defaultShowCopyCode: true
 })
 

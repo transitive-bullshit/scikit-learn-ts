@@ -104,7 +104,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L27)
+[generated/ensemble/BaggingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L27)
 
 ## Properties
 
@@ -114,7 +114,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L25)
+[generated/ensemble/BaggingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L25)
 
 ***
 
@@ -124,7 +124,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L24)
+[generated/ensemble/BaggingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L24)
 
 ***
 
@@ -134,7 +134,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L23)
+[generated/ensemble/BaggingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L23)
 
 ***
 
@@ -144,7 +144,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L20)
+[generated/ensemble/BaggingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L20)
 
 ***
 
@@ -154,7 +154,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L21)
+[generated/ensemble/BaggingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L21)
 
 ## Accessors
 
@@ -172,7 +172,7 @@ The base estimator from which the ensemble is grown.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L423)
+[generated/ensemble/BaggingRegressor.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L423)
 
 ***
 
@@ -190,7 +190,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L504)
+[generated/ensemble/BaggingRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L504)
 
 ***
 
@@ -208,7 +208,7 @@ The subset of drawn features for each base estimator.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L531)
+[generated/ensemble/BaggingRegressor.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L531)
 
 ***
 
@@ -226,7 +226,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L477)
+[generated/ensemble/BaggingRegressor.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L477)
 
 ***
 
@@ -244,7 +244,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L450)
+[generated/ensemble/BaggingRegressor.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L450)
 
 ***
 
@@ -262,7 +262,7 @@ Prediction computed with out-of-bag estimate on the training set. If n\_estimato
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L585)
+[generated/ensemble/BaggingRegressor.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L585)
 
 ***
 
@@ -280,7 +280,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L558)
+[generated/ensemble/BaggingRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L558)
 
 ***
 
@@ -308,7 +308,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L103)
+[generated/ensemble/BaggingRegressor.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L103)
 
 ## Methods
 
@@ -326,7 +326,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L157)
+[generated/ensemble/BaggingRegressor.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L157)
 
 ***
 
@@ -362,7 +362,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L174)
+[generated/ensemble/BaggingRegressor.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L174)
 
 ***
 
@@ -388,7 +388,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L225)
+[generated/ensemble/BaggingRegressor.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L225)
 
 ***
 
@@ -410,7 +410,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L116)
+[generated/ensemble/BaggingRegressor.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L116)
 
 ***
 
@@ -436,7 +436,7 @@ The training input samples. Sparse matrices are accepted only if they are suppor
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L263)
+[generated/ensemble/BaggingRegressor.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L263)
 
 ***
 
@@ -470,7 +470,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L299)
+[generated/ensemble/BaggingRegressor.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L299)
 
 ***
 
@@ -498,7 +498,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L347)
+[generated/ensemble/BaggingRegressor.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L347)
 
 ***
 
@@ -526,4 +526,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/BaggingRegressor.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L387)
+[generated/ensemble/BaggingRegressor.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L387)

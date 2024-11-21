@@ -62,7 +62,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L25)
+[generated/naive\_bayes/BernoulliNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L25)
 
 ## Properties
 
@@ -72,7 +72,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L23)
+[generated/naive\_bayes/BernoulliNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L23)
 
 ***
 
@@ -82,7 +82,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L22)
+[generated/naive\_bayes/BernoulliNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L22)
 
 ***
 
@@ -92,7 +92,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L21)
+[generated/naive\_bayes/BernoulliNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L21)
 
 ***
 
@@ -102,7 +102,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L18)
+[generated/naive\_bayes/BernoulliNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L18)
 
 ***
 
@@ -112,7 +112,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L19)
+[generated/naive\_bayes/BernoulliNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L19)
 
 ## Accessors
 
@@ -130,7 +130,7 @@ Number of samples encountered for each class during fitting. This value is weigh
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L556)
+[generated/naive\_bayes/BernoulliNB.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L556)
 
 ***
 
@@ -148,7 +148,7 @@ Log probability of each class (smoothed).
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L581)
+[generated/naive\_bayes/BernoulliNB.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L581)
 
 ***
 
@@ -166,7 +166,7 @@ Class labels known to the classifier
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L606)
+[generated/naive\_bayes/BernoulliNB.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L606)
 
 ***
 
@@ -184,7 +184,7 @@ Number of samples encountered for each (class, feature) during fitting. This val
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L629)
+[generated/naive\_bayes/BernoulliNB.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L629)
 
 ***
 
@@ -202,7 +202,7 @@ Empirical log probability of features given a class, P(x\_i|y).
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L654)
+[generated/naive\_bayes/BernoulliNB.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L654)
 
 ***
 
@@ -220,7 +220,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L704)
+[generated/naive\_bayes/BernoulliNB.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L704)
 
 ***
 
@@ -238,7 +238,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L679)
+[generated/naive\_bayes/BernoulliNB.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L679)
 
 ***
 
@@ -266,7 +266,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L63)
+[generated/naive\_bayes/BernoulliNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L63)
 
 ## Methods
 
@@ -284,7 +284,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L115)
+[generated/naive\_bayes/BernoulliNB.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L115)
 
 ***
 
@@ -316,7 +316,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L132)
+[generated/naive\_bayes/BernoulliNB.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L132)
 
 ***
 
@@ -342,7 +342,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L176)
+[generated/naive\_bayes/BernoulliNB.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L176)
 
 ***
 
@@ -364,7 +364,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L76)
+[generated/naive\_bayes/BernoulliNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L76)
 
 ***
 
@@ -408,7 +408,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L216)
+[generated/naive\_bayes/BernoulliNB.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L216)
 
 ***
 
@@ -432,7 +432,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L265)
+[generated/naive\_bayes/BernoulliNB.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L265)
 
 ***
 
@@ -458,7 +458,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L299)
+[generated/naive\_bayes/BernoulliNB.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L299)
 
 ***
 
@@ -482,7 +482,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L333)
+[generated/naive\_bayes/BernoulliNB.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L333)
 
 ***
 
@@ -506,7 +506,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L365)
+[generated/naive\_bayes/BernoulliNB.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L365)
 
 ***
 
@@ -540,7 +540,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L399)
+[generated/naive\_bayes/BernoulliNB.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L399)
 
 ***
 
@@ -568,7 +568,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L445)
+[generated/naive\_bayes/BernoulliNB.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L445)
 
 ***
 
@@ -600,7 +600,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L481)
+[generated/naive\_bayes/BernoulliNB.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L481)
 
 ***
 
@@ -628,4 +628,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/naive\_bayes/BernoulliNB.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L524)
+[generated/naive\_bayes/BernoulliNB.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L524)

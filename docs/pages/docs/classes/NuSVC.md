@@ -140,7 +140,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L27)
+[generated/svm/NuSVC.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L27)
 
 ## Properties
 
@@ -150,7 +150,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L25)
+[generated/svm/NuSVC.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L25)
 
 ***
 
@@ -160,7 +160,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L24)
+[generated/svm/NuSVC.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L24)
 
 ***
 
@@ -170,7 +170,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L23)
+[generated/svm/NuSVC.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L23)
 
 ***
 
@@ -180,7 +180,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L20)
+[generated/svm/NuSVC.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L20)
 
 ***
 
@@ -190,7 +190,7 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L21)
+[generated/svm/NuSVC.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L21)
 
 ## Accessors
 
@@ -208,7 +208,7 @@ Multipliers of parameter C of each class. Computed based on the `class\_weight` 
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L527)
+[generated/svm/NuSVC.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L527)
 
 ***
 
@@ -226,7 +226,7 @@ The unique classes labels.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L550)
+[generated/svm/NuSVC.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L550)
 
 ***
 
@@ -244,7 +244,7 @@ Dual coefficients of the support vector in the decision function (see Mathematic
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L572)
+[generated/svm/NuSVC.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L572)
 
 ***
 
@@ -262,7 +262,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L664)
+[generated/svm/NuSVC.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L664)
 
 ***
 
@@ -280,7 +280,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L595)
+[generated/svm/NuSVC.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L595)
 
 ***
 
@@ -298,7 +298,7 @@ Constants in decision function.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L618)
+[generated/svm/NuSVC.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L618)
 
 ***
 
@@ -316,7 +316,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L641)
+[generated/svm/NuSVC.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L641)
 
 ***
 
@@ -334,7 +334,7 @@ Number of iterations run by the optimization routine to fit the model. The shape
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L689)
+[generated/svm/NuSVC.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L689)
 
 ***
 
@@ -362,7 +362,7 @@ Number of iterations run by the optimization routine to fit the model. The shape
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L133)
+[generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L133)
 
 ***
 
@@ -380,7 +380,7 @@ Array dimensions of training vector `X`.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:758](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L758)
+[generated/svm/NuSVC.ts:758](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L758)
 
 ***
 
@@ -398,7 +398,7 @@ Indices of support vectors.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L711)
+[generated/svm/NuSVC.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L711)
 
 ***
 
@@ -416,7 +416,7 @@ Support vectors.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L733)
+[generated/svm/NuSVC.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L733)
 
 ## Methods
 
@@ -440,7 +440,7 @@ The input samples.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L201)
+[generated/svm/NuSVC.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L201)
 
 ***
 
@@ -458,7 +458,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L184)
+[generated/svm/NuSVC.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L184)
 
 ***
 
@@ -490,7 +490,7 @@ Target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L233)
+[generated/svm/NuSVC.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L233)
 
 ***
 
@@ -516,7 +516,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L277)
+[generated/svm/NuSVC.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L277)
 
 ***
 
@@ -538,7 +538,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L146)
+[generated/svm/NuSVC.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L146)
 
 ***
 
@@ -564,7 +564,7 @@ For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_s
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L311)
+[generated/svm/NuSVC.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L311)
 
 ***
 
@@ -590,7 +590,7 @@ For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_s
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L345)
+[generated/svm/NuSVC.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L345)
 
 ***
 
@@ -616,7 +616,7 @@ For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_s
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L379)
+[generated/svm/NuSVC.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L379)
 
 ***
 
@@ -650,7 +650,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L413)
+[generated/svm/NuSVC.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L413)
 
 ***
 
@@ -678,7 +678,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L459)
+[generated/svm/NuSVC.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L459)
 
 ***
 
@@ -706,4 +706,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/svm/NuSVC.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/svm/NuSVC.ts#L495)
+[generated/svm/NuSVC.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/svm/NuSVC.ts#L495)

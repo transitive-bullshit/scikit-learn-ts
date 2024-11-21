@@ -62,7 +62,7 @@ The threshold value to use for feature selection. Features whose absolute import
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L21)
+[generated/feature\_selection/SelectFromModel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L21)
 
 ## Properties
 
@@ -72,7 +72,7 @@ The threshold value to use for feature selection. Features whose absolute import
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L19)
+[generated/feature\_selection/SelectFromModel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L19)
 
 ***
 
@@ -82,7 +82,7 @@ The threshold value to use for feature selection. Features whose absolute import
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L18)
+[generated/feature\_selection/SelectFromModel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L18)
 
 ***
 
@@ -92,7 +92,7 @@ The threshold value to use for feature selection. Features whose absolute import
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L17)
+[generated/feature\_selection/SelectFromModel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L17)
 
 ***
 
@@ -102,7 +102,7 @@ The threshold value to use for feature selection. Features whose absolute import
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L14)
+[generated/feature\_selection/SelectFromModel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L14)
 
 ***
 
@@ -112,7 +112,7 @@ The threshold value to use for feature selection. Features whose absolute import
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L15)
+[generated/feature\_selection/SelectFromModel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L15)
 
 ## Accessors
 
@@ -130,7 +130,7 @@ The base estimator from which the transformer is built. This attribute exist onl
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L467)
+[generated/feature\_selection/SelectFromModel.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L467)
 
 ***
 
@@ -148,7 +148,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L517)
+[generated/feature\_selection/SelectFromModel.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L517)
 
 ***
 
@@ -166,7 +166,7 @@ Maximum number of features calculated during fit. Only defined if the `max\_feat
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L492)
+[generated/feature\_selection/SelectFromModel.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L492)
 
 ***
 
@@ -194,7 +194,7 @@ Maximum number of features calculated during fit. Only defined if the `max\_feat
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66)
+[generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66)
 
 ## Methods
 
@@ -212,7 +212,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L118)
+[generated/feature\_selection/SelectFromModel.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L118)
 
 ***
 
@@ -244,7 +244,7 @@ The target values (integers that correspond to classes in classification, real n
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L135)
+[generated/feature\_selection/SelectFromModel.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L135)
 
 ***
 
@@ -278,7 +278,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L179)
+[generated/feature\_selection/SelectFromModel.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L179)
 
 ***
 
@@ -302,7 +302,7 @@ Input features.
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L221)
+[generated/feature\_selection/SelectFromModel.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L221)
 
 ***
 
@@ -328,7 +328,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L257)
+[generated/feature\_selection/SelectFromModel.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L257)
 
 ***
 
@@ -356,7 +356,7 @@ If `true`, the return value will be an array of integers, rather than a boolean 
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L291)
+[generated/feature\_selection/SelectFromModel.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L291)
 
 ***
 
@@ -378,7 +378,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L79)
+[generated/feature\_selection/SelectFromModel.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L79)
 
 ***
 
@@ -402,7 +402,7 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L325)
+[generated/feature\_selection/SelectFromModel.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L325)
 
 ***
 
@@ -434,7 +434,7 @@ The target values (integers that correspond to classes in classification, real n
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L359)
+[generated/feature\_selection/SelectFromModel.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L359)
 
 ***
 
@@ -460,7 +460,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L403)
+[generated/feature\_selection/SelectFromModel.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L403)
 
 ***
 
@@ -484,4 +484,4 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/SelectFromModel.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L435)
+[generated/feature\_selection/SelectFromModel.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L435)

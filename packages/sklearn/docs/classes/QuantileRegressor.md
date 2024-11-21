@@ -68,7 +68,7 @@ Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.or
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L27)
+[generated/linear\_model/QuantileRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L27)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.or
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L25)
+[generated/linear\_model/QuantileRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L25)
 
 ***
 
@@ -88,7 +88,7 @@ Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.or
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L24)
+[generated/linear\_model/QuantileRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L24)
 
 ***
 
@@ -98,7 +98,7 @@ Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.or
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L23)
+[generated/linear\_model/QuantileRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L23)
 
 ***
 
@@ -108,7 +108,7 @@ Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.or
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L20)
+[generated/linear\_model/QuantileRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L20)
 
 ***
 
@@ -118,7 +118,7 @@ Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.or
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L21)
+[generated/linear\_model/QuantileRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L21)
 
 ## Accessors
 
@@ -136,7 +136,7 @@ Estimated coefficients for the features.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L387)
+[generated/linear\_model/QuantileRegressor.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L387)
 
 ***
 
@@ -154,7 +154,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L468)
+[generated/linear\_model/QuantileRegressor.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L468)
 
 ***
 
@@ -172,7 +172,7 @@ The intercept of the model, aka bias term.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L414)
+[generated/linear\_model/QuantileRegressor.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L414)
 
 ***
 
@@ -190,7 +190,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L441)
+[generated/linear\_model/QuantileRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L441)
 
 ***
 
@@ -208,7 +208,7 @@ The actual number of iterations performed by the solver.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L495)
+[generated/linear\_model/QuantileRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L495)
 
 ***
 
@@ -236,7 +236,7 @@ The actual number of iterations performed by the solver.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L74)
+[generated/linear\_model/QuantileRegressor.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L74)
 
 ## Methods
 
@@ -254,7 +254,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L128)
+[generated/linear\_model/QuantileRegressor.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L128)
 
 ***
 
@@ -286,7 +286,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L145)
+[generated/linear\_model/QuantileRegressor.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L145)
 
 ***
 
@@ -312,7 +312,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L191)
+[generated/linear\_model/QuantileRegressor.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L191)
 
 ***
 
@@ -334,7 +334,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L87)
+[generated/linear\_model/QuantileRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L87)
 
 ***
 
@@ -358,7 +358,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L227)
+[generated/linear\_model/QuantileRegressor.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L227)
 
 ***
 
@@ -392,7 +392,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L263)
+[generated/linear\_model/QuantileRegressor.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L263)
 
 ***
 
@@ -420,7 +420,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L311)
+[generated/linear\_model/QuantileRegressor.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L311)
 
 ***
 
@@ -448,4 +448,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/QuantileRegressor.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L351)
+[generated/linear\_model/QuantileRegressor.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L351)

@@ -96,7 +96,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L23)
+[generated/cluster/KMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L23)
 
 ## Properties
 
@@ -106,7 +106,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L21)
+[generated/cluster/KMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L21)
 
 ***
 
@@ -116,7 +116,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L20)
+[generated/cluster/KMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L20)
 
 ***
 
@@ -126,7 +126,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L19)
+[generated/cluster/KMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L19)
 
 ***
 
@@ -136,7 +136,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L16)
+[generated/cluster/KMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L16)
 
 ***
 
@@ -146,7 +146,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L17)
+[generated/cluster/KMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L17)
 
 ## Accessors
 
@@ -164,7 +164,7 @@ Coordinates of cluster centers. If the algorithm stops before fully converging (
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L575)
+[generated/cluster/KMeans.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L575)
 
 ***
 
@@ -182,7 +182,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L690)
+[generated/cluster/KMeans.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L690)
 
 ***
 
@@ -200,7 +200,7 @@ Sum of squared distances of samples to their closest cluster center, weighted by
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L622)
+[generated/cluster/KMeans.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L622)
 
 ***
 
@@ -218,7 +218,7 @@ Labels of each point
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L600)
+[generated/cluster/KMeans.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L600)
 
 ***
 
@@ -236,7 +236,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:667](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L667)
+[generated/cluster/KMeans.ts:667](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L667)
 
 ***
 
@@ -254,7 +254,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L645)
+[generated/cluster/KMeans.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L645)
 
 ***
 
@@ -282,7 +282,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L93)
+[generated/cluster/KMeans.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L93)
 
 ## Methods
 
@@ -300,7 +300,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L144)
+[generated/cluster/KMeans.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L144)
 
 ***
 
@@ -332,7 +332,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L161)
+[generated/cluster/KMeans.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L161)
 
 ***
 
@@ -366,7 +366,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L205)
+[generated/cluster/KMeans.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L205)
 
 ***
 
@@ -400,7 +400,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L249)
+[generated/cluster/KMeans.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L249)
 
 ***
 
@@ -426,7 +426,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L293)
+[generated/cluster/KMeans.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L293)
 
 ***
 
@@ -452,7 +452,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L327)
+[generated/cluster/KMeans.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L327)
 
 ***
 
@@ -474,7 +474,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L106)
+[generated/cluster/KMeans.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L106)
 
 ***
 
@@ -500,7 +500,7 @@ New data to predict.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
+[generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
 
 ***
 
@@ -532,7 +532,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L393)
+[generated/cluster/KMeans.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L393)
 
 ***
 
@@ -560,7 +560,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L439)
+[generated/cluster/KMeans.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L439)
 
 ***
 
@@ -586,7 +586,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L473)
+[generated/cluster/KMeans.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L473)
 
 ***
 
@@ -614,7 +614,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L509)
+[generated/cluster/KMeans.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L509)
 
 ***
 
@@ -640,4 +640,4 @@ New data to transform.
 
 #### Defined in
 
-[generated/cluster/KMeans.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/KMeans.ts#L543)
+[generated/cluster/KMeans.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/KMeans.ts#L543)

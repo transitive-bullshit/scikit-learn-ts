@@ -34,7 +34,7 @@ Display labels for plot. If `undefined`, display labels are set from 0 to `n\_cl
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L25)
+[generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L25)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Display labels for plot. If `undefined`, display labels are set from 0 to `n\_cl
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L23)
+[generated/metrics/ConfusionMatrixDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L23)
 
 ***
 
@@ -54,7 +54,7 @@ Display labels for plot. If `undefined`, display labels are set from 0 to `n\_cl
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L22)
+[generated/metrics/ConfusionMatrixDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L22)
 
 ***
 
@@ -64,7 +64,7 @@ Display labels for plot. If `undefined`, display labels are set from 0 to `n\_cl
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L21)
+[generated/metrics/ConfusionMatrixDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L21)
 
 ***
 
@@ -74,7 +74,7 @@ Display labels for plot. If `undefined`, display labels are set from 0 to `n\_cl
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L18)
+[generated/metrics/ConfusionMatrixDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L18)
 
 ***
 
@@ -84,7 +84,7 @@ Display labels for plot. If `undefined`, display labels are set from 0 to `n\_cl
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L19)
+[generated/metrics/ConfusionMatrixDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L19)
 
 ## Accessors
 
@@ -102,7 +102,7 @@ Axes with confusion matrix.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L471)
+[generated/metrics/ConfusionMatrixDisplay.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L471)
 
 ***
 
@@ -120,7 +120,7 @@ Figure containing the confusion matrix.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L498)
+[generated/metrics/ConfusionMatrixDisplay.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L498)
 
 ***
 
@@ -138,7 +138,7 @@ Image representing the confusion matrix.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L417)
+[generated/metrics/ConfusionMatrixDisplay.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L417)
 
 ***
 
@@ -166,7 +166,7 @@ Image representing the confusion matrix.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40)
+[generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40)
 
 ***
 
@@ -184,7 +184,7 @@ Array of matplotlib axes. `undefined` if `include\_values` is false.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L444)
+[generated/metrics/ConfusionMatrixDisplay.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L444)
 
 ## Methods
 
@@ -202,7 +202,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L96)
+[generated/metrics/ConfusionMatrixDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L96)
 
 ***
 
@@ -300,7 +300,7 @@ Target values.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L115)
+[generated/metrics/ConfusionMatrixDisplay.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L115)
 
 ***
 
@@ -394,7 +394,7 @@ True labels.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L231)
+[generated/metrics/ConfusionMatrixDisplay.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L231)
 
 ***
 
@@ -416,7 +416,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L53)
+[generated/metrics/ConfusionMatrixDisplay.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L53)
 
 ***
 
@@ -484,4 +484,4 @@ Rotation of xtick labels.
 
 #### Defined in
 
-[generated/metrics/ConfusionMatrixDisplay.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L340)
+[generated/metrics/ConfusionMatrixDisplay.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L340)

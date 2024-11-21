@@ -56,7 +56,7 @@ Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L31)
+[generated/model\_selection/TimeSeriesSplit.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L31)
 
 ## Properties
 
@@ -66,7 +66,7 @@ Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L29)
+[generated/model\_selection/TimeSeriesSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L29)
 
 ***
 
@@ -76,7 +76,7 @@ Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L28)
+[generated/model\_selection/TimeSeriesSplit.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L28)
 
 ***
 
@@ -86,7 +86,7 @@ Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L27)
+[generated/model\_selection/TimeSeriesSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L27)
 
 ***
 
@@ -96,7 +96,7 @@ Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L24)
+[generated/model\_selection/TimeSeriesSplit.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L24)
 
 ***
 
@@ -106,7 +106,7 @@ Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L25)
+[generated/model\_selection/TimeSeriesSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L25)
 
 ## Accessors
 
@@ -134,7 +134,7 @@ Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L60)
+[generated/model\_selection/TimeSeriesSplit.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L60)
 
 ## Methods
 
@@ -152,7 +152,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L112)
+[generated/model\_selection/TimeSeriesSplit.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L112)
 
 ***
 
@@ -178,7 +178,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L131)
+[generated/model\_selection/TimeSeriesSplit.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L131)
 
 ***
 
@@ -210,7 +210,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L165)
+[generated/model\_selection/TimeSeriesSplit.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L165)
 
 ***
 
@@ -232,7 +232,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L73)
+[generated/model\_selection/TimeSeriesSplit.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L73)
 
 ***
 
@@ -264,4 +264,4 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/TimeSeriesSplit.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L207)
+[generated/model\_selection/TimeSeriesSplit.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L207)

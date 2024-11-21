@@ -30,7 +30,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
+[generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
 
 ## Properties
 
@@ -40,7 +40,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23)
+[generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23)
 
 ***
 
@@ -50,7 +50,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22)
+[generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22)
 
 ***
 
@@ -60,7 +60,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21)
+[generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21)
 
 ***
 
@@ -70,7 +70,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18)
+[generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18)
 
 ***
 
@@ -80,7 +80,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19)
+[generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19)
 
 ## Accessors
 
@@ -108,7 +108,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L35)
+[generated/utils/parallel/Parallel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L35)
 
 ***
 
@@ -126,7 +126,7 @@ List of results of the tasks.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L245)
+[generated/utils/parallel/Parallel.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L245)
 
 ## Methods
 
@@ -150,7 +150,7 @@ Iterable containing tuples of (delayed\_function, args, kwargs) that should be c
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L103)
+[generated/utils/parallel/Parallel.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L103)
 
 ***
 
@@ -172,7 +172,7 @@ This method is meant to be called concurrently by the multiprocessing callback. 
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L137)
+[generated/utils/parallel/Parallel.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L137)
 
 ***
 
@@ -196,7 +196,7 @@ The iterator consumption and dispatching is protected by the same lock so callin
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L167)
+[generated/utils/parallel/Parallel.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L167)
 
 ***
 
@@ -214,7 +214,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L86)
+[generated/utils/parallel/Parallel.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L86)
 
 ***
 
@@ -234,7 +234,7 @@ Return the formatted representation of the object.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L193)
+[generated/utils/parallel/Parallel.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L193)
 
 ***
 
@@ -256,7 +256,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L48)
+[generated/utils/parallel/Parallel.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L48)
 
 ***
 
@@ -276,4 +276,4 @@ Display the process of the parallel execution only a fraction of time, controlle
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L219)
+[generated/utils/parallel/Parallel.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L219)

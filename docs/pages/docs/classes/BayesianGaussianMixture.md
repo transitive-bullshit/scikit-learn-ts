@@ -138,7 +138,7 @@ String describing the type of the weight concentration prior.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L25)
+[generated/mixture/BayesianGaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L25)
 
 ## Properties
 
@@ -148,7 +148,7 @@ String describing the type of the weight concentration prior.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L23)
+[generated/mixture/BayesianGaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L23)
 
 ***
 
@@ -158,7 +158,7 @@ String describing the type of the weight concentration prior.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L22)
+[generated/mixture/BayesianGaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L22)
 
 ***
 
@@ -168,7 +168,7 @@ String describing the type of the weight concentration prior.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L21)
+[generated/mixture/BayesianGaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L21)
 
 ***
 
@@ -178,7 +178,7 @@ String describing the type of the weight concentration prior.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L18)
+[generated/mixture/BayesianGaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L18)
 
 ***
 
@@ -188,7 +188,7 @@ String describing the type of the weight concentration prior.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L19)
+[generated/mixture/BayesianGaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L19)
 
 ## Accessors
 
@@ -206,7 +206,7 @@ True when convergence of the best fit of inference was reached, `false` otherwis
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L654)
+[generated/mixture/BayesianGaussianMixture.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L654)
 
 ***
 
@@ -224,7 +224,7 @@ The prior on the covariance distribution (Wishart). The shape depends on `covari
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:924](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L924)
+[generated/mixture/BayesianGaussianMixture.ts:924](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L924)
 
 ***
 
@@ -242,7 +242,7 @@ The covariance of each mixture component. The shape depends on `covariance\_type
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L573)
+[generated/mixture/BayesianGaussianMixture.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L573)
 
 ***
 
@@ -260,7 +260,7 @@ The number of degrees of freedom of each components in the model.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:897](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L897)
+[generated/mixture/BayesianGaussianMixture.ts:897](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L897)
 
 ***
 
@@ -278,7 +278,7 @@ The prior of the number of degrees of freedom on the covariance distributions (W
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:870](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L870)
+[generated/mixture/BayesianGaussianMixture.ts:870](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L870)
 
 ***
 
@@ -296,7 +296,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:978](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L978)
+[generated/mixture/BayesianGaussianMixture.ts:978](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L978)
 
 ***
 
@@ -314,7 +314,7 @@ Lower bound value on the model evidence (of the training data) of the best fit o
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L708)
+[generated/mixture/BayesianGaussianMixture.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L708)
 
 ***
 
@@ -332,7 +332,7 @@ The precision of each components on the mean distribution (Gaussian).
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L816)
+[generated/mixture/BayesianGaussianMixture.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L816)
 
 ***
 
@@ -350,7 +350,7 @@ The precision prior on the mean distribution (Gaussian). Controls the extent of 
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L789)
+[generated/mixture/BayesianGaussianMixture.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L789)
 
 ***
 
@@ -368,7 +368,7 @@ The prior on the mean distribution (Gaussian).
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:843](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L843)
+[generated/mixture/BayesianGaussianMixture.ts:843](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L843)
 
 ***
 
@@ -386,7 +386,7 @@ The mean of each mixture component.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L546)
+[generated/mixture/BayesianGaussianMixture.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L546)
 
 ***
 
@@ -404,7 +404,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:951](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L951)
+[generated/mixture/BayesianGaussianMixture.ts:951](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L951)
 
 ***
 
@@ -422,7 +422,7 @@ Number of step used by the best fit of inference to reach the convergence.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L681)
+[generated/mixture/BayesianGaussianMixture.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L681)
 
 ***
 
@@ -440,7 +440,7 @@ The precision matrices for each component in the mixture. A precision matrix is 
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L600)
+[generated/mixture/BayesianGaussianMixture.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L600)
 
 ***
 
@@ -458,7 +458,7 @@ The cholesky decomposition of the precision matrices of each mixture component. 
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L627)
+[generated/mixture/BayesianGaussianMixture.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L627)
 
 ***
 
@@ -486,7 +486,7 @@ The cholesky decomposition of the precision matrices of each mixture component. 
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L139)
+[generated/mixture/BayesianGaussianMixture.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L139)
 
 ***
 
@@ -504,7 +504,7 @@ The dirichlet concentration of each component on the weight distribution (Dirich
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L762)
+[generated/mixture/BayesianGaussianMixture.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L762)
 
 ***
 
@@ -522,7 +522,7 @@ The dirichlet concentration of each component on the weight distribution (Dirich
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:735](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L735)
+[generated/mixture/BayesianGaussianMixture.ts:735](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L735)
 
 ***
 
@@ -540,7 +540,7 @@ The weights of each mixture components.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L519)
+[generated/mixture/BayesianGaussianMixture.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L519)
 
 ## Methods
 
@@ -558,7 +558,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L195)
+[generated/mixture/BayesianGaussianMixture.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L195)
 
 ***
 
@@ -588,7 +588,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L214)
+[generated/mixture/BayesianGaussianMixture.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L214)
 
 ***
 
@@ -618,7 +618,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L255)
+[generated/mixture/BayesianGaussianMixture.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L255)
 
 ***
 
@@ -644,7 +644,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L298)
+[generated/mixture/BayesianGaussianMixture.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L298)
 
 ***
 
@@ -666,7 +666,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L152)
+[generated/mixture/BayesianGaussianMixture.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L152)
 
 ***
 
@@ -690,7 +690,7 @@ List of n\_features-dimensional data points. Each row corresponds to a single da
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L334)
+[generated/mixture/BayesianGaussianMixture.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L334)
 
 ***
 
@@ -714,7 +714,7 @@ List of n\_features-dimensional data points. Each row corresponds to a single da
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L370)
+[generated/mixture/BayesianGaussianMixture.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L370)
 
 ***
 
@@ -742,7 +742,7 @@ Number of samples to generate.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L406)
+[generated/mixture/BayesianGaussianMixture.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L406)
 
 ***
 
@@ -770,7 +770,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L444)
+[generated/mixture/BayesianGaussianMixture.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L444)
 
 ***
 
@@ -794,4 +794,4 @@ List of n\_features-dimensional data points. Each row corresponds to a single da
 
 #### Defined in
 
-[generated/mixture/BayesianGaussianMixture.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L483)
+[generated/mixture/BayesianGaussianMixture.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L483)

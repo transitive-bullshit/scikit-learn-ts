@@ -96,8 +96,8 @@ async function main() {
     }
 
     await fs.writeFile(
-      path.join(outDir, '_meta.json'),
-      JSON.stringify(docsMeta, null, 2),
+      path.join(outDir, '_meta.ts'),
+      `export default ${JSON.stringify(docsMeta, null, 2)}`,
       'utf8'
     )
   }
@@ -120,8 +120,8 @@ async function main() {
       const destDir = path.join(outDir, key)
 
       await fs.writeFile(
-        path.join(path.join(destDir, '_meta.json')),
-        JSON.stringify(meta, null, 2),
+        path.join(path.join(destDir, '_meta.ts')),
+        `export default ${JSON.stringify(meta, null, 2)}`,
         'utf8'
       )
     },

@@ -64,7 +64,7 @@ If `true`, scale the data to interquartile range.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L27)
+[generated/preprocessing/RobustScaler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L27)
 
 ## Properties
 
@@ -74,7 +74,7 @@ If `true`, scale the data to interquartile range.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L25)
+[generated/preprocessing/RobustScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L25)
 
 ***
 
@@ -84,7 +84,7 @@ If `true`, scale the data to interquartile range.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L24)
+[generated/preprocessing/RobustScaler.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L24)
 
 ***
 
@@ -94,7 +94,7 @@ If `true`, scale the data to interquartile range.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L23)
+[generated/preprocessing/RobustScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L23)
 
 ***
 
@@ -104,7 +104,7 @@ If `true`, scale the data to interquartile range.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L20)
+[generated/preprocessing/RobustScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L20)
 
 ***
 
@@ -114,7 +114,7 @@ If `true`, scale the data to interquartile range.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L21)
+[generated/preprocessing/RobustScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L21)
 
 ## Accessors
 
@@ -132,7 +132,7 @@ The median value for each feature in the training set.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L385)
+[generated/preprocessing/RobustScaler.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L385)
 
 ***
 
@@ -150,7 +150,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L456)
+[generated/preprocessing/RobustScaler.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L456)
 
 ***
 
@@ -168,7 +168,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L431)
+[generated/preprocessing/RobustScaler.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L431)
 
 ***
 
@@ -196,7 +196,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L65)
+[generated/preprocessing/RobustScaler.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L65)
 
 ***
 
@@ -214,7 +214,7 @@ The (scaled) interquartile range for each feature in the training set.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L408)
+[generated/preprocessing/RobustScaler.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L408)
 
 ## Methods
 
@@ -232,7 +232,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L117)
+[generated/preprocessing/RobustScaler.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L117)
 
 ***
 
@@ -260,7 +260,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L134)
+[generated/preprocessing/RobustScaler.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L134)
 
 ***
 
@@ -294,7 +294,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L173)
+[generated/preprocessing/RobustScaler.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L173)
 
 ***
 
@@ -318,7 +318,7 @@ Input features.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L215)
+[generated/preprocessing/RobustScaler.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L215)
 
 ***
 
@@ -344,7 +344,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L251)
+[generated/preprocessing/RobustScaler.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L251)
 
 ***
 
@@ -366,7 +366,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L78)
+[generated/preprocessing/RobustScaler.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L78)
 
 ***
 
@@ -390,7 +390,7 @@ The rescaled data to be transformed back.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L285)
+[generated/preprocessing/RobustScaler.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L285)
 
 ***
 
@@ -416,7 +416,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L321)
+[generated/preprocessing/RobustScaler.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L321)
 
 ***
 
@@ -440,4 +440,4 @@ The data used to scale along the specified axis.
 
 #### Defined in
 
-[generated/preprocessing/RobustScaler.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L353)
+[generated/preprocessing/RobustScaler.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L353)

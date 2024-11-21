@@ -30,7 +30,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L25)
+[generated/preprocessing/LabelEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L25)
 
 ## Properties
 
@@ -40,7 +40,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L23)
+[generated/preprocessing/LabelEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L23)
 
 ***
 
@@ -50,7 +50,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L22)
+[generated/preprocessing/LabelEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L22)
 
 ***
 
@@ -60,7 +60,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L21)
+[generated/preprocessing/LabelEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L21)
 
 ***
 
@@ -70,7 +70,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L18)
+[generated/preprocessing/LabelEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L18)
 
 ***
 
@@ -80,7 +80,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L19)
+[generated/preprocessing/LabelEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L19)
 
 ## Accessors
 
@@ -108,7 +108,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L35)
+[generated/preprocessing/LabelEncoder.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L35)
 
 ## Methods
 
@@ -126,7 +126,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L87)
+[generated/preprocessing/LabelEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L87)
 
 ***
 
@@ -150,7 +150,7 @@ Target values.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L104)
+[generated/preprocessing/LabelEncoder.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L104)
 
 ***
 
@@ -174,7 +174,7 @@ Target values.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L136)
+[generated/preprocessing/LabelEncoder.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L136)
 
 ***
 
@@ -200,7 +200,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L170)
+[generated/preprocessing/LabelEncoder.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L170)
 
 ***
 
@@ -222,7 +222,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L48)
+[generated/preprocessing/LabelEncoder.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L48)
 
 ***
 
@@ -246,7 +246,7 @@ Target values.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L204)
+[generated/preprocessing/LabelEncoder.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L204)
 
 ***
 
@@ -272,7 +272,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L240)
+[generated/preprocessing/LabelEncoder.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L240)
 
 ***
 
@@ -296,4 +296,4 @@ Target values.
 
 #### Defined in
 
-[generated/preprocessing/LabelEncoder.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L272)
+[generated/preprocessing/LabelEncoder.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L272)

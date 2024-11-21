@@ -112,7 +112,7 @@ Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L23)
+[generated/manifold/LocallyLinearEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L23)
 
 ## Properties
 
@@ -122,7 +122,7 @@ Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L21)
+[generated/manifold/LocallyLinearEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L21)
 
 ***
 
@@ -132,7 +132,7 @@ Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L20)
+[generated/manifold/LocallyLinearEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L20)
 
 ***
 
@@ -142,7 +142,7 @@ Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L19)
+[generated/manifold/LocallyLinearEmbedding.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L19)
 
 ***
 
@@ -152,7 +152,7 @@ Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L16)
+[generated/manifold/LocallyLinearEmbedding.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L16)
 
 ***
 
@@ -162,7 +162,7 @@ Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L17)
+[generated/manifold/LocallyLinearEmbedding.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L17)
 
 ## Accessors
 
@@ -180,7 +180,7 @@ Stores the embedding vectors
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L411)
+[generated/manifold/LocallyLinearEmbedding.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L411)
 
 ***
 
@@ -198,7 +198,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L492)
+[generated/manifold/LocallyLinearEmbedding.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L492)
 
 ***
 
@@ -216,7 +216,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L465)
+[generated/manifold/LocallyLinearEmbedding.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L465)
 
 ***
 
@@ -234,7 +234,7 @@ Stores nearest neighbors instance, including BallTree or KDtree if applicable.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L519)
+[generated/manifold/LocallyLinearEmbedding.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L519)
 
 ***
 
@@ -262,7 +262,7 @@ Stores nearest neighbors instance, including BallTree or KDtree if applicable.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L108)
+[generated/manifold/LocallyLinearEmbedding.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L108)
 
 ***
 
@@ -280,7 +280,7 @@ Reconstruction error associated with `embedding\_`
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L438)
+[generated/manifold/LocallyLinearEmbedding.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L438)
 
 ## Methods
 
@@ -298,7 +298,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L164)
+[generated/manifold/LocallyLinearEmbedding.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L164)
 
 ***
 
@@ -326,7 +326,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L181)
+[generated/manifold/LocallyLinearEmbedding.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L181)
 
 ***
 
@@ -354,7 +354,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L220)
+[generated/manifold/LocallyLinearEmbedding.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L220)
 
 ***
 
@@ -380,7 +380,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L263)
+[generated/manifold/LocallyLinearEmbedding.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L263)
 
 ***
 
@@ -406,7 +406,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L301)
+[generated/manifold/LocallyLinearEmbedding.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L301)
 
 ***
 
@@ -428,7 +428,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L121)
+[generated/manifold/LocallyLinearEmbedding.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L121)
 
 ***
 
@@ -454,7 +454,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L339)
+[generated/manifold/LocallyLinearEmbedding.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L339)
 
 ***
 
@@ -478,4 +478,4 @@ Training set.
 
 #### Defined in
 
-[generated/manifold/LocallyLinearEmbedding.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L375)
+[generated/manifold/LocallyLinearEmbedding.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L375)

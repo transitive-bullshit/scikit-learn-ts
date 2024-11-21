@@ -34,7 +34,7 @@ A sequence of dicts signifies a sequence of grids to search, and is useful to av
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L25)
+[generated/model\_selection/ParameterGrid.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L25)
 
 ## Properties
 
@@ -44,7 +44,7 @@ A sequence of dicts signifies a sequence of grids to search, and is useful to av
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L23)
+[generated/model\_selection/ParameterGrid.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L23)
 
 ***
 
@@ -54,7 +54,7 @@ A sequence of dicts signifies a sequence of grids to search, and is useful to av
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L22)
+[generated/model\_selection/ParameterGrid.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L22)
 
 ***
 
@@ -64,7 +64,7 @@ A sequence of dicts signifies a sequence of grids to search, and is useful to av
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L21)
+[generated/model\_selection/ParameterGrid.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L21)
 
 ***
 
@@ -74,7 +74,7 @@ A sequence of dicts signifies a sequence of grids to search, and is useful to av
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L18)
+[generated/model\_selection/ParameterGrid.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L18)
 
 ***
 
@@ -84,7 +84,7 @@ A sequence of dicts signifies a sequence of grids to search, and is useful to av
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L19)
+[generated/model\_selection/ParameterGrid.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L19)
 
 ## Accessors
 
@@ -112,7 +112,7 @@ A sequence of dicts signifies a sequence of grids to search, and is useful to av
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L39)
+[generated/model\_selection/ParameterGrid.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L39)
 
 ## Methods
 
@@ -130,7 +130,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L91)
+[generated/model\_selection/ParameterGrid.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L91)
 
 ***
 
@@ -152,4 +152,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/ParameterGrid.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L52)
+[generated/model\_selection/ParameterGrid.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L52)

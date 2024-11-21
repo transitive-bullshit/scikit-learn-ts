@@ -54,7 +54,7 @@ Absolute threshold for a singular value to be considered significant, used to es
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L25)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L25)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Absolute threshold for a singular value to be considered significant, used to es
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L23)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L23)
 
 ***
 
@@ -74,7 +74,7 @@ Absolute threshold for a singular value to be considered significant, used to es
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L22)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L22)
 
 ***
 
@@ -84,7 +84,7 @@ Absolute threshold for a singular value to be considered significant, used to es
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L21)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L21)
 
 ***
 
@@ -94,7 +94,7 @@ Absolute threshold for a singular value to be considered significant, used to es
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L18)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L18)
 
 ***
 
@@ -104,7 +104,7 @@ Absolute threshold for a singular value to be considered significant, used to es
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L19)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L19)
 
 ## Accessors
 
@@ -122,7 +122,7 @@ Unique class labels.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L579)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L579)
 
 ***
 
@@ -140,7 +140,7 @@ For each class, gives the covariance matrix estimated using the samples of that 
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L444)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L444)
 
 ***
 
@@ -158,7 +158,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L633)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L633)
 
 ***
 
@@ -176,7 +176,7 @@ Class-wise means.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L471)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L471)
 
 ***
 
@@ -194,7 +194,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L606)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L606)
 
 ***
 
@@ -212,7 +212,7 @@ Class priors (sum to 1).
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L498)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L498)
 
 ***
 
@@ -240,7 +240,7 @@ Class priors (sum to 1).
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L56)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L56)
 
 ***
 
@@ -258,7 +258,7 @@ For each class k an array of shape (n\_features, n\_k), where `n\_k \= min(n\_fe
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L525)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L525)
 
 ***
 
@@ -276,7 +276,7 @@ For each class, contains the scaling of the Gaussian distributions along its pri
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L552)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L552)
 
 ## Methods
 
@@ -302,7 +302,7 @@ Array of samples (test vectors).
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L131)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L131)
 
 ***
 
@@ -320,7 +320,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L112)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L112)
 
 ***
 
@@ -348,7 +348,7 @@ Target values (integers).
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L167)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L167)
 
 ***
 
@@ -374,7 +374,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L210)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L210)
 
 ***
 
@@ -396,7 +396,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L69)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L69)
 
 ***
 
@@ -422,7 +422,7 @@ Vector to be scored, where `n\_samples` is the number of samples and `n\_feature
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L248)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L248)
 
 ***
 
@@ -446,7 +446,7 @@ Array of samples/test vectors.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L284)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L284)
 
 ***
 
@@ -470,7 +470,7 @@ Array of samples/test vectors.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L320)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L320)
 
 ***
 
@@ -504,7 +504,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L358)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L358)
 
 ***
 
@@ -532,4 +532,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L408)
+[generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L408)

@@ -202,7 +202,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
+[generated/neural\_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
 
 ## Properties
 
@@ -212,7 +212,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21)
+[generated/neural\_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21)
 
 ***
 
@@ -222,7 +222,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20)
+[generated/neural\_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20)
 
 ***
 
@@ -232,7 +232,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19)
+[generated/neural\_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19)
 
 ***
 
@@ -242,7 +242,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16)
+[generated/neural\_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16)
 
 ***
 
@@ -252,7 +252,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17)
+[generated/neural\_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17)
 
 ## Accessors
 
@@ -270,7 +270,7 @@ The minimum loss reached by the solver throughout fitting. If `early\_stopping=T
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L637)
+[generated/neural\_network/MLPClassifier.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L637)
 
 ***
 
@@ -288,7 +288,7 @@ The best validation score (i.e. accuracy score) that triggered the early stoppin
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L712)
+[generated/neural\_network/MLPClassifier.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L712)
 
 ***
 
@@ -306,7 +306,7 @@ Class labels for each output.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L589)
+[generated/neural\_network/MLPClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L589)
 
 ***
 
@@ -324,7 +324,7 @@ The ith element in the list represents the weight matrix corresponding to layer 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L760)
+[generated/neural\_network/MLPClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L760)
 
 ***
 
@@ -342,7 +342,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:833](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L833)
+[generated/neural\_network/MLPClassifier.ts:833](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L833)
 
 ***
 
@@ -360,7 +360,7 @@ The ith element in the list represents the bias vector corresponding to layer i 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L783)
+[generated/neural\_network/MLPClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L783)
 
 ***
 
@@ -378,7 +378,7 @@ The current loss computed with the loss function.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L614)
+[generated/neural\_network/MLPClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L614)
 
 ***
 
@@ -396,7 +396,7 @@ The ith element in the list represents the loss at the ith iteration.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L662)
+[generated/neural\_network/MLPClassifier.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L662)
 
 ***
 
@@ -414,7 +414,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L808)
+[generated/neural\_network/MLPClassifier.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L808)
 
 ***
 
@@ -432,7 +432,7 @@ The number of iterations the solver has run.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:858](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L858)
+[generated/neural\_network/MLPClassifier.ts:858](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L858)
 
 ***
 
@@ -450,7 +450,7 @@ Number of layers.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:881](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L881)
+[generated/neural\_network/MLPClassifier.ts:881](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L881)
 
 ***
 
@@ -468,7 +468,7 @@ Number of outputs.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L906)
+[generated/neural\_network/MLPClassifier.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L906)
 
 ***
 
@@ -486,7 +486,7 @@ Name of the output activation function.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:931](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L931)
+[generated/neural\_network/MLPClassifier.ts:931](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L931)
 
 ***
 
@@ -514,7 +514,7 @@ Name of the output activation function.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L187)
+[generated/neural\_network/MLPClassifier.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L187)
 
 ***
 
@@ -532,7 +532,7 @@ The number of training samples seen by the solver during fitting.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L737)
+[generated/neural\_network/MLPClassifier.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L737)
 
 ***
 
@@ -550,7 +550,7 @@ The score at each iteration on a held-out validation set. The score reported is 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L687)
+[generated/neural\_network/MLPClassifier.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L687)
 
 ## Methods
 
@@ -568,7 +568,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L239)
+[generated/neural\_network/MLPClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L239)
 
 ***
 
@@ -596,7 +596,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L256)
+[generated/neural\_network/MLPClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L256)
 
 ***
 
@@ -622,7 +622,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L295)
+[generated/neural\_network/MLPClassifier.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L295)
 
 ***
 
@@ -644,7 +644,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L200)
+[generated/neural\_network/MLPClassifier.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L200)
 
 ***
 
@@ -676,7 +676,7 @@ The target values.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L329)
+[generated/neural\_network/MLPClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L329)
 
 ***
 
@@ -700,7 +700,7 @@ The input data.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L371)
+[generated/neural\_network/MLPClassifier.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L371)
 
 ***
 
@@ -724,7 +724,7 @@ The input data.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L403)
+[generated/neural\_network/MLPClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L403)
 
 ***
 
@@ -748,7 +748,7 @@ The input data.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L437)
+[generated/neural\_network/MLPClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L437)
 
 ***
 
@@ -782,7 +782,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L471)
+[generated/neural\_network/MLPClassifier.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L471)
 
 ***
 
@@ -810,7 +810,7 @@ Metadata routing for `classes` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L517)
+[generated/neural\_network/MLPClassifier.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L517)
 
 ***
 
@@ -838,4 +838,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L555)
+[generated/neural\_network/MLPClassifier.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L555)

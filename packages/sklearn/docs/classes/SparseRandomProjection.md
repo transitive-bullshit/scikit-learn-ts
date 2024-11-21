@@ -82,7 +82,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L25)
+[generated/random\_projection/SparseRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L25)
 
 ## Properties
 
@@ -92,7 +92,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L23)
+[generated/random\_projection/SparseRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L23)
 
 ***
 
@@ -102,7 +102,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L22)
+[generated/random\_projection/SparseRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L22)
 
 ***
 
@@ -112,7 +112,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L21)
+[generated/random\_projection/SparseRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L21)
 
 ***
 
@@ -122,7 +122,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L18)
+[generated/random\_projection/SparseRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L18)
 
 ***
 
@@ -132,7 +132,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L19)
+[generated/random\_projection/SparseRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L19)
 
 ## Accessors
 
@@ -150,7 +150,7 @@ Random matrix used for the projection. Sparse matrix will be of CSR format.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L459)
+[generated/random\_projection/SparseRandomProjection.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L459)
 
 ***
 
@@ -168,7 +168,7 @@ Concrete density computed from when density = “auto”.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L513)
+[generated/random\_projection/SparseRandomProjection.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L513)
 
 ***
 
@@ -186,7 +186,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L567)
+[generated/random\_projection/SparseRandomProjection.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L567)
 
 ***
 
@@ -204,7 +204,7 @@ Pseudo-inverse of the components, only computed if `compute\_inverse\_components
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L486)
+[generated/random\_projection/SparseRandomProjection.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L486)
 
 ***
 
@@ -222,7 +222,7 @@ Concrete number of components computed when n\_components=”auto”.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L432)
+[generated/random\_projection/SparseRandomProjection.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L432)
 
 ***
 
@@ -240,7 +240,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L540)
+[generated/random\_projection/SparseRandomProjection.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L540)
 
 ***
 
@@ -268,7 +268,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L82)
+[generated/random\_projection/SparseRandomProjection.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L82)
 
 ## Methods
 
@@ -286,7 +286,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L138)
+[generated/random\_projection/SparseRandomProjection.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L138)
 
 ***
 
@@ -314,7 +314,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L155)
+[generated/random\_projection/SparseRandomProjection.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L155)
 
 ***
 
@@ -348,7 +348,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L196)
+[generated/random\_projection/SparseRandomProjection.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L196)
 
 ***
 
@@ -374,7 +374,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L244)
+[generated/random\_projection/SparseRandomProjection.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L244)
 
 ***
 
@@ -400,7 +400,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L282)
+[generated/random\_projection/SparseRandomProjection.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L282)
 
 ***
 
@@ -422,7 +422,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L95)
+[generated/random\_projection/SparseRandomProjection.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L95)
 
 ***
 
@@ -450,7 +450,7 @@ Data to be transformed back.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L322)
+[generated/random\_projection/SparseRandomProjection.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L322)
 
 ***
 
@@ -476,7 +476,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L360)
+[generated/random\_projection/SparseRandomProjection.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L360)
 
 ***
 
@@ -500,4 +500,4 @@ The input data to project into a smaller dimensional space.
 
 #### Defined in
 
-[generated/random\_projection/SparseRandomProjection.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L396)
+[generated/random\_projection/SparseRandomProjection.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L396)

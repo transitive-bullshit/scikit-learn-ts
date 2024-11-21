@@ -64,7 +64,7 @@ Whether transform should produce scipy.sparse matrices.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L35)
+[generated/feature\_extraction/DictVectorizer.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L35)
 
 ## Properties
 
@@ -74,7 +74,7 @@ Whether transform should produce scipy.sparse matrices.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L33)
+[generated/feature\_extraction/DictVectorizer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L33)
 
 ***
 
@@ -84,7 +84,7 @@ Whether transform should produce scipy.sparse matrices.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L32)
+[generated/feature\_extraction/DictVectorizer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L32)
 
 ***
 
@@ -94,7 +94,7 @@ Whether transform should produce scipy.sparse matrices.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L31)
+[generated/feature\_extraction/DictVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L31)
 
 ***
 
@@ -104,7 +104,7 @@ Whether transform should produce scipy.sparse matrices.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L28)
+[generated/feature\_extraction/DictVectorizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L28)
 
 ***
 
@@ -114,7 +114,7 @@ Whether transform should produce scipy.sparse matrices.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L29)
+[generated/feature\_extraction/DictVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L29)
 
 ## Accessors
 
@@ -132,7 +132,7 @@ A list of length n\_features containing the feature names (e.g., “f=ham” and
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L496)
+[generated/feature\_extraction/DictVectorizer.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L496)
 
 ***
 
@@ -160,7 +160,7 @@ A list of length n\_features containing the feature names (e.g., “f=ham” and
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L66)
+[generated/feature\_extraction/DictVectorizer.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L66)
 
 ***
 
@@ -178,7 +178,7 @@ A dictionary mapping feature names to feature indices.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L471)
+[generated/feature\_extraction/DictVectorizer.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L471)
 
 ## Methods
 
@@ -196,7 +196,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L118)
+[generated/feature\_extraction/DictVectorizer.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L118)
 
 ***
 
@@ -224,7 +224,7 @@ Ignored parameter.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L135)
+[generated/feature\_extraction/DictVectorizer.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L135)
 
 ***
 
@@ -254,7 +254,7 @@ Ignored parameter.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L174)
+[generated/feature\_extraction/DictVectorizer.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L174)
 
 ***
 
@@ -278,7 +278,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L211)
+[generated/feature\_extraction/DictVectorizer.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L211)
 
 ***
 
@@ -304,7 +304,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L247)
+[generated/feature\_extraction/DictVectorizer.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L247)
 
 ***
 
@@ -326,7 +326,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L79)
+[generated/feature\_extraction/DictVectorizer.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L79)
 
 ***
 
@@ -358,7 +358,7 @@ Sample matrix.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L285)
+[generated/feature\_extraction/DictVectorizer.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L285)
 
 ***
 
@@ -392,7 +392,7 @@ Boolean mask or list of indices (as returned by the get\_support member of featu
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L326)
+[generated/feature\_extraction/DictVectorizer.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L326)
 
 ***
 
@@ -420,7 +420,7 @@ Metadata routing for `dict\_type` parameter in `inverse\_transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L369)
+[generated/feature\_extraction/DictVectorizer.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L369)
 
 ***
 
@@ -446,7 +446,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L405)
+[generated/feature\_extraction/DictVectorizer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L405)
 
 ***
 
@@ -472,4 +472,4 @@ Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature v
 
 #### Defined in
 
-[generated/feature\_extraction/DictVectorizer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L439)
+[generated/feature\_extraction/DictVectorizer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L439)

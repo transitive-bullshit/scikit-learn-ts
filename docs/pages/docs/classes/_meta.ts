@@ -1,4 +1,4 @@
-{
+export default {
   "AdaBoostClassifier": "AdaBoostClassifier",
   "AdaBoostRegressor": "AdaBoostRegressor",
   "AdditiveChi2Sampler": "AdditiveChi2Sampler",

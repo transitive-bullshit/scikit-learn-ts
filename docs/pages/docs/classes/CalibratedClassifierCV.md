@@ -66,7 +66,7 @@ See Glossary for more details.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L29)
+[generated/calibration/CalibratedClassifierCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L29)
 
 ## Properties
 
@@ -76,7 +76,7 @@ See Glossary for more details.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L27)
+[generated/calibration/CalibratedClassifierCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L27)
 
 ***
 
@@ -86,7 +86,7 @@ See Glossary for more details.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L26)
+[generated/calibration/CalibratedClassifierCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L26)
 
 ***
 
@@ -96,7 +96,7 @@ See Glossary for more details.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L25)
+[generated/calibration/CalibratedClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L25)
 
 ***
 
@@ -106,7 +106,7 @@ See Glossary for more details.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L22)
+[generated/calibration/CalibratedClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L22)
 
 ***
 
@@ -116,7 +116,7 @@ See Glossary for more details.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L23)
+[generated/calibration/CalibratedClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L23)
 
 ## Accessors
 
@@ -134,7 +134,7 @@ The list of classifier and calibrator pairs.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L514)
+[generated/calibration/CalibratedClassifierCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L514)
 
 ***
 
@@ -152,7 +152,7 @@ The class labels.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L433)
+[generated/calibration/CalibratedClassifierCV.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L433)
 
 ***
 
@@ -170,7 +170,7 @@ Names of features seen during fit. Only defined if the underlying estimator expo
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L487)
+[generated/calibration/CalibratedClassifierCV.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L487)
 
 ***
 
@@ -188,7 +188,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L460)
+[generated/calibration/CalibratedClassifierCV.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L460)
 
 ***
 
@@ -216,7 +216,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L71)
+[generated/calibration/CalibratedClassifierCV.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L71)
 
 ## Methods
 
@@ -234,7 +234,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L127)
+[generated/calibration/CalibratedClassifierCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L127)
 
 ***
 
@@ -270,7 +270,7 @@ Target values.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L144)
+[generated/calibration/CalibratedClassifierCV.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L144)
 
 ***
 
@@ -296,7 +296,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L195)
+[generated/calibration/CalibratedClassifierCV.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L195)
 
 ***
 
@@ -318,7 +318,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L84)
+[generated/calibration/CalibratedClassifierCV.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L84)
 
 ***
 
@@ -344,7 +344,7 @@ The samples, as accepted by `estimator.predict`.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L233)
+[generated/calibration/CalibratedClassifierCV.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L233)
 
 ***
 
@@ -370,7 +370,7 @@ The samples, as accepted by `estimator.predict\_proba`.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L271)
+[generated/calibration/CalibratedClassifierCV.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L271)
 
 ***
 
@@ -404,7 +404,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L309)
+[generated/calibration/CalibratedClassifierCV.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L309)
 
 ***
 
@@ -432,7 +432,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L357)
+[generated/calibration/CalibratedClassifierCV.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L357)
 
 ***
 
@@ -460,4 +460,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/calibration/CalibratedClassifierCV.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L397)
+[generated/calibration/CalibratedClassifierCV.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L397)

@@ -44,7 +44,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L23)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L23)
 
 ## Properties
 
@@ -54,7 +54,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L21)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L21)
 
 ***
 
@@ -64,7 +64,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L20)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L20)
 
 ***
 
@@ -74,7 +74,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L19)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L19)
 
 ***
 
@@ -84,7 +84,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L16)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L16)
 
 ***
 
@@ -94,7 +94,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L17)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L17)
 
 ## Accessors
 
@@ -112,7 +112,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L434)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L434)
 
 ***
 
@@ -130,7 +130,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L407)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L407)
 
 ***
 
@@ -158,7 +158,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L47)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L47)
 
 ***
 
@@ -176,7 +176,7 @@ Bias term, which will be added to the data. It is uniformly distributed between 
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L380)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L380)
 
 ***
 
@@ -194,7 +194,7 @@ Weight array, sampled from a secant hyperbolic distribution, which will be used 
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L353)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L353)
 
 ## Methods
 
@@ -212,7 +212,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L101)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L101)
 
 ***
 
@@ -242,7 +242,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L120)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L120)
 
 ***
 
@@ -276,7 +276,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L161)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L161)
 
 ***
 
@@ -302,7 +302,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L209)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L209)
 
 ***
 
@@ -328,7 +328,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L247)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L247)
 
 ***
 
@@ -350,7 +350,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L60)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L60)
 
 ***
 
@@ -376,7 +376,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L285)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L285)
 
 ***
 
@@ -400,4 +400,4 @@ New data, where `n\_samples` is the number of samples and `n\_features` is the n
 
 #### Defined in
 
-[generated/kernel\_approximation/SkewedChi2Sampler.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L319)
+[generated/kernel\_approximation/SkewedChi2Sampler.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L319)

@@ -140,7 +140,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L27)
+[generated/manifold/TSNE.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L27)
 
 ## Properties
 
@@ -150,7 +150,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L25)
+[generated/manifold/TSNE.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L25)
 
 ***
 
@@ -160,7 +160,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L24)
+[generated/manifold/TSNE.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L24)
 
 ***
 
@@ -170,7 +170,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L23)
+[generated/manifold/TSNE.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L23)
 
 ***
 
@@ -180,7 +180,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L20)
+[generated/manifold/TSNE.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L20)
 
 ***
 
@@ -190,7 +190,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L21)
+[generated/manifold/TSNE.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L21)
 
 ## Accessors
 
@@ -208,7 +208,7 @@ Stores the embedding vectors.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L379)
+[generated/manifold/TSNE.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L379)
 
 ***
 
@@ -226,7 +226,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L448)
+[generated/manifold/TSNE.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L448)
 
 ***
 
@@ -244,7 +244,7 @@ Kullback-Leibler divergence after optimization.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L402)
+[generated/manifold/TSNE.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L402)
 
 ***
 
@@ -262,7 +262,7 @@ Effective learning rate.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L473)
+[generated/manifold/TSNE.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L473)
 
 ***
 
@@ -280,7 +280,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L425)
+[generated/manifold/TSNE.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L425)
 
 ***
 
@@ -298,7 +298,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L496)
+[generated/manifold/TSNE.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L496)
 
 ***
 
@@ -326,7 +326,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L136)
+[generated/manifold/TSNE.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L136)
 
 ## Methods
 
@@ -344,7 +344,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L187)
+[generated/manifold/TSNE.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L187)
 
 ***
 
@@ -372,7 +372,7 @@ Ignored.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L204)
+[generated/manifold/TSNE.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L204)
 
 ***
 
@@ -400,7 +400,7 @@ Ignored.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L240)
+[generated/manifold/TSNE.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L240)
 
 ***
 
@@ -426,7 +426,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L279)
+[generated/manifold/TSNE.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L279)
 
 ***
 
@@ -452,7 +452,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L313)
+[generated/manifold/TSNE.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L313)
 
 ***
 
@@ -474,7 +474,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L149)
+[generated/manifold/TSNE.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L149)
 
 ***
 
@@ -500,4 +500,4 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/manifold/TSNE.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/manifold/TSNE.ts#L347)
+[generated/manifold/TSNE.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/manifold/TSNE.ts#L347)

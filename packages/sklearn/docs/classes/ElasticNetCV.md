@@ -130,7 +130,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L25)
+[generated/linear\_model/ElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L25)
 
 ## Properties
 
@@ -140,7 +140,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L23)
+[generated/linear\_model/ElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L23)
 
 ***
 
@@ -150,7 +150,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L22)
+[generated/linear\_model/ElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L22)
 
 ***
 
@@ -160,7 +160,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L21)
+[generated/linear\_model/ElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L21)
 
 ***
 
@@ -170,7 +170,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L18)
+[generated/linear\_model/ElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L18)
 
 ***
 
@@ -180,7 +180,7 @@ Amount of verbosity.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L19)
+[generated/linear\_model/ElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L19)
 
 ## Accessors
 
@@ -198,7 +198,7 @@ The amount of penalization chosen by cross validation.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L555)
+[generated/linear\_model/ElasticNetCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L555)
 
 ***
 
@@ -216,7 +216,7 @@ The grid of alphas used for fitting, for each l1\_ratio.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L676)
+[generated/linear\_model/ElasticNetCV.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L676)
 
 ***
 
@@ -234,7 +234,7 @@ Parameter vector (w in the cost function formula).
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L603)
+[generated/linear\_model/ElasticNetCV.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L603)
 
 ***
 
@@ -252,7 +252,7 @@ The dual gaps at the end of the optimization for the optimal alpha.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L699)
+[generated/linear\_model/ElasticNetCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L699)
 
 ***
 
@@ -270,7 +270,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:772](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L772)
+[generated/linear\_model/ElasticNetCV.ts:772](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L772)
 
 ***
 
@@ -288,7 +288,7 @@ Independent term in the decision function.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L626)
+[generated/linear\_model/ElasticNetCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L626)
 
 ***
 
@@ -306,7 +306,7 @@ The compromise between l1 and l2 penalization chosen by cross validation.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L578)
+[generated/linear\_model/ElasticNetCV.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L578)
 
 ***
 
@@ -324,7 +324,7 @@ Mean square error for the test set on each fold, varying l1\_ratio and alpha.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L651)
+[generated/linear\_model/ElasticNetCV.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L651)
 
 ***
 
@@ -342,7 +342,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L747)
+[generated/linear\_model/ElasticNetCV.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L747)
 
 ***
 
@@ -360,7 +360,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L724)
+[generated/linear\_model/ElasticNetCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L724)
 
 ***
 
@@ -388,7 +388,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L127)
+[generated/linear\_model/ElasticNetCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L127)
 
 ## Methods
 
@@ -406,7 +406,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L179)
+[generated/linear\_model/ElasticNetCV.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L179)
 
 ***
 
@@ -444,7 +444,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L198)
+[generated/linear\_model/ElasticNetCV.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L198)
 
 ***
 
@@ -470,7 +470,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L247)
+[generated/linear\_model/ElasticNetCV.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L247)
 
 ***
 
@@ -492,7 +492,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L140)
+[generated/linear\_model/ElasticNetCV.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L140)
 
 ***
 
@@ -612,7 +612,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L285)
+[generated/linear\_model/ElasticNetCV.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L285)
 
 ***
 
@@ -636,7 +636,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L405)
+[generated/linear\_model/ElasticNetCV.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L405)
 
 ***
 
@@ -670,7 +670,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L439)
+[generated/linear\_model/ElasticNetCV.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L439)
 
 ***
 
@@ -698,7 +698,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L485)
+[generated/linear\_model/ElasticNetCV.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L485)
 
 ***
 
@@ -726,4 +726,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNetCV.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L521)
+[generated/linear\_model/ElasticNetCV.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L521)

@@ -11,4 +11,4 @@ types. We recommend against using other major versions.
 
 ## Defined in
 
-[python.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/python.ts#L14)
+[python.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/python.ts#L14)

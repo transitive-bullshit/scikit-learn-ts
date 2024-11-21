@@ -88,7 +88,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L25)
+[generated/neighbors/KNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L25)
 
 ## Properties
 
@@ -98,7 +98,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L23)
+[generated/neighbors/KNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L23)
 
 ***
 
@@ -108,7 +108,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L22)
+[generated/neighbors/KNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L22)
 
 ***
 
@@ -118,7 +118,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L21)
+[generated/neighbors/KNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L21)
 
 ***
 
@@ -128,7 +128,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L18)
+[generated/neighbors/KNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L18)
 
 ***
 
@@ -138,7 +138,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L19)
+[generated/neighbors/KNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L19)
 
 ## Accessors
 
@@ -156,7 +156,7 @@ The distance metric to use. It will be same as the `metric` parameter or a synon
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L456)
+[generated/neighbors/KNeighborsRegressor.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L456)
 
 ***
 
@@ -174,7 +174,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L483)
+[generated/neighbors/KNeighborsRegressor.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L483)
 
 ***
 
@@ -192,7 +192,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L537)
+[generated/neighbors/KNeighborsRegressor.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L537)
 
 ***
 
@@ -210,7 +210,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L510)
+[generated/neighbors/KNeighborsRegressor.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L510)
 
 ***
 
@@ -228,7 +228,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L564)
+[generated/neighbors/KNeighborsRegressor.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L564)
 
 ***
 
@@ -256,7 +256,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L88)
+[generated/neighbors/KNeighborsRegressor.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L88)
 
 ## Methods
 
@@ -274,7 +274,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L144)
+[generated/neighbors/KNeighborsRegressor.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L144)
 
 ***
 
@@ -302,7 +302,7 @@ Target values.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L161)
+[generated/neighbors/KNeighborsRegressor.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L161)
 
 ***
 
@@ -328,7 +328,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L202)
+[generated/neighbors/KNeighborsRegressor.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L202)
 
 ***
 
@@ -350,7 +350,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L101)
+[generated/neighbors/KNeighborsRegressor.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L101)
 
 ***
 
@@ -388,7 +388,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L240)
+[generated/neighbors/KNeighborsRegressor.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L240)
 
 ***
 
@@ -424,7 +424,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L288)
+[generated/neighbors/KNeighborsRegressor.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L288)
 
 ***
 
@@ -448,7 +448,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L336)
+[generated/neighbors/KNeighborsRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L336)
 
 ***
 
@@ -482,7 +482,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L372)
+[generated/neighbors/KNeighborsRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L372)
 
 ***
 
@@ -510,4 +510,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L420)
+[generated/neighbors/KNeighborsRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L420)

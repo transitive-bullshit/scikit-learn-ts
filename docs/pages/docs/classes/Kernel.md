@@ -26,7 +26,7 @@ The log-transformed bounds on the kernel’s hyperparameters theta
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L21)
+[generated/gaussian\_process/kernels/Kernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L21)
 
 ## Properties
 
@@ -36,7 +36,7 @@ The log-transformed bounds on the kernel’s hyperparameters theta
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L19)
+[generated/gaussian\_process/kernels/Kernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L19)
 
 ***
 
@@ -46,7 +46,7 @@ The log-transformed bounds on the kernel’s hyperparameters theta
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L18)
+[generated/gaussian\_process/kernels/Kernel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L18)
 
 ***
 
@@ -56,7 +56,7 @@ The log-transformed bounds on the kernel’s hyperparameters theta
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L17)
+[generated/gaussian\_process/kernels/Kernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L17)
 
 ***
 
@@ -66,7 +66,7 @@ The log-transformed bounds on the kernel’s hyperparameters theta
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L14)
+[generated/gaussian\_process/kernels/Kernel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L14)
 
 ***
 
@@ -76,7 +76,7 @@ The log-transformed bounds on the kernel’s hyperparameters theta
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L15)
+[generated/gaussian\_process/kernels/Kernel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L15)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ The log-transformed bounds on the kernel’s hyperparameters theta
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L31)
+[generated/gaussian\_process/kernels/Kernel.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L31)
 
 ## Methods
 
@@ -124,7 +124,7 @@ Evaluate the kernel.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L99)
+[generated/gaussian\_process/kernels/Kernel.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L99)
 
 ***
 
@@ -148,7 +148,7 @@ The hyperparameters
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L125)
+[generated/gaussian\_process/kernels/Kernel.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L125)
 
 ***
 
@@ -174,7 +174,7 @@ Left argument of the returned kernel k(X, Y)
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L159)
+[generated/gaussian\_process/kernels/Kernel.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L159)
 
 ***
 
@@ -192,7 +192,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L82)
+[generated/gaussian\_process/kernels/Kernel.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L82)
 
 ***
 
@@ -214,7 +214,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L44)
+[generated/gaussian\_process/kernels/Kernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L44)
 
 ***
 
@@ -234,4 +234,4 @@ Returns whether the kernel is stationary.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Kernel.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L191)
+[generated/gaussian\_process/kernels/Kernel.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L191)

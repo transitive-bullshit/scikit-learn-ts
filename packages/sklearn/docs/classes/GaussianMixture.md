@@ -122,7 +122,7 @@ The user-provided initial weights. If it is `undefined`, weights are initialized
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L25)
+[generated/mixture/GaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L25)
 
 ## Properties
 
@@ -132,7 +132,7 @@ The user-provided initial weights. If it is `undefined`, weights are initialized
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L23)
+[generated/mixture/GaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L23)
 
 ***
 
@@ -142,7 +142,7 @@ The user-provided initial weights. If it is `undefined`, weights are initialized
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L22)
+[generated/mixture/GaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L22)
 
 ***
 
@@ -152,7 +152,7 @@ The user-provided initial weights. If it is `undefined`, weights are initialized
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L21)
+[generated/mixture/GaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L21)
 
 ***
 
@@ -162,7 +162,7 @@ The user-provided initial weights. If it is `undefined`, weights are initialized
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L18)
+[generated/mixture/GaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L18)
 
 ***
 
@@ -172,7 +172,7 @@ The user-provided initial weights. If it is `undefined`, weights are initialized
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L19)
+[generated/mixture/GaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L19)
 
 ## Accessors
 
@@ -190,7 +190,7 @@ True when convergence of the best fit of EM was reached, `false` otherwise.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L663)
+[generated/mixture/GaussianMixture.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L663)
 
 ***
 
@@ -208,7 +208,7 @@ The covariance of each mixture component. The shape depends on `covariance\_type
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L588)
+[generated/mixture/GaussianMixture.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L588)
 
 ***
 
@@ -226,7 +226,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L763)
+[generated/mixture/GaussianMixture.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L763)
 
 ***
 
@@ -244,7 +244,7 @@ Lower bound value on the log-likelihood (of the training data with respect to th
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L713)
+[generated/mixture/GaussianMixture.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L713)
 
 ***
 
@@ -262,7 +262,7 @@ The mean of each mixture component.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L563)
+[generated/mixture/GaussianMixture.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L563)
 
 ***
 
@@ -280,7 +280,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L738)
+[generated/mixture/GaussianMixture.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L738)
 
 ***
 
@@ -298,7 +298,7 @@ Number of step used by the best fit of EM to reach the convergence.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L688)
+[generated/mixture/GaussianMixture.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L688)
 
 ***
 
@@ -316,7 +316,7 @@ The precision matrices for each component in the mixture. A precision matrix is 
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L613)
+[generated/mixture/GaussianMixture.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L613)
 
 ***
 
@@ -334,7 +334,7 @@ The cholesky decomposition of the precision matrices of each mixture component. 
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L638)
+[generated/mixture/GaussianMixture.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L638)
 
 ***
 
@@ -362,7 +362,7 @@ The cholesky decomposition of the precision matrices of each mixture component. 
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120)
+[generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120)
 
 ***
 
@@ -380,7 +380,7 @@ The weights of each mixture components.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L538)
+[generated/mixture/GaussianMixture.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L538)
 
 ## Methods
 
@@ -406,7 +406,7 @@ The input samples.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L191)
+[generated/mixture/GaussianMixture.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L191)
 
 ***
 
@@ -432,7 +432,7 @@ The input samples.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L225)
+[generated/mixture/GaussianMixture.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L225)
 
 ***
 
@@ -450,7 +450,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L172)
+[generated/mixture/GaussianMixture.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L172)
 
 ***
 
@@ -480,7 +480,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L259)
+[generated/mixture/GaussianMixture.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L259)
 
 ***
 
@@ -510,7 +510,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L298)
+[generated/mixture/GaussianMixture.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L298)
 
 ***
 
@@ -536,7 +536,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L337)
+[generated/mixture/GaussianMixture.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L337)
 
 ***
 
@@ -558,7 +558,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L133)
+[generated/mixture/GaussianMixture.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L133)
 
 ***
 
@@ -582,7 +582,7 @@ List of n\_features-dimensional data points. Each row corresponds to a single da
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L371)
+[generated/mixture/GaussianMixture.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L371)
 
 ***
 
@@ -606,7 +606,7 @@ List of n\_features-dimensional data points. Each row corresponds to a single da
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L403)
+[generated/mixture/GaussianMixture.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L403)
 
 ***
 
@@ -634,7 +634,7 @@ Number of samples to generate.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L435)
+[generated/mixture/GaussianMixture.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L435)
 
 ***
 
@@ -662,7 +662,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L469)
+[generated/mixture/GaussianMixture.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L469)
 
 ***
 
@@ -686,4 +686,4 @@ List of n\_features-dimensional data points. Each row corresponds to a single da
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L506)
+[generated/mixture/GaussianMixture.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L506)

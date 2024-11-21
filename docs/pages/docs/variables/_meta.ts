@@ -1,3 +1,3 @@
-{
+export default {
   "SCIKIT_LEARN_VERSION": "SCIKIT_LEARN_VERSION"
 }

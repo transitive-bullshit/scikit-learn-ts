@@ -38,7 +38,7 @@ Number of folds. Must be at least 2.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L29)
+[generated/model\_selection/GroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L29)
 
 ## Properties
 
@@ -48,7 +48,7 @@ Number of folds. Must be at least 2.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L27)
+[generated/model\_selection/GroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L27)
 
 ***
 
@@ -58,7 +58,7 @@ Number of folds. Must be at least 2.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L26)
+[generated/model\_selection/GroupKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L26)
 
 ***
 
@@ -68,7 +68,7 @@ Number of folds. Must be at least 2.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L25)
+[generated/model\_selection/GroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L25)
 
 ***
 
@@ -78,7 +78,7 @@ Number of folds. Must be at least 2.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L22)
+[generated/model\_selection/GroupKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L22)
 
 ***
 
@@ -88,7 +88,7 @@ Number of folds. Must be at least 2.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L23)
+[generated/model\_selection/GroupKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L23)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Number of folds. Must be at least 2.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L41)
+[generated/model\_selection/GroupKFold.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L41)
 
 ## Methods
 
@@ -134,7 +134,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L93)
+[generated/model\_selection/GroupKFold.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L93)
 
 ***
 
@@ -160,7 +160,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L112)
+[generated/model\_selection/GroupKFold.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L112)
 
 ***
 
@@ -192,7 +192,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L146)
+[generated/model\_selection/GroupKFold.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L146)
 
 ***
 
@@ -214,7 +214,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L54)
+[generated/model\_selection/GroupKFold.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L54)
 
 ***
 
@@ -242,7 +242,7 @@ Metadata routing for `groups` parameter in `split`.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L192)
+[generated/model\_selection/GroupKFold.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L192)
 
 ***
 
@@ -274,4 +274,4 @@ The target variable for supervised learning problems.
 
 #### Defined in
 
-[generated/model\_selection/GroupKFold.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L224)
+[generated/model\_selection/GroupKFold.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L224)

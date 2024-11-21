@@ -46,7 +46,7 @@ Controls the generation of the random states for each repetition. Pass an int fo
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L25)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L25)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Controls the generation of the random states for each repetition. Pass an int fo
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L23)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L23)
 
 ***
 
@@ -66,7 +66,7 @@ Controls the generation of the random states for each repetition. Pass an int fo
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L22)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L22)
 
 ***
 
@@ -76,7 +76,7 @@ Controls the generation of the random states for each repetition. Pass an int fo
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L21)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L21)
 
 ***
 
@@ -86,7 +86,7 @@ Controls the generation of the random states for each repetition. Pass an int fo
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L18)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L18)
 
 ***
 
@@ -96,7 +96,7 @@ Controls the generation of the random states for each repetition. Pass an int fo
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L19)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L19)
 
 ## Accessors
 
@@ -124,7 +124,7 @@ Controls the generation of the random states for each repetition. Pass an int fo
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L49)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L49)
 
 ## Methods
 
@@ -142,7 +142,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L105)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L105)
 
 ***
 
@@ -168,7 +168,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L124)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L124)
 
 ***
 
@@ -200,7 +200,7 @@ Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as 
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L160)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L160)
 
 ***
 
@@ -222,7 +222,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L62)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L62)
 
 ***
 
@@ -254,4 +254,4 @@ The target variable for supervised learning problems.
 
 #### Defined in
 
-[generated/model\_selection/RepeatedStratifiedKFold.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L206)
+[generated/model\_selection/RepeatedStratifiedKFold.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L206)

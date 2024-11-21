@@ -40,7 +40,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L23)
+[generated/preprocessing/KernelCenterer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L23)
 
 ## Properties
 
@@ -50,7 +50,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L21)
+[generated/preprocessing/KernelCenterer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L21)
 
 ***
 
@@ -60,7 +60,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L20)
+[generated/preprocessing/KernelCenterer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L20)
 
 ***
 
@@ -70,7 +70,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L19)
+[generated/preprocessing/KernelCenterer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L19)
 
 ***
 
@@ -80,7 +80,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L16)
+[generated/preprocessing/KernelCenterer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L16)
 
 ***
 
@@ -90,7 +90,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L17)
+[generated/preprocessing/KernelCenterer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L17)
 
 ## Accessors
 
@@ -118,7 +118,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L48)
+[generated/preprocessing/KernelCenterer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L48)
 
 ## Methods
 
@@ -136,7 +136,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L100)
+[generated/preprocessing/KernelCenterer.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L100)
 
 ***
 
@@ -164,7 +164,7 @@ Ignored.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L117)
+[generated/preprocessing/KernelCenterer.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L117)
 
 ***
 
@@ -198,7 +198,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L156)
+[generated/preprocessing/KernelCenterer.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L156)
 
 ***
 
@@ -224,7 +224,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L200)
+[generated/preprocessing/KernelCenterer.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L200)
 
 ***
 
@@ -250,7 +250,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L236)
+[generated/preprocessing/KernelCenterer.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L236)
 
 ***
 
@@ -272,7 +272,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L61)
+[generated/preprocessing/KernelCenterer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L61)
 
 ***
 
@@ -300,7 +300,7 @@ Metadata routing for `K` parameter in `fit`.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L274)
+[generated/preprocessing/KernelCenterer.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L274)
 
 ***
 
@@ -326,7 +326,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L310)
+[generated/preprocessing/KernelCenterer.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L310)
 
 ***
 
@@ -358,7 +358,7 @@ Metadata routing for `K` parameter in `transform`.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L346)
+[generated/preprocessing/KernelCenterer.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L346)
 
 ***
 
@@ -390,4 +390,4 @@ Kernel matrix.
 
 #### Defined in
 
-[generated/preprocessing/KernelCenterer.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L385)
+[generated/preprocessing/KernelCenterer.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L385)

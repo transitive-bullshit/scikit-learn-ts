@@ -34,22 +34,21 @@ const config: DocsThemeConfig = {
     content: 'Edit this page on GitHub'
   },
   // TODO
-  useNextSeoProps() {
-    const { asPath } = useRouter()
-    if (asPath === '/') {
-      return {
-        titleTemplate: siteTitle
-      }
-    } else {
-      return {
-        titleTemplate: `%s – ${siteTitle}`
-      }
-    }
-  },
+  // useNextSeoProps() {
+  //   const { asPath } = useRouter()
+  //   if (asPath === '/') {
+  //     return {
+  //       titleTemplate: siteTitle
+  //     }
+  //   } else {
+  //     return {
+  //       titleTemplate: `%s – ${siteTitle}`
+  //     }
+  //   }
+  // },
   sidebar: {
     toggleButton: true
   },
-  title: titleComponent,
   head: function useHead() {
     const config = useConfig()
     const { asPath } = useRouter()

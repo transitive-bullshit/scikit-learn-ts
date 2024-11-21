@@ -136,7 +136,7 @@ Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L31)
+[generated/decomposition/KernelPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L31)
 
 ## Properties
 
@@ -146,7 +146,7 @@ Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L29)
+[generated/decomposition/KernelPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L29)
 
 ***
 
@@ -156,7 +156,7 @@ Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L28)
+[generated/decomposition/KernelPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L28)
 
 ***
 
@@ -166,7 +166,7 @@ Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L27)
+[generated/decomposition/KernelPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L27)
 
 ***
 
@@ -176,7 +176,7 @@ Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L24)
+[generated/decomposition/KernelPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L24)
 
 ***
 
@@ -186,7 +186,7 @@ Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L25)
+[generated/decomposition/KernelPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L25)
 
 ## Accessors
 
@@ -204,7 +204,7 @@ Inverse transform matrix. Only available when `fit\_inverse\_transform` is `true
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L505)
+[generated/decomposition/KernelPCA.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L505)
 
 ***
 
@@ -222,7 +222,7 @@ Eigenvalues of the centered kernel matrix in decreasing order. If `n\_components
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L455)
+[generated/decomposition/KernelPCA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L455)
 
 ***
 
@@ -240,7 +240,7 @@ Eigenvectors of the centered kernel matrix. If `n\_components` and `remove\_zero
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L480)
+[generated/decomposition/KernelPCA.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L480)
 
 ***
 
@@ -258,7 +258,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L601)
+[generated/decomposition/KernelPCA.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L601)
 
 ***
 
@@ -276,7 +276,7 @@ Kernel coefficient for rbf, poly and sigmoid kernels. When `gamma` is explicitly
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L626)
+[generated/decomposition/KernelPCA.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L626)
 
 ***
 
@@ -294,7 +294,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L576)
+[generated/decomposition/KernelPCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L576)
 
 ***
 
@@ -322,7 +322,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L136)
+[generated/decomposition/KernelPCA.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L136)
 
 ***
 
@@ -340,7 +340,7 @@ The data used to fit the model. If `copy\_X=False`, then `X\_fit\_` is a referen
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L553)
+[generated/decomposition/KernelPCA.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L553)
 
 ***
 
@@ -358,7 +358,7 @@ Projection of the fitted data on the kernel principal components. Only available
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L528)
+[generated/decomposition/KernelPCA.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L528)
 
 ## Methods
 
@@ -376,7 +376,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L187)
+[generated/decomposition/KernelPCA.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L187)
 
 ***
 
@@ -404,7 +404,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L204)
+[generated/decomposition/KernelPCA.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L204)
 
 ***
 
@@ -436,7 +436,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L241)
+[generated/decomposition/KernelPCA.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L241)
 
 ***
 
@@ -462,7 +462,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L285)
+[generated/decomposition/KernelPCA.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L285)
 
 ***
 
@@ -488,7 +488,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L321)
+[generated/decomposition/KernelPCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L321)
 
 ***
 
@@ -510,7 +510,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L149)
+[generated/decomposition/KernelPCA.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L149)
 
 ***
 
@@ -536,7 +536,7 @@ Training vector, where `n\_samples` is the number of samples and `n\_features` i
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L357)
+[generated/decomposition/KernelPCA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L357)
 
 ***
 
@@ -562,7 +562,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L391)
+[generated/decomposition/KernelPCA.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L391)
 
 ***
 
@@ -586,4 +586,4 @@ Training vector, where `n\_samples` is the number of samples and `n\_features` i
 
 #### Defined in
 
-[generated/decomposition/KernelPCA.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L423)
+[generated/decomposition/KernelPCA.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L423)

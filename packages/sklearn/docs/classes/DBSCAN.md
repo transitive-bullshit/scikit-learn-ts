@@ -80,7 +80,7 @@ The power of the Minkowski metric to be used to calculate distance between point
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L27)
+[generated/cluster/DBSCAN.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L27)
 
 ## Properties
 
@@ -90,7 +90,7 @@ The power of the Minkowski metric to be used to calculate distance between point
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L25)
+[generated/cluster/DBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L25)
 
 ***
 
@@ -100,7 +100,7 @@ The power of the Minkowski metric to be used to calculate distance between point
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L24)
+[generated/cluster/DBSCAN.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L24)
 
 ***
 
@@ -110,7 +110,7 @@ The power of the Minkowski metric to be used to calculate distance between point
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L23)
+[generated/cluster/DBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L23)
 
 ***
 
@@ -120,7 +120,7 @@ The power of the Minkowski metric to be used to calculate distance between point
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L20)
+[generated/cluster/DBSCAN.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L20)
 
 ***
 
@@ -130,7 +130,7 @@ The power of the Minkowski metric to be used to calculate distance between point
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L21)
+[generated/cluster/DBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L21)
 
 ## Accessors
 
@@ -148,7 +148,7 @@ Copy of each core sample found by training.
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L329)
+[generated/cluster/DBSCAN.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L329)
 
 ***
 
@@ -166,7 +166,7 @@ Indices of core samples.
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L304)
+[generated/cluster/DBSCAN.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L304)
 
 ***
 
@@ -184,7 +184,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L397)
+[generated/cluster/DBSCAN.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L397)
 
 ***
 
@@ -202,7 +202,7 @@ Cluster labels for each point in the dataset given to fit(). Noisy samples are g
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L352)
+[generated/cluster/DBSCAN.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L352)
 
 ***
 
@@ -220,7 +220,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L374)
+[generated/cluster/DBSCAN.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L374)
 
 ***
 
@@ -248,7 +248,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L82)
+[generated/cluster/DBSCAN.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L82)
 
 ## Methods
 
@@ -266,7 +266,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L133)
+[generated/cluster/DBSCAN.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L133)
 
 ***
 
@@ -298,7 +298,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L150)
+[generated/cluster/DBSCAN.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L150)
 
 ***
 
@@ -330,7 +330,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L192)
+[generated/cluster/DBSCAN.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L192)
 
 ***
 
@@ -356,7 +356,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L236)
+[generated/cluster/DBSCAN.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L236)
 
 ***
 
@@ -378,7 +378,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L95)
+[generated/cluster/DBSCAN.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L95)
 
 ***
 
@@ -406,4 +406,4 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/cluster/DBSCAN.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/DBSCAN.ts#L272)
+[generated/cluster/DBSCAN.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/5e663e21c4853c8fe2b9bcb1cb98c79fc27bba08/packages/sklearn/src/generated/cluster/DBSCAN.ts#L272)
