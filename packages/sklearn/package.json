@@ -8,6 +8,7 @@
   "license": "MIT",
   "type": "module",
   "source": "./src/index.ts",
+  "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "exports": {
     ".": {
