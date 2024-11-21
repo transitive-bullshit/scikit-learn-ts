@@ -16,119 +16,14 @@ The computation during [`fit`](https://scikit-learn.org/stable/modules/generated
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.check_inverse`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to check that `transform` followed by `inverse_transform` or `func` followed by `inverse_func` leads to the original targets.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.func`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Function to apply to `y` before passing to [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit"). Cannot be set at the same time as `transformer`. If `func is None`, the function used will be the identity function. If `func` is set, `inverse_func` also needs to be provided. The function needs to return a 2-dimensional array.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.inverse_func`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Function to apply to the prediction of the regressor. Cannot be set at the same time as `transformer`. The inverse function is used to return predictions to the same space of the original training labels. If `inverse_func` is set, `func` also needs to be provided. The inverse function needs to return a 2-dimensional array.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.regressor`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Regressor object such as derived from [`RegressorMixin`](https://scikit-learn.org/stable/modules/generated/sklearn.base.RegressorMixin.html#sklearn.base.RegressorMixin "sklearn.base.RegressorMixin"). This regressor will automatically be cloned each time prior to fitting. If `regressor is None`, [`LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") is created and used.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transformer`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Estimator object such as derived from [`TransformerMixin`](https://scikit-learn.org/stable/modules/generated/sklearn.base.TransformerMixin.html#sklearn.base.TransformerMixin "sklearn.base.TransformerMixin"). Cannot be set at the same time as `func` and `inverse_func`. If `transformer is None` as well as `func` and `inverse_func`, the transformer will be an identity transformer. Note that the transformer will be cloned during fitting. Also, the transformer is restricting `y` to be a numpy array.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.check_inverse`? | `boolean` | Whether to check that `transform` followed by `inverse_transform` or `func` followed by `inverse_func` leads to the original targets. |
+| `opts.func`? | `any` | Function to apply to `y` before passing to [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit"). Cannot be set at the same time as `transformer`. If `func is None`, the function used will be the identity function. If `func` is set, `inverse_func` also needs to be provided. The function needs to return a 2-dimensional array. |
+| `opts.inverse_func`? | `any` | Function to apply to the prediction of the regressor. Cannot be set at the same time as `transformer`. The inverse function is used to return predictions to the same space of the original training labels. If `inverse_func` is set, `func` also needs to be provided. The inverse function needs to return a 2-dimensional array. |
+| `opts.regressor`? | `any` | Regressor object such as derived from [`RegressorMixin`](https://scikit-learn.org/stable/modules/generated/sklearn.base.RegressorMixin.html#sklearn.base.RegressorMixin "sklearn.base.RegressorMixin"). This regressor will automatically be cloned each time prior to fitting. If `regressor is None`, [`LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") is created and used. |
+| `opts.transformer`? | `any` | Estimator object such as derived from [`TransformerMixin`](https://scikit-learn.org/stable/modules/generated/sklearn.base.TransformerMixin.html#sklearn.base.TransformerMixin "sklearn.base.TransformerMixin"). Cannot be set at the same time as `func` and `inverse_func`. If `transformer is None` as well as `func` and `inverse_func`, the transformer will be an identity transformer. Note that the transformer will be cloned during fitting. Also, the transformer is restricting `y` to be a numpy array. |
 
 #### Returns
 
@@ -136,17 +31,17 @@ Estimator object such as derived from [`TransformerMixin`](https://scikit-learn.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
+[generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21) |
-| `id` | `string` | `undefined` | [generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21) |
+| `id` | `string` | `undefined` | [generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19) |
 
 ## Accessors
 
@@ -164,7 +59,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L393)
+[generated/compose/TransformedTargetRegressor.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L393)
 
 ***
 
@@ -184,28 +79,9 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -213,7 +89,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57)
+[generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57)
 
 ***
 
@@ -231,7 +107,7 @@ Fitted regressor.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L339)
+[generated/compose/TransformedTargetRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L339)
 
 ***
 
@@ -249,7 +125,7 @@ Transformer used in [`fit`](https://scikit-learn.org/stable/modules/generated/#s
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L366)
+[generated/compose/TransformedTargetRegressor.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L366)
 
 ## Methods
 
@@ -267,7 +143,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L113)
+[generated/compose/TransformedTargetRegressor.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L113)
 
 ***
 
@@ -279,85 +155,12 @@ Fit the model according to the given training data.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters passed to the `fit` method of the underlying regressor.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Parameters passed to the `fit` method of the underlying regressor. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values. |
 
 #### Returns
 
@@ -365,7 +168,7 @@ Target values.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L130)
+[generated/compose/TransformedTargetRegressor.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L130)
 
 ***
 
@@ -379,28 +182,9 @@ This estimator does not support metadata routing yet.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -408,7 +192,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L178)
+[generated/compose/TransformedTargetRegressor.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L178)
 
 ***
 
@@ -422,28 +206,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -451,7 +216,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L70)
+[generated/compose/TransformedTargetRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L70)
 
 ***
 
@@ -465,68 +230,11 @@ The regressor is used to predict and the `inverse_func` or `inverse_transform` i
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.predict_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters passed to the `predict` method of the underlying regressor.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.predict_params`? | `any` | Parameters passed to the `predict` method of the underlying regressor. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Samples. |
 
 #### Returns
 
@@ -534,7 +242,7 @@ Samples.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L210)
+[generated/compose/TransformedTargetRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L210)
 
 ***
 
@@ -548,85 +256,12 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-True values for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
@@ -634,7 +269,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L253)
+[generated/compose/TransformedTargetRegressor.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L253)
 
 ***
 
@@ -650,51 +285,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 #### Returns
 
@@ -702,4 +296,4 @@ Metadata routing for `sample_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L303)
+[generated/compose/TransformedTargetRegressor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L303)

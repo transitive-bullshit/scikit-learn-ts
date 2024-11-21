@@ -16,118 +16,27 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.code_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Percentage of the number of classes to be used to create the code book. A number between 0 and 1 will require fewer classifiers than one-vs-the-rest. A number greater than 1 will require more classifiers than one-vs-the-rest.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.estimator`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-An estimator object implementing [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) and one of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) or [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of jobs to use for the computation: the multiclass problems are computed in parallel.
-
-`undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The generator used to initialize the codebook. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.code_size`? | `number` | Percentage of the number of classes to be used to create the code book. A number between 0 and 1 will require fewer classifiers than one-vs-the-rest. A number greater than 1 will require more classifiers than one-vs-the-rest. |
+| `opts.estimator`? | `any` | An estimator object implementing [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) and one of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) or [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba). |
+| `opts.n_jobs`? | `number` | The number of jobs to use for the computation: the multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.random_state`? | `number` | The generator used to initialize the codebook. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
 
 **Returns** [`OutputCodeClassifier`](OutputCodeClassifier.md)
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L25)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/multiclass/OutputCodeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/multiclass/OutputCodeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/multiclass/OutputCodeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L21) |
-| `id` | `string` | `undefined` | [generated/multiclass/OutputCodeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/multiclass/OutputCodeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/multiclass/OutputCodeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/multiclass/OutputCodeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/multiclass/OutputCodeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L21) |
+| `id` | `string` | `undefined` | [generated/multiclass/OutputCodeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/multiclass/OutputCodeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L19) |
 
 ## Accessors
 
@@ -141,7 +50,7 @@ Array containing labels.
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L356)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L356)
 
 ***
 
@@ -155,7 +64,7 @@ Binary array containing the code of each class.
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L383)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L383)
 
 ***
 
@@ -169,7 +78,7 @@ Estimators used for predictions.
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L329)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L329)
 
 ***
 
@@ -183,7 +92,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L437)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L437)
 
 ***
 
@@ -197,7 +106,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L410)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L410)
 
 ***
 
@@ -215,32 +124,13 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L54)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L54)
 
 ## Methods
 
@@ -254,7 +144,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L110)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L110)
 
 ***
 
@@ -266,89 +156,16 @@ Fit underlying estimators.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters passed to the `estimator.fit` method of each sub-estimator.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Multi-class targets.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Parameters passed to the `estimator.fit` method of each sub-estimator. |
+| `opts.X`? | `ArrayLike` | Data. |
+| `opts.y`? | `ArrayLike` | Multi-class targets. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L127)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L127)
 
 ***
 
@@ -362,55 +179,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L173)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L173)
 
 ***
 
@@ -424,32 +200,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L67)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L67)
 
 ***
 
@@ -461,55 +218,14 @@ Predict multi-class targets using underlying estimators.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Data.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | Data. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L209)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L209)
 
 ***
 
@@ -523,89 +239,16 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Test samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-True labels for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Sample weights. |
+| `opts.X`? | `ArrayLike`[] | Test samples. |
+| `opts.y`? | `ArrayLike` | True labels for `X`. |
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L245)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L245)
 
 ***
 
@@ -621,52 +264,11 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/multiclass/OutputCodeClassifier.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L293)
+**Defined in** [generated/multiclass/OutputCodeClassifier.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L293)

@@ -16,119 +16,14 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.alpha`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force_alpha=`true`, for no smoothing).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.class_prior`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Prior probabilities of the classes. If specified, the priors are not adjusted according to the data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_prior`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to learn class prior probabilities or not. If false, a uniform prior will be used.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.force_alpha`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.min_categories`?
-
-</td>
-<td>
-
-`number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Minimum number of categories per feature.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.alpha`? | `number` | Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force_alpha=`true`, for no smoothing). |
+| `opts.class_prior`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Prior probabilities of the classes. If specified, the priors are not adjusted according to the data. |
+| `opts.fit_prior`? | `boolean` | Whether to learn class prior probabilities or not. If false, a uniform prior will be used. |
+| `opts.force_alpha`? | `boolean` | If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0. |
+| `opts.min_categories`? | `number` \| [`ArrayLike`](../type-aliases/ArrayLike.md) | Minimum number of categories per feature. |
 
 #### Returns
 
@@ -136,17 +31,17 @@ Minimum number of categories per feature.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L25)
+[generated/naive\_bayes/CategoricalNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/naive\_bayes/CategoricalNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/naive\_bayes/CategoricalNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/naive\_bayes/CategoricalNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L21) |
-| `id` | `string` | `undefined` | [generated/naive\_bayes/CategoricalNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/naive\_bayes/CategoricalNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/naive\_bayes/CategoricalNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/naive\_bayes/CategoricalNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/naive\_bayes/CategoricalNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L21) |
+| `id` | `string` | `undefined` | [generated/naive\_bayes/CategoricalNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/naive\_bayes/CategoricalNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L19) |
 
 ## Accessors
 
@@ -164,7 +59,7 @@ Holds arrays of shape (n_classes, n_categories of respective feature) for each f
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L558)
+[generated/naive\_bayes/CategoricalNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L558)
 
 ***
 
@@ -182,7 +77,7 @@ Number of samples encountered for each class during fitting. This value is weigh
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L583)
+[generated/naive\_bayes/CategoricalNB.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L583)
 
 ***
 
@@ -200,7 +95,7 @@ Smoothed empirical log probability for each class.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L608)
+[generated/naive\_bayes/CategoricalNB.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L608)
 
 ***
 
@@ -218,7 +113,7 @@ Class labels known to the classifier
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L633)
+[generated/naive\_bayes/CategoricalNB.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L633)
 
 ***
 
@@ -236,7 +131,7 @@ Holds arrays of shape (n_classes, n_categories of respective feature) for each f
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L658)
+[generated/naive\_bayes/CategoricalNB.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L658)
 
 ***
 
@@ -254,7 +149,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L708)
+[generated/naive\_bayes/CategoricalNB.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L708)
 
 ***
 
@@ -272,7 +167,7 @@ Number of categories for each feature. This value is inferred from the data or s
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L733)
+[generated/naive\_bayes/CategoricalNB.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L733)
 
 ***
 
@@ -290,7 +185,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L683)
+[generated/naive\_bayes/CategoricalNB.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L683)
 
 ***
 
@@ -310,28 +205,9 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -339,7 +215,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L61)
+[generated/naive\_bayes/CategoricalNB.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L61)
 
 ## Methods
 
@@ -357,7 +233,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L113)
+[generated/naive\_bayes/CategoricalNB.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L113)
 
 ***
 
@@ -369,85 +245,12 @@ Fit Naive Bayes classifier according to X, y.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Weights applied to individual samples (1. for unweighted).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Weights applied to individual samples (1. for unweighted). |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values. |
 
 #### Returns
 
@@ -455,7 +258,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L130)
+[generated/naive\_bayes/CategoricalNB.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L130)
 
 ***
 
@@ -469,51 +272,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -521,7 +283,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L174)
+[generated/naive\_bayes/CategoricalNB.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L174)
 
 ***
 
@@ -535,28 +297,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -564,7 +307,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L74)
+[generated/naive\_bayes/CategoricalNB.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L74)
 
 ***
 
@@ -582,104 +325,13 @@ This method has some performance overhead hence it is better to call partial_fit
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.classes`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-List of all the classes that can possibly appear in the y vector.
-
-Must be provided at the first call to partial_fit, can be omitted in subsequent calls.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Weights applied to individual samples (1. for unweighted).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.classes`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | List of all the classes that can possibly appear in the y vector. Must be provided at the first call to partial_fit, can be omitted in subsequent calls. |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Weights applied to individual samples (1. for unweighted). |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values. |
 
 #### Returns
 
@@ -687,7 +339,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L214)
+[generated/naive\_bayes/CategoricalNB.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L214)
 
 ***
 
@@ -699,51 +351,10 @@ Perform classification on an array of test vectors X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
@@ -751,7 +362,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L263)
+[generated/naive\_bayes/CategoricalNB.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L263)
 
 ***
 
@@ -765,51 +376,10 @@ For each row x of X and class y, the joint log probability is given by `log P(x,
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
@@ -817,7 +387,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L297)
+[generated/naive\_bayes/CategoricalNB.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L297)
 
 ***
 
@@ -829,51 +399,10 @@ Return log-probability estimates for the test vector X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
@@ -881,7 +410,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L331)
+[generated/naive\_bayes/CategoricalNB.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L331)
 
 ***
 
@@ -893,51 +422,10 @@ Return probability estimates for the test vector X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
@@ -945,7 +433,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L365)
+[generated/naive\_bayes/CategoricalNB.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L365)
 
 ***
 
@@ -959,85 +447,12 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Test samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-True labels for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Test samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | True labels for `X`. |
 
 #### Returns
 
@@ -1045,7 +460,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L399)
+[generated/naive\_bayes/CategoricalNB.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L399)
 
 ***
 
@@ -1061,51 +476,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `fit`. |
 
 #### Returns
 
@@ -1113,7 +487,7 @@ Metadata routing for `sample_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L445)
+[generated/naive\_bayes/CategoricalNB.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L445)
 
 ***
 
@@ -1129,68 +503,11 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.classes`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `classes` parameter in `partial_fit`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `partial_fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.classes`? | `string` \| `boolean` | Metadata routing for `classes` parameter in `partial_fit`. |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `partial_fit`. |
 
 #### Returns
 
@@ -1198,7 +515,7 @@ Metadata routing for `sample_weight` parameter in `partial_fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L481)
+[generated/naive\_bayes/CategoricalNB.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L481)
 
 ***
 
@@ -1214,51 +531,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 #### Returns
 
@@ -1266,4 +542,4 @@ Metadata routing for `sample_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/naive\_bayes/CategoricalNB.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L524)
+[generated/naive\_bayes/CategoricalNB.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L524)

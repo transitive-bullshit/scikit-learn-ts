@@ -16,119 +16,14 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of iterations of the power method.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_components`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of components to keep. Should be in `\[1, min(n_samples, n_features, n_targets)\]`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.scale`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to scale `X` and `Y`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u_i \- u_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.copy`? | `boolean` | Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays. |
+| `opts.max_iter`? | `number` | The maximum number of iterations of the power method. |
+| `opts.n_components`? | `number` | Number of components to keep. Should be in `\[1, min(n_samples, n_features, n_targets)\]`. |
+| `opts.scale`? | `boolean` | Whether to scale `X` and `Y`. |
+| `opts.tol`? | `number` | The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u_i \- u_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector. |
 
 #### Returns
 
@@ -136,17 +31,17 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L25)
+[generated/cross\_decomposition/CCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/cross\_decomposition/CCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/cross\_decomposition/CCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/cross\_decomposition/CCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L21) |
-| `id` | `string` | `undefined` | [generated/cross\_decomposition/CCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/cross\_decomposition/CCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/cross\_decomposition/CCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/cross\_decomposition/CCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/cross\_decomposition/CCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L21) |
+| `id` | `string` | `undefined` | [generated/cross\_decomposition/CCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/cross\_decomposition/CCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L19) |
 
 ## Accessors
 
@@ -164,7 +59,7 @@ The coefficients of the linear model such that `Y` is approximated as `Y \= X @ 
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L731)
+[generated/cross\_decomposition/CCA.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L731)
 
 ***
 
@@ -182,7 +77,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L820)
+[generated/cross\_decomposition/CCA.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L820)
 
 ***
 
@@ -200,7 +95,7 @@ The intercepts of the linear model such that `Y` is approximated as `Y \= X @ co
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L753)
+[generated/cross\_decomposition/CCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L753)
 
 ***
 
@@ -218,7 +113,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L797)
+[generated/cross\_decomposition/CCA.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L797)
 
 ***
 
@@ -236,7 +131,7 @@ Number of iterations of the power method, for each component.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:775](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L775)
+[generated/cross\_decomposition/CCA.ts:775](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L775)
 
 ***
 
@@ -256,28 +151,9 @@ Number of iterations of the power method, for each component.
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -285,7 +161,7 @@ Number of iterations of the power method, for each component.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L65)
+[generated/cross\_decomposition/CCA.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L65)
 
 ***
 
@@ -303,7 +179,7 @@ The loadings of `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L639)
+[generated/cross\_decomposition/CCA.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L639)
 
 ***
 
@@ -321,7 +197,7 @@ The projection matrix used to transform `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L685)
+[generated/cross\_decomposition/CCA.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L685)
 
 ***
 
@@ -339,7 +215,7 @@ The left singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L595)
+[generated/cross\_decomposition/CCA.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L595)
 
 ***
 
@@ -357,7 +233,7 @@ The loadings of `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L662)
+[generated/cross\_decomposition/CCA.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L662)
 
 ***
 
@@ -375,7 +251,7 @@ The projection matrix used to transform `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L708)
+[generated/cross\_decomposition/CCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L708)
 
 ***
 
@@ -393,7 +269,7 @@ The right singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L617)
+[generated/cross\_decomposition/CCA.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L617)
 
 ## Methods
 
@@ -411,7 +287,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L116)
+[generated/cross\_decomposition/CCA.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L116)
 
 ***
 
@@ -423,85 +299,12 @@ Fit model to data.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables. |
+| `opts.Y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables. |
 
 #### Returns
 
@@ -509,7 +312,7 @@ Target vectors, where `n_samples` is the number of samples and `n_targets` is th
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L133)
+[generated/cross\_decomposition/CCA.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L133)
 
 ***
 
@@ -521,68 +324,11 @@ Learn and apply the dimension reduction on the train data.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables. |
 
 #### Returns
 
@@ -590,7 +336,7 @@ Target vectors, where `n_samples` is the number of samples and `n_targets` is th
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L174)
+[generated/cross\_decomposition/CCA.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L174)
 
 ***
 
@@ -604,51 +350,10 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Only used to validate feature names with the names seen in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 #### Returns
 
@@ -656,7 +361,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L213)
+[generated/cross\_decomposition/CCA.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L213)
 
 ***
 
@@ -670,51 +375,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -722,7 +386,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L247)
+[generated/cross\_decomposition/CCA.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L247)
 
 ***
 
@@ -736,28 +400,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -765,7 +410,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L78)
+[generated/cross\_decomposition/CCA.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L78)
 
 ***
 
@@ -777,85 +422,12 @@ Transform data back to its original space.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-New data, where `n_samples` is the number of samples and `n_components` is the number of pls components.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | New data, where `n_samples` is the number of samples and `n_components` is the number of pls components. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | New target, where `n_samples` is the number of samples and `n_components` is the number of pls components. |
+| `opts.Y`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | New target, where `n_samples` is the number of samples and `n_components` is the number of pls components. |
 
 #### Returns
 
@@ -863,7 +435,7 @@ New target, where `n_samples` is the number of samples and `n_components` is the
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L279)
+[generated/cross\_decomposition/CCA.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L279)
 
 ***
 
@@ -875,68 +447,11 @@ Predict targets of given samples.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to copy `X` and `Y`, or perform in-place normalization.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.copy`? | `boolean` | Whether to copy `X` and `Y`, or perform in-place normalization. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Samples. |
 
 #### Returns
 
@@ -944,7 +459,7 @@ Samples.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L321)
+[generated/cross\_decomposition/CCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L321)
 
 ***
 
@@ -958,85 +473,12 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-True values for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
@@ -1044,7 +486,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L362)
+[generated/cross\_decomposition/CCA.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L362)
 
 ***
 
@@ -1058,51 +500,10 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
@@ -1110,7 +511,7 @@ Configure output of `transform` and `fit_transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L406)
+[generated/cross\_decomposition/CCA.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L406)
 
 ***
 
@@ -1126,51 +527,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `copy` parameter in `predict`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.copy`? | `string` \| `boolean` | Metadata routing for `copy` parameter in `predict`. |
 
 #### Returns
 
@@ -1178,7 +538,7 @@ Metadata routing for `copy` parameter in `predict`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L442)
+[generated/cross\_decomposition/CCA.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L442)
 
 ***
 
@@ -1194,51 +554,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 #### Returns
 
@@ -1246,7 +565,7 @@ Metadata routing for `sample_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L478)
+[generated/cross\_decomposition/CCA.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L478)
 
 ***
 
@@ -1262,51 +581,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `copy` parameter in `transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.copy`? | `string` \| `boolean` | Metadata routing for `copy` parameter in `transform`. |
 
 #### Returns
 
@@ -1314,7 +592,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L514)
+[generated/cross\_decomposition/CCA.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L514)
 
 ***
 
@@ -1326,102 +604,13 @@ Apply the dimension reduction.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to copy `X` and `Y`, or perform in-place normalization.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Samples to transform.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Target vectors.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Target vectors.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.copy`? | `boolean` | Whether to copy `X` and `Y`, or perform in-place normalization. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Samples to transform. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Target vectors. |
+| `opts.Y`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Target vectors. |
 
 #### Returns
 
@@ -1429,4 +618,4 @@ Target vectors.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L546)
+[generated/cross\_decomposition/CCA.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L546)

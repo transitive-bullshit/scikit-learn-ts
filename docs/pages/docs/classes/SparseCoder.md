@@ -16,184 +16,31 @@ Each row of the result is the solution to a sparse coding problem. The goal is t
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.dictionary`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-The dictionary atoms used for sparse coding. Lines are assumed to be normalized to unit norm.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.positive_code`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to enforce positivity when finding the code.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.split_sign`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_algorithm`?
-
-</td>
-<td>
-
-`"threshold"` \| `"lars"` \| `"lasso_lars"` \| `"lasso_cd"` \| `"omp"`
-
-</td>
-<td>
-
-Algorithm used to transform the data:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_alpha`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-If `algorithm='lasso_lars'` or `algorithm='lasso_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `algorithm='omp'`, `alpha` is the tolerance parameter: the value of the reconstruction error targeted. In this case, it overrides `n_nonzero_coefs`. If `undefined`, default to 1.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations to perform if `algorithm='lasso_cd'` or `lasso_lars`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_n_nonzero_coefs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'` and is overridden by `alpha` in the `omp` case. If `undefined`, then `transform_n_nonzero_coefs=int(n_features / 10)`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.dictionary`? | `ArrayLike`[] | The dictionary atoms used for sparse coding. Lines are assumed to be normalized to unit norm. |
+| `opts.n_jobs`? | `number` | Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.positive_code`? | `boolean` | Whether to enforce positivity when finding the code. |
+| `opts.split_sign`? | `boolean` | Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers. |
+| `opts.transform_algorithm`? | `"threshold"` \| `"lars"` \| `"lasso_lars"` \| `"lasso_cd"` \| `"omp"` | Algorithm used to transform the data: |
+| `opts.transform_alpha`? | `number` | If `algorithm='lasso_lars'` or `algorithm='lasso_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `algorithm='omp'`, `alpha` is the tolerance parameter: the value of the reconstruction error targeted. In this case, it overrides `n_nonzero_coefs`. If `undefined`, default to 1. |
+| `opts.transform_max_iter`? | `number` | Maximum number of iterations to perform if `algorithm='lasso_cd'` or `lasso_lars`. |
+| `opts.transform_n_nonzero_coefs`? | `number` | Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'` and is overridden by `alpha` in the `omp` case. If `undefined`, then `transform_n_nonzero_coefs=int(n_features / 10)`. |
 
 **Returns** [`SparseCoder`](SparseCoder.md)
 
-**Defined in** [generated/decomposition/SparseCoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L25)
+**Defined in** [generated/decomposition/SparseCoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/decomposition/SparseCoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/decomposition/SparseCoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/SparseCoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L21) |
-| `id` | `string` | `undefined` | [generated/decomposition/SparseCoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/decomposition/SparseCoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/decomposition/SparseCoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/decomposition/SparseCoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/SparseCoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L21) |
+| `id` | `string` | `undefined` | [generated/decomposition/SparseCoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/decomposition/SparseCoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L19) |
 
 ## Accessors
 
@@ -207,7 +54,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L380)
+**Defined in** [generated/decomposition/SparseCoder.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L380)
 
 ***
 
@@ -225,32 +72,13 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/decomposition/SparseCoder.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L83)
+**Defined in** [generated/decomposition/SparseCoder.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L83)
 
 ## Methods
 
@@ -264,7 +92,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L135)
+**Defined in** [generated/decomposition/SparseCoder.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L135)
 
 ***
 
@@ -278,72 +106,15 @@ This method is just there to implement the usual API and hence work in pipelines
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | Not used, present for API consistency by convention. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L154)
+**Defined in** [generated/decomposition/SparseCoder.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L154)
 
 ***
 
@@ -357,89 +128,16 @@ Fits transformer to `X` and `y` with optional parameters `fit_params` and return
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Additional fit parameters.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Input samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Target values (`undefined` for unsupervised transformations).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | `ArrayLike`[] | Input samples. |
+| `opts.y`? | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 **Returns** `Promise`\<`any`[]\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L193)
+**Defined in** [generated/decomposition/SparseCoder.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L193)
 
 ***
 
@@ -453,55 +151,14 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Only used to validate feature names with the names seen in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L237)
+**Defined in** [generated/decomposition/SparseCoder.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L237)
 
 ***
 
@@ -515,55 +172,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L273)
+**Defined in** [generated/decomposition/SparseCoder.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L273)
 
 ***
 
@@ -577,32 +193,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L96)
+**Defined in** [generated/decomposition/SparseCoder.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L96)
 
 ***
 
@@ -616,55 +213,14 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L309)
+**Defined in** [generated/decomposition/SparseCoder.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L309)
 
 ***
 
@@ -678,69 +234,12 @@ Coding method is determined by the object parameter `transform_algorithm`.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/SparseCoder.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L343)
+**Defined in** [generated/decomposition/SparseCoder.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L343)

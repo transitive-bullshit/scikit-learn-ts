@@ -20,51 +20,10 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.p`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Size of the test sets. Must be strictly less than the number of samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.p`? | `number` | Size of the test sets. Must be strictly less than the number of samples. |
 
 #### Returns
 
@@ -72,17 +31,17 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L29)
+[generated/model\_selection/LeavePOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L29)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/model\_selection/LeavePOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L27) |
-| `_isInitialized` | `boolean` | `false` | [generated/model\_selection/LeavePOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L26) |
-| `_py` | `PythonBridge` | `undefined` | [generated/model\_selection/LeavePOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L25) |
-| `id` | `string` | `undefined` | [generated/model\_selection/LeavePOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L22) |
-| `opts` | `any` | `undefined` | [generated/model\_selection/LeavePOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L23) |
+| `_isDisposed` | `boolean` | `false` | [generated/model\_selection/LeavePOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/model\_selection/LeavePOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/model\_selection/LeavePOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L25) |
+| `id` | `string` | `undefined` | [generated/model\_selection/LeavePOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/model\_selection/LeavePOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L23) |
 
 ## Accessors
 
@@ -102,28 +61,9 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -131,7 +71,7 @@ Size of the test sets. Must be strictly less than the number of samples.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L39)
+[generated/model\_selection/LeavePOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L39)
 
 ## Methods
 
@@ -149,7 +89,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L89)
+[generated/model\_selection/LeavePOut.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L89)
 
 ***
 
@@ -163,51 +103,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -215,7 +114,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L108)
+[generated/model\_selection/LeavePOut.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L108)
 
 ***
 
@@ -227,85 +126,12 @@ Returns the number of splitting iterations in the cross-validator.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.groups`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Always ignored, exists for compatibility.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Always ignored, exists for compatibility.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.groups`? | `any` | Always ignored, exists for compatibility. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Training data, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
@@ -313,7 +139,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L142)
+[generated/model\_selection/LeavePOut.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L142)
 
 ***
 
@@ -327,28 +153,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -356,7 +163,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L52)
+[generated/model\_selection/LeavePOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L52)
 
 ***
 
@@ -368,85 +175,12 @@ Generate indices to split data into training and test set.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.groups`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Always ignored, exists for compatibility.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The target variable for supervised learning problems.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.groups`? | `any` | Always ignored, exists for compatibility. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Training data, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The target variable for supervised learning problems. |
 
 #### Returns
 
@@ -454,4 +188,4 @@ The target variable for supervised learning problems.
 
 #### Defined in
 
-[generated/model\_selection/LeavePOut.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L184)
+[generated/model\_selection/LeavePOut.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L184)

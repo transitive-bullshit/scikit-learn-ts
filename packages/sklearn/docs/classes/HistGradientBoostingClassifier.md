@@ -20,401 +20,30 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.categorical_features`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Indicates the categorical features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.class_weight`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`. Note that these weights will be multiplied with sample_weight (passed through the fit method) if `sample_weight` is specified.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.early_stopping`?
-
-</td>
-<td>
-
-`boolean` \| `"auto"`
-
-</td>
-<td>
-
-If ‘auto’, early stopping is enabled if the sample size is larger than 10000. If `true`, early stopping is enabled, otherwise early stopping is disabled.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.interaction_cst`?
-
-</td>
-<td>
-
-`"pairwise"` \| `"no_interactions"`
-
-</td>
-<td>
-
-Specify interaction constraints, the sets of features which can interact with each other in child node splits.
-
-Each item specifies the set of feature indices that are allowed to interact with each other. If there are more features than specified in these constraints, they are treated as if they were specified as an additional set.
-
-The strings “pairwise” and “no_interactions” are shorthands for allowing only pairwise or no interactions, respectively.
-
-For instance, with 5 features in total, `interaction_cst=\[{0, 1}\]` is equivalent to `interaction_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.l2_regularization`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The L2 regularization parameter penalizing leaves with small hessians. Use `0` for no regularization (default).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.learning_rate`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The learning rate, also known as *shrinkage*. This is used as a multiplicative factor for the leaves values. Use `1` for no shrinkage.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.loss`?
-
-</td>
-<td>
-
-`"log_loss"`
-
-</td>
-<td>
-
-The loss function to use in the boosting process.
-
-For binary classification problems, ‘log_loss’ is also known as logistic loss, binomial deviance or binary crossentropy. Internally, the model fits one tree per boosting iteration and uses the logistic sigmoid function (expit) as inverse link function to compute the predicted positive class probability.
-
-For multiclass classification problems, ‘log_loss’ is also known as multinomial deviance or categorical crossentropy. Internally, the model fits one tree per boosting iteration and per class and uses the softmax function as inverse link function to compute the predicted probabilities of the classes.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_bins`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max_bins` bins. In addition to the `max_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_depth`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum depth of each tree. The depth of a tree is the number of edges to go from the root to the deepest leaf. Depth isn’t constrained by default.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_features`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Proportion of randomly chosen features in each and every node split. This is a form of regularization, smaller values make the trees weaker learners and might prevent overfitting. If interaction constraints from `interaction_cst` are present, only allowed features are taken into account for the subsampling.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of iterations of the boosting process, i.e. the maximum number of trees for binary classification. For multiclass classification, `n_classes` trees per iteration are built.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_leaf_nodes`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of leaves for each tree. Must be strictly greater than 1. If `undefined`, there is no maximum limit.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.min_samples_leaf`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The minimum number of samples per leaf. For small datasets with less than a few hundred samples, it is recommended to lower this value since only very shallow trees would be built.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.monotonic_cst`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Monotonic constraint to enforce on each feature are specified using the following integer values:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_iter_no_change`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Used to determine when to “early stop”. The fitting process is stopped when none of the last `n_iter_no_change` scores are better than the `n_iter_no_change \- 1` -th-to-last one, up to some tolerance. Only used if early stopping is performed.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.scoring`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)). If `undefined`, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The absolute tolerance to use when comparing scores. The higher the tolerance, the more likely we are to early stop: higher tolerance means that it will be harder for subsequent iterations to be considered an improvement upon the reference score.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.validation_fraction`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Proportion (or absolute size) of training data to set aside as validation data for early stopping. If `undefined`, early stopping is done on the training data. Only used if early stopping is performed.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The verbosity level. If not zero, print some information about the fitting process.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.warm_start`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.categorical_features`? | `number` | Indicates the categorical features. |
+| `opts.class_weight`? | `any` | Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`. Note that these weights will be multiplied with sample_weight (passed through the fit method) if `sample_weight` is specified. |
+| `opts.early_stopping`? | `boolean` \| `"auto"` | If ‘auto’, early stopping is enabled if the sample size is larger than 10000. If `true`, early stopping is enabled, otherwise early stopping is disabled. |
+| `opts.interaction_cst`? | `"pairwise"` \| `"no_interactions"` | Specify interaction constraints, the sets of features which can interact with each other in child node splits. Each item specifies the set of feature indices that are allowed to interact with each other. If there are more features than specified in these constraints, they are treated as if they were specified as an additional set. The strings “pairwise” and “no_interactions” are shorthands for allowing only pairwise or no interactions, respectively. For instance, with 5 features in total, `interaction_cst=\[{0, 1}\]` is equivalent to `interaction_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4. |
+| `opts.l2_regularization`? | `number` | The L2 regularization parameter penalizing leaves with small hessians. Use `0` for no regularization (default). |
+| `opts.learning_rate`? | `number` | The learning rate, also known as *shrinkage*. This is used as a multiplicative factor for the leaves values. Use `1` for no shrinkage. |
+| `opts.loss`? | `"log_loss"` | The loss function to use in the boosting process. For binary classification problems, ‘log_loss’ is also known as logistic loss, binomial deviance or binary crossentropy. Internally, the model fits one tree per boosting iteration and uses the logistic sigmoid function (expit) as inverse link function to compute the predicted positive class probability. For multiclass classification problems, ‘log_loss’ is also known as multinomial deviance or categorical crossentropy. Internally, the model fits one tree per boosting iteration and per class and uses the softmax function as inverse link function to compute the predicted probabilities of the classes. |
+| `opts.max_bins`? | `number` | The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max_bins` bins. In addition to the `max_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255. |
+| `opts.max_depth`? | `number` | The maximum depth of each tree. The depth of a tree is the number of edges to go from the root to the deepest leaf. Depth isn’t constrained by default. |
+| `opts.max_features`? | `number` | Proportion of randomly chosen features in each and every node split. This is a form of regularization, smaller values make the trees weaker learners and might prevent overfitting. If interaction constraints from `interaction_cst` are present, only allowed features are taken into account for the subsampling. |
+| `opts.max_iter`? | `number` | The maximum number of iterations of the boosting process, i.e. the maximum number of trees for binary classification. For multiclass classification, `n_classes` trees per iteration are built. |
+| `opts.max_leaf_nodes`? | `number` | The maximum number of leaves for each tree. Must be strictly greater than 1. If `undefined`, there is no maximum limit. |
+| `opts.min_samples_leaf`? | `number` | The minimum number of samples per leaf. For small datasets with less than a few hundred samples, it is recommended to lower this value since only very shallow trees would be built. |
+| `opts.monotonic_cst`? | `any` | Monotonic constraint to enforce on each feature are specified using the following integer values: |
+| `opts.n_iter_no_change`? | `number` | Used to determine when to “early stop”. The fitting process is stopped when none of the last `n_iter_no_change` scores are better than the `n_iter_no_change \- 1` -th-to-last one, up to some tolerance. Only used if early stopping is performed. |
+| `opts.random_state`? | `number` | Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.scoring`? | `string` | Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)). If `undefined`, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed. |
+| `opts.tol`? | `number` | The absolute tolerance to use when comparing scores. The higher the tolerance, the more likely we are to early stop: higher tolerance means that it will be harder for subsequent iterations to be considered an improvement upon the reference score. |
+| `opts.validation_fraction`? | `number` | Proportion (or absolute size) of training data to set aside as validation data for early stopping. If `undefined`, early stopping is done on the training data. Only used if early stopping is performed. |
+| `opts.verbose`? | `number` | The verbosity level. If not zero, print some information about the fitting process. |
+| `opts.warm_start`? | `boolean` | When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start). |
 
 #### Returns
 
@@ -422,17 +51,17 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L29)
+[generated/ensemble/HistGradientBoostingClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L29)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/ensemble/HistGradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L27) |
-| `_isInitialized` | `boolean` | `false` | [generated/ensemble/HistGradientBoostingClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L26) |
-| `_py` | `PythonBridge` | `undefined` | [generated/ensemble/HistGradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L25) |
-| `id` | `string` | `undefined` | [generated/ensemble/HistGradientBoostingClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L22) |
-| `opts` | `any` | `undefined` | [generated/ensemble/HistGradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L23) |
+| `_isDisposed` | `boolean` | `false` | [generated/ensemble/HistGradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/ensemble/HistGradientBoostingClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/ensemble/HistGradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L25) |
+| `id` | `string` | `undefined` | [generated/ensemble/HistGradientBoostingClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/ensemble/HistGradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L23) |
 
 ## Accessors
 
@@ -450,7 +79,7 @@ Class labels.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L686)
+[generated/ensemble/HistGradientBoostingClassifier.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L686)
 
 ***
 
@@ -468,7 +97,7 @@ Indicates whether early stopping is used during training.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L713)
+[generated/ensemble/HistGradientBoostingClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L713)
 
 ***
 
@@ -486,7 +115,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:875](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L875)
+[generated/ensemble/HistGradientBoostingClassifier.ts:875](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L875)
 
 ***
 
@@ -504,7 +133,7 @@ Boolean mask for the categorical features. `undefined` if there are no categoric
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L821)
+[generated/ensemble/HistGradientBoostingClassifier.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L821)
 
 ***
 
@@ -522,7 +151,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:848](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L848)
+[generated/ensemble/HistGradientBoostingClassifier.ts:848](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L848)
 
 ***
 
@@ -540,7 +169,7 @@ The number of tree that are built at each iteration. This is equal to 1 for bina
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L740)
+[generated/ensemble/HistGradientBoostingClassifier.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L740)
 
 ***
 
@@ -560,28 +189,9 @@ The number of tree that are built at each iteration. This is equal to 1 for bina
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -589,7 +199,7 @@ The number of tree that are built at each iteration. This is equal to 1 for bina
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L179)
+[generated/ensemble/HistGradientBoostingClassifier.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L179)
 
 ***
 
@@ -607,7 +217,7 @@ The scores at each iteration on the training data. The first entry is the score 
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L767)
+[generated/ensemble/HistGradientBoostingClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L767)
 
 ***
 
@@ -625,7 +235,7 @@ The scores at each iteration on the held-out validation data. The first entry is
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L794)
+[generated/ensemble/HistGradientBoostingClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L794)
 
 ## Methods
 
@@ -637,51 +247,10 @@ Compute the decision function of `X`.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The input samples. |
 
 #### Returns
 
@@ -689,7 +258,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L252)
+[generated/ensemble/HistGradientBoostingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L252)
 
 ***
 
@@ -707,7 +276,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L235)
+[generated/ensemble/HistGradientBoostingClassifier.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L235)
 
 ***
 
@@ -719,85 +288,12 @@ Fit the gradient boosting model.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Weights of training data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `any` | Weights of training data. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values. |
 
 #### Returns
 
@@ -805,7 +301,7 @@ Target values.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L288)
+[generated/ensemble/HistGradientBoostingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L288)
 
 ***
 
@@ -819,51 +315,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -871,7 +326,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L336)
+[generated/ensemble/HistGradientBoostingClassifier.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L336)
 
 ***
 
@@ -885,28 +340,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -914,7 +350,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L192)
+[generated/ensemble/HistGradientBoostingClassifier.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L192)
 
 ***
 
@@ -926,51 +362,10 @@ Predict classes for X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The input samples. |
 
 #### Returns
 
@@ -978,7 +373,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L372)
+[generated/ensemble/HistGradientBoostingClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L372)
 
 ***
 
@@ -990,51 +385,10 @@ Predict class probabilities for X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The input samples. |
 
 #### Returns
 
@@ -1042,7 +396,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L408)
+[generated/ensemble/HistGradientBoostingClassifier.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L408)
 
 ***
 
@@ -1056,85 +410,12 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Test samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-True labels for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Test samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | True labels for `X`. |
 
 #### Returns
 
@@ -1142,7 +423,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L446)
+[generated/ensemble/HistGradientBoostingClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L446)
 
 ***
 
@@ -1158,51 +439,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `fit`. |
 
 #### Returns
 
@@ -1210,7 +450,7 @@ Metadata routing for `sample_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L496)
+[generated/ensemble/HistGradientBoostingClassifier.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L496)
 
 ***
 
@@ -1226,51 +466,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 #### Returns
 
@@ -1278,7 +477,7 @@ Metadata routing for `sample_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L536)
+[generated/ensemble/HistGradientBoostingClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L536)
 
 ***
 
@@ -1292,51 +491,10 @@ This method allows monitoring (i.e. determine error on testing set) after each s
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
@@ -1344,7 +502,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L574)
+[generated/ensemble/HistGradientBoostingClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L574)
 
 ***
 
@@ -1358,51 +516,10 @@ This method allows monitoring (i.e. determine error on testing set) after each s
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
@@ -1410,7 +527,7 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L612)
+[generated/ensemble/HistGradientBoostingClassifier.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L612)
 
 ***
 
@@ -1424,51 +541,10 @@ This method allows monitoring (i.e. determine error on testing set) after each s
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
@@ -1476,4 +552,4 @@ The input samples.
 
 #### Defined in
 
-[generated/ensemble/HistGradientBoostingClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L650)
+[generated/ensemble/HistGradientBoostingClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L650)

@@ -12,119 +12,14 @@ A kernel hyperparameter’s specification in form of a namedtuple.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.bounds`?
-
-</td>
-<td>
-
-`"fixed"`
-
-</td>
-<td>
-
-The lower and upper bound on the parameter. If n_elements>1, a pair of 1d array with n_elements each may be given alternatively. If the string “fixed” is passed as bounds, the hyperparameter’s value cannot be changed.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fixed`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether the value of this hyperparameter is fixed, i.e., cannot be changed during hyperparameter tuning. If `undefined` is passed, the “fixed” is derived based on the given bounds.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_elements`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of elements of the hyperparameter value. Defaults to 1, which corresponds to a scalar hyperparameter. n_elements > 1 corresponds to a hyperparameter which is vector-valued, such as, e.g., anisotropic length-scales.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.name`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The name of the hyperparameter. Note that a kernel using a hyperparameter with name “x” must have the attributes self.x and self.x_bounds
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.value_type`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The type of the hyperparameter. Currently, only “numeric” hyperparameters are supported.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.bounds`? | `"fixed"` | The lower and upper bound on the parameter. If n_elements>1, a pair of 1d array with n_elements each may be given alternatively. If the string “fixed” is passed as bounds, the hyperparameter’s value cannot be changed. |
+| `opts.fixed`? | `boolean` | Whether the value of this hyperparameter is fixed, i.e., cannot be changed during hyperparameter tuning. If `undefined` is passed, the “fixed” is derived based on the given bounds. |
+| `opts.n_elements`? | `number` | The number of elements of the hyperparameter value. Defaults to 1, which corresponds to a scalar hyperparameter. n_elements > 1 corresponds to a hyperparameter which is vector-valued, such as, e.g., anisotropic length-scales. |
+| `opts.name`? | `string` | The name of the hyperparameter. Note that a kernel using a hyperparameter with name “x” must have the attributes self.x and self.x_bounds |
+| `opts.value_type`? | `string` | The type of the hyperparameter. Currently, only “numeric” hyperparameters are supported. |
 
 #### Returns
 
@@ -132,17 +27,17 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L21)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L21)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/kernels/Hyperparameter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L19) |
-| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/kernels/Hyperparameter.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L18) |
-| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/kernels/Hyperparameter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L17) |
-| `id` | `string` | `undefined` | [generated/gaussian\_process/kernels/Hyperparameter.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L14) |
-| `opts` | `any` | `undefined` | [generated/gaussian\_process/kernels/Hyperparameter.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L15) |
+| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/kernels/Hyperparameter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L19) |
+| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/kernels/Hyperparameter.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L18) |
+| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/kernels/Hyperparameter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L17) |
+| `id` | `string` | `undefined` | [generated/gaussian\_process/kernels/Hyperparameter.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L14) |
+| `opts` | `any` | `undefined` | [generated/gaussian\_process/kernels/Hyperparameter.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L15) |
 
 ## Accessors
 
@@ -162,28 +57,9 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -191,7 +67,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L53)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L53)
 
 ## Methods
 
@@ -203,28 +79,9 @@ Return number of occurrences of value.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -232,7 +89,7 @@ Return number of occurrences of value.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L122)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L122)
 
 ***
 
@@ -250,7 +107,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L105)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L105)
 
 ***
 
@@ -264,28 +121,9 @@ Raises ValueError if the value is not present.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -293,7 +131,7 @@ Raises ValueError if the value is not present.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L150)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L150)
 
 ***
 
@@ -307,28 +145,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -336,4 +155,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L66)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L66)

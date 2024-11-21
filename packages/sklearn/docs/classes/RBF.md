@@ -14,68 +14,11 @@ The RBF kernel is a stationary kernel. It is also known as the “squared expone
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.length_scale`?
-
-</td>
-<td>
-
-`number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The length scale of the kernel. If a float, an isotropic kernel is used. If an array, an anisotropic kernel is used where each dimension of l defines the length-scale of the respective feature dimension.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.length_scale_bounds`?
-
-</td>
-<td>
-
-`"fixed"`
-
-</td>
-<td>
-
-The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘length_scale’ cannot be changed during hyperparameter tuning.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.length_scale`? | `number` \| [`ArrayLike`](../type-aliases/ArrayLike.md) | The length scale of the kernel. If a float, an isotropic kernel is used. If an array, an anisotropic kernel is used where each dimension of l defines the length-scale of the respective feature dimension. |
+| `opts.length_scale_bounds`? | `"fixed"` | The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘length_scale’ cannot be changed during hyperparameter tuning. |
 
 #### Returns
 
@@ -83,17 +26,17 @@ The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘lengt
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L23)
+[generated/gaussian\_process/kernels/RBF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/kernels/RBF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/kernels/RBF.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/kernels/RBF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L19) |
-| `id` | `string` | `undefined` | [generated/gaussian\_process/kernels/RBF.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/gaussian\_process/kernels/RBF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/kernels/RBF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/kernels/RBF.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/kernels/RBF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L19) |
+| `id` | `string` | `undefined` | [generated/gaussian\_process/kernels/RBF.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/gaussian\_process/kernels/RBF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L17) |
 
 ## Accessors
 
@@ -113,28 +56,9 @@ The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘lengt
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -142,7 +66,7 @@ The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘lengt
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L40)
+[generated/gaussian\_process/kernels/RBF.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L40)
 
 ## Methods
 
@@ -154,85 +78,12 @@ Return the kernel k(X, Y) and optionally its gradient.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.eval_gradient`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Left argument of the returned kernel k(X, Y)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.eval_gradient`? | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
 
 #### Returns
 
@@ -240,7 +91,7 @@ Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evalua
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L108)
+[generated/gaussian\_process/kernels/RBF.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L108)
 
 ***
 
@@ -252,51 +103,10 @@ Returns a clone of self with given hyperparameters theta.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.theta`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The hyperparameters
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.theta`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The hyperparameters |
 
 #### Returns
 
@@ -304,7 +114,7 @@ The hyperparameters
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L152)
+[generated/gaussian\_process/kernels/RBF.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L152)
 
 ***
 
@@ -318,51 +128,10 @@ The result of this method is identical to np.diag(self(X)); however, it can be e
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Left argument of the returned kernel k(X, Y)
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
 
 #### Returns
 
@@ -370,7 +139,7 @@ Left argument of the returned kernel k(X, Y)
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L186)
+[generated/gaussian\_process/kernels/RBF.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L186)
 
 ***
 
@@ -388,7 +157,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L91)
+[generated/gaussian\_process/kernels/RBF.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L91)
 
 ***
 
@@ -402,28 +171,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -431,7 +181,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L53)
+[generated/gaussian\_process/kernels/RBF.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L53)
 
 ***
 
@@ -443,28 +193,9 @@ Returns whether the kernel is stationary.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -472,4 +203,4 @@ Returns whether the kernel is stationary.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/RBF.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L217)
+[generated/gaussian\_process/kernels/RBF.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L217)

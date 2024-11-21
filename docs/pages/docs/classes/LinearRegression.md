@@ -14,116 +14,27 @@ LinearRegression fits a linear model with coefficients w = (w1, …, wp) to mini
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy_X`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, X will be copied; else, it may be overwritten.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_intercept`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to calculate the intercept for this model. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.positive`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-When set to `true`, forces the coefficients to be positive. This option is only supported for dense arrays.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.copy_X`? | `boolean` | If `true`, X will be copied; else, it may be overwritten. |
+| `opts.fit_intercept`? | `boolean` | Whether to calculate the intercept for this model. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered). |
+| `opts.n_jobs`? | `number` | The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.positive`? | `boolean` | When set to `true`, forces the coefficients to be positive. This option is only supported for dense arrays. |
 
 **Returns** [`LinearRegression`](LinearRegression.md)
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L23)
+**Defined in** [generated/linear\_model/LinearRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/LinearRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/LinearRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/LinearRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L19) |
-| `id` | `string` | `undefined` | [generated/linear\_model/LinearRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/linear\_model/LinearRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/LinearRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/LinearRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/LinearRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L19) |
+| `id` | `string` | `undefined` | [generated/linear\_model/LinearRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/linear\_model/LinearRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L17) |
 
 ## Accessors
 
@@ -137,7 +48,7 @@ Estimated coefficients for the linear regression problem. If multiple targets ar
 
 **Returns** `Promise`\<`any`[]\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L367)
+**Defined in** [generated/linear\_model/LinearRegression.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L367)
 
 ***
 
@@ -151,7 +62,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L502)
+**Defined in** [generated/linear\_model/LinearRegression.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L502)
 
 ***
 
@@ -165,7 +76,7 @@ Independent term in the linear model. Set to 0.0 if `fit_intercept \= False`.
 
 **Returns** `Promise`\<`number` \| `any`[]\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L448)
+**Defined in** [generated/linear\_model/LinearRegression.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L448)
 
 ***
 
@@ -179,7 +90,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L475)
+**Defined in** [generated/linear\_model/LinearRegression.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L475)
 
 ***
 
@@ -197,32 +108,13 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L54)
+**Defined in** [generated/linear\_model/LinearRegression.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L54)
 
 ***
 
@@ -236,7 +128,7 @@ Rank of matrix `X`. Only available when `X` is dense.
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L394)
+**Defined in** [generated/linear\_model/LinearRegression.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L394)
 
 ***
 
@@ -250,7 +142,7 @@ Singular values of `X`. Only available when `X` is dense.
 
 **Returns** `Promise`\<`any`[]\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L421)
+**Defined in** [generated/linear\_model/LinearRegression.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L421)
 
 ## Methods
 
@@ -264,7 +156,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L108)
+**Defined in** [generated/linear\_model/LinearRegression.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L108)
 
 ***
 
@@ -276,89 +168,16 @@ Fit linear model.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Individual weights for each sample.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Target values. Will be cast to X’s dtype if necessary.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Individual weights for each sample. |
+| `opts.X`? | `ArrayLike` | Training data. |
+| `opts.y`? | `ArrayLike` | Target values. Will be cast to X’s dtype if necessary. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L125)
+**Defined in** [generated/linear\_model/LinearRegression.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L125)
 
 ***
 
@@ -372,55 +191,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L171)
+**Defined in** [generated/linear\_model/LinearRegression.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L171)
 
 ***
 
@@ -434,32 +212,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L67)
+**Defined in** [generated/linear\_model/LinearRegression.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L67)
 
 ***
 
@@ -471,55 +230,14 @@ Predict using the linear model.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | Samples. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L207)
+**Defined in** [generated/linear\_model/LinearRegression.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L207)
 
 ***
 
@@ -533,89 +251,16 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-True values for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Sample weights. |
+| `opts.X`? | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.y`? | `ArrayLike` | True values for `X`. |
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L243)
+**Defined in** [generated/linear\_model/LinearRegression.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L243)
 
 ***
 
@@ -631,55 +276,14 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `fit`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L291)
+**Defined in** [generated/linear\_model/LinearRegression.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L291)
 
 ***
 
@@ -695,52 +299,11 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/LinearRegression.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L331)
+**Defined in** [generated/linear\_model/LinearRegression.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L331)

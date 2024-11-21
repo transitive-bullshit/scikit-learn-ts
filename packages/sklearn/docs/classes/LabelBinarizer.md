@@ -20,85 +20,12 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.neg_label`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Value with which negative labels must be encoded.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.pos_label`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Value with which positive labels must be encoded.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sparse_output`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-True if the returned array from transform is desired to be in sparse CSR format.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.neg_label`? | `number` | Value with which negative labels must be encoded. |
+| `opts.pos_label`? | `number` | Value with which positive labels must be encoded. |
+| `opts.sparse_output`? | `boolean` | True if the returned array from transform is desired to be in sparse CSR format. |
 
 #### Returns
 
@@ -106,17 +33,17 @@ True if the returned array from transform is desired to be in sparse CSR format.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L29)
+[generated/preprocessing/LabelBinarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L29)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/preprocessing/LabelBinarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L27) |
-| `_isInitialized` | `boolean` | `false` | [generated/preprocessing/LabelBinarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L26) |
-| `_py` | `PythonBridge` | `undefined` | [generated/preprocessing/LabelBinarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L25) |
-| `id` | `string` | `undefined` | [generated/preprocessing/LabelBinarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L22) |
-| `opts` | `any` | `undefined` | [generated/preprocessing/LabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L23) |
+| `_isDisposed` | `boolean` | `false` | [generated/preprocessing/LabelBinarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/preprocessing/LabelBinarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/preprocessing/LabelBinarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L25) |
+| `id` | `string` | `undefined` | [generated/preprocessing/LabelBinarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/preprocessing/LabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L23) |
 
 ## Accessors
 
@@ -134,7 +61,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L375)
+[generated/preprocessing/LabelBinarizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L375)
 
 ***
 
@@ -154,28 +81,9 @@ Holds the label for each class.
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -183,7 +91,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L55)
+[generated/preprocessing/LabelBinarizer.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L55)
 
 ***
 
@@ -201,7 +109,7 @@ Holds the label for each class.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L425)
+[generated/preprocessing/LabelBinarizer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L425)
 
 ***
 
@@ -219,7 +127,7 @@ Represents the type of the target data as evaluated by [`type_of_target`](https:
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L400)
+[generated/preprocessing/LabelBinarizer.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L400)
 
 ## Methods
 
@@ -237,7 +145,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L107)
+[generated/preprocessing/LabelBinarizer.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L107)
 
 ***
 
@@ -249,51 +157,10 @@ Fit label binarizer.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. |
 
 #### Returns
 
@@ -301,7 +168,7 @@ Target values. The 2-d matrix should only contain 0 and 1, represents multilabel
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L124)
+[generated/preprocessing/LabelBinarizer.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L124)
 
 ***
 
@@ -315,51 +182,10 @@ The output of transform is sometimes referred to as the 1-of-K coding scheme.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.y`? | `any` | Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL. |
 
 #### Returns
 
@@ -367,7 +193,7 @@ Target values. The 2-d matrix should only contain 0 and 1, represents multilabel
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L158)
+[generated/preprocessing/LabelBinarizer.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L158)
 
 ***
 
@@ -381,51 +207,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -433,7 +218,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L192)
+[generated/preprocessing/LabelBinarizer.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L192)
 
 ***
 
@@ -447,28 +232,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -476,7 +242,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L68)
+[generated/preprocessing/LabelBinarizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L68)
 
 ***
 
@@ -488,72 +254,11 @@ Transform binary labels back to multi-class labels.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.threshold`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Threshold used in the binary and multi-label cases.
-
-Use 0 when `Y` contains the output of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) (classifier). Use 0.5 when `Y` contains the output of [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba).
-
-If `undefined`, the threshold is assumed to be half way between neg_label and pos_label.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values. All sparse matrices are converted to CSR before inverse transformation.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.threshold`? | `number` | Threshold used in the binary and multi-label cases. Use 0 when `Y` contains the output of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) (classifier). Use 0.5 when `Y` contains the output of [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba). If `undefined`, the threshold is assumed to be half way between neg_label and pos_label. |
+| `opts.Y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values. All sparse matrices are converted to CSR before inverse transformation. |
 
 #### Returns
 
@@ -561,7 +266,7 @@ Target values. All sparse matrices are converted to CSR before inverse transform
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L226)
+[generated/preprocessing/LabelBinarizer.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L226)
 
 ***
 
@@ -577,51 +282,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.threshold`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `threshold` parameter in `inverse_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.threshold`? | `string` \| `boolean` | Metadata routing for `threshold` parameter in `inverse_transform`. |
 
 #### Returns
 
@@ -629,7 +293,7 @@ Metadata routing for `threshold` parameter in `inverse_transform`.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L273)
+[generated/preprocessing/LabelBinarizer.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L273)
 
 ***
 
@@ -643,51 +307,10 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
@@ -695,7 +318,7 @@ Configure output of `transform` and `fit_transform`.
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L309)
+[generated/preprocessing/LabelBinarizer.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L309)
 
 ***
 
@@ -709,51 +332,10 @@ The output of transform is sometimes referred to by some authors as the 1-of-K c
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.y`? | `any` | Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL. |
 
 #### Returns
 
@@ -761,4 +343,4 @@ Target values. The 2-d matrix should only contain 0 and 1, represents multilabel
 
 #### Defined in
 
-[generated/preprocessing/LabelBinarizer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L343)
+[generated/preprocessing/LabelBinarizer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L343)

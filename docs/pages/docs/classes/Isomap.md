@@ -16,262 +16,35 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.eigen_solver`?
-
-</td>
-<td>
-
-`"auto"` \| `"arpack"` \| `"dense"`
-
-</td>
-<td>
-
-‘auto’ : Attempt to choose the most efficient solver for the given problem.
-
-‘arpack’ : Use Arnoldi decomposition to find the eigenvalues and eigenvectors.
-
-‘dense’ : Use a direct solver (i.e. LAPACK) for the eigenvalue decomposition.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations for the arpack solver. not used if eigen_solver == ‘dense’.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.metric`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise_distances`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sparse-graph).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.metric_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Additional keyword arguments for the metric function.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_components`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of coordinates for the manifold.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_neighbors`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of neighbors to consider for each point. If `n_neighbors` is an int, then `radius` must be `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.neighbors_algorithm`?
-
-</td>
-<td>
-
-`"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"`
-
-</td>
-<td>
-
-Algorithm to use for nearest neighbors search, passed to neighbors.NearestNeighbors instance.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.p`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.path_method`?
-
-</td>
-<td>
-
-`"auto"` \| `"FW"` \| `"D"`
-
-</td>
-<td>
-
-Method to use in finding shortest path.
-
-‘auto’ : attempt to choose the best algorithm automatically.
-
-‘FW’ : Floyd-Warshall algorithm.
-
-‘D’ : Dijkstra’s algorithm.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.radius`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Limiting distance of neighbors to return. If `radius` is a float, then `n_neighbors` must be set to `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Convergence tolerance passed to arpack or lobpcg. not used if eigen_solver == ‘dense’.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.eigen_solver`? | `"auto"` \| `"arpack"` \| `"dense"` | ‘auto’ : Attempt to choose the most efficient solver for the given problem. ‘arpack’ : Use Arnoldi decomposition to find the eigenvalues and eigenvectors. ‘dense’ : Use a direct solver (i.e. LAPACK) for the eigenvalue decomposition. |
+| `opts.max_iter`? | `number` | Maximum number of iterations for the arpack solver. not used if eigen_solver == ‘dense’. |
+| `opts.metric`? | `any` | The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise_distances`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sparse-graph). |
+| `opts.metric_params`? | `any` | Additional keyword arguments for the metric function. |
+| `opts.n_components`? | `number` | Number of coordinates for the manifold. |
+| `opts.n_jobs`? | `number` | The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.n_neighbors`? | `number` | Number of neighbors to consider for each point. If `n_neighbors` is an int, then `radius` must be `undefined`. |
+| `opts.neighbors_algorithm`? | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm to use for nearest neighbors search, passed to neighbors.NearestNeighbors instance. |
+| `opts.p`? | `number` | Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used. |
+| `opts.path_method`? | `"auto"` \| `"FW"` \| `"D"` | Method to use in finding shortest path. ‘auto’ : attempt to choose the best algorithm automatically. ‘FW’ : Floyd-Warshall algorithm. ‘D’ : Dijkstra’s algorithm. |
+| `opts.radius`? | `number` | Limiting distance of neighbors to return. If `radius` is a float, then `n_neighbors` must be set to `undefined`. |
+| `opts.tol`? | `number` | Convergence tolerance passed to arpack or lobpcg. not used if eigen_solver == ‘dense’. |
 
 **Returns** [`Isomap`](Isomap.md)
 
-**Defined in** [generated/manifold/Isomap.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L25)
+**Defined in** [generated/manifold/Isomap.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/manifold/Isomap.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/manifold/Isomap.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/manifold/Isomap.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L21) |
-| `id` | `string` | `undefined` | [generated/manifold/Isomap.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/manifold/Isomap.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/manifold/Isomap.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/manifold/Isomap.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/manifold/Isomap.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L21) |
+| `id` | `string` | `undefined` | [generated/manifold/Isomap.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/manifold/Isomap.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L19) |
 
 ## Accessors
 
@@ -285,7 +58,7 @@ Stores the geodesic distance matrix of training data.
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/manifold/Isomap.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L493)
+**Defined in** [generated/manifold/Isomap.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L493)
 
 ***
 
@@ -299,7 +72,7 @@ Stores the embedding vectors.
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/manifold/Isomap.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L425)
+**Defined in** [generated/manifold/Isomap.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L425)
 
 ***
 
@@ -313,7 +86,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/manifold/Isomap.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L539)
+**Defined in** [generated/manifold/Isomap.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L539)
 
 ***
 
@@ -327,7 +100,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/manifold/Isomap.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L448)
+**Defined in** [generated/manifold/Isomap.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L448)
 
 ***
 
@@ -341,7 +114,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/manifold/Isomap.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L516)
+**Defined in** [generated/manifold/Isomap.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L516)
 
 ***
 
@@ -355,7 +128,7 @@ Stores nearest neighbors instance, including BallTree or KDtree if applicable.
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/manifold/Isomap.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L471)
+**Defined in** [generated/manifold/Isomap.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L471)
 
 ***
 
@@ -373,32 +146,13 @@ Stores nearest neighbors instance, including BallTree or KDtree if applicable.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/manifold/Isomap.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L116)
+**Defined in** [generated/manifold/Isomap.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L116)
 
 ## Methods
 
@@ -412,7 +166,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/manifold/Isomap.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L167)
+**Defined in** [generated/manifold/Isomap.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L167)
 
 ***
 
@@ -424,72 +178,15 @@ Compute the embedding vectors for data X.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Sample data, shape = (n_samples, n_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | Sample data, shape = (n_samples, n_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/manifold/Isomap.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L184)
+**Defined in** [generated/manifold/Isomap.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L184)
 
 ***
 
@@ -501,72 +198,15 @@ Fit the model from data in X and transform X.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/manifold/Isomap.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L221)
+**Defined in** [generated/manifold/Isomap.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L221)
 
 ***
 
@@ -580,55 +220,14 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Only used to validate feature names with the names seen in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/manifold/Isomap.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L260)
+**Defined in** [generated/manifold/Isomap.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L260)
 
 ***
 
@@ -642,55 +241,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/manifold/Isomap.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L294)
+**Defined in** [generated/manifold/Isomap.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L294)
 
 ***
 
@@ -704,32 +262,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/manifold/Isomap.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L129)
+**Defined in** [generated/manifold/Isomap.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L129)
 
 ***
 
@@ -741,55 +280,14 @@ Compute the reconstruction error for the embedding.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.reconstruction_error`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Reconstruction error.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.reconstruction_error`? | `number` | Reconstruction error. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/manifold/Isomap.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L326)
+**Defined in** [generated/manifold/Isomap.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L326)
 
 ***
 
@@ -803,55 +301,14 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/manifold/Isomap.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L360)
+**Defined in** [generated/manifold/Isomap.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L360)
 
 ***
 
@@ -865,52 +322,11 @@ This is implemented by linking the points X into the graph of geodesic distances
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-If neighbors_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n_queries, n_samples_fit).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | If neighbors_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n_queries, n_samples_fit). |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/manifold/Isomap.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/manifold/Isomap.ts#L394)
+**Defined in** [generated/manifold/Isomap.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/manifold/Isomap.ts#L394)

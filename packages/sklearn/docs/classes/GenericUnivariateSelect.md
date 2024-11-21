@@ -14,85 +14,12 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.mode`?
-
-</td>
-<td>
-
-`"percentile"` \| `"k_best"` \| `"fpr"` \| `"fdr"` \| `"fwe"`
-
-</td>
-<td>
-
-Feature selection mode. Note that the `'percentile'` and `'kbest'` modes are supporting unsupervised feature selection (when `y` is `undefined`).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.param`?
-
-</td>
-<td>
-
-`number` \| `"all"`
-
-</td>
-<td>
-
-Parameter of the corresponding mode.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.score_func`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). For modes ‘percentile’ or ‘kbest’ it can return a single array scores.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.mode`? | `"percentile"` \| `"k_best"` \| `"fpr"` \| `"fdr"` \| `"fwe"` | Feature selection mode. Note that the `'percentile'` and `'kbest'` modes are supporting unsupervised feature selection (when `y` is `undefined`). |
+| `opts.param`? | `number` \| `"all"` | Parameter of the corresponding mode. |
+| `opts.score_func`? | `any` | Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). For modes ‘percentile’ or ‘kbest’ it can return a single array scores. |
 
 #### Returns
 
@@ -100,17 +27,17 @@ Function taking two arrays X and y, and returning a pair of arrays (scores, pval
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L23)
+[generated/feature\_selection/GenericUnivariateSelect.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/feature\_selection/GenericUnivariateSelect.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/feature\_selection/GenericUnivariateSelect.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/feature\_selection/GenericUnivariateSelect.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L19) |
-| `id` | `string` | `undefined` | [generated/feature\_selection/GenericUnivariateSelect.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/feature\_selection/GenericUnivariateSelect.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/feature\_selection/GenericUnivariateSelect.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/feature\_selection/GenericUnivariateSelect.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/feature\_selection/GenericUnivariateSelect.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L19) |
+| `id` | `string` | `undefined` | [generated/feature\_selection/GenericUnivariateSelect.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/feature\_selection/GenericUnivariateSelect.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L17) |
 
 ## Accessors
 
@@ -128,7 +55,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L510)
+[generated/feature\_selection/GenericUnivariateSelect.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L510)
 
 ***
 
@@ -146,7 +73,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L483)
+[generated/feature\_selection/GenericUnivariateSelect.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L483)
 
 ***
 
@@ -164,7 +91,7 @@ p-values of feature scores, `undefined` if `score_func` returned scores only.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L456)
+[generated/feature\_selection/GenericUnivariateSelect.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L456)
 
 ***
 
@@ -184,28 +111,9 @@ p-values of feature scores, `undefined` if `score_func` returned scores only.
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -213,7 +121,7 @@ p-values of feature scores, `undefined` if `score_func` returned scores only.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L47)
+[generated/feature\_selection/GenericUnivariateSelect.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L47)
 
 ***
 
@@ -231,7 +139,7 @@ Scores of features.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L429)
+[generated/feature\_selection/GenericUnivariateSelect.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L429)
 
 ## Methods
 
@@ -249,7 +157,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L103)
+[generated/feature\_selection/GenericUnivariateSelect.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L103)
 
 ***
 
@@ -261,68 +169,11 @@ Run score function on (X, y) and get the appropriate features.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The training input samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The training input samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`. |
 
 #### Returns
 
@@ -330,7 +181,7 @@ The target values (class labels in classification, real numbers in regression). 
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L120)
+[generated/feature\_selection/GenericUnivariateSelect.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L120)
 
 ***
 
@@ -344,85 +195,12 @@ Fits transformer to `X` and `y` with optional parameters `fit_params` and return
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Additional fit parameters.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Input samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values (`undefined` for unsupervised transformations).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Input samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
@@ -430,7 +208,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L161)
+[generated/feature\_selection/GenericUnivariateSelect.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L161)
 
 ***
 
@@ -442,51 +220,10 @@ Mask feature names according to selected features.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Input features.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Input features. |
 
 #### Returns
 
@@ -494,7 +231,7 @@ Input features.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L207)
+[generated/feature\_selection/GenericUnivariateSelect.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L207)
 
 ***
 
@@ -508,51 +245,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -560,7 +256,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L245)
+[generated/feature\_selection/GenericUnivariateSelect.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L245)
 
 ***
 
@@ -572,51 +268,10 @@ Get a mask, or integer index, of the features selected.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.indices`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.indices`? | `boolean` | If `true`, the return value will be an array of integers, rather than a boolean mask. |
 
 #### Returns
 
@@ -624,7 +279,7 @@ If `true`, the return value will be an array of integers, rather than a boolean 
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L281)
+[generated/feature\_selection/GenericUnivariateSelect.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L281)
 
 ***
 
@@ -638,28 +293,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -667,7 +303,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L60)
+[generated/feature\_selection/GenericUnivariateSelect.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L60)
 
 ***
 
@@ -679,51 +315,10 @@ Reverse the transformation operation.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | The input samples. |
 
 #### Returns
 
@@ -731,7 +326,7 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L319)
+[generated/feature\_selection/GenericUnivariateSelect.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L319)
 
 ***
 
@@ -745,51 +340,10 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
@@ -797,7 +351,7 @@ Configure output of `transform` and `fit_transform`.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L357)
+[generated/feature\_selection/GenericUnivariateSelect.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L357)
 
 ***
 
@@ -809,51 +363,10 @@ Reduce X to the selected features.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | The input samples. |
 
 #### Returns
 
@@ -861,4 +374,4 @@ The input samples.
 
 #### Defined in
 
-[generated/feature\_selection/GenericUnivariateSelect.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L393)
+[generated/feature\_selection/GenericUnivariateSelect.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L393)

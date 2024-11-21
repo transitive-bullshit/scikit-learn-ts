@@ -14,68 +14,11 @@ Although a list of sets or tuples is a very intuitive format for multilabel data
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.classes`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Indicates an ordering for the class labels. All entries should be unique (cannot contain duplicate classes).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sparse_output`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Set to `true` if output binary array is desired in CSR sparse format.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.classes`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Indicates an ordering for the class labels. All entries should be unique (cannot contain duplicate classes). |
+| `opts.sparse_output`? | `boolean` | Set to `true` if output binary array is desired in CSR sparse format. |
 
 #### Returns
 
@@ -83,17 +26,17 @@ Set to `true` if output binary array is desired in CSR sparse format.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
+[generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19) |
-| `id` | `string` | `undefined` | [generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19) |
+| `id` | `string` | `undefined` | [generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17) |
 
 ## Accessors
 
@@ -111,7 +54,7 @@ A copy of the `classes` parameter when provided. Otherwise it corresponds to the
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L329)
+[generated/preprocessing/MultiLabelBinarizer.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L329)
 
 ***
 
@@ -131,28 +74,9 @@ A copy of the `classes` parameter when provided. Otherwise it corresponds to the
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -160,7 +84,7 @@ A copy of the `classes` parameter when provided. Otherwise it corresponds to the
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40)
+[generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40)
 
 ## Methods
 
@@ -178,7 +102,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L96)
+[generated/preprocessing/MultiLabelBinarizer.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L96)
 
 ***
 
@@ -190,51 +114,10 @@ Fit the label sets binarizer, storing [classes_](https://scikit-learn.org/stable
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.y`? | `any` | A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated. |
 
 #### Returns
 
@@ -242,7 +125,7 @@ A set of labels (any orderable and hashable object) for each sample. If the `cla
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L113)
+[generated/preprocessing/MultiLabelBinarizer.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L113)
 
 ***
 
@@ -254,51 +137,10 @@ Fit the label sets binarizer and transform the given label sets.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.y`? | `any` | A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated. |
 
 #### Returns
 
@@ -306,7 +148,7 @@ A set of labels (any orderable and hashable object) for each sample. If the `cla
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L147)
+[generated/preprocessing/MultiLabelBinarizer.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L147)
 
 ***
 
@@ -320,51 +162,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -372,7 +173,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L185)
+[generated/preprocessing/MultiLabelBinarizer.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L185)
 
 ***
 
@@ -386,28 +187,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -415,7 +197,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L53)
+[generated/preprocessing/MultiLabelBinarizer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L53)
 
 ***
 
@@ -427,51 +209,10 @@ Transform the given indicator matrix into label sets.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.yt`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-A matrix containing only 1s ands 0s.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.yt`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | A matrix containing only 1s ands 0s. |
 
 #### Returns
 
@@ -479,7 +220,7 @@ A matrix containing only 1s ands 0s.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L221)
+[generated/preprocessing/MultiLabelBinarizer.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L221)
 
 ***
 
@@ -493,51 +234,10 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
@@ -545,7 +245,7 @@ Configure output of `transform` and `fit_transform`.
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L259)
+[generated/preprocessing/MultiLabelBinarizer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L259)
 
 ***
 
@@ -557,51 +257,10 @@ Transform the given label sets.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.y`? | `any` | A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated. |
 
 #### Returns
 
@@ -609,4 +268,4 @@ A set of labels (any orderable and hashable object) for each sample. If the `cla
 
 #### Defined in
 
-[generated/preprocessing/MultiLabelBinarizer.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L295)
+[generated/preprocessing/MultiLabelBinarizer.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L295)

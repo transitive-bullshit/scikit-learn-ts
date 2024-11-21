@@ -14,65 +14,24 @@ This class is used by router objects to store and handle metadata routing. Routi
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.owner`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The name of the object to which these requests belong.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.owner`? | `string` | The name of the object to which these requests belong. |
 
 **Returns** [`MetadataRouter`](MetadataRouter.md)
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L23)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRouter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRouter.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/utils/metadata\_routing/MetadataRouter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L19) |
-| `id` | `string` | `undefined` | [generated/utils/metadata\_routing/MetadataRouter.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/utils/metadata\_routing/MetadataRouter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRouter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRouter.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/utils/metadata\_routing/MetadataRouter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L19) |
+| `id` | `string` | `undefined` | [generated/utils/metadata\_routing/MetadataRouter.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/utils/metadata\_routing/MetadataRouter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L17) |
 
 ## Accessors
 
@@ -90,32 +49,13 @@ The name of the object to which these requests belong.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L33)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L33)
 
 ## Methods
 
@@ -127,72 +67,15 @@ Add named objects with their corresponding method mapping.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.method_mapping`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The mapping between the child and the parent’s methods.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.objs`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A dictionary of objects from which metadata is extracted by calling [`get_routing_for_object`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.get_routing_for_object.html#sklearn.utils.metadata_routing.get_routing_for_object "sklearn.utils.metadata_routing.get_routing_for_object") on them.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.method_mapping`? | `any` | The mapping between the child and the parent’s methods. |
+| `opts.objs`? | `any` | A dictionary of objects from which metadata is extracted by calling [`get_routing_for_object`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.get_routing_for_object.html#sklearn.utils.metadata_routing.get_routing_for_object "sklearn.utils.metadata_routing.get_routing_for_object") on them. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L102)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L102)
 
 ***
 
@@ -208,55 +91,14 @@ A router should add itself using this method instead of `add` since it should be
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.obj`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-This is typically the router instance, i.e. `self` in a `get_metadata_routing()` implementation. It can also be a `MetadataRequest` instance.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.obj`? | `any` | This is typically the router instance, i.e. `self` in a `get_metadata_routing()` implementation. It can also be a `MetadataRequest` instance. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L143)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L143)
 
 ***
 
@@ -268,72 +110,15 @@ Check whether the given parameters are consumed by the given method.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.method`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The name of the method to check.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-An iterable of parameters to check.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.method`? | `string` | The name of the method to check. |
+| `opts.params`? | `any` | An iterable of parameters to check. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L177)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L177)
 
 ***
 
@@ -347,7 +132,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L85)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L85)
 
 ***
 
@@ -361,32 +146,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L46)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L46)
 
 ***
 
@@ -402,72 +168,15 @@ If the router is also a consumer, it also checks for warnings of `self`’s/cons
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.caller`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The name of the method for which the parameters are requested and routed. If called inside the [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) method of a router, it would be `"fit"`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A dictionary of provided metadata.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.caller`? | `string` | The name of the method for which the parameters are requested and routed. If called inside the [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) method of a router, it would be `"fit"`. |
+| `opts.params`? | `any` | A dictionary of provided metadata. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L218)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L218)
 
 ***
 
@@ -481,69 +190,12 @@ This raises a `TypeError` if some of the passed metadata are not understood by c
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.method`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The name of the method for which the parameters are requested and routed. If called inside the [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) method of a router, it would be `"fit"`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A dictionary of provided metadata.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.method`? | `string` | The name of the method for which the parameters are requested and routed. If called inside the [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) method of a router, it would be `"fit"`. |
+| `opts.params`? | `any` | A dictionary of provided metadata. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L257)
+**Defined in** [generated/utils/metadata\_routing/MetadataRouter.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRouter.ts#L257)

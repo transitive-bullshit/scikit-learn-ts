@@ -16,82 +16,25 @@ Iterating through an instance of this class yields `MethodPair(caller, callee)` 
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.callee`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Child object’s method name. This method is called in `caller`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.caller`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Parent estimator’s method name in which the `callee` is called.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.callee`? | `string` | Child object’s method name. This method is called in `caller`. |
+| `opts.caller`? | `string` | Parent estimator’s method name in which the `callee` is called. |
 
 **Returns** [`MethodMapping`](MethodMapping.md)
 
-**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L25)
+**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/utils/metadata\_routing/MethodMapping.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/utils/metadata\_routing/MethodMapping.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/utils/metadata\_routing/MethodMapping.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L21) |
-| `id` | `string` | `undefined` | [generated/utils/metadata\_routing/MethodMapping.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/utils/metadata\_routing/MethodMapping.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/utils/metadata\_routing/MethodMapping.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/utils/metadata\_routing/MethodMapping.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/utils/metadata\_routing/MethodMapping.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L21) |
+| `id` | `string` | `undefined` | [generated/utils/metadata\_routing/MethodMapping.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/utils/metadata\_routing/MethodMapping.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L19) |
 
 ## Accessors
 
@@ -109,32 +52,13 @@ Parent estimator’s method name in which the `callee` is called.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L40)
+**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L40)
 
 ***
 
@@ -148,7 +72,7 @@ Returns self.
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L146)
+**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L146)
 
 ## Methods
 
@@ -160,72 +84,15 @@ Add a method mapping.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.callee`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Child object’s method name. This method is called in `caller`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.caller`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Parent estimator’s method name in which the `callee` is called.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.callee`? | `string` | Child object’s method name. This method is called in `caller`. |
+| `opts.caller`? | `string` | Parent estimator’s method name in which the `callee` is called. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L109)
+**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L109)
 
 ***
 
@@ -239,7 +106,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L92)
+**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L92)
 
 ***
 
@@ -253,29 +120,10 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L53)
+**Defined in** [generated/utils/metadata\_routing/MethodMapping.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MethodMapping.ts#L53)

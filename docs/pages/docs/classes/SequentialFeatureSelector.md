@@ -16,175 +16,30 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.cv`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Determines the cross-validation splitting strategy. Possible inputs for cv are:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.direction`?
-
-</td>
-<td>
-
-`"forward"` \| `"backward"`
-
-</td>
-<td>
-
-Whether to perform forward selection or backward selection.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.estimator`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-An unfitted estimator.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_features_to_select`?
-
-</td>
-<td>
-
-`number` \| `"auto"`
-
-</td>
-<td>
-
-If `"auto"`, the behaviour depends on the `tol` parameter:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.scoring`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-A single str (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)) to evaluate the predictions on the test set.
-
-NOTE that when using a custom scorer, it should return a single value.
-
-If `undefined`, the estimator’s score method is used.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-If the score is not incremented by at least `tol` between two consecutive feature additions or removals, stop adding or removing.
-
-`tol` can be negative when removing features using `direction="backward"`. `tol` is required to be strictly positive when doing forward selection. It can be useful to reduce the number of features at the cost of a small decrease in the score.
-
-`tol` is enabled only when `n_features_to_select` is `"auto"`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.cv`? | `number` | Determines the cross-validation splitting strategy. Possible inputs for cv are: |
+| `opts.direction`? | `"forward"` \| `"backward"` | Whether to perform forward selection or backward selection. |
+| `opts.estimator`? | `any` | An unfitted estimator. |
+| `opts.n_features_to_select`? | `number` \| `"auto"` | If `"auto"`, the behaviour depends on the `tol` parameter: |
+| `opts.n_jobs`? | `number` | Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.scoring`? | `string` | A single str (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)) to evaluate the predictions on the test set. NOTE that when using a custom scorer, it should return a single value. If `undefined`, the estimator’s score method is used. |
+| `opts.tol`? | `number` | If the score is not incremented by at least `tol` between two consecutive feature additions or removals, stop adding or removing. `tol` can be negative when removing features using `direction="backward"`. `tol` is required to be strictly positive when doing forward selection. It can be useful to reduce the number of features at the cost of a small decrease in the score. `tol` is enabled only when `n_features_to_select` is `"auto"`. |
 
 **Returns** [`SequentialFeatureSelector`](SequentialFeatureSelector.md)
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L25)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/feature\_selection/SequentialFeatureSelector.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/feature\_selection/SequentialFeatureSelector.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/feature\_selection/SequentialFeatureSelector.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L21) |
-| `id` | `string` | `undefined` | [generated/feature\_selection/SequentialFeatureSelector.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/feature\_selection/SequentialFeatureSelector.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/feature\_selection/SequentialFeatureSelector.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/feature\_selection/SequentialFeatureSelector.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/feature\_selection/SequentialFeatureSelector.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L21) |
+| `id` | `string` | `undefined` | [generated/feature\_selection/SequentialFeatureSelector.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/feature\_selection/SequentialFeatureSelector.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L19) |
 
 ## Accessors
 
@@ -198,7 +53,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L480)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L480)
 
 ***
 
@@ -212,7 +67,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L453)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L453)
 
 ***
 
@@ -226,7 +81,7 @@ The number of features that were selected.
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L507)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L507)
 
 ***
 
@@ -244,32 +99,13 @@ The number of features that were selected.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L77)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L77)
 
 ***
 
@@ -283,7 +119,7 @@ The mask of selected features.
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L534)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L534)
 
 ## Methods
 
@@ -297,7 +133,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L133)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L133)
 
 ***
 
@@ -309,72 +145,15 @@ Learn the features to select from X.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Target values. This parameter may be ignored for unsupervised learning.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors. |
+| `opts.y`? | `ArrayLike` | Target values. This parameter may be ignored for unsupervised learning. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L150)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L150)
 
 ***
 
@@ -388,89 +167,16 @@ Fits transformer to `X` and `y` with optional parameters `fit_params` and return
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Additional fit parameters.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Input samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Target values (`undefined` for unsupervised transformations).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | `ArrayLike`[] | Input samples. |
+| `opts.y`? | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 **Returns** `Promise`\<`any`[]\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L191)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L191)
 
 ***
 
@@ -482,55 +188,14 @@ Mask feature names according to selected features.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Input features.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Input features. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L237)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L237)
 
 ***
 
@@ -544,32 +209,13 @@ This estimator does not support metadata routing yet.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L275)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L275)
 
 ***
 
@@ -581,55 +227,14 @@ Get a mask, or integer index, of the features selected.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.indices`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.indices`? | `boolean` | If `true`, the return value will be an array of integers, rather than a boolean mask. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L305)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L305)
 
 ***
 
@@ -643,32 +248,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L90)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L90)
 
 ***
 
@@ -680,55 +266,14 @@ Reverse the transformation operation.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | The input samples. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L343)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L343)
 
 ***
 
@@ -742,55 +287,14 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L381)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L381)
 
 ***
 
@@ -802,52 +306,11 @@ Reduce X to the selected features.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | The input samples. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L417)
+**Defined in** [generated/feature\_selection/SequentialFeatureSelector.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L417)

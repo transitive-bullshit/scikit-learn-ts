@@ -16,203 +16,32 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.alpha`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.class_weight`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one.
-
-The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy_X`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, X will be copied; else, it may be overwritten.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_intercept`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (e.g. data is expected to be already centered).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations for conjugate gradient solver. The default value is determined by scipy.sparse.linalg.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.positive`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.solver`?
-
-</td>
-<td>
-
-`"auto"` \| `"svd"` \| `"lsqr"` \| `"lbfgs"` \| `"sag"` \| `"saga"` \| `"cholesky"` \| `"sparse_cg"`
-
-</td>
-<td>
-
-Solver to use in the computational routines:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The precision of the solution (`coef_`) is determined by `tol` which specifies a different convergence criterion for each solver:
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.alpha`? | `number` | Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). |
+| `opts.class_weight`? | `any` | Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`. |
+| `opts.copy_X`? | `boolean` | If `true`, X will be copied; else, it may be overwritten. |
+| `opts.fit_intercept`? | `boolean` | Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (e.g. data is expected to be already centered). |
+| `opts.max_iter`? | `number` | Maximum number of iterations for conjugate gradient solver. The default value is determined by scipy.sparse.linalg. |
+| `opts.positive`? | `boolean` | When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case. |
+| `opts.random_state`? | `number` | Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details. |
+| `opts.solver`? | `"auto"` \| `"svd"` \| `"lsqr"` \| `"lbfgs"` \| `"sag"` \| `"saga"` \| `"cholesky"` \| `"sparse_cg"` | Solver to use in the computational routines: |
+| `opts.tol`? | `number` | The precision of the solution (`coef_`) is determined by `tol` which specifies a different convergence criterion for each solver: |
 
 **Returns** [`RidgeClassifier`](RidgeClassifier.md)
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L25)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/RidgeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/RidgeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/RidgeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L21) |
-| `id` | `string` | `undefined` | [generated/linear\_model/RidgeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/linear\_model/RidgeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/RidgeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/RidgeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/RidgeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L21) |
+| `id` | `string` | `undefined` | [generated/linear\_model/RidgeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/linear\_model/RidgeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L19) |
 
 ## Accessors
 
@@ -228,7 +57,7 @@ Coefficient of the features in the decision function.
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L434)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L434)
 
 ***
 
@@ -242,7 +71,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L532)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L532)
 
 ***
 
@@ -256,7 +85,7 @@ Independent term in decision function. Set to 0.0 if `fit_intercept \= False`.
 
 **Returns** `Promise`\<`number` \| `ArrayLike`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L457)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L457)
 
 ***
 
@@ -270,7 +99,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L507)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L507)
 
 ***
 
@@ -284,7 +113,7 @@ Actual number of iterations for each target. Available only for sag and lsqr sol
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L482)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L482)
 
 ***
 
@@ -302,32 +131,13 @@ Actual number of iterations for each target. Available only for sag and lsqr sol
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L97)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L97)
 
 ***
 
@@ -341,7 +151,7 @@ The solver that was used at fit time by the computational routines.
 
 **Returns** `Promise`\<`string`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L557)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L557)
 
 ## Methods
 
@@ -355,55 +165,14 @@ The confidence score for a sample is proportional to the signed distance of that
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-The data matrix for which we want to get the confidence scores.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | The data matrix for which we want to get the confidence scores. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L168)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L168)
 
 ***
 
@@ -417,7 +186,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L149)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L149)
 
 ***
 
@@ -429,89 +198,16 @@ Fit Ridge classifier model.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`number` \| `ArrayLike`
-
-</td>
-<td>
-
-Individual weights for each sample. If given a float, every sample will have the same weight.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Target values.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `number` \| `ArrayLike` | Individual weights for each sample. If given a float, every sample will have the same weight. |
+| `opts.X`? | `ArrayLike` | Training data. |
+| `opts.y`? | `ArrayLike` | Target values. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L202)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L202)
 
 ***
 
@@ -525,55 +221,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L246)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L246)
 
 ***
 
@@ -587,32 +242,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L110)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L110)
 
 ***
 
@@ -624,55 +260,14 @@ Predict class labels for samples in `X`.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-The data matrix for which we want to predict the targets.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | The data matrix for which we want to predict the targets. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L280)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L280)
 
 ***
 
@@ -686,89 +281,16 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Test samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-True labels for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Sample weights. |
+| `opts.X`? | `ArrayLike`[] | Test samples. |
+| `opts.y`? | `ArrayLike` | True labels for `X`. |
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L314)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L314)
 
 ***
 
@@ -784,55 +306,14 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `fit`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L360)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L360)
 
 ***
 
@@ -848,52 +329,11 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/RidgeClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L398)
+**Defined in** [generated/linear\_model/RidgeClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L398)

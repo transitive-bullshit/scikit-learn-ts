@@ -14,308 +14,25 @@ The implementation is based on [\[1\]](https://scikit-learn.org/stable/modules/g
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.batch_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of documents to use in each EM iteration. Only used in online learning.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.doc_topic_prior`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Prior of document topic distribution `theta`. If the value is `undefined`, defaults to `1 / n_components`. In [\[1\]](https://scikit-learn.org/stable/modules/generated/#re25e5648fc37-1), this is called `alpha`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.evaluate_every`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-How often to evaluate perplexity. Only used in `fit` method. set it to 0 or negative number to not evaluate perplexity in training at all. Evaluating perplexity can help you check convergence in training process, but it will also increase total training time. Evaluating perplexity in every iteration might increase training time up to two-fold.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.learning_decay`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-It is a parameter that control learning rate in the online learning method. The value should be set between (0.5, 1.0\] to guarantee asymptotic convergence. When the value is 0.0 and batch_size is `n_samples`, the update method is same as batch learning. In the literature, this is called kappa.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.learning_method`?
-
-</td>
-<td>
-
-`"batch"` \| `"online"`
-
-</td>
-<td>
-
-Method used to update `_component`. Only used in [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method. In general, if the data size is large, the online update will be much faster than the batch update.
-
-Valid options:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.learning_offset`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-A (positive) parameter that downweights early iterations in online learning. It should be greater than 1.0. In the literature, this is called tau_0.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_doc_update_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Max number of iterations for updating document topic distribution in the E-step.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method, and not the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.mean_change_tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Stopping tolerance for updating document topic distribution in E-step.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_components`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of topics.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.perp_tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Perplexity tolerance. Only used when `evaluate_every` is greater than 0.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.topic_word_prior`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Prior of topic word distribution `beta`. If the value is `undefined`, defaults to `1 / n_components`. In [\[1\]](https://scikit-learn.org/stable/modules/generated/#re25e5648fc37-1), this is called `eta`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.total_samples`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Total number of documents. Only used in the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Verbosity level.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.batch_size`? | `number` | Number of documents to use in each EM iteration. Only used in online learning. |
+| `opts.doc_topic_prior`? | `number` | Prior of document topic distribution `theta`. If the value is `undefined`, defaults to `1 / n_components`. In [\[1\]](https://scikit-learn.org/stable/modules/generated/#re25e5648fc37-1), this is called `alpha`. |
+| `opts.evaluate_every`? | `number` | How often to evaluate perplexity. Only used in `fit` method. set it to 0 or negative number to not evaluate perplexity in training at all. Evaluating perplexity can help you check convergence in training process, but it will also increase total training time. Evaluating perplexity in every iteration might increase training time up to two-fold. |
+| `opts.learning_decay`? | `number` | It is a parameter that control learning rate in the online learning method. The value should be set between (0.5, 1.0\] to guarantee asymptotic convergence. When the value is 0.0 and batch_size is `n_samples`, the update method is same as batch learning. In the literature, this is called kappa. |
+| `opts.learning_method`? | `"batch"` \| `"online"` | Method used to update `_component`. Only used in [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method. In general, if the data size is large, the online update will be much faster than the batch update. Valid options: |
+| `opts.learning_offset`? | `number` | A (positive) parameter that downweights early iterations in online learning. It should be greater than 1.0. In the literature, this is called tau_0. |
+| `opts.max_doc_update_iter`? | `number` | Max number of iterations for updating document topic distribution in the E-step. |
+| `opts.max_iter`? | `number` | The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method, and not the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method. |
+| `opts.mean_change_tol`? | `number` | Stopping tolerance for updating document topic distribution in E-step. |
+| `opts.n_components`? | `number` | Number of topics. |
+| `opts.n_jobs`? | `number` | The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.perp_tol`? | `number` | Perplexity tolerance. Only used when `evaluate_every` is greater than 0. |
+| `opts.random_state`? | `number` | Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.topic_word_prior`? | `number` | Prior of topic word distribution `beta`. If the value is `undefined`, defaults to `1 / n_components`. In [\[1\]](https://scikit-learn.org/stable/modules/generated/#re25e5648fc37-1), this is called `eta`. |
+| `opts.total_samples`? | `number` | Total number of documents. Only used in the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method. |
+| `opts.verbose`? | `number` | Verbosity level. |
 
 #### Returns
 
@@ -323,17 +40,17 @@ Verbosity level.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L23)
+[generated/decomposition/LatentDirichletAllocation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/decomposition/LatentDirichletAllocation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/decomposition/LatentDirichletAllocation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/LatentDirichletAllocation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L19) |
-| `id` | `string` | `undefined` | [generated/decomposition/LatentDirichletAllocation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/decomposition/LatentDirichletAllocation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/decomposition/LatentDirichletAllocation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/decomposition/LatentDirichletAllocation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/LatentDirichletAllocation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L19) |
+| `id` | `string` | `undefined` | [generated/decomposition/LatentDirichletAllocation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/decomposition/LatentDirichletAllocation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L17) |
 
 ## Accessors
 
@@ -351,7 +68,7 @@ Final perplexity score on training set.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L733)
+[generated/decomposition/LatentDirichletAllocation.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L733)
 
 ***
 
@@ -369,7 +86,7 @@ Variational parameters for topic word distribution. Since the complete condition
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L571)
+[generated/decomposition/LatentDirichletAllocation.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L571)
 
 ***
 
@@ -387,7 +104,7 @@ Prior of document topic distribution `theta`. If the value is `undefined`, it is
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L760)
+[generated/decomposition/LatentDirichletAllocation.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L760)
 
 ***
 
@@ -405,7 +122,7 @@ Exponential value of expectation of log topic word distribution. In the literatu
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L598)
+[generated/decomposition/LatentDirichletAllocation.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L598)
 
 ***
 
@@ -423,7 +140,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L679)
+[generated/decomposition/LatentDirichletAllocation.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L679)
 
 ***
 
@@ -441,7 +158,7 @@ Number of iterations of the EM step.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L625)
+[generated/decomposition/LatentDirichletAllocation.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L625)
 
 ***
 
@@ -459,7 +176,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L652)
+[generated/decomposition/LatentDirichletAllocation.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L652)
 
 ***
 
@@ -477,7 +194,7 @@ Number of passes over the dataset.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L706)
+[generated/decomposition/LatentDirichletAllocation.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L706)
 
 ***
 
@@ -497,28 +214,9 @@ Number of passes over the dataset.
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -526,7 +224,7 @@ Number of passes over the dataset.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L134)
+[generated/decomposition/LatentDirichletAllocation.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L134)
 
 ***
 
@@ -544,7 +242,7 @@ RandomState instance that is generated either from a seed, the random number gen
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L787)
+[generated/decomposition/LatentDirichletAllocation.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L787)
 
 ***
 
@@ -562,7 +260,7 @@ Prior of topic word distribution `beta`. If the value is `undefined`, it is `1 /
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L814)
+[generated/decomposition/LatentDirichletAllocation.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L814)
 
 ## Methods
 
@@ -580,7 +278,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L190)
+[generated/decomposition/LatentDirichletAllocation.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L190)
 
 ***
 
@@ -594,68 +292,11 @@ When `learning_method` is ‘online’, use mini-batch update. Otherwise, use ba
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Document word matrix.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Document word matrix. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
@@ -663,7 +304,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L209)
+[generated/decomposition/LatentDirichletAllocation.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L209)
 
 ***
 
@@ -677,85 +318,12 @@ Fits transformer to `X` and `y` with optional parameters `fit_params` and return
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Additional fit parameters.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Input samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values (`undefined` for unsupervised transformations).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Input samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
@@ -763,7 +331,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L250)
+[generated/decomposition/LatentDirichletAllocation.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L250)
 
 ***
 
@@ -777,51 +345,10 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Only used to validate feature names with the names seen in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 #### Returns
 
@@ -829,7 +356,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L298)
+[generated/decomposition/LatentDirichletAllocation.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L298)
 
 ***
 
@@ -843,51 +370,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -895,7 +381,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L336)
+[generated/decomposition/LatentDirichletAllocation.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L336)
 
 ***
 
@@ -909,28 +395,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -938,7 +405,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L147)
+[generated/decomposition/LatentDirichletAllocation.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L147)
 
 ***
 
@@ -950,68 +417,11 @@ Online VB with Mini-Batch update.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Document word matrix.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Document word matrix. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
@@ -1019,7 +429,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L372)
+[generated/decomposition/LatentDirichletAllocation.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L372)
 
 ***
 
@@ -1033,68 +443,11 @@ Perplexity is defined as exp(-1. \* log-likelihood per word)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sub_sampling`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Do sub-sampling or not.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Document word matrix.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sub_sampling`? | `boolean` | Do sub-sampling or not. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Document word matrix. |
 
 #### Returns
 
@@ -1102,7 +455,7 @@ Document word matrix.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L415)
+[generated/decomposition/LatentDirichletAllocation.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L415)
 
 ***
 
@@ -1114,68 +467,11 @@ Calculate approximate log-likelihood as score.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Document word matrix.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Document word matrix. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
@@ -1183,7 +479,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L456)
+[generated/decomposition/LatentDirichletAllocation.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L456)
 
 ***
 
@@ -1197,51 +493,10 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
@@ -1249,7 +504,7 @@ Configure output of `transform` and `fit_transform`.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L499)
+[generated/decomposition/LatentDirichletAllocation.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L499)
 
 ***
 
@@ -1261,51 +516,10 @@ Transform data X according to the fitted model.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Document word matrix.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Document word matrix. |
 
 #### Returns
 
@@ -1313,4 +527,4 @@ Document word matrix.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L535)
+[generated/decomposition/LatentDirichletAllocation.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L535)

@@ -20,150 +20,29 @@ For a demo on the importance of the `TargetEncoder` internal cross-fitting, see 
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.categories`?
-
-</td>
-<td>
-
-`"auto"`
-
-</td>
-<td>
-
-Categories (unique values) per feature:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.cv`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Determines the number of folds in the [cross fitting](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-0) strategy used in [`fit_transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform"). For classification targets, `StratifiedKFold` is used and for continuous targets, `KFold` is used.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-When `shuffle` is `true`, `random_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.shuffle`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to shuffle the data in [`fit_transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform") before splitting into folds. Note that the samples within each split will not be shuffled.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.smooth`?
-
-</td>
-<td>
-
-`number` \| `"auto"`
-
-</td>
-<td>
-
-The amount of mixing of the target mean conditioned on the value of the category with the global target mean. A larger `smooth` value will put more weight on the global target mean. If `"auto"`, then `smooth` is set to an empirical Bayes estimate.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.target_type`?
-
-</td>
-<td>
-
-`"auto"` \| `"binary"` \| `"continuous"` \| `"multiclass"`
-
-</td>
-<td>
-
-Type of target.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.categories`? | `"auto"` | Categories (unique values) per feature: |
+| `opts.cv`? | `number` | Determines the number of folds in the [cross fitting](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-0) strategy used in [`fit_transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform"). For classification targets, `StratifiedKFold` is used and for continuous targets, `KFold` is used. |
+| `opts.random_state`? | `number` | When `shuffle` is `true`, `random_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.shuffle`? | `boolean` | Whether to shuffle the data in [`fit_transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform") before splitting into folds. Note that the samples within each split will not be shuffled. |
+| `opts.smooth`? | `number` \| `"auto"` | The amount of mixing of the target mean conditioned on the value of the category with the global target mean. A larger `smooth` value will put more weight on the global target mean. If `"auto"`, then `smooth` is set to an empirical Bayes estimate. |
+| `opts.target_type`? | `"auto"` \| `"binary"` \| `"continuous"` \| `"multiclass"` | Type of target. |
 
 **Returns** [`TargetEncoder`](TargetEncoder.md)
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L29)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L29)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/preprocessing/TargetEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L27) |
-| `_isInitialized` | `boolean` | `false` | [generated/preprocessing/TargetEncoder.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L26) |
-| `_py` | `PythonBridge` | `undefined` | [generated/preprocessing/TargetEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L25) |
-| `id` | `string` | `undefined` | [generated/preprocessing/TargetEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L22) |
-| `opts` | `any` | `undefined` | [generated/preprocessing/TargetEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L23) |
+| `_isDisposed` | `boolean` | `false` | [generated/preprocessing/TargetEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/preprocessing/TargetEncoder.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/preprocessing/TargetEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L25) |
+| `id` | `string` | `undefined` | [generated/preprocessing/TargetEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/preprocessing/TargetEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L23) |
 
 ## Accessors
 
@@ -177,7 +56,7 @@ The categories of each input feature determined during fitting or specified in `
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L378)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L378)
 
 ***
 
@@ -191,7 +70,7 @@ If `target_type_` is ‘binary’ or ‘multiclass’, holds the label for each 
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L503)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L503)
 
 ***
 
@@ -205,7 +84,7 @@ Encodings learnt on all of `X`. For feature `i`, `encodings_\[i\]` are the encod
 
 **Returns** `Promise`\<`any`[]\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L353)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L353)
 
 ***
 
@@ -219,7 +98,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L478)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L478)
 
 ***
 
@@ -233,7 +112,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L453)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L453)
 
 ***
 
@@ -251,32 +130,13 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L74)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L74)
 
 ***
 
@@ -290,7 +150,7 @@ The overall mean of the target. This value is only used in [`transform`](https:/
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L428)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L428)
 
 ***
 
@@ -304,7 +164,7 @@ Type of target.
 
 **Returns** `Promise`\<`string`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L403)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L403)
 
 ## Methods
 
@@ -318,7 +178,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L126)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L126)
 
 ***
 
@@ -330,72 +190,15 @@ Fit the [`TargetEncoder`](https://scikit-learn.org/stable/modules/generated/#skl
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-The data to determine the categories of each feature.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-The target data used to encode the categories.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | The data to determine the categories of each feature. |
+| `opts.y`? | `ArrayLike` | The target data used to encode the categories. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L143)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L143)
 
 ***
 
@@ -407,72 +210,15 @@ Fit [`TargetEncoder`](https://scikit-learn.org/stable/modules/generated/#sklearn
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-The data to determine the categories of each feature.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-The target data used to encode the categories.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | The data to determine the categories of each feature. |
+| `opts.y`? | `ArrayLike` | The target data used to encode the categories. |
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L180)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L180)
 
 ***
 
@@ -484,55 +230,14 @@ Get output feature names for transformation.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Not used, present here for API consistency by convention. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L217)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L217)
 
 ***
 
@@ -546,55 +251,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L253)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L253)
 
 ***
 
@@ -608,32 +272,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L87)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L87)
 
 ***
 
@@ -647,55 +292,14 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L289)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L289)
 
 ***
 
@@ -707,52 +311,11 @@ Transform X with the target encoding.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-The data to determine the categories of each feature.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | The data to determine the categories of each feature. |
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/preprocessing/TargetEncoder.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L321)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L321)

@@ -20,290 +20,37 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.algorithm`?
-
-</td>
-<td>
-
-`"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"`
-
-</td>
-<td>
-
-Algorithm used to compute the nearest neighbors:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.cluster_method`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The extraction method used to extract clusters using the calculated reachability and ordering. Possible values are “xi” and “dbscan”.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.eps`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum distance between two samples for one to be considered as in the neighborhood of the other. By default it assumes the same value as `max_eps`. Used only when `cluster_method='dbscan'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.leaf_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Leaf size passed to [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_eps`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum distance between two samples for one to be considered as in the neighborhood of the other. Default value of `np.inf` will identify clusters across all scales; reducing `max_eps` will result in shorter run times.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.memory`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.metric`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Metric to use for distance computation. Any metric from scikit-learn or scipy.spatial.distance can be used.
-
-If metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays as input and return one value indicating the distance between them. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string. If metric is “precomputed”, `X` is assumed to be a distance matrix and must be square.
-
-Valid values for metric are:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.metric_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Additional keyword arguments for the metric function.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.min_cluster_size`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Minimum number of samples in an OPTICS cluster, expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). If `undefined`, the value of `min_samples` is used instead. Used only when `cluster_method='xi'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.min_samples`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The number of samples in a neighborhood for a point to be considered as a core point. Also, up and down steep regions can’t have more than `min_samples` consecutive non-steep points. Expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.p`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Parameter for the Minkowski metric from [`pairwise_distances`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances"). When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.predecessor_correction`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Correct clusters according to the predecessors calculated by OPTICS [\[2\]](https://scikit-learn.org/stable/modules/generated/#r2c55e37003fe-2). This parameter has minimal effect on most datasets. Used only when `cluster_method='xi'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.xi`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Determines the minimum steepness on the reachability plot that constitutes a cluster boundary. For example, an upwards point in the reachability plot is defined by the ratio from one point to its successor being at most 1-xi. Used only when `cluster_method='xi'`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.algorithm`? | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm used to compute the nearest neighbors: |
+| `opts.cluster_method`? | `string` | The extraction method used to extract clusters using the calculated reachability and ordering. Possible values are “xi” and “dbscan”. |
+| `opts.eps`? | `number` | The maximum distance between two samples for one to be considered as in the neighborhood of the other. By default it assumes the same value as `max_eps`. Used only when `cluster_method='dbscan'`. |
+| `opts.leaf_size`? | `number` | Leaf size passed to [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem. |
+| `opts.max_eps`? | `number` | The maximum distance between two samples for one to be considered as in the neighborhood of the other. Default value of `np.inf` will identify clusters across all scales; reducing `max_eps` will result in shorter run times. |
+| `opts.memory`? | `string` | Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory. |
+| `opts.metric`? | `string` | Metric to use for distance computation. Any metric from scikit-learn or scipy.spatial.distance can be used. If metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays as input and return one value indicating the distance between them. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string. If metric is “precomputed”, `X` is assumed to be a distance matrix and must be square. Valid values for metric are: |
+| `opts.metric_params`? | `any` | Additional keyword arguments for the metric function. |
+| `opts.min_cluster_size`? | `any` | Minimum number of samples in an OPTICS cluster, expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). If `undefined`, the value of `min_samples` is used instead. Used only when `cluster_method='xi'`. |
+| `opts.min_samples`? | `any` | The number of samples in a neighborhood for a point to be considered as a core point. Also, up and down steep regions can’t have more than `min_samples` consecutive non-steep points. Expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). |
+| `opts.n_jobs`? | `number` | The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.p`? | `number` | Parameter for the Minkowski metric from [`pairwise_distances`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances"). When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used. |
+| `opts.predecessor_correction`? | `boolean` | Correct clusters according to the predecessors calculated by OPTICS [\[2\]](https://scikit-learn.org/stable/modules/generated/#r2c55e37003fe-2). This parameter has minimal effect on most datasets. Used only when `cluster_method='xi'`. |
+| `opts.xi`? | `any` | Determines the minimum steepness on the reachability plot that constitutes a cluster boundary. For example, an upwards point in the reachability plot is defined by the ratio from one point to its successor being at most 1-xi. Used only when `cluster_method='xi'`. |
 
 **Returns** [`OPTICS`](OPTICS.md)
 
-**Defined in** [generated/cluster/OPTICS.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L29)
+**Defined in** [generated/cluster/OPTICS.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L29)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/cluster/OPTICS.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L27) |
-| `_isInitialized` | `boolean` | `false` | [generated/cluster/OPTICS.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L26) |
-| `_py` | `PythonBridge` | `undefined` | [generated/cluster/OPTICS.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L25) |
-| `id` | `string` | `undefined` | [generated/cluster/OPTICS.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L22) |
-| `opts` | `any` | `undefined` | [generated/cluster/OPTICS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L23) |
+| `_isDisposed` | `boolean` | `false` | [generated/cluster/OPTICS.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/cluster/OPTICS.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/cluster/OPTICS.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L25) |
+| `id` | `string` | `undefined` | [generated/cluster/OPTICS.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/cluster/OPTICS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L23) |
 
 ## Accessors
 
@@ -317,7 +64,7 @@ The list of clusters in the form of `\[start, end\]` in each row, with all indic
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/cluster/OPTICS.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L423)
+**Defined in** [generated/cluster/OPTICS.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L423)
 
 ***
 
@@ -331,7 +78,7 @@ Distance at which each sample becomes a core point, indexed by object order. Poi
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L375)
+**Defined in** [generated/cluster/OPTICS.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L375)
 
 ***
 
@@ -345,7 +92,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L471)
+**Defined in** [generated/cluster/OPTICS.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L471)
 
 ***
 
@@ -359,7 +106,7 @@ Cluster labels for each point in the dataset given to fit(). Noisy samples and p
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L307)
+**Defined in** [generated/cluster/OPTICS.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L307)
 
 ***
 
@@ -373,7 +120,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L448)
+**Defined in** [generated/cluster/OPTICS.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L448)
 
 ***
 
@@ -387,7 +134,7 @@ The cluster ordered list of sample indices.
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L352)
+**Defined in** [generated/cluster/OPTICS.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L352)
 
 ***
 
@@ -401,7 +148,7 @@ Point that a sample was reached from, indexed by object order. Seed points have 
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L400)
+**Defined in** [generated/cluster/OPTICS.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L400)
 
 ***
 
@@ -419,32 +166,13 @@ Point that a sample was reached from, indexed by object order. Seed points have 
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/cluster/OPTICS.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L124)
+**Defined in** [generated/cluster/OPTICS.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L124)
 
 ***
 
@@ -458,7 +186,7 @@ Reachability distances per sample, indexed by object order. Use `clust.reachabil
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L329)
+**Defined in** [generated/cluster/OPTICS.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L329)
 
 ## Methods
 
@@ -472,7 +200,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
+**Defined in** [generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
 
 ***
 
@@ -486,72 +214,15 @@ Extracts an ordered list of points and reachability distances, and performs init
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A feature array, or array of distances between samples if metric=’precomputed’. If a sparse matrix is provided, it will be converted into CSR format.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | A feature array, or array of distances between samples if metric=’precomputed’. If a sparse matrix is provided, it will be converted into CSR format. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L194)
+**Defined in** [generated/cluster/OPTICS.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L194)
 
 ***
 
@@ -563,89 +234,16 @@ Perform clustering on `X` and returns cluster labels.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.kwargs`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Arguments to be passed to `fit`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Input data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.kwargs`? | `any` | Arguments to be passed to `fit`. |
+| `opts.X`? | `ArrayLike`[] | Input data. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L231)
+**Defined in** [generated/cluster/OPTICS.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L231)
 
 ***
 
@@ -659,55 +257,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L275)
+**Defined in** [generated/cluster/OPTICS.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L275)
 
 ***
 
@@ -721,29 +278,10 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/cluster/OPTICS.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/OPTICS.ts#L137)
+**Defined in** [generated/cluster/OPTICS.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/OPTICS.ts#L137)

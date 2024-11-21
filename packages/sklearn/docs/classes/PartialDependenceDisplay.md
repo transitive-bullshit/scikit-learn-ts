@@ -18,189 +18,18 @@ Read more in [Advanced Plotting With Partial Dependence](https://scikit-learn.or
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.deciles`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Deciles for feature indices in `features`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.feature_names`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Feature names corresponding to the indices in `features`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Indices of features for a given plot. A tuple of one integer will plot a partial dependence curve of one feature. A tuple of two integers will plot a two-way partial dependence curve as a contour plot.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.is_categorical`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `undefined`, all features are assumed to be continuous.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.kind`?
-
-</td>
-<td>
-
-`"average"` \| `"individual"` \| `"both"`
-
-</td>
-<td>
-
-Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.pd_results`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Results of [`partial_dependence`](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.subsample`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If int, represents the maximum absolute number of samples to use.
-
-Note that the full dataset is still used to calculate partial dependence when `kind='both'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.target_idx`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.deciles`? | `any` | Deciles for feature indices in `features`. |
+| `opts.feature_names`? | `any` | Feature names corresponding to the indices in `features`. |
+| `opts.features`? | `any` | Indices of features for a given plot. A tuple of one integer will plot a partial dependence curve of one feature. A tuple of two integers will plot a two-way partial dependence curve as a contour plot. |
+| `opts.is_categorical`? | `any` | Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `undefined`, all features are assumed to be continuous. |
+| `opts.kind`? | `"average"` \| `"individual"` \| `"both"` | Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both. |
+| `opts.pd_results`? | `any` | Results of [`partial_dependence`](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`. |
+| `opts.random_state`? | `number` | Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details. |
+| `opts.subsample`? | `number` | Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If int, represents the maximum absolute number of samples to use. Note that the full dataset is still used to calculate partial dependence when `kind='both'`. |
+| `opts.target_idx`? | `number` | In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used. |
 
 #### Returns
 
@@ -208,17 +37,17 @@ In a multiclass setting, specifies the class for which the PDPs should be comput
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
+[generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25) |
-| `_isInitialized` | `boolean` | `false` | [generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24) |
-| `_py` | `PythonBridge` | `undefined` | [generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23) |
-| `id` | `string` | `undefined` | [generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20) |
-| `opts` | `any` | `undefined` | [generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21) |
+| `_isDisposed` | `boolean` | `false` | [generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23) |
+| `id` | `string` | `undefined` | [generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21) |
 
 ## Accessors
 
@@ -236,7 +65,7 @@ If `ax` is an axes or `undefined`, `axes_\[i, j\]` is the axes on the i-th row a
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L436)
+[generated/inspection/PartialDependenceDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L436)
 
 ***
 
@@ -254,7 +83,7 @@ If `ax` is an axes or `undefined`, `bars_\[i, j\]` is the partial dependence bar
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L571)
+[generated/inspection/PartialDependenceDisplay.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L571)
 
 ***
 
@@ -272,7 +101,7 @@ If `ax` is an axes or `undefined`, the `bounding_ax_` is the axes where the grid
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L409)
+[generated/inspection/PartialDependenceDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L409)
 
 ***
 
@@ -290,7 +119,7 @@ If `ax` is an axes or `undefined`, `contours_\[i, j\]` is the partial dependence
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L544)
+[generated/inspection/PartialDependenceDisplay.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L544)
 
 ***
 
@@ -308,7 +137,7 @@ If `ax` is an axes or `undefined`, `vlines_\[i, j\]` is the line collection repr
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L517)
+[generated/inspection/PartialDependenceDisplay.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L517)
 
 ***
 
@@ -326,7 +155,7 @@ If `ax` is an axes or `undefined`, `vlines_\[i, j\]` is the line collection repr
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L490)
+[generated/inspection/PartialDependenceDisplay.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L490)
 
 ***
 
@@ -344,7 +173,7 @@ Figure containing partial dependence plots.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L625)
+[generated/inspection/PartialDependenceDisplay.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L625)
 
 ***
 
@@ -362,7 +191,7 @@ If `ax` is an axes or `undefined`, `heatmaps_\[i, j\]` is the partial dependence
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L598)
+[generated/inspection/PartialDependenceDisplay.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L598)
 
 ***
 
@@ -380,7 +209,7 @@ If `ax` is an axes or `undefined`, `lines_\[i, j\]` is the partial dependence cu
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L463)
+[generated/inspection/PartialDependenceDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L463)
 
 ***
 
@@ -400,28 +229,9 @@ If `ax` is an axes or `undefined`, `lines_\[i, j\]` is the partial dependence cu
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -429,7 +239,7 @@ If `ax` is an axes or `undefined`, `lines_\[i, j\]` is the partial dependence cu
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83)
+[generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83)
 
 ## Methods
 
@@ -447,7 +257,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L139)
+[generated/inspection/PartialDependenceDisplay.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L139)
 
 ***
 
@@ -463,429 +273,32 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.ax`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-If a single axis is passed in, it is treated as a bounding axes and a grid of partial dependence plots will be drawn within these bounds. The `n_cols` parameter controls the number of columns in the grid.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.categorical_features`?
-
-</td>
-<td>
-
-`number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Indicates the categorical features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.centered`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.contour_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dict with keywords passed to the `matplotlib.pyplot.contourf` call. For two-way partial dependence plots.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.estimator`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A fitted estimator object implementing [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict), [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba), or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function). Multioutput-multiclass classifiers are not supported.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.feature_names`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Name of each feature; `feature_names\[i\]` holds the name of the feature with index `i`. By default, the name of the feature corresponds to their numerical index for NumPy array and their column name for pandas dataframe.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.features`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The target features for which to create the PDPs. If `features\[i\]` is an integer or a string, a one-way PDP is created; if `features\[i\]` is a tuple, a two-way PDP is created (only supported with `kind='average'`). Each tuple must be of size 2. If any entry is a string, then it must be in `feature_names`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.grid_resolution`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of equally spaced points on the axes of the plots, for each target feature.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.ice_lines_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice_lines_kw` takes priority over `line_kw`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.kind`?
-
-</td>
-<td>
-
-`"average"` \| `"individual"` \| `"both"`
-
-</td>
-<td>
-
-Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.line_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. It can be used to define common properties for both `ice_lines_kw` and `pdp_line_kw`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.method`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The method used to calculate the averaged predictions:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_cols`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of columns in the grid plot. Only active when `ax` is a single axis or `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.
-
-`undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.pd_line_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd_line_kw` takes priority over `line_kw`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.percentiles`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The lower and upper percentile used to create the extreme values for the PDP axes. Must be in \[0, 1\].
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.response_method`?
-
-</td>
-<td>
-
-`"auto"` \| `"predict_proba"` \| `"decision_function"`
-
-</td>
-<td>
-
-Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) as the target response. For regressors this parameter is ignored and the response is always the output of [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict). By default, [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) is tried first and we revert to [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) if it doesn’t exist. If `method` is `'recursion'`, the response is always the output of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Sample weights are used to calculate weighted means when averaging the model output. If `undefined`, then samples are equally weighted. If `sample_weight` is not `undefined`, then `method` will be set to `'brute'`. Note that `sample_weight` is ignored for `kind='individual'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.subsample`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If `float`, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If `int`, represents the absolute number samples to use.
-
-Note that the full dataset is still used to calculate averaged partial dependence when `kind='both'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.target`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Verbose output during PD computations.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-`X` is used to generate a grid of values for the target `features` (where the partial dependence will be evaluated), and also to generate values for the complement features when the `method` is `'brute'`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.ax`? | `any` | If a single axis is passed in, it is treated as a bounding axes and a grid of partial dependence plots will be drawn within these bounds. The `n_cols` parameter controls the number of columns in the grid. |
+| `opts.categorical_features`? | `number` \| [`ArrayLike`](../type-aliases/ArrayLike.md) | Indicates the categorical features. |
+| `opts.centered`? | `boolean` | If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done. |
+| `opts.contour_kw`? | `any` | Dict with keywords passed to the `matplotlib.pyplot.contourf` call. For two-way partial dependence plots. |
+| `opts.estimator`? | `any` | A fitted estimator object implementing [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict), [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba), or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function). Multioutput-multiclass classifiers are not supported. |
+| `opts.feature_names`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Name of each feature; `feature_names\[i\]` holds the name of the feature with index `i`. By default, the name of the feature corresponds to their numerical index for NumPy array and their column name for pandas dataframe. |
+| `opts.features`? | `string` | The target features for which to create the PDPs. If `features\[i\]` is an integer or a string, a one-way PDP is created; if `features\[i\]` is a tuple, a two-way PDP is created (only supported with `kind='average'`). Each tuple must be of size 2. If any entry is a string, then it must be in `feature_names`. |
+| `opts.grid_resolution`? | `number` | The number of equally spaced points on the axes of the plots, for each target feature. |
+| `opts.ice_lines_kw`? | `any` | Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice_lines_kw` takes priority over `line_kw`. |
+| `opts.kind`? | `"average"` \| `"individual"` \| `"both"` | Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both. |
+| `opts.line_kw`? | `any` | Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. It can be used to define common properties for both `ice_lines_kw` and `pdp_line_kw`. |
+| `opts.method`? | `string` | The method used to calculate the averaged predictions: |
+| `opts.n_cols`? | `number` | The maximum number of columns in the grid plot. Only active when `ax` is a single axis or `undefined`. |
+| `opts.n_jobs`? | `number` | The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.pd_line_kw`? | `any` | Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd_line_kw` takes priority over `line_kw`. |
+| `opts.percentiles`? | `any` | The lower and upper percentile used to create the extreme values for the PDP axes. Must be in \[0, 1\]. |
+| `opts.random_state`? | `number` | Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details. |
+| `opts.response_method`? | `"auto"` \| `"predict_proba"` \| `"decision_function"` | Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) as the target response. For regressors this parameter is ignored and the response is always the output of [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict). By default, [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) is tried first and we revert to [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) if it doesn’t exist. If `method` is `'recursion'`, the response is always the output of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function). |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights are used to calculate weighted means when averaging the model output. If `undefined`, then samples are equally weighted. If `sample_weight` is not `undefined`, then `method` will be set to `'brute'`. Note that `sample_weight` is ignored for `kind='individual'`. |
+| `opts.subsample`? | `number` | Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If `float`, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If `int`, represents the absolute number samples to use. Note that the full dataset is still used to calculate averaged partial dependence when `kind='both'`. |
+| `opts.target`? | `number` | In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used. |
+| `opts.verbose`? | `number` | Verbose output during PD computations. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | `X` is used to generate a grid of values for the target `features` (where the partial dependence will be evaluated), and also to generate values for the complement features when the `method` is `'brute'`. |
 
 #### Returns
 
@@ -893,7 +306,7 @@ Verbose output during PD computations.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L160)
+[generated/inspection/PartialDependenceDisplay.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L160)
 
 ***
 
@@ -907,28 +320,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -936,7 +330,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L96)
+[generated/inspection/PartialDependenceDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L96)
 
 ***
 
@@ -948,204 +342,19 @@ Plot partial dependence plots.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.ax`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-and a grid of partial dependence plots will be drawn within these bounds. The `n_cols` parameter controls the number of columns in the grid.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.bar_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dict with keywords passed to the `matplotlib.pyplot.bar` call for one-way categorical partial dependence plots.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.centered`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.contour_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dict with keywords passed to the `matplotlib.pyplot.contourf` call for two-way partial dependence plots.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.heatmap_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dict with keywords passed to the `matplotlib.pyplot.imshow` call for two-way categorical partial dependence plots.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.ice_lines_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice_lines_kw` takes priority over `line_kw`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.line_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_cols`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of columns in the grid plot. Only active when `ax` is a single axes or `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.pd_line_kw`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd_line_kw` takes priority over `line_kw`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.pdp_lim`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp_lim\[1\]` is the global min and max for single partial dependence curves. `pdp_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined` (default), the limit will be inferred from the global minimum and maximum of all predictions.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.ax`? | `any` | and a grid of partial dependence plots will be drawn within these bounds. The `n_cols` parameter controls the number of columns in the grid. |
+| `opts.bar_kw`? | `any` | Dict with keywords passed to the `matplotlib.pyplot.bar` call for one-way categorical partial dependence plots. |
+| `opts.centered`? | `boolean` | If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done. |
+| `opts.contour_kw`? | `any` | Dict with keywords passed to the `matplotlib.pyplot.contourf` call for two-way partial dependence plots. |
+| `opts.heatmap_kw`? | `any` | Dict with keywords passed to the `matplotlib.pyplot.imshow` call for two-way categorical partial dependence plots. |
+| `opts.ice_lines_kw`? | `any` | Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice_lines_kw` takes priority over `line_kw`. |
+| `opts.line_kw`? | `any` | Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. |
+| `opts.n_cols`? | `number` | The maximum number of columns in the grid plot. Only active when `ax` is a single axes or `undefined`. |
+| `opts.pd_line_kw`? | `any` | Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd_line_kw` takes priority over `line_kw`. |
+| `opts.pdp_lim`? | `any` | Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp_lim\[1\]` is the global min and max for single partial dependence curves. `pdp_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined` (default), the limit will be inferred from the global minimum and maximum of all predictions. |
 
 #### Returns
 
@@ -1153,4 +362,4 @@ Global min and max average predictions, such that all plots will have the same s
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L326)
+[generated/inspection/PartialDependenceDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L326)

@@ -14,288 +14,37 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.average`?
-
-</td>
-<td>
-
-`number` \| `boolean`
-
-</td>
-<td>
-
-When set to `true`, computes the averaged SGD weights and stores the result in the `coef_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So average=10 will begin averaging after seeing 10 samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.C`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum step size (regularization). Defaults to 1.0.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.early_stopping`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score is not improving by at least tol for n_iter_no_change consecutive epochs.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.epsilon`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-If the difference between the current prediction and the correct label is below this threshold, the model is not updated.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_intercept`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered. Defaults to `true`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.loss`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The loss function to be used: epsilon_insensitive: equivalent to PA-I in the reference paper. squared_epsilon_insensitive: equivalent to PA-II in the reference paper.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.linear_model.PassiveAggressiveRegressor.partial_fit "sklearn.linear_model.PassiveAggressiveRegressor.partial_fit") method.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_iter_no_change`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of iterations with no improvement to wait before early stopping.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.shuffle`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether or not the training data should be shuffled after each epoch.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous_loss - tol).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.validation_fraction`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early_stopping is `true`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The verbosity level.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.warm_start`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
-
-Repeatedly calling fit or partial_fit when warm_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.average`? | `number` \| `boolean` | When set to `true`, computes the averaged SGD weights and stores the result in the `coef_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So average=10 will begin averaging after seeing 10 samples. |
+| `opts.C`? | `number` | Maximum step size (regularization). Defaults to 1.0. |
+| `opts.early_stopping`? | `boolean` | Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score is not improving by at least tol for n_iter_no_change consecutive epochs. |
+| `opts.epsilon`? | `number` | If the difference between the current prediction and the correct label is below this threshold, the model is not updated. |
+| `opts.fit_intercept`? | `boolean` | Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered. Defaults to `true`. |
+| `opts.loss`? | `string` | The loss function to be used: epsilon_insensitive: equivalent to PA-I in the reference paper. squared_epsilon_insensitive: equivalent to PA-II in the reference paper. |
+| `opts.max_iter`? | `number` | The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.linear_model.PassiveAggressiveRegressor.partial_fit "sklearn.linear_model.PassiveAggressiveRegressor.partial_fit") method. |
+| `opts.n_iter_no_change`? | `number` | Number of iterations with no improvement to wait before early stopping. |
+| `opts.random_state`? | `number` | Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.shuffle`? | `boolean` | Whether or not the training data should be shuffled after each epoch. |
+| `opts.tol`? | `number` | The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous_loss - tol). |
+| `opts.validation_fraction`? | `number` | The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early_stopping is `true`. |
+| `opts.verbose`? | `number` | The verbosity level. |
+| `opts.warm_start`? | `boolean` | When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start). Repeatedly calling fit or partial_fit when warm_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. |
 
 **Returns** [`PassiveAggressiveRegressor`](PassiveAggressiveRegressor.md)
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L23)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/PassiveAggressiveRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/PassiveAggressiveRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/PassiveAggressiveRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L19) |
-| `id` | `string` | `undefined` | [generated/linear\_model/PassiveAggressiveRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/linear\_model/PassiveAggressiveRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/PassiveAggressiveRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/PassiveAggressiveRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/PassiveAggressiveRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L19) |
+| `id` | `string` | `undefined` | [generated/linear\_model/PassiveAggressiveRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/linear\_model/PassiveAggressiveRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L17) |
 
 ## Accessors
 
@@ -309,7 +58,7 @@ Weights assigned to the features.
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L604)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L604)
 
 ***
 
@@ -323,7 +72,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L685)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L685)
 
 ***
 
@@ -337,7 +86,7 @@ Constants in decision function.
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L631)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L631)
 
 ***
 
@@ -351,7 +100,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L658)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L658)
 
 ***
 
@@ -365,7 +114,7 @@ The actual number of iterations to reach the stopping criterion.
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L712)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L712)
 
 ***
 
@@ -383,32 +132,13 @@ The actual number of iterations to reach the stopping criterion.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L126)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L126)
 
 ***
 
@@ -422,7 +152,7 @@ Number of weight updates performed during training. Same as `(n_iter_ \* n_sampl
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L739)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L739)
 
 ## Methods
 
@@ -436,32 +166,13 @@ Converts the `coef_` member (back) to a numpy.ndarray. This is the default forma
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L201)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L201)
 
 ***
 
@@ -475,7 +186,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L182)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L182)
 
 ***
 
@@ -487,106 +198,17 @@ Fit linear model with Passive Aggressive algorithm.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.coef_init`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The initial coefficients to warm-start the optimization.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.intercept_init`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The initial intercept to warm-start the optimization.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Target values.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.coef_init`? | `any` | The initial coefficients to warm-start the optimization. |
+| `opts.intercept_init`? | `any` | The initial intercept to warm-start the optimization. |
+| `opts.X`? | `ArrayLike` | Training data. |
+| `opts.y`? | `any` | Target values. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L231)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L231)
 
 ***
 
@@ -600,55 +222,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L284)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L284)
 
 ***
 
@@ -662,32 +243,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L139)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L139)
 
 ***
 
@@ -699,72 +261,15 @@ Fit linear model with Passive Aggressive algorithm.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Subset of training data.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Subset of target values.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | Subset of training data. |
+| `opts.y`? | `any` | Subset of target values. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L320)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L320)
 
 ***
 
@@ -776,55 +281,14 @@ Predict using the linear model.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Input data.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | Input data. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L361)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L361)
 
 ***
 
@@ -838,89 +302,16 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-True values for `X`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Sample weights. |
+| `opts.X`? | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.y`? | `ArrayLike` | True values for `X`. |
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L399)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L399)
 
 ***
 
@@ -936,72 +327,15 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.coef_init`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `coef_init` parameter in `fit`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.intercept_init`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `intercept_init` parameter in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.coef_init`? | `string` \| `boolean` | Metadata routing for `coef_init` parameter in `fit`. |
+| `opts.intercept_init`? | `string` \| `boolean` | Metadata routing for `intercept_init` parameter in `fit`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L449)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L449)
 
 ***
 
@@ -1017,55 +351,14 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `partial_fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `partial_fit`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L494)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L494)
 
 ***
 
@@ -1081,55 +374,14 @@ The options for each parameter are:
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L534)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L534)
 
 ***
 
@@ -1145,29 +397,10 @@ The `intercept_` member is not converted.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L574)
+**Defined in** [generated/linear\_model/PassiveAggressiveRegressor.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/PassiveAggressiveRegressor.ts#L574)

@@ -22,320 +22,39 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.alpha`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Hyperparameter of the ridge regression that learns the inverse transform (when fit_inverse_transform=`true`).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.coef0`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Independent term in poly and sigmoid kernels. Ignored by other kernels.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy_X`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, input X is copied and stored by the model in the `X_fit_` attribute. If no further changes will be done to X, setting `copy_X=False` saves memory by storing a reference.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.degree`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Degree for poly kernels. Ignored by other kernels.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.eigen_solver`?
-
-</td>
-<td>
-
-`"auto"` \| `"randomized"` \| `"arpack"` \| `"dense"`
-
-</td>
-<td>
-
-Select eigensolver to use. If `n_components` is much less than the number of training samples, randomized (or arpack to a smaller extent) may be more efficient than the dense eigensolver. Randomized SVD is performed according to the method of Halko et al [\[3\]](https://scikit-learn.org/stable/modules/generated/#r396fc7d924b8-3).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_inverse_transform`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Learn the inverse transform for non-precomputed kernels (i.e. learn to find the pre-image of a point). This method is based on [\[2\]](https://scikit-learn.org/stable/modules/generated/#r396fc7d924b8-2).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.gamma`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Kernel coefficient for rbf, poly and sigmoid kernels. Ignored by other kernels. If `gamma` is `undefined`, then it is set to `1/n_features`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.iterated_power`?
-
-</td>
-<td>
-
-`"auto"`
-
-</td>
-<td>
-
-Number of iterations for the power method computed by svd_solver == ‘randomized’. When ‘auto’, it is set to 7 when `n_components < 0.1 \* min(X.shape)`, other it is set to 4.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.kernel`?
-
-</td>
-<td>
-
-`"sigmoid"` \| `"precomputed"` \| `"linear"` \| `"poly"` \| `"rbf"` \| `"cosine"`
-
-</td>
-<td>
-
-Kernel used for PCA.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.kernel_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters (keyword arguments) and values for kernel passed as callable object. Ignored by other kernels.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations for arpack. If `undefined`, optimal value will be chosen by arpack.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_components`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of components. If `undefined`, all non-zero components are kept.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Used when `eigen_solver` == ‘arpack’ or ‘randomized’. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.remove_zero_eig`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `true`, then all components with zero eigenvalues are removed, so that the number of components in the output may be < n_components (and sometimes even zero due to numerical instability). When n_components is `undefined`, this parameter is ignored and components with zero eigenvalues are removed regardless.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.alpha`? | `number` | Hyperparameter of the ridge regression that learns the inverse transform (when fit_inverse_transform=`true`). |
+| `opts.coef0`? | `number` | Independent term in poly and sigmoid kernels. Ignored by other kernels. |
+| `opts.copy_X`? | `boolean` | If `true`, input X is copied and stored by the model in the `X_fit_` attribute. If no further changes will be done to X, setting `copy_X=False` saves memory by storing a reference. |
+| `opts.degree`? | `number` | Degree for poly kernels. Ignored by other kernels. |
+| `opts.eigen_solver`? | `"auto"` \| `"randomized"` \| `"arpack"` \| `"dense"` | Select eigensolver to use. If `n_components` is much less than the number of training samples, randomized (or arpack to a smaller extent) may be more efficient than the dense eigensolver. Randomized SVD is performed according to the method of Halko et al [\[3\]](https://scikit-learn.org/stable/modules/generated/#r396fc7d924b8-3). |
+| `opts.fit_inverse_transform`? | `boolean` | Learn the inverse transform for non-precomputed kernels (i.e. learn to find the pre-image of a point). This method is based on [\[2\]](https://scikit-learn.org/stable/modules/generated/#r396fc7d924b8-2). |
+| `opts.gamma`? | `number` | Kernel coefficient for rbf, poly and sigmoid kernels. Ignored by other kernels. If `gamma` is `undefined`, then it is set to `1/n_features`. |
+| `opts.iterated_power`? | `"auto"` | Number of iterations for the power method computed by svd_solver == ‘randomized’. When ‘auto’, it is set to 7 when `n_components < 0.1 \* min(X.shape)`, other it is set to 4. |
+| `opts.kernel`? | `"sigmoid"` \| `"precomputed"` \| `"linear"` \| `"poly"` \| `"rbf"` \| `"cosine"` | Kernel used for PCA. |
+| `opts.kernel_params`? | `any` | Parameters (keyword arguments) and values for kernel passed as callable object. Ignored by other kernels. |
+| `opts.max_iter`? | `number` | Maximum number of iterations for arpack. If `undefined`, optimal value will be chosen by arpack. |
+| `opts.n_components`? | `number` | Number of components. If `undefined`, all non-zero components are kept. |
+| `opts.n_jobs`? | `number` | The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.random_state`? | `number` | Used when `eigen_solver` == ‘arpack’ or ‘randomized’. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.remove_zero_eig`? | `boolean` | If `true`, then all components with zero eigenvalues are removed, so that the number of components in the output may be < n_components (and sometimes even zero due to numerical instability). When n_components is `undefined`, this parameter is ignored and components with zero eigenvalues are removed regardless. |
+| `opts.tol`? | `number` | Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack. |
 
 **Returns** [`KernelPCA`](KernelPCA.md)
 
-**Defined in** [generated/decomposition/KernelPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L31)
+**Defined in** [generated/decomposition/KernelPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L31)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/decomposition/KernelPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L29) |
-| `_isInitialized` | `boolean` | `false` | [generated/decomposition/KernelPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L28) |
-| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/KernelPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L27) |
-| `id` | `string` | `undefined` | [generated/decomposition/KernelPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L24) |
-| `opts` | `any` | `undefined` | [generated/decomposition/KernelPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L25) |
+| `_isDisposed` | `boolean` | `false` | [generated/decomposition/KernelPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L29) |
+| `_isInitialized` | `boolean` | `false` | [generated/decomposition/KernelPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L28) |
+| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/KernelPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L27) |
+| `id` | `string` | `undefined` | [generated/decomposition/KernelPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L24) |
+| `opts` | `any` | `undefined` | [generated/decomposition/KernelPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L25) |
 
 ## Accessors
 
@@ -349,7 +68,7 @@ Inverse transform matrix. Only available when `fit_inverse_transform` is `true`.
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L505)
+**Defined in** [generated/decomposition/KernelPCA.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L505)
 
 ***
 
@@ -363,7 +82,7 @@ Eigenvalues of the centered kernel matrix in decreasing order. If `n_components`
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L455)
+**Defined in** [generated/decomposition/KernelPCA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L455)
 
 ***
 
@@ -377,7 +96,7 @@ Eigenvectors of the centered kernel matrix. If `n_components` and `remove_zero_e
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L480)
+**Defined in** [generated/decomposition/KernelPCA.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L480)
 
 ***
 
@@ -391,7 +110,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L601)
+**Defined in** [generated/decomposition/KernelPCA.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L601)
 
 ***
 
@@ -405,7 +124,7 @@ Kernel coefficient for rbf, poly and sigmoid kernels. When `gamma` is explicitly
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L626)
+**Defined in** [generated/decomposition/KernelPCA.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L626)
 
 ***
 
@@ -419,7 +138,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L576)
+**Defined in** [generated/decomposition/KernelPCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L576)
 
 ***
 
@@ -437,32 +156,13 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/decomposition/KernelPCA.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L136)
+**Defined in** [generated/decomposition/KernelPCA.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L136)
 
 ***
 
@@ -476,7 +176,7 @@ The data used to fit the model. If `copy_X=False`, then `X_fit_` is a reference.
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L553)
+**Defined in** [generated/decomposition/KernelPCA.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L553)
 
 ***
 
@@ -490,7 +190,7 @@ Projection of the fitted data on the kernel principal components. Only available
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L528)
+**Defined in** [generated/decomposition/KernelPCA.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L528)
 
 ## Methods
 
@@ -504,7 +204,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L187)
+**Defined in** [generated/decomposition/KernelPCA.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L187)
 
 ***
 
@@ -516,72 +216,15 @@ Fit the model from data in X.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L204)
+**Defined in** [generated/decomposition/KernelPCA.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L204)
 
 ***
 
@@ -593,89 +236,16 @@ Fit the model from data in X and transform X.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters (keyword arguments) and values passed to the fit_transform instance.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.params`? | `any` | Parameters (keyword arguments) and values passed to the fit_transform instance. |
+| `opts.X`? | `ArrayLike` | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L241)
+**Defined in** [generated/decomposition/KernelPCA.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L241)
 
 ***
 
@@ -689,55 +259,14 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Only used to validate feature names with the names seen in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L285)
+**Defined in** [generated/decomposition/KernelPCA.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L285)
 
 ***
 
@@ -751,55 +280,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L321)
+**Defined in** [generated/decomposition/KernelPCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L321)
 
 ***
 
@@ -813,32 +301,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L149)
+**Defined in** [generated/decomposition/KernelPCA.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L149)
 
 ***
 
@@ -852,55 +321,14 @@ Transform X back to original space.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L357)
+**Defined in** [generated/decomposition/KernelPCA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L357)
 
 ***
 
@@ -914,55 +342,14 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L391)
+**Defined in** [generated/decomposition/KernelPCA.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L391)
 
 ***
 
@@ -974,52 +361,11 @@ Transform X.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/decomposition/KernelPCA.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L423)
+**Defined in** [generated/decomposition/KernelPCA.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L423)

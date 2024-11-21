@@ -16,186 +16,31 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.compute_distances`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Computes distances between clusters even if `distance_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.compute_full_tree`?
-
-</td>
-<td>
-
-`boolean` \| `"auto"`
-
-</td>
-<td>
-
-Stop early the construction of the tree at `n_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance_threshold` is not `undefined`. By default `compute_full_tree` is “auto”, which is equivalent to `true` when `distance_threshold` is not `undefined` or that `n_clusters` is inferior to the maximum between 100 or `0.02 \* n_samples`. Otherwise, “auto” is equivalent to `false`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.connectivity`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
-
-For an example of connectivity matrix using [`kneighbors_graph`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.kneighbors_graph.html#sklearn.neighbors.kneighbors_graph "sklearn.neighbors.kneighbors_graph"), see [Agglomerative clustering with and without structure](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.distance_threshold`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n_clusters` must be `undefined` and `compute_full_tree` must be `true`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.linkage`?
-
-</td>
-<td>
-
-`"ward"` \| `"complete"` \| `"average"` \| `"single"`
-
-</td>
-<td>
-
-Which linkage criterion to use. The linkage criterion determines which distance to use between sets of observation. The algorithm will merge the pairs of cluster that minimize this criterion.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.memory`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.metric`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_clusters`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of clusters to find. It must be `undefined` if `distance_threshold` is not `undefined`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.compute_distances`? | `boolean` | Computes distances between clusters even if `distance_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead. |
+| `opts.compute_full_tree`? | `boolean` \| `"auto"` | Stop early the construction of the tree at `n_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance_threshold` is not `undefined`. By default `compute_full_tree` is “auto”, which is equivalent to `true` when `distance_threshold` is not `undefined` or that `n_clusters` is inferior to the maximum between 100 or `0.02 \* n_samples`. Otherwise, “auto” is equivalent to `false`. |
+| `opts.connectivity`? | `ArrayLike` | Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured. For an example of connectivity matrix using [`kneighbors_graph`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.kneighbors_graph.html#sklearn.neighbors.kneighbors_graph "sklearn.neighbors.kneighbors_graph"), see [Agglomerative clustering with and without structure](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py). |
+| `opts.distance_threshold`? | `number` | The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n_clusters` must be `undefined` and `compute_full_tree` must be `true`. |
+| `opts.linkage`? | `"ward"` \| `"complete"` \| `"average"` \| `"single"` | Which linkage criterion to use. The linkage criterion determines which distance to use between sets of observation. The algorithm will merge the pairs of cluster that minimize this criterion. |
+| `opts.memory`? | `string` | Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory. |
+| `opts.metric`? | `string` | Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method. |
+| `opts.n_clusters`? | `number` | The number of clusters to find. It must be `undefined` if `distance_threshold` is not `undefined`. |
 
 **Returns** [`AgglomerativeClustering`](AgglomerativeClustering.md)
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L25)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/cluster/AgglomerativeClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/cluster/AgglomerativeClustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/cluster/AgglomerativeClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L21) |
-| `id` | `string` | `undefined` | [generated/cluster/AgglomerativeClustering.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/cluster/AgglomerativeClustering.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/cluster/AgglomerativeClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/cluster/AgglomerativeClustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/cluster/AgglomerativeClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L21) |
+| `id` | `string` | `undefined` | [generated/cluster/AgglomerativeClustering.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/cluster/AgglomerativeClustering.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L19) |
 
 ## Accessors
 
@@ -209,7 +54,7 @@ The children of each non-leaf node. Values less than `n_samples` correspond to l
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L437)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L437)
 
 ***
 
@@ -223,7 +68,7 @@ Distances between nodes in the corresponding place in `children_`. Only computed
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L464)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L464)
 
 ***
 
@@ -237,7 +82,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L410)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L410)
 
 ***
 
@@ -251,7 +96,7 @@ Cluster labels for each point.
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L302)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L302)
 
 ***
 
@@ -265,7 +110,7 @@ The number of clusters found by the algorithm. If `distance_threshold=None`, it 
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L275)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L275)
 
 ***
 
@@ -279,7 +124,7 @@ The estimated number of connected components in the graph.
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L356)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L356)
 
 ***
 
@@ -293,7 +138,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L383)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L383)
 
 ***
 
@@ -307,7 +152,7 @@ Number of leaves in the hierarchical tree.
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L329)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L329)
 
 ***
 
@@ -325,32 +170,13 @@ Number of leaves in the hierarchical tree.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L82)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L82)
 
 ## Methods
 
@@ -364,7 +190,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L138)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L138)
 
 ***
 
@@ -376,72 +202,15 @@ Fit the hierarchical clustering from features, or distance matrix.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-Training instances to cluster, or distances between instances if `metric='precomputed'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | Training instances to cluster, or distances between instances if `metric='precomputed'`. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L155)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L155)
 
 ***
 
@@ -455,72 +224,15 @@ In addition to fitting, this method also return the result of the clustering ass
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Training instances to cluster, or distances between instances if `affinity='precomputed'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | Training instances to cluster, or distances between instances if `affinity='precomputed'`. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L196)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L196)
 
 ***
 
@@ -534,55 +246,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L239)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L239)
 
 ***
 
@@ -596,29 +267,10 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/cluster/AgglomerativeClustering.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L95)
+**Defined in** [generated/cluster/AgglomerativeClustering.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L95)

@@ -16,378 +16,29 @@ Solves the optimization problem:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.alpha`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Sparsity controlling parameter.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.batch_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of samples in each mini-batch.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.callback`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A callable that gets invoked at the end of each iteration.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.dict_init`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Initial value of the dictionary for warm restart scenarios.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_algorithm`?
-
-</td>
-<td>
-
-`"cd"` \| `"lars"`
-
-</td>
-<td>
-
-The algorithm used:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_no_improvement`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function.
-
-To disable convergence detection based on cost function, set `max_no_improvement` to `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_components`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of dictionary elements to extract.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.positive_code`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to enforce positivity when finding the code.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.positive_dict`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to enforce positivity when finding the dictionary.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Used for initializing the dictionary when `dict_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.shuffle`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to shuffle the samples before forming batches.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.split_sign`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Control early stopping based on the norm of the differences in the dictionary between 2 steps.
-
-To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_algorithm`?
-
-</td>
-<td>
-
-`"threshold"` \| `"lars"` \| `"lasso_lars"` \| `"lasso_cd"` \| `"omp"`
-
-</td>
-<td>
-
-Algorithm used to transform the data:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_alpha`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-If `algorithm='lasso_lars'` or `algorithm='lasso_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations to perform if `algorithm='lasso_cd'` or `'lasso_lars'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_n_nonzero_coefs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform_n_nonzero_coefs=int(n_features / 10)`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`number` \| `boolean`
-
-</td>
-<td>
-
-To control the verbosity of the procedure.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.alpha`? | `number` | Sparsity controlling parameter. |
+| `opts.batch_size`? | `number` | Number of samples in each mini-batch. |
+| `opts.callback`? | `any` | A callable that gets invoked at the end of each iteration. |
+| `opts.dict_init`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Initial value of the dictionary for warm restart scenarios. |
+| `opts.fit_algorithm`? | `"cd"` \| `"lars"` | The algorithm used: |
+| `opts.max_iter`? | `number` | Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. |
+| `opts.max_no_improvement`? | `number` | Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max_no_improvement` to `undefined`. |
+| `opts.n_components`? | `number` | Number of dictionary elements to extract. |
+| `opts.n_jobs`? | `number` | Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.positive_code`? | `boolean` | Whether to enforce positivity when finding the code. |
+| `opts.positive_dict`? | `boolean` | Whether to enforce positivity when finding the dictionary. |
+| `opts.random_state`? | `number` | Used for initializing the dictionary when `dict_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.shuffle`? | `boolean` | Whether to shuffle the samples before forming batches. |
+| `opts.split_sign`? | `boolean` | Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers. |
+| `opts.tol`? | `number` | Control early stopping based on the norm of the differences in the dictionary between 2 steps. To disable early stopping based on changes in the dictionary, set `tol` to 0.0. |
+| `opts.transform_algorithm`? | `"threshold"` \| `"lars"` \| `"lasso_lars"` \| `"lasso_cd"` \| `"omp"` | Algorithm used to transform the data: |
+| `opts.transform_alpha`? | `number` | If `algorithm='lasso_lars'` or `algorithm='lasso_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`. |
+| `opts.transform_max_iter`? | `number` | Maximum number of iterations to perform if `algorithm='lasso_cd'` or `'lasso_lars'`. |
+| `opts.transform_n_nonzero_coefs`? | `number` | Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform_n_nonzero_coefs=int(n_features / 10)`. |
+| `opts.verbose`? | `number` \| `boolean` | To control the verbosity of the procedure. |
 
 #### Returns
 
@@ -395,17 +46,17 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L25)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/decomposition/MiniBatchDictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/decomposition/MiniBatchDictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/MiniBatchDictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L21) |
-| `id` | `string` | `undefined` | [generated/decomposition/MiniBatchDictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/decomposition/MiniBatchDictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/decomposition/MiniBatchDictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/decomposition/MiniBatchDictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/MiniBatchDictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L21) |
+| `id` | `string` | `undefined` | [generated/decomposition/MiniBatchDictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/decomposition/MiniBatchDictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L19) |
 
 ## Accessors
 
@@ -423,7 +74,7 @@ Components extracted from the data.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L520)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L520)
 
 ***
 
@@ -441,7 +92,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L574)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L574)
 
 ***
 
@@ -459,7 +110,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L547)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L547)
 
 ***
 
@@ -477,7 +128,7 @@ Number of iterations over the full dataset.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L601)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L601)
 
 ***
 
@@ -495,7 +146,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L628)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L628)
 
 ***
 
@@ -515,28 +166,9 @@ Number of mini-batches processed.
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -544,7 +176,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L165)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L165)
 
 ## Methods
 
@@ -562,7 +194,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L221)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L221)
 
 ***
 
@@ -574,68 +206,11 @@ Fit the model from data in X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
@@ -643,7 +218,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L238)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L238)
 
 ***
 
@@ -657,85 +232,12 @@ Fits transformer to `X` and `y` with optional parameters `fit_params` and return
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Additional fit parameters.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Input samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target values (`undefined` for unsupervised transformations).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Input samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
@@ -743,7 +245,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L281)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L281)
 
 ***
 
@@ -757,51 +259,10 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Only used to validate feature names with the names seen in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 #### Returns
 
@@ -809,7 +270,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L329)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L329)
 
 ***
 
@@ -823,51 +284,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -875,7 +295,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L367)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L367)
 
 ***
 
@@ -889,28 +309,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -918,7 +319,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L178)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L178)
 
 ***
 
@@ -930,68 +331,11 @@ Update the model using the data in X as a mini-batch.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
@@ -999,7 +343,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L403)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L403)
 
 ***
 
@@ -1013,51 +357,10 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
@@ -1065,7 +368,7 @@ Configure output of `transform` and `fit_transform`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L446)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L446)
 
 ***
 
@@ -1079,51 +382,10 @@ Coding method is determined by the object parameter `transform_algorithm`.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Test data to be transformed, must have the same number of features as the data used to train the model.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Test data to be transformed, must have the same number of features as the data used to train the model. |
 
 #### Returns
 
@@ -1131,4 +393,4 @@ Test data to be transformed, must have the same number of features as the data u
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L484)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L484)

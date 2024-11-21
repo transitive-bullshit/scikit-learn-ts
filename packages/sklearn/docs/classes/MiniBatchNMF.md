@@ -12,306 +12,25 @@ Mini-Batch Non-Negative Matrix Factorization (NMF).
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.alpha_H`?
-
-</td>
-<td>
-
-`number` \| `"same"`
-
-</td>
-<td>
-
-Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha_W`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.alpha_W`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.batch_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of samples in each mini-batch. Large batch sizes give better long-term convergence at the cost of a slower start.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.beta_loss`?
-
-</td>
-<td>
-
-`number` \| `"frobenius"` \| `"kullback-leibler"` \| `"itakura-saito"`
-
-</td>
-<td>
-
-Beta divergence to be minimized, measuring the distance between `X` and the dot product `WH`. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for `beta_loss <= 0` (or ‘itakura-saito’), the input matrix `X` cannot contain zeros.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.forget_factor`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Amount of rescaling of past information. Its value could be 1 with finite datasets. Choosing values < 1 is recommended with online learning as more recent batches will weight more than past batches.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fresh_restarts`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to completely solve for W at each step. Doing fresh restarts will likely lead to a better solution for a same number of iterations but it is much slower.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fresh_restarts_max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations when solving for W at each step. Only used when doing fresh restarts. These iterations may be stopped early based on a small change of W controlled by `tol`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.init`?
-
-</td>
-<td>
-
-`"random"` \| `"nndsvd"` \| `"nndsvda"` \| `"nndsvdar"` \| `"custom"`
-
-</td>
-<td>
-
-Method used to initialize the procedure. Valid options:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.l1_ratio`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The regularization mixing parameter, with 0 <= l1_ratio <= 1. For l1_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1_ratio = 1 it is an elementwise L1 penalty. For 0 < l1_ratio < 1, the penalty is a combination of L1 and L2.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations over the complete dataset before timing out.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_no_improvement`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max_no_improvement` to `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_components`?
-
-</td>
-<td>
-
-`number` \| `"auto"`
-
-</td>
-<td>
-
-Number of components, if `n_components` is not set all features are kept. If `n_components='auto'`, the number of components is automatically inferred from W or H shapes.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Control early stopping based on the norm of the differences in `H` between 2 steps. To disable early stopping based on changes in `H`, set `tol` to 0.0.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform_max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations when solving for W at transform time. If `undefined`, it defaults to `max_iter`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Whether to be verbose.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.alpha_H`? | `number` \| `"same"` | Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha_W`. |
+| `opts.alpha_W`? | `number` | Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`. |
+| `opts.batch_size`? | `number` | Number of samples in each mini-batch. Large batch sizes give better long-term convergence at the cost of a slower start. |
+| `opts.beta_loss`? | `number` \| `"frobenius"` \| `"kullback-leibler"` \| `"itakura-saito"` | Beta divergence to be minimized, measuring the distance between `X` and the dot product `WH`. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for `beta_loss <= 0` (or ‘itakura-saito’), the input matrix `X` cannot contain zeros. |
+| `opts.forget_factor`? | `number` | Amount of rescaling of past information. Its value could be 1 with finite datasets. Choosing values < 1 is recommended with online learning as more recent batches will weight more than past batches. |
+| `opts.fresh_restarts`? | `boolean` | Whether to completely solve for W at each step. Doing fresh restarts will likely lead to a better solution for a same number of iterations but it is much slower. |
+| `opts.fresh_restarts_max_iter`? | `number` | Maximum number of iterations when solving for W at each step. Only used when doing fresh restarts. These iterations may be stopped early based on a small change of W controlled by `tol`. |
+| `opts.init`? | `"random"` \| `"nndsvd"` \| `"nndsvda"` \| `"nndsvdar"` \| `"custom"` | Method used to initialize the procedure. Valid options: |
+| `opts.l1_ratio`? | `number` | The regularization mixing parameter, with 0 <= l1_ratio <= 1. For l1_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1_ratio = 1 it is an elementwise L1 penalty. For 0 < l1_ratio < 1, the penalty is a combination of L1 and L2. |
+| `opts.max_iter`? | `number` | Maximum number of iterations over the complete dataset before timing out. |
+| `opts.max_no_improvement`? | `number` | Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max_no_improvement` to `undefined`. |
+| `opts.n_components`? | `number` \| `"auto"` | Number of components, if `n_components` is not set all features are kept. If `n_components='auto'`, the number of components is automatically inferred from W or H shapes. |
+| `opts.random_state`? | `number` | Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.tol`? | `number` | Control early stopping based on the norm of the differences in `H` between 2 steps. To disable early stopping based on changes in `H`, set `tol` to 0.0. |
+| `opts.transform_max_iter`? | `number` | Maximum number of iterations when solving for W at transform time. If `undefined`, it defaults to `max_iter`. |
+| `opts.verbose`? | `boolean` | Whether to be verbose. |
 
 #### Returns
 
@@ -319,17 +38,17 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L21)
+[generated/decomposition/MiniBatchNMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L21)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/decomposition/MiniBatchNMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L19) |
-| `_isInitialized` | `boolean` | `false` | [generated/decomposition/MiniBatchNMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L18) |
-| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/MiniBatchNMF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L17) |
-| `id` | `string` | `undefined` | [generated/decomposition/MiniBatchNMF.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L14) |
-| `opts` | `any` | `undefined` | [generated/decomposition/MiniBatchNMF.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L15) |
+| `_isDisposed` | `boolean` | `false` | [generated/decomposition/MiniBatchNMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L19) |
+| `_isInitialized` | `boolean` | `false` | [generated/decomposition/MiniBatchNMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L18) |
+| `_py` | `PythonBridge` | `undefined` | [generated/decomposition/MiniBatchNMF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L17) |
+| `id` | `string` | `undefined` | [generated/decomposition/MiniBatchNMF.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L14) |
+| `opts` | `any` | `undefined` | [generated/decomposition/MiniBatchNMF.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L15) |
 
 ## Accessors
 
@@ -347,7 +66,7 @@ Factorization matrix, sometimes called ‘dictionary’.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L518)
+[generated/decomposition/MiniBatchNMF.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L518)
 
 ***
 
@@ -365,7 +84,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L664)
+[generated/decomposition/MiniBatchNMF.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L664)
 
 ***
 
@@ -383,7 +102,7 @@ The number of components. It is same as the `n_components` parameter if it was g
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L543)
+[generated/decomposition/MiniBatchNMF.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L543)
 
 ***
 
@@ -401,7 +120,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L639)
+[generated/decomposition/MiniBatchNMF.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L639)
 
 ***
 
@@ -419,7 +138,7 @@ Actual number of started iterations over the whole dataset.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L593)
+[generated/decomposition/MiniBatchNMF.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L593)
 
 ***
 
@@ -437,7 +156,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L616)
+[generated/decomposition/MiniBatchNMF.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L616)
 
 ***
 
@@ -457,28 +176,9 @@ Number of mini-batches processed.
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -486,7 +186,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L130)
+[generated/decomposition/MiniBatchNMF.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L130)
 
 ***
 
@@ -504,7 +204,7 @@ Frobenius norm of the matrix difference, or beta-divergence, between the trainin
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L568)
+[generated/decomposition/MiniBatchNMF.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L568)
 
 ## Methods
 
@@ -522,7 +222,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L182)
+[generated/decomposition/MiniBatchNMF.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L182)
 
 ***
 
@@ -534,85 +234,12 @@ Learn a NMF model for the data X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters (keyword arguments) and values passed to the fit_transform instance.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.params`? | `any` | Parameters (keyword arguments) and values passed to the fit_transform instance. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
@@ -620,7 +247,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L199)
+[generated/decomposition/MiniBatchNMF.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L199)
 
 ***
 
@@ -634,102 +261,13 @@ This is more efficient than calling fit followed by transform.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.H`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.W`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Data matrix to be decomposed.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.H`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`. |
+| `opts.W`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Data matrix to be decomposed. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
@@ -737,7 +275,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L243)
+[generated/decomposition/MiniBatchNMF.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L243)
 
 ***
 
@@ -751,51 +289,10 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.input_features`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Only used to validate feature names with the names seen in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 #### Returns
 
@@ -803,7 +300,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L292)
+[generated/decomposition/MiniBatchNMF.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L292)
 
 ***
 
@@ -817,51 +314,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -869,7 +325,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L328)
+[generated/decomposition/MiniBatchNMF.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L328)
 
 ***
 
@@ -883,28 +339,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -912,7 +349,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L143)
+[generated/decomposition/MiniBatchNMF.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L143)
 
 ***
 
@@ -924,68 +361,11 @@ Transform data back to its original space.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Transformed data matrix.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Xt`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Transformed data matrix.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Transformed data matrix. |
+| `opts.Xt`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Transformed data matrix. |
 
 #### Returns
 
@@ -993,7 +373,7 @@ Transformed data matrix.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L362)
+[generated/decomposition/MiniBatchNMF.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L362)
 
 ***
 
@@ -1009,102 +389,13 @@ This is especially useful when the whole dataset is too big to fit in memory at 
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.H`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial_fit`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.W`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial_fit`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Data matrix to be decomposed.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present here for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.H`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial_fit`. |
+| `opts.W`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial_fit`. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Data matrix to be decomposed. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
@@ -1112,7 +403,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L405)
+[generated/decomposition/MiniBatchNMF.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L405)
 
 ***
 
@@ -1126,51 +417,10 @@ See [Introducing the set_output API](https://scikit-learn.org/stable/modules/gen
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.transform`?
-
-</td>
-<td>
-
-`"default"` \| `"pandas"` \| `"polars"`
-
-</td>
-<td>
-
-Configure output of `transform` and `fit_transform`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
@@ -1178,7 +428,7 @@ Configure output of `transform` and `fit_transform`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L454)
+[generated/decomposition/MiniBatchNMF.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L454)
 
 ***
 
@@ -1190,51 +440,10 @@ Transform the data X according to the fitted MiniBatchNMF model.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Data matrix to be transformed by the model.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Data matrix to be transformed by the model. |
 
 #### Returns
 
@@ -1242,4 +451,4 @@ Data matrix to be transformed by the model.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L486)
+[generated/decomposition/MiniBatchNMF.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L486)

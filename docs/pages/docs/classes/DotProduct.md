@@ -14,82 +14,25 @@ The DotProduct kernel is non-stationary and can be obtained from linear regressi
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sigma_0`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameter controlling the inhomogenity of the kernel. If sigma_0=0, the kernel is homogeneous.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sigma_0_bounds`?
-
-</td>
-<td>
-
-`"fixed"`
-
-</td>
-<td>
-
-The lower and upper bound on ‘sigma_0’. If set to “fixed”, ‘sigma_0’ cannot be changed during hyperparameter tuning.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.sigma_0`? | `any` | Parameter controlling the inhomogenity of the kernel. If sigma_0=0, the kernel is homogeneous. |
+| `opts.sigma_0_bounds`? | `"fixed"` | The lower and upper bound on ‘sigma_0’. If set to “fixed”, ‘sigma_0’ cannot be changed during hyperparameter tuning. |
 
 **Returns** [`DotProduct`](DotProduct.md)
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L23)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L23)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/kernels/DotProduct.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L21) |
-| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/kernels/DotProduct.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L20) |
-| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/kernels/DotProduct.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L19) |
-| `id` | `string` | `undefined` | [generated/gaussian\_process/kernels/DotProduct.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L16) |
-| `opts` | `any` | `undefined` | [generated/gaussian\_process/kernels/DotProduct.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L17) |
+| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/kernels/DotProduct.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/kernels/DotProduct.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/kernels/DotProduct.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L19) |
+| `id` | `string` | `undefined` | [generated/gaussian\_process/kernels/DotProduct.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/gaussian\_process/kernels/DotProduct.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L17) |
 
 ## Accessors
 
@@ -107,32 +50,13 @@ The lower and upper bound on ‘sigma_0’. If set to “fixed”, ‘sigma_0’
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L40)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L40)
 
 ## Methods
 
@@ -144,89 +68,16 @@ Return the kernel k(X, Y) and optionally its gradient.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.eval_gradient`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Left argument of the returned kernel k(X, Y)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Y`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.eval_gradient`? | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`. |
+| `opts.X`? | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y`? | `ArrayLike`[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L109)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L109)
 
 ***
 
@@ -238,55 +89,14 @@ Returns a clone of self with given hyperparameters theta.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.theta`?
-
-</td>
-<td>
-
-`ArrayLike`
-
-</td>
-<td>
-
-The hyperparameters
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.theta`? | `ArrayLike` | The hyperparameters |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L153)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L153)
 
 ***
 
@@ -300,55 +110,14 @@ The result of this method is identical to np.diag(self(X)); however, it can be e
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-Left argument of the returned kernel k(X, Y).
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | Left argument of the returned kernel k(X, Y). |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L187)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L187)
 
 ***
 
@@ -362,7 +131,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L92)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L92)
 
 ***
 
@@ -376,32 +145,13 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L53)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L53)
 
 ***
 
@@ -413,29 +163,10 @@ Returns whether the kernel is stationary.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L219)
+**Defined in** [generated/gaussian\_process/kernels/DotProduct.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L219)

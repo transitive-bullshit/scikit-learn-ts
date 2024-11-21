@@ -16,51 +16,10 @@ The API does not change and you can refer to [`joblib.Parallel`](https://joblib.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.iterable`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Iterable containing tuples of (delayed_function, args, kwargs) that should be consumed.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.iterable`? | `any` | Iterable containing tuples of (delayed_function, args, kwargs) that should be consumed. |
 
 #### Returns
 
@@ -68,17 +27,17 @@ Iterable containing tuples of (delayed_function, args, kwargs) that should be co
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
+[generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21) |
-| `id` | `string` | `undefined` | [generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21) |
+| `id` | `string` | `undefined` | [generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19) |
 
 ## Accessors
 
@@ -98,28 +57,9 @@ Iterable containing tuples of (delayed_function, args, kwargs) that should be co
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -127,7 +67,7 @@ Iterable containing tuples of (delayed_function, args, kwargs) that should be co
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L35)
+[generated/utils/parallel/Parallel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L35)
 
 ***
 
@@ -145,7 +85,7 @@ List of results of the tasks.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L245)
+[generated/utils/parallel/Parallel.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L245)
 
 ## Methods
 
@@ -157,51 +97,10 @@ Dispatch the tasks and return the results.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.iterable`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Iterable containing tuples of (delayed_function, args, kwargs) that should be consumed.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.iterable`? | `any` | Iterable containing tuples of (delayed_function, args, kwargs) that should be consumed. |
 
 #### Returns
 
@@ -209,7 +108,7 @@ Iterable containing tuples of (delayed_function, args, kwargs) that should be co
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L103)
+[generated/utils/parallel/Parallel.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L103)
 
 ***
 
@@ -223,28 +122,9 @@ This method is meant to be called concurrently by the multiprocessing callback. 
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -252,7 +132,7 @@ This method is meant to be called concurrently by the multiprocessing callback. 
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L137)
+[generated/utils/parallel/Parallel.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L137)
 
 ***
 
@@ -268,28 +148,9 @@ The iterator consumption and dispatching is protected by the same lock so callin
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -297,7 +158,7 @@ The iterator consumption and dispatching is protected by the same lock so callin
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L167)
+[generated/utils/parallel/Parallel.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L167)
 
 ***
 
@@ -315,7 +176,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L86)
+[generated/utils/parallel/Parallel.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L86)
 
 ***
 
@@ -327,28 +188,9 @@ Return the formatted representation of the object.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -356,7 +198,7 @@ Return the formatted representation of the object.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L193)
+[generated/utils/parallel/Parallel.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L193)
 
 ***
 
@@ -370,28 +212,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -399,7 +222,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L48)
+[generated/utils/parallel/Parallel.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L48)
 
 ***
 
@@ -411,28 +234,9 @@ Display the process of the parallel execution only a fraction of time, controlle
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -440,4 +244,4 @@ Display the process of the parallel execution only a fraction of time, controlle
 
 #### Defined in
 
-[generated/utils/parallel/Parallel.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L219)
+[generated/utils/parallel/Parallel.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L219)

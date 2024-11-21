@@ -20,329 +20,26 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.class_weight`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one.
-
-The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`.
-
-Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.Cs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Each of the values in Cs describes the inverse of regularization strength. If Cs is as an int, then a grid of Cs values are chosen in a logarithmic scale between 1e-4 and 1e4. Like in support vector machines, smaller values specify stronger regularization.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.cv`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The default cross-validation generator used is Stratified K-Folds. If an integer is provided, then it is the number of folds used. See the module [`sklearn.model_selection`](https://scikit-learn.org/stable/modules/generated/../../api/sklearn.model_selection.html#module-sklearn.model_selection "sklearn.model_selection") module for the list of possible cross-validation objects.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.dual`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Dual (constrained) or primal (regularized, see also [this equation](https://scikit-learn.org/stable/modules/generated/../linear_model.html#regularized-logistic-loss)) formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n_samples > n_features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.fit_intercept`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-Specifies if a constant (a.k.a. bias or intercept) should be added to the decision function.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.intercept_scaling`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Useful only when the solver ‘liblinear’ is used and self.fit_intercept is set to `true`. In this case, x becomes \[x, self.intercept_scaling\], i.e. a “synthetic” feature with constant value equal to intercept_scaling is appended to the instance vector. The intercept becomes `intercept_scaling \* synthetic_feature_weight`.
-
-Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept_scaling has to be increased.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.l1_ratios`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-The list of Elastic-Net mixing parameter, with `0 <= l1_ratio <= 1`. Only used if `penalty='elasticnet'`. A value of 0 is equivalent to using `penalty='l2'`, while 1 is equivalent to using `penalty='l1'`. For `0 < l1_ratio <1`, the penalty is a combination of L1 and L2.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Maximum number of iterations of the optimization algorithm.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.multi_class`?
-
-</td>
-<td>
-
-`"ovr"` \| `"multinomial"`
-
-</td>
-<td>
-
-If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, *even when the data is binary*. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of CPU cores used during the cross-validation loop. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.penalty`?
-
-</td>
-<td>
-
-`"l1"` \| `"l2"` \| `"elasticnet"`
-
-</td>
-<td>
-
-Specify the norm of the penalty:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Used when `solver='sag'`, ‘saga’ or ‘liblinear’ to shuffle the data. Note that this only applies to the solver and not the cross-validation generator. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.refit`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If set to `true`, the scores are averaged across all folds, and the coefs and the C that corresponds to the best score is taken, and a final refit is done using these parameters. Otherwise the coefs, intercepts and C that correspond to the best scores across folds are averaged.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.scoring`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. For a list of scoring functions that can be used, look at [`sklearn.metrics`](https://scikit-learn.org/stable/modules/generated/../../api/sklearn.metrics.html#module-sklearn.metrics "sklearn.metrics"). The default scoring option used is ‘accuracy’.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.solver`?
-
-</td>
-<td>
-
-`"lbfgs"` \| `"newton-cholesky"` \| `"liblinear"` \| `"newton-cg"` \| `"sag"` \| `"saga"`
-
-</td>
-<td>
-
-Algorithm to use in the optimization problem. Default is ‘lbfgs’. To choose a solver, you might want to consider the following aspects:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Tolerance for stopping criteria.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any positive number for verbosity.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.class_weight`? | `any` | Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`. Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified. |
+| `opts.Cs`? | `number` | Each of the values in Cs describes the inverse of regularization strength. If Cs is as an int, then a grid of Cs values are chosen in a logarithmic scale between 1e-4 and 1e4. Like in support vector machines, smaller values specify stronger regularization. |
+| `opts.cv`? | `number` | The default cross-validation generator used is Stratified K-Folds. If an integer is provided, then it is the number of folds used. See the module [`sklearn.model_selection`](https://scikit-learn.org/stable/modules/generated/../../api/sklearn.model_selection.html#module-sklearn.model_selection "sklearn.model_selection") module for the list of possible cross-validation objects. |
+| `opts.dual`? | `boolean` | Dual (constrained) or primal (regularized, see also [this equation](https://scikit-learn.org/stable/modules/generated/../linear_model.html#regularized-logistic-loss)) formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n_samples > n_features. |
+| `opts.fit_intercept`? | `boolean` | Specifies if a constant (a.k.a. bias or intercept) should be added to the decision function. |
+| `opts.intercept_scaling`? | `number` | Useful only when the solver ‘liblinear’ is used and self.fit_intercept is set to `true`. In this case, x becomes \[x, self.intercept_scaling\], i.e. a “synthetic” feature with constant value equal to intercept_scaling is appended to the instance vector. The intercept becomes `intercept_scaling \* synthetic_feature_weight`. Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept_scaling has to be increased. |
+| `opts.l1_ratios`? | `any` | The list of Elastic-Net mixing parameter, with `0 <= l1_ratio <= 1`. Only used if `penalty='elasticnet'`. A value of 0 is equivalent to using `penalty='l2'`, while 1 is equivalent to using `penalty='l1'`. For `0 < l1_ratio <1`, the penalty is a combination of L1 and L2. |
+| `opts.max_iter`? | `number` | Maximum number of iterations of the optimization algorithm. |
+| `opts.multi_class`? | `"ovr"` \| `"multinomial"` | If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, *even when the data is binary*. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’. |
+| `opts.n_jobs`? | `number` | Number of CPU cores used during the cross-validation loop. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.penalty`? | `"l1"` \| `"l2"` \| `"elasticnet"` | Specify the norm of the penalty: |
+| `opts.random_state`? | `number` | Used when `solver='sag'`, ‘saga’ or ‘liblinear’ to shuffle the data. Note that this only applies to the solver and not the cross-validation generator. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details. |
+| `opts.refit`? | `boolean` | If set to `true`, the scores are averaged across all folds, and the coefs and the C that corresponds to the best score is taken, and a final refit is done using these parameters. Otherwise the coefs, intercepts and C that correspond to the best scores across folds are averaged. |
+| `opts.scoring`? | `string` | A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. For a list of scoring functions that can be used, look at [`sklearn.metrics`](https://scikit-learn.org/stable/modules/generated/../../api/sklearn.metrics.html#module-sklearn.metrics "sklearn.metrics"). The default scoring option used is ‘accuracy’. |
+| `opts.solver`? | `"lbfgs"` \| `"newton-cholesky"` \| `"liblinear"` \| `"newton-cg"` \| `"sag"` \| `"saga"` | Algorithm to use in the optimization problem. Default is ‘lbfgs’. To choose a solver, you might want to consider the following aspects: |
+| `opts.tol`? | `number` | Tolerance for stopping criteria. |
+| `opts.verbose`? | `number` | For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any positive number for verbosity. |
 
 #### Returns
 
@@ -350,17 +47,17 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
+[generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27) |
-| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26) |
-| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25) |
-| `id` | `string` | `undefined` | [generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22) |
-| `opts` | `any` | `undefined` | [generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23) |
+| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25) |
+| `id` | `string` | `undefined` | [generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23) |
 
 ## Accessors
 
@@ -378,7 +75,7 @@ Array of C that maps to the best scores across every class. If refit is set to `
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L847)
+[generated/linear\_model/LogisticRegressionCV.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L847)
 
 ***
 
@@ -396,7 +93,7 @@ A list of class labels known to the classifier.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L654)
+[generated/linear\_model/LogisticRegressionCV.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L654)
 
 ***
 
@@ -416,7 +113,7 @@ Coefficient of the features in the decision function.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L683)
+[generated/linear\_model/LogisticRegressionCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L683)
 
 ***
 
@@ -434,7 +131,7 @@ dict with classes as the keys, and the path of coefficients obtained during cros
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L793)
+[generated/linear\_model/LogisticRegressionCV.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L793)
 
 ***
 
@@ -452,7 +149,7 @@ Array of C i.e. inverse of regularization parameter values used for cross-valida
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L739)
+[generated/linear\_model/LogisticRegressionCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L739)
 
 ***
 
@@ -470,7 +167,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L955)
+[generated/linear\_model/LogisticRegressionCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L955)
 
 ***
 
@@ -490,7 +187,7 @@ If `fit_intercept` is set to `false`, the intercept is set to zero. `intercept_`
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L712)
+[generated/linear\_model/LogisticRegressionCV.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L712)
 
 ***
 
@@ -508,7 +205,7 @@ Array of l1_ratio that maps to the best scores across every class. If refit is s
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:874](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L874)
+[generated/linear\_model/LogisticRegressionCV.ts:874](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L874)
 
 ***
 
@@ -526,7 +223,7 @@ Array of l1_ratios used for cross-validation. If no l1_ratio is used (i.e. penal
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L766)
+[generated/linear\_model/LogisticRegressionCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L766)
 
 ***
 
@@ -544,7 +241,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L928)
+[generated/linear\_model/LogisticRegressionCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L928)
 
 ***
 
@@ -562,7 +259,7 @@ Actual number of iterations for all classes, folds and Cs. In the binary or mult
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:901](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L901)
+[generated/linear\_model/LogisticRegressionCV.ts:901](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L901)
 
 ***
 
@@ -582,28 +279,9 @@ Actual number of iterations for all classes, folds and Cs. In the binary or mult
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -611,7 +289,7 @@ Actual number of iterations for all classes, folds and Cs. In the binary or mult
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153)
+[generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153)
 
 ***
 
@@ -629,7 +307,7 @@ dict with classes as the keys, and the values as the grid of scores obtained dur
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L820)
+[generated/linear\_model/LogisticRegressionCV.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L820)
 
 ## Methods
 
@@ -643,51 +321,10 @@ The confidence score for a sample is proportional to the signed distance of that
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The data matrix for which we want to get the confidence scores.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The data matrix for which we want to get the confidence scores. |
 
 #### Returns
 
@@ -695,7 +332,7 @@ The data matrix for which we want to get the confidence scores.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L228)
+[generated/linear\_model/LogisticRegressionCV.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L228)
 
 ***
 
@@ -709,28 +346,9 @@ Converts the `coef_` member (back) to a numpy.ndarray. This is the default forma
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -738,7 +356,7 @@ Converts the `coef_` member (back) to a numpy.ndarray. This is the default forma
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L266)
+[generated/linear\_model/LogisticRegressionCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L266)
 
 ***
 
@@ -756,7 +374,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L209)
+[generated/linear\_model/LogisticRegressionCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L209)
 
 ***
 
@@ -768,102 +386,13 @@ Fit the model according to the given training data.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters to pass to the underlying splitter and scorer.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Target vector relative to X.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.params`? | `any` | Parameters to pass to the underlying splitter and scorer. |
+| `opts.sample_weight`? | `any` | Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target vector relative to X. |
 
 #### Returns
 
@@ -871,7 +400,7 @@ Target vector relative to X.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L294)
+[generated/linear\_model/LogisticRegressionCV.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L294)
 
 ***
 
@@ -885,51 +414,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information. |
 
 #### Returns
 
@@ -937,7 +425,7 @@ A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.u
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L345)
+[generated/linear\_model/LogisticRegressionCV.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L345)
 
 ***
 
@@ -951,28 +439,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -980,7 +449,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L166)
+[generated/linear\_model/LogisticRegressionCV.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L166)
 
 ***
 
@@ -992,51 +461,10 @@ Predict class labels for samples in X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The data matrix for which we want to get the predictions.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The data matrix for which we want to get the predictions. |
 
 #### Returns
 
@@ -1044,7 +472,7 @@ The data matrix for which we want to get the predictions.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L381)
+[generated/linear\_model/LogisticRegressionCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L381)
 
 ***
 
@@ -1058,51 +486,10 @@ The returned estimates for all classes are ordered by the label of classes.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Vector to be scored, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Vector to be scored, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 #### Returns
 
@@ -1110,7 +497,7 @@ Vector to be scored, where `n_samples` is the number of samples and `n_features`
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L417)
+[generated/linear\_model/LogisticRegressionCV.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L417)
 
 ***
 
@@ -1126,51 +513,10 @@ For a multi_class problem, if multi_class is set to be “multinomial” the sof
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Vector to be scored, where `n_samples` is the number of samples and `n_features` is the number of features.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Vector to be scored, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 #### Returns
 
@@ -1178,7 +524,7 @@ Vector to be scored, where `n_samples` is the number of samples and `n_features`
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L457)
+[generated/linear\_model/LogisticRegressionCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L457)
 
 ***
 
@@ -1190,102 +536,13 @@ Score using the `scoring` option on the given test data and labels.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-Sample weights.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.score_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Parameters to pass to the `score` method of the underlying scorer.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-Test samples.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-True labels for X.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights. |
+| `opts.score_params`? | `any` | Parameters to pass to the `score` method of the underlying scorer. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Test samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | True labels for X. |
 
 #### Returns
 
@@ -1293,7 +550,7 @@ True labels for X.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L493)
+[generated/linear\_model/LogisticRegressionCV.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L493)
 
 ***
 
@@ -1309,51 +566,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `fit`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `fit`. |
 
 #### Returns
 
@@ -1361,7 +577,7 @@ Metadata routing for `sample_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L546)
+[generated/linear\_model/LogisticRegressionCV.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L546)
 
 ***
 
@@ -1377,51 +593,10 @@ The options for each parameter are:
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.sample_weight`?
-
-</td>
-<td>
-
-`string` \| `boolean`
-
-</td>
-<td>
-
-Metadata routing for `sample_weight` parameter in `score`.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 #### Returns
 
@@ -1429,7 +604,7 @@ Metadata routing for `sample_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L586)
+[generated/linear\_model/LogisticRegressionCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L586)
 
 ***
 
@@ -1445,28 +620,9 @@ The `intercept_` member is not converted.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
@@ -1474,4 +630,4 @@ The `intercept_` member is not converted.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L626)
+[generated/linear\_model/LogisticRegressionCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L626)

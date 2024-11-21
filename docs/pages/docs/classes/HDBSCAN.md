@@ -16,288 +16,37 @@ For an example of how to use HDBSCAN, as well as a comparison to [`DBSCAN`](http
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.algorithm`?
-
-</td>
-<td>
-
-`"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"`
-
-</td>
-<td>
-
-Exactly which algorithm to use for computing core distances; By default this is set to `"auto"` which attempts to use a [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") tree if possible, otherwise it uses a [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") tree. Both `"kd_tree"` and `"ball_tree"` algorithms use the [`NearestNeighbors`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") estimator.
-
-If the `X` passed during `fit` is sparse or `metric` is invalid for both [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") and [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree"), then it resolves to use the `"brute"` algorithm.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.allow_single_cluster`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-By default HDBSCAN\* will not produce a single cluster, setting this to `true` will override this and allow single cluster results in the case that you feel this is a valid result for your dataset.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.alpha`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-A distance scaling parameter as used in robust single linkage. See [\[3\]](https://scikit-learn.org/stable/modules/generated/#r6f313792b2b7-3) for more information.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.cluster_selection_epsilon`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-A distance threshold. Clusters below this value will be merged. See [\[5\]](https://scikit-learn.org/stable/modules/generated/#r6f313792b2b7-5) for more information.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.cluster_selection_method`?
-
-</td>
-<td>
-
-`"eom"` \| `"leaf"`
-
-</td>
-<td>
-
-The method used to select clusters from the condensed tree. The standard approach for HDBSCAN\* is to use an Excess of Mass (`"eom"`) algorithm to find the most persistent clusters. Alternatively you can instead select the clusters at the leaves of the tree – this provides the most fine grained and homogeneous clusters.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.copy`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If `copy=True` then any time an in-place modifications would be made that would overwrite data passed to [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit), a copy will first be made, guaranteeing that the original data will be unchanged. Currently, it only applies when `metric="precomputed"`, when passing a dense array or a CSR sparse matrix and when `algorithm="brute"`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.leaf_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Leaf size for trees responsible for fast nearest neighbour queries when a KDTree or a BallTree are used as core-distance algorithms. A large dataset size and small `leaf_size` may induce excessive memory usage. If you are running out of memory consider increasing the `leaf_size` parameter. Ignored for `algorithm="brute"`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_cluster_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-A limit to the size of clusters returned by the `"eom"` cluster selection algorithm. There is no limit when `max_cluster_size=None`. Has no effect if `cluster_selection_method="leaf"`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.metric`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The metric to use when calculating distance between instances in a feature array.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.metric_params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Arguments passed to the distance metric.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.min_cluster_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The minimum number of samples in a group for that group to be considered a cluster; groupings smaller than this size will be left as noise.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.min_samples`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The parameter `k` used to calculate the distance between a point `x_p` and its k-th nearest neighbor. When `undefined`, defaults to `min_cluster_size`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_jobs`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of jobs to run in parallel to calculate distances. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.store_centers`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-Which, if any, cluster centers to compute and store. The options are:
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.algorithm`? | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Exactly which algorithm to use for computing core distances; By default this is set to `"auto"` which attempts to use a [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") tree if possible, otherwise it uses a [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") tree. Both `"kd_tree"` and `"ball_tree"` algorithms use the [`NearestNeighbors`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") estimator. If the `X` passed during `fit` is sparse or `metric` is invalid for both [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") and [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree"), then it resolves to use the `"brute"` algorithm. |
+| `opts.allow_single_cluster`? | `boolean` | By default HDBSCAN\* will not produce a single cluster, setting this to `true` will override this and allow single cluster results in the case that you feel this is a valid result for your dataset. |
+| `opts.alpha`? | `number` | A distance scaling parameter as used in robust single linkage. See [\[3\]](https://scikit-learn.org/stable/modules/generated/#r6f313792b2b7-3) for more information. |
+| `opts.cluster_selection_epsilon`? | `number` | A distance threshold. Clusters below this value will be merged. See [\[5\]](https://scikit-learn.org/stable/modules/generated/#r6f313792b2b7-5) for more information. |
+| `opts.cluster_selection_method`? | `"eom"` \| `"leaf"` | The method used to select clusters from the condensed tree. The standard approach for HDBSCAN\* is to use an Excess of Mass (`"eom"`) algorithm to find the most persistent clusters. Alternatively you can instead select the clusters at the leaves of the tree – this provides the most fine grained and homogeneous clusters. |
+| `opts.copy`? | `boolean` | If `copy=True` then any time an in-place modifications would be made that would overwrite data passed to [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit), a copy will first be made, guaranteeing that the original data will be unchanged. Currently, it only applies when `metric="precomputed"`, when passing a dense array or a CSR sparse matrix and when `algorithm="brute"`. |
+| `opts.leaf_size`? | `number` | Leaf size for trees responsible for fast nearest neighbour queries when a KDTree or a BallTree are used as core-distance algorithms. A large dataset size and small `leaf_size` may induce excessive memory usage. If you are running out of memory consider increasing the `leaf_size` parameter. Ignored for `algorithm="brute"`. |
+| `opts.max_cluster_size`? | `number` | A limit to the size of clusters returned by the `"eom"` cluster selection algorithm. There is no limit when `max_cluster_size=None`. Has no effect if `cluster_selection_method="leaf"`. |
+| `opts.metric`? | `string` | The metric to use when calculating distance between instances in a feature array. |
+| `opts.metric_params`? | `any` | Arguments passed to the distance metric. |
+| `opts.min_cluster_size`? | `number` | The minimum number of samples in a group for that group to be considered a cluster; groupings smaller than this size will be left as noise. |
+| `opts.min_samples`? | `number` | The parameter `k` used to calculate the distance between a point `x_p` and its k-th nearest neighbor. When `undefined`, defaults to `min_cluster_size`. |
+| `opts.n_jobs`? | `number` | Number of jobs to run in parallel to calculate distances. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details. |
+| `opts.store_centers`? | `string` | Which, if any, cluster centers to compute and store. The options are: |
 
 **Returns** [`HDBSCAN`](HDBSCAN.md)
 
-**Defined in** [generated/cluster/HDBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L25)
+**Defined in** [generated/cluster/HDBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/cluster/HDBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/cluster/HDBSCAN.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/cluster/HDBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L21) |
-| `id` | `string` | `undefined` | [generated/cluster/HDBSCAN.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/cluster/HDBSCAN.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/cluster/HDBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/cluster/HDBSCAN.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/cluster/HDBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L21) |
+| `id` | `string` | `undefined` | [generated/cluster/HDBSCAN.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/cluster/HDBSCAN.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L19) |
 
 ## Accessors
 
@@ -313,7 +62,7 @@ Note that `n_clusters` only counts non-outlier clusters. That is to say, the `\-
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L441)
+**Defined in** [generated/cluster/HDBSCAN.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L441)
 
 ***
 
@@ -327,7 +76,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L414)
+**Defined in** [generated/cluster/HDBSCAN.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L414)
 
 ***
 
@@ -341,7 +90,7 @@ Cluster labels for each point in the dataset given to [fit](https://scikit-learn
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L341)
+**Defined in** [generated/cluster/HDBSCAN.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L341)
 
 ***
 
@@ -357,7 +106,7 @@ Note that `n_clusters` only counts non-outlier clusters. That is to say, the `\-
 
 **Returns** `Promise`\<`ArrayLike`[]\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L466)
+**Defined in** [generated/cluster/HDBSCAN.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L466)
 
 ***
 
@@ -371,7 +120,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 **Returns** `Promise`\<`number`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L389)
+**Defined in** [generated/cluster/HDBSCAN.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L389)
 
 ***
 
@@ -385,7 +134,7 @@ The strength with which each sample is a member of its assigned cluster.
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L364)
+**Defined in** [generated/cluster/HDBSCAN.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L364)
 
 ***
 
@@ -403,32 +152,13 @@ The strength with which each sample is a member of its assigned cluster.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/cluster/HDBSCAN.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L120)
+**Defined in** [generated/cluster/HDBSCAN.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L120)
 
 ## Methods
 
@@ -446,72 +176,15 @@ This represents the result of selecting a cut value for robust single linkage cl
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.cut_distance`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The mutual reachability distance cut value to use to generate a flat clustering.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.min_cluster_size`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Clusters smaller than this value with be called ‘noise’ and remain unclustered in the resulting flat clustering.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.cut_distance`? | `number` | The mutual reachability distance cut value to use to generate a flat clustering. |
+| `opts.min_cluster_size`? | `number` | Clusters smaller than this value with be called ‘noise’ and remain unclustered in the resulting flat clustering. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L194)
+**Defined in** [generated/cluster/HDBSCAN.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L194)
 
 ***
 
@@ -525,7 +198,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L171)
+**Defined in** [generated/cluster/HDBSCAN.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L171)
 
 ***
 
@@ -537,72 +210,15 @@ Find clusters based on hierarchical density-based clustering.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-A feature array, or array of distances between samples if `metric='precomputed'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Ignored.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | A feature array, or array of distances between samples if `metric='precomputed'`. |
+| `opts.y`? | `any` | Ignored. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L233)
+**Defined in** [generated/cluster/HDBSCAN.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L233)
 
 ***
 
@@ -614,72 +230,15 @@ Cluster X and return the associated cluster labels.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`ArrayLike`[]
-
-</td>
-<td>
-
-A feature array, or array of distances between samples if `metric='precomputed'`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Ignored.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | A feature array, or array of distances between samples if `metric='precomputed'`. |
+| `opts.y`? | `any` | Ignored. |
 
 **Returns** `Promise`\<`ArrayLike`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L270)
+**Defined in** [generated/cluster/HDBSCAN.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L270)
 
 ***
 
@@ -693,55 +252,14 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L309)
+**Defined in** [generated/cluster/HDBSCAN.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L309)
 
 ***
 
@@ -755,29 +273,10 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/cluster/HDBSCAN.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L133)
+**Defined in** [generated/cluster/HDBSCAN.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L133)

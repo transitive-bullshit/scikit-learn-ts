@@ -16,272 +16,23 @@ Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.covariance_type`?
-
-</td>
-<td>
-
-`"full"` \| `"tied"` \| `"diag"` \| `"spherical"`
-
-</td>
-<td>
-
-String describing the type of covariance parameters to use. Must be one of:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.init_params`?
-
-</td>
-<td>
-
-`"k-means++"` \| `"random"` \| `"kmeans"` \| `"random_from_data"`
-
-</td>
-<td>
-
-The method used to initialize the weights, the means and the precisions. String must be one of:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.max_iter`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of EM iterations to perform.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.means_init`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-The user-provided initial means, If it is `undefined`, means are initialized using the `init_params` method.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_components`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of mixture components.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_init`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The number of initializations to perform. The best results are kept.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.precisions_init`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init_params’ method. The shape depends on ‘covariance_type’:
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.random_state`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Controls the random seed given to the method chosen to initialize the parameters (see `init_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.reg_covar`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Non-negative regularization added to the diagonal of covariance. Allows to assure that the covariance matrices are all positive.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.tol`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The convergence threshold. EM iterations will stop when the lower bound average gain is below this threshold.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Enable verbose output. If 1 then it prints the current initialization and each iteration step. If greater than 1 then it prints also the log probability and the time needed for each step.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.verbose_interval`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of iteration done before the next print.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.warm_start`?
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-If ‘warm_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.weights_init`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)
-
-</td>
-<td>
-
-The user-provided initial weights. If it is `undefined`, weights are initialized using the `init_params` method.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.covariance_type`? | `"full"` \| `"tied"` \| `"diag"` \| `"spherical"` | String describing the type of covariance parameters to use. Must be one of: |
+| `opts.init_params`? | `"k-means++"` \| `"random"` \| `"kmeans"` \| `"random_from_data"` | The method used to initialize the weights, the means and the precisions. String must be one of: |
+| `opts.max_iter`? | `number` | The number of EM iterations to perform. |
+| `opts.means_init`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | The user-provided initial means, If it is `undefined`, means are initialized using the `init_params` method. |
+| `opts.n_components`? | `number` | The number of mixture components. |
+| `opts.n_init`? | `number` | The number of initializations to perform. The best results are kept. |
+| `opts.precisions_init`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init_params’ method. The shape depends on ‘covariance_type’: |
+| `opts.random_state`? | `number` | Controls the random seed given to the method chosen to initialize the parameters (see `init_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.reg_covar`? | `number` | Non-negative regularization added to the diagonal of covariance. Allows to assure that the covariance matrices are all positive. |
+| `opts.tol`? | `number` | The convergence threshold. EM iterations will stop when the lower bound average gain is below this threshold. |
+| `opts.verbose`? | `number` | Enable verbose output. If 1 then it prints the current initialization and each iteration step. If greater than 1 then it prints also the log probability and the time needed for each step. |
+| `opts.verbose_interval`? | `number` | Number of iteration done before the next print. |
+| `opts.warm_start`? | `boolean` | If ‘warm_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start). |
+| `opts.weights_init`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | The user-provided initial weights. If it is `undefined`, weights are initialized using the `init_params` method. |
 
 #### Returns
 
@@ -289,17 +40,17 @@ The user-provided initial weights. If it is `undefined`, weights are initialized
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L25)
+[generated/mixture/GaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/mixture/GaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/mixture/GaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/mixture/GaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L21) |
-| `id` | `string` | `undefined` | [generated/mixture/GaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/mixture/GaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/mixture/GaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/mixture/GaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/mixture/GaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L21) |
+| `id` | `string` | `undefined` | [generated/mixture/GaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/mixture/GaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L19) |
 
 ## Accessors
 
@@ -317,7 +68,7 @@ True when convergence of the best fit of EM was reached, `false` otherwise.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L663)
+[generated/mixture/GaussianMixture.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L663)
 
 ***
 
@@ -335,7 +86,7 @@ The covariance of each mixture component. The shape depends on `covariance_type`
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L588)
+[generated/mixture/GaussianMixture.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L588)
 
 ***
 
@@ -353,7 +104,7 @@ Names of features seen during [fit](https://scikit-learn.org/stable/modules/gene
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L763)
+[generated/mixture/GaussianMixture.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L763)
 
 ***
 
@@ -371,7 +122,7 @@ Lower bound value on the log-likelihood (of the training data with respect to th
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L713)
+[generated/mixture/GaussianMixture.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L713)
 
 ***
 
@@ -389,7 +140,7 @@ The mean of each mixture component.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L563)
+[generated/mixture/GaussianMixture.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L563)
 
 ***
 
@@ -407,7 +158,7 @@ Number of features seen during [fit](https://scikit-learn.org/stable/modules/gen
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L738)
+[generated/mixture/GaussianMixture.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L738)
 
 ***
 
@@ -425,7 +176,7 @@ Number of step used by the best fit of EM to reach the convergence.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L688)
+[generated/mixture/GaussianMixture.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L688)
 
 ***
 
@@ -443,7 +194,7 @@ The precision matrices for each component in the mixture. A precision matrix is 
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L613)
+[generated/mixture/GaussianMixture.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L613)
 
 ***
 
@@ -461,7 +212,7 @@ The cholesky decomposition of the precision matrices of each mixture component. 
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L638)
+[generated/mixture/GaussianMixture.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L638)
 
 ***
 
@@ -481,28 +232,9 @@ The cholesky decomposition of the precision matrices of each mixture component. 
 
 ##### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 ##### Returns
 
@@ -510,7 +242,7 @@ The cholesky decomposition of the precision matrices of each mixture component. 
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120)
+[generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120)
 
 ***
 
@@ -528,7 +260,7 @@ The weights of each mixture components.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L538)
+[generated/mixture/GaussianMixture.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L538)
 
 ## Methods
 
@@ -542,51 +274,10 @@ You can refer to this [mathematical section](https://scikit-learn.org/stable/mod
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any`[] | The input samples. |
 
 #### Returns
 
@@ -594,7 +285,7 @@ The input samples.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L191)
+[generated/mixture/GaussianMixture.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L191)
 
 ***
 
@@ -608,51 +299,10 @@ You can refer to this [mathematical section](https://scikit-learn.org/stable/mod
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-`any`[]
-
-</td>
-<td>
-
-The input samples.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any`[] | The input samples. |
 
 #### Returns
 
@@ -660,7 +310,7 @@ The input samples.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L225)
+[generated/mixture/GaussianMixture.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L225)
 
 ***
 
@@ -678,7 +328,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L172)
+[generated/mixture/GaussianMixture.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L172)
 
 ***
 
@@ -692,68 +342,11 @@ The method fits the model `n_init` times and sets the parameters with which the 
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-List of n_features-dimensional data points. Each row corresponds to a single data point.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | List of n_features-dimensional data points. Each row corresponds to a single data point. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
@@ -761,7 +354,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L259)
+[generated/mixture/GaussianMixture.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L259)
 
 ***
 
@@ -775,68 +368,11 @@ The method fits the model n_init times and sets the parameters with which the mo
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-List of n_features-dimensional data points. Each row corresponds to a single data point.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | List of n_features-dimensional data points. Each row corresponds to a single data point. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
@@ -844,7 +380,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L298)
+[generated/mixture/GaussianMixture.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L298)
 
 ***
 
@@ -858,51 +394,10 @@ Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.routing`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
 
 #### Returns
 
@@ -910,7 +405,7 @@ A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L337)
+[generated/mixture/GaussianMixture.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L337)
 
 ***
 
@@ -924,28 +419,9 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 #### Returns
 
@@ -953,7 +429,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L133)
+[generated/mixture/GaussianMixture.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L133)
 
 ***
 
@@ -965,51 +441,10 @@ Predict the labels for the data samples in X using trained model.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-List of n_features-dimensional data points. Each row corresponds to a single data point.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | List of n_features-dimensional data points. Each row corresponds to a single data point. |
 
 #### Returns
 
@@ -1017,7 +452,7 @@ List of n_features-dimensional data points. Each row corresponds to a single dat
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L371)
+[generated/mixture/GaussianMixture.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L371)
 
 ***
 
@@ -1029,51 +464,10 @@ Evaluate the components’ density for each sample.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-List of n_features-dimensional data points. Each row corresponds to a single data point.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | List of n_features-dimensional data points. Each row corresponds to a single data point. |
 
 #### Returns
 
@@ -1081,7 +475,7 @@ List of n_features-dimensional data points. Each row corresponds to a single dat
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L403)
+[generated/mixture/GaussianMixture.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L403)
 
 ***
 
@@ -1093,51 +487,10 @@ Generate random samples from the fitted Gaussian distribution.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.n_samples`?
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-Number of samples to generate.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.n_samples`? | `number` | Number of samples to generate. |
 
 #### Returns
 
@@ -1145,7 +498,7 @@ Number of samples to generate.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L435)
+[generated/mixture/GaussianMixture.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L435)
 
 ***
 
@@ -1157,68 +510,11 @@ Compute the per-sample average log-likelihood of the given data X.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-List of n_features-dimensional data points. Each row corresponds to a single data point.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.y`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-Not used, present for API consistency by convention.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | List of n_features-dimensional data points. Each row corresponds to a single data point. |
+| `opts.y`? | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
@@ -1226,7 +522,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L469)
+[generated/mixture/GaussianMixture.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L469)
 
 ***
 
@@ -1238,51 +534,10 @@ Compute the log-likelihood of each sample.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.X`?
-
-</td>
-<td>
-
-[`ArrayLike`](../type-aliases/ArrayLike.md)[]
-
-</td>
-<td>
-
-List of n_features-dimensional data points. Each row corresponds to a single data point.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | List of n_features-dimensional data points. Each row corresponds to a single data point. |
 
 #### Returns
 
@@ -1290,4 +545,4 @@ List of n_features-dimensional data points. Each row corresponds to a single dat
 
 #### Defined in
 
-[generated/mixture/GaussianMixture.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L506)
+[generated/mixture/GaussianMixture.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L506)

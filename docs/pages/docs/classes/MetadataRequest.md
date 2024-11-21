@@ -16,65 +16,24 @@ Consumer-only classes such as simple estimators return a serialized version of t
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`?
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.owner`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The name of the object to which these requests belong.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.owner`? | `string` | The name of the object to which these requests belong. |
 
 **Returns** [`MetadataRequest`](MetadataRequest.md)
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L25)
+**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L25)
 
 ## Properties
 
 | Property | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ |
-| `_isDisposed` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRequest.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L23) |
-| `_isInitialized` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRequest.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L22) |
-| `_py` | `PythonBridge` | `undefined` | [generated/utils/metadata\_routing/MetadataRequest.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L21) |
-| `id` | `string` | `undefined` | [generated/utils/metadata\_routing/MetadataRequest.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L18) |
-| `opts` | `any` | `undefined` | [generated/utils/metadata\_routing/MetadataRequest.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L19) |
+| `_isDisposed` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRequest.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/utils/metadata\_routing/MetadataRequest.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/utils/metadata\_routing/MetadataRequest.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L21) |
+| `id` | `string` | `undefined` | [generated/utils/metadata\_routing/MetadataRequest.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/utils/metadata\_routing/MetadataRequest.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L19) |
 
 ## Accessors
 
@@ -92,32 +51,13 @@ The name of the object to which these requests belong.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`pythonBridge`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
 
 **Returns** `void`
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L35)
+**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L35)
 
 ## Methods
 
@@ -129,72 +69,15 @@ Check whether the given parameters are consumed by the given method.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-`object`
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.method`?
-
-</td>
-<td>
-
-`string`
-
-</td>
-<td>
-
-The name of the method to check.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.params`?
-
-</td>
-<td>
-
-`any`
-
-</td>
-<td>
-
-An iterable of parameters to check.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.method`? | `string` | The name of the method to check. |
+| `opts.params`? | `any` | An iterable of parameters to check. |
 
 **Returns** `Promise`\<`any`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L104)
+**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L104)
 
 ***
 
@@ -208,7 +91,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L87)
+**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L87)
 
 ***
 
@@ -222,29 +105,10 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 **Parameters**
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`py`
-
-</td>
-<td>
-
-`PythonBridge`
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
 
 **Returns** `Promise`\<`void`\>
 
-**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L48)
+**Defined in** [generated/utils/metadata\_routing/MetadataRequest.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/utils/metadata_routing/MetadataRequest.ts#L48)
