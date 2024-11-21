@@ -1,6 +1,6 @@
 {
   "name": "sklearn-docs",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "private": true,
   "description": "sklearn docs website",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
