@@ -1,12 +1,10 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: GaussianProcessRegressor
 
 Gaussian process regression (GPR).
 
-The implementation is based on Algorithm 2.1 of [\[RW2006\]](#rf75674b0f418-rw2006).
+The implementation is based on Algorithm 2.1 of [\[RW2006\]](https://scikit-learn.org/stable/modules/generated/#rf75674b0f418-rw2006).
 
-In addition to standard scikit-learn estimator API, [`GaussianProcessRegressor`](#sklearn.gaussian_process.GaussianProcessRegressor "sklearn.gaussian_process.GaussianProcessRegressor"):
+In addition to standard scikit-learn estimator API, [`GaussianProcessRegressor`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor "sklearn.gaussian_process.GaussianProcessRegressor"):
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html)
 
@@ -18,59 +16,170 @@ In addition to standard scikit-learn estimator API, [`GaussianProcessRegressor`]
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.alpha?**: `number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`?
 
-Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a `WhiteKernel`. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with [`Ridge`](sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge "sklearn.linear_model.Ridge").
+</td>
+<td>
 
-**Default Value**
+`object`
 
-`1e-10`
+</td>
+<td>
 
-• **opts.copy\_X\_train?**: `boolean`
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.alpha`?
+
+</td>
+<td>
+
+`number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
+
+Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a `WhiteKernel`. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with [`Ridge`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge "sklearn.linear_model.Ridge").
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.copy_X_train`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.kernel`?
 
-• **opts.kernel?**: `any`
+</td>
+<td>
 
-The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
+`any`
 
-• **opts.n\_restarts\_optimizer?**: `number`
+</td>
+<td>
 
-The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n\_restarts\_optimizer \== 0` implies that one run is performed.
+The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant_value_bounds="fixed") \* RBF(1.0, length_scale_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0`
+`opts.n_restarts_optimizer`?
 
-• **opts.n\_targets?**: `number`
+</td>
+<td>
 
-The number of dimensions of the target values. Used to decide the number of outputs when sampling from the prior distributions (i.e. calling [`sample\_y`](#sklearn.gaussian_process.GaussianProcessRegressor.sample_y "sklearn.gaussian_process.GaussianProcessRegressor.sample_y") before [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit")). This parameter is ignored once [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit") has been called.
+`number`
 
-• **opts.normalize\_y?**: `boolean`
+</td>
+<td>
+
+The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n_restarts_optimizer \== 0` implies that one run is performed.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.n_targets`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The number of dimensions of the target values. Used to decide the number of outputs when sampling from the prior distributions (i.e. calling [`sample_y`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor.sample_y "sklearn.gaussian_process.GaussianProcessRegressor.sample_y") before [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit")). This parameter is ignored once [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit") has been called.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.normalize_y`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether or not to normalize the target values `y` by removing the mean and scaling to unit-variance. This is recommended for cases where zero-mean, unit-variance priors are used. Note that, in this implementation, the normalisation is reversed before the GP predictions are reported.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.optimizer`?
 
-• **opts.optimizer?**: `"fmin_l_bfgs_b"`
+</td>
+<td>
+
+`"fmin_l_bfgs_b"`
+
+</td>
+<td>
 
 Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'fmin_l_bfgs_b'`
+`opts.random_state`?
 
-• **opts.random\_state?**: `number`
+</td>
+<td>
 
-Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+`number`
+
+</td>
+<td>
+
+Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -78,57 +187,17 @@ Determines random number generation used to initialize the centers. Pass an int 
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L25)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/gaussian\_process/GaussianProcessRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L23)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/gaussian\_process/GaussianProcessRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L22)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/gaussian\_process/GaussianProcessRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L21)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/gaussian\_process/GaussianProcessRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L18)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/gaussian\_process/GaussianProcessRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/GaussianProcessRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/GaussianProcessRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/GaussianProcessRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L21) |
+| `id` | `string` | `undefined` | [generated/gaussian\_process/GaussianProcessRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/gaussian\_process/GaussianProcessRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L19) |
 
 ## Accessors
 
@@ -146,7 +215,7 @@ Dual coefficients of training data points in kernel space.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L623)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L623)
 
 ***
 
@@ -156,7 +225,7 @@ Dual coefficients of training data points in kernel space.
 
 > **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
 ##### Returns
 
@@ -164,7 +233,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L704)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L704)
 
 ***
 
@@ -182,7 +251,7 @@ The kernel used for prediction. The structure of the kernel is the same as the o
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L569)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L569)
 
 ***
 
@@ -192,7 +261,7 @@ The kernel used for prediction. The structure of the kernel is the same as the o
 
 > **get** **L\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Lower-triangular Cholesky decomposition of the kernel in `X\_train\_`.
+Lower-triangular Cholesky decomposition of the kernel in `X_train_`.
 
 ##### Returns
 
@@ -200,7 +269,7 @@ Lower-triangular Cholesky decomposition of the kernel in `X\_train\_`.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L596)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L596)
 
 ***
 
@@ -210,7 +279,7 @@ Lower-triangular Cholesky decomposition of the kernel in `X\_train\_`.
 
 > **get** **log\_marginal\_likelihood\_value\_**(): `Promise`\<`number`\>
 
-The log-marginal-likelihood of `self.kernel\_.theta`.
+The log-marginal-likelihood of `self.kernel_.theta`.
 
 ##### Returns
 
@@ -218,7 +287,7 @@ The log-marginal-likelihood of `self.kernel\_.theta`.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L650)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L650)
 
 ***
 
@@ -228,7 +297,7 @@ The log-marginal-likelihood of `self.kernel\_.theta`.
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
 ##### Returns
 
@@ -236,7 +305,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L677)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L677)
 
 ***
 
@@ -256,7 +325,28 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -264,7 +354,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L80)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L80)
 
 ***
 
@@ -282,7 +372,7 @@ Feature vectors or other representations of training data (also required for pre
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L515)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L515)
 
 ***
 
@@ -300,7 +390,7 @@ Target values in training data (also required for prediction).
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L542)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L542)
 
 ## Methods
 
@@ -318,7 +408,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L136)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L136)
 
 ***
 
@@ -330,15 +420,68 @@ Fit Gaussian process regression model.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Feature vectors or other representations of training data.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Target values.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -346,7 +489,7 @@ Target values.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L153)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L153)
 
 ***
 
@@ -356,15 +499,55 @@ Target values.
 
 Get metadata routing of this object.
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -372,7 +555,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L194)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L194)
 
 ***
 
@@ -386,7 +569,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -394,7 +598,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L93)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L93)
 
 ***
 
@@ -406,27 +610,85 @@ Return log-marginal likelihood of theta for training data.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.clone\_kernel?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.clone_kernel`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.eval_gradient`?
 
-• **opts.eval\_gradient?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. If `true`, theta must not be `undefined`.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.theta`?
 
-• **opts.theta?**: `any`
+</td>
+<td>
 
-Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
+`any`
+
+</td>
+<td>
+
+Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log_marginal_likelihood of `self.kernel_.theta` is returned.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -434,7 +696,7 @@ Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `u
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L230)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L230)
 
 ***
 
@@ -444,31 +706,89 @@ Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `u
 
 Predict using the Gaussian process regression model.
 
-We can also predict based on an unfitted model by using the GP prior. In addition to the mean of the predictive distribution, optionally also returns its standard deviation (`return\_std=True`) or covariance (`return\_cov=True`). Note that at most one of the two can be requested.
+We can also predict based on an unfitted model by using the GP prior. In addition to the mean of the predictive distribution, optionally also returns its standard deviation (`return_std=True`) or covariance (`return_cov=True`). Note that at most one of the two can be requested.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.return\_cov?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.return_cov`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, the covariance of the joint predictive distribution at the query points is returned along with the mean.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.return_std`?
 
-• **opts.return\_std?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, the standard-deviation of the predictive distribution at the query points is returned along with the mean.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.X`?
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Query points where the GP is evaluated.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -476,7 +796,7 @@ Query points where the GP is evaluated.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L282)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L282)
 
 ***
 
@@ -488,27 +808,85 @@ Draw samples from Gaussian process and evaluate at X.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.n\_samples?**: `number`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.n_samples`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Number of samples drawn from the Gaussian process per query point.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.random_state`?
 
-• **opts.random\_state?**: `number`
+</td>
+<td>
 
-Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`0`
+Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Query points where the GP is evaluated.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -516,7 +894,7 @@ Query points where the GP is evaluated.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L332)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L332)
 
 ***
 
@@ -526,23 +904,89 @@ Query points where the GP is evaluated.
 
 Return the coefficient of determination of the prediction.
 
-The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
 
-Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+`opts.X`?
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 True values for `X`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -550,7 +994,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L384)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L384)
 
 ***
 
@@ -560,21 +1004,74 @@ True values for `X`.
 
 Request metadata passed to the `predict` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.return\_cov?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `return\_cov` parameter in `predict`.
+</td>
+<td>
 
-• **opts.return\_std?**: `string` \| `boolean`
+`object`
 
-Metadata routing for `return\_std` parameter in `predict`.
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.return_cov`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `return_cov` parameter in `predict`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.return_std`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `return_std` parameter in `predict`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -582,7 +1079,7 @@ Metadata routing for `return\_std` parameter in `predict`.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L434)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L434)
 
 ***
 
@@ -592,17 +1089,57 @@ Metadata routing for `return\_std` parameter in `predict`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -610,4 +1147,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessRegressor.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L479)
+[generated/gaussian\_process/GaussianProcessRegressor.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L479)

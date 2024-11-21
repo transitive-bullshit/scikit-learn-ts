@@ -1,14 +1,12 @@
-**sklearn** • **Docs**
-
-***
+# Class: AdaBoostClassifier
 
 An AdaBoost classifier.
 
-An AdaBoost [\[1\]](#r33e4ec8c4ad5-1) classifier is a meta-estimator that begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
+An AdaBoost [\[1\]](https://scikit-learn.org/stable/modules/generated/#r33e4ec8c4ad5-1) classifier is a meta-estimator that begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
 
-This class implements the algorithm based on [\[2\]](#r33e4ec8c4ad5-2).
+This class implements the algorithm based on [\[2\]](https://scikit-learn.org/stable/modules/generated/#r33e4ec8c4ad5-2).
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#adaboost).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html)
 
@@ -18,271 +16,290 @@ Read more in the User Guide.
 
 > **new AdaBoostClassifier**(`opts`?): [`AdaBoostClassifier`](AdaBoostClassifier.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.algorithm?**: `"SAMME"` \| `"SAMME.R"`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.algorithm`?
+
+</td>
+<td>
+
+`"SAMME"` \| `"SAMME.R"`
+
+</td>
+<td>
 
 If ‘SAMME.R’ then use the SAMME.R real boosting algorithm. `estimator` must support calculation of class probabilities. If ‘SAMME’ then use the SAMME discrete boosting algorithm. The SAMME.R algorithm typically converges faster than SAMME, achieving a lower test error with fewer boosting iterations.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'SAMME.R'`
+`opts.estimator`?
 
-• **opts.estimator?**: `any`
+</td>
+<td>
 
-The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
+`any`
 
-• **opts.learning\_rate?**: `number`
+</td>
+<td>
 
-Weight applied to each classifier at each boosting iteration. A higher learning rate increases the contribution of each classifier. There is a trade-off between the `learning\_rate` and `n\_estimators` parameters. Values must be in the range `(0.0, inf)`.
+The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes_` and `n_classes_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max_depth=1`.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.learning_rate`?
 
-• **opts.n\_estimators?**: `number`
+</td>
+<td>
 
-The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range `\1, inf)`.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`50`
+Weight applied to each classifier at each boosting iteration. A higher learning rate increases the contribution of each classifier. There is a trade-off between the `learning_rate` and `n_estimators` parameters. Values must be in the range `(0.0, inf)`.
 
-• **opts.random\_state?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary.
+`opts.n_estimators`?
 
-#### Returns
+</td>
+<td>
 
-[`AdaBoostClassifier`](AdaBoostClassifier.md)
+`number`
 
-#### Defined in
+</td>
+<td>
 
-[generated/ensemble/AdaBoostClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L27)
+The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range `\[1, inf)`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.random_state`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** [`AdaBoostClassifier`](AdaBoostClassifier.md)
+
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L27)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L25)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L24)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L23)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L20)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L21)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/ensemble/AdaBoostClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/ensemble/AdaBoostClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/ensemble/AdaBoostClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L23) |
+| `id` | `string` | `undefined` | [generated/ensemble/AdaBoostClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/ensemble/AdaBoostClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L21) |
 
 ## Accessors
 
 ### classes\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **classes\_**(): `Promise`\<`ArrayLike`\>
 
 The classes labels.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L706)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L706)
 
 ***
 
 ### estimator\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **estimator\_**(): `Promise`\<`any`\>
 
 The base estimator from which the ensemble is grown.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L652)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L652)
 
 ***
 
 ### estimator\_errors\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **estimator\_errors\_**(): `Promise`\<`any`\>
 
 Classification error for each estimator in the boosted ensemble.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L787)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L787)
 
 ***
 
 ### estimator\_weights\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **estimator\_weights\_**(): `Promise`\<`any`\>
 
 Weights for each estimator in the boosted ensemble.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L760)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L760)
 
 ***
 
 ### estimators\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **estimators\_**(): `Promise`\<`any`\>
 
 The collection of fitted sub-estimators.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L679)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L679)
 
 ***
 
 ### feature\_names\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:841](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L841)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:841](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L841)
 
 ***
 
 ### n\_classes\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_classes\_**(): `Promise`\<`number`\>
 
 The number of classes.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L733)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L733)
 
 ***
 
 ### n\_features\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during fit.
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L814)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L814)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/ensemble/AdaBoostClassifier.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L63)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L63)
 
 ## Methods
 
@@ -292,21 +309,57 @@ Number of features seen during fit.
 
 Compute the decision function of `X`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L136)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L136)
 
 ***
 
@@ -318,13 +371,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L119)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L119)
 
 ***
 
@@ -334,29 +383,91 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Build a boosted classifier/regressor from the training set (X, y).
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `ArrayLike`
+`opts`
 
-Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
+</td>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+Sample weights. If `undefined`, the sample weights are initialized to 1 / n_samples.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The target values.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L172)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L172)
 
 ***
 
@@ -368,17 +479,34 @@ Raise `NotImplementedError`.
 
 This estimator does not support metadata routing yet.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/ensemble/AdaBoostClassifier.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L218)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L218)
 
 ***
 
@@ -390,17 +518,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/ensemble/AdaBoostClassifier.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L76)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L76)
 
 ***
 
@@ -412,21 +557,57 @@ Predict classes for X.
 
 The predicted class of an input sample is computed as the weighted mean prediction of the classifiers in the ensemble.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L250)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L250)
 
 ***
 
@@ -438,21 +619,57 @@ Predict class log-probabilities for X.
 
 The predicted class log-probabilities of an input sample is computed as the weighted mean predicted class log-probabilities of the classifiers in the ensemble.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`[]\>
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L286)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L286)
 
 ***
 
@@ -464,21 +681,57 @@ Predict class probabilities for X.
 
 The predicted class probabilities of an input sample is computed as the weighted mean predicted class probabilities of the classifiers in the ensemble.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`[]\>
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L324)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L324)
 
 ***
 
@@ -490,29 +743,91 @@ Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 Test samples.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 True labels for `X`.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`number`\>
+**Returns** `Promise`\<`number`\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L362)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L362)
 
 ***
 
@@ -522,25 +837,61 @@ True labels for `X`.
 
 Request metadata passed to the `fit` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `fit`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/ensemble/AdaBoostClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L410)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `fit`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L410)
 
 ***
 
@@ -550,25 +901,61 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/ensemble/AdaBoostClassifier.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L450)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L450)
 
 ***
 
@@ -580,21 +967,57 @@ Compute decision function of `X` for each boosting iteration.
 
 This method allows monitoring (i.e. determine error on testing set) after each boosting iteration.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`[]\>
+**Returns** `Promise`\<`any`[]\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L488)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L488)
 
 ***
 
@@ -608,21 +1031,57 @@ The predicted class of an input sample is computed as the weighted mean predicti
 
 This generator method yields the ensemble prediction after each iteration of boosting and therefore allows monitoring, such as to determine the prediction on a test set after each boost.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 The input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`[]\>
+**Returns** `Promise`\<`any`[]\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L528)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L528)
 
 ***
 
@@ -636,21 +1095,57 @@ The predicted class probabilities of an input sample is computed as the weighted
 
 This generator method yields the ensemble predicted class probabilities after each iteration of boosting and therefore allows monitoring, such as to determine the predicted class probabilities on a test set after each boost.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`[]\>
+**Returns** `Promise`\<`any`[]\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L568)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L568)
 
 ***
 
@@ -662,26 +1157,88 @@ Return staged scores for X, y.
 
 This generator method yields the ensemble score after each iteration of boosting and therefore allows monitoring, such as to determine the score on a test set after each boost.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Labels for X.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`number`\>
+**Returns** `Promise`\<`number`\>
 
-#### Defined in
-
-[generated/ensemble/AdaBoostClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L606)
+**Defined in** [generated/ensemble/AdaBoostClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L606)

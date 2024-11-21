@@ -24,7 +24,7 @@ export class DictionaryLearning {
 
   constructor(opts?: {
     /**
-      Number of dictionary elements to extract. If `undefined`, then `n\_components` is set to `n\_features`.
+      Number of dictionary elements to extract. If `undefined`, then `n_components` is set to `n_features`.
      */
     n_components?: number
 
@@ -50,7 +50,7 @@ export class DictionaryLearning {
     tol?: number
 
     /**
-      `'lars'`: uses the least angle regression method to solve the lasso problem ([`lars\_path`](sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path "sklearn.linear_model.lars_path"));
+      `'lars'`: uses the least angle regression method to solve the lasso problem ([`lars_path`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path "sklearn.linear_model.lars_path"));
 
       @defaultValue `'lars'`
      */
@@ -69,27 +69,27 @@ export class DictionaryLearning {
       | 'threshold'
 
     /**
-      Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
+      Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform_n_nonzero_coefs=int(n_features / 10)`.
      */
     transform_n_nonzero_coefs?: number
 
     /**
-      If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
+      If `algorithm='lasso_lars'` or `algorithm='lasso_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
      */
     transform_alpha?: number
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Initial value for the code, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
+      Initial value for the code, for warm restart. Only used if `code_init` and `dict_init` are not `undefined`.
      */
     code_init?: NDArray[]
 
     /**
-      Initial values for the dictionary, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
+      Initial values for the dictionary, for warm restart. Only used if `code_init` and `dict_init` are not `undefined`.
      */
     dict_init?: NDArray[]
 
@@ -113,7 +113,7 @@ export class DictionaryLearning {
     split_sign?: boolean
 
     /**
-      Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used for initializing the dictionary when `dict_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -132,7 +132,7 @@ export class DictionaryLearning {
     positive_dict?: boolean
 
     /**
-      Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_lars'`.
+      Maximum number of iterations to perform if `algorithm='lasso_cd'` or `'lasso_lars'`.
 
       @defaultValue `1000`
      */
@@ -217,7 +217,7 @@ ctor_DictionaryLearning = {k: v for k, v in ctor_DictionaryLearning.items() if v
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -256,7 +256,7 @@ pms_DictionaryLearning_fit = {k: v for k, v in pms_DictionaryLearning_fit.items(
    */
   async fit_transform(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -295,7 +295,7 @@ pms_DictionaryLearning_fit_transform = {k: v for k, v in pms_DictionaryLearning_
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -333,11 +333,11 @@ pms_DictionaryLearning_get_feature_names_out = {k: v for k, v in pms_DictionaryL
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -371,11 +371,11 @@ pms_DictionaryLearning_get_metadata_routing = {k: v for k, v in pms_DictionaryLe
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -407,7 +407,7 @@ pms_DictionaryLearning_set_output = {k: v for k, v in pms_DictionaryLearning_set
   /**
     Encode the data as a sparse combination of the dictionary atoms.
 
-    Coding method is determined by the object parameter `transform\_algorithm`.
+    Coding method is determined by the object parameter `transform_algorithm`.
    */
   async transform(opts: {
     /**
@@ -495,7 +495,7 @@ pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_tran
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -522,7 +522,7 @@ pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_tran
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

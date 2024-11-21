@@ -55,9 +55,14 @@ async function main() {
           // TODO: handle relative links
           .replaceAll(/\[([^\]]+)]\((\.\.[^)]+)\)/g, '$1')
           .replaceAll('[Readme](readme.md)', '')
+          .replaceAll(/#+ Parameters/g, '**Parameters**')
+          .replaceAll(/#+ Returns\n\n/gm, '**Returns** ')
+          .replaceAll(/#+ Defined in\n\n/gm, '**Defined in** ')
+          .replaceAll(/#+ Get Signature/g, '**Get Signature**')
+          .replaceAll(/#+ Set Signature/g, '**Set Signature**')
           .trim() + '\n'
 
-      if (doc.relativePath === 'modules.md') {
+      if (doc.relativePath === 'globals.md') {
         out = out.replaceAll(/### Variables\b/g, '### Constants')
       }
 
@@ -82,12 +87,16 @@ async function main() {
   )
 
   {
-    // top-level nextra _meta.json file
+    // top-level nextra _meta.ts file
     const docsMeta = {
+      globals: 'Table of Contents',
       classes: 'Classes',
       functions: 'Functions',
       'type-aliases': 'Types',
-      variables: 'Constants'
+      variables: 'Constants',
+      README: {
+        display: 'hidden'
+      }
     }
 
     await fs.writeFile(
@@ -97,7 +106,7 @@ async function main() {
     )
   }
 
-  // sub nextra _meta.json files
+  // sub nextra _meta.ts files
   await pMap(
     Object.keys(metaMap),
     async (key) => {

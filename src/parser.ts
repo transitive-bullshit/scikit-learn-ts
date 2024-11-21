@@ -77,7 +77,24 @@ export async function fetchAndParseScikitLearnDoc(
   const res = await got(url).text()
   // console.log(res)
 
+  let baseUrl: string
+  try {
+    const parsedIndexUrl = new URL(url)
+    const pathnameParts = parsedIndexUrl.pathname.split('/')
+    const relativePathname = pathnameParts.slice(0, -1).join('/')
+    baseUrl = `${parsedIndexUrl.origin}${relativePathname}/`
+  } catch {
+    throw new Error(`Invalid url: ${url}`)
+  }
+
   const $ = cheerio.load(res)
+  $('a').each((_, a) => {
+    const href = $(a).attr('href')
+    if (isRelativeUrl(href)) {
+      $(a).attr('href', `${baseUrl}${href}`)
+    }
+  })
+
   const $s = $('section')[0]
   const $c = $('.py.class', $s)[0]
   const $f = $('.py.function', $s)[0]
@@ -204,7 +221,8 @@ export function parseDesc(
   let $p = $body.first().find('p').first()
 
   while ($p.length && $p.is('p')) {
-    const md = html2md($p.html())
+    const html = $p.html()
+    const md = html2md(html)
     const text = md
       .replaceAll('\n', ' ')
       .trim()
@@ -214,8 +232,17 @@ export function parseDesc(
       .replaceAll(/([^\w`])False([^\w`])/g, '$1`false`$2')
       .replaceAll('`None`', '`undefined`')
       .replaceAll(/([^\w`])None([^\w`])/g, '$1`undefined`$2')
+      // .replaceAll(/(`[\w=]*)\\([\w=]*`)/g, '$1$2')
+      .replaceAll('\\_', '_')
       // .replaceAll(/\b`(\w)+)=()`\b/g, '`$1: $2`')
       .trim()
+
+    // console.log({
+    //   html,
+    //   md,
+    //   text
+    // })
+
     desc += text + '\n\n'
     $p = $p.next()
   }

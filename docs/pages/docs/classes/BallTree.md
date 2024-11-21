@@ -1,10 +1,8 @@
-**sklearn** • **Docs**
-
-***
+# Class: BallTree
 
 BallTree for fast generalized N-point problems
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../neighbors.html#unsupervised-neighbors).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html)
 
@@ -14,133 +12,158 @@ Read more in the User Guide.
 
 > **new BallTree**(`opts`?): [`BallTree`](BallTree.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.leaf\_size?**: `any`
+`opts`?
 
-Number of points at which to switch to brute-force. Changing leaf\_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n\_samples / leaf\_size. For a specified `leaf\_size`, a leaf node is guaranteed to satisfy `leaf\_size <= n\_points <= 2 \* leaf\_size`, except in the case that `n\_samples < leaf\_size`.
+</td>
+<td>
 
-**Default Value**
+`object`
 
-`40`
+</td>
+<td>
 
-• **opts.metric?**: `string`
+&hyphen;
 
-Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. A list of valid metrics for BallTree is given by the attribute `valid\_metrics`. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for more information on any distance metric.
+</td>
+</tr>
+<tr>
+<td>
 
-**Default Value**
+`opts.leaf_size`?
 
-`'minkowski'`
+</td>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`any`
 
-n\_samples is the number of points in the data set, and n\_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
+</td>
+<td>
 
-#### Returns
+Number of points at which to switch to brute-force. Changing leaf_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n_samples / leaf_size. For a specified `leaf_size`, a leaf node is guaranteed to satisfy `leaf_size <= n_points <= 2 \* leaf_size`, except in the case that `n_samples < leaf_size`.
 
-[`BallTree`](BallTree.md)
+</td>
+</tr>
+<tr>
+<td>
 
-#### Defined in
+`opts.metric`?
 
-[generated/neighbors/BallTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L23)
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. A list of valid metrics for BallTree is given by the attribute `valid_metrics`. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance_metrics`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for more information on any distance metric.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
+
+n_samples is the number of points in the data set, and n_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** [`BallTree`](BallTree.md)
+
+**Defined in** [generated/neighbors/BallTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L23)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/neighbors/BallTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L21)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/neighbors/BallTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L20)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/neighbors/BallTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L19)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/neighbors/BallTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L16)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/neighbors/BallTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L17)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/neighbors/BallTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/neighbors/BallTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/neighbors/BallTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L19) |
+| `id` | `string` | `undefined` | [generated/neighbors/BallTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/neighbors/BallTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L17) |
 
 ## Accessors
 
 ### data
 
-#### Get Signature
+**Get Signature**
 
 > **get** **data**(): `Promise`\<`any`\>
 
 The training data
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/neighbors/BallTree.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L462)
+**Defined in** [generated/neighbors/BallTree.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L462)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/neighbors/BallTree.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L47)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/neighbors/BallTree.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L47)
 
 ## Methods
 
@@ -152,13 +175,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/neighbors/BallTree.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L98)
+**Defined in** [generated/neighbors/BallTree.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L98)
 
 ***
 
@@ -168,17 +187,34 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Get data and node arrays.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/neighbors/BallTree.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L115)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/neighbors/BallTree.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L115)
 
 ***
 
@@ -188,17 +224,34 @@ Get data and node arrays.
 
 Get number of calls.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/neighbors/BallTree.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L141)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/neighbors/BallTree.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L141)
 
 ***
 
@@ -208,17 +261,34 @@ Get number of calls.
 
 Get tree status.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/neighbors/BallTree.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L167)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/neighbors/BallTree.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L167)
 
 ***
 
@@ -230,17 +300,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/neighbors/BallTree.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L60)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/neighbors/BallTree.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L60)
 
 ***
 
@@ -250,65 +337,159 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 Compute the kernel density estimate at points X with the given kernel, using the distance metric specified at tree creation.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.atol?**: `number`
+`opts`
 
-Specify the desired absolute tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is zero (i.e. machine precision).
+</td>
+<td>
 
-**Default Value**
+`object`
 
-`0`
+</td>
+<td>
 
-• **opts.breadth\_first?**: `boolean`
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.atol`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Specify the desired absolute tolerance of the result. If the true result is `K_true`, then the returned result `K_ret` satisfies `abs(K_true \- K_ret) < atol + rtol \* K_ret` The default is zero (i.e. machine precision).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.breadth_first`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, use a breadth-first search. If `false` (default) use a depth-first search. Breadth-first is generally faster for compact kernels and/or high tolerances.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.h`?
 
-• **opts.h?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 the bandwidth of the kernel
 
-• **opts.kernel?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kernel`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 specify the kernel to use. Options are - ‘gaussian’ - ‘tophat’ - ‘epanechnikov’ - ‘exponential’ - ‘linear’ - ‘cosine’ Default is kernel = ‘gaussian’
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'gaussian'`
+`opts.return_log`?
 
-• **opts.return\_log?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Return the logarithm of the result. This can be more accurate than returning the result itself for narrow kernels.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.rtol`?
 
-• **opts.rtol?**: `number`
+</td>
+<td>
 
-Specify the desired relative tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is `1e-8` (i.e. machine precision).
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`1e-8`
+Specify the desired relative tolerance of the result. If the true result is `K_true`, then the returned result `K_ret` satisfies `abs(K_true \- K_ret) < atol + rtol \* K_ret` The default is `1e-8` (i.e. machine precision).
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 An array of points to query. Last dimension should match dimension of training data.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/neighbors/BallTree.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L193)
+**Defined in** [generated/neighbors/BallTree.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L193)
 
 ***
 
@@ -318,61 +499,142 @@ An array of points to query. Last dimension should match dimension of training d
 
 query the tree for the k nearest neighbors
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.breadth\_first?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.breadth_first`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 if `true`, then query the nodes in a breadth-first manner. Otherwise, query the nodes in a depth-first manner.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.dualtree`?
 
-• **opts.dualtree?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 if `true`, use the dual tree formalism for the query: a tree is built for the query points, and the pair of trees is used to efficiently search this space. This can lead to better performance as the number of points grows large.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.k`?
 
-• **opts.k?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The number of nearest neighbors to return
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.return_distance`?
 
-• **opts.return\_distance?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 if `true`, return a tuple (d, i) of distances and indices if `false`, return array i
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.sort_results`?
 
-• **opts.sort\_results?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 if `true`, then distances and indices of each point are sorted on return, so that the first column contains the closest points. Otherwise, neighbors are returned in an arbitrary order.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.X`?
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 An array of points to query
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/neighbors/BallTree.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L265)
+**Defined in** [generated/neighbors/BallTree.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L265)
 
 ***
 
@@ -382,49 +644,125 @@ An array of points to query
 
 query the tree for neighbors within a radius r
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.count\_only?**: `boolean`
+`opts`
 
-if `true`, return only the count of points within distance r if `false`, return the indices of all points within distance r If return\_distance==`true`, setting count\_only=`true` will result in an error.
+</td>
+<td>
 
-**Default Value**
+`object`
 
-`false`
+</td>
+<td>
 
-• **opts.r?**: `any`
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.count_only`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+if `true`, return only the count of points within distance r if `false`, return the indices of all points within distance r If return_distance==`true`, setting count_only=`true` will result in an error.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.r`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 r can be a single value, or an array of values of shape x.shape\[:-1\] if different radii are desired for each point.
 
-• **opts.return\_distance?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
 
-if `true`, return distances to neighbors of each point if `false`, return only neighbors Note that unlike the query() method, setting return\_distance=`true` here adds to the computation time. Not all distances need to be calculated explicitly for return\_distance=`false`. Results are not sorted by default: see `sort\_results` keyword.
+`opts.return_distance`?
 
-**Default Value**
+</td>
+<td>
 
-`false`
+`boolean`
 
-• **opts.sort\_results?**: `boolean`
+</td>
+<td>
 
-if `true`, the distances and indices will be sorted before being returned. If `false`, the results will not be sorted. If return\_distance == `false`, setting sort\_results = `true` will result in an error.
+if `true`, return distances to neighbors of each point if `false`, return only neighbors Note that unlike the query() method, setting return_distance=`true` here adds to the computation time. Not all distances need to be calculated explicitly for return_distance=`false`. Results are not sorted by default: see `sort_results` keyword.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.sort_results`?
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+if `true`, the distances and indices will be sorted before being returned. If `false`, the results will not be sorted. If return_distance == `false`, setting sort_results = `true` will result in an error.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 An array of points to query
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/neighbors/BallTree.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L332)
+**Defined in** [generated/neighbors/BallTree.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L332)
 
 ***
 
@@ -434,17 +772,34 @@ An array of points to query
 
 Reset number of calls to 0.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/neighbors/BallTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L390)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/neighbors/BallTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L390)
 
 ***
 
@@ -454,30 +809,88 @@ Reset number of calls to 0.
 
 Compute the two-point correlation function
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.dualtree?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.dualtree`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, use a dualtree algorithm. Otherwise, use a single-tree algorithm. Dual tree algorithms can have better scaling for large N.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.r`?
 
-• **opts.r?**: `ArrayLike`
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 A one-dimensional array of distances
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 An array of points to query. Last dimension should match dimension of training data.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/neighbors/BallTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/BallTree.ts#L416)
+**Defined in** [generated/neighbors/BallTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/BallTree.ts#L416)

@@ -1,12 +1,10 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: SpectralClustering
 
 Apply clustering to a projection of the normalized Laplacian.
 
 In practice Spectral Clustering is very useful when the structure of the individual clusters is highly non-convex, or more generally when a measure of the center and spread of the cluster is not a suitable description of the complete cluster, such as when clusters are nested circles on the 2D plane.
 
-If the affinity matrix is the adjacency matrix of a graph, this method can be used to find normalized graph cuts [\[1\]](#r5f6cbeb1558e-1), [\[2\]](#r5f6cbeb1558e-2).
+If the affinity matrix is the adjacency matrix of a graph, this method can be used to find normalized graph cuts [\[1\]](https://scikit-learn.org/stable/modules/generated/#r5f6cbeb1558e-1), [\[2\]](https://scikit-learn.org/stable/modules/generated/#r5f6cbeb1558e-2).
 
 When calling `fit`, an affinity matrix is constructed using either a kernel function such the Gaussian (aka RBF) kernel with Euclidean distance `d(X, X)`:
 
@@ -20,107 +18,289 @@ When calling `fit`, an affinity matrix is constructed using either a kernel func
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.affinity?**: `string`
+`opts`?
 
-‘nearest\_neighbors’: construct the affinity matrix by computing a graph of nearest neighbors.
+</td>
+<td>
 
-**Default Value**
+`object`
 
-`'rbf'`
+</td>
+<td>
 
-• **opts.assign\_labels?**: `"kmeans"` \| `"discretize"` \| `"cluster_qr"`
+&hyphen;
 
-The strategy for assigning labels in the embedding space. There are two ways to assign labels after the Laplacian embedding. k-means is a popular choice, but it can be sensitive to initialization. Discretization is another approach which is less sensitive to random initialization [\[3\]](#r5f6cbeb1558e-3). The cluster\_qr method [\[5\]](#r5f6cbeb1558e-5) directly extract clusters from eigenvectors in spectral clustering. In contrast to k-means and discretization, cluster\_qr has no tuning parameters and runs no iterations, yet may outperform k-means and discretization in terms of both quality and speed.
+</td>
+</tr>
+<tr>
+<td>
 
-**Default Value**
+`opts.affinity`?
 
-`'kmeans'`
+</td>
+<td>
 
-• **opts.coef0?**: `number`
+`string`
+
+</td>
+<td>
+
+‘nearest_neighbors’: construct the affinity matrix by computing a graph of nearest neighbors.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.assign_labels`?
+
+</td>
+<td>
+
+`"kmeans"` \| `"discretize"` \| `"cluster_qr"`
+
+</td>
+<td>
+
+The strategy for assigning labels in the embedding space. There are two ways to assign labels after the Laplacian embedding. k-means is a popular choice, but it can be sensitive to initialization. Discretization is another approach which is less sensitive to random initialization [\[3\]](https://scikit-learn.org/stable/modules/generated/#r5f6cbeb1558e-3). The cluster_qr method [\[5\]](https://scikit-learn.org/stable/modules/generated/#r5f6cbeb1558e-5) directly extract clusters from eigenvectors in spectral clustering. In contrast to k-means and discretization, cluster_qr has no tuning parameters and runs no iterations, yet may outperform k-means and discretization in terms of both quality and speed.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.coef0`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.degree`?
 
-• **opts.degree?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Degree of the polynomial kernel. Ignored by other kernels.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`3`
+`opts.eigen_solver`?
 
-• **opts.eigen\_solver?**: `"arpack"` \| `"lobpcg"` \| `"amg"`
+</td>
+<td>
 
-The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems, but may also lead to instabilities. If `undefined`, then `'arpack'` is used. See [\[4\]](#r5f6cbeb1558e-4) for more details regarding `'lobpcg'`.
+`"arpack"` \| `"lobpcg"` \| `"amg"`
 
-• **opts.eigen\_tol?**: `number`
+</td>
+<td>
 
-Stopping criterion for eigen decomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:
+The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems, but may also lead to instabilities. If `undefined`, then `'arpack'` is used. See [\[4\]](https://scikit-learn.org/stable/modules/generated/#r5f6cbeb1558e-4) for more details regarding `'lobpcg'`.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'auto'`
+`opts.eigen_tol`?
 
-• **opts.gamma?**: `number`
+</td>
+<td>
 
-Kernel coefficient for rbf, poly, sigmoid, laplacian and chi2 kernels. Ignored for `affinity='nearest\_neighbors'`, `affinity='precomputed'` or `affinity='precomputed\_nearest\_neighbors'`.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`1`
+Stopping criterion for eigen decomposition of the Laplacian matrix. If `eigen_tol="auto"` then the passed tolerance will depend on the `eigen_solver`:
 
-• **opts.kernel\_params?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.gamma`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Kernel coefficient for rbf, poly, sigmoid, laplacian and chi2 kernels. Ignored for `affinity='nearest_neighbors'`, `affinity='precomputed'` or `affinity='precomputed_nearest_neighbors'`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kernel_params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Parameters (keyword arguments) and values for kernel passed as callable object. Ignored by other kernels.
 
-• **opts.n\_clusters?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.n_clusters`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The dimension of the projection subspace.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`8`
+`opts.n_components`?
 
-• **opts.n\_components?**: `number`
+</td>
+<td>
 
-Number of eigenvectors to use for the spectral embedding. If `undefined`, defaults to `n\_clusters`.
+`number`
 
-• **opts.n\_init?**: `number`
+</td>
+<td>
 
-Number of time the k-means algorithm will be run with different centroid seeds. The final results will be the best output of n\_init consecutive runs in terms of inertia. Only used if `assign\_labels='kmeans'`.
+Number of eigenvectors to use for the spectral embedding. If `undefined`, defaults to `n_clusters`.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`10`
+`opts.n_init`?
 
-• **opts.n\_jobs?**: `number`
+</td>
+<td>
 
-The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+`number`
 
-• **opts.n\_neighbors?**: `number`
+</td>
+<td>
+
+Number of time the k-means algorithm will be run with different centroid seeds. The final results will be the best output of n_init consecutive runs in terms of inertia. Only used if `assign_labels='kmeans'`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.n_jobs`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The number of parallel jobs to run when `affinity='nearest_neighbors'` or `affinity='precomputed_nearest_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.n_neighbors`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Number of neighbors to use when constructing the affinity matrix using the nearest neighbors method. Ignored for `affinity='rbf'`.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`10`
+`opts.random_state`?
 
-• **opts.random\_state?**: `number`
+</td>
+<td>
 
-A pseudo random number generator used for the initialization of the lobpcg eigenvectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
+`number`
 
-• **opts.verbose?**: `boolean`
+</td>
+<td>
+
+A pseudo random number generator used for the initialization of the lobpcg eigenvectors decomposition when `eigen_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state)).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.verbose`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Verbosity mode.
 
-**Default Value**
-
-`false`
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -128,57 +308,17 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L27)
+[generated/cluster/SpectralClustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L27)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/cluster/SpectralClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L25)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/cluster/SpectralClustering.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L24)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/cluster/SpectralClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L23)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/cluster/SpectralClustering.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L20)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/cluster/SpectralClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L21)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/cluster/SpectralClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/cluster/SpectralClustering.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/cluster/SpectralClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L23) |
+| `id` | `string` | `undefined` | [generated/cluster/SpectralClustering.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/cluster/SpectralClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L21) |
 
 ## Accessors
 
@@ -196,7 +336,7 @@ Affinity matrix used for clustering. Available only after calling `fit`.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L318)
+[generated/cluster/SpectralClustering.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L318)
 
 ***
 
@@ -206,7 +346,7 @@ Affinity matrix used for clustering. Available only after calling `fit`.
 
 > **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
 ##### Returns
 
@@ -214,7 +354,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L399)
+[generated/cluster/SpectralClustering.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L399)
 
 ***
 
@@ -232,7 +372,7 @@ Labels of each point
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L345)
+[generated/cluster/SpectralClustering.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L345)
 
 ***
 
@@ -242,7 +382,7 @@ Labels of each point
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
 ##### Returns
 
@@ -250,7 +390,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L372)
+[generated/cluster/SpectralClustering.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L372)
 
 ***
 
@@ -270,7 +410,28 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -278,7 +439,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L127)
+[generated/cluster/SpectralClustering.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L127)
 
 ## Methods
 
@@ -296,7 +457,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L183)
+[generated/cluster/SpectralClustering.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L183)
 
 ***
 
@@ -308,15 +469,68 @@ Perform spectral clustering from features, or affinity matrix.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
 
-Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed\_nearest\_neighbors`. If a sparse matrix is provided in a format other than `csr\_matrix`, `csc\_matrix`, or `coo\_matrix`, it will be converted into a sparse `csr\_matrix`.
+</td>
+<td>
 
-• **opts.y?**: `any`
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
+
+Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed_nearest_neighbors`. If a sparse matrix is provided in a format other than `csr_matrix`, `csc_matrix`, or `coo_matrix`, it will be converted into a sparse `csr_matrix`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Not used, present here for API consistency by convention.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -324,7 +538,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L200)
+[generated/cluster/SpectralClustering.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L200)
 
 ***
 
@@ -336,15 +550,68 @@ Perform spectral clustering on `X` and return cluster labels.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
 
-Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed\_nearest\_neighbors`. If a sparse matrix is provided in a format other than `csr\_matrix`, `csc\_matrix`, or `coo\_matrix`, it will be converted into a sparse `csr\_matrix`.
+</td>
+<td>
 
-• **opts.y?**: `any`
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
+
+Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed_nearest_neighbors`. If a sparse matrix is provided in a format other than `csr_matrix`, `csc_matrix`, or `coo_matrix`, it will be converted into a sparse `csr_matrix`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Not used, present here for API consistency by convention.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -352,7 +619,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L239)
+[generated/cluster/SpectralClustering.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L239)
 
 ***
 
@@ -362,15 +629,55 @@ Not used, present here for API consistency by convention.
 
 Get metadata routing of this object.
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -378,7 +685,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L282)
+[generated/cluster/SpectralClustering.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L282)
 
 ***
 
@@ -392,7 +699,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -400,4 +728,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L140)
+[generated/cluster/SpectralClustering.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L140)

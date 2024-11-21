@@ -1,18 +1,16 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: RandomizedSearchCV
 
 Randomized search on hyper parameters.
 
-RandomizedSearchCV implements a “fit” and a “score” method. It also implements “score\_samples”, “predict”, “predict\_proba”, “decision\_function”, “transform” and “inverse\_transform” if they are implemented in the estimator used.
+RandomizedSearchCV implements a “fit” and a “score” method. It also implements “score_samples”, “predict”, “predict_proba”, “decision_function”, “transform” and “inverse_transform” if they are implemented in the estimator used.
 
 The parameters of the estimator used to apply these methods are optimized by cross-validated search over parameter settings.
 
-In contrast to GridSearchCV, not all parameter values are tried out, but rather a fixed number of parameter settings is sampled from the specified distributions. The number of parameter settings that are tried is given by n\_iter.
+In contrast to GridSearchCV, not all parameter values are tried out, but rather a fixed number of parameter settings is sampled from the specified distributions. The number of parameter settings that are tried is given by n_iter.
 
 If all parameters are presented as a list, sampling without replacement is performed. If at least one parameter is given as a distribution, sampling with replacement is used. It is highly recommended to use continuous distributions for continuous parameters.
 
-Read more in the [User Guide](../grid_search.html#randomized-parameter-search).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#randomized-parameter-search).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html)
 
@@ -24,83 +22,250 @@ Read more in the [User Guide](../grid_search.html#randomized-parameter-search).
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.cv?**: `number`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.cv`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-• **opts.error\_score?**: `"raise"`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.error_score`?
+
+</td>
+<td>
+
+`"raise"`
+
+</td>
+<td>
 
 Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error.
 
-• **opts.estimator?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.estimator`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 An object of that type is instantiated for each grid point. This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
 
-• **opts.n\_iter?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Number of parameter settings that are sampled. n\_iter trades off runtime vs quality of the solution.
+`opts.n_iter`?
 
-**Default Value**
+</td>
+<td>
 
-`10`
+`number`
 
-• **opts.n\_jobs?**: `number`
+</td>
+<td>
 
-Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+Number of parameter settings that are sampled. n_iter trades off runtime vs quality of the solution.
 
-• **opts.param\_distributions?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.n_jobs`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.param_distributions`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
 
-• **opts.pre\_dispatch?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.pre_dispatch`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Controls the number of jobs that get dispatched during parallel execution. Reducing this number can be useful to avoid an explosion of memory consumption when more jobs get dispatched than CPUs can process. This parameter can be:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'2*n_jobs'`
+`opts.random_state`?
 
-• **opts.random\_state?**: `number`
+</td>
+<td>
 
-Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+`number`
 
-• **opts.refit?**: `boolean`
+</td>
+<td>
+
+Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.refit`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Refit an estimator using the best found parameters on the whole dataset.
 
 For multiple metric evaluation, this needs to be a `str` denoting the scorer that would be used to find the best parameters for refitting the estimator at the end.
 
-Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best\_index\_` given the `cv\_results`. In that case, the `best\_estimator\_` and `best\_params\_` will be set according to the returned `best\_index\_` while the `best\_score\_` attribute will not be available.
+Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best_index_` given the `cv_results`. In that case, the `best_estimator_` and `best_params_` will be set according to the returned `best_index_` while the `best_score_` attribute will not be available.
 
-The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `RandomizedSearchCV` instance.
+The refitted estimator is made available at the `best_estimator_` attribute and permits using `predict` directly on this `RandomizedSearchCV` instance.
 
-Also for multiple metric evaluation, the attributes `best\_index\_`, `best\_score\_` and `best\_params\_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
+Also for multiple metric evaluation, the attributes `best_index_`, `best_score_` and `best_params_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
 
 See `scoring` parameter to know more about multiple metric evaluation.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.return_train_score`?
 
-• **opts.return\_train\_score?**: `boolean`
+</td>
+<td>
 
-If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+`boolean`
 
-**Default Value**
+</td>
+<td>
 
-`false`
+If `false`, the `cv_results_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
 
-• **opts.scoring?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scoring`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Strategy to evaluate the performance of the cross-validated model on the test set.
 
 If `scoring` represents a single score, one can use:
 
-• **opts.verbose?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.verbose`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Controls the verbosity: the higher, the more messages.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -108,57 +273,17 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L31)
+[generated/model\_selection/RandomizedSearchCV.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L31)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/model\_selection/RandomizedSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L29)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/model\_selection/RandomizedSearchCV.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L28)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/model\_selection/RandomizedSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L27)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/model\_selection/RandomizedSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L24)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/model\_selection/RandomizedSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L25)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/model\_selection/RandomizedSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L29) |
+| `_isInitialized` | `boolean` | `false` | [generated/model\_selection/RandomizedSearchCV.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L28) |
+| `_py` | `PythonBridge` | `undefined` | [generated/model\_selection/RandomizedSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L27) |
+| `id` | `string` | `undefined` | [generated/model\_selection/RandomizedSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L24) |
+| `opts` | `any` | `undefined` | [generated/model\_selection/RandomizedSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L25) |
 
 ## Accessors
 
@@ -180,7 +305,7 @@ See `refit` parameter for more information on allowed values.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L619)
+[generated/model\_selection/RandomizedSearchCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L619)
 
 ***
 
@@ -190,9 +315,9 @@ See `refit` parameter for more information on allowed values.
 
 > **get** **best\_index\_**(): `Promise`\<`number`\>
 
-The index (of the `cv\_results\_` arrays) which corresponds to the best candidate parameter setting.
+The index (of the `cv_results_` arrays) which corresponds to the best candidate parameter setting.
 
-The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best\_score\_`).
+The dict at `search.cv_results_\['params'\]\[search.best_index_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best_score_`).
 
 For multi-metric evaluation, this is not available if `refit` is `false`. See `refit` parameter for more information.
 
@@ -202,7 +327,7 @@ For multi-metric evaluation, this is not available if `refit` is `false`. See `r
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L710)
+[generated/model\_selection/RandomizedSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L710)
 
 ***
 
@@ -222,7 +347,7 @@ For multi-metric evaluation, this is not available if `refit` is `false`. See `r
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L679)
+[generated/model\_selection/RandomizedSearchCV.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L679)
 
 ***
 
@@ -232,7 +357,7 @@ For multi-metric evaluation, this is not available if `refit` is `false`. See `r
 
 > **get** **best\_score\_**(): `Promise`\<`number`\>
 
-Mean cross-validated score of the best\_estimator.
+Mean cross-validated score of the best_estimator.
 
 For multi-metric evaluation, this is not available if `refit` is `false`. See `refit` parameter for more information.
 
@@ -244,7 +369,7 @@ This attribute is not available if `refit` is a function.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L650)
+[generated/model\_selection/RandomizedSearchCV.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L650)
 
 ***
 
@@ -264,7 +389,7 @@ For instance the below given table
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L588)
+[generated/model\_selection/RandomizedSearchCV.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L588)
 
 ***
 
@@ -274,7 +399,7 @@ For instance the below given table
 
 > **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Names of features seen during [fit](../../glossary.html#term-fit). Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if `best_estimator_` is defined (see the documentation for the `refit` parameter for more details) and that `best_estimator_` exposes `feature_names_in_` when fit.
 
 ##### Returns
 
@@ -282,7 +407,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Only defined 
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L849)
+[generated/model\_selection/RandomizedSearchCV.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L849)
 
 ***
 
@@ -300,7 +425,7 @@ Whether or not the scorers compute several metrics.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:822](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L822)
+[generated/model\_selection/RandomizedSearchCV.ts:822](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L822)
 
 ***
 
@@ -318,7 +443,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L766)
+[generated/model\_selection/RandomizedSearchCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L766)
 
 ***
 
@@ -338,7 +463,28 @@ The number of cross-validation splits (folds/iterations).
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -346,7 +492,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L116)
+[generated/model\_selection/RandomizedSearchCV.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L116)
 
 ***
 
@@ -366,7 +512,7 @@ This is present only if `refit` is not `false`.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L795)
+[generated/model\_selection/RandomizedSearchCV.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L795)
 
 ***
 
@@ -386,7 +532,7 @@ For multi-metric evaluation, this attribute holds the validated `scoring` dict w
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L739)
+[generated/model\_selection/RandomizedSearchCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L739)
 
 ## Methods
 
@@ -394,17 +540,57 @@ For multi-metric evaluation, this attribute holds the validated `scoring` dict w
 
 > **decision\_function**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Call decision\_function on the estimator with the best found parameters.
+Call decision_function on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `decision\_function`.
+Only available if `refit=True` and the underlying estimator supports `decision_function`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -412,7 +598,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L191)
+[generated/model\_selection/RandomizedSearchCV.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L191)
 
 ***
 
@@ -430,7 +616,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L172)
+[generated/model\_selection/RandomizedSearchCV.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L172)
 
 ***
 
@@ -442,21 +628,87 @@ Run fit with all sets of parameters.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.params?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Parameters passed to the `fit` method of the estimator, the scorer, and the CV splitter.
 
-If a fit parameter is an array-like whose length is equal to `num\_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample\_weight](../../glossary.html#term-sample_weight) parameter is split because `len(sample\_weights) \= len(X)`.
+If a fit parameter is an array-like whose length is equal to `num_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample_weight](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sample_weight) parameter is split because `len(sample_weights) \= len(X)`.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
 
-Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For precomputed kernel or distance matrix, the expected shape of X is (n\_samples, n\_samples).
+`opts.X`?
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. For precomputed kernel or distance matrix, the expected shape of X is (n_samples, n_samples).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Target relative to X for classification or regression; `undefined` for unsupervised learning.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -464,7 +716,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L227)
+[generated/model\_selection/RandomizedSearchCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L227)
 
 ***
 
@@ -474,15 +726,55 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 Get metadata routing of this object.
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -490,7 +782,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L275)
+[generated/model\_selection/RandomizedSearchCV.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L275)
 
 ***
 
@@ -504,7 +796,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -512,7 +825,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L129)
+[generated/model\_selection/RandomizedSearchCV.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L129)
 
 ***
 
@@ -520,21 +833,74 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 > **inverse\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Call inverse\_transform on the estimator with the best found params.
+Call inverse_transform on the estimator with the best found params.
 
-Only available if the underlying estimator implements `inverse\_transform` and `refit=True`.
+Only available if the underlying estimator implements `inverse_transform` and `refit=True`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-• **opts.Xt?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.Xt`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -542,7 +908,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L313)
+[generated/model\_selection/RandomizedSearchCV.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L313)
 
 ***
 
@@ -556,11 +922,51 @@ Only available if `refit=True` and the underlying estimator supports `predict`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -568,7 +974,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L356)
+[generated/model\_selection/RandomizedSearchCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L356)
 
 ***
 
@@ -576,17 +982,57 @@ Must fulfill the input assumptions of the underlying estimator.
 
 > **predict\_log\_proba**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Call predict\_log\_proba on the estimator with the best found parameters.
+Call predict_log_proba on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `predict\_log\_proba`.
+Only available if `refit=True` and the underlying estimator supports `predict_log_proba`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -594,7 +1040,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L392)
+[generated/model\_selection/RandomizedSearchCV.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L392)
 
 ***
 
@@ -602,17 +1048,57 @@ Must fulfill the input assumptions of the underlying estimator.
 
 > **predict\_proba**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Call predict\_proba on the estimator with the best found parameters.
+Call predict_proba on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `predict\_proba`.
+Only available if `refit=True` and the underlying estimator supports `predict_proba`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -620,7 +1106,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L430)
+[generated/model\_selection/RandomizedSearchCV.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L430)
 
 ***
 
@@ -630,23 +1116,89 @@ Must fulfill the input assumptions of the underlying estimator.
 
 Return the score on the given data, if the estimator has been refit.
 
-This uses the score defined by `scoring` where provided, and the `best\_estimator\_.score` method otherwise.
+This uses the score defined by `scoring` where provided, and the `best_estimator_.score` method otherwise.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.params?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Parameters to be passed to the underlying scorer(s).
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
 
-Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+`opts.X`?
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Input data, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Target relative to X for classification or regression; `undefined` for unsupervised learning.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -654,7 +1206,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L468)
+[generated/model\_selection/RandomizedSearchCV.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L468)
 
 ***
 
@@ -662,17 +1214,57 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 > **score\_samples**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Call score\_samples on the estimator with the best found parameters.
+Call score_samples on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `score\_samples`.
+Only available if `refit=True` and the underlying estimator supports `score_samples`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Data to predict on. Must fulfill input requirements of the underlying estimator.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -680,7 +1272,7 @@ Data to predict on. Must fulfill input requirements of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L514)
+[generated/model\_selection/RandomizedSearchCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L514)
 
 ***
 
@@ -694,11 +1286,51 @@ Only available if the underlying estimator supports `transform` and `refit=True`
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -706,4 +1338,4 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L552)
+[generated/model\_selection/RandomizedSearchCV.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L552)

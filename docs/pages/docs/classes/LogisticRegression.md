@@ -1,16 +1,14 @@
-**sklearn** • **Docs**
-
-***
+# Class: LogisticRegression
 
 Logistic Regression (aka logit, MaxEnt) classifier.
 
-In the multiclass case, the training algorithm uses the one-vs-rest (OvR) scheme if the ‘multi\_class’ option is set to ‘ovr’, and uses the cross-entropy loss if the ‘multi\_class’ option is set to ‘multinomial’. (Currently the ‘multinomial’ option is supported only by the ‘lbfgs’, ‘sag’, ‘saga’ and ‘newton-cg’ solvers.)
+In the multiclass case, the training algorithm uses the one-vs-rest (OvR) scheme if the ‘multi_class’ option is set to ‘ovr’, and uses the cross-entropy loss if the ‘multi_class’ option is set to ‘multinomial’. (Currently the ‘multinomial’ option is supported only by the ‘lbfgs’, ‘sag’, ‘saga’ and ‘newton-cg’ solvers.)
 
 This class implements regularized logistic regression using the ‘liblinear’ library, ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ solvers. **Note that regularization is applied by default**. It can handle both dense and sparse input. Use C-ordered arrays or CSR matrices containing 64-bit floats for optimal performance; any other input format will be converted (and copied).
 
 The ‘newton-cg’, ‘sag’, and ‘lbfgs’ solvers support only L2 regularization with primal formulation, or no regularization. The ‘liblinear’ solver supports both L1 and L2 regularization, with a dual formulation only for the L2 penalty. The Elastic-Net regularization is only supported by the ‘saga’ solver.
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#logistic-regression).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
@@ -20,317 +18,442 @@ Read more in the User Guide.
 
 > **new LogisticRegression**(`opts`?): [`LogisticRegression`](LogisticRegression.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.C?**: `number`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.C`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Inverse of regularization strength; must be a positive float. Like in support vector machines, smaller values specify stronger regularization.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.class_weight`?
 
-• **opts.class\_weight?**: `any`
+</td>
+<td>
 
-Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
+`any`
 
-The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+</td>
+<td>
 
-Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
+Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one.
 
-• **opts.dual?**: `boolean`
+The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`.
 
-Dual (constrained) or primal (regularized, see also this equation) formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n\_samples > n\_features.
+Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.dual`?
 
-• **opts.fit\_intercept?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+Dual (constrained) or primal (regularized, see also [this equation](https://scikit-learn.org/stable/modules/generated/../linear_model.html#regularized-logistic-loss)) formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n_samples > n_features.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.fit_intercept`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Specifies if a constant (a.k.a. bias or intercept) should be added to the decision function.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.intercept_scaling`?
 
-• **opts.intercept\_scaling?**: `number`
+</td>
+<td>
 
-Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to `true`. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
+`number`
 
-Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
+</td>
+<td>
 
-**Default Value**
+Useful only when the solver ‘liblinear’ is used and self.fit_intercept is set to `true`. In this case, x becomes \[x, self.intercept_scaling\], i.e. a “synthetic” feature with constant value equal to intercept_scaling is appended to the instance vector. The intercept becomes `intercept_scaling \* synthetic_feature_weight`.
 
-`1`
+Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept_scaling has to be increased.
 
-• **opts.l1\_ratio?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-The Elastic-Net mixing parameter, with `0 <= l1\_ratio <= 1`. Only used if `penalty='elasticnet'`. Setting `l1\_ratio=0` is equivalent to using `penalty='l2'`, while setting `l1\_ratio=1` is equivalent to using `penalty='l1'`. For `0 < l1\_ratio <1`, the penalty is a combination of L1 and L2.
+`opts.l1_ratio`?
 
-• **opts.max\_iter?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The Elastic-Net mixing parameter, with `0 <= l1_ratio <= 1`. Only used if `penalty='elasticnet'`. Setting `l1_ratio=0` is equivalent to using `penalty='l2'`, while setting `l1_ratio=1` is equivalent to using `penalty='l1'`. For `0 < l1_ratio <1`, the penalty is a combination of L1 and L2.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.max_iter`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Maximum number of iterations taken for the solvers to converge.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`100`
+`opts.multi_class`?
 
-• **opts.multi\_class?**: `"auto"` \| `"ovr"` \| `"multinomial"`
+</td>
+<td>
+
+`"auto"` \| `"ovr"` \| `"multinomial"`
+
+</td>
+<td>
 
 If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, *even when the data is binary*. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'auto'`
+`opts.n_jobs`?
 
-• **opts.n\_jobs?**: `number`
+</td>
+<td>
 
-Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See Glossary for more details.
+`number`
 
-• **opts.penalty?**: `"l1"` \| `"l2"` \| `"elasticnet"`
+</td>
+<td>
+
+Number of CPU cores used when parallelizing over classes if multi_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi_class’ is specified or not. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.penalty`?
+
+</td>
+<td>
+
+`"l1"` \| `"l2"` \| `"elasticnet"`
+
+</td>
+<td>
 
 Specify the norm of the penalty:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'l2'`
+`opts.random_state`?
 
-• **opts.random\_state?**: `number`
+</td>
+<td>
 
-Used when `solver` == ‘sag’, ‘saga’ or ‘liblinear’ to shuffle the data. See Glossary for details.
+`number`
 
-• **opts.solver?**: `"lbfgs"` \| `"newton-cholesky"` \| `"liblinear"` \| `"newton-cg"` \| `"sag"` \| `"saga"`
+</td>
+<td>
+
+Used when `solver` == ‘sag’, ‘saga’ or ‘liblinear’ to shuffle the data. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.solver`?
+
+</td>
+<td>
+
+`"lbfgs"` \| `"newton-cholesky"` \| `"liblinear"` \| `"newton-cg"` \| `"sag"` \| `"saga"`
+
+</td>
+<td>
 
 Algorithm to use in the optimization problem. Default is ‘lbfgs’. To choose a solver, you might want to consider the following aspects:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'lbfgs'`
+`opts.tol`?
 
-• **opts.tol?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Tolerance for stopping criteria.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.0001`
+`opts.verbose`?
 
-• **opts.verbose?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 For the liblinear and lbfgs solvers set verbose to any positive number for verbosity.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0`
+`opts.warm_start`?
 
-• **opts.warm\_start?**: `boolean`
+</td>
+<td>
 
-When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See the Glossary.
+`boolean`
 
-**Default Value**
+</td>
+<td>
 
-`false`
+When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-[`LogisticRegression`](LogisticRegression.md)
+**Returns** [`LogisticRegression`](LogisticRegression.md)
 
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L29)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L29)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L27)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L26)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L25)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L22)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L23)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/LogisticRegression.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/LogisticRegression.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/LogisticRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L25) |
+| `id` | `string` | `undefined` | [generated/linear\_model/LogisticRegression.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/linear\_model/LogisticRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L23) |
 
 ## Accessors
 
 ### classes\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **classes\_**(): `Promise`\<`ArrayLike`\>
 
 A list of class labels known to the classifier.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L636)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L636)
 
 ***
 
 ### coef\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **coef\_**(): `Promise`\<`ArrayLike`[]\>
 
 Coefficient of the features in the decision function.
 
-`coef\_` is of shape (1, n\_features) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `coef\_` corresponds to outcome 1 (`true`) and `\-coef\_` corresponds to outcome 0 (`false`).
+`coef_` is of shape (1, n_features) when the given problem is binary. In particular, when `multi_class='multinomial'`, `coef_` corresponds to outcome 1 (`true`) and `\-coef_` corresponds to outcome 0 (`false`).
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-`Promise`\<`ArrayLike`[]\>
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L665)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L665)
 
 ***
 
 ### feature\_names\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L748)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L748)
 
 ***
 
 ### intercept\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **intercept\_**(): `Promise`\<`ArrayLike`\>
 
 Intercept (a.k.a. bias) added to the decision function.
 
-If `fit\_intercept` is set to `false`, the intercept is set to zero. `intercept\_` is of shape (1,) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `intercept\_` corresponds to outcome 1 (`true`) and `\-intercept\_` corresponds to outcome 0 (`false`).
+If `fit_intercept` is set to `false`, the intercept is set to zero. `intercept_` is of shape (1,) when the given problem is binary. In particular, when `multi_class='multinomial'`, `intercept_` corresponds to outcome 1 (`true`) and `\-intercept_` corresponds to outcome 0 (`false`).
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L694)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L694)
 
 ***
 
 ### n\_features\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during fit.
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L721)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L721)
 
 ***
 
 ### n\_iter\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_iter\_**(): `Promise`\<`ArrayLike`\>
 
 Actual number of iterations for all classes. If binary or multinomial, it returns only 1 element. For liblinear solver, only the maximum number of iteration across all classes is given.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:775](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L775)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:775](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L775)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/linear\_model/LogisticRegression.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L143)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L143)
 
 ## Methods
 
@@ -342,21 +465,57 @@ Predict confidence scores for samples.
 
 The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The data matrix for which we want to get the confidence scores.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L218)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L218)
 
 ***
 
@@ -366,19 +525,36 @@ The data matrix for which we want to get the confidence scores.
 
 Convert coefficient matrix to dense array format.
 
-Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
+Converts the `coef_` member (back) to a numpy.ndarray. This is the default format of `coef_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/linear\_model/LogisticRegression.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L256)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L256)
 
 ***
 
@@ -390,13 +566,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L199)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L199)
 
 ***
 
@@ -406,29 +578,91 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Fit the model according to the given training data.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
 
-• **opts.X?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
 
-Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+`opts.X`?
 
-• **opts.y?**: `ArrayLike`
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Target vector relative to X.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L284)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L284)
 
 ***
 
@@ -438,23 +672,59 @@ Target vector relative to X.
 
 Get metadata routing of this object.
 
-Please check User Guide on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/linear\_model/LogisticRegression.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L330)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L330)
 
 ***
 
@@ -466,17 +736,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/linear\_model/LogisticRegression.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L156)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L156)
 
 ***
 
@@ -486,21 +773,57 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 Predict class labels for samples in X.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The data matrix for which we want to get the predictions.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L366)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L366)
 
 ***
 
@@ -512,21 +835,57 @@ Predict logarithm of probability estimates.
 
 The returned estimates for all classes are ordered by the label of classes.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`opts`
 
-Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`ArrayLike`[]\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/linear\_model/LogisticRegression.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L402)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
+
+Vector to be scored, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L402)
 
 ***
 
@@ -538,23 +897,59 @@ Probability estimates.
 
 The returned estimates for all classes are ordered by the label of classes.
 
-For a multi\_class problem, if multi\_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e. calculate the probability of each class assuming it to be positive using the logistic function and normalize these values across all the classes.
+For a multi_class problem, if multi_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e. calculate the probability of each class assuming it to be positive using the logistic function and normalize these values across all the classes.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`opts`
 
-Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`ArrayLike`[]\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/linear\_model/LogisticRegression.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L442)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
+
+Vector to be scored, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L442)
 
 ***
 
@@ -566,29 +961,91 @@ Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 Test samples.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 True labels for `X`.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`number`\>
+**Returns** `Promise`\<`number`\>
 
-#### Defined in
-
-[generated/linear\_model/LogisticRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L480)
+**Defined in** [generated/linear\_model/LogisticRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L480)
 
 ***
 
@@ -598,25 +1055,61 @@ True labels for `X`.
 
 Request metadata passed to the `fit` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `fit`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/linear\_model/LogisticRegression.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L528)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `fit`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L528)
 
 ***
 
@@ -626,25 +1119,61 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/linear\_model/LogisticRegression.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L568)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L568)
 
 ***
 
@@ -654,18 +1183,35 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 Convert coefficient matrix to sparse format.
 
-Converts the `coef\_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
+Converts the `coef_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
 
-The `intercept\_` member is not converted.
+The `intercept_` member is not converted.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/linear\_model/LogisticRegression.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L608)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/LogisticRegression.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L608)

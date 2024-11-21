@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Perform Affinity Propagation Clustering of data.
 
-  Read more in the [User Guide](../clustering.html#affinity-propagation).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../clustering.html#affinity-propagation).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html)
  */
@@ -69,7 +69,7 @@ export class AffinityPropagation {
     verbose?: boolean
 
     /**
-      Pseudo-random number generator to control the starting state. Use an int for reproducible results across function calls. See the [Glossary](../../glossary.html#term-random_state).
+      Pseudo-random number generator to control the starting state. Use an int for reproducible results across function calls. See the [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -152,7 +152,7 @@ ctor_AffinityPropagation = {k: v for k, v in ctor_AffinityPropagation.items() if
    */
   async fit(opts: {
     /**
-      Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
+      Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr_matrix`.
      */
     X?: ArrayLike[]
 
@@ -191,7 +191,7 @@ pms_AffinityPropagation_fit = {k: v for k, v in pms_AffinityPropagation_fit.item
    */
   async fit_predict(opts: {
     /**
-      Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
+      Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr_matrix`.
      */
     X?: ArrayLike[]
 
@@ -230,11 +230,11 @@ pms_AffinityPropagation_fit_predict = {k: v for k, v in pms_AffinityPropagation_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -270,7 +270,7 @@ pms_AffinityPropagation_get_metadata_routing = {k: v for k, v in pms_AffinityPro
    */
   async predict(opts: {
     /**
-      New data to predict. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+      New data to predict. If a sparse matrix is provided, it will be converted into a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -435,7 +435,7 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -462,7 +462,7 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -1,10 +1,8 @@
-**sklearn** • **Docs**
-
-***
+# Class: DecisionTreeClassifier
 
 A decision tree classifier.
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../tree.html#tree).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 
@@ -14,311 +12,422 @@ Read more in the User Guide.
 
 > **new DecisionTreeClassifier**(`opts`?): [`DecisionTreeClassifier`](DecisionTreeClassifier.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ccp\_alpha?**: `any`
+`opts`?
 
-Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See Minimal Cost-Complexity Pruning for details.
+</td>
+<td>
 
-**Default Value**
+`object`
 
-`0`
+</td>
+<td>
 
-• **opts.class\_weight?**: `any`
+&hyphen;
 
-Weights associated with classes in the form `{class\_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ccp_alpha`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](https://scikit-learn.org/stable/modules/generated/../tree.html#minimal-cost-complexity-pruning) for details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.class_weight`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+Weights associated with classes in the form `{class_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
 
 Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].
 
-The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`
+The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`
 
 For multi-output, the weights of each column of y will be multiplied.
 
-Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
+Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified.
 
-• **opts.criterion?**: `"gini"` \| `"entropy"` \| `"log_loss"`
+</td>
+</tr>
+<tr>
+<td>
 
-The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log\_loss” and “entropy” both for the Shannon information gain, see Mathematical formulation.
+`opts.criterion`?
 
-**Default Value**
+</td>
+<td>
 
-`'gini'`
+`"gini"` \| `"entropy"` \| `"log_loss"`
 
-• **opts.max\_depth?**: `number`
+</td>
+<td>
 
-The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log_loss” and “entropy” both for the Shannon information gain, see [Mathematical formulation](https://scikit-learn.org/stable/modules/generated/../tree.html#tree-mathematical-formulation).
 
-• **opts.max\_features?**: `number` \| `"sqrt"` \| `"log2"`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.max_depth`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.max_features`?
+
+</td>
+<td>
+
+`number` \| `"sqrt"` \| `"log2"`
+
+</td>
+<td>
 
 The number of features to consider when looking for the best split:
 
-• **opts.max\_leaf\_nodes?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+`opts.max_leaf_nodes`?
 
-• **opts.min\_impurity\_decrease?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Grow a tree with `max_leaf_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.min_impurity_decrease`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
 
 The weighted impurity decrease equation is the following:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0`
+`opts.min_samples_leaf`?
 
-• **opts.min\_samples\_leaf?**: `number`
+</td>
+<td>
 
-The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`1`
+The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min_samples_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
-• **opts.min\_samples\_split?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.min_samples_split`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The minimum number of samples required to split an internal node:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`2`
+`opts.min_weight_fraction_leaf`?
 
-• **opts.min\_weight\_fraction\_leaf?**: `number`
+</td>
+<td>
 
-The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`0`
+The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided.
 
-• **opts.monotonic\_cst?**: `any`[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.monotonic_cst`?
+
+</td>
+<td>
+
+`any`[]
+
+</td>
+<td>
 
 1: monotonic increase
 
-• **opts.random\_state?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See Glossary for details.
+`opts.random_state`?
 
-• **opts.splitter?**: `"random"` \| `"best"`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max_features < n_features`, the algorithm will select `max_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max_features=n_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random_state` has to be fixed to an integer. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.splitter`?
+
+</td>
+<td>
+
+`"random"` \| `"best"`
+
+</td>
+<td>
 
 The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split and “random” to choose the best random split.
 
-**Default Value**
+</td>
+</tr>
+</tbody>
+</table>
 
-`'best'`
+**Returns** [`DecisionTreeClassifier`](DecisionTreeClassifier.md)
 
-#### Returns
-
-[`DecisionTreeClassifier`](DecisionTreeClassifier.md)
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L23)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L23)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L21)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L20)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L19)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L16)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L17)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/tree/DecisionTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/tree/DecisionTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/tree/DecisionTreeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L19) |
+| `id` | `string` | `undefined` | [generated/tree/DecisionTreeClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/tree/DecisionTreeClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L17) |
 
 ## Accessors
 
 ### classes\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **classes\_**(): `Promise`\<`ArrayLike`\>
 
 The classes labels (single output problem), or a list of arrays of class labels (multi-output problem).
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L810)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L810)
 
 ***
 
 ### feature\_names\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:918](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L918)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:918](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L918)
 
 ***
 
 ### max\_features\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **max\_features\_**(): `Promise`\<`number`\>
 
-The inferred value of max\_features.
+The inferred value of max_features.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L837)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L837)
 
 ***
 
 ### n\_classes\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_classes\_**(): `Promise`\<`number`\>
 
 The number of classes (for single output problems), or a list containing the number of classes for each output (for multi-output problems).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L864)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L864)
 
 ***
 
 ### n\_features\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during fit.
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L891)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L891)
 
 ***
 
 ### n\_outputs\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_outputs\_**(): `Promise`\<`number`\>
 
 The number of outputs when `fit` is performed.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:945](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L945)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:945](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L945)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/tree/DecisionTreeClassifier.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L117)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L117)
 
 ***
 
 ### tree\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **tree\_**(): `Promise`\<`any`\>
 
-The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and Understanding the decision tree structure for basic usage of these attributes.
+The underlying Tree object. Please refer to `help(sklearn.tree._tree.Tree)` for attributes of Tree object and [Understanding the decision tree structure](https://scikit-learn.org/stable/modules/generated/../../auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py) for basic usage of these attributes.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:972](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L972)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:972](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L972)
 
 ## Methods
 
@@ -328,29 +437,74 @@ The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for
 
 Return the index of the leaf that each sample is predicted as.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.check_input`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.X`?
 
-• **opts.X?**: `ArrayLike`
+</td>
+<td>
 
-The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+`ArrayLike`
 
-#### Returns
+</td>
+<td>
 
-`Promise`\<`ArrayLike`\>
+The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
 
-#### Defined in
+</td>
+</tr>
+</tbody>
+</table>
 
-[generated/tree/DecisionTreeClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L190)
+**Returns** `Promise`\<`ArrayLike`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L190)
 
 ***
 
@@ -360,31 +514,93 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 Compute the pruning path during Minimal Cost-Complexity Pruning.
 
-See Minimal Cost-Complexity Pruning for details on the pruning process.
+See [Minimal Cost-Complexity Pruning](https://scikit-learn.org/stable/modules/generated/../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
 
-• **opts.X?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
 
-The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+`opts.X`?
 
-• **opts.y?**: `ArrayLike`
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc_matrix`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The target values (class labels) as integers or strings.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L233)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L233)
 
 ***
 
@@ -394,29 +610,74 @@ The target values (class labels) as integers or strings.
 
 Return the decision path in the tree.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.check_input`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.X`?
 
-• **opts.X?**: `ArrayLike`
+</td>
+<td>
 
-The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+`ArrayLike`
 
-#### Returns
+</td>
+<td>
 
-`Promise`\<`any`[]\>
+The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
 
-#### Defined in
+</td>
+</tr>
+</tbody>
+</table>
 
-[generated/tree/DecisionTreeClassifier.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L279)
+**Returns** `Promise`\<`any`[]\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L279)
 
 ***
 
@@ -428,13 +689,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L173)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L173)
 
 ***
 
@@ -444,37 +701,108 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Build a decision tree classifier from the training set (X, y).
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.check_input`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.sample_weight`?
 
-• **opts.sample\_weight?**: `ArrayLike`
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
 
-• **opts.X?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
 
-The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+`opts.X`?
 
-• **opts.y?**: `ArrayLike`
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc_matrix`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The target values (class labels) as integers or strings.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L322)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L322)
 
 ***
 
@@ -486,17 +814,34 @@ Return the depth of the decision tree.
 
 The depth of a tree is the maximum distance between the root and any leaf.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/tree/DecisionTreeClassifier.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L375)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L375)
 
 ***
 
@@ -506,23 +851,59 @@ The depth of a tree is the maximum distance between the root and any leaf.
 
 Get metadata routing of this object.
 
-Please check User Guide on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/tree/DecisionTreeClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L407)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L407)
 
 ***
 
@@ -532,17 +913,34 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 Return the number of leaves of the decision tree.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`opts`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+`object`
 
-[generated/tree/DecisionTreeClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L443)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L443)
 
 ***
 
@@ -554,17 +952,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/tree/DecisionTreeClassifier.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L130)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L130)
 
 ***
 
@@ -576,29 +991,74 @@ Predict class or regression value for X.
 
 For a classification model, the predicted class for each sample in X is returned. For a regression model, the predicted value based on X is returned.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.check_input`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.X`?
 
-• **opts.X?**: `ArrayLike`
+</td>
+<td>
 
-The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+`ArrayLike`
 
-#### Returns
+</td>
+<td>
 
-`Promise`\<`ArrayLike`\>
+The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
 
-#### Defined in
+</td>
+</tr>
+</tbody>
+</table>
 
-[generated/tree/DecisionTreeClassifier.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L475)
+**Returns** `Promise`\<`ArrayLike`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L475)
 
 ***
 
@@ -608,21 +1068,57 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 Predict class log-probabilities of the input samples X.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
 
-The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`ArrayLike`[]\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/tree/DecisionTreeClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L518)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L518)
 
 ***
 
@@ -634,29 +1130,74 @@ Predict class probabilities of the input samples X.
 
 The predicted class probability is the fraction of samples of the same class in a leaf.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.check_input`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.X`?
 
-• **opts.X?**: `ArrayLike`
+</td>
+<td>
 
-The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+`ArrayLike`
 
-#### Returns
+</td>
+<td>
 
-`Promise`\<`ArrayLike`[]\>
+The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
 
-#### Defined in
+</td>
+</tr>
+</tbody>
+</table>
 
-[generated/tree/DecisionTreeClassifier.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L556)
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L556)
 
 ***
 
@@ -668,29 +1209,91 @@ Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 Test samples.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 True labels for `X`.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`number`\>
+**Returns** `Promise`\<`number`\>
 
-#### Defined in
-
-[generated/tree/DecisionTreeClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L601)
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L601)
 
 ***
 
@@ -700,29 +1303,78 @@ True labels for `X`.
 
 Request metadata passed to the `fit` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `check\_input` parameter in `fit`.
+</td>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`object`
 
-Metadata routing for `sample\_weight` parameter in `fit`.
+</td>
+<td>
 
-#### Returns
+&hyphen;
 
-`Promise`\<`any`\>
+</td>
+</tr>
+<tr>
+<td>
 
-#### Defined in
+`opts.check_input`?
 
-[generated/tree/DecisionTreeClassifier.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L649)
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `check_input` parameter in `fit`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `fit`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L649)
 
 ***
 
@@ -730,27 +1382,63 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 > **set\_predict\_proba\_request**(`opts`): `Promise`\<`any`\>
 
-Request metadata passed to the `predict\_proba` method.
+Request metadata passed to the `predict_proba` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `check\_input` parameter in `predict\_proba`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/tree/DecisionTreeClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L694)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.check_input`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `check_input` parameter in `predict_proba`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L694)
 
 ***
 
@@ -760,25 +1448,61 @@ Metadata routing for `check\_input` parameter in `predict\_proba`.
 
 Request metadata passed to the `predict` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.check\_input?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `check\_input` parameter in `predict`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/tree/DecisionTreeClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L734)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.check_input`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `check_input` parameter in `predict`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L734)
 
 ***
 
@@ -788,22 +1512,58 @@ Metadata routing for `check\_input` parameter in `predict`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/tree/DecisionTreeClassifier.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L774)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/tree/DecisionTreeClassifier.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L774)

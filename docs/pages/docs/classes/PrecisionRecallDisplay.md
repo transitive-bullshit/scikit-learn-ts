@@ -1,12 +1,10 @@
-**sklearn** • **Docs**
-
-***
+# Class: PrecisionRecallDisplay
 
 Precision Recall visualization.
 
-It is recommend to use [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") to create a [`PrecisionRecallDisplay`](#sklearn.metrics.PrecisionRecallDisplay "sklearn.metrics.PrecisionRecallDisplay"). All parameters are stored as attributes.
+It is recommend to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") to create a [`PrecisionRecallDisplay`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay "sklearn.metrics.PrecisionRecallDisplay"). All parameters are stored as attributes.
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html)
 
@@ -16,191 +14,251 @@ Read more in the User Guide.
 
 > **new PrecisionRecallDisplay**(`opts`?): [`PrecisionRecallDisplay`](PrecisionRecallDisplay.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.average\_precision?**: `number`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.average_precision`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Average precision. If `undefined`, the average precision is not shown.
 
-• **opts.estimator\_name?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.estimator_name`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Name of estimator. If `undefined`, then the estimator name is not shown.
 
-• **opts.pos\_label?**: `string` \| `number` \| `boolean`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.pos_label`?
+
+</td>
+<td>
+
+`string` \| `number` \| `boolean`
+
+</td>
+<td>
 
 The class considered as the positive class. If `undefined`, the class will not be shown in the legend.
 
-• **opts.precision?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.precision`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Precision values.
 
-• **opts.prevalence\_pos\_label?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-The prevalence of the positive label. It is used for plotting the chance level line. If `undefined`, the chance level line will not be plotted even if `plot\_chance\_level` is set to `true` when plotting.
+`opts.prevalence_pos_label`?
 
-• **opts.recall?**: `ArrayLike`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The prevalence of the positive label. It is used for plotting the chance level line. If `undefined`, the chance level line will not be plotted even if `plot_chance_level` is set to `true` when plotting.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.recall`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Recall values.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-[`PrecisionRecallDisplay`](PrecisionRecallDisplay.md)
+**Returns** [`PrecisionRecallDisplay`](PrecisionRecallDisplay.md)
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21) |
+| `id` | `string` | `undefined` | [generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19) |
 
 ## Accessors
 
 ### ax\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **ax\_**(): `Promise`\<`any`\>
 
 Axes with precision recall curve.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L427)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L427)
 
 ***
 
 ### chance\_level\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **chance\_level\_**(): `Promise`\<`any`\>
 
 The chance level line. It is `undefined` if the chance level is not plotted.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L400)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L400)
 
 ***
 
 ### figure\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **figure\_**(): `Promise`\<`any`\>
 
 Figure containing the curve.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L454)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L454)
 
 ***
 
 ### line\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **line\_**(): `Promise`\<`any`\>
 
 Precision recall curve.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L373)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L373)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/metrics/PrecisionRecallDisplay.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L60)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L60)
 
 ## Methods
 
@@ -212,13 +270,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L116)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L116)
 
 ***
 
@@ -228,77 +282,244 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Plot precision-recall curve given an estimator and some data.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.chance\_level\_kw?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.chance_level_kw`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
 
-• **opts.drop\_intermediate?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.drop_intermediate`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to drop some suboptimal thresholds which would not appear on a plotted precision-recall curve. This is useful in order to create lighter precision-recall curves.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.estimator`?
 
-• **opts.estimator?**: `any`
+</td>
+<td>
 
-Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+`any`
 
-• **opts.kwargs?**: `any`
+</td>
+<td>
+
+Fitted classifier or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kwargs`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Keyword arguments to be passed to matplotlib’s `plot`.
 
-• **opts.name?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.name`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Name for labeling curve. If `undefined`, no name is used.
 
-• **opts.plot\_chance\_level?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
 
-Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+`opts.plot_chance_level`?
 
-**Default Value**
+</td>
+<td>
 
-`false`
+`boolean`
 
-• **opts.pos\_label?**: `string` \| `number` \| `boolean`
+</td>
+<td>
 
-The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
 
-• **opts.response\_method?**: `"auto"` \| `"predict_proba"` \| `"decision_function"`
+</td>
+</tr>
+<tr>
+<td>
 
-Specifies whether to use predict\_proba or decision\_function as the target response. If set to ‘auto’, predict\_proba is tried first and if it does not exist decision\_function is tried next.
+`opts.pos_label`?
 
-**Default Value**
+</td>
+<td>
 
-`'auto'`
+`string` \| `number` \| `boolean`
 
-• **opts.sample\_weight?**: `ArrayLike`
+</td>
+<td>
+
+The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes_\[1\]` is considered as the positive class.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.response_method`?
+
+</td>
+<td>
+
+`"auto"` \| `"predict_proba"` \| `"decision_function"`
+
+</td>
+<td>
+
+Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) is tried next.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Input values.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Target values.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L133)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L133)
 
 ***
 
@@ -308,65 +529,210 @@ Target values.
 
 Plot precision-recall curve given binary class predictions.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.chance\_level\_kw?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.chance_level_kw`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
 
-• **opts.drop\_intermediate?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.drop_intermediate`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to drop some suboptimal thresholds which would not appear on a plotted precision-recall curve. This is useful in order to create lighter precision-recall curves.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.kwargs`?
 
-• **opts.kwargs?**: `any`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Keyword arguments to be passed to matplotlib’s `plot`.
 
-• **opts.name?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.name`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Name for labeling curve. If `undefined`, name will be set to `"Classifier"`.
 
-• **opts.plot\_chance\_level?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
 
-Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+`opts.plot_chance_level`?
 
-**Default Value**
+</td>
+<td>
 
-`false`
+`boolean`
 
-• **opts.pos\_label?**: `string` \| `number` \| `boolean`
+</td>
+<td>
+
+Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.pos_label`?
+
+</td>
+<td>
+
+`string` \| `number` \| `boolean`
+
+</td>
+<td>
 
 The class considered as the positive class when computing the precision and recall metrics.
 
-• **opts.sample\_weight?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.y\_pred?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y_pred`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Estimated probabilities or output of decision function.
 
-• **opts.y\_true?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y_true`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 True binary labels.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L230)
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L230)
 
 ***
 
@@ -378,17 +744,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/metrics/PrecisionRecallDisplay.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L73)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L73)
 
 ***
 
@@ -400,38 +783,122 @@ Plot visualization.
 
 Extra keyword arguments will be passed to matplotlib’s `plot`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.chance\_level\_kw?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.chance_level_kw`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
 
-• **opts.kwargs?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kwargs`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Keyword arguments to be passed to matplotlib’s `plot`.
 
-• **opts.name?**: `string`
+</td>
+</tr>
+<tr>
+<td>
 
-Name of precision recall curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
+`opts.name`?
 
-• **opts.plot\_chance\_level?**: `boolean`
+</td>
+<td>
 
-Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+`string`
 
-**Default Value**
+</td>
+<td>
 
-`false`
+Name of precision recall curve for labeling. If `undefined`, use `estimator_name` if not `undefined`, otherwise no labeling is shown.
 
-#### Returns
+</td>
+</tr>
+<tr>
+<td>
 
-`Promise`\<`any`\>
+`opts.plot_chance_level`?
 
-#### Defined in
+</td>
+<td>
 
-[generated/metrics/PrecisionRecallDisplay.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L317)
+`boolean`
+
+</td>
+<td>
+
+Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/metrics/PrecisionRecallDisplay.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L317)

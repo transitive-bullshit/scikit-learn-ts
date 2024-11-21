@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Can be used to iterate over parameter value combinations with the Python built-in function iter. The order of the generated parameter combinations is deterministic.
 
-  Read more in the [User Guide](../grid_search.html#grid-search).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#grid-search).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterGrid.html)
  */

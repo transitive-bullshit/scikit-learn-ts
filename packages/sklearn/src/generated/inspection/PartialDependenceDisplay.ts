@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This can also display individual partial dependencies which are often referred to as: Individual Condition Expectation (ICE).
 
-  It is recommended to use [`from\_estimator`](#sklearn.inspection.PartialDependenceDisplay.from_estimator "sklearn.inspection.PartialDependenceDisplay.from_estimator") to create a [`PartialDependenceDisplay`](#sklearn.inspection.PartialDependenceDisplay "sklearn.inspection.PartialDependenceDisplay"). All parameters are stored as attributes.
+  It is recommended to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.inspection.PartialDependenceDisplay.from_estimator "sklearn.inspection.PartialDependenceDisplay.from_estimator") to create a [`PartialDependenceDisplay`](https://scikit-learn.org/stable/modules/generated/#sklearn.inspection.PartialDependenceDisplay "sklearn.inspection.PartialDependenceDisplay"). All parameters are stored as attributes.
 
-  Read more in [Advanced Plotting With Partial Dependence](../../auto_examples/miscellaneous/plot_partial_dependence_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-partial-dependence-visualization-api-py) and the [User Guide](../partial_dependence.html#partial-dependence).
+  Read more in [Advanced Plotting With Partial Dependence](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_partial_dependence_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-partial-dependence-visualization-api-py) and the [User Guide](https://scikit-learn.org/stable/modules/generated/../partial_dependence.html#partial-dependence).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.PartialDependenceDisplay.html)
  */
@@ -26,7 +26,7 @@ export class PartialDependenceDisplay {
 
   constructor(opts?: {
     /**
-      Results of [`partial\_dependence`](sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`.
+      Results of [`partial_dependence`](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`.
      */
     pd_results?: any
 
@@ -67,7 +67,7 @@ export class PartialDependenceDisplay {
     subsample?: number
 
     /**
-      Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+      Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
      */
     random_state?: number
 
@@ -153,13 +153,13 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
   /**
     Partial dependence (PD) and individual conditional expectation (ICE) plots.
 
-    Partial dependence plots, individual conditional expectation plots or an overlay of both of them can be plotted by setting the `kind` parameter. The `len(features)` plots are arranged in a grid with `n\_cols` columns. Two-way partial dependence plots are plotted as contour plots. The deciles of the feature values will be shown with tick marks on the x-axes for one-way plots, and on both axes for two-way plots.
+    Partial dependence plots, individual conditional expectation plots or an overlay of both of them can be plotted by setting the `kind` parameter. The `len(features)` plots are arranged in a grid with `n_cols` columns. Two-way partial dependence plots are plotted as contour plots. The deciles of the feature values will be shown with tick marks on the x-axes for one-way plots, and on both axes for two-way plots.
 
-    Read more in the [User Guide](../partial_dependence.html#partial-dependence).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../partial_dependence.html#partial-dependence).
    */
   async from_estimator(opts: {
     /**
-      A fitted estimator object implementing [predict](../../glossary.html#term-predict), [predict\_proba](../../glossary.html#term-predict_proba), or [decision\_function](../../glossary.html#term-decision_function). Multioutput-multiclass classifiers are not supported.
+      A fitted estimator object implementing [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict), [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba), or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function). Multioutput-multiclass classifiers are not supported.
      */
     estimator?: any
 
@@ -169,12 +169,12 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     X?: ArrayLike[]
 
     /**
-      The target features for which to create the PDPs. If `features\[i\]` is an integer or a string, a one-way PDP is created; if `features\[i\]` is a tuple, a two-way PDP is created (only supported with `kind='average'`). Each tuple must be of size 2. If any entry is a string, then it must be in `feature\_names`.
+      The target features for which to create the PDPs. If `features\[i\]` is an integer or a string, a one-way PDP is created; if `features\[i\]` is a tuple, a two-way PDP is created (only supported with `kind='average'`). Each tuple must be of size 2. If any entry is a string, then it must be in `feature_names`.
      */
     features?: string
 
     /**
-      Sample weights are used to calculate weighted means when averaging the model output. If `undefined`, then samples are equally weighted. If `sample\_weight` is not `undefined`, then `method` will be set to `'brute'`. Note that `sample\_weight` is ignored for `kind='individual'`.
+      Sample weights are used to calculate weighted means when averaging the model output. If `undefined`, then samples are equally weighted. If `sample_weight` is not `undefined`, then `method` will be set to `'brute'`. Note that `sample_weight` is ignored for `kind='individual'`.
      */
     sample_weight?: ArrayLike
 
@@ -184,7 +184,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     categorical_features?: ArrayLike | number
 
     /**
-      Name of each feature; `feature\_names\[i\]` holds the name of the feature with index `i`. By default, the name of the feature corresponds to their numerical index for NumPy array and their column name for pandas dataframe.
+      Name of each feature; `feature_names\[i\]` holds the name of the feature with index `i`. By default, the name of the feature corresponds to their numerical index for NumPy array and their column name for pandas dataframe.
      */
     feature_names?: ArrayLike
 
@@ -194,7 +194,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     target?: number
 
     /**
-      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. For regressors this parameter is ignored and the response is always the output of [predict](../../glossary.html#term-predict). By default, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and we revert to [decision\_function](../../glossary.html#term-decision_function) if it doesn’t exist. If `method` is `'recursion'`, the response is always the output of [decision\_function](../../glossary.html#term-decision_function).
+      Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) as the target response. For regressors this parameter is ignored and the response is always the output of [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict). By default, [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) is tried first and we revert to [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) if it doesn’t exist. If `method` is `'recursion'`, the response is always the output of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function).
 
       @defaultValue `'auto'`
      */
@@ -229,7 +229,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     /**
       The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -241,17 +241,17 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     verbose?: number
 
     /**
-      Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. It can be used to define common properties for both `ice\_lines\_kw` and `pdp\_line\_kw`.
+      Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. It can be used to define common properties for both `ice_lines_kw` and `pdp_line_kw`.
      */
     line_kw?: any
 
     /**
-      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice\_lines\_kw` takes priority over `line\_kw`.
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice_lines_kw` takes priority over `line_kw`.
      */
     ice_lines_kw?: any
 
     /**
-      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd\_line\_kw` takes priority over `line\_kw`.
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd_line_kw` takes priority over `line_kw`.
      */
     pd_line_kw?: any
 
@@ -261,7 +261,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     contour_kw?: any
 
     /**
-      If a single axis is passed in, it is treated as a bounding axes and a grid of partial dependence plots will be drawn within these bounds. The `n\_cols` parameter controls the number of columns in the grid.
+      If a single axis is passed in, it is treated as a bounding axes and a grid of partial dependence plots will be drawn within these bounds. The `n_cols` parameter controls the number of columns in the grid.
      */
     ax?: any
 
@@ -289,7 +289,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     subsample?: number
 
     /**
-      Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See [Glossary](../../glossary.html#term-random_state) for details.
+      Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
      */
     random_state?: number
   }): Promise<any> {
@@ -325,7 +325,7 @@ pms_PartialDependenceDisplay_from_estimator = {k: v for k, v in pms_PartialDepen
    */
   async plot(opts: {
     /**
-      and a grid of partial dependence plots will be drawn within these bounds. The `n\_cols` parameter controls the number of columns in the grid.
+      and a grid of partial dependence plots will be drawn within these bounds. The `n_cols` parameter controls the number of columns in the grid.
      */
     ax?: any
 
@@ -342,12 +342,12 @@ pms_PartialDependenceDisplay_from_estimator = {k: v for k, v in pms_PartialDepen
     line_kw?: any
 
     /**
-      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice\_lines\_kw` takes priority over `line\_kw`.
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice_lines_kw` takes priority over `line_kw`.
      */
     ice_lines_kw?: any
 
     /**
-      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd\_line\_kw` takes priority over `line\_kw`.
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd_line_kw` takes priority over `line_kw`.
      */
     pd_line_kw?: any
 
@@ -367,7 +367,7 @@ pms_PartialDependenceDisplay_from_estimator = {k: v for k, v in pms_PartialDepen
     heatmap_kw?: any
 
     /**
-      Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined` (default), the limit will be inferred from the global minimum and maximum of all predictions.
+      Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp_lim\[1\]` is the global min and max for single partial dependence curves. `pdp_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined` (default), the limit will be inferred from the global minimum and maximum of all predictions.
      */
     pdp_lim?: any
 
@@ -404,7 +404,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, the `bounding\_ax\_` is the axes where the grid of partial dependence plots are drawn. If `ax` is a list of axes or a numpy array of axes, `bounding\_ax\_` is `undefined`.
+    If `ax` is an axes or `undefined`, the `bounding_ax_` is the axes where the grid of partial dependence plots are drawn. If `ax` is a list of axes or a numpy array of axes, `bounding_ax_` is `undefined`.
    */
   get bounding_ax_(): Promise<any> {
     if (this._isDisposed) {
@@ -431,7 +431,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, `axes\_\[i, j\]` is the axes on the i-th row and j-th column. If `ax` is a list of axes, `axes\_\[i\]` is the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes in that position.
+    If `ax` is an axes or `undefined`, `axes_\[i, j\]` is the axes on the i-th row and j-th column. If `ax` is a list of axes, `axes_\[i\]` is the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes in that position.
    */
   get axes_(): Promise<any> {
     if (this._isDisposed) {
@@ -458,7 +458,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, `lines\_\[i, j\]` is the partial dependence curve on the i-th row and j-th column. If `ax` is a list of axes, `lines\_\[i\]` is the partial dependence curve corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a line plot.
+    If `ax` is an axes or `undefined`, `lines_\[i, j\]` is the partial dependence curve on the i-th row and j-th column. If `ax` is a list of axes, `lines_\[i\]` is the partial dependence curve corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a line plot.
    */
   get lines_(): Promise<any> {
     if (this._isDisposed) {
@@ -485,7 +485,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, `vlines\_\[i, j\]` is the line collection representing the x axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines\_\[i\]` corresponds to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a PDP plot.
+    If `ax` is an axes or `undefined`, `vlines_\[i, j\]` is the line collection representing the x axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines_\[i\]` corresponds to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a PDP plot.
    */
   get deciles_vlines_(): Promise<any> {
     if (this._isDisposed) {
@@ -512,7 +512,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, `vlines\_\[i, j\]` is the line collection representing the y axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines\_\[i\]` corresponds to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a 2-way plot.
+    If `ax` is an axes or `undefined`, `vlines_\[i, j\]` is the line collection representing the y axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines_\[i\]` corresponds to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a 2-way plot.
    */
   get deciles_hlines_(): Promise<any> {
     if (this._isDisposed) {
@@ -539,7 +539,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, `contours\_\[i, j\]` is the partial dependence plot on the i-th row and j-th column. If `ax` is a list of axes, `contours\_\[i\]` is the partial dependence plot corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a contour plot.
+    If `ax` is an axes or `undefined`, `contours_\[i, j\]` is the partial dependence plot on the i-th row and j-th column. If `ax` is a list of axes, `contours_\[i\]` is the partial dependence plot corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a contour plot.
    */
   get contours_(): Promise<any> {
     if (this._isDisposed) {
@@ -566,7 +566,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, `bars\_\[i, j\]` is the partial dependence bar plot on the i-th row and j-th column (for a categorical feature). If `ax` is a list of axes, `bars\_\[i\]` is the partial dependence bar plot corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a bar plot.
+    If `ax` is an axes or `undefined`, `bars_\[i, j\]` is the partial dependence bar plot on the i-th row and j-th column (for a categorical feature). If `ax` is a list of axes, `bars_\[i\]` is the partial dependence bar plot corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a bar plot.
    */
   get bars_(): Promise<any> {
     if (this._isDisposed) {
@@ -593,7 +593,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or `undefined`, `heatmaps\_\[i, j\]` is the partial dependence heatmap on the i-th row and j-th column (for a pair of categorical features) . If `ax` is a list of axes, `heatmaps\_\[i\]` is the partial dependence heatmap corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a heatmap.
+    If `ax` is an axes or `undefined`, `heatmaps_\[i, j\]` is the partial dependence heatmap on the i-th row and j-th column (for a pair of categorical features) . If `ax` is a list of axes, `heatmaps_\[i\]` is the partial dependence heatmap corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a heatmap.
    */
   get heatmaps_(): Promise<any> {
     if (this._isDisposed) {

@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain.
 
-  For an example of how to use `ClassifierChain` and benefit from its ensemble, see [ClassifierChain on a yeast dataset](../../auto_examples/multioutput/plot_classifier_chain_yeast.html#sphx-glr-auto-examples-multioutput-plot-classifier-chain-yeast-py) example.
+  For an example of how to use `ClassifierChain` and benefit from its ensemble, see [ClassifierChain on a yeast dataset](https://scikit-learn.org/stable/modules/generated/../../auto_examples/multioutput/plot_classifier_chain_yeast.html#sphx-glr-auto-examples-multioutput-plot-classifier-chain-yeast-py) example.
 
-  Read more in the [User Guide](../multiclass.html#classifierchain).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../multiclass.html#classifierchain).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html)
  */
@@ -52,7 +52,7 @@ export class ClassifierChain {
       | 'decision_function'
 
     /**
-      If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base_estimator` at each chaining iteration. Thus, it is only used when `base_estimator` exposes a `random_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -134,7 +134,7 @@ ctor_ClassifierChain = {k: v for k, v in ctor_ClassifierChain.items() if v is no
   }
 
   /**
-    Evaluate the decision\_function of the models in the chain.
+    Evaluate the decision_function of the models in the chain.
    */
   async decision_function(opts: {
     /**
@@ -184,7 +184,7 @@ pms_ClassifierChain_decision_function = {k: v for k, v in pms_ClassifierChain_de
     /**
       Parameters passed to the `fit` method of each step.
 
-      Only available if `enable\_metadata\_routing=True`. See the [User Guide](../../metadata_routing.html#metadata-routing).
+      Only available if `enable_metadata_routing=True`. See the [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing).
      */
     fit_params?: any
   }): Promise<any> {
@@ -214,11 +214,11 @@ pms_ClassifierChain_fit = {k: v for k, v in pms_ClassifierChain_fit.items() if v
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -392,13 +392,13 @@ pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() 
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -428,7 +428,7 @@ pms_ClassifierChain_set_score_request = {k: v for k, v in pms_ClassifierChain_se
   }
 
   /**
-    A list of arrays of length `len(estimators\_)` containing the class labels for each estimator in the chain.
+    A list of arrays of length `len(estimators_)` containing the class labels for each estimator in the chain.
    */
   get classes_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -453,7 +453,7 @@ pms_ClassifierChain_set_score_request = {k: v for k, v in pms_ClassifierChain_se
   }
 
   /**
-    A list of clones of base\_estimator.
+    A list of clones of base_estimator.
    */
   get estimators_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -528,7 +528,7 @@ pms_ClassifierChain_set_score_request = {k: v for k, v in pms_ClassifierChain_se
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `base\_estimator` exposes such an attribute when fit.
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying `base_estimator` exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -553,7 +553,7 @@ pms_ClassifierChain_set_score_request = {k: v for k, v in pms_ClassifierChain_se
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

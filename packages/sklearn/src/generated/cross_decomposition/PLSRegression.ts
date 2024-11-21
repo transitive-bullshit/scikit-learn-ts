@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   PLSRegression is also known as PLS2 or PLS1, depending on the number of targets.
 
-  For a comparison between other cross decomposition algorithms, see [Compare cross decomposition methods](../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html#sphx-glr-auto-examples-cross-decomposition-plot-compare-cross-decomposition-py).
+  For a comparison between other cross decomposition algorithms, see [Compare cross decomposition methods](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html#sphx-glr-auto-examples-cross-decomposition-plot-compare-cross-decomposition-py).
 
-  Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_decomposition.html#cross-decomposition).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSRegression.html)
  */
@@ -26,7 +26,7 @@ export class PLSRegression {
 
   constructor(opts?: {
     /**
-      Number of components to keep. Should be in `\[1, n\_features\]`.
+      Number of components to keep. Should be in `\[1, n_features\]`.
 
       @defaultValue `2`
      */
@@ -47,14 +47,14 @@ export class PLSRegression {
     max_iter?: number
 
     /**
-      The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
+      The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u_i \- u_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
 
       @defaultValue `0.000001`
      */
     tol?: number
 
     /**
-      Whether to copy `X` and `Y` in [fit](../../glossary.html#term-fit) before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
+      Whether to copy `X` and `Y` in [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
 
       @defaultValue `true`
      */
@@ -135,17 +135,17 @@ ctor_PLSRegression = {k: v for k, v in ctor_PLSRegression.items() if v is not No
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
      */
     X?: ArrayLike[]
 
     /**
-      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+      Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
      */
     y?: ArrayLike
 
     /**
-      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+      Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
      */
     Y?: ArrayLike
   }): Promise<any> {
@@ -177,12 +177,12 @@ pms_PLSRegression_fit = {k: v for k, v in pms_PLSRegression_fit.items() if v is 
    */
   async fit_transform(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
      */
     X?: ArrayLike[]
 
     /**
-      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+      Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
      */
     y?: ArrayLike[]
   }): Promise<NDArray[]> {
@@ -212,7 +212,7 @@ pms_PLSRegression_fit_transform = {k: v for k, v in pms_PLSRegression_fit_transf
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -248,11 +248,11 @@ pms_PLSRegression_get_feature_names_out = {k: v for k, v in pms_PLSRegression_ge
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -286,17 +286,17 @@ pms_PLSRegression_get_metadata_routing = {k: v for k, v in pms_PLSRegression_get
    */
   async inverse_transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+      New data, where `n_samples` is the number of samples and `n_components` is the number of pls components.
      */
     X?: ArrayLike[]
 
     /**
-      New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+      New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
      */
     y?: ArrayLike
 
     /**
-      New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+      New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
      */
     Y?: ArrayLike[]
   }): Promise<NDArray[]> {
@@ -367,11 +367,11 @@ pms_PLSRegression_predict = {k: v for k, v in pms_PLSRegression_predict.items() 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -411,11 +411,11 @@ pms_PLSRegression_score = {k: v for k, v in pms_PLSRegression_score.items() if v
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -445,7 +445,7 @@ pms_PLSRegression_set_output = {k: v for k, v in pms_PLSRegression_set_output.it
   /**
     Request metadata passed to the `predict` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -483,13 +483,13 @@ pms_PLSRegression_set_predict_request = {k: v for k, v in pms_PLSRegression_set_
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -521,7 +521,7 @@ pms_PLSRegression_set_score_request = {k: v for k, v in pms_PLSRegression_set_sc
   /**
     Request metadata passed to the `transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -806,7 +806,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    The coefficients of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
+    The coefficients of the linear model such that `Y` is approximated as `Y \= X @ coef_.T + intercept_`.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -829,7 +829,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
+    The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef_.T + intercept_`.
    */
   get intercept_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -877,7 +877,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -902,7 +902,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

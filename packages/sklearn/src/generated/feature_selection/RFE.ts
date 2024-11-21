@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Given an external estimator that assigns weights to features (e.g., the coefficients of a linear model), the goal of recursive feature elimination (RFE) is to select features by recursively considering smaller and smaller sets of features. First, the estimator is trained on the initial set of features and the importance of each feature is obtained either through any specific attribute or callable. Then, the least important features are pruned from current set of features. That procedure is recursively repeated on the pruned set until the desired number of features to select is eventually reached.
 
-  Read more in the [User Guide](../feature_selection.html#rfe).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_selection.html#rfe).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html)
  */
@@ -24,7 +24,7 @@ export class RFE {
 
   constructor(opts?: {
     /**
-      A supervised learning estimator with a `fit` method that provides information about feature importance (e.g. `coef\_`, `feature\_importances\_`).
+      A supervised learning estimator with a `fit` method that provides information about feature importance (e.g. `coef_`, `feature_importances_`).
      */
     estimator?: any
 
@@ -48,9 +48,9 @@ export class RFE {
     verbose?: number
 
     /**
-      If ‘auto’, uses the feature importance either through a `coef\_` or `feature\_importances\_` attributes of estimator.
+      If ‘auto’, uses the feature importance either through a `coef_` or `feature_importances_` attributes of estimator.
 
-      Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of class:`~sklearn.pipeline.Pipeline` with its last step named `clf`.
+      Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor_.coef_` in case of [`TransformedTargetRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named_steps.clf.feature_importances_` in case of class:`~sklearn.pipeline.Pipeline` with its last step named `clf`.
 
       If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
 
@@ -132,7 +132,7 @@ ctor_RFE = {k: v for k, v in ctor_RFE.items() if v is not None}`
    */
   async decision_function(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: any[]
   }): Promise<any> {
@@ -203,7 +203,7 @@ pms_RFE_fit = {k: v for k, v in pms_RFE_fit.items() if v is not None}`
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -439,7 +439,7 @@ pms_RFE_predict_log_proba = {k: v for k, v in pms_RFE_predict_log_proba.items() 
    */
   async predict_proba(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: any[]
   }): Promise<any[]> {
@@ -511,11 +511,11 @@ pms_RFE_score = {k: v for k, v in pms_RFE_score.items() if v is not None}`
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -620,7 +620,7 @@ pms_RFE_transform = {k: v for k, v in pms_RFE_transform.items() if v is not None
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -643,7 +643,7 @@ pms_RFE_transform = {k: v for k, v in pms_RFE_transform.items() if v is not None
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -666,7 +666,7 @@ pms_RFE_transform = {k: v for k, v in pms_RFE_transform.items() if v is not None
   }
 
   /**
-    The feature ranking, such that `ranking\_\[i\]` corresponds to the ranking position of the i-th feature. Selected (i.e., estimated best) features are assigned rank 1.
+    The feature ranking, such that `ranking_\[i\]` corresponds to the ranking position of the i-th feature. Selected (i.e., estimated best) features are assigned rank 1.
    */
   get ranking_(): Promise<NDArray> {
     if (this._isDisposed) {

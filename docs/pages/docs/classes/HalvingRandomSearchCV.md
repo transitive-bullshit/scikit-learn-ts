@@ -1,14 +1,12 @@
-**sklearn** • **Docs**
-
-***
+# Class: HalvingRandomSearchCV
 
 Randomized search on hyper parameters.
 
 The search strategy starts evaluating all the candidates with a small amount of resources and iteratively selects the best candidates, using more and more resources.
 
-The candidates are sampled at random from the parameter space and the number of sampled candidates is determined by `n\_candidates`.
+The candidates are sampled at random from the parameter space and the number of sampled candidates is determined by `n_candidates`.
 
-Read more in the User guide.
+Read more in the [User guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#successive-halving-user-guide).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.HalvingRandomSearchCV.html)
 
@@ -18,493 +16,599 @@ Read more in the User guide.
 
 > **new HalvingRandomSearchCV**(`opts`?): [`HalvingRandomSearchCV`](HalvingRandomSearchCV.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.aggressive\_elimination?**: `boolean`
+`opts`?
 
-This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `true`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `false` by default, which means that the last iteration may evaluate more than `factor` candidates. See Aggressive elimination of candidates for more details.
+</td>
+<td>
 
-**Default Value**
+`object`
 
-`false`
+</td>
+<td>
 
-• **opts.cv?**: `number`
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.aggressive_elimination`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `true`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `false` by default, which means that the last iteration may evaluate more than `factor` candidates. See [Aggressive elimination of candidates](https://scikit-learn.org/stable/modules/generated/../grid_search.html#aggressive-elimination) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.cv`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`5`
+`opts.error_score`?
 
-• **opts.error\_score?**: `"raise"`
+</td>
+<td>
+
+`"raise"`
+
+</td>
+<td>
 
 Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error. Default is `np.nan`.
 
-• **opts.estimator?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.estimator`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
 
-• **opts.factor?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.factor`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The ‘halving’ parameter, which determines the proportion of candidates that are selected for each subsequent iteration. For example, `factor=3` means that only one third of the candidates are selected.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`3`
+`opts.max_resources`?
 
-• **opts.max\_resources?**: `number`
+</td>
+<td>
 
-The maximum number of resources that any candidate is allowed to use for a given iteration. By default, this is set `n\_samples` when `resource='n\_samples'` (default), else an error is raised.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`'auto'`
+The maximum number of resources that any candidate is allowed to use for a given iteration. By default, this is set `n_samples` when `resource='n_samples'` (default), else an error is raised.
 
-• **opts.min\_resources?**: `number` \| `"exhaust"` \| `"smallest"`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.min_resources`?
+
+</td>
+<td>
+
+`number` \| `"exhaust"` \| `"smallest"`
+
+</td>
+<td>
 
 The minimum amount of resource that any candidate is allowed to use for a given iteration. Equivalently, this defines the amount of resources `r0` that are allocated for each candidate at the first iteration.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'smallest'`
+`opts.n_candidates`?
 
-• **opts.n\_candidates?**: `number` \| `"exhaust"`
+</td>
+<td>
 
-The number of candidate parameters to sample, at the first iteration. Using ‘exhaust’ will sample enough candidates so that the last iteration uses as many resources as possible, based on `min\_resources`, `max\_resources` and `factor`. In this case, `min\_resources` cannot be ‘exhaust’.
+`number` \| `"exhaust"`
 
-**Default Value**
+</td>
+<td>
 
-`'exhaust'`
+The number of candidate parameters to sample, at the first iteration. Using ‘exhaust’ will sample enough candidates so that the last iteration uses as many resources as possible, based on `min_resources`, `max_resources` and `factor`. In this case, `min_resources` cannot be ‘exhaust’.
 
-• **opts.n\_jobs?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See Glossary for more details.
+`opts.n_jobs`?
 
-• **opts.param\_distributions?**: `any`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.param_distributions`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
 
-• **opts.random\_state?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Pseudo random number generator state used for subsampling the dataset when `resources != 'n\_samples'`. Also used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See Glossary.
+`opts.random_state`?
 
-• **opts.refit?**: `boolean`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Pseudo random number generator state used for subsampling the dataset when `resources != 'n_samples'`. Also used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.refit`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, refit an estimator using the best found parameters on the whole dataset.
 
-The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `HalvingRandomSearchCV` instance.
+The refitted estimator is made available at the `best_estimator_` attribute and permits using `predict` directly on this `HalvingRandomSearchCV` instance.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.resource`?
 
-• **opts.resource?**: `string`
+</td>
+<td>
 
-Defines the resource that increases with each iteration. By default, the resource is the number of samples. It can also be set to any parameter of the base estimator that accepts positive integer values, e.g. ‘n\_iterations’ or ‘n\_estimators’ for a gradient boosting estimator. In this case `max\_resources` cannot be ‘auto’ and must be set explicitly.
+`string`
 
-**Default Value**
+</td>
+<td>
 
-`'n_samples'`
+Defines the resource that increases with each iteration. By default, the resource is the number of samples. It can also be set to any parameter of the base estimator that accepts positive integer values, e.g. ‘n_iterations’ or ‘n_estimators’ for a gradient boosting estimator. In this case `max_resources` cannot be ‘auto’ and must be set explicitly.
 
-• **opts.return\_train\_score?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
 
-If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+`opts.return_train_score`?
 
-**Default Value**
+</td>
+<td>
 
-`false`
+`boolean`
 
-• **opts.scoring?**: `string`
+</td>
+<td>
 
-A single string (see The scoring parameter: defining model evaluation rules) or a callable (see Defining your scoring strategy from metric functions) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
+If `false`, the `cv_results_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
 
-• **opts.verbose?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scoring`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+A single string (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.verbose`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Controls the verbosity: the higher, the more messages.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-[`HalvingRandomSearchCV`](HalvingRandomSearchCV.md)
+**Returns** [`HalvingRandomSearchCV`](HalvingRandomSearchCV.md)
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L27)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L27)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L25)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L24)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L23)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L20)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L21)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/model\_selection/HalvingRandomSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/model\_selection/HalvingRandomSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/model\_selection/HalvingRandomSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L23) |
+| `id` | `string` | `undefined` | [generated/model\_selection/HalvingRandomSearchCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/model\_selection/HalvingRandomSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L21) |
 
 ## Accessors
 
 ### best\_estimator\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **best\_estimator\_**(): `Promise`\<`any`\>
 
 Estimator that was chosen by the search, i.e. estimator which gave highest score (or smallest loss if specified) on the left out data. Not available if `refit=False`.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:845](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L845)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:845](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L845)
 
 ***
 
 ### best\_index\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **best\_index\_**(): `Promise`\<`number`\>
 
-The index (of the `cv\_results\_` arrays) which corresponds to the best candidate parameter setting.
+The index (of the `cv_results_` arrays) which corresponds to the best candidate parameter setting.
 
-The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best\_score\_`).
+The dict at `search.cv_results_\['params'\]\[search.best_index_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best_score_`).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L928)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L928)
 
 ***
 
 ### best\_params\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **best\_params\_**(): `Promise`\<`any`\>
 
 Parameter setting that gave the best results on the hold out data.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:899](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L899)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:899](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L899)
 
 ***
 
 ### best\_score\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **best\_score\_**(): `Promise`\<`number`\>
 
-Mean cross-validated score of the best\_estimator.
+Mean cross-validated score of the best_estimator.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L872)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L872)
 
 ***
 
 ### cv\_results\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **cv\_results\_**(): `Promise`\<`any`\>
 
-A dict with keys as column headers and values as columns, that can be imported into a pandas `DataFrame`. It contains lots of information for analysing the results of a search. Please refer to the User guide for details.
+A dict with keys as column headers and values as columns, that can be imported into a pandas `DataFrame`. It contains lots of information for analysing the results of a search. Please refer to the [User guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#successive-halving-cv-results) for details.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L818)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L818)
 
 ***
 
 ### feature\_names\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-Names of features seen during fit. Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if `best_estimator_` is defined (see the documentation for the `refit` parameter for more details) and that `best_estimator_` exposes `feature_names_in_` when fit.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:1065](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1065)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:1065](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1065)
 
 ***
 
 ### max\_resources\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **max\_resources\_**(): `Promise`\<`number`\>
 
-The maximum number of resources that any candidate is allowed to use for a given iteration. Note that since the number of resources used at each iteration must be a multiple of `min\_resources\_`, the actual number of resources used at the last iteration may be smaller than `max\_resources\_`.
+The maximum number of resources that any candidate is allowed to use for a given iteration. Note that since the number of resources used at each iteration must be a multiple of `min_resources_`, the actual number of resources used at the last iteration may be smaller than `max_resources_`.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L683)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L683)
 
 ***
 
 ### min\_resources\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **min\_resources\_**(): `Promise`\<`number`\>
 
 The amount of resources that are allocated for each candidate at the first iteration.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L710)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L710)
 
 ***
 
 ### multimetric\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **multimetric\_**(): `Promise`\<`boolean`\>
 
 Whether or not the scorers compute several metrics.
 
-##### Returns
+**Returns** `Promise`\<`boolean`\>
 
-`Promise`\<`boolean`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:1038](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1038)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:1038](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1038)
 
 ***
 
 ### n\_candidates\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_candidates\_**(): `Promise`\<`any`\>
 
 The number of candidate parameters that were evaluated at each iteration.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L629)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L629)
 
 ***
 
 ### n\_iterations\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_iterations\_**(): `Promise`\<`number`\>
 
-The actual number of iterations that were run. This is equal to `n\_required\_iterations\_` if `aggressive\_elimination` is `true`. Else, this is equal to `min(n\_possible\_iterations\_, n\_required\_iterations\_)`.
+The actual number of iterations that were run. This is equal to `n_required_iterations_` if `aggressive_elimination` is `true`. Else, this is equal to `min(n_possible_iterations_, n_required_iterations_)`.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L737)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L737)
 
 ***
 
 ### n\_possible\_iterations\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_possible\_iterations\_**(): `Promise`\<`number`\>
 
-The number of iterations that are possible starting with `min\_resources\_` resources and without exceeding `max\_resources\_`.
+The number of iterations that are possible starting with `min_resources_` resources and without exceeding `max_resources_`.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L764)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L764)
 
 ***
 
 ### n\_remaining\_candidates\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_remaining\_candidates\_**(): `Promise`\<`number`\>
 
-The number of candidate parameters that are left after the last iteration. It corresponds to `ceil(n\_candidates\[-1\] / factor)`
+The number of candidate parameters that are left after the last iteration. It corresponds to `ceil(n_candidates\[-1\] / factor)`
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L656)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L656)
 
 ***
 
 ### n\_required\_iterations\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_required\_iterations\_**(): `Promise`\<`number`\>
 
-The number of iterations that are required to end up with less than `factor` candidates at the last iteration, starting with `min\_resources\_` resources. This will be smaller than `n\_possible\_iterations\_` when there isn’t enough resources.
+The number of iterations that are required to end up with less than `factor` candidates at the last iteration, starting with `min_resources_` resources. This will be smaller than `n_possible_iterations_` when there isn’t enough resources.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L791)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L791)
 
 ***
 
 ### n\_resources\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_resources\_**(): `Promise`\<`any`\>
 
 The amount of resources used at each iteration.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L602)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L602)
 
 ***
 
 ### n\_splits\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_splits\_**(): `Promise`\<`number`\>
 
 The number of cross-validation splits (folds/iterations).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:982](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L982)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:982](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L982)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L132)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L132)
 
 ***
 
 ### refit\_time\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **refit\_time\_**(): `Promise`\<`number`\>
 
@@ -512,31 +616,23 @@ Seconds used for refitting the best model on the whole dataset.
 
 This is present only if `refit` is not `false`.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:1011](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1011)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:1011](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1011)
 
 ***
 
 ### scorer\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **scorer\_**(): `Promise`\<`any`\>
 
 Scorer function used on the held out data to choose the best parameters for the model.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L955)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L955)
 
 ## Methods
 
@@ -544,25 +640,61 @@ Scorer function used on the held out data to choose the best parameters for the 
 
 > **decision\_function**(`opts`): `Promise`\<`ArrayLike`\>
 
-Call decision\_function on the estimator with the best found parameters.
+Call decision_function on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `decision\_function`.
+Only available if `refit=True` and the underlying estimator supports `decision_function`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L207)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L207)
 
 ***
 
@@ -574,13 +706,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L188)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L188)
 
 ***
 
@@ -590,29 +718,91 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Run fit with all sets of parameters.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.params?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Parameters passed to the `fit` method of the estimator.
 
-• **opts.X?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
 
-Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+`opts.X`?
 
-• **opts.y?**: `ArrayLike`
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Target relative to X for classification or regression; `undefined` for unsupervised learning.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L243)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L243)
 
 ***
 
@@ -622,23 +812,59 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 Get metadata routing of this object.
 
-Please check User Guide on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L289)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L289)
 
 ***
 
@@ -650,17 +876,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L145)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L145)
 
 ***
 
@@ -668,29 +911,78 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 > **inverse\_transform**(`opts`): `Promise`\<`ArrayLike`\>
 
-Call inverse\_transform on the estimator with the best found params.
+Call inverse_transform on the estimator with the best found params.
 
-Only available if the underlying estimator implements `inverse\_transform` and `refit=True`.
+Only available if the underlying estimator implements `inverse_transform` and `refit=True`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-• **opts.Xt?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.Xt`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L327)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L327)
 
 ***
 
@@ -702,21 +994,57 @@ Call predict on the estimator with the best found parameters.
 
 Only available if `refit=True` and the underlying estimator supports `predict`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L370)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L370)
 
 ***
 
@@ -724,25 +1052,61 @@ Must fulfill the input assumptions of the underlying estimator.
 
 > **predict\_log\_proba**(`opts`): `Promise`\<`ArrayLike`\>
 
-Call predict\_log\_proba on the estimator with the best found parameters.
+Call predict_log_proba on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `predict\_log\_proba`.
+Only available if `refit=True` and the underlying estimator supports `predict_log_proba`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L406)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L406)
 
 ***
 
@@ -750,25 +1114,61 @@ Must fulfill the input assumptions of the underlying estimator.
 
 > **predict\_proba**(`opts`): `Promise`\<`ArrayLike`\>
 
-Call predict\_proba on the estimator with the best found parameters.
+Call predict_proba on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `predict\_proba`.
+Only available if `refit=True` and the underlying estimator supports `predict_proba`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L444)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L444)
 
 ***
 
@@ -778,31 +1178,93 @@ Must fulfill the input assumptions of the underlying estimator.
 
 Return the score on the given data, if the estimator has been refit.
 
-This uses the score defined by `scoring` where provided, and the `best\_estimator\_.score` method otherwise.
+This uses the score defined by `scoring` where provided, and the `best_estimator_.score` method otherwise.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.params?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Parameters to be passed to the underlying scorer(s).
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+</tr>
+<tr>
+<td>
 
-Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+`opts.X`?
 
-• **opts.y?**: `ArrayLike`[]
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
+
+Input data, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 Target relative to X for classification or regression; `undefined` for unsupervised learning.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`number`\>
+**Returns** `Promise`\<`number`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L482)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L482)
 
 ***
 
@@ -810,25 +1272,61 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 > **score\_samples**(`opts`): `Promise`\<`ArrayLike`\>
 
-Call score\_samples on the estimator with the best found parameters.
+Call score_samples on the estimator with the best found parameters.
 
-Only available if `refit=True` and the underlying estimator supports `score\_samples`.
+Only available if `refit=True` and the underlying estimator supports `score_samples`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Data to predict on. Must fulfill input requirements of the underlying estimator.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L528)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L528)
 
 ***
 
@@ -840,18 +1338,54 @@ Call transform on the estimator with the best found parameters.
 
 Only available if the underlying estimator supports `transform` and `refit=True`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Must fulfill the input assumptions of the underlying estimator.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/HalvingRandomSearchCV.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L566)
+**Defined in** [generated/model\_selection/HalvingRandomSearchCV.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L566)

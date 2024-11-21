@@ -1,10 +1,8 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: IsotonicRegression
 
 Isotonic regression model.
 
-Read more in the [User Guide](../isotonic.html#isotonic).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../isotonic.html#isotonic).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html)
 
@@ -16,31 +14,102 @@ Read more in the [User Guide](../isotonic.html#isotonic).
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.increasing?**: `boolean` \| `"auto"`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.increasing`?
+
+</td>
+<td>
+
+`boolean` \| `"auto"`
+
+</td>
+<td>
 
 Determines whether the predictions should be constrained to increase or decrease with `X`. ‘auto’ will decide based on the Spearman correlation estimate’s sign.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.out_of_bounds`?
 
-• **opts.out\_of\_bounds?**: `"nan"` \| `"clip"` \| `"raise"`
+</td>
+<td>
+
+`"nan"` \| `"clip"` \| `"raise"`
+
+</td>
+<td>
 
 Handles how `X` values outside of the training domain are handled during prediction.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'nan'`
+`opts.y_max`?
 
-• **opts.y\_max?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Upper bound on the highest predicted value (the maximum may still be lower). If not set, defaults to +inf.
 
-• **opts.y\_min?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y_min`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Lower bound on the lowest predicted value (the minimum value may still be higher). If not set, defaults to -inf.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -48,57 +117,17 @@ Lower bound on the lowest predicted value (the minimum value may still be higher
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L23)
+[generated/isotonic/IsotonicRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L23)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/isotonic/IsotonicRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L21)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/isotonic/IsotonicRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L20)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/isotonic/IsotonicRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L19)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/isotonic/IsotonicRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L16)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/isotonic/IsotonicRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L17)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/isotonic/IsotonicRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/isotonic/IsotonicRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/isotonic/IsotonicRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L19) |
+| `id` | `string` | `undefined` | [generated/isotonic/IsotonicRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/isotonic/IsotonicRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L17) |
 
 ## Accessors
 
@@ -116,7 +145,7 @@ The stepwise interpolating function that covers the input domain `X`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L709)
+[generated/isotonic/IsotonicRegression.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L709)
 
 ***
 
@@ -134,7 +163,7 @@ Inferred value for `increasing`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L734)
+[generated/isotonic/IsotonicRegression.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L734)
 
 ***
 
@@ -154,7 +183,28 @@ Inferred value for `increasing`.
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -162,7 +212,7 @@ Inferred value for `increasing`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L52)
+[generated/isotonic/IsotonicRegression.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L52)
 
 ***
 
@@ -172,7 +222,7 @@ Inferred value for `increasing`.
 
 > **get** **X\_max\_**(): `Promise`\<`number`\>
 
-Maximum value of input array `X\_` for right bound.
+Maximum value of input array `X_` for right bound.
 
 ##### Returns
 
@@ -180,7 +230,7 @@ Maximum value of input array `X\_` for right bound.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L628)
+[generated/isotonic/IsotonicRegression.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L628)
 
 ***
 
@@ -190,7 +240,7 @@ Maximum value of input array `X\_` for right bound.
 
 > **get** **X\_min\_**(): `Promise`\<`number`\>
 
-Minimum value of input array `X\_` for left bound.
+Minimum value of input array `X_` for left bound.
 
 ##### Returns
 
@@ -198,7 +248,7 @@ Minimum value of input array `X\_` for left bound.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L601)
+[generated/isotonic/IsotonicRegression.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L601)
 
 ***
 
@@ -216,7 +266,7 @@ Unique ascending `X` values used to interpolate the y = f(X) monotonic function.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L655)
+[generated/isotonic/IsotonicRegression.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L655)
 
 ***
 
@@ -234,7 +284,7 @@ De-duplicated `y` values suitable to interpolate the y = f(X) monotonic function
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L682)
+[generated/isotonic/IsotonicRegression.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L682)
 
 ## Methods
 
@@ -252,7 +302,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L108)
+[generated/isotonic/IsotonicRegression.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L108)
 
 ***
 
@@ -264,19 +314,85 @@ Fit the model using X, y as training data.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Weights. If set to `undefined`, all weights will be set to 1 (equal weights).
 
-• **opts.X?**: `number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Training data.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Training target.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -284,7 +400,7 @@ Training target.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L125)
+[generated/isotonic/IsotonicRegression.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L125)
 
 ***
 
@@ -294,23 +410,89 @@ Training target.
 
 Fit to data, then transform it.
 
-Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.fit\_params?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.fit_params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Additional fit parameters.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Input samples.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Target values (`undefined` for unsupervised transformations).
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -318,7 +500,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L171)
+[generated/isotonic/IsotonicRegression.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L171)
 
 ***
 
@@ -330,11 +512,51 @@ Get output feature names for transformation.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.input\_features?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.input_features`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Ignored.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -342,7 +564,7 @@ Ignored.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L217)
+[generated/isotonic/IsotonicRegression.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L217)
 
 ***
 
@@ -352,15 +574,55 @@ Ignored.
 
 Get metadata routing of this object.
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -368,7 +630,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L255)
+[generated/isotonic/IsotonicRegression.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L255)
 
 ***
 
@@ -382,7 +644,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -390,7 +673,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L65)
+[generated/isotonic/IsotonicRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L65)
 
 ***
 
@@ -402,11 +685,51 @@ Predict new data by linear interpolation.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.T?**: `number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.T`?
+
+</td>
+<td>
+
+`number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Data to transform.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -414,7 +737,7 @@ Data to transform.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L291)
+[generated/isotonic/IsotonicRegression.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L291)
 
 ***
 
@@ -424,23 +747,89 @@ Data to transform.
 
 Return the coefficient of determination of the prediction.
 
-The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
 
-Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+`opts.X`?
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 True values for `X`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -448,7 +837,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L327)
+[generated/isotonic/IsotonicRegression.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L327)
 
 ***
 
@@ -458,17 +847,57 @@ True values for `X`.
 
 Request metadata passed to the `fit` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `fit`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `fit`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -476,7 +905,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L375)
+[generated/isotonic/IsotonicRegression.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L375)
 
 ***
 
@@ -486,15 +915,55 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+`opts`
 
-Configure output of `transform` and `fit\_transform`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.transform`?
+
+</td>
+<td>
+
+`"default"` \| `"pandas"` \| `"polars"`
+
+</td>
+<td>
+
+Configure output of `transform` and `fit_transform`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -502,7 +971,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L413)
+[generated/isotonic/IsotonicRegression.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L413)
 
 ***
 
@@ -512,17 +981,57 @@ Configure output of `transform` and `fit\_transform`.
 
 Request metadata passed to the `predict` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.T?**: `string` \| `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.T`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
 
 Metadata routing for `T` parameter in `predict`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -530,7 +1039,7 @@ Metadata routing for `T` parameter in `predict`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L451)
+[generated/isotonic/IsotonicRegression.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L451)
 
 ***
 
@@ -540,17 +1049,57 @@ Metadata routing for `T` parameter in `predict`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -558,7 +1107,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L491)
+[generated/isotonic/IsotonicRegression.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L491)
 
 ***
 
@@ -568,17 +1117,57 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 Request metadata passed to the `transform` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.T?**: `string` \| `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.T`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
 
 Metadata routing for `T` parameter in `transform`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -586,7 +1175,7 @@ Metadata routing for `T` parameter in `transform`.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L531)
+[generated/isotonic/IsotonicRegression.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L531)
 
 ***
 
@@ -598,11 +1187,51 @@ Transform new data by linear interpolation.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.T?**: `number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.T`?
+
+</td>
+<td>
+
+`number` \| [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Data to transform.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -610,4 +1239,4 @@ Data to transform.
 
 #### Defined in
 
-[generated/isotonic/IsotonicRegression.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L567)
+[generated/isotonic/IsotonicRegression.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L567)

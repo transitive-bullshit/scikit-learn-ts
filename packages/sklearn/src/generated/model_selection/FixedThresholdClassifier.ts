@@ -8,11 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Binary classifier that manually sets the decision threshold.
 
-  This classifier allows to change the default decision threshold used for converting posterior probability estimates (i.e. output of `predict\_proba`) or decision scores (i.e. output of `decision\_function`) into a class label.
+  This classifier allows to change the default decision threshold used for converting posterior probability estimates (i.e. output of `predict_proba`) or decision scores (i.e. output of `decision_function`) into a class label.
 
   Here, the threshold is not optimized and is set to a constant value.
 
-  Read more in the [User Guide](../classification_threshold.html#fixedthresholdclassifier).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../classification_threshold.html#fixedthresholdclassifier).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.FixedThresholdClassifier.html)
  */
@@ -31,14 +31,14 @@ export class FixedThresholdClassifier {
     estimator?: any
 
     /**
-      The decision threshold to use when converting posterior probability estimates (i.e. output of `predict\_proba`) or decision scores (i.e. output of `decision\_function`) into a class label. When `"auto"`, the threshold is set to 0.5 if `predict\_proba` is used as `response\_method`, otherwise it is set to 0 (i.e. the default threshold for `decision\_function`).
+      The decision threshold to use when converting posterior probability estimates (i.e. output of `predict_proba`) or decision scores (i.e. output of `decision_function`) into a class label. When `"auto"`, the threshold is set to 0.5 if `predict_proba` is used as `response_method`, otherwise it is set to 0 (i.e. the default threshold for `decision_function`).
 
       @defaultValue `'auto'`
      */
     threshold?: 'auto' | number
 
     /**
-      The label of the positive class. Used to process the output of the `response\_method` method. When `pos\_label=None`, if `y\_true` is in `{-1, 1}` or `{0, 1}`, `pos\_label` is set to 1, otherwise an error will be raised.
+      The label of the positive class. Used to process the output of the `response_method` method. When `pos_label=None`, if `y_true` is in `{-1, 1}` or `{0, 1}`, `pos_label` is set to 1, otherwise an error will be raised.
      */
     pos_label?: number | boolean | string
 
@@ -128,7 +128,7 @@ ctor_FixedThresholdClassifier = {k: v for k, v in ctor_FixedThresholdClassifier.
    */
   async decision_function(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -206,11 +206,11 @@ pms_FixedThresholdClassifier_fit = {k: v for k, v in pms_FixedThresholdClassifie
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -282,7 +282,7 @@ pms_FixedThresholdClassifier_predict = {k: v for k, v in pms_FixedThresholdClass
    */
   async predict_log_proba(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -318,7 +318,7 @@ pms_FixedThresholdClassifier_predict_log_proba = {k: v for k, v in pms_FixedThre
    */
   async predict_proba(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -400,13 +400,13 @@ pms_FixedThresholdClassifier_score = {k: v for k, v in pms_FixedThresholdClassif
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -465,7 +465,7 @@ pms_FixedThresholdClassifier_set_score_request = {k: v for k, v in pms_FixedThre
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -492,7 +492,7 @@ pms_FixedThresholdClassifier_set_score_request = {k: v for k, v in pms_FixedThre
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

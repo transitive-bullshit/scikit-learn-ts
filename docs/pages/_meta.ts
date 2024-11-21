@@ -25,14 +25,14 @@ export default {
     href: 'https://twitter.com/transitive_bs',
     newWindow: true
   },
-  'contact-sidebar': {
-    title: 'Contact ↗',
-    href: 'https://twitter.com/transitive_bs',
-    newWindow: true
-  },
   'python-link-sidebar': {
     title: 'Python docs ↗',
     href: 'https://scikit-learn.org/?utm_source=scikit-learn-ts&utm_medium=referral&utm_campaign=sidebar',
+    newWindow: true
+  },
+  'contact-sidebar': {
+    title: 'Contact ↗',
+    href: 'https://twitter.com/transitive_bs',
     newWindow: true
   }
 }

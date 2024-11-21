@@ -1,10 +1,8 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: RadiusNeighborsClassifier
 
 Classifier implementing a vote among neighbors within a given radius.
 
-Read more in the [User Guide](../neighbors.html#classification).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../neighbors.html#classification).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsClassifier.html)
 
@@ -16,71 +14,191 @@ Read more in the [User Guide](../neighbors.html#classification).
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.algorithm?**: `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.algorithm`?
+
+</td>
+<td>
+
+`"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"`
+
+</td>
+<td>
 
 Algorithm used to compute the nearest neighbors:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'auto'`
+`opts.leaf_size`?
 
-• **opts.leaf\_size?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`30`
+`opts.metric`?
 
-• **opts.metric?**: `string`
+</td>
+<td>
 
-Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+`string`
 
-If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+</td>
+<td>
+
+Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance_metrics`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+
+If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
 
 If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'minkowski'`
+`opts.metric_params`?
 
-• **opts.metric\_params?**: `any`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Additional keyword arguments for the metric function.
 
-• **opts.n\_jobs?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+`opts.n_jobs`?
 
-• **opts.outlier\_label?**: `"most_frequent"`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.outlier_label`?
+
+</td>
+<td>
+
+`"most_frequent"`
+
+</td>
+<td>
 
 Label for outlier samples (samples with no neighbors in given radius).
 
-• **opts.p?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used. This parameter is expected to be positive.
+`opts.p`?
 
-**Default Value**
+</td>
+<td>
 
-`2`
+`number`
 
-• **opts.radius?**: `number`
+</td>
+<td>
 
-Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors "sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors") queries.
+Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used. This parameter is expected to be positive.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.radius`?
 
-• **opts.weights?**: `"uniform"` \| `"distance"`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Range of parameter space to use by default for [`radius_neighbors`](https://scikit-learn.org/stable/modules/generated/#sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors "sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors") queries.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.weights`?
+
+</td>
+<td>
+
+`"uniform"` \| `"distance"`
+
+</td>
+<td>
 
 Weight function used in prediction. Possible values:
 
-**Default Value**
-
-`'uniform'`
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -88,57 +206,17 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L23)
+[generated/neighbors/RadiusNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L23)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/neighbors/RadiusNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L21)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/neighbors/RadiusNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L20)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/neighbors/RadiusNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L19)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/neighbors/RadiusNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L16)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/neighbors/RadiusNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L17)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/neighbors/RadiusNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/neighbors/RadiusNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/neighbors/RadiusNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L19) |
+| `id` | `string` | `undefined` | [generated/neighbors/RadiusNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/neighbors/RadiusNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L17) |
 
 ## Accessors
 
@@ -156,7 +234,7 @@ Class labels known to the classifier.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L515)
+[generated/neighbors/RadiusNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L515)
 
 ***
 
@@ -174,7 +252,7 @@ The distance metric used. It will be same as the `metric` parameter or a synonym
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L542)
+[generated/neighbors/RadiusNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L542)
 
 ***
 
@@ -184,7 +262,7 @@ The distance metric used. It will be same as the `metric` parameter or a synonym
 
 > **get** **effective\_metric\_params\_**(): `Promise`\<`any`\>
 
-Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
+Additional keyword arguments for the metric function. For most metrics will be same with `metric_params` parameter, but may also contain the `p` parameter value if the `effective_metric_` attribute is set to ‘minkowski’.
 
 ##### Returns
 
@@ -192,7 +270,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L569)
+[generated/neighbors/RadiusNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L569)
 
 ***
 
@@ -202,7 +280,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 > **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
 ##### Returns
 
@@ -210,7 +288,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L623)
+[generated/neighbors/RadiusNeighborsClassifier.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L623)
 
 ***
 
@@ -220,7 +298,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
 ##### Returns
 
@@ -228,7 +306,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L596)
+[generated/neighbors/RadiusNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L596)
 
 ***
 
@@ -246,7 +324,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L650)
+[generated/neighbors/RadiusNeighborsClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L650)
 
 ***
 
@@ -264,7 +342,7 @@ Label which is given for outlier samples (samples with no neighbors on given rad
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L677)
+[generated/neighbors/RadiusNeighborsClassifier.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L677)
 
 ***
 
@@ -274,7 +352,7 @@ Label which is given for outlier samples (samples with no neighbors on given rad
 
 > **get** **outputs\_2d\_**(): `Promise`\<`boolean`\>
 
-False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise `true`.
+False when `y`’s shape is (n_samples, ) or (n_samples, 1) during fit otherwise `true`.
 
 ##### Returns
 
@@ -282,7 +360,7 @@ False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwi
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L704)
+[generated/neighbors/RadiusNeighborsClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L704)
 
 ***
 
@@ -302,7 +380,28 @@ False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwi
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -310,7 +409,7 @@ False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwi
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89)
+[generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89)
 
 ## Methods
 
@@ -328,7 +427,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L145)
+[generated/neighbors/RadiusNeighborsClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L145)
 
 ***
 
@@ -340,15 +439,68 @@ Fit the radius neighbors classifier from the training dataset.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Training data.
 
-• **opts.y?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Target values.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -356,7 +508,7 @@ Target values.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L162)
+[generated/neighbors/RadiusNeighborsClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L162)
 
 ***
 
@@ -366,15 +518,55 @@ Target values.
 
 Get metadata routing of this object.
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -382,7 +574,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L203)
+[generated/neighbors/RadiusNeighborsClassifier.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L203)
 
 ***
 
@@ -396,7 +588,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -404,7 +617,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L102)
+[generated/neighbors/RadiusNeighborsClassifier.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L102)
 
 ***
 
@@ -416,11 +629,51 @@ Predict the class labels for the provided data.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Test samples.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -428,7 +681,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L239)
+[generated/neighbors/RadiusNeighborsClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L239)
 
 ***
 
@@ -440,11 +693,51 @@ Return probability estimates for the test data X.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Test samples.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -452,7 +745,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L275)
+[generated/neighbors/RadiusNeighborsClassifier.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L275)
 
 ***
 
@@ -468,31 +761,102 @@ The result points are *not* necessarily sorted by distance to their query point.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.radius?**: `number`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.radius`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Limiting distance of neighbors to return. The default is the value passed to the constructor.
 
-• **opts.return\_distance?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.return_distance`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether or not to return the distances.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.sort_results`?
 
-• **opts.sort\_results?**: `boolean`
+</td>
+<td>
 
-If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
+`boolean`
 
-**Default Value**
+</td>
+<td>
 
-`false`
+If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return_distance=False`, setting `sort_results=True` will result in an error.
 
-• **opts.X?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -500,7 +864,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L315)
+[generated/neighbors/RadiusNeighborsClassifier.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L315)
 
 ***
 
@@ -514,31 +878,102 @@ Neighborhoods are restricted the points at a distance lower than radius.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.mode?**: `"connectivity"` \| `"distance"`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.mode`?
+
+</td>
+<td>
+
+`"connectivity"` \| `"distance"`
+
+</td>
+<td>
 
 Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'connectivity'`
+`opts.radius`?
 
-• **opts.radius?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Radius of neighborhoods. The default is the value passed to the constructor.
 
-• **opts.sort\_results?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sort_results`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.X`?
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -546,7 +981,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L372)
+[generated/neighbors/RadiusNeighborsClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L372)
 
 ***
 
@@ -560,19 +995,85 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Test samples.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 True labels for `X`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -580,7 +1081,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L429)
+[generated/neighbors/RadiusNeighborsClassifier.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L429)
 
 ***
 
@@ -590,17 +1091,57 @@ True labels for `X`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -608,4 +1149,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L479)
+[generated/neighbors/RadiusNeighborsClassifier.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L479)

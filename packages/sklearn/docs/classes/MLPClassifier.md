@@ -1,6 +1,4 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: MLPClassifier
 
 Multi-layer Perceptron classifier.
 
@@ -16,185 +14,427 @@ This model optimizes the log-loss function using LBFGS or stochastic gradient de
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.activation?**: `"identity"` \| `"logistic"` \| `"tanh"` \| `"relu"`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.activation`?
+
+</td>
+<td>
+
+`"identity"` \| `"logistic"` \| `"tanh"` \| `"relu"`
+
+</td>
+<td>
 
 Activation function for the hidden layer.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'relu'`
+`opts.alpha`?
 
-• **opts.alpha?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Strength of the L2 regularization term. The L2 regularization term is divided by the sample size when added to the loss.
 
-For an example usage and visualization of varying regularization, see [Varying regularization in Multi-layer Perceptron](../../auto_examples/neural_networks/plot_mlp_alpha.html#sphx-glr-auto-examples-neural-networks-plot-mlp-alpha-py).
+For an example usage and visualization of varying regularization, see [Varying regularization in Multi-layer Perceptron](https://scikit-learn.org/stable/modules/generated/../../auto_examples/neural_networks/plot_mlp_alpha.html#sphx-glr-auto-examples-neural-networks-plot-mlp-alpha-py).
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.0001`
+`opts.batch_size`?
 
-• **opts.batch\_size?**: `number`
+</td>
+<td>
 
-Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the classifier will not use minibatch. When set to “auto”, `batch\_size=min(200, n\_samples)`.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`'auto'`
+Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the classifier will not use minibatch. When set to “auto”, `batch_size=min(200, n_samples)`.
 
-• **opts.beta\_1?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.beta_1`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Exponential decay rate for estimates of first moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.9`
+`opts.beta_2`?
 
-• **opts.beta\_2?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Exponential decay rate for estimates of second moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.999`
+`opts.early_stopping`?
 
-• **opts.early\_stopping?**: `boolean`
+</td>
+<td>
 
-Whether to use early stopping to terminate training when validation score is not improving. If set to true, it will automatically set aside 10% of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs. The split is stratified, except in a multilabel setting. If early stopping is `false`, then the training stops when the training loss does not improve by more than tol for n\_iter\_no\_change consecutive passes over the training set. Only effective when solver=’sgd’ or ‘adam’.
+`boolean`
 
-**Default Value**
+</td>
+<td>
 
-`false`
+Whether to use early stopping to terminate training when validation score is not improving. If set to true, it will automatically set aside 10% of training data as validation and terminate training when validation score is not improving by at least `tol` for `n_iter_no_change` consecutive epochs. The split is stratified, except in a multilabel setting. If early stopping is `false`, then the training stops when the training loss does not improve by more than tol for n_iter_no_change consecutive passes over the training set. Only effective when solver=’sgd’ or ‘adam’.
 
-• **opts.epsilon?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.epsilon`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Value for numerical stability in adam. Only used when solver=’adam’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1e-8`
+`opts.hidden_layer_sizes`?
 
-• **opts.hidden\_layer\_sizes?**: `any`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 The ith element represents the number of neurons in the ith hidden layer.
 
-• **opts.learning\_rate?**: `"constant"` \| `"invscaling"` \| `"adaptive"`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.learning_rate`?
+
+</td>
+<td>
+
+`"constant"` \| `"invscaling"` \| `"adaptive"`
+
+</td>
+<td>
 
 Learning rate schedule for weight updates.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'constant'`
+`opts.learning_rate_init`?
 
-• **opts.learning\_rate\_init?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The initial learning rate used. It controls the step-size in updating the weights. Only used when solver=’sgd’ or ‘adam’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.001`
+`opts.max_fun`?
 
-• **opts.max\_fun?**: `number`
+</td>
+<td>
 
-Only used when solver=’lbfgs’. Maximum number of loss function calls. The solver iterates until convergence (determined by ‘tol’), number of iterations reaches max\_iter, or this number of loss function calls. Note that number of loss function calls will be greater than or equal to the number of iterations for the `MLPClassifier`.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`15000`
+Only used when solver=’lbfgs’. Maximum number of loss function calls. The solver iterates until convergence (determined by ‘tol’), number of iterations reaches max_iter, or this number of loss function calls. Note that number of loss function calls will be greater than or equal to the number of iterations for the `MLPClassifier`.
 
-• **opts.max\_iter?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.max_iter`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Maximum number of iterations. The solver iterates until convergence (determined by ‘tol’) or this number of iterations. For stochastic solvers (‘sgd’, ‘adam’), note that this determines the number of epochs (how many times each data point will be used), not the number of gradient steps.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`200`
+`opts.momentum`?
 
-• **opts.momentum?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Momentum for gradient descent update. Should be between 0 and 1. Only used when solver=’sgd’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.9`
+`opts.n_iter_no_change`?
 
-• **opts.n\_iter\_no\_change?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Maximum number of epochs to not meet `tol` improvement. Only effective when solver=’sgd’ or ‘adam’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`10`
+`opts.nesterovs_momentum`?
 
-• **opts.nesterovs\_momentum?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and momentum > 0.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.power_t`?
 
-• **opts.power\_t?**: `number`
+</td>
+<td>
 
-The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning\_rate is set to ‘invscaling’. Only used when solver=’sgd’.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`0.5`
+The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning_rate is set to ‘invscaling’. Only used when solver=’sgd’.
 
-• **opts.random\_state?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+`opts.random_state`?
 
-• **opts.shuffle?**: `boolean`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.shuffle`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or ‘adam’.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.solver`?
 
-• **opts.solver?**: `"lbfgs"` \| `"sgd"` \| `"adam"`
+</td>
+<td>
+
+`"lbfgs"` \| `"sgd"` \| `"adam"`
+
+</td>
+<td>
 
 The solver for weight optimization.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'adam'`
+`opts.tol`?
 
-• **opts.tol?**: `number`
+</td>
+<td>
 
-Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive iterations, unless `learning\_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`0.0001`
+Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n_iter_no_change` consecutive iterations, unless `learning_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.
 
-• **opts.validation\_fraction?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
+`opts.validation_fraction`?
 
-**Default Value**
+</td>
+<td>
 
-`0.1`
+`number`
 
-• **opts.verbose?**: `boolean`
+</td>
+<td>
+
+The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early_stopping is `true`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.verbose`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to print progress messages to stdout.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.warm_start`?
 
-• **opts.warm\_start?**: `boolean`
+</td>
+<td>
 
-When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+`boolean`
 
-**Default Value**
+</td>
+<td>
 
-`false`
+When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -202,57 +442,17 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
+[generated/neural\_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/neural\_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/neural\_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/neural\_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/neural\_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/neural\_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/neural\_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/neural\_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/neural\_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19) |
+| `id` | `string` | `undefined` | [generated/neural\_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/neural\_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17) |
 
 ## Accessors
 
@@ -262,7 +462,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 > **get** **best\_loss\_**(): `Promise`\<`number`\>
 
-The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set to `undefined`. Refer to the `best\_validation\_score\_` fitted attribute instead.
+The minimum loss reached by the solver throughout fitting. If `early_stopping=True`, this attribute is set to `undefined`. Refer to the `best_validation_score_` fitted attribute instead.
 
 ##### Returns
 
@@ -270,7 +470,7 @@ The minimum loss reached by the solver throughout fitting. If `early\_stopping=T
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L637)
+[generated/neural\_network/MLPClassifier.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L637)
 
 ***
 
@@ -280,7 +480,7 @@ The minimum loss reached by the solver throughout fitting. If `early\_stopping=T
 
 > **get** **best\_validation\_score\_**(): `Promise`\<`number`\>
 
-The best validation score (i.e. accuracy score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`.
+The best validation score (i.e. accuracy score) that triggered the early stopping. Only available if `early_stopping=True`, otherwise the attribute is set to `undefined`.
 
 ##### Returns
 
@@ -288,7 +488,7 @@ The best validation score (i.e. accuracy score) that triggered the early stoppin
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L712)
+[generated/neural\_network/MLPClassifier.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L712)
 
 ***
 
@@ -306,7 +506,7 @@ Class labels for each output.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L589)
+[generated/neural\_network/MLPClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L589)
 
 ***
 
@@ -324,7 +524,7 @@ The ith element in the list represents the weight matrix corresponding to layer 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L760)
+[generated/neural\_network/MLPClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L760)
 
 ***
 
@@ -334,7 +534,7 @@ The ith element in the list represents the weight matrix corresponding to layer 
 
 > **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
 ##### Returns
 
@@ -342,7 +542,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:833](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L833)
+[generated/neural\_network/MLPClassifier.ts:833](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L833)
 
 ***
 
@@ -360,7 +560,7 @@ The ith element in the list represents the bias vector corresponding to layer i 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L783)
+[generated/neural\_network/MLPClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L783)
 
 ***
 
@@ -378,7 +578,7 @@ The current loss computed with the loss function.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L614)
+[generated/neural\_network/MLPClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L614)
 
 ***
 
@@ -396,7 +596,7 @@ The ith element in the list represents the loss at the ith iteration.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L662)
+[generated/neural\_network/MLPClassifier.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L662)
 
 ***
 
@@ -406,7 +606,7 @@ The ith element in the list represents the loss at the ith iteration.
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
 ##### Returns
 
@@ -414,7 +614,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L808)
+[generated/neural\_network/MLPClassifier.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L808)
 
 ***
 
@@ -432,7 +632,7 @@ The number of iterations the solver has run.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:858](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L858)
+[generated/neural\_network/MLPClassifier.ts:858](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L858)
 
 ***
 
@@ -450,7 +650,7 @@ Number of layers.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:881](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L881)
+[generated/neural\_network/MLPClassifier.ts:881](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L881)
 
 ***
 
@@ -468,7 +668,7 @@ Number of outputs.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L906)
+[generated/neural\_network/MLPClassifier.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L906)
 
 ***
 
@@ -486,7 +686,7 @@ Name of the output activation function.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:931](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L931)
+[generated/neural\_network/MLPClassifier.ts:931](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L931)
 
 ***
 
@@ -506,7 +706,28 @@ Name of the output activation function.
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -514,7 +735,7 @@ Name of the output activation function.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L187)
+[generated/neural\_network/MLPClassifier.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L187)
 
 ***
 
@@ -532,7 +753,7 @@ The number of training samples seen by the solver during fitting.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L737)
+[generated/neural\_network/MLPClassifier.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L737)
 
 ***
 
@@ -542,7 +763,7 @@ The number of training samples seen by the solver during fitting.
 
 > **get** **validation\_scores\_**(): `Promise`\<`any`[]\>
 
-The score at each iteration on a held-out validation set. The score reported is the accuracy score. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`.
+The score at each iteration on a held-out validation set. The score reported is the accuracy score. Only available if `early_stopping=True`, otherwise the attribute is set to `undefined`.
 
 ##### Returns
 
@@ -550,7 +771,7 @@ The score at each iteration on a held-out validation set. The score reported is 
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L687)
+[generated/neural\_network/MLPClassifier.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L687)
 
 ## Methods
 
@@ -568,7 +789,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L239)
+[generated/neural\_network/MLPClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L239)
 
 ***
 
@@ -580,15 +801,68 @@ Fit the model to data matrix X and target(s) y.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 The input data.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 The target values (class labels in classification, real numbers in regression).
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -596,7 +870,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L256)
+[generated/neural\_network/MLPClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L256)
 
 ***
 
@@ -606,15 +880,55 @@ The target values (class labels in classification, real numbers in regression).
 
 Get metadata routing of this object.
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -622,7 +936,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L295)
+[generated/neural\_network/MLPClassifier.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L295)
 
 ***
 
@@ -636,7 +950,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -644,7 +979,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L200)
+[generated/neural\_network/MLPClassifier.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L200)
 
 ***
 
@@ -656,19 +991,85 @@ Update the model with a single iteration over the given data.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.classes?**: `any`[]
+`opts`
 
-Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+</td>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.classes`?
+
+</td>
+<td>
+
+`any`[]
+
+</td>
+<td>
+
+Classes across all calls to partial_fit. Can be obtained via `np.unique(y_all)`, where y_all is the target vector of the entire dataset. This argument is required for the first call to partial_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 The input data.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 The target values.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -676,7 +1077,7 @@ The target values.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L329)
+[generated/neural\_network/MLPClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L329)
 
 ***
 
@@ -688,11 +1089,51 @@ Predict using the multi-layer perceptron classifier.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 The input data.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -700,7 +1141,7 @@ The input data.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L371)
+[generated/neural\_network/MLPClassifier.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L371)
 
 ***
 
@@ -712,11 +1153,51 @@ Return the log of probability estimates.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 The input data.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -724,7 +1205,7 @@ The input data.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L403)
+[generated/neural\_network/MLPClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L403)
 
 ***
 
@@ -736,11 +1217,51 @@ Probability estimates.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 The input data.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -748,7 +1269,7 @@ The input data.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L437)
+[generated/neural\_network/MLPClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L437)
 
 ***
 
@@ -762,19 +1283,85 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Test samples.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 True labels for `X`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -782,7 +1369,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L471)
+[generated/neural\_network/MLPClassifier.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L471)
 
 ***
 
@@ -790,19 +1377,59 @@ True labels for `X`.
 
 > **set\_partial\_fit\_request**(`opts`): `Promise`\<`any`\>
 
-Request metadata passed to the `partial\_fit` method.
+Request metadata passed to the `partial_fit` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.classes?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `classes` parameter in `partial\_fit`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.classes`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `classes` parameter in `partial_fit`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -810,7 +1437,7 @@ Metadata routing for `classes` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L517)
+[generated/neural\_network/MLPClassifier.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L517)
 
 ***
 
@@ -820,17 +1447,57 @@ Metadata routing for `classes` parameter in `partial\_fit`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -838,4 +1505,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neural\_network/MLPClassifier.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L555)
+[generated/neural\_network/MLPClassifier.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L555)

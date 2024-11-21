@@ -1,12 +1,10 @@
-**sklearn** • **Docs**
-
-***
+# Class: TunedThresholdClassifierCV
 
 Classifier that post-tunes the decision threshold using cross-validation.
 
-This estimator post-tunes the decision threshold (cut-off point) that is used for converting posterior probability estimates (i.e. output of `predict\_proba`) or decision scores (i.e. output of `decision\_function`) into a class label. The tuning is done by optimizing a binary metric, potentially constrained by a another metric.
+This estimator post-tunes the decision threshold (cut-off point) that is used for converting posterior probability estimates (i.e. output of `predict_proba`) or decision scores (i.e. output of `decision_function`) into a class label. The tuning is done by optimizing a binary metric, potentially constrained by a another metric.
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../classification_threshold.html#tunedthresholdclassifiercv).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TunedThresholdClassifierCV.html)
 
@@ -16,259 +14,330 @@ Read more in the User Guide.
 
 > **new TunedThresholdClassifierCV**(`opts`?): [`TunedThresholdClassifierCV`](TunedThresholdClassifierCV.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.cv?**: `number` \| `"prefit"`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.cv`?
+
+</td>
+<td>
+
+`number` \| `"prefit"`
+
+</td>
+<td>
 
 Determines the cross-validation splitting strategy to train classifier. Possible inputs for cv are:
 
-• **opts.estimator?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.estimator`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 The classifier, fitted or not, for which we want to optimize the decision threshold used during `predict`.
 
-• **opts.n\_jobs?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-The number of jobs to run in parallel. When `cv` represents a cross-validation strategy, the fitting and scoring on each data split is done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See Glossary for more details.
+`opts.n_jobs`?
 
-• **opts.random\_state?**: `number`
+</td>
+<td>
 
-Controls the randomness of cross-validation when `cv` is a float. See Glossary.
+`number`
 
-• **opts.refit?**: `boolean`
+</td>
+<td>
+
+The number of jobs to run in parallel. When `cv` represents a cross-validation strategy, the fitting and scoring on each data split is done in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.random_state`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Controls the randomness of cross-validation when `cv` is a float. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.refit`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether or not to refit the classifier on the entire training set once the decision threshold has been found. Note that forcing `refit=False` on cross-validation having more than a single split will raise an error. Similarly, `refit=True` in conjunction with `cv="prefit"` will raise an error.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.response_method`?
 
-• **opts.response\_method?**: `"auto"` \| `"predict_proba"` \| `"decision_function"`
+</td>
+<td>
+
+`"auto"` \| `"predict_proba"` \| `"decision_function"`
+
+</td>
+<td>
 
 Methods by the classifier `estimator` corresponding to the decision function for which we want to find a threshold. It can be:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'auto'`
+`opts.scoring`?
 
-• **opts.scoring?**: `string`
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 The objective metric to be optimized. Can be one of:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'balanced_accuracy'`
+`opts.store_cv_results`?
 
-• **opts.store\_cv\_results?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to store all scores and thresholds computed during the cross-validation process.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.thresholds`?
 
-• **opts.thresholds?**: `number` \| `ArrayLike`
+</td>
+<td>
+
+`number` \| `ArrayLike`
+
+</td>
+<td>
 
 The number of decision threshold to use when discretizing the output of the classifier `method`. Pass an array-like to manually specify the thresholds to use.
 
-**Default Value**
+</td>
+</tr>
+</tbody>
+</table>
 
-`100`
+**Returns** [`TunedThresholdClassifierCV`](TunedThresholdClassifierCV.md)
 
-#### Returns
-
-[`TunedThresholdClassifierCV`](TunedThresholdClassifierCV.md)
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L25)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L23)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L22)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L21)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L18)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/model\_selection/TunedThresholdClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/model\_selection/TunedThresholdClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/model\_selection/TunedThresholdClassifierCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L21) |
+| `id` | `string` | `undefined` | [generated/model\_selection/TunedThresholdClassifierCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/model\_selection/TunedThresholdClassifierCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L19) |
 
 ## Accessors
 
 ### best\_score\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **best\_score\_**(): `Promise`\<`number`\>
 
-The optimal score of the objective metric, evaluated at `best\_threshold\_`.
+The optimal score of the objective metric, evaluated at `best_threshold_`.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L528)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L528)
 
 ***
 
 ### best\_threshold\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **best\_threshold\_**(): `Promise`\<`number`\>
 
 The new decision threshold.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L501)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L501)
 
 ***
 
 ### cv\_results\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **cv\_results\_**(): `Promise`\<`any`\>
 
-A dictionary containing the scores and thresholds computed during the cross-validation process. Only exist if `store\_cv\_results=True`. The keys are `"thresholds"` and `"scores"`.
+A dictionary containing the scores and thresholds computed during the cross-validation process. Only exist if `store_cv_results=True`. The keys are `"thresholds"` and `"scores"`.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L555)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L555)
 
 ***
 
 ### estimator\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **estimator\_**(): `Promise`\<`any`\>
 
 The fitted classifier used when predicting.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L474)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L474)
 
 ***
 
 ### feature\_names\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-Names of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L609)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L609)
 
 ***
 
 ### n\_features\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L582)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L582)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L85)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L85)
 
 ## Methods
 
@@ -278,21 +347,57 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 Decision function for samples in `X` using the fitted estimator.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
 
-Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`ArrayLike`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L158)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`ArrayLike`\>
+
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L158)
 
 ***
 
@@ -304,13 +409,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L141)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L141)
 
 ***
 
@@ -320,29 +421,91 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Fit the classifier.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.params?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Parameters to pass to the `fit` method of the underlying classifier.
 
-• **opts.X?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Training data.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Target values.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L194)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L194)
 
 ***
 
@@ -352,23 +515,59 @@ Target values.
 
 Get metadata routing of this object.
 
-Please check User Guide on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L242)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L242)
 
 ***
 
@@ -380,17 +579,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L98)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L98)
 
 ***
 
@@ -400,21 +616,57 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 Predict the target of new samples.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The samples, as accepted by `estimator.predict`.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L278)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L278)
 
 ***
 
@@ -424,21 +676,57 @@ The samples, as accepted by `estimator.predict`.
 
 Predict logarithm class probabilities for `X` using the fitted estimator.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
 
-Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`ArrayLike`[]\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L314)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L314)
 
 ***
 
@@ -448,21 +736,57 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 Predict class probabilities for `X` using the fitted estimator.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`
+`opts`
 
-Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`ArrayLike`[]\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L350)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
+
+Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L350)
 
 ***
 
@@ -474,29 +798,91 @@ Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `ArrayLike`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: `ArrayLike`[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 Test samples.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 True labels for `X`.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`number`\>
+**Returns** `Promise`\<`number`\>
 
-#### Defined in
-
-[generated/model\_selection/TunedThresholdClassifierCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L388)
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L388)
 
 ***
 
@@ -506,22 +892,58 @@ True labels for `X`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L438)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/model\_selection/TunedThresholdClassifierCV.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L438)

@@ -50,7 +50,7 @@ export class MiniBatchDictionaryLearning {
     fit_algorithm?: 'lars' | 'cd'
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -86,12 +86,12 @@ export class MiniBatchDictionaryLearning {
       | 'threshold'
 
     /**
-      Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
+      Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform_n_nonzero_coefs=int(n_features / 10)`.
      */
     transform_n_nonzero_coefs?: number
 
     /**
-      If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
+      If `algorithm='lasso_lars'` or `algorithm='lasso_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
      */
     transform_alpha?: number
 
@@ -110,7 +110,7 @@ export class MiniBatchDictionaryLearning {
     split_sign?: boolean
 
     /**
-      Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used for initializing the dictionary when `dict_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -129,7 +129,7 @@ export class MiniBatchDictionaryLearning {
     positive_dict?: boolean
 
     /**
-      Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_lars'`.
+      Maximum number of iterations to perform if `algorithm='lasso_cd'` or `'lasso_lars'`.
 
       @defaultValue `1000`
      */
@@ -152,7 +152,7 @@ export class MiniBatchDictionaryLearning {
     /**
       Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function.
 
-      To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
+      To disable convergence detection based on cost function, set `max_no_improvement` to `undefined`.
 
       @defaultValue `10`
      */
@@ -237,7 +237,7 @@ ctor_MiniBatchDictionaryLearning = {k: v for k, v in ctor_MiniBatchDictionaryLea
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -276,7 +276,7 @@ pms_MiniBatchDictionaryLearning_fit = {k: v for k, v in pms_MiniBatchDictionaryL
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -324,7 +324,7 @@ pms_MiniBatchDictionaryLearning_fit_transform = {k: v for k, v in pms_MiniBatchD
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -362,11 +362,11 @@ pms_MiniBatchDictionaryLearning_get_feature_names_out = {k: v for k, v in pms_Mi
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -402,7 +402,7 @@ pms_MiniBatchDictionaryLearning_get_metadata_routing = {k: v for k, v in pms_Min
    */
   async partial_fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -441,11 +441,11 @@ pms_MiniBatchDictionaryLearning_partial_fit = {k: v for k, v in pms_MiniBatchDic
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -479,7 +479,7 @@ pms_MiniBatchDictionaryLearning_set_output = {k: v for k, v in pms_MiniBatchDict
   /**
     Encode the data as a sparse combination of the dictionary atoms.
 
-    Coding method is determined by the object parameter `transform\_algorithm`.
+    Coding method is determined by the object parameter `transform_algorithm`.
    */
   async transform(opts: {
     /**
@@ -542,7 +542,7 @@ pms_MiniBatchDictionaryLearning_transform = {k: v for k, v in pms_MiniBatchDicti
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -569,7 +569,7 @@ pms_MiniBatchDictionaryLearning_transform = {k: v for k, v in pms_MiniBatchDicti
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

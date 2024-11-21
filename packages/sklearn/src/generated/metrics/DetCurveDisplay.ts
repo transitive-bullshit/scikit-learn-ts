@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   DET curve visualization.
 
-  It is recommend to use [`from\_estimator`](#sklearn.metrics.DetCurveDisplay.from_estimator "sklearn.metrics.DetCurveDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.DetCurveDisplay.from_predictions "sklearn.metrics.DetCurveDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
+  It is recommend to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.DetCurveDisplay.from_estimator "sklearn.metrics.DetCurveDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.DetCurveDisplay.from_predictions "sklearn.metrics.DetCurveDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
 
-  Read more in the [User Guide](../../visualizations.html#visualizations).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DetCurveDisplay.html)
  */
@@ -116,11 +116,11 @@ ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is no
   /**
     Plot DET curve given an estimator and data.
 
-    Read more in the [User Guide](../../visualizations.html#visualizations).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_estimator(opts: {
     /**
-      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+      Fitted classifier or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
      */
     estimator?: any
 
@@ -140,12 +140,12 @@ ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is no
     sample_weight?: ArrayLike
 
     /**
-      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the predicted target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
+      Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) as the predicted target response. If set to ‘auto’, [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) is tried next.
      */
     response_method?: 'decision_function' | 'auto’} default=’auto'
 
     /**
-      The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
+      The label of the positive class. When `pos_label=None`, if `y_true` is in {-1, 1} or {0, 1}, `pos_label` is set to 1, otherwise an error will be raised.
      */
     pos_label?: number | boolean | string
 
@@ -192,7 +192,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
   /**
     Plot the DET curve given the true and predicted labels.
 
-    Read more in the [User Guide](../../visualizations.html#visualizations).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_predictions(opts: {
     /**
@@ -201,7 +201,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
     y_true?: ArrayLike
 
     /**
-      Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by `decision\_function` on some classifiers).
+      Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by `decision_function` on some classifiers).
      */
     y_pred?: ArrayLike
 
@@ -211,7 +211,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
     sample_weight?: ArrayLike
 
     /**
-      The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
+      The label of the positive class. When `pos_label=None`, if `y_true` is in {-1, 1} or {0, 1}, `pos_label` is set to 1, otherwise an error will be raised.
      */
     pos_label?: number | boolean | string
 
@@ -265,7 +265,7 @@ pms_DetCurveDisplay_from_predictions = {k: v for k, v in pms_DetCurveDisplay_fro
     ax?: any
 
     /**
-      Name of DET curve for labeling. If `undefined`, use `estimator\_name` if it is not `undefined`, otherwise no labeling is shown.
+      Name of DET curve for labeling. If `undefined`, use `estimator_name` if it is not `undefined`, otherwise no labeling is shown.
      */
     name?: string
 

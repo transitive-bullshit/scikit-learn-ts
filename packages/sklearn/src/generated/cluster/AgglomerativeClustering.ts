@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Recursively merges pair of clusters of sample data; uses linkage distance.
 
-  Read more in the [User Guide](../clustering.html#hierarchical-clustering).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../clustering.html#hierarchical-clustering).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
  */
@@ -24,7 +24,7 @@ export class AgglomerativeClustering {
 
   constructor(opts?: {
     /**
-      The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.
+      The number of clusters to find. It must be `undefined` if `distance_threshold` is not `undefined`.
 
       @defaultValue `2`
      */
@@ -43,14 +43,14 @@ export class AgglomerativeClustering {
     memory?: string
 
     /**
-      Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
+      Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
 
-      For an example of connectivity matrix using [`kneighbors\_graph`](sklearn.neighbors.kneighbors_graph.html#sklearn.neighbors.kneighbors_graph "sklearn.neighbors.kneighbors_graph"), see [Agglomerative clustering with and without structure](../../auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py).
+      For an example of connectivity matrix using [`kneighbors_graph`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.kneighbors_graph.html#sklearn.neighbors.kneighbors_graph "sklearn.neighbors.kneighbors_graph"), see [Agglomerative clustering with and without structure](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py).
      */
     connectivity?: ArrayLike
 
     /**
-      Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.
+      Stop early the construction of the tree at `n_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance_threshold` is not `undefined`. By default `compute_full_tree` is “auto”, which is equivalent to `true` when `distance_threshold` is not `undefined` or that `n_clusters` is inferior to the maximum between 100 or `0.02 \* n_samples`. Otherwise, “auto” is equivalent to `false`.
 
       @defaultValue `'auto'`
      */
@@ -64,12 +64,12 @@ export class AgglomerativeClustering {
     linkage?: 'ward' | 'complete' | 'average' | 'single'
 
     /**
-      The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
+      The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n_clusters` must be `undefined` and `compute_full_tree` must be `true`.
      */
     distance_threshold?: number
 
     /**
-      Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
+      Computes distances between clusters even if `distance_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
 
       @defaultValue `false`
      */
@@ -234,11 +234,11 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -270,7 +270,7 @@ pms_AgglomerativeClustering_get_metadata_routing = {k: v for k, v in pms_Agglome
   }
 
   /**
-    The number of clusters found by the algorithm. If `distance\_threshold=None`, it will be equal to the given `n\_clusters`.
+    The number of clusters found by the algorithm. If `distance_threshold=None`, it will be equal to the given `n_clusters`.
    */
   get n_clusters_(): Promise<number> {
     if (this._isDisposed) {
@@ -378,7 +378,7 @@ pms_AgglomerativeClustering_get_metadata_routing = {k: v for k, v in pms_Agglome
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -405,7 +405,7 @@ pms_AgglomerativeClustering_get_metadata_routing = {k: v for k, v in pms_Agglome
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -432,7 +432,7 @@ pms_AgglomerativeClustering_get_metadata_routing = {k: v for k, v in pms_Agglome
   }
 
   /**
-    The children of each non-leaf node. Values less than `n\_samples` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n\_samples` is a non-leaf node and has children `children\_\[i \- n\_samples\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n\_samples + i`.
+    The children of each non-leaf node. Values less than `n_samples` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n_samples` is a non-leaf node and has children `children_\[i \- n_samples\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n_samples + i`.
    */
   get children_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -459,7 +459,7 @@ pms_AgglomerativeClustering_get_metadata_routing = {k: v for k, v in pms_Agglome
   }
 
   /**
-    Distances between nodes in the corresponding place in `children\_`. Only computed if `distance\_threshold` is used or `compute\_distances` is set to `true`.
+    Distances between nodes in the corresponding place in `children_`. Only computed if `distance_threshold` is used or `compute_distances` is set to `true`.
    */
   get distances_(): Promise<ArrayLike> {
     if (this._isDisposed) {

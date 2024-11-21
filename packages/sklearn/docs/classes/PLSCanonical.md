@@ -1,12 +1,10 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: PLSCanonical
 
 Partial Least Squares transformer and regressor.
 
-For a comparison between other cross decomposition algorithms, see [Compare cross decomposition methods](../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html#sphx-glr-auto-examples-cross-decomposition-plot-compare-cross-decomposition-py).
+For a comparison between other cross decomposition algorithms, see [Compare cross decomposition methods](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html#sphx-glr-auto-examples-cross-decomposition-plot-compare-cross-decomposition-py).
 
-Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_decomposition.html#cross-decomposition).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSCanonical.html)
 
@@ -18,55 +16,136 @@ Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.algorithm?**: `"nipals"` \| `"svd"`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.algorithm`?
+
+</td>
+<td>
+
+`"nipals"` \| `"svd"`
+
+</td>
+<td>
 
 The algorithm used to estimate the first singular vectors of the cross-covariance matrix. ‘nipals’ uses the power method while ‘svd’ will compute the whole SVD.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'nipals'`
+`opts.copy`?
 
-• **opts.copy?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.max_iter`?
 
-• **opts.max\_iter?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The maximum number of iterations of the power method when `algorithm='nipals'`. Ignored otherwise.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`500`
+`opts.n_components`?
 
-• **opts.n\_components?**: `number`
+</td>
+<td>
 
-Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`2`
+Number of components to keep. Should be in `\[1, min(n_samples, n_features, n_targets)\]`.
 
-• **opts.scale?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scale`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to scale `X` and `Y`.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.tol`?
 
-• **opts.tol?**: `number`
+</td>
+<td>
 
-The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`0.000001`
+The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u_i \- u_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -74,57 +153,17 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L25)
+[generated/cross\_decomposition/PLSCanonical.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/cross\_decomposition/PLSCanonical.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L23)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/cross\_decomposition/PLSCanonical.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L22)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/cross\_decomposition/PLSCanonical.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L21)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/cross\_decomposition/PLSCanonical.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L18)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/cross\_decomposition/PLSCanonical.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/cross\_decomposition/PLSCanonical.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/cross\_decomposition/PLSCanonical.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/cross\_decomposition/PLSCanonical.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L21) |
+| `id` | `string` | `undefined` | [generated/cross\_decomposition/PLSCanonical.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/cross\_decomposition/PLSCanonical.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L19) |
 
 ## Accessors
 
@@ -134,7 +173,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 > **get** **coef\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-The coefficients of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
+The coefficients of the linear model such that `Y` is approximated as `Y \= X @ coef_.T + intercept_`.
 
 ##### Returns
 
@@ -142,7 +181,7 @@ The coefficients of the linear model such that `Y` is approximated as `Y \= X @ 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L766)
+[generated/cross\_decomposition/PLSCanonical.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L766)
 
 ***
 
@@ -152,7 +191,7 @@ The coefficients of the linear model such that `Y` is approximated as `Y \= X @ 
 
 > **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
 ##### Returns
 
@@ -160,7 +199,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L862)
+[generated/cross\_decomposition/PLSCanonical.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L862)
 
 ***
 
@@ -170,7 +209,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 > **get** **intercept\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
+The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef_.T + intercept_`.
 
 ##### Returns
 
@@ -178,7 +217,7 @@ The intercepts of the linear model such that `Y` is approximated as `Y \= X @ co
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L789)
+[generated/cross\_decomposition/PLSCanonical.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L789)
 
 ***
 
@@ -188,7 +227,7 @@ The intercepts of the linear model such that `Y` is approximated as `Y \= X @ co
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
 ##### Returns
 
@@ -196,7 +235,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L837)
+[generated/cross\_decomposition/PLSCanonical.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L837)
 
 ***
 
@@ -214,7 +253,7 @@ Number of iterations of the power method, for each component. Empty if `algorith
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L814)
+[generated/cross\_decomposition/PLSCanonical.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L814)
 
 ***
 
@@ -234,7 +273,28 @@ Number of iterations of the power method, for each component. Empty if `algorith
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -242,7 +302,7 @@ Number of iterations of the power method, for each component. Empty if `algorith
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L72)
+[generated/cross\_decomposition/PLSCanonical.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L72)
 
 ***
 
@@ -260,7 +320,7 @@ The loadings of `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L666)
+[generated/cross\_decomposition/PLSCanonical.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L666)
 
 ***
 
@@ -278,7 +338,7 @@ The projection matrix used to transform `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L716)
+[generated/cross\_decomposition/PLSCanonical.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L716)
 
 ***
 
@@ -296,7 +356,7 @@ The left singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L616)
+[generated/cross\_decomposition/PLSCanonical.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L616)
 
 ***
 
@@ -314,7 +374,7 @@ The loadings of `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L691)
+[generated/cross\_decomposition/PLSCanonical.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L691)
 
 ***
 
@@ -332,7 +392,7 @@ The projection matrix used to transform `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L741)
+[generated/cross\_decomposition/PLSCanonical.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L741)
 
 ***
 
@@ -350,7 +410,7 @@ The right singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L641)
+[generated/cross\_decomposition/PLSCanonical.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L641)
 
 ## Methods
 
@@ -368,7 +428,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L124)
+[generated/cross\_decomposition/PLSCanonical.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L124)
 
 ***
 
@@ -380,19 +440,85 @@ Fit model to data.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+`opts`
 
-Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+</td>
+<td>
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`object`
 
-Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+</td>
+<td>
 
-• **opts.Y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+&hyphen;
 
-Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
+
+Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.Y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
+
+Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -400,7 +526,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L141)
+[generated/cross\_decomposition/PLSCanonical.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L141)
 
 ***
 
@@ -412,15 +538,68 @@ Learn and apply the dimension reduction on the train data.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+`opts`
 
-Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+</td>
+<td>
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+`object`
 
-Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -428,7 +607,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L183)
+[generated/cross\_decomposition/PLSCanonical.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L183)
 
 ***
 
@@ -438,15 +617,55 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 Get output feature names for transformation.
 
-The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.input\_features?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.input_features`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Only used to validate feature names with the names seen in `fit`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -454,7 +673,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L222)
+[generated/cross\_decomposition/PLSCanonical.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L222)
 
 ***
 
@@ -464,15 +683,55 @@ Only used to validate feature names with the names seen in `fit`.
 
 Get metadata routing of this object.
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -480,7 +739,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L258)
+[generated/cross\_decomposition/PLSCanonical.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L258)
 
 ***
 
@@ -494,7 +753,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -502,7 +782,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L85)
+[generated/cross\_decomposition/PLSCanonical.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L85)
 
 ***
 
@@ -514,19 +794,85 @@ Transform data back to its original space.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+`opts`
 
-New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+</td>
+<td>
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`object`
 
-New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+</td>
+<td>
 
-• **opts.Y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+&hyphen;
 
-New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+New data, where `n_samples` is the number of samples and `n_components` is the number of pls components.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
+
+New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.Y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -534,7 +880,7 @@ New target, where `n\_samples` is the number of samples and `n\_components` is t
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L292)
+[generated/cross\_decomposition/PLSCanonical.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L292)
 
 ***
 
@@ -546,19 +892,68 @@ Predict targets of given samples.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.copy?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.copy`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to copy `X` and `Y`, or perform in-place normalization.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.X`?
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Samples.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -566,7 +961,7 @@ Samples.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L336)
+[generated/cross\_decomposition/PLSCanonical.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L336)
 
 ***
 
@@ -576,23 +971,89 @@ Samples.
 
 Return the coefficient of determination of the prediction.
 
-The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Sample weights.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
 
-Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+`opts.X`?
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
+
+Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 True values for `X`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -600,7 +1061,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L377)
+[generated/cross\_decomposition/PLSCanonical.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L377)
 
 ***
 
@@ -610,15 +1071,55 @@ True values for `X`.
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+`opts`
 
-Configure output of `transform` and `fit\_transform`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.transform`?
+
+</td>
+<td>
+
+`"default"` \| `"pandas"` \| `"polars"`
+
+</td>
+<td>
+
+Configure output of `transform` and `fit_transform`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -626,7 +1127,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L421)
+[generated/cross\_decomposition/PLSCanonical.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L421)
 
 ***
 
@@ -636,17 +1137,57 @@ Configure output of `transform` and `fit\_transform`.
 
 Request metadata passed to the `predict` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.copy?**: `string` \| `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.copy`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
 
 Metadata routing for `copy` parameter in `predict`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -654,7 +1195,7 @@ Metadata routing for `copy` parameter in `predict`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L457)
+[generated/cross\_decomposition/PLSCanonical.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L457)
 
 ***
 
@@ -664,17 +1205,57 @@ Metadata routing for `copy` parameter in `predict`.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.sample\_weight?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `sample\_weight` parameter in `score`.
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.sample_weight`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `sample_weight` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -682,7 +1263,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L495)
+[generated/cross\_decomposition/PLSCanonical.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L495)
 
 ***
 
@@ -692,17 +1273,57 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 Request metadata passed to the `transform` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.copy?**: `string` \| `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.copy`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
 
 Metadata routing for `copy` parameter in `transform`.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -710,7 +1331,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L533)
+[generated/cross\_decomposition/PLSCanonical.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L533)
 
 ***
 
@@ -722,27 +1343,102 @@ Apply the dimension reduction.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.copy?**: `boolean`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.copy`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to copy `X` and `Y`, or perform in-place normalization.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.X`?
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Samples to transform.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Target vectors.
 
-• **opts.Y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.Y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Target vectors.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -750,4 +1446,4 @@ Target vectors.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L567)
+[generated/cross\_decomposition/PLSCanonical.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L567)

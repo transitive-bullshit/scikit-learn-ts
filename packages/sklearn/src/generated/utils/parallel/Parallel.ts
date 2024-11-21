@@ -24,7 +24,7 @@ export class Parallel {
 
   constructor(opts?: {
     /**
-      Iterable containing tuples of (delayed\_function, args, kwargs) that should be consumed.
+      Iterable containing tuples of (delayed_function, args, kwargs) that should be consumed.
      */
     iterable?: any
   }) {
@@ -102,7 +102,7 @@ ctor_Parallel = {k: v for k, v in ctor_Parallel.items() if v is not None}`
    */
   async __call__(opts: {
     /**
-      Iterable containing tuples of (delayed\_function, args, kwargs) that should be consumed.
+      Iterable containing tuples of (delayed_function, args, kwargs) that should be consumed.
      */
     iterable?: any
   }): Promise<any[]> {
@@ -132,7 +132,7 @@ pms_Parallel___call__ = {k: v for k, v in pms_Parallel___call__.items() if v is 
   /**
     Dispatch more data for parallel processing
 
-    This method is meant to be called concurrently by the multiprocessing callback. We rely on the thread-safety of dispatch\_one\_batch to protect against concurrent consumption of the unprotected iterator.
+    This method is meant to be called concurrently by the multiprocessing callback. We rely on the thread-safety of dispatch_one_batch to protect against concurrent consumption of the unprotected iterator.
    */
   async dispatch_next(opts: {}): Promise<any> {
     if (this._isDisposed) {

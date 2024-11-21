@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Dot-Product kernel.
 
-  The DotProduct kernel is non-stationary and can be obtained from linear regression by putting \\(N(0, 1)\\) priors on the coefficients of \\(x\_d (d = 1, . . . , D)\\) and a prior of \\(N(0, \\sigma\_0^2)\\) on the bias. The DotProduct kernel is invariant to a rotation of the coordinates about the origin, but not translations. It is parameterized by a parameter sigma\_0 \\(\\sigma\\) which controls the inhomogenity of the kernel. For \\(\\sigma\_0^2 =0\\), the kernel is called the homogeneous linear kernel, otherwise it is inhomogeneous. The kernel is given by
+  The DotProduct kernel is non-stationary and can be obtained from linear regression by putting \\(N(0, 1)\\) priors on the coefficients of \\(x_d (d = 1, . . . , D)\\) and a prior of \\(N(0, \\sigma_0^2)\\) on the bias. The DotProduct kernel is invariant to a rotation of the coordinates about the origin, but not translations. It is parameterized by a parameter sigma_0 \\(\\sigma\\) which controls the inhomogenity of the kernel. For \\(\\sigma_0^2 =0\\), the kernel is called the homogeneous linear kernel, otherwise it is inhomogeneous. The kernel is given by
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.DotProduct.html)
  */
@@ -22,14 +22,14 @@ export class DotProduct {
 
   constructor(opts?: {
     /**
-      Parameter controlling the inhomogenity of the kernel. If sigma\_0=0, the kernel is homogeneous.
+      Parameter controlling the inhomogenity of the kernel. If sigma_0=0, the kernel is homogeneous.
 
       @defaultValue `1`
      */
     sigma_0?: any
 
     /**
-      The lower and upper bound on ‘sigma\_0’. If set to “fixed”, ‘sigma\_0’ cannot be changed during hyperparameter tuning.
+      The lower and upper bound on ‘sigma_0’. If set to “fixed”, ‘sigma_0’ cannot be changed during hyperparameter tuning.
      */
     sigma_0_bounds?: 'fixed'
   }) {

@@ -1,12 +1,10 @@
-**sklearn** • **Docs**
-
-***
+# Class: GraphicalLassoCV
 
 Sparse inverse covariance w/ cross-validated choice of the l1 penalty.
 
-See glossary entry for cross-validation estimator.
+See glossary entry for [cross-validation estimator](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-cross-validation-estimator).
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../covariance.html#sparse-inverse-covariance).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.GraphicalLassoCV.html)
 
@@ -16,333 +14,406 @@ Read more in the User Guide.
 
 > **new GraphicalLassoCV**(`opts`?): [`GraphicalLassoCV`](GraphicalLassoCV.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.alphas?**: `number` \| `ArrayLike`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.alphas`?
+
+</td>
+<td>
+
+`number` \| `ArrayLike`
+
+</td>
+<td>
 
 If an integer is given, it fixes the number of points on the grids of alpha to be used. If a list is given, it gives the grid to be used. See the notes in the class docstring for more details. Range is \[1, inf) for an integer. Range is (0, inf\] for an array-like of floats.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`4`
+`opts.assume_centered`?
 
-• **opts.assume\_centered?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`false`
+`opts.cv`?
 
-• **opts.cv?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-• **opts.enet\_tol?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.enet_tol`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.0001`
+`opts.eps`?
 
-• **opts.eps?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Default is `np.finfo(np.float64).eps`.
 
-• **opts.max\_iter?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.max_iter`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Maximum number of iterations.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`100`
+`opts.mode`?
 
-• **opts.mode?**: `"cd"` \| `"lars"`
+</td>
+<td>
+
+`"cd"` \| `"lars"`
+
+</td>
+<td>
 
 The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse underlying graphs, where number of features is greater than number of samples. Elsewhere prefer cd which is more numerically stable.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'cd'`
+`opts.n_jobs`?
 
-• **opts.n\_jobs?**: `number`
+</td>
+<td>
 
-Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See Glossary for more details.
+`number`
 
-• **opts.n\_refinements?**: `number`
+</td>
+<td>
+
+Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.n_refinements`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The number of times the grid is refined. Not used if explicit values of alphas are passed. Range is \[1, inf).
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`4`
+`opts.tol`?
 
-• **opts.tol?**: `number`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`0.0001`
+`opts.verbose`?
 
-• **opts.verbose?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 If verbose is `true`, the objective function and duality gap are printed at each iteration.
 
-**Default Value**
+</td>
+</tr>
+</tbody>
+</table>
 
-`false`
+**Returns** [`GraphicalLassoCV`](GraphicalLassoCV.md)
 
-#### Returns
-
-[`GraphicalLassoCV`](GraphicalLassoCV.md)
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L25)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L23)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L22)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L21)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L18)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/covariance/GraphicalLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/covariance/GraphicalLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/covariance/GraphicalLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L21) |
+| `id` | `string` | `undefined` | [generated/covariance/GraphicalLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/covariance/GraphicalLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L19) |
 
 ## Accessors
 
 ### alpha\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **alpha\_**(): `Promise`\<`number`\>
 
 Penalization parameter selected.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L568)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L568)
 
 ***
 
 ### costs\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **costs\_**(): `Promise`\<`any`\>
 
-The list of values of the objective function and the dual gap at each iteration. Returned only if return\_costs is `true`.
+The list of values of the objective function and the dual gap at each iteration. Returned only if return_costs is `true`.
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L541)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L541)
 
 ***
 
 ### covariance\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **covariance\_**(): `Promise`\<`ArrayLike`[]\>
 
 Estimated covariance matrix.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-`Promise`\<`ArrayLike`[]\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L487)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L487)
 
 ***
 
 ### cv\_results\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **cv\_results\_**(): `Promise`\<`any`\>
 
 A dict with keys:
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L595)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L595)
 
 ***
 
 ### feature\_names\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L676)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L676)
 
 ***
 
 ### location\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **location\_**(): `Promise`\<`ArrayLike`\>
 
 Estimated location, i.e. the estimated mean.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L460)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L460)
 
 ***
 
 ### n\_features\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during fit.
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L649)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L649)
 
 ***
 
 ### n\_iter\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_iter\_**(): `Promise`\<`number`\>
 
 Number of iterations run for the optimal alpha.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L622)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L622)
 
 ***
 
 ### precision\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **precision\_**(): `Promise`\<`ArrayLike`[]\>
 
 Estimated precision matrix (inverse covariance).
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-`Promise`\<`ArrayLike`[]\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L514)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L514)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/covariance/GraphicalLassoCV.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L101)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L101)
 
 ## Methods
 
@@ -354,13 +425,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L155)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L155)
 
 ***
 
@@ -370,45 +437,108 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Compute the Mean Squared Error between two covariance estimators.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.comp\_cov?**: `ArrayLike`[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.comp_cov`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 The covariance to compare with.
 
-• **opts.norm?**: `"frobenius"` \| `"spectral"`
+</td>
+</tr>
+<tr>
+<td>
 
-The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+`opts.norm`?
 
-**Default Value**
+</td>
+<td>
 
-`'frobenius'`
+`"frobenius"` \| `"spectral"`
 
-• **opts.scaling?**: `boolean`
+</td>
+<td>
 
-If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp_cov \- self.covariance_)`.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`true`
+`opts.scaling`?
 
-• **opts.squared?**: `boolean`
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+If `true` (default), the squared error norm is divided by n_features. If `false`, the squared error norm is not rescaled.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.squared`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
 
-**Default Value**
+</td>
+</tr>
+</tbody>
+</table>
 
-`true`
+**Returns** `Promise`\<`number`\>
 
-#### Returns
-
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L172)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L172)
 
 ***
 
@@ -418,29 +548,91 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 Fit the GraphicalLasso covariance model to X.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.params?**: `any`
+`opts`
 
-Parameters to be passed to the CV splitter and the cross\_val\_score function.
+</td>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.params`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+Parameters to be passed to the CV splitter and the cross_val_score function.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 Data from which to compute the covariance estimate.
 
-• **opts.y?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Not used, present for API consistency by convention.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L227)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L227)
 
 ***
 
@@ -450,23 +642,59 @@ Not used, present for API consistency by convention.
 
 Get metadata routing of this object.
 
-Please check User Guide on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/covariance/GraphicalLassoCV.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L273)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L273)
 
 ***
 
@@ -476,21 +704,57 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 Getter for the precision matrix.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.precision\_?**: `ArrayLike`[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.precision_`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 The precision matrix associated to the current covariance object.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L309)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L309)
 
 ***
 
@@ -502,17 +766,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/covariance/GraphicalLassoCV.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L114)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L114)
 
 ***
 
@@ -522,21 +803,57 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 Compute the squared Mahalanobis distances of given observations.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`\>
+**Returns** `Promise`\<`ArrayLike`\>
 
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L345)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L345)
 
 ***
 
@@ -544,29 +861,78 @@ The observations, the Mahalanobis distances of the which we compute. Observation
 
 > **score**(`opts`): `Promise`\<`number`\>
 
-Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
+Compute the log-likelihood of `X_test` under the estimated Gaussian model.
 
-The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
+The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location_` and `self.covariance_`.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X\_test?**: `ArrayLike`[]
+`opts`
 
-Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+</td>
+<td>
 
-• **opts.y?**: `any`
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X_test`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
+
+Test data of which we compute the likelihood, where `n_samples` is the number of samples and `n_features` is the number of features. `X_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Not used, present for API consistency by convention.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`number`\>
+**Returns** `Promise`\<`number`\>
 
-#### Defined in
-
-[generated/covariance/GraphicalLassoCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L381)
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L381)
 
 ***
 
@@ -576,22 +942,58 @@ Not used, present for API consistency by convention.
 
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X\_test?**: `string` \| `boolean`
+`opts`
 
-Metadata routing for `X\_test` parameter in `score`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/covariance/GraphicalLassoCV.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L424)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X_test`?
+
+</td>
+<td>
+
+`string` \| `boolean`
+
+</td>
+<td>
+
+Metadata routing for `X_test` parameter in `score`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/covariance/GraphicalLassoCV.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L424)

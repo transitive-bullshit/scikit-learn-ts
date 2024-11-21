@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Confusion Matrix visualization.
 
-  It is recommend to use [`from\_estimator`](#sklearn.metrics.ConfusionMatrixDisplay.from_estimator "sklearn.metrics.ConfusionMatrixDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.ConfusionMatrixDisplay.from_predictions "sklearn.metrics.ConfusionMatrixDisplay.from_predictions") to create a [`ConfusionMatrixDisplay`](#sklearn.metrics.ConfusionMatrixDisplay "sklearn.metrics.ConfusionMatrixDisplay"). All parameters are stored as attributes.
+  It is recommend to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.ConfusionMatrixDisplay.from_estimator "sklearn.metrics.ConfusionMatrixDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.ConfusionMatrixDisplay.from_predictions "sklearn.metrics.ConfusionMatrixDisplay.from_predictions") to create a [`ConfusionMatrixDisplay`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.ConfusionMatrixDisplay "sklearn.metrics.ConfusionMatrixDisplay"). All parameters are stored as attributes.
 
-  Read more in the [User Guide](../../visualizations.html#visualizations).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html)
  */
@@ -29,7 +29,7 @@ export class ConfusionMatrixDisplay {
     confusion_matrix?: NDArray[]
 
     /**
-      Display labels for plot. If `undefined`, display labels are set from 0 to `n\_classes \- 1`.
+      Display labels for plot. If `undefined`, display labels are set from 0 to `n_classes \- 1`.
      */
     display_labels?: NDArray
   }) {
@@ -110,11 +110,11 @@ ctor_ConfusionMatrixDisplay = {k: v for k, v in ctor_ConfusionMatrixDisplay.item
   /**
     Plot Confusion Matrix given an estimator and some data.
 
-    Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#confusion-matrix).
    */
   async from_estimator(opts: {
     /**
-      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+      Fitted classifier or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
      */
     estimator?: any
 
@@ -129,7 +129,7 @@ ctor_ConfusionMatrixDisplay = {k: v for k, v in ctor_ConfusionMatrixDisplay.item
     y?: ArrayLike
 
     /**
-      List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
+      List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y_true` or `y_pred` are used in sorted order.
      */
     labels?: ArrayLike
 
@@ -144,7 +144,7 @@ ctor_ConfusionMatrixDisplay = {k: v for k, v in ctor_ConfusionMatrixDisplay.item
     normalize?: 'true' | 'pred' | 'all'
 
     /**
-      Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
+      Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y_true` and `y_pred` will be used.
      */
     display_labels?: ArrayLike
 
@@ -226,7 +226,7 @@ pms_ConfusionMatrixDisplay_from_estimator = {k: v for k, v in pms_ConfusionMatri
   /**
     Plot Confusion Matrix given true and predicted labels.
 
-    Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#confusion-matrix).
    */
   async from_predictions(opts: {
     /**
@@ -240,7 +240,7 @@ pms_ConfusionMatrixDisplay_from_estimator = {k: v for k, v in pms_ConfusionMatri
     y_pred?: ArrayLike
 
     /**
-      List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
+      List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y_true` or `y_pred` are used in sorted order.
      */
     labels?: ArrayLike
 
@@ -255,7 +255,7 @@ pms_ConfusionMatrixDisplay_from_estimator = {k: v for k, v in pms_ConfusionMatri
     normalize?: 'true' | 'pred' | 'all'
 
     /**
-      Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
+      Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y_true` and `y_pred` will be used.
      */
     display_labels?: ArrayLike
 
@@ -439,7 +439,7 @@ pms_ConfusionMatrixDisplay_plot = {k: v for k, v in pms_ConfusionMatrixDisplay_p
   }
 
   /**
-    Array of matplotlib axes. `undefined` if `include\_values` is false.
+    Array of matplotlib axes. `undefined` if `include_values` is false.
    */
   get text_(): Promise<NDArray[]> {
     if (this._isDisposed) {

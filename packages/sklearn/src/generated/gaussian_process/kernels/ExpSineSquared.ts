@@ -36,7 +36,7 @@ export class ExpSineSquared {
     periodicity?: any
 
     /**
-      The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
+      The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘length_scale’ cannot be changed during hyperparameter tuning.
      */
     length_scale_bounds?: 'fixed'
 

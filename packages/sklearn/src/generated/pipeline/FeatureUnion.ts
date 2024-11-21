@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This estimator applies a list of transformer objects in parallel to the input data, then concatenates the results. This is useful to combine several feature extraction mechanisms into a single transformer.
 
-  Parameters of the transformers may be set using its name and the parameter name separated by a ‘\_\_’. A transformer may be replaced entirely by setting the parameter with its name to another transformer, removed by setting to ‘drop’ or disabled by setting to ‘passthrough’ (features are passed without transformation).
+  Parameters of the transformers may be set using its name and the parameter name separated by a ‘__’. A transformer may be replaced entirely by setting the parameter with its name to another transformer, removed by setting to ‘drop’ or disabled by setting to ‘passthrough’ (features are passed without transformation).
 
-  Read more in the [User Guide](../compose.html#feature-union).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../compose.html#feature-union).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html)
  */
@@ -31,12 +31,12 @@ export class FeatureUnion {
     transformer_list?: any
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Multiplicative weights for features per transformer. Keys are transformer names, values the weights. Raises ValueError if key not present in `transformer\_list`.
+      Multiplicative weights for features per transformer. Keys are transformer names, values the weights. Raises ValueError if key not present in `transformer_list`.
      */
     transformer_weights?: any
 
@@ -48,7 +48,7 @@ export class FeatureUnion {
     verbose?: boolean
 
     /**
-      If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_feature_names_out "sklearn.pipeline.FeatureUnion.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_feature_names_out "sklearn.pipeline.FeatureUnion.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
+      If `true`, [`get_feature_names_out`](https://scikit-learn.org/stable/modules/generated/#sklearn.pipeline.FeatureUnion.get_feature_names_out "sklearn.pipeline.FeatureUnion.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`get_feature_names_out`](https://scikit-learn.org/stable/modules/generated/#sklearn.pipeline.FeatureUnion.get_feature_names_out "sklearn.pipeline.FeatureUnion.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
 
       @defaultValue `true`
      */
@@ -139,7 +139,7 @@ ctor_FeatureUnion = {k: v for k, v in ctor_FeatureUnion.items() if v is not None
     y?: ArrayLike[]
 
     /**
-      If `enable\_metadata\_routing=False` (default): Parameters directly passed to the `fit` methods of the sub-transformers.
+      If `enable_metadata_routing=False` (default): Parameters directly passed to the `fit` methods of the sub-transformers.
      */
     fit_params?: any
   }): Promise<any> {
@@ -181,7 +181,7 @@ pms_FeatureUnion_fit = {k: v for k, v in pms_FeatureUnion_fit.items() if v is no
     y?: ArrayLike[]
 
     /**
-      If `enable\_metadata\_routing=False` (default): Parameters directly passed to the `fit` methods of the sub-transformers.
+      If `enable_metadata_routing=False` (default): Parameters directly passed to the `fit` methods of the sub-transformers.
      */
     params?: any
   }): Promise<ArrayLike | SparseMatrix[]> {
@@ -245,11 +245,11 @@ pms_FeatureUnion_get_feature_names_out = {k: v for k, v in pms_FeatureUnion_get_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -279,13 +279,13 @@ pms_FeatureUnion_get_metadata_routing = {k: v for k, v in pms_FeatureUnion_get_m
   }
 
   /**
-    Set the output container when `"transform"` and `"fit\_transform"` are called.
+    Set the output container when `"transform"` and `"fit_transform"` are called.
 
-    `set\_output` will set the output of all estimators in `transformer\_list`.
+    `set_output` will set the output of all estimators in `transformer_list`.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -322,7 +322,7 @@ pms_FeatureUnion_set_output = {k: v for k, v in pms_FeatureUnion_set_output.item
     X?: ArrayLike
 
     /**
-      Parameters routed to the `transform` method of the sub-transformers via the metadata routing API. See [Metadata Routing User Guide](../../metadata_routing.html#metadata-routing) for more details.
+      Parameters routed to the `transform` method of the sub-transformers via the metadata routing API. See [Metadata Routing User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) for more details.
      */
     params?: any
   }): Promise<ArrayLike | SparseMatrix[]> {

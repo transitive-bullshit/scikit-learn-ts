@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Imputation for completing missing values using k-Nearest Neighbors.
 
-  Each sample’s missing values are imputed using the mean value from `n\_neighbors` nearest neighbors found in the training set. Two samples are close if the features that neither is missing are close.
+  Each sample’s missing values are imputed using the mean value from `n_neighbors` nearest neighbors found in the training set. Two samples are close if the features that neither is missing are close.
 
-  Read more in the [User Guide](../impute.html#knnimpute).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../impute.html#knnimpute).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html)
  */
@@ -24,7 +24,7 @@ export class KNNImputer {
 
   constructor(opts?: {
     /**
-      The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to np.nan, since `pd.NA` will be converted to np.nan.
+      The placeholder for the missing values. All occurrences of `missing_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing_values` should be set to np.nan, since `pd.NA` will be converted to np.nan.
      */
     missing_values?: number | string
 
@@ -57,7 +57,7 @@ export class KNNImputer {
     copy?: boolean
 
     /**
-      If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+      If `true`, a [`MissingIndicator`](https://scikit-learn.org/stable/modules/generated/sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
 
       @defaultValue `false`
      */
@@ -145,7 +145,7 @@ ctor_KNNImputer = {k: v for k, v in ctor_KNNImputer.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Input data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: any
 
@@ -180,7 +180,7 @@ pms_KNNImputer_fit = {k: v for k, v in pms_KNNImputer_fit.items() if v is not No
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -258,11 +258,11 @@ pms_KNNImputer_get_feature_names_out = {k: v for k, v in pms_KNNImputer_get_feat
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -294,11 +294,11 @@ pms_KNNImputer_get_metadata_routing = {k: v for k, v in pms_KNNImputer_get_metad
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -358,7 +358,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
   }
 
   /**
-    Indicator used to add binary indicators for missing values. `undefined` if add\_indicator is `false`.
+    Indicator used to add binary indicators for missing values. `undefined` if add_indicator is `false`.
    */
   get indicator_(): Promise<any> {
     if (this._isDisposed) {
@@ -381,7 +381,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -406,7 +406,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

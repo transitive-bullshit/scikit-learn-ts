@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Repeats Stratified K-Fold n times with different randomization in each repetition.
 
-  Read more in the [User Guide](../cross_validation.html#repeated-k-fold).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_validation.html#repeated-k-fold).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RepeatedStratifiedKFold.html)
  */
@@ -38,7 +38,7 @@ export class RepeatedStratifiedKFold {
     n_repeats?: number
 
     /**
-      Controls the generation of the random states for each repetition. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the generation of the random states for each repetition. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -119,11 +119,11 @@ ctor_RepeatedStratifiedKFold = {k: v for k, v in ctor_RepeatedStratifiedKFold.it
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -159,12 +159,12 @@ pms_RepeatedStratifiedKFold_get_metadata_routing = {k: v for k, v in pms_Repeate
    */
   async get_n_splits(opts: {
     /**
-      Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
+      Always ignored, exists for compatibility. `np.zeros(n_samples)` may be used as a placeholder.
      */
     X?: any
 
     /**
-      Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
+      Always ignored, exists for compatibility. `np.zeros(n_samples)` may be used as a placeholder.
      */
     y?: any
 
@@ -205,7 +205,7 @@ pms_RepeatedStratifiedKFold_get_n_splits = {k: v for k, v in pms_RepeatedStratif
    */
   async split(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 

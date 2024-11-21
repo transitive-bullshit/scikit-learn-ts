@@ -22,14 +22,14 @@ export class ConstantKernel {
 
   constructor(opts?: {
     /**
-      The constant value which defines the covariance: k(x\_1, x\_2) = constant\_value
+      The constant value which defines the covariance: k(x_1, x_2) = constant_value
 
       @defaultValue `1`
      */
     constant_value?: number
 
     /**
-      The lower and upper bound on `constant\_value`. If set to “fixed”, `constant\_value` cannot be changed during hyperparameter tuning.
+      The lower and upper bound on `constant_value`. If set to “fixed”, `constant_value` cannot be changed during hyperparameter tuning.
      */
     constant_value_bounds?: 'fixed'
   }) {

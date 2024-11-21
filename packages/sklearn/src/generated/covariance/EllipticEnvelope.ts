@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   An object for detecting outliers in a Gaussian distributed dataset.
 
-  Read more in the [User Guide](../outlier_detection.html#outlier-detection).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../outlier_detection.html#outlier-detection).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.EllipticEnvelope.html)
  */
@@ -36,7 +36,7 @@ export class EllipticEnvelope {
     assume_centered?: boolean
 
     /**
-      The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support\_fraction will be used within the algorithm: `(n\_samples + n\_features + 1) / 2 \* n\_samples`. Range is (0, 1).
+      The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support_fraction will be used within the algorithm: `(n_samples + n_features + 1) / 2 \* n_samples`. Range is (0, 1).
      */
     support_fraction?: number
 
@@ -48,7 +48,7 @@ export class EllipticEnvelope {
     contamination?: number
 
     /**
-      Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -127,7 +127,7 @@ ctor_EllipticEnvelope = {k: v for k, v in ctor_EllipticEnvelope.items() if v is 
   /**
     Apply a correction to raw Minimum Covariance Determinant estimates.
 
-    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](#rbb2ba44703ed-rvd).
+    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](https://scikit-learn.org/stable/modules/generated/#rbb2ba44703ed-rvd).
    */
   async correct_covariance(opts: {
     /**
@@ -208,14 +208,14 @@ pms_EllipticEnvelope_decision_function = {k: v for k, v in pms_EllipticEnvelope_
     comp_cov?: ArrayLike[]
 
     /**
-      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp_cov \- self.covariance_)`.
 
       @defaultValue `'frobenius'`
      */
     norm?: 'frobenius' | 'spectral'
 
     /**
-      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+      If `true` (default), the squared error norm is divided by n_features. If `false`, the squared error norm is not rescaled.
 
       @defaultValue `true`
      */
@@ -341,11 +341,11 @@ pms_EllipticEnvelope_fit_predict = {k: v for k, v in pms_EllipticEnvelope_fit_pr
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -483,7 +483,7 @@ pms_EllipticEnvelope_predict = {k: v for k, v in pms_EllipticEnvelope_predict.it
   /**
     Re-weight raw Minimum Covariance Determinant estimates.
 
-    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](#rd2c89e63f1c9-rvdriessen).
+    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](https://scikit-learn.org/stable/modules/generated/#rd2c89e63f1c9-rvdriessen).
    */
   async reweight_covariance(opts: {
     /**
@@ -603,13 +603,13 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -695,7 +695,7 @@ pms_EllipticEnvelope_set_score_request = {k: v for k, v in pms_EllipticEnvelope_
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
+    Estimated pseudo inverse matrix. (stored only if store_precision is `true`)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -749,7 +749,7 @@ pms_EllipticEnvelope_set_score_request = {k: v for k, v in pms_EllipticEnvelope_
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: `decision\_function \= score\_samples \- offset\_`. The offset depends on the contamination parameter and is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
+    Offset used to define the decision function from the raw scores. We have the relation: `decision_function \= score_samples \- offset_`. The offset depends on the contamination parameter and is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -857,7 +857,7 @@ pms_EllipticEnvelope_set_score_request = {k: v for k, v in pms_EllipticEnvelope_
   }
 
   /**
-    Mahalanobis distances of the training set (on which [`fit`](#sklearn.covariance.EllipticEnvelope.fit "sklearn.covariance.EllipticEnvelope.fit") is called) observations.
+    Mahalanobis distances of the training set (on which [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.covariance.EllipticEnvelope.fit "sklearn.covariance.EllipticEnvelope.fit") is called) observations.
    */
   get dist_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -884,7 +884,7 @@ pms_EllipticEnvelope_set_score_request = {k: v for k, v in pms_EllipticEnvelope_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -911,7 +911,7 @@ pms_EllipticEnvelope_set_score_request = {k: v for k, v in pms_EllipticEnvelope_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

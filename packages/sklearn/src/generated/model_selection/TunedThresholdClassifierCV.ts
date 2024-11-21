@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Classifier that post-tunes the decision threshold using cross-validation.
 
-  This estimator post-tunes the decision threshold (cut-off point) that is used for converting posterior probability estimates (i.e. output of `predict\_proba`) or decision scores (i.e. output of `decision\_function`) into a class label. The tuning is done by optimizing a binary metric, potentially constrained by a another metric.
+  This estimator post-tunes the decision threshold (cut-off point) that is used for converting posterior probability estimates (i.e. output of `predict_proba`) or decision scores (i.e. output of `decision_function`) into a class label. The tuning is done by optimizing a binary metric, potentially constrained by a another metric.
 
-  Read more in the [User Guide](../classification_threshold.html#tunedthresholdclassifiercv).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../classification_threshold.html#tunedthresholdclassifiercv).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TunedThresholdClassifierCV.html)
  */
@@ -62,12 +62,12 @@ export class TunedThresholdClassifierCV {
     refit?: boolean
 
     /**
-      The number of jobs to run in parallel. When `cv` represents a cross-validation strategy, the fitting and scoring on each data split is done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. When `cv` represents a cross-validation strategy, the fitting and scoring on each data split is done in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Controls the randomness of cross-validation when `cv` is a float. See [Glossary](../../glossary.html#term-random_state).
+      Controls the randomness of cross-validation when `cv` is a float. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -157,7 +157,7 @@ ctor_TunedThresholdClassifierCV = {k: v for k, v in ctor_TunedThresholdClassifie
    */
   async decision_function(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -237,11 +237,11 @@ pms_TunedThresholdClassifierCV_fit = {k: v for k, v in pms_TunedThresholdClassif
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -313,7 +313,7 @@ pms_TunedThresholdClassifierCV_predict = {k: v for k, v in pms_TunedThresholdCla
    */
   async predict_log_proba(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -349,7 +349,7 @@ pms_TunedThresholdClassifierCV_predict_log_proba = {k: v for k, v in pms_TunedTh
    */
   async predict_proba(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -431,13 +431,13 @@ pms_TunedThresholdClassifierCV_score = {k: v for k, v in pms_TunedThresholdClass
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -523,7 +523,7 @@ pms_TunedThresholdClassifierCV_set_score_request = {k: v for k, v in pms_TunedTh
   }
 
   /**
-    The optimal score of the objective metric, evaluated at `best\_threshold\_`.
+    The optimal score of the objective metric, evaluated at `best_threshold_`.
    */
   get best_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -550,7 +550,7 @@ pms_TunedThresholdClassifierCV_set_score_request = {k: v for k, v in pms_TunedTh
   }
 
   /**
-    A dictionary containing the scores and thresholds computed during the cross-validation process. Only exist if `store\_cv\_results=True`. The keys are `"thresholds"` and `"scores"`.
+    A dictionary containing the scores and thresholds computed during the cross-validation process. Only exist if `store_cv_results=True`. The keys are `"thresholds"` and `"scores"`.
    */
   get cv_results_(): Promise<any> {
     if (this._isDisposed) {
@@ -577,7 +577,7 @@ pms_TunedThresholdClassifierCV_set_score_request = {k: v for k, v in pms_TunedTh
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -604,7 +604,7 @@ pms_TunedThresholdClassifierCV_set_score_request = {k: v for k, v in pms_TunedTh
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

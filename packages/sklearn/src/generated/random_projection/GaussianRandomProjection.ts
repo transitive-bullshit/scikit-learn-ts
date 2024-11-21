@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Reduce dimensionality through Gaussian random projection.
 
-  The components of the random matrix are drawn from N(0, 1 / n\_components).
+  The components of the random matrix are drawn from N(0, 1 / n_components).
 
-  Read more in the [User Guide](../random_projection.html#gaussian-random-matrix).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../random_projection.html#gaussian-random-matrix).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.random_projection.GaussianRandomProjection.html)
  */
@@ -26,7 +26,7 @@ export class GaussianRandomProjection {
     /**
       Dimensionality of the target projection space.
 
-      n\_components can be automatically adjusted according to the number of samples in the dataset and the bound given by the Johnson-Lindenstrauss lemma. In that case the quality of the embedding is controlled by the `eps` parameter.
+      n_components can be automatically adjusted according to the number of samples in the dataset and the bound given by the Johnson-Lindenstrauss lemma. In that case the quality of the embedding is controlled by the `eps` parameter.
 
       It should be noted that Johnson-Lindenstrauss lemma can yield very conservative estimated of the required number of components as it makes no assumption on the structure of the dataset.
 
@@ -35,9 +35,9 @@ export class GaussianRandomProjection {
     n_components?: number | 'auto'
 
     /**
-      Parameter to control the quality of the embedding according to the Johnson-Lindenstrauss lemma when `n\_components` is set to ‘auto’. The value should be strictly positive.
+      Parameter to control the quality of the embedding according to the Johnson-Lindenstrauss lemma when `n_components` is set to ‘auto’. The value should be strictly positive.
 
-      Smaller values lead to better embedding and higher number of dimensions (n\_components) in the target projection space.
+      Smaller values lead to better embedding and higher number of dimensions (n_components) in the target projection space.
 
       @defaultValue `0.1`
      */
@@ -51,7 +51,7 @@ export class GaussianRandomProjection {
     compute_inverse_components?: boolean
 
     /**
-      Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -171,7 +171,7 @@ pms_GaussianRandomProjection_fit = {k: v for k, v in pms_GaussianRandomProjectio
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -219,7 +219,7 @@ pms_GaussianRandomProjection_fit_transform = {k: v for k, v in pms_GaussianRando
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -257,11 +257,11 @@ pms_GaussianRandomProjection_get_feature_names_out = {k: v for k, v in pms_Gauss
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -295,9 +295,9 @@ pms_GaussianRandomProjection_get_metadata_routing = {k: v for k, v in pms_Gaussi
   /**
     Project data back to its original space.
 
-    Returns an array X\_original whose transform would be X. Note that even if X is sparse, X\_original is dense: this may use a lot of RAM.
+    Returns an array X_original whose transform would be X. Note that even if X is sparse, X_original is dense: this may use a lot of RAM.
 
-    If `compute\_inverse\_components` is `false`, the inverse of the components is computed during each call to `inverse\_transform` which can be costly.
+    If `compute_inverse_components` is `false`, the inverse of the components is computed during each call to `inverse_transform` which can be costly.
    */
   async inverse_transform(opts: {
     /**
@@ -335,11 +335,11 @@ pms_GaussianRandomProjection_inverse_transform = {k: v for k, v in pms_GaussianR
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -407,7 +407,7 @@ pms_GaussianRandomProjection_transform = {k: v for k, v in pms_GaussianRandomPro
   }
 
   /**
-    Concrete number of components computed when n\_components=”auto”.
+    Concrete number of components computed when n_components=”auto”.
    */
   get n_components_(): Promise<number> {
     if (this._isDisposed) {
@@ -461,7 +461,7 @@ pms_GaussianRandomProjection_transform = {k: v for k, v in pms_GaussianRandomPro
   }
 
   /**
-    Pseudo-inverse of the components, only computed if `compute\_inverse\_components` is `true`.
+    Pseudo-inverse of the components, only computed if `compute_inverse_components` is `true`.
    */
   get inverse_components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -488,7 +488,7 @@ pms_GaussianRandomProjection_transform = {k: v for k, v in pms_GaussianRandomPro
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -515,7 +515,7 @@ pms_GaussianRandomProjection_transform = {k: v for k, v in pms_GaussianRandomPro
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

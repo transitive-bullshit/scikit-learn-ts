@@ -1,6 +1,4 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: DistanceMetric
 
 Uniform interface for fast distance metric functions.
 
@@ -8,7 +6,7 @@ The `DistanceMetric` class provides a convenient way to compute pairwise distanc
 
 The `pairwise` method can be used to compute pairwise distances between samples in the input arrays. It returns a distance matrix representing the distances between all pairs of samples.
 
-The [`get\_metric`](#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") method allows you to retrieve a specific metric using its string identifier.
+The [`get_metric`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") method allows you to retrieve a specific metric using its string identifier.
 
 Examples
 
@@ -22,19 +20,85 @@ Examples
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.dtype?**: `any`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.dtype`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`.
 
-• **opts.kwargs?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kwargs`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric.
 
-• **opts.metric?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.metric`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -42,57 +106,17 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L29)
+[generated/metrics/DistanceMetric.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L29)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/metrics/DistanceMetric.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L27)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/metrics/DistanceMetric.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L26)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/metrics/DistanceMetric.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/metrics/DistanceMetric.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25) |
+| `id` | `string` | `undefined` | [generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23) |
 
 ## Accessors
 
@@ -110,7 +134,7 @@ An instance of the requested distance metric class.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L162)
+[generated/metrics/DistanceMetric.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L162)
 
 ***
 
@@ -130,7 +154,28 @@ An instance of the requested distance metric class.
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -138,7 +183,7 @@ An instance of the requested distance metric class.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49)
+[generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49)
 
 ## Methods
 
@@ -156,7 +201,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L101)
+[generated/metrics/DistanceMetric.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L101)
 
 ***
 
@@ -170,19 +215,85 @@ See the docstring of DistanceMetric for a list of available metrics.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.dtype?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.dtype`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`.
 
-• **opts.kwargs?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kwargs`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric.
 
-• **opts.metric?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.metric`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -190,7 +301,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L120)
+[generated/metrics/DistanceMetric.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L120)
 
 ***
 
@@ -204,7 +315,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -212,4 +344,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L62)
+[generated/metrics/DistanceMetric.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L62)

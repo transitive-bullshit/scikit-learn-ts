@@ -24,7 +24,7 @@ export class BayesianGaussianMixture {
 
   constructor(opts?: {
     /**
-      The number of mixture components. Depending on the data and the value of the `weight\_concentration\_prior` the model can decide to not use all the components by setting some component `weights\_` to values very close to zero. The number of effective components is therefore smaller than n\_components.
+      The number of mixture components. Depending on the data and the value of the `weight_concentration_prior` the model can decide to not use all the components by setting some component `weights_` to values very close to zero. The number of effective components is therefore smaller than n_components.
 
       @defaultValue `1`
      */
@@ -82,12 +82,12 @@ export class BayesianGaussianMixture {
       | 'dirichlet_distribution'
 
     /**
-      The dirichlet concentration of each component on the weight distribution (Dirichlet). This is commonly called gamma in the literature. The higher concentration puts more mass in the center and will lead to more components being active, while a lower concentration parameter will lead to more mass at the edge of the mixture weights simplex. The value of the parameter must be greater than 0. If it is `undefined`, it’s set to `1. / n\_components`.
+      The dirichlet concentration of each component on the weight distribution (Dirichlet). This is commonly called gamma in the literature. The higher concentration puts more mass in the center and will lead to more components being active, while a lower concentration parameter will lead to more mass at the edge of the mixture weights simplex. The value of the parameter must be greater than 0. If it is `undefined`, it’s set to `1. / n_components`.
      */
     weight_concentration_prior?: number
 
     /**
-      The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. The value of the parameter must be greater than 0. If it is `undefined`, it is set to 1.
+      The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean_prior`. The value of the parameter must be greater than 0. If it is `undefined`, it is set to 1.
      */
     mean_precision_prior?: number
 
@@ -97,22 +97,22 @@ export class BayesianGaussianMixture {
     mean_prior?: ArrayLike
 
     /**
-      The prior of the number of degrees of freedom on the covariance distributions (Wishart). If it is `undefined`, it’s set to `n\_features`.
+      The prior of the number of degrees of freedom on the covariance distributions (Wishart). If it is `undefined`, it’s set to `n_features`.
      */
     degrees_of_freedom_prior?: number
 
     /**
-      The prior on the covariance distribution (Wishart). If it is `undefined`, the emiprical covariance prior is initialized using the covariance of X. The shape depends on `covariance\_type`:
+      The prior on the covariance distribution (Wishart). If it is `undefined`, the emiprical covariance prior is initialized using the covariance of X. The shape depends on `covariance_type`:
      */
     covariance_prior?: number | ArrayLike
 
     /**
-      Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the random seed given to the method chosen to initialize the parameters (see `init_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. See [the Glossary](../../glossary.html#term-warm_start).
+      If ‘warm_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
       @defaultValue `false`
      */
@@ -209,11 +209,11 @@ ctor_BayesianGaussianMixture = {k: v for k, v in ctor_BayesianGaussianMixture.it
   /**
     Estimate model parameters with the EM algorithm.
 
-    The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `true`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
+    The method fits the model `n_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm_start` is `true`, then `n_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
    */
   async fit(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
@@ -250,11 +250,11 @@ pms_BayesianGaussianMixture_fit = {k: v for k, v in pms_BayesianGaussianMixture_
   /**
     Estimate model parameters using X and predict the labels for X.
 
-    The method fits the model n\_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
+    The method fits the model n_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
    */
   async fit_predict(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
@@ -293,11 +293,11 @@ pms_BayesianGaussianMixture_fit_predict = {k: v for k, v in pms_BayesianGaussian
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -333,7 +333,7 @@ pms_BayesianGaussianMixture_get_metadata_routing = {k: v for k, v in pms_Bayesia
    */
   async predict(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -369,7 +369,7 @@ pms_BayesianGaussianMixture_predict = {k: v for k, v in pms_BayesianGaussianMixt
    */
   async predict_proba(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -443,7 +443,7 @@ pms_BayesianGaussianMixture_sample = {k: v for k, v in pms_BayesianGaussianMixtu
    */
   async score(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
@@ -482,7 +482,7 @@ pms_BayesianGaussianMixture_score = {k: v for k, v in pms_BayesianGaussianMixtur
    */
   async score_samples(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -568,7 +568,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    The covariance of each mixture component. The shape depends on `covariance\_type`:
+    The covariance of each mixture component. The shape depends on `covariance_type`:
    */
   get covariances_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -595,7 +595,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    The precision matrices for each component in the mixture. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
+    The precision matrices for each component in the mixture. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance_type`:
    */
   get precisions_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -622,7 +622,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    The cholesky decomposition of the precision matrices of each mixture component. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
+    The cholesky decomposition of the precision matrices of each mixture component. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance_type`:
    */
   get precisions_cholesky_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -730,7 +730,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    The dirichlet concentration of each component on the weight distribution (Dirichlet). The type depends on `weight\_concentration\_prior\_type`:
+    The dirichlet concentration of each component on the weight distribution (Dirichlet). The type depends on `weight_concentration_prior_type`:
    */
   get weight_concentration_prior_(): Promise<number> {
     if (this._isDisposed) {
@@ -784,7 +784,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. If mean\_precision\_prior is set to `undefined`, `mean\_precision\_prior\_` is set to 1.
+    The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean_prior`. If mean_precision_prior is set to `undefined`, `mean_precision_prior_` is set to 1.
    */
   get mean_precision_prior_(): Promise<number> {
     if (this._isDisposed) {
@@ -919,7 +919,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    The prior on the covariance distribution (Wishart). The shape depends on `covariance\_type`:
+    The prior on the covariance distribution (Wishart). The shape depends on `covariance_type`:
    */
   get covariance_prior_(): Promise<number | ArrayLike> {
     if (this._isDisposed) {
@@ -946,7 +946,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -973,7 +973,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

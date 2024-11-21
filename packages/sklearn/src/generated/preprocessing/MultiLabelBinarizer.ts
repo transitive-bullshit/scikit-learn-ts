@@ -108,7 +108,7 @@ ctor_MultiLabelBinarizer = {k: v for k, v in ctor_MultiLabelBinarizer.items() if
   }
 
   /**
-    Fit the label sets binarizer, storing [classes\_](../../glossary.html#term-classes_).
+    Fit the label sets binarizer, storing [classes_](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-classes_).
    */
   async fit(opts: {
     /**
@@ -180,11 +180,11 @@ pms_MultiLabelBinarizer_fit_transform = {k: v for k, v in pms_MultiLabelBinarize
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -254,11 +254,11 @@ pms_MultiLabelBinarizer_inverse_transform = {k: v for k, v in pms_MultiLabelBina
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {

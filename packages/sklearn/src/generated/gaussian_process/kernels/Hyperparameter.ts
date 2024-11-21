@@ -20,7 +20,7 @@ export class Hyperparameter {
 
   constructor(opts?: {
     /**
-      The name of the hyperparameter. Note that a kernel using a hyperparameter with name “x” must have the attributes self.x and self.x\_bounds
+      The name of the hyperparameter. Note that a kernel using a hyperparameter with name “x” must have the attributes self.x and self.x_bounds
      */
     name?: string
 
@@ -30,12 +30,12 @@ export class Hyperparameter {
     value_type?: string
 
     /**
-      The lower and upper bound on the parameter. If n\_elements>1, a pair of 1d array with n\_elements each may be given alternatively. If the string “fixed” is passed as bounds, the hyperparameter’s value cannot be changed.
+      The lower and upper bound on the parameter. If n_elements>1, a pair of 1d array with n_elements each may be given alternatively. If the string “fixed” is passed as bounds, the hyperparameter’s value cannot be changed.
      */
     bounds?: 'fixed'
 
     /**
-      The number of elements of the hyperparameter value. Defaults to 1, which corresponds to a scalar hyperparameter. n\_elements > 1 corresponds to a hyperparameter which is vector-valued, such as, e.g., anisotropic length-scales.
+      The number of elements of the hyperparameter value. Defaults to 1, which corresponds to a scalar hyperparameter. n_elements > 1 corresponds to a hyperparameter which is vector-valued, such as, e.g., anisotropic length-scales.
 
       @defaultValue `1`
      */

@@ -1,12 +1,10 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: DecisionBoundaryDisplay
 
 Decisions boundary visualization.
 
-It is recommended to use [`from\_estimator`](#sklearn.inspection.DecisionBoundaryDisplay.from_estimator "sklearn.inspection.DecisionBoundaryDisplay.from_estimator") to create a [`DecisionBoundaryDisplay`](#sklearn.inspection.DecisionBoundaryDisplay "sklearn.inspection.DecisionBoundaryDisplay"). All parameters are stored as attributes.
+It is recommended to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.inspection.DecisionBoundaryDisplay.from_estimator "sklearn.inspection.DecisionBoundaryDisplay.from_estimator") to create a [`DecisionBoundaryDisplay`](https://scikit-learn.org/stable/modules/generated/#sklearn.inspection.DecisionBoundaryDisplay "sklearn.inspection.DecisionBoundaryDisplay"). All parameters are stored as attributes.
 
-Read more in the [User Guide](../../visualizations.html#visualizations).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.DecisionBoundaryDisplay.html)
 
@@ -18,27 +16,119 @@ Read more in the [User Guide](../../visualizations.html#visualizations).
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.response?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.response`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Values of the response function.
 
-• **opts.xlabel?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.xlabel`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Default label to place on x axis.
 
-• **opts.xx0?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.xx0`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 First output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v2.1)").
 
-• **opts.xx1?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.xx1`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+</td>
+<td>
 
 Second output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v2.1)").
 
-• **opts.ylabel?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ylabel`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Default label to place on y axis.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -46,57 +136,17 @@ Default label to place on y axis.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
+[generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21) |
+| `id` | `string` | `undefined` | [generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19) |
 
 ## Accessors
 
@@ -114,7 +164,7 @@ Axes with decision boundary.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L307)
+[generated/inspection/DecisionBoundaryDisplay.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L307)
 
 ***
 
@@ -132,7 +182,7 @@ Figure containing the decision boundary.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L334)
+[generated/inspection/DecisionBoundaryDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L334)
 
 ***
 
@@ -152,7 +202,28 @@ Figure containing the decision boundary.
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -160,7 +231,7 @@ Figure containing the decision boundary.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55)
+[generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55)
 
 ***
 
@@ -170,7 +241,7 @@ Figure containing the decision boundary.
 
 > **get** **surface\_**(): `Promise`\<`any`\>
 
-If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.9.2)"). If `plot\_method` is ‘pcolormesh’, `surface\_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.9.2)").
+If `plot_method` is ‘contour’ or ‘contourf’, `surface_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.9.2)"). If `plot_method` is ‘pcolormesh’, `surface_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.9.2)").
 
 ##### Returns
 
@@ -178,7 +249,7 @@ If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadCon
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L280)
+[generated/inspection/DecisionBoundaryDisplay.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L280)
 
 ## Methods
 
@@ -196,7 +267,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L111)
+[generated/inspection/DecisionBoundaryDisplay.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L111)
 
 ***
 
@@ -206,71 +277,225 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Plot decision boundary given an estimator.
 
-Read more in the [User Guide](../../visualizations.html#visualizations).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.class\_of\_interest?**: `string` \| `number` \| `boolean`
+</td>
+</tr>
+<tr>
+<td>
 
-The class considered when plotting the decision. If `undefined`, `estimator.classes\_\[1\]` is considered as the positive class for binary classifiers. Must have an explicit value for multiclass classifiers when `response\_method` is ‘predict\_proba’ or ‘decision\_function’.
+`opts.class_of_interest`?
 
-• **opts.eps?**: `number`
+</td>
+<td>
+
+`string` \| `number` \| `boolean`
+
+</td>
+<td>
+
+The class considered when plotting the decision. If `undefined`, `estimator.classes_\[1\]` is considered as the positive class for binary classifiers. Must have an explicit value for multiclass classifiers when `response_method` is ‘predict_proba’ or ‘decision_function’.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.eps`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Extends the minimum and maximum values of X for evaluating the response function.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.estimator`?
 
-• **opts.estimator?**: `any`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Trained estimator used to plot the decision boundary.
 
-• **opts.grid\_resolution?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.grid_resolution`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Number of grid points to use for plotting decision boundary. Higher values will make the plot look nicer but be slower to render.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`100`
+`opts.kwargs`?
 
-• **opts.kwargs?**: `any`
+</td>
+<td>
 
-Additional keyword arguments to be passed to the `plot\_method`.
+`any`
 
-• **opts.plot\_method?**: `"contourf"` \| `"contour"` \| `"pcolormesh"`
+</td>
+<td>
+
+Additional keyword arguments to be passed to the `plot_method`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.plot_method`?
+
+</td>
+<td>
+
+`"contourf"` \| `"contour"` \| `"pcolormesh"`
+
+</td>
+<td>
 
 Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.9.2)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.9.2)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.9.2)").
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'contourf'`
+`opts.response_method`?
 
-• **opts.response\_method?**: `"auto"` \| `"predict_proba"` \| `"decision_function"` \| `"predict"`
+</td>
+<td>
 
-Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba), [decision\_function](../../glossary.html#term-decision_function), [predict](../../glossary.html#term-predict) as the target response. If set to ‘auto’, the response method is tried in the following order: [decision\_function](../../glossary.html#term-decision_function), [predict\_proba](../../glossary.html#term-predict_proba), [predict](../../glossary.html#term-predict). For multiclass problems, [predict](../../glossary.html#term-predict) is selected when `response\_method="auto"`.
+`"auto"` \| `"predict_proba"` \| `"decision_function"` \| `"predict"`
 
-**Default Value**
+</td>
+<td>
 
-`'auto'`
+Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba), [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function), [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict) as the target response. If set to ‘auto’, the response method is tried in the following order: [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function), [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba), [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict). For multiclass problems, [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict) is selected when `response_method="auto"`.
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Input data that should be only 2-dimensional.
 
-• **opts.xlabel?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.xlabel`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 The label used for the x-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
 
-• **opts.ylabel?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ylabel`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 The label used for the y-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -278,7 +503,7 @@ The label used for the y-axis. If `undefined`, an attempt is made to extract a l
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L130)
+[generated/inspection/DecisionBoundaryDisplay.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L130)
 
 ***
 
@@ -292,7 +517,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -300,7 +546,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L68)
+[generated/inspection/DecisionBoundaryDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L68)
 
 ***
 
@@ -312,31 +558,119 @@ Plot visualization.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.kwargs?**: `any`
+</td>
+</tr>
+<tr>
+<td>
 
-Additional keyword arguments to be passed to the `plot\_method`.
+`opts.kwargs`?
 
-• **opts.plot\_method?**: `"contourf"` \| `"contour"` \| `"pcolormesh"`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+Additional keyword arguments to be passed to the `plot_method`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.plot_method`?
+
+</td>
+<td>
+
+`"contourf"` \| `"contour"` \| `"pcolormesh"`
+
+</td>
+<td>
 
 Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.9.2)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.9.2)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.9.2)").
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'contourf'`
+`opts.xlabel`?
 
-• **opts.xlabel?**: `string`
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Overwrite the x-axis label.
 
-• **opts.ylabel?**: `string`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ylabel`?
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
 
 Overwrite the y-axis label.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -344,4 +678,4 @@ Overwrite the y-axis label.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L224)
+[generated/inspection/DecisionBoundaryDisplay.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L224)

@@ -1,14 +1,12 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: SelfTrainingClassifier
 
 Self-training classifier.
 
-This [metaestimator](../../glossary.html#term-metaestimator) allows a given supervised classifier to function as a semi-supervised classifier, allowing it to learn from unlabeled data. It does this by iteratively predicting pseudo-labels for the unlabeled data and adding them to the training set.
+This [metaestimator](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-metaestimator) allows a given supervised classifier to function as a semi-supervised classifier, allowing it to learn from unlabeled data. It does this by iteratively predicting pseudo-labels for the unlabeled data and adding them to the training set.
 
-The classifier will continue iterating until either max\_iter is reached, or no pseudo-labels were added to the training set in the previous iteration.
+The classifier will continue iterating until either max_iter is reached, or no pseudo-labels were added to the training set in the previous iteration.
 
-Read more in the [User Guide](../semi_supervised.html#self-training).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../semi_supervised.html#self-training).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.SelfTrainingClassifier.html)
 
@@ -20,51 +18,136 @@ Read more in the [User Guide](../semi_supervised.html#self-training).
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.base\_estimator?**: `any`
+`opts`?
 
-An estimator object implementing `fit` and `predict\_proba`. Invoking the `fit` method will fit a clone of the passed estimator, which will be stored in the `base\_estimator\_` attribute.
+</td>
+<td>
 
-• **opts.criterion?**: `"threshold"` \| `"k_best"`
+`object`
 
-The selection criterion used to select which labels to add to the training set. If `'threshold'`, pseudo-labels with prediction probabilities above `threshold` are added to the dataset. If `'k\_best'`, the `k\_best` pseudo-labels with highest prediction probabilities are added to the dataset. When using the ‘threshold’ criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
+</td>
+<td>
 
-**Default Value**
+&hyphen;
 
-`'threshold'`
+</td>
+</tr>
+<tr>
+<td>
 
-• **opts.k\_best?**: `number`
+`opts.base_estimator`?
 
-The amount of samples to add in each iteration. Only used when `criterion='k\_best'`.
+</td>
+<td>
 
-**Default Value**
+`any`
 
-`10`
+</td>
+<td>
 
-• **opts.max\_iter?**: `number`
+An estimator object implementing `fit` and `predict_proba`. Invoking the `fit` method will fit a clone of the passed estimator, which will be stored in the `base_estimator_` attribute.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.criterion`?
+
+</td>
+<td>
+
+`"threshold"` \| `"k_best"`
+
+</td>
+<td>
+
+The selection criterion used to select which labels to add to the training set. If `'threshold'`, pseudo-labels with prediction probabilities above `threshold` are added to the dataset. If `'k_best'`, the `k_best` pseudo-labels with highest prediction probabilities are added to the dataset. When using the ‘threshold’ criterion, a [well calibrated classifier](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) should be used.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.k_best`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The amount of samples to add in each iteration. Only used when `criterion='k_best'`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.max_iter`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Maximum number of iterations allowed. Should be greater than or equal to 0. If it is `undefined`, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`10`
+`opts.threshold`?
 
-• **opts.threshold?**: `number`
+</td>
+<td>
 
-The decision threshold for use with `criterion='threshold'`. Should be in \[0, 1). When using the `'threshold'` criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`0.75`
+The decision threshold for use with `criterion='threshold'`. Should be in \[0, 1). When using the `'threshold'` criterion, a [well calibrated classifier](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) should be used.
 
-• **opts.verbose?**: `boolean`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.verbose`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 Enable verbose output.
 
-**Default Value**
-
-`false`
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -72,57 +155,17 @@ Enable verbose output.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L27)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L27)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/semi\_supervised/SelfTrainingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L25)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/semi\_supervised/SelfTrainingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L24)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/semi\_supervised/SelfTrainingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L23)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/semi\_supervised/SelfTrainingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L20)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/semi\_supervised/SelfTrainingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L21)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/semi\_supervised/SelfTrainingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/semi\_supervised/SelfTrainingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/semi\_supervised/SelfTrainingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L23) |
+| `id` | `string` | `undefined` | [generated/semi\_supervised/SelfTrainingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/semi\_supervised/SelfTrainingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L21) |
 
 ## Accessors
 
@@ -140,7 +183,7 @@ The fitted estimator.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L399)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L399)
 
 ***
 
@@ -150,7 +193,7 @@ The fitted estimator.
 
 > **get** **classes\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Class labels for each output. (Taken from the trained `base\_estimator\_`).
+Class labels for each output. (Taken from the trained `base_estimator_`).
 
 ##### Returns
 
@@ -158,7 +201,7 @@ Class labels for each output. (Taken from the trained `base\_estimator\_`).
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L426)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L426)
 
 ***
 
@@ -168,7 +211,7 @@ Class labels for each output. (Taken from the trained `base\_estimator\_`).
 
 > **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
 ##### Returns
 
@@ -176,7 +219,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L534)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L534)
 
 ***
 
@@ -194,7 +237,7 @@ The iteration in which each sample was labeled. When a sample has iteration 0, t
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L480)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L480)
 
 ***
 
@@ -204,7 +247,7 @@ The iteration in which each sample was labeled. When a sample has iteration 0, t
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
 ##### Returns
 
@@ -212,7 +255,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L507)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L507)
 
 ***
 
@@ -230,7 +273,7 @@ The number of rounds of self-training, that is the number of times the base esti
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L561)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L561)
 
 ***
 
@@ -250,7 +293,28 @@ The number of rounds of self-training, that is the number of times the base esti
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -258,7 +322,7 @@ The number of rounds of self-training, that is the number of times the base esti
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L72)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L72)
 
 ***
 
@@ -276,7 +340,7 @@ The reason that fitting was stopped.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L588)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L588)
 
 ***
 
@@ -294,7 +358,7 @@ The labels used for the final fit of the classifier, including pseudo-labels add
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L453)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L453)
 
 ## Methods
 
@@ -302,15 +366,55 @@ The labels used for the final fit of the classifier, including pseudo-labels add
 
 > **decision\_function**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Call decision function of the `base\_estimator`.
+Call decision function of the `base_estimator`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Array representing the data.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -318,7 +422,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L145)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L145)
 
 ***
 
@@ -336,7 +440,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L128)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L128)
 
 ***
 
@@ -348,15 +452,68 @@ Fit self-training classifier using `X`, `y` as training data.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Array representing the data.
 
-• **opts.y?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Array representing the labels. Unlabeled samples should have the label -1.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -364,7 +521,7 @@ Array representing the labels. Unlabeled samples should have the label -1.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L181)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L181)
 
 ***
 
@@ -378,7 +535,28 @@ This estimator does not support metadata routing yet.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -386,7 +564,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L222)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L222)
 
 ***
 
@@ -400,7 +578,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -408,7 +607,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L85)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L85)
 
 ***
 
@@ -420,11 +619,51 @@ Predict the classes of `X`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Array representing the data.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -432,7 +671,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L252)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L252)
 
 ***
 
@@ -444,11 +683,51 @@ Predict log probability for each possible outcome.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Array representing the data.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -456,7 +735,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L288)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L288)
 
 ***
 
@@ -468,11 +747,51 @@ Predict probability for each possible outcome.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Array representing the data.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -480,7 +799,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L324)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L324)
 
 ***
 
@@ -488,19 +807,72 @@ Array representing the data.
 
 > **score**(`opts`): `Promise`\<`number`\>
 
-Call score on the `base\_estimator`.
+Call score on the `base_estimator`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Array representing the data.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Array representing the labels.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -508,4 +880,4 @@ Array representing the labels.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L360)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L360)

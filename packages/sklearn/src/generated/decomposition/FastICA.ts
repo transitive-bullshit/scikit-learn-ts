@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   FastICA: a fast algorithm for Independent Component Analysis.
 
-  The implementation is based on [\[1\]](#r44c805292efc-1).
+  The implementation is based on [\[1\]](https://scikit-learn.org/stable/modules/generated/#r44c805292efc-1).
 
-  Read more in the [User Guide](../decomposition.html#ica).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../decomposition.html#ica).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html)
  */
@@ -50,7 +50,7 @@ export class FastICA {
     fun?: 'logcosh' | 'exp' | 'cube'
 
     /**
-      Arguments to send to the functional form. If empty or `undefined` and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}.
+      Arguments to send to the functional form. If empty or `undefined` and if fun=’logcosh’, fun_args will take value {‘alpha’ : 1.0}.
      */
     fun_args?: any
 
@@ -69,7 +69,7 @@ export class FastICA {
     tol?: number
 
     /**
-      Initial un-mixing array. If `w\_init=None`, then an array of values drawn from a normal distribution is used.
+      Initial un-mixing array. If `w_init=None`, then an array of values drawn from a normal distribution is used.
      */
     w_init?: ArrayLike[]
 
@@ -81,7 +81,7 @@ export class FastICA {
     whiten_solver?: 'eigh' | 'svd'
 
     /**
-      Used to initialize `w\_init` when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used to initialize `w_init` when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -159,7 +159,7 @@ ctor_FastICA = {k: v for k, v in ctor_FastICA.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -196,7 +196,7 @@ pms_FastICA_fit = {k: v for k, v in pms_FastICA_fit.items() if v is not None}`
    */
   async fit_transform(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -231,7 +231,7 @@ pms_FastICA_fit_transform = {k: v for k, v in pms_FastICA_fit_transform.items() 
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -265,11 +265,11 @@ pms_FastICA_get_feature_names_out = {k: v for k, v in pms_FastICA_get_feature_na
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -301,7 +301,7 @@ pms_FastICA_get_metadata_routing = {k: v for k, v in pms_FastICA_get_metadata_ro
    */
   async inverse_transform(opts: {
     /**
-      Sources, where `n\_samples` is the number of samples and `n\_components` is the number of components.
+      Sources, where `n_samples` is the number of samples and `n_components` is the number of components.
      */
     X?: ArrayLike[]
 
@@ -336,15 +336,15 @@ pms_FastICA_inverse_transform = {k: v for k, v in pms_FastICA_inverse_transform.
   }
 
   /**
-    Request metadata passed to the `inverse\_transform` method.
+    Request metadata passed to the `inverse_transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_inverse_transform_request(opts: {
     /**
-      Metadata routing for `copy` parameter in `inverse\_transform`.
+      Metadata routing for `copy` parameter in `inverse_transform`.
      */
     copy?: string | boolean
   }): Promise<any> {
@@ -376,11 +376,11 @@ pms_FastICA_set_inverse_transform_request = {k: v for k, v in pms_FastICA_set_in
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -410,7 +410,7 @@ pms_FastICA_set_output = {k: v for k, v in pms_FastICA_set_output.items() if v i
   /**
     Request metadata passed to the `transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -448,7 +448,7 @@ pms_FastICA_set_transform_request = {k: v for k, v in pms_FastICA_set_transform_
    */
   async transform(opts: {
     /**
-      Data to transform, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Data to transform, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -483,7 +483,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    The linear operator to apply to the data to get the independent sources. This is equal to the unmixing matrix when `whiten` is `false`, and equal to `np.dot(unmixing\_matrix, self.whitening\_)` when `whiten` is `true`.
+    The linear operator to apply to the data to get the independent sources. This is equal to the unmixing matrix when `whiten` is `false`, and equal to `np.dot(unmixing_matrix, self.whitening_)` when `whiten` is `true`.
    */
   get components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -506,7 +506,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    The pseudo-inverse of `components\_`. It is the linear operator that maps independent sources to the data.
+    The pseudo-inverse of `components_`. It is the linear operator that maps independent sources to the data.
    */
   get mixing_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -551,7 +551,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -576,7 +576,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -601,7 +601,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    If the algorithm is “deflation”, n\_iter is the maximum number of iterations run across all components. Else they are just the number of iterations taken to converge.
+    If the algorithm is “deflation”, n_iter is the maximum number of iterations run across all components. Else they are just the number of iterations taken to converge.
    */
   get n_iter_(): Promise<number> {
     if (this._isDisposed) {
@@ -624,7 +624,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    Only set if whiten is ‘`true`’. This is the pre-whitening matrix that projects data onto the first `n\_components` principal components.
+    Only set if whiten is ‘`true`’. This is the pre-whitening matrix that projects data onto the first `n_components` principal components.
    */
   get whitening_(): Promise<NDArray[]> {
     if (this._isDisposed) {

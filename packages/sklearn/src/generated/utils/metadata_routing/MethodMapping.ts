@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Stores the mapping between caller and callee methods for a router.
 
-  This class is primarily used in a `get\_metadata\_routing()` of a router object when defining the mapping between the router’s methods and a sub-object (a sub-estimator or a scorer).
+  This class is primarily used in a `get_metadata_routing()` of a router object when defining the mapping between the router’s methods and a sub-object (a sub-estimator or a scorer).
 
   Iterating through an instance of this class yields `MethodPair(caller, callee)` instances.
 

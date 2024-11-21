@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Approximate feature map for “skewed chi-squared” kernel.
 
-  Read more in the [User Guide](../kernel_approximation.html#skewed-chi-kernel-approx).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../kernel_approximation.html#skewed-chi-kernel-approx).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.SkewedChi2Sampler.html)
  */
@@ -36,7 +36,7 @@ export class SkewedChi2Sampler {
     n_components?: number
 
     /**
-      Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -115,11 +115,11 @@ ctor_SkewedChi2Sampler = {k: v for k, v in ctor_SkewedChi2Sampler.items() if v i
   /**
     Fit the model with X.
 
-    Samples random projection according to n\_features.
+    Samples random projection according to n_features.
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike
 
@@ -156,7 +156,7 @@ pms_SkewedChi2Sampler_fit = {k: v for k, v in pms_SkewedChi2Sampler_fit.items() 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -204,7 +204,7 @@ pms_SkewedChi2Sampler_fit_transform = {k: v for k, v in pms_SkewedChi2Sampler_fi
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -242,11 +242,11 @@ pms_SkewedChi2Sampler_get_feature_names_out = {k: v for k, v in pms_SkewedChi2Sa
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -280,11 +280,11 @@ pms_SkewedChi2Sampler_get_metadata_routing = {k: v for k, v in pms_SkewedChi2Sam
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -318,7 +318,7 @@ pms_SkewedChi2Sampler_set_output = {k: v for k, v in pms_SkewedChi2Sampler_set_o
    */
   async transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features. All values of X must be strictly greater than “-skewedness”.
+      New data, where `n_samples` is the number of samples and `n_features` is the number of features. All values of X must be strictly greater than “-skewedness”.
      */
     X?: ArrayLike
   }): Promise<ArrayLike> {
@@ -402,7 +402,7 @@ pms_SkewedChi2Sampler_transform = {k: v for k, v in pms_SkewedChi2Sampler_transf
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -429,7 +429,7 @@ pms_SkewedChi2Sampler_transform = {k: v for k, v in pms_SkewedChi2Sampler_transf
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

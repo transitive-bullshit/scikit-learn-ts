@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Stores and handles metadata routing for a router object.
 
-  This class is used by router objects to store and handle metadata routing. Routing information is stored as a dictionary of the form `{"object\_name": RouteMappingPair(method\_mapping, routing\_info)}`, where `method\_mapping` is an instance of [`MethodMapping`](sklearn.utils.metadata_routing.MethodMapping.html#sklearn.utils.metadata_routing.MethodMapping "sklearn.utils.metadata_routing.MethodMapping") and `routing\_info` is either a [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") or a [`MetadataRouter`](#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") instance.
+  This class is used by router objects to store and handle metadata routing. Routing information is stored as a dictionary of the form `{"object_name": RouteMappingPair(method_mapping, routing_info)}`, where `method_mapping` is an instance of [`MethodMapping`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MethodMapping.html#sklearn.utils.metadata_routing.MethodMapping "sklearn.utils.metadata_routing.MethodMapping") and `routing_info` is either a [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") or a [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") instance.
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html)
  */
@@ -106,7 +106,7 @@ ctor_MetadataRouter = {k: v for k, v in ctor_MetadataRouter.items() if v is not 
     method_mapping?: any
 
     /**
-      A dictionary of objects from which metadata is extracted by calling [`get\_routing\_for\_object`](sklearn.utils.metadata_routing.get_routing_for_object.html#sklearn.utils.metadata_routing.get_routing_for_object "sklearn.utils.metadata_routing.get_routing_for_object") on them.
+      A dictionary of objects from which metadata is extracted by calling [`get_routing_for_object`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.get_routing_for_object.html#sklearn.utils.metadata_routing.get_routing_for_object "sklearn.utils.metadata_routing.get_routing_for_object") on them.
      */
     objs?: any
   }): Promise<any> {
@@ -136,13 +136,13 @@ pms_MetadataRouter_add = {k: v for k, v in pms_MetadataRouter_add.items() if v i
   /**
     Add `self` (as a consumer) to the routing.
 
-    This method is used if the router is also a consumer, and hence the router itself needs to be included in the routing. The passed object can be an estimator or a [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest").
+    This method is used if the router is also a consumer, and hence the router itself needs to be included in the routing. The passed object can be an estimator or a [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest").
 
     A router should add itself using this method instead of `add` since it should be treated differently than the other objects to which metadata is routed by the router.
    */
   async add_self_request(opts: {
     /**
-      This is typically the router instance, i.e. `self` in a `get\_metadata\_routing()` implementation. It can also be a `MetadataRequest` instance.
+      This is typically the router instance, i.e. `self` in a `get_metadata_routing()` implementation. It can also be a `MetadataRequest` instance.
      */
     obj?: any
   }): Promise<any> {
@@ -217,7 +217,7 @@ pms_MetadataRouter_consumes = {k: v for k, v in pms_MetadataRouter_consumes.item
    */
   async route_params(opts: {
     /**
-      The name of the method for which the parameters are requested and routed. If called inside the [fit](../../glossary.html#term-fit) method of a router, it would be `"fit"`.
+      The name of the method for which the parameters are requested and routed. If called inside the [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) method of a router, it would be `"fit"`.
      */
     caller?: string
 
@@ -256,7 +256,7 @@ pms_MetadataRouter_route_params = {k: v for k, v in pms_MetadataRouter_route_par
    */
   async validate_metadata(opts: {
     /**
-      The name of the method for which the parameters are requested and routed. If called inside the [fit](../../glossary.html#term-fit) method of a router, it would be `"fit"`.
+      The name of the method for which the parameters are requested and routed. If called inside the [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) method of a router, it would be `"fit"`.
      */
     method?: string
 

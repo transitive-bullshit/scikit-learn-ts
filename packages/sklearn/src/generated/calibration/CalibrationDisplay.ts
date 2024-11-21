@@ -8,11 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Calibration curve (also known as reliability diagram) visualization.
 
-  It is recommended to use [`from\_estimator`](#sklearn.calibration.CalibrationDisplay.from_estimator "sklearn.calibration.CalibrationDisplay.from_estimator") or [`from\_predictions`](#sklearn.calibration.CalibrationDisplay.from_predictions "sklearn.calibration.CalibrationDisplay.from_predictions") to create a `CalibrationDisplay`. All parameters are stored as attributes.
+  It is recommended to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.calibration.CalibrationDisplay.from_estimator "sklearn.calibration.CalibrationDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.calibration.CalibrationDisplay.from_predictions "sklearn.calibration.CalibrationDisplay.from_predictions") to create a `CalibrationDisplay`. All parameters are stored as attributes.
 
-  Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
+  Read more about calibration in the [User Guide](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
-  For an example on how to use the visualization, see [Probability Calibration curves](../../auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py).
+  For an example on how to use the visualization, see [Probability Calibration curves](https://scikit-learn.org/stable/modules/generated/../../auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html)
  */
@@ -46,7 +46,7 @@ export class CalibrationDisplay {
     estimator_name?: string
 
     /**
-      The positive class when computing the calibration curve. By default, `pos\_label` is set to `estimators.classes\_\[1\]` when using `from\_estimator` and set to 1 when using `from\_predictions`.
+      The positive class when computing the calibration curve. By default, `pos_label` is set to `estimators.classes_\[1\]` when using `from_estimator` and set to 1 when using `from_predictions`.
      */
     pos_label?: number | boolean | string
   }) {
@@ -131,11 +131,11 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
 
     Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
 
-    Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
+    Read more about calibration in the [User Guide](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_estimator(opts: {
     /**
-      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict\_proba](../../glossary.html#term-predict_proba) method.
+      Fitted classifier or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) method.
      */
     estimator?: any
 
@@ -164,7 +164,7 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
     strategy?: 'uniform' | 'quantile'
 
     /**
-      The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+      The positive class when computing the calibration curve. By default, `estimators.classes_\[1\]` is considered as the positive class.
      */
     pos_label?: number | boolean | string
 
@@ -224,7 +224,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
 
     Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
 
-    Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
+    Read more about calibration in the [User Guide](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_predictions(opts: {
     /**
@@ -252,7 +252,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
     strategy?: 'uniform' | 'quantile'
 
     /**
-      The positive class when computing the calibration curve. By default `pos\_label` is set to 1.
+      The positive class when computing the calibration curve. By default `pos_label` is set to 1.
      */
     pos_label?: number | boolean | string
 
@@ -317,7 +317,7 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
     ax?: any
 
     /**
-      Name for labeling curve. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
+      Name for labeling curve. If `undefined`, use `estimator_name` if not `undefined`, otherwise no labeling is shown.
      */
     name?: string
 

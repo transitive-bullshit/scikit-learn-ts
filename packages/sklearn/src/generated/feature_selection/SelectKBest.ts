@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Select features according to the k highest scores.
 
-  Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_selection.html#univariate-feature-selection).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html)
  */
@@ -22,7 +22,7 @@ export class SelectKBest {
 
   constructor(opts?: {
     /**
-      Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
+      Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f_classif (see below “See Also”). The default function only works with classification tasks.
      */
     score_func?: any
 
@@ -143,7 +143,7 @@ pms_SelectKBest_fit = {k: v for k, v in pms_SelectKBest_fit.items() if v is not 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -221,11 +221,11 @@ pms_SelectKBest_get_feature_names_out = {k: v for k, v in pms_SelectKBest_get_fe
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -323,11 +323,11 @@ pms_SelectKBest_inverse_transform = {k: v for k, v in pms_SelectKBest_inverse_tr
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -410,7 +410,7 @@ pms_SelectKBest_transform = {k: v for k, v in pms_SelectKBest_transform.items() 
   }
 
   /**
-    p-values of feature scores, `undefined` if `score\_func` returned only scores.
+    p-values of feature scores, `undefined` if `score_func` returned only scores.
    */
   get pvalues_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -433,7 +433,7 @@ pms_SelectKBest_transform = {k: v for k, v in pms_SelectKBest_transform.items() 
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -458,7 +458,7 @@ pms_SelectKBest_transform = {k: v for k, v in pms_SelectKBest_transform.items() 
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

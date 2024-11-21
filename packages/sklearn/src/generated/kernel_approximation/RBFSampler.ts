@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   It implements a variant of Random Kitchen Sinks.\[1\]
 
-  Read more in the [User Guide](../kernel_approximation.html#rbf-kernel-approx).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../kernel_approximation.html#rbf-kernel-approx).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.RBFSampler.html)
  */
@@ -24,7 +24,7 @@ export class RBFSampler {
 
   constructor(opts?: {
     /**
-      Parameter of RBF kernel: exp(-gamma \* x^2). If `gamma='scale'` is passed then it uses 1 / (n\_features \* X.var()) as value of gamma.
+      Parameter of RBF kernel: exp(-gamma \* x^2). If `gamma='scale'` is passed then it uses 1 / (n_features \* X.var()) as value of gamma.
 
       @defaultValue `1`
      */
@@ -38,7 +38,7 @@ export class RBFSampler {
     n_components?: number
 
     /**
-      Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -115,11 +115,11 @@ ctor_RBFSampler = {k: v for k, v in ctor_RBFSampler.items() if v is not None}`
   /**
     Fit the model with X.
 
-    Samples random projection according to n\_features.
+    Samples random projection according to n_features.
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix
 
@@ -154,7 +154,7 @@ pms_RBFSampler_fit = {k: v for k, v in pms_RBFSampler_fit.items() if v is not No
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -198,7 +198,7 @@ pms_RBFSampler_fit_transform = {k: v for k, v in pms_RBFSampler_fit_transform.it
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -234,11 +234,11 @@ pms_RBFSampler_get_feature_names_out = {k: v for k, v in pms_RBFSampler_get_feat
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -270,11 +270,11 @@ pms_RBFSampler_get_metadata_routing = {k: v for k, v in pms_RBFSampler_get_metad
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -306,7 +306,7 @@ pms_RBFSampler_set_output = {k: v for k, v in pms_RBFSampler_set_output.items() 
    */
   async transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      New data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix
   }): Promise<ArrayLike> {
@@ -334,7 +334,7 @@ pms_RBFSampler_transform = {k: v for k, v in pms_RBFSampler_transform.items() if
   }
 
   /**
-    Random offset used to compute the projection in the `n\_components` dimensions of the feature space.
+    Random offset used to compute the projection in the `n_components` dimensions of the feature space.
    */
   get random_offset_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -384,7 +384,7 @@ pms_RBFSampler_transform = {k: v for k, v in pms_RBFSampler_transform.items() if
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -409,7 +409,7 @@ pms_RBFSampler_transform = {k: v for k, v in pms_RBFSampler_transform.items() if
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

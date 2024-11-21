@@ -12,13 +12,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   It uses the LAPACK implementation of the full SVD or a randomized truncated SVD by the method of Halko et al. 2009, depending on the shape of the input data and the number of components to extract.
 
-  With sparse inputs, the ARPACK implementation of the truncated SVD can be used (i.e. through [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.14.1)")). Alternatively, one may consider [`TruncatedSVD`](sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD "sklearn.decomposition.TruncatedSVD") where the data are not centered.
+  With sparse inputs, the ARPACK implementation of the truncated SVD can be used (i.e. through [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.14.1)")). Alternatively, one may consider [`TruncatedSVD`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD "sklearn.decomposition.TruncatedSVD") where the data are not centered.
 
-  Notice that this class only supports sparse inputs for some solvers such as “arpack” and “covariance\_eigh”. See [`TruncatedSVD`](sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD "sklearn.decomposition.TruncatedSVD") for an alternative with sparse data.
+  Notice that this class only supports sparse inputs for some solvers such as “arpack” and “covariance_eigh”. See [`TruncatedSVD`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD "sklearn.decomposition.TruncatedSVD") for an alternative with sparse data.
 
-  For a usage example, see [PCA example with Iris Data-set](../../auto_examples/decomposition/plot_pca_iris.html#sphx-glr-auto-examples-decomposition-plot-pca-iris-py)
+  For a usage example, see [PCA example with Iris Data-set](https://scikit-learn.org/stable/modules/generated/../../auto_examples/decomposition/plot_pca_iris.html#sphx-glr-auto-examples-decomposition-plot-pca-iris-py)
 
-  Read more in the [User Guide](../decomposition.html#pca).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../decomposition.html#pca).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
  */
@@ -32,19 +32,19 @@ export class PCA {
 
   constructor(opts?: {
     /**
-      Number of components to keep. if n\_components is not set all components are kept:
+      Number of components to keep. if n_components is not set all components are kept:
      */
     n_components?: number | 'mle'
 
     /**
-      If `false`, data passed to fit are overwritten and running fit(X).transform(X) will not yield the expected results, use fit\_transform(X) instead.
+      If `false`, data passed to fit are overwritten and running fit(X).transform(X) will not yield the expected results, use fit_transform(X) instead.
 
       @defaultValue `true`
      */
     copy?: boolean
 
     /**
-      When `true` (`false` by default) the `components\_` vectors are multiplied by the square root of n\_samples and then divided by the singular values to ensure uncorrelated outputs with unit component-wise variances.
+      When `true` (`false` by default) the `components_` vectors are multiplied by the square root of n_samples and then divided by the singular values to ensure uncorrelated outputs with unit component-wise variances.
 
       Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometime improve the predictive accuracy of the downstream estimators by making their data respect some hard-wired assumptions.
 
@@ -53,42 +53,42 @@ export class PCA {
     whiten?: boolean
 
     /**
-      The solver is selected by a default ‘auto’ policy is based on `X.shape` and `n\_components`: if the input data has fewer than 1000 features and more than 10 times as many samples, then the “covariance\_eigh” solver is used. Otherwise, if the input data is larger than 500x500 and the number of components to extract is lower than 80% of the smallest dimension of the data, then the more efficient “randomized” method is selected. Otherwise the exact “full” SVD is computed and optionally truncated afterwards.
+      The solver is selected by a default ‘auto’ policy is based on `X.shape` and `n_components`: if the input data has fewer than 1000 features and more than 10 times as many samples, then the “covariance_eigh” solver is used. Otherwise, if the input data is larger than 500x500 and the number of components to extract is lower than 80% of the smallest dimension of the data, then the more efficient “randomized” method is selected. Otherwise the exact “full” SVD is computed and optionally truncated afterwards.
 
       @defaultValue `'auto'`
      */
     svd_solver?: 'auto' | 'full' | 'covariance_eigh' | 'arpack' | 'randomized'
 
     /**
-      Tolerance for singular values computed by svd\_solver == ‘arpack’. Must be of range \[0.0, infinity).
+      Tolerance for singular values computed by svd_solver == ‘arpack’. Must be of range \[0.0, infinity).
 
       @defaultValue `0`
      */
     tol?: number
 
     /**
-      Number of iterations for the power method computed by svd\_solver == ‘randomized’. Must be of range \[0, infinity).
+      Number of iterations for the power method computed by svd_solver == ‘randomized’. Must be of range \[0, infinity).
 
       @defaultValue `'auto'`
      */
     iterated_power?: number | 'auto'
 
     /**
-      This parameter is only relevant when `svd\_solver="randomized"`. It corresponds to the additional number of random vectors to sample the range of `X` so as to ensure proper conditioning. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
+      This parameter is only relevant when `svd_solver="randomized"`. It corresponds to the additional number of random vectors to sample the range of `X` so as to ensure proper conditioning. See [`randomized_svd`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
 
       @defaultValue `10`
      */
     n_oversamples?: number
 
     /**
-      Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
+      Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized_svd`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
 
       @defaultValue `'auto'`
      */
     power_iteration_normalizer?: 'auto' | 'QR' | 'LU' | 'none'
 
     /**
-      Used when the ‘arpack’ or ‘randomized’ solvers are used. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used when the ‘arpack’ or ‘randomized’ solvers are used. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -166,7 +166,7 @@ ctor_PCA = {k: v for k, v in ctor_PCA.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -202,7 +202,7 @@ pms_PCA_fit = {k: v for k, v in pms_PCA_fit.items() if v is not None}`
    */
   async fit_transform(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -237,7 +237,7 @@ pms_PCA_fit_transform = {k: v for k, v in pms_PCA_fit_transform.items() if v is 
   /**
     Compute data covariance with the generative model.
 
-    `cov \= components\_.T \* S\*\*2 \* components\_ + sigma2 \* eye(n\_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
+    `cov \= components_.T \* S\*\*2 \* components_ + sigma2 \* eye(n_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
    */
   async get_covariance(opts: {
     /**
@@ -271,7 +271,7 @@ pms_PCA_get_covariance = {k: v for k, v in pms_PCA_get_covariance.items() if v i
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -305,11 +305,11 @@ pms_PCA_get_feature_names_out = {k: v for k, v in pms_PCA_get_feature_names_out.
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -373,11 +373,11 @@ pms_PCA_get_precision = {k: v for k, v in pms_PCA_get_precision.items() if v is 
   /**
     Transform data back to its original space.
 
-    In other words, return an input `X\_original` whose transform would be X.
+    In other words, return an input `X_original` whose transform would be X.
    */
   async inverse_transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_components` is the number of components.
+      New data, where `n_samples` is the number of samples and `n_components` is the number of components.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -480,11 +480,11 @@ pms_PCA_score_samples = {k: v for k, v in pms_PCA_score_samples.items() if v is 
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -518,7 +518,7 @@ pms_PCA_set_output = {k: v for k, v in pms_PCA_set_output.items() if v is not No
    */
   async transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      New data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<ArrayLike[]> {
@@ -546,7 +546,7 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   }
 
   /**
-    Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing `explained\_variance\_`.
+    Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing `explained_variance_`.
    */
   get components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -569,9 +569,9 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   }
 
   /**
-    The amount of variance explained by each of the selected components. The variance estimation uses `n\_samples \- 1` degrees of freedom.
+    The amount of variance explained by each of the selected components. The variance estimation uses `n_samples \- 1` degrees of freedom.
 
-    Equal to n\_components largest eigenvalues of the covariance matrix of X.
+    Equal to n_components largest eigenvalues of the covariance matrix of X.
    */
   get explained_variance_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -598,7 +598,7 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   /**
     Percentage of variance explained by each of the selected components.
 
-    If `n\_components` is not set then all components are stored and the sum of the ratios is equal to 1.0.
+    If `n_components` is not set then all components are stored and the sum of the ratios is equal to 1.0.
    */
   get explained_variance_ratio_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -623,7 +623,7 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   }
 
   /**
-    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n\_components` variables in the lower-dimensional space.
+    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n_components` variables in the lower-dimensional space.
    */
   get singular_values_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -670,7 +670,7 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   }
 
   /**
-    The estimated number of components. When n\_components is set to ‘mle’ or a number between 0 and 1 (with svd\_solver == ‘full’) this number is estimated from input data. Otherwise it equals the parameter n\_components, or the lesser value of n\_features and n\_samples if n\_components is `undefined`.
+    The estimated number of components. When n_components is set to ‘mle’ or a number between 0 and 1 (with svd_solver == ‘full’) this number is estimated from input data. Otherwise it equals the parameter n_components, or the lesser value of n_features and n_samples if n_components is `undefined`.
    */
   get n_components_(): Promise<number> {
     if (this._isDisposed) {
@@ -717,7 +717,7 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   /**
     The estimated noise covariance following the Probabilistic PCA model from Tipping and Bishop 1999. See “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf). It is required to compute the estimated data covariance and score samples.
 
-    Equal to the average of (min(n\_features, n\_samples) - n\_components) smallest eigenvalues of the covariance matrix of X.
+    Equal to the average of (min(n_features, n_samples) - n_components) smallest eigenvalues of the covariance matrix of X.
    */
   get noise_variance_(): Promise<number> {
     if (this._isDisposed) {
@@ -740,7 +740,7 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -763,7 +763,7 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

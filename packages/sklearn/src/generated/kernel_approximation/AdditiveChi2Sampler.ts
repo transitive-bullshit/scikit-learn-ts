@@ -10,11 +10,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Uses sampling the fourier transform of the kernel characteristic at regular intervals.
 
-  Since the kernel that is to be approximated is additive, the components of the input vectors can be treated separately. Each entry in the original space is transformed into 2\*sample\_steps-1 features, where sample\_steps is a parameter of the method. Typical values of sample\_steps include 1, 2 and 3.
+  Since the kernel that is to be approximated is additive, the components of the input vectors can be treated separately. Each entry in the original space is transformed into 2\*sample_steps-1 features, where sample_steps is a parameter of the method. Typical values of sample_steps include 1, 2 and 3.
 
   Optimal choices for the sampling interval for certain data ranges can be computed (see the reference). The default values should be reasonable.
 
-  Read more in the [User Guide](../kernel_approximation.html#additive-chi-kernel-approx).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../kernel_approximation.html#additive-chi-kernel-approx).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.AdditiveChi2Sampler.html)
  */
@@ -35,7 +35,7 @@ export class AdditiveChi2Sampler {
     sample_steps?: number
 
     /**
-      Sampling interval. Must be specified when sample\_steps not in {1,2,3}.
+      Sampling interval. Must be specified when sample_steps not in {1,2,3}.
      */
     sample_interval?: number
   }) {
@@ -120,7 +120,7 @@ ctor_AdditiveChi2Sampler = {k: v for k, v in ctor_AdditiveChi2Sampler.items() if
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike
 
@@ -157,7 +157,7 @@ pms_AdditiveChi2Sampler_fit = {k: v for k, v in pms_AdditiveChi2Sampler_fit.item
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -207,7 +207,7 @@ pms_AdditiveChi2Sampler_fit_transform = {k: v for k, v in pms_AdditiveChi2Sample
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.AdditiveChi2Sampler.fit "sklearn.kernel_approximation.AdditiveChi2Sampler.fit").
+      Only used to validate feature names with the names seen in [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.kernel_approximation.AdditiveChi2Sampler.fit "sklearn.kernel_approximation.AdditiveChi2Sampler.fit").
      */
     input_features?: any
   }): Promise<any> {
@@ -241,11 +241,11 @@ pms_AdditiveChi2Sampler_get_feature_names_out = {k: v for k, v in pms_AdditiveCh
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -279,11 +279,11 @@ pms_AdditiveChi2Sampler_get_metadata_routing = {k: v for k, v in pms_AdditiveChi
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -319,7 +319,7 @@ pms_AdditiveChi2Sampler_set_output = {k: v for k, v in pms_AdditiveChi2Sampler_s
    */
   async transform(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix
   }): Promise<NDArray | SparseMatrix> {
@@ -349,7 +349,7 @@ pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_tr
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -376,7 +376,7 @@ pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_tr
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

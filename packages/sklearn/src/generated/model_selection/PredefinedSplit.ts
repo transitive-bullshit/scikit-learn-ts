@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Predefined split cross-validator.
 
-  Provides train/test indices to split data into train/test sets using a predefined scheme specified by the user with the `test\_fold` parameter.
+  Provides train/test indices to split data into train/test sets using a predefined scheme specified by the user with the `test_fold` parameter.
 
-  Read more in the [User Guide](../cross_validation.html#predefined-split).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_validation.html#predefined-split).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html)
  */
@@ -24,7 +24,7 @@ export class PredefinedSplit {
 
   constructor(opts?: {
     /**
-      The entry `test\_fold\[i\]` represents the index of the test set that sample `i` belongs to. It is possible to exclude sample `i` from any test set (i.e. include sample `i` in every training set) by setting `test\_fold\[i\]` equal to -1.
+      The entry `test_fold\[i\]` represents the index of the test set that sample `i` belongs to. It is possible to exclude sample `i` from any test set (i.e. include sample `i` in every training set) by setting `test_fold\[i\]` equal to -1.
      */
     test_fold?: ArrayLike
   }) {
@@ -101,11 +101,11 @@ ctor_PredefinedSplit = {k: v for k, v in ctor_PredefinedSplit.items() if v is no
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {

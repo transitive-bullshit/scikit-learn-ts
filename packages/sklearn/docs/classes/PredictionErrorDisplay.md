@@ -1,14 +1,12 @@
-[**sklearn**](../README.md) • **Docs**
-
-***
+# Class: PredictionErrorDisplay
 
 Visualization of the prediction error of a regression model.
 
 This tool can display “residuals vs predicted” or “actual vs predicted” using scatter plots to qualitatively assess the behavior of a regressor, preferably on held-out data points.
 
-See the details in the docstrings of [`from\_estimator`](#sklearn.metrics.PredictionErrorDisplay.from_estimator "sklearn.metrics.PredictionErrorDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PredictionErrorDisplay.from_predictions "sklearn.metrics.PredictionErrorDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
+See the details in the docstrings of [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PredictionErrorDisplay.from_estimator "sklearn.metrics.PredictionErrorDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PredictionErrorDisplay.from_predictions "sklearn.metrics.PredictionErrorDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
 
-For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
+For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#visualization-regression-evaluation).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PredictionErrorDisplay.html)
 
@@ -20,15 +18,68 @@ For general information regarding `scikit-learn` visualization tools, read more 
 
 #### Parameters
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.y\_pred?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y_pred`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Prediction values.
 
-• **opts.y\_true?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y_true`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 True values.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -36,57 +87,17 @@ True values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L27)
+[generated/metrics/PredictionErrorDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L27)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/metrics/PredictionErrorDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L25)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/metrics/PredictionErrorDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L24)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/metrics/PredictionErrorDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L23)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/metrics/PredictionErrorDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L20)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/metrics/PredictionErrorDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L21)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/metrics/PredictionErrorDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/metrics/PredictionErrorDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/metrics/PredictionErrorDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L23) |
+| `id` | `string` | `undefined` | [generated/metrics/PredictionErrorDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/metrics/PredictionErrorDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L21) |
 
 ## Accessors
 
@@ -104,7 +115,7 @@ Axes with the different matplotlib axis.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L408)
+[generated/metrics/PredictionErrorDisplay.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L408)
 
 ***
 
@@ -114,7 +125,7 @@ Axes with the different matplotlib axis.
 
 > **get** **errors\_lines\_**(): `Promise`\<`any`\>
 
-Residual lines. If `with\_errors=False`, then it is set to `undefined`.
+Residual lines. If `with_errors=False`, then it is set to `undefined`.
 
 ##### Returns
 
@@ -122,7 +133,7 @@ Residual lines. If `with\_errors=False`, then it is set to `undefined`.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L354)
+[generated/metrics/PredictionErrorDisplay.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L354)
 
 ***
 
@@ -140,7 +151,7 @@ Figure containing the scatter and lines.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L435)
+[generated/metrics/PredictionErrorDisplay.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L435)
 
 ***
 
@@ -150,7 +161,7 @@ Figure containing the scatter and lines.
 
 > **get** **line\_**(): `Promise`\<`any`\>
 
-Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal line for `kind="predictions"` and a horizontal line for `kind="residuals"`.
+Optimal line representing `y_true \== y_pred`. Therefore, it is a diagonal line for `kind="predictions"` and a horizontal line for `kind="residuals"`.
 
 ##### Returns
 
@@ -158,7 +169,7 @@ Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal lin
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L327)
+[generated/metrics/PredictionErrorDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L327)
 
 ***
 
@@ -178,7 +189,28 @@ Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal lin
 
 ##### Parameters
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`pythonBridge`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ##### Returns
 
@@ -186,7 +218,7 @@ Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal lin
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42)
+[generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42)
 
 ***
 
@@ -204,7 +236,7 @@ Scatter data points.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L381)
+[generated/metrics/PredictionErrorDisplay.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L381)
 
 ## Methods
 
@@ -222,7 +254,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L98)
+[generated/metrics/PredictionErrorDisplay.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L98)
 
 ***
 
@@ -232,55 +264,191 @@ Once `dispose()` is called, the instance is no longer usable.
 
 Plot the prediction error given a regressor and some data.
 
-For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
+For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#visualization-regression-evaluation).
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.estimator?**: `any`
+</td>
+</tr>
+<tr>
+<td>
 
-Fitted regressor or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
+`opts.estimator`?
 
-• **opts.kind?**: `"actual_vs_predicted"` \| `"residual_vs_predicted"`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+Fitted regressor or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kind`?
+
+</td>
+<td>
+
+`"actual_vs_predicted"` \| `"residual_vs_predicted"`
+
+</td>
+<td>
 
 The type of plot to draw:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'residual_vs_predicted'`
+`opts.line_kwargs`?
 
-• **opts.line\_kwargs?**: `any`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
 
-• **opts.random\_state?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+`opts.random_state`?
 
-• **opts.scatter\_kwargs?**: `any`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Controls the randomness when `subsample` is not `undefined`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scatter_kwargs`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
 
-• **opts.subsample?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.subsample`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, 1000 samples or less will be displayed.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.X`?
 
-• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Input values.
 
-• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Target values.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -288,7 +456,7 @@ Target values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L117)
+[generated/metrics/PredictionErrorDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L117)
 
 ***
 
@@ -298,51 +466,174 @@ Target values.
 
 Plot the prediction error given the true and predicted targets.
 
-For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
+For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#visualization-regression-evaluation).
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.kind?**: `"actual_vs_predicted"` \| `"residual_vs_predicted"`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kind`?
+
+</td>
+<td>
+
+`"actual_vs_predicted"` \| `"residual_vs_predicted"`
+
+</td>
+<td>
 
 The type of plot to draw:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'residual_vs_predicted'`
+`opts.line_kwargs`?
 
-• **opts.line\_kwargs?**: `any`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
 
-• **opts.random\_state?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+`opts.random_state`?
 
-• **opts.scatter\_kwargs?**: `any`
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+Controls the randomness when `subsample` is not `undefined`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scatter_kwargs`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
 
-• **opts.subsample?**: `number`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.subsample`?
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
 
 Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, 1000 samples or less will be displayed.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`1`
+`opts.y_pred`?
 
-• **opts.y\_pred?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 Predicted target values.
 
-• **opts.y\_true?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y_true`?
+
+</td>
+<td>
+
+[`ArrayLike`](../type-aliases/ArrayLike.md)
+
+</td>
+<td>
 
 True target values.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -350,7 +641,7 @@ True target values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L199)
+[generated/metrics/PredictionErrorDisplay.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L199)
 
 ***
 
@@ -364,7 +655,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`py`
+
+</td>
+<td>
+
+`PythonBridge`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -372,7 +684,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L55)
+[generated/metrics/PredictionErrorDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L55)
 
 ***
 
@@ -386,27 +698,102 @@ Extra keyword arguments will be passed to matplotlib’s `plot`.
 
 #### Parameters
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.ax?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.ax`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-• **opts.kind?**: `"actual_vs_predicted"` \| `"residual_vs_predicted"`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.kind`?
+
+</td>
+<td>
+
+`"actual_vs_predicted"` \| `"residual_vs_predicted"`
+
+</td>
+<td>
 
 The type of plot to draw:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'residual_vs_predicted'`
+`opts.line_kwargs`?
 
-• **opts.line\_kwargs?**: `any`
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
 
-• **opts.scatter\_kwargs?**: `any`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scatter_kwargs`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -414,4 +801,4 @@ Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L276)
+[generated/metrics/PredictionErrorDisplay.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L276)

@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Locally Linear Embedding.
 
-  Read more in the [User Guide](../manifold.html#locally-linear-embedding).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../manifold.html#locally-linear-embedding).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html)
  */
@@ -50,21 +50,21 @@ export class LocallyLinearEmbedding {
     eigen_solver?: 'auto' | 'arpack' | 'dense'
 
     /**
-      Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
+      Tolerance for ‘arpack’ method Not used if eigen_solver==’dense’.
 
       @defaultValue `0.000001`
      */
     tol?: number
 
     /**
-      Maximum number of iterations for the arpack solver. Not used if eigen\_solver==’dense’.
+      Maximum number of iterations for the arpack solver. Not used if eigen_solver==’dense’.
 
       @defaultValue `100`
      */
     max_iter?: number
 
     /**
-      `standard`: use the standard locally linear embedding algorithm. see reference [\[1\]](#r62e36dd1b056-1)
+      `standard`: use the standard locally linear embedding algorithm. see reference [\[1\]](https://scikit-learn.org/stable/modules/generated/#r62e36dd1b056-1)
 
       @defaultValue `'standard'`
      */
@@ -85,19 +85,19 @@ export class LocallyLinearEmbedding {
     modified_tol?: number
 
     /**
-      Algorithm to use for nearest neighbors search, passed to [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") instance.
+      Algorithm to use for nearest neighbors search, passed to [`NearestNeighbors`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") instance.
 
       @defaultValue `'auto'`
      */
     neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
     /**
-      Determines the random number generator when `eigen\_solver` == ‘arpack’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines the random number generator when `eigen_solver` == ‘arpack’. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -258,7 +258,7 @@ pms_LocallyLinearEmbedding_fit_transform = {k: v for k, v in pms_LocallyLinearEm
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -296,11 +296,11 @@ pms_LocallyLinearEmbedding_get_feature_names_out = {k: v for k, v in pms_Locally
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -334,11 +334,11 @@ pms_LocallyLinearEmbedding_get_metadata_routing = {k: v for k, v in pms_LocallyL
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -433,7 +433,7 @@ pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedd
   }
 
   /**
-    Reconstruction error associated with `embedding\_`
+    Reconstruction error associated with `embedding_`
    */
   get reconstruction_error_(): Promise<number> {
     if (this._isDisposed) {
@@ -460,7 +460,7 @@ pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedd
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -487,7 +487,7 @@ pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedd
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

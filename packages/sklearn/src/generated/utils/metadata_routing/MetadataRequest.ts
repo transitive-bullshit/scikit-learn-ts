@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Instances of `MethodMetadataRequest` are used in this class for each available method under `metadatarequest.{method}`.
 
-  Consumer-only classes such as simple estimators return a serialized version of this class as the output of `get\_metadata\_routing()`.
+  Consumer-only classes such as simple estimators return a serialized version of this class as the output of `get_metadata_routing()`.
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html)
  */

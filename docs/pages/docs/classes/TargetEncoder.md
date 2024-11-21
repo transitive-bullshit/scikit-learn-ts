@@ -1,16 +1,14 @@
-**sklearn** • **Docs**
-
-***
+# Class: TargetEncoder
 
 Target Encoder for regression and classification targets.
 
-Each category is encoded based on a shrunk estimate of the average target values for observations belonging to the category. The encoding scheme mixes the global target mean with the target mean conditioned on the value of the category (see [\[MIC\]](#rf862141e5a0c-mic)).
+Each category is encoded based on a shrunk estimate of the average target values for observations belonging to the category. The encoding scheme mixes the global target mean with the target mean conditioned on the value of the category (see [\[MIC\]](https://scikit-learn.org/stable/modules/generated/#rf862141e5a0c-mic)).
 
-When the target type is “multiclass”, encodings are based on the conditional probability estimate for each class. The target is first binarized using the “one-vs-all” scheme via [`LabelBinarizer`](sklearn.preprocessing.LabelBinarizer.html#sklearn.preprocessing.LabelBinarizer "sklearn.preprocessing.LabelBinarizer"), then the average target value for each class and each category is used for encoding, resulting in `n\_features` \* `n\_classes` encoded output features.
+When the target type is “multiclass”, encodings are based on the conditional probability estimate for each class. The target is first binarized using the “one-vs-all” scheme via [`LabelBinarizer`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html#sklearn.preprocessing.LabelBinarizer "sklearn.preprocessing.LabelBinarizer"), then the average target value for each class and each category is used for encoding, resulting in `n_features` \* `n_classes` encoded output features.
 
-[`TargetEncoder`](#sklearn.preprocessing.TargetEncoder "sklearn.preprocessing.TargetEncoder") considers missing values, such as `np.nan` or `undefined`, as another category and encodes them like any other category. Categories that are not seen during [`fit`](#sklearn.preprocessing.TargetEncoder.fit "sklearn.preprocessing.TargetEncoder.fit") are encoded with the target mean, i.e. `target\_mean\_`.
+[`TargetEncoder`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder "sklearn.preprocessing.TargetEncoder") considers missing values, such as `np.nan` or `undefined`, as another category and encodes them like any other category. Categories that are not seen during [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.fit "sklearn.preprocessing.TargetEncoder.fit") are encoded with the target mean, i.e. `target_mean_`.
 
-For a demo on the importance of the `TargetEncoder` internal cross-fitting, see Target Encoder’s Internal Cross fitting. For a comparison of different encoders, refer to Comparing Target Encoder with Other Encoders. Read more in the User Guide.
+For a demo on the importance of the `TargetEncoder` internal cross-fitting, see [Target Encoder’s Internal Cross fitting](https://scikit-learn.org/stable/modules/generated/../../auto_examples/preprocessing/plot_target_encoder_cross_val.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-cross-val-py). For a comparison of different encoders, refer to [Comparing Target Encoder with Other Encoders](https://scikit-learn.org/stable/modules/generated/../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py). Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../preprocessing.html#target-encoder).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.TargetEncoder.html)
 
@@ -20,265 +18,293 @@ For a demo on the importance of the `TargetEncoder` internal cross-fitting, see 
 
 > **new TargetEncoder**(`opts`?): [`TargetEncoder`](TargetEncoder.md)
 
-#### Parameters
+**Parameters**
 
-• **opts?**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.categories?**: `"auto"`
+`opts`?
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.categories`?
+
+</td>
+<td>
+
+`"auto"`
+
+</td>
+<td>
 
 Categories (unique values) per feature:
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'auto'`
+`opts.cv`?
 
-• **opts.cv?**: `number`
+</td>
+<td>
 
-Determines the number of folds in the cross fitting strategy used in [`fit\_transform`](#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform"). For classification targets, `StratifiedKFold` is used and for continuous targets, `KFold` is used.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`5`
+Determines the number of folds in the [cross fitting](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-0) strategy used in [`fit_transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform"). For classification targets, `StratifiedKFold` is used and for continuous targets, `KFold` is used.
 
-• **opts.random\_state?**: `number`
+</td>
+</tr>
+<tr>
+<td>
 
-When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See Glossary.
+`opts.random_state`?
 
-• **opts.shuffle?**: `boolean`
+</td>
+<td>
 
-Whether to shuffle the data in [`fit\_transform`](#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform") before splitting into folds. Note that the samples within each split will not be shuffled.
+`number`
 
-**Default Value**
+</td>
+<td>
 
-`true`
+When `shuffle` is `true`, `random_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
 
-• **opts.smooth?**: `number` \| `"auto"`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.shuffle`?
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+Whether to shuffle the data in [`fit_transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.fit_transform "sklearn.preprocessing.TargetEncoder.fit_transform") before splitting into folds. Note that the samples within each split will not be shuffled.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.smooth`?
+
+</td>
+<td>
+
+`number` \| `"auto"`
+
+</td>
+<td>
 
 The amount of mixing of the target mean conditioned on the value of the category with the global target mean. A larger `smooth` value will put more weight on the global target mean. If `"auto"`, then `smooth` is set to an empirical Bayes estimate.
 
-**Default Value**
+</td>
+</tr>
+<tr>
+<td>
 
-`'auto'`
+`opts.target_type`?
 
-• **opts.target\_type?**: `"auto"` \| `"binary"` \| `"continuous"` \| `"multiclass"`
+</td>
+<td>
+
+`"auto"` \| `"binary"` \| `"continuous"` \| `"multiclass"`
+
+</td>
+<td>
 
 Type of target.
 
-**Default Value**
+</td>
+</tr>
+</tbody>
+</table>
 
-`'auto'`
+**Returns** [`TargetEncoder`](TargetEncoder.md)
 
-#### Returns
-
-[`TargetEncoder`](TargetEncoder.md)
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L29)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L29)
 
 ## Properties
 
-### \_isDisposed
-
-> **\_isDisposed**: `boolean` = `false`
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L27)
-
-***
-
-### \_isInitialized
-
-> **\_isInitialized**: `boolean` = `false`
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L26)
-
-***
-
-### \_py
-
-> **\_py**: `PythonBridge`
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L25)
-
-***
-
-### id
-
-> **id**: `string`
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L22)
-
-***
-
-### opts
-
-> **opts**: `any`
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L23)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/preprocessing/TargetEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L27) |
+| `_isInitialized` | `boolean` | `false` | [generated/preprocessing/TargetEncoder.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L26) |
+| `_py` | `PythonBridge` | `undefined` | [generated/preprocessing/TargetEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L25) |
+| `id` | `string` | `undefined` | [generated/preprocessing/TargetEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L22) |
+| `opts` | `any` | `undefined` | [generated/preprocessing/TargetEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L23) |
 
 ## Accessors
 
 ### categories\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **categories\_**(): `Promise`\<`any`\>
 
-The categories of each input feature determined during fitting or specified in `categories` (in order of the features in `X` and corresponding with the output of [`transform`](#sklearn.preprocessing.TargetEncoder.transform "sklearn.preprocessing.TargetEncoder.transform")).
+The categories of each input feature determined during fitting or specified in `categories` (in order of the features in `X` and corresponding with the output of [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.transform "sklearn.preprocessing.TargetEncoder.transform")).
 
-##### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L378)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L378)
 
 ***
 
 ### classes\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **classes\_**(): `Promise`\<`ArrayLike`\>
 
-If `target\_type\_` is ‘binary’ or ‘multiclass’, holds the label for each class, otherwise `undefined`.
+If `target_type_` is ‘binary’ or ‘multiclass’, holds the label for each class, otherwise `undefined`.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L503)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L503)
 
 ***
 
 ### encodings\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **encodings\_**(): `Promise`\<`any`[]\>
 
-Encodings learnt on all of `X`. For feature `i`, `encodings\_\[i\]` are the encodings matching the categories listed in `categories\_\[i\]`. When `target\_type\_` is “multiclass”, the encoding for feature `i` and class `j` is stored in `encodings\_\[j + (i \* len(classes\_))\]`. E.g., for 2 features (f) and 3 classes (c), encodings are ordered: f0\_c0, f0\_c1, f0\_c2, f1\_c0, f1\_c1, f1\_c2,
+Encodings learnt on all of `X`. For feature `i`, `encodings_\[i\]` are the encodings matching the categories listed in `categories_\[i\]`. When `target_type_` is “multiclass”, the encoding for feature `i` and class `j` is stored in `encodings_\[j + (i \* len(classes_))\]`. E.g., for 2 features (f) and 3 classes (c), encodings are ordered: f0_c0, f0_c1, f0_c2, f1_c0, f1_c1, f1_c2,
 
-##### Returns
+**Returns** `Promise`\<`any`[]\>
 
-`Promise`\<`any`[]\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L353)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L353)
 
 ***
 
 ### feature\_names\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-##### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L478)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L478)
 
 ***
 
 ### n\_features\_in\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-Number of features seen during fit.
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L453)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L453)
 
 ***
 
 ### py
 
-#### Get Signature
+**Get Signature**
 
 > **get** **py**(): `PythonBridge`
 
-##### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
-
-#### Set Signature
+**Set Signature**
 
 > **set** **py**(`pythonBridge`): `void`
 
-##### Parameters
+**Parameters**
 
-• **pythonBridge**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-##### Returns
+`pythonBridge`
 
-`void`
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/preprocessing/TargetEncoder.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L74)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `void`
+
+**Defined in** [generated/preprocessing/TargetEncoder.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L74)
 
 ***
 
 ### target\_mean\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **target\_mean\_**(): `Promise`\<`number`\>
 
-The overall mean of the target. This value is only used in [`transform`](#sklearn.preprocessing.TargetEncoder.transform "sklearn.preprocessing.TargetEncoder.transform") to encode categories.
+The overall mean of the target. This value is only used in [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder.transform "sklearn.preprocessing.TargetEncoder.transform") to encode categories.
 
-##### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L428)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L428)
 
 ***
 
 ### target\_type\_
 
-#### Get Signature
+**Get Signature**
 
 > **get** **target\_type\_**(): `Promise`\<`string`\>
 
 Type of target.
 
-##### Returns
+**Returns** `Promise`\<`string`\>
 
-`Promise`\<`string`\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L403)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L403)
 
 ## Methods
 
@@ -290,13 +316,9 @@ Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L126)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L126)
 
 ***
 
@@ -304,27 +326,76 @@ Once `dispose()` is called, the instance is no longer usable.
 
 > **fit**(`opts`): `Promise`\<`any`\>
 
-Fit the [`TargetEncoder`](#sklearn.preprocessing.TargetEncoder "sklearn.preprocessing.TargetEncoder") to X and y.
+Fit the [`TargetEncoder`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder "sklearn.preprocessing.TargetEncoder") to X and y.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 The data to determine the categories of each feature.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The target data used to encode the categories.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L143)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L143)
 
 ***
 
@@ -332,27 +403,76 @@ The target data used to encode the categories.
 
 > **fit\_transform**(`opts`): `Promise`\<`ArrayLike`[]\>
 
-Fit [`TargetEncoder`](#sklearn.preprocessing.TargetEncoder "sklearn.preprocessing.TargetEncoder") and transform X with the target encoding.
+Fit [`TargetEncoder`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.TargetEncoder "sklearn.preprocessing.TargetEncoder") and transform X with the target encoding.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 The data to determine the categories of each feature.
 
-• **opts.y?**: `ArrayLike`
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.y`?
+
+</td>
+<td>
+
+`ArrayLike`
+
+</td>
+<td>
 
 The target data used to encode the categories.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`[]\>
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L180)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L180)
 
 ***
 
@@ -362,21 +482,57 @@ The target data used to encode the categories.
 
 Get output feature names for transformation.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.input\_features?**: `any`
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.input_features`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
 
 Not used, present here for API consistency by convention.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`any`\>
+**Returns** `Promise`\<`any`\>
 
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L217)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L217)
 
 ***
 
@@ -386,23 +542,59 @@ Not used, present here for API consistency by convention.
 
 Get metadata routing of this object.
 
-Please check User Guide on how the routing mechanism works.
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.routing?**: `any`
+`opts`
 
-A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/preprocessing/TargetEncoder.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L253)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.routing`?
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/preprocessing/TargetEncoder.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L253)
 
 ***
 
@@ -414,17 +606,34 @@ Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Parameters
+**Parameters**
 
-• **py**: `PythonBridge`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-#### Returns
+`py`
 
-`Promise`\<`void`\>
+</td>
+<td>
 
-#### Defined in
+`PythonBridge`
 
-[generated/preprocessing/TargetEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L87)
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/preprocessing/TargetEncoder.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L87)
 
 ***
 
@@ -434,23 +643,59 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 Set output container.
 
-See Introducing the set\_output API for an example on how to use the API.
+See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+`opts`
 
-Configure output of `transform` and `fit\_transform`.
+</td>
+<td>
 
-#### Returns
+`object`
 
-`Promise`\<`any`\>
+</td>
+<td>
 
-#### Defined in
+&hyphen;
 
-[generated/preprocessing/TargetEncoder.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L289)
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.transform`?
+
+</td>
+<td>
+
+`"default"` \| `"pandas"` \| `"polars"`
+
+</td>
+<td>
+
+Configure output of `transform` and `fit_transform`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/preprocessing/TargetEncoder.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L289)
 
 ***
 
@@ -460,18 +705,54 @@ Configure output of `transform` and `fit\_transform`.
 
 Transform X with the target encoding.
 
-#### Parameters
+**Parameters**
 
-• **opts**
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-• **opts.X?**: `ArrayLike`[]
+`opts`
+
+</td>
+<td>
+
+`object`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.X`?
+
+</td>
+<td>
+
+`ArrayLike`[]
+
+</td>
+<td>
 
 The data to determine the categories of each feature.
 
-#### Returns
+</td>
+</tr>
+</tbody>
+</table>
 
-`Promise`\<`ArrayLike`[]\>
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-#### Defined in
-
-[generated/preprocessing/TargetEncoder.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L321)
+**Defined in** [generated/preprocessing/TargetEncoder.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d136d90c5cb653f22204ec450ae61706606a5b96/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L321)

@@ -14,13 +14,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   If a feature value is a sequence or set of strings, this transformer will iterate over the values and will count the occurrences of each string value.
 
-  However, note that this transformer will only do a binary one-hot encoding when feature values are of type string. If categorical features are represented as numeric values such as int or iterables of strings, the DictVectorizer can be followed by [`OneHotEncoder`](sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder "sklearn.preprocessing.OneHotEncoder") to complete binary one-hot encoding.
+  However, note that this transformer will only do a binary one-hot encoding when feature values are of type string. If categorical features are represented as numeric values such as int or iterables of strings, the DictVectorizer can be followed by [`OneHotEncoder`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder "sklearn.preprocessing.OneHotEncoder") to complete binary one-hot encoding.
 
   Features that do not occur in a sample (mapping) will have a zero value in the resulting array/matrix.
 
-  For an efficiency comparison of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
+  For an efficiency comparison of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](https://scikit-learn.org/stable/modules/generated/../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
 
-  Read more in the [User Guide](../feature_extraction.html#dict-feature-extraction).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_extraction.html#dict-feature-extraction).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html)
  */
@@ -53,7 +53,7 @@ export class DictVectorizer {
     sparse?: boolean
 
     /**
-      Whether `feature\_names\_` and `vocabulary\_` should be sorted when fitting.
+      Whether `feature_names_` and `vocabulary_` should be sorted when fitting.
 
       @defaultValue `true`
      */
@@ -242,11 +242,11 @@ pms_DictVectorizer_get_feature_names_out = {k: v for k, v in pms_DictVectorizer_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -278,7 +278,7 @@ pms_DictVectorizer_get_metadata_routing = {k: v for k, v in pms_DictVectorizer_g
   /**
     Transform array or sparse matrix X back to feature mappings.
 
-    X must have been produced by this DictVectorizer’s transform or fit\_transform method; it may only have passed through transformers that preserve the number of features and their order.
+    X must have been produced by this DictVectorizer’s transform or fit_transform method; it may only have passed through transformers that preserve the number of features and their order.
 
     In the case of one-hot/one-of-K coding, the constructed feature names and values are returned rather than the original ones.
    */
@@ -325,7 +325,7 @@ pms_DictVectorizer_inverse_transform = {k: v for k, v in pms_DictVectorizer_inve
    */
   async restrict(opts: {
     /**
-      Boolean mask or list of indices (as returned by the get\_support member of feature selectors).
+      Boolean mask or list of indices (as returned by the get_support member of feature selectors).
      */
     support?: ArrayLike
 
@@ -360,15 +360,15 @@ pms_DictVectorizer_restrict = {k: v for k, v in pms_DictVectorizer_restrict.item
   }
 
   /**
-    Request metadata passed to the `inverse\_transform` method.
+    Request metadata passed to the `inverse_transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_inverse_transform_request(opts: {
     /**
-      Metadata routing for `dict\_type` parameter in `inverse\_transform`.
+      Metadata routing for `dict_type` parameter in `inverse_transform`.
      */
     dict_type?: string | boolean
   }): Promise<any> {
@@ -400,11 +400,11 @@ pms_DictVectorizer_set_inverse_transform_request = {k: v for k, v in pms_DictVec
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -434,7 +434,7 @@ pms_DictVectorizer_set_output = {k: v for k, v in pms_DictVectorizer_set_output.
   /**
     Transform feature->value dicts to array or sparse matrix.
 
-    Named features not encountered during fit or fit\_transform will be silently ignored.
+    Named features not encountered during fit or fit_transform will be silently ignored.
    */
   async transform(opts: {
     /**
@@ -491,7 +491,7 @@ pms_DictVectorizer_transform = {k: v for k, v in pms_DictVectorizer_transform.it
   }
 
   /**
-    A list of length n\_features containing the feature names (e.g., “f=ham” and “f=spam”).
+    A list of length n_features containing the feature names (e.g., “f=ham” and “f=spam”).
    */
   get feature_names_(): Promise<any[]> {
     if (this._isDisposed) {

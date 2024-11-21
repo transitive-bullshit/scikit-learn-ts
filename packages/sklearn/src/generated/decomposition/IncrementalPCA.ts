@@ -12,13 +12,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Depending on the size of the input data, this algorithm can be much more memory efficient than a PCA, and allows sparse input.
 
-  This algorithm has constant memory complexity, on the order of `batch\_size \* n\_features`, enabling use of np.memmap files without loading the entire file into memory. For sparse matrices, the input is converted to dense in batches (in order to be able to subtract the mean) which avoids storing the entire dense matrix at any one time.
+  This algorithm has constant memory complexity, on the order of `batch_size \* n_features`, enabling use of np.memmap files without loading the entire file into memory. For sparse matrices, the input is converted to dense in batches (in order to be able to subtract the mean) which avoids storing the entire dense matrix at any one time.
 
-  The computational overhead of each SVD is `O(batch\_size \* n\_features \*\* 2)`, but only 2 \* batch\_size samples remain in memory at a time. There will be `n\_samples / batch\_size` SVD computations to get the principal components, versus 1 large SVD of complexity `O(n\_samples \* n\_features \*\* 2)` for PCA.
+  The computational overhead of each SVD is `O(batch_size \* n_features \*\* 2)`, but only 2 \* batch_size samples remain in memory at a time. There will be `n_samples / batch_size` SVD computations to get the principal components, versus 1 large SVD of complexity `O(n_samples \* n_features \*\* 2)` for PCA.
 
-  For a usage example, see [Incremental PCA](../../auto_examples/decomposition/plot_incremental_pca.html#sphx-glr-auto-examples-decomposition-plot-incremental-pca-py).
+  For a usage example, see [Incremental PCA](https://scikit-learn.org/stable/modules/generated/../../auto_examples/decomposition/plot_incremental_pca.html#sphx-glr-auto-examples-decomposition-plot-incremental-pca-py).
 
-  Read more in the [User Guide](../decomposition.html#incrementalpca).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../decomposition.html#incrementalpca).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html)
  */
@@ -32,12 +32,12 @@ export class IncrementalPCA {
 
   constructor(opts?: {
     /**
-      Number of components to keep. If `n\_components` is `undefined`, then `n\_components` is set to `min(n\_samples, n\_features)`.
+      Number of components to keep. If `n_components` is `undefined`, then `n_components` is set to `min(n_samples, n_features)`.
      */
     n_components?: number
 
     /**
-      When `true` (`false` by default) the `components\_` vectors are divided by `n\_samples` times `components\_` to ensure uncorrelated outputs with unit component-wise variances.
+      When `true` (`false` by default) the `components_` vectors are divided by `n_samples` times `components_` to ensure uncorrelated outputs with unit component-wise variances.
 
       Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometimes improve the predictive accuracy of the downstream estimators by making data respect some hard-wired assumptions.
 
@@ -53,7 +53,7 @@ export class IncrementalPCA {
     copy?: boolean
 
     /**
-      The number of samples to use for each batch. Only used when calling `fit`. If `batch\_size` is `undefined`, then `batch\_size` is inferred from the data and set to `5 \* n\_features`, to provide a balance between approximation accuracy and memory consumption.
+      The number of samples to use for each batch. Only used when calling `fit`. If `batch_size` is `undefined`, then `batch_size` is inferred from the data and set to `5 \* n_features`, to provide a balance between approximation accuracy and memory consumption.
      */
     batch_size?: number
   }) {
@@ -128,11 +128,11 @@ ctor_IncrementalPCA = {k: v for k, v in ctor_IncrementalPCA.items() if v is not 
   }
 
   /**
-    Fit the model with X, using minibatches of size batch\_size.
+    Fit the model with X, using minibatches of size batch_size.
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -167,7 +167,7 @@ pms_IncrementalPCA_fit = {k: v for k, v in pms_IncrementalPCA_fit.items() if v i
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -211,7 +211,7 @@ pms_IncrementalPCA_fit_transform = {k: v for k, v in pms_IncrementalPCA_fit_tran
   /**
     Compute data covariance with the generative model.
 
-    `cov \= components\_.T \* S\*\*2 \* components\_ + sigma2 \* eye(n\_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
+    `cov \= components_.T \* S\*\*2 \* components_ + sigma2 \* eye(n_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
    */
   async get_covariance(opts: {
     /**
@@ -245,7 +245,7 @@ pms_IncrementalPCA_get_covariance = {k: v for k, v in pms_IncrementalPCA_get_cov
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -281,11 +281,11 @@ pms_IncrementalPCA_get_feature_names_out = {k: v for k, v in pms_IncrementalPCA_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -351,11 +351,11 @@ pms_IncrementalPCA_get_precision = {k: v for k, v in pms_IncrementalPCA_get_prec
   /**
     Transform data back to its original space.
 
-    In other words, return an input `X\_original` whose transform would be X.
+    In other words, return an input `X_original` whose transform would be X.
    */
   async inverse_transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_components` is the number of components.
+      New data, where `n_samples` is the number of samples and `n_components` is the number of components.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -389,7 +389,7 @@ pms_IncrementalPCA_inverse_transform = {k: v for k, v in pms_IncrementalPCA_inve
    */
   async partial_fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -399,7 +399,7 @@ pms_IncrementalPCA_inverse_transform = {k: v for k, v in pms_IncrementalPCA_inve
     y?: any
 
     /**
-      Run check\_array on X.
+      Run check_array on X.
 
       @defaultValue `true`
      */
@@ -431,11 +431,11 @@ pms_IncrementalPCA_partial_fit = {k: v for k, v in pms_IncrementalPCA_partial_fi
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -463,15 +463,15 @@ pms_IncrementalPCA_set_output = {k: v for k, v in pms_IncrementalPCA_set_output.
   }
 
   /**
-    Request metadata passed to the `partial\_fit` method.
+    Request metadata passed to the `partial_fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_partial_fit_request(opts: {
     /**
-      Metadata routing for `check\_input` parameter in `partial\_fit`.
+      Metadata routing for `check_input` parameter in `partial_fit`.
      */
     check_input?: string | boolean
   }): Promise<any> {
@@ -503,11 +503,11 @@ pms_IncrementalPCA_set_partial_fit_request = {k: v for k, v in pms_IncrementalPC
   /**
     Apply dimensionality reduction to X.
 
-    X is projected on the first principal components previously extracted from a training set, using minibatches of size batch\_size if X is sparse.
+    X is projected on the first principal components previously extracted from a training set, using minibatches of size batch_size if X is sparse.
    */
   async transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      New data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -535,7 +535,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing `explained\_variance\_`.
+    Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing `explained_variance_`.
    */
   get components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -610,7 +610,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n\_components` variables in the lower-dimensional space.
+    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n_components` variables in the lower-dimensional space.
    */
   get singular_values_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -635,7 +635,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Per-feature empirical mean, aggregate over calls to `partial\_fit`.
+    Per-feature empirical mean, aggregate over calls to `partial_fit`.
    */
   get mean_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -658,7 +658,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Per-feature empirical variance, aggregate over calls to `partial\_fit`.
+    Per-feature empirical variance, aggregate over calls to `partial_fit`.
    */
   get var_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -706,7 +706,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    The estimated number of components. Relevant when `n\_components=None`.
+    The estimated number of components. Relevant when `n_components=None`.
    */
   get n_components_(): Promise<number> {
     if (this._isDisposed) {
@@ -731,7 +731,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across `partial\_fit` calls.
+    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across `partial_fit` calls.
    */
   get n_samples_seen_(): Promise<number> {
     if (this._isDisposed) {
@@ -756,7 +756,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Inferred batch size from `batch\_size`.
+    Inferred batch size from `batch_size`.
    */
   get batch_size_(): Promise<number> {
     if (this._isDisposed) {
@@ -781,7 +781,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -806,7 +806,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Orthogonal Matching Pursuit model (OMP).
 
-  Read more in the [User Guide](../linear_model.html#omp).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#omp).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.OrthogonalMatchingPursuit.html)
  */
@@ -22,12 +22,12 @@ export class OrthogonalMatchingPursuit {
 
   constructor(opts?: {
     /**
-      Desired number of non-zero entries in the solution. Ignored if `tol` is set. When `undefined` and `tol` is also `undefined`, this value is either set to 10% of `n\_features` or 1, whichever is greater.
+      Desired number of non-zero entries in the solution. Ignored if `tol` is set. When `undefined` and `tol` is also `undefined`, this value is either set to 10% of `n_features` or 1, whichever is greater.
      */
     n_nonzero_coefs?: number
 
     /**
-      Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_coefs.
+      Maximum squared norm of the residual. If not `undefined`, overrides n_nonzero_coefs.
      */
     tol?: number
 
@@ -39,7 +39,7 @@ export class OrthogonalMatchingPursuit {
     fit_intercept?: boolean
 
     /**
-      Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improves performance when [n\_targets](../../glossary.html#term-n_targets) or [n\_samples](../../glossary.html#term-n_samples) is very large. Note that if you already have such matrices, you can pass them directly to the fit method.
+      Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improves performance when [n_targets](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_targets) or [n_samples](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_samples) is very large. Note that if you already have such matrices, you can pass them directly to the fit method.
 
       @defaultValue `'auto'`
      */
@@ -161,11 +161,11 @@ pms_OrthogonalMatchingPursuit_fit = {k: v for k, v in pms_OrthogonalMatchingPurs
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -235,11 +235,11 @@ pms_OrthogonalMatchingPursuit_predict = {k: v for k, v in pms_OrthogonalMatching
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -283,13 +283,13 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -402,7 +402,7 @@ pms_OrthogonalMatchingPursuit_set_score_request = {k: v for k, v in pms_Orthogon
   }
 
   /**
-    The number of non-zero coefficients in the solution or `undefined` when `tol` is set. If `n\_nonzero\_coefs` is `undefined` and `tol` is `undefined` this value is either set to 10% of `n\_features` or 1, whichever is greater.
+    The number of non-zero coefficients in the solution or `undefined` when `tol` is set. If `n_nonzero_coefs` is `undefined` and `tol` is `undefined` this value is either set to 10% of `n_features` or 1, whichever is greater.
    */
   get n_nonzero_coefs_(): Promise<number> {
     if (this._isDisposed) {
@@ -429,7 +429,7 @@ pms_OrthogonalMatchingPursuit_set_score_request = {k: v for k, v in pms_Orthogon
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -456,7 +456,7 @@ pms_OrthogonalMatchingPursuit_set_score_request = {k: v for k, v in pms_Orthogon
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

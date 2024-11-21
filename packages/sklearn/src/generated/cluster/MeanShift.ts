@@ -12,9 +12,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Seeding is performed using a binning technique for scalability.
 
-  For an example of how to use MeanShift clustering, refer to: [A demo of the mean-shift clustering algorithm](../../auto_examples/cluster/plot_mean_shift.html#sphx-glr-auto-examples-cluster-plot-mean-shift-py).
+  For an example of how to use MeanShift clustering, refer to: [A demo of the mean-shift clustering algorithm](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cluster/plot_mean_shift.html#sphx-glr-auto-examples-cluster-plot-mean-shift-py).
 
-  Read more in the [User Guide](../clustering.html#mean-shift).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../clustering.html#mean-shift).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html)
  */
@@ -30,12 +30,12 @@ export class MeanShift {
     /**
       Bandwidth used in the flat kernel.
 
-      If not given, the bandwidth is estimated using sklearn.cluster.estimate\_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below).
+      If not given, the bandwidth is estimated using sklearn.cluster.estimate_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below).
      */
     bandwidth?: number
 
     /**
-      Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get\_bin\_seeds with bandwidth as the grid size and default values for other parameters.
+      Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get_bin_seeds with bandwidth as the grid size and default values for other parameters.
      */
     seeds?: ArrayLike[]
 
@@ -47,7 +47,7 @@ export class MeanShift {
     bin_seeding?: boolean
 
     /**
-      To speed up the algorithm, accept only those bins with at least min\_bin\_freq points as seeds.
+      To speed up the algorithm, accept only those bins with at least min_bin_freq points as seeds.
 
       @defaultValue `1`
      */
@@ -223,11 +223,11 @@ pms_MeanShift_fit_predict = {k: v for k, v in pms_MeanShift_fit_predict.items() 
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -360,7 +360,7 @@ pms_MeanShift_predict = {k: v for k, v in pms_MeanShift_predict.items() if v is 
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -385,7 +385,7 @@ pms_MeanShift_predict = {k: v for k, v in pms_MeanShift_predict.items() if v is 
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

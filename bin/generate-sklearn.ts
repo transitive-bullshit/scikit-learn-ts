@@ -37,13 +37,14 @@ async function main() {
   // return
 
   // const sources = [
-  //   'https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html'
+  //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html'
+  //   'https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html'
+  //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html',
   //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html',
   //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html',
   //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html',
   //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html',
-  //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html'
-  // 'https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html'
+  //   // 'https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html'
   // ]
 
   console.log(`\nfetching ${sources.length} docs...\n`)

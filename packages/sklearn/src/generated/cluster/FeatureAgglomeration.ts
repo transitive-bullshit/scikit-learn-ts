@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Recursively merges pair of clusters of features.
 
-  Read more in the [User Guide](../clustering.html#hierarchical-clustering).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../clustering.html#hierarchical-clustering).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.FeatureAgglomeration.html)
  */
@@ -24,7 +24,7 @@ export class FeatureAgglomeration {
 
   constructor(opts?: {
     /**
-      The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.
+      The number of clusters to find. It must be `undefined` if `distance_threshold` is not `undefined`.
 
       @defaultValue `2`
      */
@@ -43,12 +43,12 @@ export class FeatureAgglomeration {
     memory?: string
 
     /**
-      Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
+      Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
      */
     connectivity?: ArrayLike
 
     /**
-      Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.
+      Stop early the construction of the tree at `n_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance_threshold` is not `undefined`. By default `compute_full_tree` is “auto”, which is equivalent to `true` when `distance_threshold` is not `undefined` or that `n_clusters` is inferior to the maximum between 100 or `0.02 \* n_samples`. Otherwise, “auto” is equivalent to `false`.
 
       @defaultValue `'auto'`
      */
@@ -67,12 +67,12 @@ export class FeatureAgglomeration {
     pooling_func?: any
 
     /**
-      The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
+      The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n_clusters` must be `undefined` and `compute_full_tree` must be `true`.
      */
     distance_threshold?: number
 
     /**
-      Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
+      Computes distances between clusters even if `distance_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
 
       @defaultValue `false`
      */
@@ -194,7 +194,7 @@ pms_FeatureAgglomeration_fit = {k: v for k, v in pms_FeatureAgglomeration_fit.it
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -242,7 +242,7 @@ pms_FeatureAgglomeration_fit_transform = {k: v for k, v in pms_FeatureAgglomerat
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -280,11 +280,11 @@ pms_FeatureAgglomeration_get_feature_names_out = {k: v for k, v in pms_FeatureAg
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -316,7 +316,7 @@ pms_FeatureAgglomeration_get_metadata_routing = {k: v for k, v in pms_FeatureAgg
   }
 
   /**
-    Inverse the transformation and return a vector of size `n\_features`.
+    Inverse the transformation and return a vector of size `n_features`.
    */
   async inverse_transform(opts: {
     /**
@@ -359,11 +359,11 @@ pms_FeatureAgglomeration_inverse_transform = {k: v for k, v in pms_FeatureAgglom
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
     transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
@@ -431,7 +431,7 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
   }
 
   /**
-    The number of clusters found by the algorithm. If `distance\_threshold=None`, it will be equal to the given `n\_clusters`.
+    The number of clusters found by the algorithm. If `distance_threshold=None`, it will be equal to the given `n_clusters`.
    */
   get n_clusters_(): Promise<number> {
     if (this._isDisposed) {
@@ -539,7 +539,7 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -566,7 +566,7 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -593,7 +593,7 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
   }
 
   /**
-    The children of each non-leaf node. Values less than `n\_features` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n\_features` is a non-leaf node and has children `children\_\[i \- n\_features\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n\_features + i`.
+    The children of each non-leaf node. Values less than `n_features` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n_features` is a non-leaf node and has children `children_\[i \- n_features\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n_features + i`.
    */
   get children_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -620,7 +620,7 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
   }
 
   /**
-    Distances between nodes in the corresponding place in `children\_`. Only computed if `distance\_threshold` is used or `compute\_distances` is set to `true`.
+    Distances between nodes in the corresponding place in `children_`. Only computed if `distance_threshold` is used or `compute_distances` is set to `true`.
    */
   get distances_(): Promise<ArrayLike> {
     if (this._isDisposed) {

@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The implementation is based on libsvm.
 
-  Read more in the [User Guide](../outlier_detection.html#outlier-detection).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../outlier_detection.html#outlier-detection).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html)
  */
@@ -68,7 +68,7 @@ export class OneClassSVM {
     nu?: number
 
     /**
-      Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
+      Whether to use the shrinking heuristic. See the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#shrinking-svm).
 
       @defaultValue `true`
      */
@@ -204,7 +204,7 @@ pms_OneClassSVM_decision_function = {k: v for k, v in pms_OneClassSVM_decision_f
    */
   async fit(opts: {
     /**
-      Set of samples, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Set of samples, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -288,11 +288,11 @@ pms_OneClassSVM_fit_predict = {k: v for k, v in pms_OneClassSVM_fit_predict.item
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -328,7 +328,7 @@ pms_OneClassSVM_get_metadata_routing = {k: v for k, v in pms_OneClassSVM_get_met
    */
   async predict(opts: {
     /**
-      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+      For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -390,13 +390,13 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -499,7 +499,7 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -524,7 +524,7 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -572,7 +572,7 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: decision\_function = score\_samples - `offset\_`. The offset is the opposite of `intercept\_` and is provided for consistency with other outlier detection algorithms.
+    Offset used to define the decision function from the raw scores. We have the relation: decision_function = score_samples - `offset_`. The offset is the opposite of `intercept_` and is provided for consistency with other outlier detection algorithms.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
