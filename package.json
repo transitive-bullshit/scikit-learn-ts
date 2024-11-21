@@ -48,7 +48,7 @@
     "del-cli": "^6.0.0",
     "domhandler": "^5.0.3",
     "dotenv": "^16.4.5",
-    "eslint": "8",
+    "eslint": "^8.57.1",
     "globby": "^14.0.2",
     "got": "^14.4.4",
     "html-to-md": "^0.8.6",
