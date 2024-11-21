@@ -1,7 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 
-import mkdir from 'mkdirp'
 import pMap from 'p-map'
 
 import { formatSource } from '../src/formatter'
@@ -13,7 +12,7 @@ import {
 
 async function main() {
   const outDir = path.join('packages', 'sklearn', 'src', 'generated')
-  await mkdir(outDir)
+  await fs.mkdir(outDir, { recursive: true })
 
   // 487 total definitions
   // 228 functions
@@ -24,8 +23,8 @@ async function main() {
   // console.log(JSON.stringify(scikitDocUrls, null, 2))
 
   const sources = scikitDocUrls.filter((url) => {
-    const nameParts = url.split('/').slice(-1)[0].split('.')
-    const name = nameParts.slice(-2)[0]
+    const nameParts = url.split('/').at(-1).split('.')
+    const name = nameParts.at(-2)
     if (name.toLowerCase() === name) {
       // TODO: likely a function
       // console.log('skipping', nameParts.slice(0, -1).join('.'))
@@ -99,10 +98,10 @@ async function main() {
           const fileName = `${doc.name}.ts`
           const namespaceDirs = doc.namespace.split('.').slice(1)
           const destDir = path.join(outDir, ...namespaceDirs)
-          await mkdir(destDir)
+          await fs.mkdir(destDir, { recursive: true })
 
           const filePath = path.join(destDir, fileName)
-          await fs.writeFile(filePath, source, 'utf-8')
+          await fs.writeFile(filePath, source, 'utf8')
 
           let generatedDir = generatedDirs
           for (const dir of namespaceDirs) {
@@ -158,7 +157,7 @@ async function main() {
       const source = await formatSource(indexFileSource)
       const fileName = 'index.ts'
       const filePath = path.join(destDir, fileName)
-      await fs.writeFile(filePath, source, 'utf-8')
+      await fs.writeFile(filePath, source, 'utf8')
       console.log(filePath)
     }
 
@@ -179,7 +178,7 @@ If you found this project helpful, please consider [donating to the official sci
 
       const fileName = 'readme.md'
       const filePath = path.join(destDir, fileName)
-      await fs.writeFile(filePath, readmeFileSource, 'utf-8')
+      await fs.writeFile(filePath, readmeFileSource, 'utf8')
       console.log(filePath)
     }
   }
@@ -195,4 +194,4 @@ If you found this project helpful, please consider [donating to the official sci
   )
 }
 
-main()
+await main()

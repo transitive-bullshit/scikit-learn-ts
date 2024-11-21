@@ -1,6 +1,6 @@
-import test from 'ava'
+import { expect, test } from 'vitest'
 
-import { parseDocType, parseType } from './parser'
+import { parseDocType } from './parser'
 
 const fixtures = [
   {
@@ -221,18 +221,18 @@ const fixtures = [
 
 for (const fixture of fixtures) {
   for (const param of fixture.params.concat(fixture.attribs)) {
-    test(`${fixture.name} parseDocType(${param.name})`, (t) => {
+    test(`${fixture.name} parseDocType(${param.name})`, () => {
       const parsed = parseDocType(param.type)
       // console.log({
       //   name: param.name,
       //   type: param.type,
       //   parsed: parsed
       // })
-      t.truthy(parsed.type)
-      t.truthy(parsed.raw)
-      t.true(typeof parsed.type === 'string')
-      t.true(typeof parsed.isNDArray === 'boolean')
-      t.true(typeof parsed.raw === 'string')
+      expect(parsed.type).toBeTruthy()
+      expect(parsed.raw).toBeTruthy()
+      expect(typeof parsed.type).toBe('string')
+      expect(typeof parsed.isNDArray).toBe('boolean')
+      expect(typeof parsed.raw).toBe('string')
     })
   }
 }

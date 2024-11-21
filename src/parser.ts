@@ -1,9 +1,10 @@
 import * as cheerio from 'cheerio'
+import { type Element } from 'domhandler'
 import got from 'got'
 import html2md from 'html-to-md'
 import isRelativeUrl from 'is-relative-url'
 
-import * as types from './types'
+import type * as types from './types'
 import { isValidPythonIdentifier } from './utils'
 
 const methodIgnoreList = new Set(['get_params', 'set_params'])
@@ -21,7 +22,7 @@ export async function fetchScikitLearnIndex({
     const pathnameParts = parsedIndexUrl.pathname.split('/')
     const relativePathname = pathnameParts.slice(0, -1).join('/')
     baseUrl = `${parsedIndexUrl.origin}${relativePathname}/`
-  } catch (err) {
+  } catch {
     throw new Error(`Invalid indexUrl: ${indexUrl}`)
   }
 
@@ -59,7 +60,7 @@ export async function fetchScikitLearnIndex({
         // validate that this is a valid URL and remove query params + hash
         const parsedUrl = new URL(a.href)
         return `${parsedUrl.origin}${parsedUrl.pathname}`
-      } catch (err) {
+      } catch {
         return
       }
     })
@@ -85,10 +86,10 @@ export async function fetchAndParseScikitLearnDoc(
     return null
   }
 
-  const fullName = $('h1', $s).text().replaceAll(/¶/g, '').trim()
+  const fullName = $('h1', $s).text().replaceAll('¶', '').trim()
   const nameParts = fullName.split('.')
   const namespace = nameParts.slice(0, -1).join('.')
-  const name = nameParts.slice(-1)[0]
+  const name = nameParts.at(-1)
 
   const desc = parseDesc($, $('dd', $body))
 
@@ -157,11 +158,11 @@ export async function fetchAndParseScikitLearnDoc(
 
 export function parseValues(
   $: cheerio.CheerioAPI,
-  $values: cheerio.Cheerio<cheerio.Element>
+  $values: cheerio.Cheerio<Element>
 ): types.PyDocParam[] {
   const values = $values
     .map((_, v) => ({
-      name: $(v).find('strong').first().text().replaceAll(/\*/g, '').trim(),
+      name: $(v).find('strong').first().text().replaceAll('*', '').trim(),
       type: $(v)
         .find('.classifier')
         .first()
@@ -179,7 +180,7 @@ export function parseValues(
 
 export function parseDesc(
   $: cheerio.CheerioAPI,
-  $body: cheerio.Cheerio<cheerio.Element>
+  $body: cheerio.Cheerio<Element>
 ): string {
   let desc = ''
   let $p = $body.first().find('p').first()
@@ -187,14 +188,14 @@ export function parseDesc(
   while ($p.length && $p.is('p')) {
     const md = html2md($p.html())
     const text = md
-      .replaceAll(/\n/g, ' ')
+      .replaceAll('\n', ' ')
       .trim()
-      .replaceAll(/`True`/g, '`true`')
-      .replaceAll(/([^`\w])True([^`\w])/g, '$1`true`$2')
-      .replaceAll(/`False`/g, '`false`')
-      .replaceAll(/([^`\w])False([^`\w])/g, '$1`false`$2')
-      .replaceAll(/`None`/g, '`undefined`')
-      .replaceAll(/([^`\w])None([^`\w])/g, '$1`undefined`$2')
+      .replaceAll('`True`', '`true`')
+      .replaceAll(/([^\w`])True([^\w`])/g, '$1`true`$2')
+      .replaceAll('`False`', '`false`')
+      .replaceAll(/([^\w`])False([^\w`])/g, '$1`false`$2')
+      .replaceAll('`None`', '`undefined`')
+      .replaceAll(/([^\w`])None([^\w`])/g, '$1`undefined`$2')
       // .replaceAll(/\b`(\w)+)=()`\b/g, '`$1: $2`')
       .trim()
     desc += text + '\n\n'
@@ -250,7 +251,7 @@ export function parseType(input: string) {
     ).join(' | ')
   }
 
-  const mSet = input.match(/^\{(.+)\}$/i)
+  const mSet = input.match(/^{(.+)}$/i)
   if (mSet) {
     const opts = mSet[1].split(',').map((o) => o.trim())
     return Array.from(new Set(opts.map(parseType).filter(Boolean))).join(' | ')
@@ -265,7 +266,7 @@ export function parseType(input: string) {
         .map((s) => s.trim())
         .filter(Boolean).length - 1
     if (!type) return 'any[]'
-    const suffix = Array(numDims).fill('[]').join('')
+    const suffix = Array.from({ length: numDims }).fill('[]').join('')
     // console.log('array', mArray[0], type, numDims)
     return `${type}${suffix}`
   }
@@ -305,11 +306,11 @@ export function parseValue(
   // ’barnes_hut’
   // ”auto”
   // “random”
-  const m = input.match(/^['‘’”“"](.*)['‘’”“"]$/)
+  const m = input.match(/^["'‘’“”](.*)["'‘’“”]$/)
   if (m) return m[1]
 
-  const possibleNumber = parseFloat(input)
-  if (!isNaN(possibleNumber)) return possibleNumber
+  const possibleNumber = Number.parseFloat(input)
+  if (!Number.isNaN(possibleNumber)) return possibleNumber
 
   // throw new Error(`invalid value: ${input}`)
   return null

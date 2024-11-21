@@ -1,9 +1,9 @@
+import assert from 'node:assert'
+
 import pythonBridge, {
   type PythonBridge,
   type PythonBridgeOptions
 } from '@fisch0920/python-bridge'
-
-export type { PythonBridge }
 
 /**
  * The version of the python `scikit-learn` module this package was built with.
@@ -15,7 +15,7 @@ export const SCIKIT_LEARN_VERSION = '1.5.2'
 
 const PB = pythonBridge as any
 const [scikitLearnVersionMajor, scikitLearnVersionMinor] =
-  SCIKIT_LEARN_VERSION.split('.').map((x) => parseInt(x))
+  SCIKIT_LEARN_VERSION.split('.').map((x) => Number.parseInt(x))
 
 export async function createPythonBridge(
   opts: PythonBridgeOptions = {}
@@ -31,15 +31,24 @@ export async function createPythonBridge(
 
 // TODO: validate `numpy and `sklearn`
 export async function validatePythonBridge(py: PythonBridge): Promise<void> {
+  assert(
+    scikitLearnVersionMajor,
+    `invalid scikit-learn version: ${SCIKIT_LEARN_VERSION}`
+  )
+  assert(
+    scikitLearnVersionMinor !== undefined,
+    `invalid scikit-learn version: ${SCIKIT_LEARN_VERSION}`
+  )
+
   await py.ex`
 from platform import python_version
 `
 
   const pyVersion: string = await py`python_version()`
-  const [pyMajor, pyMinor] = pyVersion.split('.').map((x) => parseInt(x))
-  if (!pyMajor) {
-    throw new Error(`Invalid python version "${pyVersion}"`)
-  }
+  const [pyMajor, pyMinor] = pyVersion.split('.').map((x) => Number.parseInt(x))
+
+  assert(pyMajor, `Invalid python version: "${pyVersion}"`)
+  assert(pyMinor !== undefined, `Invalid python version: "${pyVersion}"`)
 
   if (pyMajor < 3) {
     throw new Error(
@@ -62,13 +71,13 @@ from sklearn import __version__
   const sklearnVersion: string = await py`__version__`
   const [sklearnMajor, sklearnMinor] = sklearnVersion
     .split('.')
-    .map((x) => parseInt(x))
+    .map((x) => Number.parseInt(x))
 
-  if (!sklearnMajor) {
-    throw new Error(
-      `Invalid python scikit-learn module version "${sklearnVersion}"`
-    )
-  }
+  assert(sklearnMajor, `Invalid scikit-learn version: "${sklearnVersion}"`)
+  assert(
+    sklearnMinor !== undefined,
+    `Invalid scikit-learn version: "${sklearnVersion}"`
+  )
 
   if (sklearnMajor < scikitLearnVersionMajor) {
     throw new Error(
@@ -92,3 +101,5 @@ from sklearn import __version__
     )
   }
 }
+
+export { type PythonBridge } from '@fisch0920/python-bridge'

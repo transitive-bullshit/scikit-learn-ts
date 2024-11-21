@@ -1,16 +1,16 @@
-import * as types from './types'
+import type * as types from './types'
 import { formatSource } from './formatter'
-import { indentComment, pascalCase } from './utils'
+import { indentComment } from './utils'
 
-const optionsSuffix = 'Options'
+// const optionsSuffix = 'Options'
 
 const tsImports = `
 import crypto from 'node:crypto'
 
 import {
-  PythonBridge, 
-  NDArray, 
-  ArrayLike, 
+  PythonBridge,
+  NDArray,
+  ArrayLike,
   SparseMatrix
 } from '@/sklearn/types'
 `
@@ -26,7 +26,7 @@ export async function generateDefinition(
 }
 
 export async function generateFunction(
-  pyDocFunction: types.PyDocFunction
+  _pyDocFunction: types.PyDocFunction
 ): Promise<string> {
   // TODO
   throw new Error('Not yet implemented')
@@ -50,13 +50,13 @@ except NameError: ${pyBridgeName} = {}
   //   )}
   // `
 
-  const methodNamesToPascalCase = pyDocClass.methods.reduce(
-    (acc, method) => ({
-      ...acc,
-      [method.name]: pascalCase(method.name)
-    }),
-    {} as Record<string, string>
-  )
+  // const methodNamesToPascalCase = pyDocClass.methods.reduce(
+  //   (acc, method) => ({
+  //     ...acc,
+  //     [method.name]: pascalCase(method.name)
+  //   }),
+  //   {} as Record<string, string>
+  // )
 
   function genPyDocParamType(
     param: types.PyDocParam,
@@ -133,8 +133,8 @@ ${types.join('\n\n')}
 
           if (!this._isInitialized) {
             throw new Error('${pyDocClass.name} must call init() before ${
-        method.name
-      }()')
+              method.name
+            }()')
           }
 
           // set up method params
@@ -144,8 +144,8 @@ ${types.join('\n\n')}
 
           // invoke method
           await this._py.ex\`${pyResIdentifier} = ${pyBridgeName}[\${this.id}].${
-        method.name
-      }(**${pyParamsIdentifier})\`
+            method.name
+          }(**${pyParamsIdentifier})\`
 
           // convert the result from python to node.js
           return this._py\`${pyResIdentifier}.tolist() if hasattr(${pyResIdentifier}, 'tolist') else ${pyResIdentifier}\`
@@ -176,8 +176,8 @@ ${types.join('\n\n')}
           return (async () => {
             // invoke accessor
             await this._py.ex\`${pyResIdentifier} = ${pyBridgeName}[\${this.id}].${
-        attrib.name
-      }\`
+              attrib.name
+            }\`
 
             // convert the result from python to node.js
             return this._py\`${pyResIdentifier}.tolist() if hasattr(${pyResIdentifier}, 'tolist') else ${pyResIdentifier}\`
@@ -211,7 +211,7 @@ export class ${pyDocClass.name} {
   _py: PythonBridge
   _isInitialized: boolean = false
   _isDisposed: boolean = false
-  
+
   constructor(opts?: ${genPyDocParamsType(pyDocClass.params, { indent: 6 })}) {
     this.id = \`${pyDocClass.name}\${crypto.randomUUID().split('-')[0]}\`
     this.opts = opts || {}
@@ -258,8 +258,8 @@ export class ${pyDocClass.name} {
     })}
 
     await this._py.ex\`${pyBridgeName}[\${this.id}] = ${
-    pyDocClass.name
-  }(**${pyConstructorParamsIdentifier})\`
+      pyDocClass.name
+    }(**${pyConstructorParamsIdentifier})\`
 
     this._isInitialized = true
   }

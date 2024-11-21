@@ -2,13 +2,12 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 
 import { globby } from 'globby'
-import mkdir from 'mkdirp'
 import pMap from 'p-map'
 
 async function main() {
   const srcDocsDir = path.join('packages', 'sklearn', 'docs')
   const outDir = path.join('docs', 'pages', 'docs')
-  await mkdir(outDir)
+  await fs.mkdir(outDir, { recursive: true })
 
   const docs = (
     await globby('**/*.md', {
@@ -45,7 +44,7 @@ async function main() {
     async (doc) => {
       console.log(`processing ${doc.relativePath}`)
 
-      let out = await fs.readFile(doc.srcPath, 'utf-8')
+      let out = await fs.readFile(doc.srcPath, 'utf8')
 
       out =
         out
@@ -54,7 +53,7 @@ async function main() {
             'Defined in: $1'
           )
           // TODO: handle relative links
-          .replaceAll(/\[([^\]]+)\]\((\.\.[^\)]+)\)/g, '$1')
+          .replaceAll(/\[([^\]]+)]\((\.\.[^)]+)\)/g, '$1')
           .replaceAll('[Readme](readme.md)', '')
           .trim() + '\n'
 
@@ -74,8 +73,8 @@ async function main() {
         metaMap.variables.push(doc.relativePath)
       }
 
-      await mkdir(path.dirname(doc.destPath))
-      await fs.writeFile(doc.destPath, out, 'utf-8')
+      await fs.mkdir(path.dirname(doc.destPath), { recursive: true })
+      await fs.writeFile(doc.destPath, out, 'utf8')
     },
     {
       concurrency: 8
@@ -99,7 +98,7 @@ async function main() {
     await fs.writeFile(
       path.join(outDir, '_meta.json'),
       JSON.stringify(docsMeta, null, 2),
-      'utf-8'
+      'utf8'
     )
   }
 
@@ -108,7 +107,7 @@ async function main() {
     Object.keys(metaMap),
     async (key) => {
       const values = metaMap[key]
-        .map((value) => value.split('/').slice(-1)[0].split('.')[0].trim())
+        .map((value) => value.split('/').at(-1).split('.')[0].trim())
         .filter(Boolean)
         .sort((a, b) => a.localeCompare(b))
 
@@ -116,20 +115,14 @@ async function main() {
         return
       }
 
-      const meta = values.reduce(
-        (acc, value) => ({
-          ...acc,
-          [value]: value
-        }),
-        {}
-      )
+      const meta = Object.fromEntries(values.map((value) => [value, value]))
 
       const destDir = path.join(outDir, key)
 
       await fs.writeFile(
         path.join(path.join(destDir, '_meta.json')),
         JSON.stringify(meta, null, 2),
-        'utf-8'
+        'utf8'
       )
     },
     {
@@ -138,4 +131,4 @@ async function main() {
   )
 }
 
-main()
+await main()
