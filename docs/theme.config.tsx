@@ -105,19 +105,19 @@ const config: DocsThemeConfig = {
   }
 }
 
-// TODO: get memoization working here
-function titleComponent({
-  title
-}: {
-  title: string
-  type: string
-  route: string
-}) {
-  if (title === 'Guide' || title === 'Documentation') {
-    return <b>{title}</b>
-  }
+// // TODO: get memoization working here
+// function titleComponent({
+//   title
+// }: {
+//   title: string
+//   type: string
+//   route: string
+// }) {
+//   if (title === 'Guide' || title === 'Documentation') {
+//     return <b>{title}</b>
+//   }
 
-  return <span>{title}</span>
-}
+//   return <span>{title}</span>
+// }
 
 export default config
