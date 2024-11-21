@@ -28,19 +28,6 @@
   "dependencies": {
     "@fisch0920/python-bridge": "^1.1.0"
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write"
-    ]
-  },
-  "ava": {
-    "extensions": {
-      "ts": "module"
-    },
-    "nodeArguments": [
-      "--loader=tsx"
-    ]
-  },
   "keywords": [
     "scikit",
     "learn",
