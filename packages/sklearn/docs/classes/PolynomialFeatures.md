@@ -58,7 +58,7 @@ Order of output array in the dense case. `'F'` order is faster to compute, but m
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L25)
+[generated/preprocessing/PolynomialFeatures.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L25)
 
 ## Properties
 
@@ -68,7 +68,7 @@ Order of output array in the dense case. `'F'` order is faster to compute, but m
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L23)
+[generated/preprocessing/PolynomialFeatures.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L23)
 
 ***
 
@@ -78,7 +78,7 @@ Order of output array in the dense case. `'F'` order is faster to compute, but m
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L22)
+[generated/preprocessing/PolynomialFeatures.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L22)
 
 ***
 
@@ -88,7 +88,7 @@ Order of output array in the dense case. `'F'` order is faster to compute, but m
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L21)
+[generated/preprocessing/PolynomialFeatures.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L21)
 
 ***
 
@@ -98,7 +98,7 @@ Order of output array in the dense case. `'F'` order is faster to compute, but m
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L18)
+[generated/preprocessing/PolynomialFeatures.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L18)
 
 ***
 
@@ -108,7 +108,7 @@ Order of output array in the dense case. `'F'` order is faster to compute, but m
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L19)
+[generated/preprocessing/PolynomialFeatures.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L19)
 
 ## Accessors
 
@@ -126,7 +126,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L393)
+[generated/preprocessing/PolynomialFeatures.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L393)
 
 ***
 
@@ -144,7 +144,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L366)
+[generated/preprocessing/PolynomialFeatures.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L366)
 
 ***
 
@@ -162,7 +162,7 @@ The total number of polynomial output features. The number of output features is
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L420)
+[generated/preprocessing/PolynomialFeatures.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L420)
 
 ***
 
@@ -190,7 +190,7 @@ The total number of polynomial output features. The number of output features is
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L58)
+[generated/preprocessing/PolynomialFeatures.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L58)
 
 ## Methods
 
@@ -208,7 +208,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L114)
+[generated/preprocessing/PolynomialFeatures.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L114)
 
 ***
 
@@ -236,7 +236,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L131)
+[generated/preprocessing/PolynomialFeatures.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L131)
 
 ***
 
@@ -270,7 +270,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L172)
+[generated/preprocessing/PolynomialFeatures.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L172)
 
 ***
 
@@ -294,7 +294,7 @@ Input features.
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L218)
+[generated/preprocessing/PolynomialFeatures.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L218)
 
 ***
 
@@ -320,7 +320,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L256)
+[generated/preprocessing/PolynomialFeatures.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L256)
 
 ***
 
@@ -342,7 +342,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L71)
+[generated/preprocessing/PolynomialFeatures.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L71)
 
 ***
 
@@ -368,7 +368,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L294)
+[generated/preprocessing/PolynomialFeatures.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L294)
 
 ***
 
@@ -396,4 +396,4 @@ If the degree is 2 or 3, the method described in “Leveraging Sparsity to Speed
 
 #### Defined in
 
-[generated/preprocessing/PolynomialFeatures.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L328)
+[generated/preprocessing/PolynomialFeatures.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L328)

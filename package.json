@@ -29,6 +29,7 @@
     "docs": "run-s docs:*",
     "docs:typedoc": "typedoc",
     "docs:transform": "tsx bin/transform-docs.ts",
+    "docs:format": "prettier 'docs/**/*.{ts,tsx}' --write",
     "predocs": "del packages/sklearn/docs docs/pages/docs",
     "preinstall": "npx only-allow pnpm",
     "pretest": "run-s build",

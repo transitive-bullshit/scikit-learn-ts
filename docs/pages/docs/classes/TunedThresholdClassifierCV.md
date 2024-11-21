@@ -82,7 +82,7 @@ The number of decision threshold to use when discretizing the output of the clas
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L25)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L25)
 
 ## Properties
 
@@ -92,7 +92,7 @@ The number of decision threshold to use when discretizing the output of the clas
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L23)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L23)
 
 ***
 
@@ -102,7 +102,7 @@ The number of decision threshold to use when discretizing the output of the clas
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L22)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L22)
 
 ***
 
@@ -112,7 +112,7 @@ The number of decision threshold to use when discretizing the output of the clas
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L21)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L21)
 
 ***
 
@@ -122,7 +122,7 @@ The number of decision threshold to use when discretizing the output of the clas
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L18)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L18)
 
 ***
 
@@ -132,7 +132,7 @@ The number of decision threshold to use when discretizing the output of the clas
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L19)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L19)
 
 ## Accessors
 
@@ -150,7 +150,7 @@ The optimal score of the objective metric, evaluated at `best\_threshold\_`.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L528)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L528)
 
 ***
 
@@ -168,7 +168,7 @@ The new decision threshold.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L501)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L501)
 
 ***
 
@@ -186,7 +186,7 @@ A dictionary containing the scores and thresholds computed during the cross-vali
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L555)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L555)
 
 ***
 
@@ -204,7 +204,7 @@ The fitted classifier used when predicting.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L474)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L474)
 
 ***
 
@@ -222,7 +222,7 @@ Names of features seen during fit. Only defined if the underlying estimator expo
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L609)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L609)
 
 ***
 
@@ -240,7 +240,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L582)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L582)
 
 ***
 
@@ -268,7 +268,7 @@ Number of features seen during fit. Only defined if the underlying estimator exp
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L85)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L85)
 
 ## Methods
 
@@ -292,7 +292,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L158)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L158)
 
 ***
 
@@ -310,7 +310,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L141)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L141)
 
 ***
 
@@ -342,7 +342,7 @@ Target values.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L194)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L194)
 
 ***
 
@@ -368,7 +368,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L242)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L242)
 
 ***
 
@@ -390,7 +390,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L98)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L98)
 
 ***
 
@@ -414,7 +414,7 @@ The samples, as accepted by `estimator.predict`.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L278)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L278)
 
 ***
 
@@ -438,7 +438,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L314)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L314)
 
 ***
 
@@ -462,7 +462,7 @@ Training vectors, where `n\_samples` is the number of samples and `n\_features` 
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L350)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L350)
 
 ***
 
@@ -496,7 +496,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L388)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L388)
 
 ***
 
@@ -524,4 +524,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/model\_selection/TunedThresholdClassifierCV.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L438)
+[generated/model\_selection/TunedThresholdClassifierCV.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/TunedThresholdClassifierCV.ts#L438)

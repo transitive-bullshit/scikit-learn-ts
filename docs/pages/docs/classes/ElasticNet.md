@@ -108,7 +108,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L23)
+[generated/linear\_model/ElasticNet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L23)
 
 ## Properties
 
@@ -118,7 +118,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L21)
+[generated/linear\_model/ElasticNet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L21)
 
 ***
 
@@ -128,7 +128,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L20)
+[generated/linear\_model/ElasticNet.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L20)
 
 ***
 
@@ -138,7 +138,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L19)
+[generated/linear\_model/ElasticNet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L19)
 
 ***
 
@@ -148,7 +148,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L16)
+[generated/linear\_model/ElasticNet.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L16)
 
 ***
 
@@ -158,7 +158,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L17)
+[generated/linear\_model/ElasticNet.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L17)
 
 ## Accessors
 
@@ -176,7 +176,7 @@ Parameter vector (w in the cost function formula).
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L535)
+[generated/linear\_model/ElasticNet.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L535)
 
 ***
 
@@ -194,7 +194,7 @@ Given param alpha, the dual gaps at the end of the optimization, same shape as e
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L604)
+[generated/linear\_model/ElasticNet.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L604)
 
 ***
 
@@ -212,7 +212,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L652)
+[generated/linear\_model/ElasticNet.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L652)
 
 ***
 
@@ -230,7 +230,7 @@ Independent term in decision function.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L558)
+[generated/linear\_model/ElasticNet.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L558)
 
 ***
 
@@ -248,7 +248,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L627)
+[generated/linear\_model/ElasticNet.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L627)
 
 ***
 
@@ -266,7 +266,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L581)
+[generated/linear\_model/ElasticNet.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L581)
 
 ***
 
@@ -294,7 +294,7 @@ Number of iterations run by the coordinate descent solver to reach the specified
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L103)
+[generated/linear\_model/ElasticNet.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L103)
 
 ## Methods
 
@@ -312,7 +312,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L155)
+[generated/linear\_model/ElasticNet.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L155)
 
 ***
 
@@ -354,7 +354,7 @@ Target. Will be cast to X’s dtype if necessary.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L172)
+[generated/linear\_model/ElasticNet.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L172)
 
 ***
 
@@ -380,7 +380,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L225)
+[generated/linear\_model/ElasticNet.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L225)
 
 ***
 
@@ -402,7 +402,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L116)
+[generated/linear\_model/ElasticNet.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L116)
 
 ***
 
@@ -522,7 +522,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L263)
+[generated/linear\_model/ElasticNet.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L263)
 
 ***
 
@@ -546,7 +546,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L383)
+[generated/linear\_model/ElasticNet.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L383)
 
 ***
 
@@ -580,7 +580,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L416)
+[generated/linear\_model/ElasticNet.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L416)
 
 ***
 
@@ -612,7 +612,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L462)
+[generated/linear\_model/ElasticNet.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L462)
 
 ***
 
@@ -640,4 +640,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/ElasticNet.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L503)
+[generated/linear\_model/ElasticNet.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L503)

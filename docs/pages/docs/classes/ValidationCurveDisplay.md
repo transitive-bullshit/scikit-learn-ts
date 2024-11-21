@@ -46,7 +46,7 @@ Scores on training sets.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L25)
+[generated/model\_selection/ValidationCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L25)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Scores on training sets.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L23)
+[generated/model\_selection/ValidationCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L23)
 
 ***
 
@@ -66,7 +66,7 @@ Scores on training sets.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L22)
+[generated/model\_selection/ValidationCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L22)
 
 ***
 
@@ -76,7 +76,7 @@ Scores on training sets.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L21)
+[generated/model\_selection/ValidationCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L21)
 
 ***
 
@@ -86,7 +86,7 @@ Scores on training sets.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L18)
+[generated/model\_selection/ValidationCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L18)
 
 ***
 
@@ -96,7 +96,7 @@ Scores on training sets.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L19)
+[generated/model\_selection/ValidationCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ Axes with the validation curve.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L351)
+[generated/model\_selection/ValidationCurveDisplay.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L351)
 
 ***
 
@@ -132,7 +132,7 @@ When the `std\_display\_style` is `"errorbar"`, this is a list of `matplotlib.co
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L405)
+[generated/model\_selection/ValidationCurveDisplay.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L405)
 
 ***
 
@@ -150,7 +150,7 @@ Figure containing the validation curve.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L378)
+[generated/model\_selection/ValidationCurveDisplay.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L378)
 
 ***
 
@@ -168,7 +168,7 @@ When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotl
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L459)
+[generated/model\_selection/ValidationCurveDisplay.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L459)
 
 ***
 
@@ -186,7 +186,7 @@ When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotl
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L432)
+[generated/model\_selection/ValidationCurveDisplay.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L432)
 
 ***
 
@@ -214,7 +214,7 @@ When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotl
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L55)
+[generated/model\_selection/ValidationCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L55)
 
 ## Methods
 
@@ -232,7 +232,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L111)
+[generated/model\_selection/ValidationCurveDisplay.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L111)
 
 ***
 
@@ -358,7 +358,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L130)
+[generated/model\_selection/ValidationCurveDisplay.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L130)
 
 ***
 
@@ -380,7 +380,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L68)
+[generated/model\_selection/ValidationCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L68)
 
 ***
 
@@ -444,4 +444,4 @@ The style used to display the score standard deviation around the mean score. If
 
 #### Defined in
 
-[generated/model\_selection/ValidationCurveDisplay.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L276)
+[generated/model\_selection/ValidationCurveDisplay.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L276)

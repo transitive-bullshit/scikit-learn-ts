@@ -66,7 +66,7 @@ The imputation strategy.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L25)
+[generated/impute/SimpleImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L25)
 
 ## Properties
 
@@ -76,7 +76,7 @@ The imputation strategy.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L23)
+[generated/impute/SimpleImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L23)
 
 ***
 
@@ -86,7 +86,7 @@ The imputation strategy.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L22)
+[generated/impute/SimpleImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L22)
 
 ***
 
@@ -96,7 +96,7 @@ The imputation strategy.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L21)
+[generated/impute/SimpleImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L21)
 
 ***
 
@@ -106,7 +106,7 @@ The imputation strategy.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L18)
+[generated/impute/SimpleImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L18)
 
 ***
 
@@ -116,7 +116,7 @@ The imputation strategy.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L19)
+[generated/impute/SimpleImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L19)
 
 ## Accessors
 
@@ -134,7 +134,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L467)
+[generated/impute/SimpleImputer.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L467)
 
 ***
 
@@ -152,7 +152,7 @@ Indicator used to add binary indicators for missing values. `undefined` if `add\
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L417)
+[generated/impute/SimpleImputer.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L417)
 
 ***
 
@@ -170,7 +170,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L442)
+[generated/impute/SimpleImputer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L442)
 
 ***
 
@@ -198,7 +198,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L68)
+[generated/impute/SimpleImputer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L68)
 
 ***
 
@@ -216,7 +216,7 @@ The imputation fill value for each feature. Computing statistics can result in `
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L392)
+[generated/impute/SimpleImputer.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L392)
 
 ## Methods
 
@@ -234,7 +234,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L120)
+[generated/impute/SimpleImputer.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L120)
 
 ***
 
@@ -262,7 +262,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L137)
+[generated/impute/SimpleImputer.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L137)
 
 ***
 
@@ -296,7 +296,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L176)
+[generated/impute/SimpleImputer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L176)
 
 ***
 
@@ -320,7 +320,7 @@ Input features.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L218)
+[generated/impute/SimpleImputer.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L218)
 
 ***
 
@@ -346,7 +346,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L254)
+[generated/impute/SimpleImputer.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L254)
 
 ***
 
@@ -368,7 +368,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L81)
+[generated/impute/SimpleImputer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L81)
 
 ***
 
@@ -396,7 +396,7 @@ The imputed data to be reverted to original data. It has to be an augmented arra
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L292)
+[generated/impute/SimpleImputer.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L292)
 
 ***
 
@@ -422,7 +422,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L328)
+[generated/impute/SimpleImputer.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L328)
 
 ***
 
@@ -446,4 +446,4 @@ The input data to complete.
 
 #### Defined in
 
-[generated/impute/SimpleImputer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/impute/SimpleImputer.ts#L360)
+[generated/impute/SimpleImputer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/impute/SimpleImputer.ts#L360)

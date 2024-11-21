@@ -138,7 +138,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L23)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L23)
 
 ## Properties
 
@@ -148,7 +148,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L21)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L21)
 
 ***
 
@@ -158,7 +158,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L20)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L20)
 
 ***
 
@@ -168,7 +168,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L19)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L19)
 
 ***
 
@@ -178,7 +178,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L16)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L16)
 
 ***
 
@@ -188,7 +188,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L17)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L17)
 
 ## Accessors
 
@@ -206,7 +206,7 @@ The unique classes labels.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L789)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L789)
 
 ***
 
@@ -224,7 +224,7 @@ Weights assigned to the features.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L654)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L654)
 
 ***
 
@@ -242,7 +242,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:735](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L735)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:735](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L735)
 
 ***
 
@@ -260,7 +260,7 @@ Constants in decision function.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L681)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L681)
 
 ***
 
@@ -278,7 +278,7 @@ Loss function used by the algorithm.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:843](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L843)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:843](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L843)
 
 ***
 
@@ -296,7 +296,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L708)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L708)
 
 ***
 
@@ -314,7 +314,7 @@ The actual number of iterations to reach the stopping criterion. For multiclass 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L762)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L762)
 
 ***
 
@@ -342,7 +342,7 @@ The actual number of iterations to reach the stopping criterion. For multiclass 
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L133)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L133)
 
 ***
 
@@ -360,7 +360,7 @@ Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_sa
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L816)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L816)
 
 ## Methods
 
@@ -386,7 +386,7 @@ The data matrix for which we want to get the confidence scores.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L208)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L208)
 
 ***
 
@@ -408,7 +408,7 @@ Converts the `coef\_` member (back) to a numpy.ndarray. This is the default form
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L246)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L246)
 
 ***
 
@@ -426,7 +426,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L189)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L189)
 
 ***
 
@@ -462,7 +462,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L276)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L276)
 
 ***
 
@@ -488,7 +488,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L329)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L329)
 
 ***
 
@@ -510,7 +510,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L146)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L146)
 
 ***
 
@@ -542,7 +542,7 @@ Subset of the target values.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L365)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L365)
 
 ***
 
@@ -566,7 +566,7 @@ The data matrix for which we want to get the predictions.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L411)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L411)
 
 ***
 
@@ -600,7 +600,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L449)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L449)
 
 ***
 
@@ -632,7 +632,7 @@ Metadata routing for `intercept\_init` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L499)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L499)
 
 ***
 
@@ -660,7 +660,7 @@ Metadata routing for `classes` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L544)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L544)
 
 ***
 
@@ -688,7 +688,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L584)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L584)
 
 ***
 
@@ -712,4 +712,4 @@ The `intercept\_` member is not converted.
 
 #### Defined in
 
-[generated/linear\_model/PassiveAggressiveClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L624)
+[generated/linear\_model/PassiveAggressiveClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L624)

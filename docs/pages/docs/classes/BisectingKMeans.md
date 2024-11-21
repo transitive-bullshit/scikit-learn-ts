@@ -106,7 +106,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L23)
+[generated/cluster/BisectingKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L23)
 
 ## Properties
 
@@ -116,7 +116,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L21)
+[generated/cluster/BisectingKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L21)
 
 ***
 
@@ -126,7 +126,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L20)
+[generated/cluster/BisectingKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L20)
 
 ***
 
@@ -136,7 +136,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L19)
+[generated/cluster/BisectingKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L19)
 
 ***
 
@@ -146,7 +146,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L16)
+[generated/cluster/BisectingKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L16)
 
 ***
 
@@ -156,7 +156,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L17)
+[generated/cluster/BisectingKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L17)
 
 ## Accessors
 
@@ -174,7 +174,7 @@ Coordinates of cluster centers. If the algorithm stops before fully converging (
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L595)
+[generated/cluster/BisectingKMeans.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L595)
 
 ***
 
@@ -192,7 +192,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L695)
+[generated/cluster/BisectingKMeans.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L695)
 
 ***
 
@@ -210,7 +210,7 @@ Sum of squared distances of samples to their closest cluster center, weighted by
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L645)
+[generated/cluster/BisectingKMeans.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L645)
 
 ***
 
@@ -228,7 +228,7 @@ Labels of each point.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L620)
+[generated/cluster/BisectingKMeans.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L620)
 
 ***
 
@@ -246,7 +246,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L670)
+[generated/cluster/BisectingKMeans.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L670)
 
 ***
 
@@ -274,7 +274,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L102)
+[generated/cluster/BisectingKMeans.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L102)
 
 ## Methods
 
@@ -292,7 +292,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L154)
+[generated/cluster/BisectingKMeans.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L154)
 
 ***
 
@@ -324,7 +324,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L171)
+[generated/cluster/BisectingKMeans.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L171)
 
 ***
 
@@ -358,7 +358,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L215)
+[generated/cluster/BisectingKMeans.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L215)
 
 ***
 
@@ -392,7 +392,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L259)
+[generated/cluster/BisectingKMeans.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L259)
 
 ***
 
@@ -418,7 +418,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L303)
+[generated/cluster/BisectingKMeans.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L303)
 
 ***
 
@@ -444,7 +444,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L339)
+[generated/cluster/BisectingKMeans.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L339)
 
 ***
 
@@ -466,7 +466,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L115)
+[generated/cluster/BisectingKMeans.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L115)
 
 ***
 
@@ -494,7 +494,7 @@ New data to predict.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L377)
+[generated/cluster/BisectingKMeans.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L377)
 
 ***
 
@@ -526,7 +526,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L409)
+[generated/cluster/BisectingKMeans.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L409)
 
 ***
 
@@ -554,7 +554,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L455)
+[generated/cluster/BisectingKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L455)
 
 ***
 
@@ -580,7 +580,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L491)
+[generated/cluster/BisectingKMeans.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L491)
 
 ***
 
@@ -608,7 +608,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L527)
+[generated/cluster/BisectingKMeans.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L527)
 
 ***
 
@@ -634,4 +634,4 @@ New data to transform.
 
 #### Defined in
 
-[generated/cluster/BisectingKMeans.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L563)
+[generated/cluster/BisectingKMeans.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L563)

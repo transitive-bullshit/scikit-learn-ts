@@ -50,7 +50,7 @@ Whether to scale `X` and `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L25)
+[generated/cross\_decomposition/PLSSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L25)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Whether to scale `X` and `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L23)
+[generated/cross\_decomposition/PLSSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L23)
 
 ***
 
@@ -70,7 +70,7 @@ Whether to scale `X` and `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L22)
+[generated/cross\_decomposition/PLSSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L22)
 
 ***
 
@@ -80,7 +80,7 @@ Whether to scale `X` and `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L21)
+[generated/cross\_decomposition/PLSSVD.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L21)
 
 ***
 
@@ -90,7 +90,7 @@ Whether to scale `X` and `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L18)
+[generated/cross\_decomposition/PLSSVD.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L18)
 
 ***
 
@@ -100,7 +100,7 @@ Whether to scale `X` and `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L19)
+[generated/cross\_decomposition/PLSSVD.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L19)
 
 ## Accessors
 
@@ -118,7 +118,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L411)
+[generated/cross\_decomposition/PLSSVD.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L411)
 
 ***
 
@@ -136,7 +136,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L388)
+[generated/cross\_decomposition/PLSSVD.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L388)
 
 ***
 
@@ -164,7 +164,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51)
+[generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51)
 
 ***
 
@@ -182,7 +182,7 @@ The left singular vectors of the SVD of the cross-covariance matrix. Used to pro
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L342)
+[generated/cross\_decomposition/PLSSVD.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L342)
 
 ***
 
@@ -200,7 +200,7 @@ The right singular vectors of the SVD of the cross-covariance matrix. Used to pr
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L365)
+[generated/cross\_decomposition/PLSSVD.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L365)
 
 ## Methods
 
@@ -218,7 +218,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L102)
+[generated/cross\_decomposition/PLSSVD.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L102)
 
 ***
 
@@ -250,7 +250,7 @@ Targets.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L119)
+[generated/cross\_decomposition/PLSSVD.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L119)
 
 ***
 
@@ -278,7 +278,7 @@ Targets.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L161)
+[generated/cross\_decomposition/PLSSVD.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L161)
 
 ***
 
@@ -304,7 +304,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L200)
+[generated/cross\_decomposition/PLSSVD.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L200)
 
 ***
 
@@ -330,7 +330,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L234)
+[generated/cross\_decomposition/PLSSVD.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L234)
 
 ***
 
@@ -352,7 +352,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L64)
+[generated/cross\_decomposition/PLSSVD.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L64)
 
 ***
 
@@ -378,7 +378,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L268)
+[generated/cross\_decomposition/PLSSVD.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L268)
 
 ***
 
@@ -410,4 +410,4 @@ Targets.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSSVD.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L300)
+[generated/cross\_decomposition/PLSSVD.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L300)

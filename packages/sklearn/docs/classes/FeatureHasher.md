@@ -60,7 +60,7 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L31)
+[generated/feature\_extraction/FeatureHasher.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L31)
 
 ## Properties
 
@@ -70,7 +70,7 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L29)
+[generated/feature\_extraction/FeatureHasher.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L29)
 
 ***
 
@@ -80,7 +80,7 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L28)
+[generated/feature\_extraction/FeatureHasher.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L28)
 
 ***
 
@@ -90,7 +90,7 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L27)
+[generated/feature\_extraction/FeatureHasher.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L27)
 
 ***
 
@@ -100,7 +100,7 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L24)
+[generated/feature\_extraction/FeatureHasher.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L24)
 
 ***
 
@@ -110,7 +110,7 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L25)
+[generated/feature\_extraction/FeatureHasher.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L25)
 
 ## Accessors
 
@@ -138,7 +138,7 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L62)
+[generated/feature\_extraction/FeatureHasher.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L62)
 
 ## Methods
 
@@ -156,7 +156,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L114)
+[generated/feature\_extraction/FeatureHasher.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L114)
 
 ***
 
@@ -186,7 +186,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L133)
+[generated/feature\_extraction/FeatureHasher.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L133)
 
 ***
 
@@ -220,7 +220,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L172)
+[generated/feature\_extraction/FeatureHasher.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L172)
 
 ***
 
@@ -246,7 +246,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L216)
+[generated/feature\_extraction/FeatureHasher.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L216)
 
 ***
 
@@ -268,7 +268,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L75)
+[generated/feature\_extraction/FeatureHasher.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L75)
 
 ***
 
@@ -294,7 +294,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L252)
+[generated/feature\_extraction/FeatureHasher.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L252)
 
 ***
 
@@ -322,7 +322,7 @@ Metadata routing for `raw\_X` parameter in `transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L288)
+[generated/feature\_extraction/FeatureHasher.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L288)
 
 ***
 
@@ -346,4 +346,4 @@ Samples. Each sample must be iterable an (e.g., a list or tuple) containing/gene
 
 #### Defined in
 
-[generated/feature\_extraction/FeatureHasher.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L322)
+[generated/feature\_extraction/FeatureHasher.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L322)

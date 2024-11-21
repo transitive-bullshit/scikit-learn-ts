@@ -36,7 +36,7 @@ The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L23)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L21)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L20)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L19)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L16)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L17)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L17)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L40)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L40)
 
 ## Methods
 
@@ -150,7 +150,7 @@ Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evalua
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L109)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L109)
 
 ***
 
@@ -174,7 +174,7 @@ The hyperparameters
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L153)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L153)
 
 ***
 
@@ -200,7 +200,7 @@ Argument to the kernel.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L187)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L187)
 
 ***
 
@@ -218,7 +218,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L92)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L92)
 
 ***
 
@@ -240,7 +240,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L53)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L53)
 
 ***
 
@@ -260,4 +260,4 @@ Returns whether the kernel is stationary.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/WhiteKernel.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L219)
+[generated/gaussian\_process/kernels/WhiteKernel.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L219)

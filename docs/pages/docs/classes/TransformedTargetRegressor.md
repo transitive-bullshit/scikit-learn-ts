@@ -50,7 +50,7 @@ Estimator object such as derived from [`TransformerMixin`](sklearn.base.Transfor
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
+[generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Estimator object such as derived from [`TransformerMixin`](sklearn.base.Transfor
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23)
+[generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23)
 
 ***
 
@@ -70,7 +70,7 @@ Estimator object such as derived from [`TransformerMixin`](sklearn.base.Transfor
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22)
+[generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22)
 
 ***
 
@@ -80,7 +80,7 @@ Estimator object such as derived from [`TransformerMixin`](sklearn.base.Transfor
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21)
+[generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21)
 
 ***
 
@@ -90,7 +90,7 @@ Estimator object such as derived from [`TransformerMixin`](sklearn.base.Transfor
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18)
+[generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18)
 
 ***
 
@@ -100,7 +100,7 @@ Estimator object such as derived from [`TransformerMixin`](sklearn.base.Transfor
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19)
+[generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19)
 
 ## Accessors
 
@@ -118,7 +118,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L393)
+[generated/compose/TransformedTargetRegressor.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L393)
 
 ***
 
@@ -146,7 +146,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57)
+[generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57)
 
 ***
 
@@ -164,7 +164,7 @@ Fitted regressor.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L339)
+[generated/compose/TransformedTargetRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L339)
 
 ***
 
@@ -182,7 +182,7 @@ Transformer used in [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "skl
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L366)
+[generated/compose/TransformedTargetRegressor.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L366)
 
 ## Methods
 
@@ -200,7 +200,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L113)
+[generated/compose/TransformedTargetRegressor.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L113)
 
 ***
 
@@ -232,7 +232,7 @@ Target values.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L130)
+[generated/compose/TransformedTargetRegressor.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L130)
 
 ***
 
@@ -254,7 +254,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L178)
+[generated/compose/TransformedTargetRegressor.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L178)
 
 ***
 
@@ -276,7 +276,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L70)
+[generated/compose/TransformedTargetRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L70)
 
 ***
 
@@ -306,7 +306,7 @@ Samples.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L210)
+[generated/compose/TransformedTargetRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L210)
 
 ***
 
@@ -340,7 +340,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L253)
+[generated/compose/TransformedTargetRegressor.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L253)
 
 ***
 
@@ -368,4 +368,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/compose/TransformedTargetRegressor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L303)
+[generated/compose/TransformedTargetRegressor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L303)

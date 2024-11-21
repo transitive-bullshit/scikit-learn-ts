@@ -1,4 +1,4 @@
 export default {
-  "createPythonBridge": "createPythonBridge",
-  "validatePythonBridge": "validatePythonBridge"
+  createPythonBridge: 'createPythonBridge',
+  validatePythonBridge: 'validatePythonBridge'
 }

@@ -60,7 +60,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L27)
+[generated/ensemble/AdaBoostClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L27)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L25)
+[generated/ensemble/AdaBoostClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L25)
 
 ***
 
@@ -80,7 +80,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L24)
+[generated/ensemble/AdaBoostClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L24)
 
 ***
 
@@ -90,7 +90,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L23)
+[generated/ensemble/AdaBoostClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L23)
 
 ***
 
@@ -100,7 +100,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L20)
+[generated/ensemble/AdaBoostClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L20)
 
 ***
 
@@ -110,7 +110,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L21)
+[generated/ensemble/AdaBoostClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L21)
 
 ## Accessors
 
@@ -128,7 +128,7 @@ The classes labels.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L706)
+[generated/ensemble/AdaBoostClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L706)
 
 ***
 
@@ -146,7 +146,7 @@ The base estimator from which the ensemble is grown.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L652)
+[generated/ensemble/AdaBoostClassifier.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L652)
 
 ***
 
@@ -164,7 +164,7 @@ Classification error for each estimator in the boosted ensemble.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L787)
+[generated/ensemble/AdaBoostClassifier.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L787)
 
 ***
 
@@ -182,7 +182,7 @@ Weights for each estimator in the boosted ensemble.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L760)
+[generated/ensemble/AdaBoostClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L760)
 
 ***
 
@@ -200,7 +200,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L679)
+[generated/ensemble/AdaBoostClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L679)
 
 ***
 
@@ -218,7 +218,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:841](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L841)
+[generated/ensemble/AdaBoostClassifier.ts:841](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L841)
 
 ***
 
@@ -236,7 +236,7 @@ The number of classes.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L733)
+[generated/ensemble/AdaBoostClassifier.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L733)
 
 ***
 
@@ -254,7 +254,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L814)
+[generated/ensemble/AdaBoostClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L814)
 
 ***
 
@@ -282,7 +282,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L63)
+[generated/ensemble/AdaBoostClassifier.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L63)
 
 ## Methods
 
@@ -306,7 +306,7 @@ The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L136)
+[generated/ensemble/AdaBoostClassifier.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L136)
 
 ***
 
@@ -324,7 +324,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L119)
+[generated/ensemble/AdaBoostClassifier.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L119)
 
 ***
 
@@ -356,7 +356,7 @@ The target values.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L172)
+[generated/ensemble/AdaBoostClassifier.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L172)
 
 ***
 
@@ -378,7 +378,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L218)
+[generated/ensemble/AdaBoostClassifier.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L218)
 
 ***
 
@@ -400,7 +400,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L76)
+[generated/ensemble/AdaBoostClassifier.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L76)
 
 ***
 
@@ -426,7 +426,7 @@ The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L250)
+[generated/ensemble/AdaBoostClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L250)
 
 ***
 
@@ -452,7 +452,7 @@ The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L286)
+[generated/ensemble/AdaBoostClassifier.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L286)
 
 ***
 
@@ -478,7 +478,7 @@ The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L324)
+[generated/ensemble/AdaBoostClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L324)
 
 ***
 
@@ -512,7 +512,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L362)
+[generated/ensemble/AdaBoostClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L362)
 
 ***
 
@@ -540,7 +540,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L410)
+[generated/ensemble/AdaBoostClassifier.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L410)
 
 ***
 
@@ -568,7 +568,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L450)
+[generated/ensemble/AdaBoostClassifier.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L450)
 
 ***
 
@@ -594,7 +594,7 @@ The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L488)
+[generated/ensemble/AdaBoostClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L488)
 
 ***
 
@@ -622,7 +622,7 @@ The input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, an
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L528)
+[generated/ensemble/AdaBoostClassifier.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L528)
 
 ***
 
@@ -650,7 +650,7 @@ The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L568)
+[generated/ensemble/AdaBoostClassifier.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L568)
 
 ***
 
@@ -684,4 +684,4 @@ Labels for X.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L606)
+[generated/ensemble/AdaBoostClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L606)

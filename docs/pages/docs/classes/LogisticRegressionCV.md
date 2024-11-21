@@ -148,7 +148,7 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
+[generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
 
 ## Properties
 
@@ -158,7 +158,7 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27)
+[generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27)
 
 ***
 
@@ -168,7 +168,7 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26)
+[generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26)
 
 ***
 
@@ -178,7 +178,7 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25)
+[generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25)
 
 ***
 
@@ -188,7 +188,7 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22)
+[generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22)
 
 ***
 
@@ -198,7 +198,7 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23)
+[generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23)
 
 ## Accessors
 
@@ -216,7 +216,7 @@ Array of C that maps to the best scores across every class. If refit is set to `
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L847)
+[generated/linear\_model/LogisticRegressionCV.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L847)
 
 ***
 
@@ -234,7 +234,7 @@ A list of class labels known to the classifier.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L654)
+[generated/linear\_model/LogisticRegressionCV.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L654)
 
 ***
 
@@ -254,7 +254,7 @@ Coefficient of the features in the decision function.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L683)
+[generated/linear\_model/LogisticRegressionCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L683)
 
 ***
 
@@ -272,7 +272,7 @@ dict with classes as the keys, and the path of coefficients obtained during cros
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L793)
+[generated/linear\_model/LogisticRegressionCV.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L793)
 
 ***
 
@@ -290,7 +290,7 @@ Array of C i.e. inverse of regularization parameter values used for cross-valida
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L739)
+[generated/linear\_model/LogisticRegressionCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L739)
 
 ***
 
@@ -308,7 +308,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L955)
+[generated/linear\_model/LogisticRegressionCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L955)
 
 ***
 
@@ -328,7 +328,7 @@ If `fit\_intercept` is set to `false`, the intercept is set to zero. `intercept\
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L712)
+[generated/linear\_model/LogisticRegressionCV.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L712)
 
 ***
 
@@ -346,7 +346,7 @@ Array of l1\_ratio that maps to the best scores across every class. If refit is 
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:874](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L874)
+[generated/linear\_model/LogisticRegressionCV.ts:874](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L874)
 
 ***
 
@@ -364,7 +364,7 @@ Array of l1\_ratios used for cross-validation. If no l1\_ratio is used (i.e. pen
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L766)
+[generated/linear\_model/LogisticRegressionCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L766)
 
 ***
 
@@ -382,7 +382,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L928)
+[generated/linear\_model/LogisticRegressionCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L928)
 
 ***
 
@@ -400,7 +400,7 @@ Actual number of iterations for all classes, folds and Cs. In the binary or mult
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:901](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L901)
+[generated/linear\_model/LogisticRegressionCV.ts:901](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L901)
 
 ***
 
@@ -428,7 +428,7 @@ Actual number of iterations for all classes, folds and Cs. In the binary or mult
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153)
+[generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153)
 
 ***
 
@@ -446,7 +446,7 @@ dict with classes as the keys, and the values as the grid of scores obtained dur
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L820)
+[generated/linear\_model/LogisticRegressionCV.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L820)
 
 ## Methods
 
@@ -472,7 +472,7 @@ The data matrix for which we want to get the confidence scores.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L228)
+[generated/linear\_model/LogisticRegressionCV.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L228)
 
 ***
 
@@ -494,7 +494,7 @@ Converts the `coef\_` member (back) to a numpy.ndarray. This is the default form
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L266)
+[generated/linear\_model/LogisticRegressionCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L266)
 
 ***
 
@@ -512,7 +512,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L209)
+[generated/linear\_model/LogisticRegressionCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L209)
 
 ***
 
@@ -548,7 +548,7 @@ Target vector relative to X.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L294)
+[generated/linear\_model/LogisticRegressionCV.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L294)
 
 ***
 
@@ -574,7 +574,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L345)
+[generated/linear\_model/LogisticRegressionCV.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L345)
 
 ***
 
@@ -596,7 +596,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L166)
+[generated/linear\_model/LogisticRegressionCV.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L166)
 
 ***
 
@@ -620,7 +620,7 @@ The data matrix for which we want to get the predictions.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L381)
+[generated/linear\_model/LogisticRegressionCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L381)
 
 ***
 
@@ -646,7 +646,7 @@ Vector to be scored, where `n\_samples` is the number of samples and `n\_feature
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L417)
+[generated/linear\_model/LogisticRegressionCV.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L417)
 
 ***
 
@@ -674,7 +674,7 @@ Vector to be scored, where `n\_samples` is the number of samples and `n\_feature
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L457)
+[generated/linear\_model/LogisticRegressionCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L457)
 
 ***
 
@@ -710,7 +710,7 @@ True labels for X.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L493)
+[generated/linear\_model/LogisticRegressionCV.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L493)
 
 ***
 
@@ -738,7 +738,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L546)
+[generated/linear\_model/LogisticRegressionCV.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L546)
 
 ***
 
@@ -766,7 +766,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L586)
+[generated/linear\_model/LogisticRegressionCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L586)
 
 ***
 
@@ -790,4 +790,4 @@ The `intercept\_` member is not converted.
 
 #### Defined in
 
-[generated/linear\_model/LogisticRegressionCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L626)
+[generated/linear\_model/LogisticRegressionCV.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L626)

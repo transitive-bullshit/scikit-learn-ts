@@ -120,7 +120,7 @@ Controls the verbosity; the higher, the more messages. Defaults to 0.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L27)
+[generated/decomposition/MiniBatchSparsePCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L27)
 
 ## Properties
 
@@ -130,7 +130,7 @@ Controls the verbosity; the higher, the more messages. Defaults to 0.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L25)
+[generated/decomposition/MiniBatchSparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L25)
 
 ***
 
@@ -140,7 +140,7 @@ Controls the verbosity; the higher, the more messages. Defaults to 0.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L24)
+[generated/decomposition/MiniBatchSparsePCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L24)
 
 ***
 
@@ -150,7 +150,7 @@ Controls the verbosity; the higher, the more messages. Defaults to 0.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L23)
+[generated/decomposition/MiniBatchSparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L23)
 
 ***
 
@@ -160,7 +160,7 @@ Controls the verbosity; the higher, the more messages. Defaults to 0.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L20)
+[generated/decomposition/MiniBatchSparsePCA.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L20)
 
 ***
 
@@ -170,7 +170,7 @@ Controls the verbosity; the higher, the more messages. Defaults to 0.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L21)
+[generated/decomposition/MiniBatchSparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L21)
 
 ## Accessors
 
@@ -188,7 +188,7 @@ Sparse components extracted from the data.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L467)
+[generated/decomposition/MiniBatchSparsePCA.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L467)
 
 ***
 
@@ -206,7 +206,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L602)
+[generated/decomposition/MiniBatchSparsePCA.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L602)
 
 ***
 
@@ -224,7 +224,7 @@ Per-feature empirical mean, estimated from the training set. Equal to `X.mean(ax
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L548)
+[generated/decomposition/MiniBatchSparsePCA.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L548)
 
 ***
 
@@ -242,7 +242,7 @@ Estimated number of components.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L494)
+[generated/decomposition/MiniBatchSparsePCA.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L494)
 
 ***
 
@@ -260,7 +260,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L575)
+[generated/decomposition/MiniBatchSparsePCA.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L575)
 
 ***
 
@@ -278,7 +278,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L521)
+[generated/decomposition/MiniBatchSparsePCA.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L521)
 
 ***
 
@@ -306,7 +306,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L119)
+[generated/decomposition/MiniBatchSparsePCA.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L119)
 
 ## Methods
 
@@ -324,7 +324,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L175)
+[generated/decomposition/MiniBatchSparsePCA.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L175)
 
 ***
 
@@ -352,7 +352,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L192)
+[generated/decomposition/MiniBatchSparsePCA.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L192)
 
 ***
 
@@ -386,7 +386,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L233)
+[generated/decomposition/MiniBatchSparsePCA.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L233)
 
 ***
 
@@ -412,7 +412,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L281)
+[generated/decomposition/MiniBatchSparsePCA.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L281)
 
 ***
 
@@ -438,7 +438,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L319)
+[generated/decomposition/MiniBatchSparsePCA.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L319)
 
 ***
 
@@ -460,7 +460,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L132)
+[generated/decomposition/MiniBatchSparsePCA.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L132)
 
 ***
 
@@ -486,7 +486,7 @@ Data in the latent space.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L357)
+[generated/decomposition/MiniBatchSparsePCA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L357)
 
 ***
 
@@ -512,7 +512,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L395)
+[generated/decomposition/MiniBatchSparsePCA.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L395)
 
 ***
 
@@ -540,4 +540,4 @@ Test data to be transformed, must have the same number of features as the data u
 
 #### Defined in
 
-[generated/decomposition/MiniBatchSparsePCA.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L433)
+[generated/decomposition/MiniBatchSparsePCA.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L433)

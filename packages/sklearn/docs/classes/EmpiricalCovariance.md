@@ -40,7 +40,7 @@ Specifies if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L23)
+[generated/covariance/EmpiricalCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L23)
 
 ## Properties
 
@@ -50,7 +50,7 @@ Specifies if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L21)
+[generated/covariance/EmpiricalCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L21)
 
 ***
 
@@ -60,7 +60,7 @@ Specifies if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L20)
+[generated/covariance/EmpiricalCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L20)
 
 ***
 
@@ -70,7 +70,7 @@ Specifies if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L19)
+[generated/covariance/EmpiricalCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L19)
 
 ***
 
@@ -80,7 +80,7 @@ Specifies if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L16)
+[generated/covariance/EmpiricalCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L16)
 
 ***
 
@@ -90,7 +90,7 @@ Specifies if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L17)
+[generated/covariance/EmpiricalCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L17)
 
 ## Accessors
 
@@ -108,7 +108,7 @@ Estimated covariance matrix
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L429)
+[generated/covariance/EmpiricalCovariance.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L429)
 
 ***
 
@@ -126,7 +126,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L510)
+[generated/covariance/EmpiricalCovariance.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L510)
 
 ***
 
@@ -144,7 +144,7 @@ Estimated location, i.e. the estimated mean.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L402)
+[generated/covariance/EmpiricalCovariance.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L402)
 
 ***
 
@@ -162,7 +162,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L483)
+[generated/covariance/EmpiricalCovariance.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L483)
 
 ***
 
@@ -180,7 +180,7 @@ Estimated pseudo-inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L456)
+[generated/covariance/EmpiricalCovariance.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L456)
 
 ***
 
@@ -208,7 +208,7 @@ Estimated pseudo-inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L42)
+[generated/covariance/EmpiricalCovariance.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L42)
 
 ## Methods
 
@@ -226,7 +226,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L98)
+[generated/covariance/EmpiricalCovariance.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L98)
 
 ***
 
@@ -274,7 +274,7 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L115)
+[generated/covariance/EmpiricalCovariance.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L115)
 
 ***
 
@@ -302,7 +302,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L172)
+[generated/covariance/EmpiricalCovariance.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L172)
 
 ***
 
@@ -328,7 +328,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L213)
+[generated/covariance/EmpiricalCovariance.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L213)
 
 ***
 
@@ -352,7 +352,7 @@ The precision matrix associated to the current covariance object.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L249)
+[generated/covariance/EmpiricalCovariance.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L249)
 
 ***
 
@@ -374,7 +374,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L55)
+[generated/covariance/EmpiricalCovariance.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L55)
 
 ***
 
@@ -398,7 +398,7 @@ The observations, the Mahalanobis distances of the which we compute. Observation
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L285)
+[generated/covariance/EmpiricalCovariance.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L285)
 
 ***
 
@@ -428,7 +428,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L323)
+[generated/covariance/EmpiricalCovariance.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L323)
 
 ***
 
@@ -456,4 +456,4 @@ Metadata routing for `X\_test` parameter in `score`.
 
 #### Defined in
 
-[generated/covariance/EmpiricalCovariance.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L366)
+[generated/covariance/EmpiricalCovariance.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L366)

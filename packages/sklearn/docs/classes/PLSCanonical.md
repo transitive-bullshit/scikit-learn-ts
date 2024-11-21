@@ -74,7 +74,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L25)
+[generated/cross\_decomposition/PLSCanonical.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L25)
 
 ## Properties
 
@@ -84,7 +84,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L23)
+[generated/cross\_decomposition/PLSCanonical.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L23)
 
 ***
 
@@ -94,7 +94,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L22)
+[generated/cross\_decomposition/PLSCanonical.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L22)
 
 ***
 
@@ -104,7 +104,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L21)
+[generated/cross\_decomposition/PLSCanonical.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L21)
 
 ***
 
@@ -114,7 +114,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L18)
+[generated/cross\_decomposition/PLSCanonical.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L18)
 
 ***
 
@@ -124,7 +124,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L19)
+[generated/cross\_decomposition/PLSCanonical.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L19)
 
 ## Accessors
 
@@ -142,7 +142,7 @@ The coefficients of the linear model such that `Y` is approximated as `Y \= X @ 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L766)
+[generated/cross\_decomposition/PLSCanonical.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L766)
 
 ***
 
@@ -160,7 +160,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L862)
+[generated/cross\_decomposition/PLSCanonical.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L862)
 
 ***
 
@@ -178,7 +178,7 @@ The intercepts of the linear model such that `Y` is approximated as `Y \= X @ co
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L789)
+[generated/cross\_decomposition/PLSCanonical.ts:789](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L789)
 
 ***
 
@@ -196,7 +196,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L837)
+[generated/cross\_decomposition/PLSCanonical.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L837)
 
 ***
 
@@ -214,7 +214,7 @@ Number of iterations of the power method, for each component. Empty if `algorith
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L814)
+[generated/cross\_decomposition/PLSCanonical.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L814)
 
 ***
 
@@ -242,7 +242,7 @@ Number of iterations of the power method, for each component. Empty if `algorith
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L72)
+[generated/cross\_decomposition/PLSCanonical.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L72)
 
 ***
 
@@ -260,7 +260,7 @@ The loadings of `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L666)
+[generated/cross\_decomposition/PLSCanonical.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L666)
 
 ***
 
@@ -278,7 +278,7 @@ The projection matrix used to transform `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L716)
+[generated/cross\_decomposition/PLSCanonical.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L716)
 
 ***
 
@@ -296,7 +296,7 @@ The left singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L616)
+[generated/cross\_decomposition/PLSCanonical.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L616)
 
 ***
 
@@ -314,7 +314,7 @@ The loadings of `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L691)
+[generated/cross\_decomposition/PLSCanonical.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L691)
 
 ***
 
@@ -332,7 +332,7 @@ The projection matrix used to transform `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L741)
+[generated/cross\_decomposition/PLSCanonical.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L741)
 
 ***
 
@@ -350,7 +350,7 @@ The right singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L641)
+[generated/cross\_decomposition/PLSCanonical.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L641)
 
 ## Methods
 
@@ -368,7 +368,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L124)
+[generated/cross\_decomposition/PLSCanonical.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L124)
 
 ***
 
@@ -400,7 +400,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L141)
+[generated/cross\_decomposition/PLSCanonical.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L141)
 
 ***
 
@@ -428,7 +428,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L183)
+[generated/cross\_decomposition/PLSCanonical.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L183)
 
 ***
 
@@ -454,7 +454,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L222)
+[generated/cross\_decomposition/PLSCanonical.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L222)
 
 ***
 
@@ -480,7 +480,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L258)
+[generated/cross\_decomposition/PLSCanonical.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L258)
 
 ***
 
@@ -502,7 +502,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L85)
+[generated/cross\_decomposition/PLSCanonical.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L85)
 
 ***
 
@@ -534,7 +534,7 @@ New target, where `n\_samples` is the number of samples and `n\_components` is t
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L292)
+[generated/cross\_decomposition/PLSCanonical.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L292)
 
 ***
 
@@ -566,7 +566,7 @@ Samples.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L336)
+[generated/cross\_decomposition/PLSCanonical.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L336)
 
 ***
 
@@ -600,7 +600,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L377)
+[generated/cross\_decomposition/PLSCanonical.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L377)
 
 ***
 
@@ -626,7 +626,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L421)
+[generated/cross\_decomposition/PLSCanonical.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L421)
 
 ***
 
@@ -654,7 +654,7 @@ Metadata routing for `copy` parameter in `predict`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L457)
+[generated/cross\_decomposition/PLSCanonical.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L457)
 
 ***
 
@@ -682,7 +682,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L495)
+[generated/cross\_decomposition/PLSCanonical.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L495)
 
 ***
 
@@ -710,7 +710,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L533)
+[generated/cross\_decomposition/PLSCanonical.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L533)
 
 ***
 
@@ -750,4 +750,4 @@ Target vectors.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSCanonical.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L567)
+[generated/cross\_decomposition/PLSCanonical.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L567)

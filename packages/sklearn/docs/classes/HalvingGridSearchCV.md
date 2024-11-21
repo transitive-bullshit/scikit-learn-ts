@@ -120,7 +120,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L25)
+[generated/model\_selection/HalvingGridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L25)
 
 ## Properties
 
@@ -130,7 +130,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L23)
+[generated/model\_selection/HalvingGridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L23)
 
 ***
 
@@ -140,7 +140,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L22)
+[generated/model\_selection/HalvingGridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L22)
 
 ***
 
@@ -150,7 +150,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L21)
+[generated/model\_selection/HalvingGridSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L21)
 
 ***
 
@@ -160,7 +160,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L18)
+[generated/model\_selection/HalvingGridSearchCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L18)
 
 ***
 
@@ -170,7 +170,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L19)
+[generated/model\_selection/HalvingGridSearchCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L19)
 
 ## Accessors
 
@@ -188,7 +188,7 @@ Estimator that was chosen by the search, i.e. estimator which gave highest score
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L834)
+[generated/model\_selection/HalvingGridSearchCV.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L834)
 
 ***
 
@@ -208,7 +208,7 @@ The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:917](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L917)
+[generated/model\_selection/HalvingGridSearchCV.ts:917](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L917)
 
 ***
 
@@ -226,7 +226,7 @@ Parameter setting that gave the best results on the hold out data.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L888)
+[generated/model\_selection/HalvingGridSearchCV.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L888)
 
 ***
 
@@ -244,7 +244,7 @@ Mean cross-validated score of the best\_estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L861)
+[generated/model\_selection/HalvingGridSearchCV.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L861)
 
 ***
 
@@ -262,7 +262,7 @@ A dict with keys as column headers and values as columns, that can be imported i
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L807)
+[generated/model\_selection/HalvingGridSearchCV.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L807)
 
 ***
 
@@ -280,7 +280,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Only defined 
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:1054](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1054)
+[generated/model\_selection/HalvingGridSearchCV.ts:1054](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1054)
 
 ***
 
@@ -298,7 +298,7 @@ The maximum number of resources that any candidate is allowed to use for a given
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L672)
+[generated/model\_selection/HalvingGridSearchCV.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L672)
 
 ***
 
@@ -316,7 +316,7 @@ The amount of resources that are allocated for each candidate at the first itera
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L699)
+[generated/model\_selection/HalvingGridSearchCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L699)
 
 ***
 
@@ -334,7 +334,7 @@ Whether or not the scorers compute several metrics.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:1027](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1027)
+[generated/model\_selection/HalvingGridSearchCV.ts:1027](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1027)
 
 ***
 
@@ -352,7 +352,7 @@ The number of candidate parameters that were evaluated at each iteration.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L618)
+[generated/model\_selection/HalvingGridSearchCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L618)
 
 ***
 
@@ -370,7 +370,7 @@ The actual number of iterations that were run. This is equal to `n\_required\_it
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L726)
+[generated/model\_selection/HalvingGridSearchCV.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L726)
 
 ***
 
@@ -388,7 +388,7 @@ The number of iterations that are possible starting with `min\_resources\_` reso
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L753)
+[generated/model\_selection/HalvingGridSearchCV.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L753)
 
 ***
 
@@ -406,7 +406,7 @@ The number of candidate parameters that are left after the last iteration. It co
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L645)
+[generated/model\_selection/HalvingGridSearchCV.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L645)
 
 ***
 
@@ -424,7 +424,7 @@ The number of iterations that are required to end up with less than `factor` can
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L780)
+[generated/model\_selection/HalvingGridSearchCV.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L780)
 
 ***
 
@@ -442,7 +442,7 @@ The amount of resources used at each iteration.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L591)
+[generated/model\_selection/HalvingGridSearchCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L591)
 
 ***
 
@@ -460,7 +460,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:971](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L971)
+[generated/model\_selection/HalvingGridSearchCV.ts:971](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L971)
 
 ***
 
@@ -488,7 +488,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L123)
+[generated/model\_selection/HalvingGridSearchCV.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L123)
 
 ***
 
@@ -508,7 +508,7 @@ This is present only if `refit` is not `false`.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:1000](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1000)
+[generated/model\_selection/HalvingGridSearchCV.ts:1000](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1000)
 
 ***
 
@@ -526,7 +526,7 @@ Scorer function used on the held out data to choose the best parameters for the 
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:944](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L944)
+[generated/model\_selection/HalvingGridSearchCV.ts:944](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L944)
 
 ## Methods
 
@@ -552,7 +552,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L198)
+[generated/model\_selection/HalvingGridSearchCV.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L198)
 
 ***
 
@@ -570,7 +570,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L179)
+[generated/model\_selection/HalvingGridSearchCV.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L179)
 
 ***
 
@@ -602,7 +602,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L234)
+[generated/model\_selection/HalvingGridSearchCV.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L234)
 
 ***
 
@@ -628,7 +628,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L280)
+[generated/model\_selection/HalvingGridSearchCV.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L280)
 
 ***
 
@@ -650,7 +650,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L136)
+[generated/model\_selection/HalvingGridSearchCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L136)
 
 ***
 
@@ -680,7 +680,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L318)
+[generated/model\_selection/HalvingGridSearchCV.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L318)
 
 ***
 
@@ -706,7 +706,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L361)
+[generated/model\_selection/HalvingGridSearchCV.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L361)
 
 ***
 
@@ -732,7 +732,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L397)
+[generated/model\_selection/HalvingGridSearchCV.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L397)
 
 ***
 
@@ -758,7 +758,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L435)
+[generated/model\_selection/HalvingGridSearchCV.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L435)
 
 ***
 
@@ -792,7 +792,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L473)
+[generated/model\_selection/HalvingGridSearchCV.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L473)
 
 ***
 
@@ -818,7 +818,7 @@ Data to predict on. Must fulfill input requirements of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L519)
+[generated/model\_selection/HalvingGridSearchCV.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L519)
 
 ***
 
@@ -844,4 +844,4 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingGridSearchCV.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L557)
+[generated/model\_selection/HalvingGridSearchCV.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L557)

@@ -68,7 +68,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L27)
+[generated/cross\_decomposition/PLSRegression.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L27)
 
 ## Properties
 
@@ -78,7 +78,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L25)
+[generated/cross\_decomposition/PLSRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L25)
 
 ***
 
@@ -88,7 +88,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L24)
+[generated/cross\_decomposition/PLSRegression.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L24)
 
 ***
 
@@ -98,7 +98,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L23)
+[generated/cross\_decomposition/PLSRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L23)
 
 ***
 
@@ -108,7 +108,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L20)
+[generated/cross\_decomposition/PLSRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L20)
 
 ***
 
@@ -118,7 +118,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L21)
+[generated/cross\_decomposition/PLSRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L21)
 
 ## Accessors
 
@@ -136,7 +136,7 @@ The coefficients of the linear model such that `Y` is approximated as `Y \= X @ 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:811](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L811)
+[generated/cross\_decomposition/PLSRegression.ts:811](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L811)
 
 ***
 
@@ -154,7 +154,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:907](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L907)
+[generated/cross\_decomposition/PLSRegression.ts:907](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L907)
 
 ***
 
@@ -172,7 +172,7 @@ The intercepts of the linear model such that `Y` is approximated as `Y \= X @ co
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L834)
+[generated/cross\_decomposition/PLSRegression.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L834)
 
 ***
 
@@ -190,7 +190,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:882](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L882)
+[generated/cross\_decomposition/PLSRegression.ts:882](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L882)
 
 ***
 
@@ -208,7 +208,7 @@ Number of iterations of the power method, for each component.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:859](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L859)
+[generated/cross\_decomposition/PLSRegression.ts:859](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L859)
 
 ***
 
@@ -236,7 +236,7 @@ Number of iterations of the power method, for each component.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L67)
+[generated/cross\_decomposition/PLSRegression.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L67)
 
 ***
 
@@ -254,7 +254,7 @@ The loadings of `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L661)
+[generated/cross\_decomposition/PLSRegression.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L661)
 
 ***
 
@@ -272,7 +272,7 @@ The projection matrix used to transform `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L761)
+[generated/cross\_decomposition/PLSRegression.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L761)
 
 ***
 
@@ -290,7 +290,7 @@ The transformed training samples.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L711)
+[generated/cross\_decomposition/PLSRegression.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L711)
 
 ***
 
@@ -308,7 +308,7 @@ The left singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L611)
+[generated/cross\_decomposition/PLSRegression.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L611)
 
 ***
 
@@ -326,7 +326,7 @@ The loadings of `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L686)
+[generated/cross\_decomposition/PLSRegression.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L686)
 
 ***
 
@@ -344,7 +344,7 @@ The projection matrix used to transform `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L786)
+[generated/cross\_decomposition/PLSRegression.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L786)
 
 ***
 
@@ -362,7 +362,7 @@ The transformed training targets.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L736)
+[generated/cross\_decomposition/PLSRegression.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L736)
 
 ***
 
@@ -380,7 +380,7 @@ The right singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L636)
+[generated/cross\_decomposition/PLSRegression.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L636)
 
 ## Methods
 
@@ -398,7 +398,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L119)
+[generated/cross\_decomposition/PLSRegression.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L119)
 
 ***
 
@@ -430,7 +430,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L136)
+[generated/cross\_decomposition/PLSRegression.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L136)
 
 ***
 
@@ -458,7 +458,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L178)
+[generated/cross\_decomposition/PLSRegression.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L178)
 
 ***
 
@@ -484,7 +484,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L217)
+[generated/cross\_decomposition/PLSRegression.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L217)
 
 ***
 
@@ -510,7 +510,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L253)
+[generated/cross\_decomposition/PLSRegression.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L253)
 
 ***
 
@@ -532,7 +532,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L80)
+[generated/cross\_decomposition/PLSRegression.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L80)
 
 ***
 
@@ -564,7 +564,7 @@ New target, where `n\_samples` is the number of samples and `n\_components` is t
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L287)
+[generated/cross\_decomposition/PLSRegression.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L287)
 
 ***
 
@@ -596,7 +596,7 @@ Samples.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L331)
+[generated/cross\_decomposition/PLSRegression.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L331)
 
 ***
 
@@ -630,7 +630,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L372)
+[generated/cross\_decomposition/PLSRegression.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L372)
 
 ***
 
@@ -656,7 +656,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L416)
+[generated/cross\_decomposition/PLSRegression.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L416)
 
 ***
 
@@ -684,7 +684,7 @@ Metadata routing for `copy` parameter in `predict`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L452)
+[generated/cross\_decomposition/PLSRegression.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L452)
 
 ***
 
@@ -712,7 +712,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L490)
+[generated/cross\_decomposition/PLSRegression.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L490)
 
 ***
 
@@ -740,7 +740,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L528)
+[generated/cross\_decomposition/PLSRegression.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L528)
 
 ***
 
@@ -780,4 +780,4 @@ Target vectors.
 
 #### Defined in
 
-[generated/cross\_decomposition/PLSRegression.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L562)
+[generated/cross\_decomposition/PLSRegression.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L562)

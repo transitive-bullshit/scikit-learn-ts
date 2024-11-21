@@ -6,4 +6,4 @@
 
 ## Defined in
 
-[types.ts:3](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/types.ts#L3)
+[types.ts:3](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/types.ts#L3)

@@ -48,7 +48,7 @@ Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L23)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L23)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L21)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L21)
 
 ***
 
@@ -68,7 +68,7 @@ Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L20)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L20)
 
 ***
 
@@ -78,7 +78,7 @@ Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L19)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L19)
 
 ***
 
@@ -88,7 +88,7 @@ Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L16)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L16)
 
 ***
 
@@ -98,7 +98,7 @@ Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L17)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L17)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Parameter vector (w in the formula).
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L326)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L326)
 
 ***
 
@@ -134,7 +134,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L461)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L461)
 
 ***
 
@@ -152,7 +152,7 @@ Independent term in decision function.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L353)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L353)
 
 ***
 
@@ -170,7 +170,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L434)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L434)
 
 ***
 
@@ -188,7 +188,7 @@ Number of active features across every target.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L380)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L380)
 
 ***
 
@@ -206,7 +206,7 @@ The number of non-zero coefficients in the solution or `undefined` when `tol` is
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L407)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L407)
 
 ***
 
@@ -234,7 +234,7 @@ The number of non-zero coefficients in the solution or `undefined` when `tol` is
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L52)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L52)
 
 ## Methods
 
@@ -252,7 +252,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L108)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L108)
 
 ***
 
@@ -280,7 +280,7 @@ Target values. Will be cast to X’s dtype if necessary.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L125)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L125)
 
 ***
 
@@ -306,7 +306,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L166)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L166)
 
 ***
 
@@ -328,7 +328,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L65)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L65)
 
 ***
 
@@ -352,7 +352,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L202)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L202)
 
 ***
 
@@ -386,7 +386,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L240)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L240)
 
 ***
 
@@ -414,4 +414,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/OrthogonalMatchingPursuit.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L290)
+[generated/linear\_model/OrthogonalMatchingPursuit.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L290)

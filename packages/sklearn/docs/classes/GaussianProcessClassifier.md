@@ -90,7 +90,7 @@ If warm-starts are enabled, the solution of the last Newton iteration on the Lap
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L29)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L29)
 
 ## Properties
 
@@ -100,7 +100,7 @@ If warm-starts are enabled, the solution of the last Newton iteration on the Lap
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L27)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L27)
 
 ***
 
@@ -110,7 +110,7 @@ If warm-starts are enabled, the solution of the last Newton iteration on the Lap
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L26)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L26)
 
 ***
 
@@ -120,7 +120,7 @@ If warm-starts are enabled, the solution of the last Newton iteration on the Lap
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L25)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L25)
 
 ***
 
@@ -130,7 +130,7 @@ If warm-starts are enabled, the solution of the last Newton iteration on the Lap
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L22)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L22)
 
 ***
 
@@ -140,7 +140,7 @@ If warm-starts are enabled, the solution of the last Newton iteration on the Lap
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L23)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L23)
 
 ## Accessors
 
@@ -158,7 +158,7 @@ The estimator instance that defines the likelihood function using the observed d
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L453)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L453)
 
 ***
 
@@ -176,7 +176,7 @@ Unique class labels.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L507)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L507)
 
 ***
 
@@ -194,7 +194,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L588)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L588)
 
 ***
 
@@ -212,7 +212,7 @@ The log-marginal-likelihood of `self.kernel\_.theta`
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L480)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L480)
 
 ***
 
@@ -230,7 +230,7 @@ The number of classes in the training data
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L534)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L534)
 
 ***
 
@@ -248,7 +248,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L561)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L561)
 
 ***
 
@@ -276,7 +276,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L91)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L91)
 
 ## Methods
 
@@ -294,7 +294,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L147)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L147)
 
 ***
 
@@ -322,7 +322,7 @@ Target values, must be binary.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L164)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L164)
 
 ***
 
@@ -348,7 +348,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L205)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L205)
 
 ***
 
@@ -370,7 +370,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L104)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L104)
 
 ***
 
@@ -412,7 +412,7 @@ Kernel hyperparameters for which the log-marginal likelihood is evaluated. In th
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L243)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L243)
 
 ***
 
@@ -436,7 +436,7 @@ Query points where the GP is evaluated for classification.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L293)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L293)
 
 ***
 
@@ -460,7 +460,7 @@ Query points where the GP is evaluated for classification.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L329)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L329)
 
 ***
 
@@ -494,7 +494,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L367)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L367)
 
 ***
 
@@ -522,4 +522,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/gaussian\_process/GaussianProcessClassifier.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L417)
+[generated/gaussian\_process/GaussianProcessClassifier.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L417)

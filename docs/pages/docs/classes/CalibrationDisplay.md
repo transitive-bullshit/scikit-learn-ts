@@ -48,7 +48,7 @@ Probability estimates for the positive class, for each sample.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L27)
+[generated/calibration/CalibrationDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L27)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Probability estimates for the positive class, for each sample.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L25)
+[generated/calibration/CalibrationDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L25)
 
 ***
 
@@ -68,7 +68,7 @@ Probability estimates for the positive class, for each sample.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L24)
+[generated/calibration/CalibrationDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L24)
 
 ***
 
@@ -78,7 +78,7 @@ Probability estimates for the positive class, for each sample.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L23)
+[generated/calibration/CalibrationDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L23)
 
 ***
 
@@ -88,7 +88,7 @@ Probability estimates for the positive class, for each sample.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L20)
+[generated/calibration/CalibrationDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L20)
 
 ***
 
@@ -98,7 +98,7 @@ Probability estimates for the positive class, for each sample.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L21)
+[generated/calibration/CalibrationDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L21)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Axes with calibration curve.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L391)
+[generated/calibration/CalibrationDisplay.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L391)
 
 ***
 
@@ -134,7 +134,7 @@ Figure containing the curve.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L418)
+[generated/calibration/CalibrationDisplay.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L418)
 
 ***
 
@@ -152,7 +152,7 @@ Calibration curve.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L364)
+[generated/calibration/CalibrationDisplay.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L364)
 
 ***
 
@@ -180,7 +180,7 @@ Calibration curve.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L57)
+[generated/calibration/CalibrationDisplay.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L57)
 
 ## Methods
 
@@ -198,7 +198,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L113)
+[generated/calibration/CalibrationDisplay.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L113)
 
 ***
 
@@ -276,7 +276,7 @@ Binary target values.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L136)
+[generated/calibration/CalibrationDisplay.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L136)
 
 ***
 
@@ -350,7 +350,7 @@ True labels.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L229)
+[generated/calibration/CalibrationDisplay.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L229)
 
 ***
 
@@ -372,7 +372,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L70)
+[generated/calibration/CalibrationDisplay.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L70)
 
 ***
 
@@ -414,4 +414,4 @@ If `true`, plots a reference line representing a perfectly calibrated classifier
 
 #### Defined in
 
-[generated/calibration/CalibrationDisplay.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L313)
+[generated/calibration/CalibrationDisplay.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L313)

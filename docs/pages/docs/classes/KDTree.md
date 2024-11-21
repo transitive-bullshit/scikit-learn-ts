@@ -44,7 +44,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L23)
+[generated/neighbors/KDTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L23)
 
 ## Properties
 
@@ -54,7 +54,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L21)
+[generated/neighbors/KDTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L21)
 
 ***
 
@@ -64,7 +64,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L20)
+[generated/neighbors/KDTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L20)
 
 ***
 
@@ -74,7 +74,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L19)
+[generated/neighbors/KDTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L19)
 
 ***
 
@@ -84,7 +84,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L16)
+[generated/neighbors/KDTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L16)
 
 ***
 
@@ -94,7 +94,7 @@ n\_samples is the number of points in the data set, and n\_features is the dimen
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L17)
+[generated/neighbors/KDTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L17)
 
 ## Accessors
 
@@ -112,7 +112,7 @@ The training data
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L460)
+[generated/neighbors/KDTree.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L460)
 
 ***
 
@@ -140,7 +140,7 @@ The training data
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L47)
+[generated/neighbors/KDTree.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L47)
 
 ## Methods
 
@@ -158,7 +158,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L98)
+[generated/neighbors/KDTree.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L98)
 
 ***
 
@@ -178,7 +178,7 @@ Get data and node arrays.
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L115)
+[generated/neighbors/KDTree.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L115)
 
 ***
 
@@ -198,7 +198,7 @@ Get number of calls.
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L141)
+[generated/neighbors/KDTree.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L141)
 
 ***
 
@@ -218,7 +218,7 @@ Get tree status.
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L167)
+[generated/neighbors/KDTree.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L167)
 
 ***
 
@@ -240,7 +240,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L60)
+[generated/neighbors/KDTree.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L60)
 
 ***
 
@@ -308,7 +308,7 @@ An array of points to query. Last dimension should match dimension of training d
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L193)
+[generated/neighbors/KDTree.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L193)
 
 ***
 
@@ -372,7 +372,7 @@ An array of points to query
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L265)
+[generated/neighbors/KDTree.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L265)
 
 ***
 
@@ -424,7 +424,7 @@ An array of points to query
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L332)
+[generated/neighbors/KDTree.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L332)
 
 ***
 
@@ -444,7 +444,7 @@ Reset number of calls to 0.
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L390)
+[generated/neighbors/KDTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L390)
 
 ***
 
@@ -480,4 +480,4 @@ An array of points to query. Last dimension should match dimension of training d
 
 #### Defined in
 
-[generated/neighbors/KDTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KDTree.ts#L416)
+[generated/neighbors/KDTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KDTree.ts#L416)

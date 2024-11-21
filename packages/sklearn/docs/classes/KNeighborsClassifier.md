@@ -84,7 +84,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L23)
+[generated/neighbors/KNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L23)
 
 ## Properties
 
@@ -94,7 +94,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L21)
+[generated/neighbors/KNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L21)
 
 ***
 
@@ -104,7 +104,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L20)
+[generated/neighbors/KNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L20)
 
 ***
 
@@ -114,7 +114,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L19)
+[generated/neighbors/KNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L19)
 
 ***
 
@@ -124,7 +124,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L16)
+[generated/neighbors/KNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L16)
 
 ***
 
@@ -134,7 +134,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L17)
+[generated/neighbors/KNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L17)
 
 ## Accessors
 
@@ -152,7 +152,7 @@ Class labels known to the classifier
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L488)
+[generated/neighbors/KNeighborsClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L488)
 
 ***
 
@@ -170,7 +170,7 @@ The distance metric used. It will be same as the `metric` parameter or a synonym
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L515)
+[generated/neighbors/KNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L515)
 
 ***
 
@@ -188,7 +188,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L542)
+[generated/neighbors/KNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L542)
 
 ***
 
@@ -206,7 +206,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L596)
+[generated/neighbors/KNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L596)
 
 ***
 
@@ -224,7 +224,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L569)
+[generated/neighbors/KNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L569)
 
 ***
 
@@ -242,7 +242,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L623)
+[generated/neighbors/KNeighborsClassifier.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L623)
 
 ***
 
@@ -260,7 +260,7 @@ False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwi
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L650)
+[generated/neighbors/KNeighborsClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L650)
 
 ***
 
@@ -288,7 +288,7 @@ False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwi
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L84)
+[generated/neighbors/KNeighborsClassifier.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L84)
 
 ## Methods
 
@@ -306,7 +306,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L140)
+[generated/neighbors/KNeighborsClassifier.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L140)
 
 ***
 
@@ -334,7 +334,7 @@ Target values.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L157)
+[generated/neighbors/KNeighborsClassifier.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L157)
 
 ***
 
@@ -360,7 +360,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L198)
+[generated/neighbors/KNeighborsClassifier.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L198)
 
 ***
 
@@ -382,7 +382,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L97)
+[generated/neighbors/KNeighborsClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L97)
 
 ***
 
@@ -420,7 +420,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L236)
+[generated/neighbors/KNeighborsClassifier.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L236)
 
 ***
 
@@ -456,7 +456,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L284)
+[generated/neighbors/KNeighborsClassifier.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L284)
 
 ***
 
@@ -480,7 +480,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L332)
+[generated/neighbors/KNeighborsClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L332)
 
 ***
 
@@ -504,7 +504,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L366)
+[generated/neighbors/KNeighborsClassifier.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L366)
 
 ***
 
@@ -538,7 +538,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L404)
+[generated/neighbors/KNeighborsClassifier.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L404)
 
 ***
 
@@ -566,4 +566,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsClassifier.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L452)
+[generated/neighbors/KNeighborsClassifier.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L452)

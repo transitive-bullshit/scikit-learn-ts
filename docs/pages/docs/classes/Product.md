@@ -30,7 +30,7 @@ The second base-kernel of the product-kernel
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L21)
+[generated/gaussian\_process/kernels/Product.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L21)
 
 ## Properties
 
@@ -40,7 +40,7 @@ The second base-kernel of the product-kernel
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L19)
+[generated/gaussian\_process/kernels/Product.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L19)
 
 ***
 
@@ -50,7 +50,7 @@ The second base-kernel of the product-kernel
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L18)
+[generated/gaussian\_process/kernels/Product.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L18)
 
 ***
 
@@ -60,7 +60,7 @@ The second base-kernel of the product-kernel
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L17)
+[generated/gaussian\_process/kernels/Product.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L17)
 
 ***
 
@@ -70,7 +70,7 @@ The second base-kernel of the product-kernel
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L14)
+[generated/gaussian\_process/kernels/Product.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L14)
 
 ***
 
@@ -80,7 +80,7 @@ The second base-kernel of the product-kernel
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L15)
+[generated/gaussian\_process/kernels/Product.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L15)
 
 ## Accessors
 
@@ -108,7 +108,7 @@ The second base-kernel of the product-kernel
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L36)
+[generated/gaussian\_process/kernels/Product.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L36)
 
 ## Methods
 
@@ -144,7 +144,7 @@ Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evalua
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L104)
+[generated/gaussian\_process/kernels/Product.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L104)
 
 ***
 
@@ -168,7 +168,7 @@ The hyperparameters
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L148)
+[generated/gaussian\_process/kernels/Product.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L148)
 
 ***
 
@@ -194,7 +194,7 @@ Argument to the kernel.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L182)
+[generated/gaussian\_process/kernels/Product.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L182)
 
 ***
 
@@ -212,7 +212,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L87)
+[generated/gaussian\_process/kernels/Product.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L87)
 
 ***
 
@@ -234,7 +234,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L49)
+[generated/gaussian\_process/kernels/Product.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L49)
 
 ***
 
@@ -254,4 +254,4 @@ Returns whether the kernel is stationary.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Product.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L214)
+[generated/gaussian\_process/kernels/Product.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L214)

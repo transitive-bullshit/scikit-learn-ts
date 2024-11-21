@@ -62,7 +62,7 @@ Whether or not a second normalization of the weights is performed. The default b
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L25)
+[generated/naive\_bayes/ComplementNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L25)
 
 ## Properties
 
@@ -72,7 +72,7 @@ Whether or not a second normalization of the weights is performed. The default b
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L23)
+[generated/naive\_bayes/ComplementNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L23)
 
 ***
 
@@ -82,7 +82,7 @@ Whether or not a second normalization of the weights is performed. The default b
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L22)
+[generated/naive\_bayes/ComplementNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L22)
 
 ***
 
@@ -92,7 +92,7 @@ Whether or not a second normalization of the weights is performed. The default b
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L21)
+[generated/naive\_bayes/ComplementNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L21)
 
 ***
 
@@ -102,7 +102,7 @@ Whether or not a second normalization of the weights is performed. The default b
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L18)
+[generated/naive\_bayes/ComplementNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L18)
 
 ***
 
@@ -112,7 +112,7 @@ Whether or not a second normalization of the weights is performed. The default b
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L19)
+[generated/naive\_bayes/ComplementNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L19)
 
 ## Accessors
 
@@ -130,7 +130,7 @@ Number of samples encountered for each class during fitting. This value is weigh
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L560)
+[generated/naive\_bayes/ComplementNB.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L560)
 
 ***
 
@@ -148,7 +148,7 @@ Smoothed empirical log probability for each class. Only used in edge case with a
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L585)
+[generated/naive\_bayes/ComplementNB.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L585)
 
 ***
 
@@ -166,7 +166,7 @@ Class labels known to the classifier
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L610)
+[generated/naive\_bayes/ComplementNB.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L610)
 
 ***
 
@@ -184,7 +184,7 @@ Number of samples encountered for each feature during fitting. This value is wei
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L633)
+[generated/naive\_bayes/ComplementNB.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L633)
 
 ***
 
@@ -202,7 +202,7 @@ Number of samples encountered for each (class, feature) during fitting. This val
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L658)
+[generated/naive\_bayes/ComplementNB.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L658)
 
 ***
 
@@ -220,7 +220,7 @@ Empirical weights for class complements.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L683)
+[generated/naive\_bayes/ComplementNB.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L683)
 
 ***
 
@@ -238,7 +238,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L733)
+[generated/naive\_bayes/ComplementNB.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L733)
 
 ***
 
@@ -256,7 +256,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L708)
+[generated/naive\_bayes/ComplementNB.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L708)
 
 ***
 
@@ -284,7 +284,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L63)
+[generated/naive\_bayes/ComplementNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L63)
 
 ## Methods
 
@@ -302,7 +302,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L115)
+[generated/naive\_bayes/ComplementNB.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L115)
 
 ***
 
@@ -334,7 +334,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L132)
+[generated/naive\_bayes/ComplementNB.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L132)
 
 ***
 
@@ -360,7 +360,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L176)
+[generated/naive\_bayes/ComplementNB.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L176)
 
 ***
 
@@ -382,7 +382,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L76)
+[generated/naive\_bayes/ComplementNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L76)
 
 ***
 
@@ -426,7 +426,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L216)
+[generated/naive\_bayes/ComplementNB.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L216)
 
 ***
 
@@ -450,7 +450,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L265)
+[generated/naive\_bayes/ComplementNB.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L265)
 
 ***
 
@@ -476,7 +476,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L299)
+[generated/naive\_bayes/ComplementNB.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L299)
 
 ***
 
@@ -500,7 +500,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L333)
+[generated/naive\_bayes/ComplementNB.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L333)
 
 ***
 
@@ -524,7 +524,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L367)
+[generated/naive\_bayes/ComplementNB.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L367)
 
 ***
 
@@ -558,7 +558,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L401)
+[generated/naive\_bayes/ComplementNB.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L401)
 
 ***
 
@@ -586,7 +586,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L447)
+[generated/naive\_bayes/ComplementNB.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L447)
 
 ***
 
@@ -618,7 +618,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L483)
+[generated/naive\_bayes/ComplementNB.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L483)
 
 ***
 
@@ -646,4 +646,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/naive\_bayes/ComplementNB.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L526)
+[generated/naive\_bayes/ComplementNB.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L526)

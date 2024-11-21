@@ -64,7 +64,7 @@ When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this par
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L25)
+[generated/preprocessing/OrdinalEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L25)
 
 ## Properties
 
@@ -74,7 +74,7 @@ When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this par
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L23)
+[generated/preprocessing/OrdinalEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L23)
 
 ***
 
@@ -84,7 +84,7 @@ When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this par
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L22)
+[generated/preprocessing/OrdinalEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L22)
 
 ***
 
@@ -94,7 +94,7 @@ When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this par
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L21)
+[generated/preprocessing/OrdinalEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L21)
 
 ***
 
@@ -104,7 +104,7 @@ When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this par
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L18)
+[generated/preprocessing/OrdinalEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L18)
 
 ***
 
@@ -114,7 +114,7 @@ When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this par
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L19)
+[generated/preprocessing/OrdinalEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L19)
 
 ## Accessors
 
@@ -132,7 +132,7 @@ The categories of each feature determined during `fit` (in order of the features
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L391)
+[generated/preprocessing/OrdinalEncoder.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L391)
 
 ***
 
@@ -150,7 +150,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L441)
+[generated/preprocessing/OrdinalEncoder.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L441)
 
 ***
 
@@ -168,7 +168,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L416)
+[generated/preprocessing/OrdinalEncoder.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L416)
 
 ***
 
@@ -196,7 +196,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L71)
+[generated/preprocessing/OrdinalEncoder.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L71)
 
 ## Methods
 
@@ -214,7 +214,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L123)
+[generated/preprocessing/OrdinalEncoder.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L123)
 
 ***
 
@@ -242,7 +242,7 @@ Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L140)
+[generated/preprocessing/OrdinalEncoder.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L140)
 
 ***
 
@@ -276,7 +276,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L179)
+[generated/preprocessing/OrdinalEncoder.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L179)
 
 ***
 
@@ -300,7 +300,7 @@ Input features.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L221)
+[generated/preprocessing/OrdinalEncoder.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L221)
 
 ***
 
@@ -326,7 +326,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L257)
+[generated/preprocessing/OrdinalEncoder.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L257)
 
 ***
 
@@ -348,7 +348,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L84)
+[generated/preprocessing/OrdinalEncoder.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L84)
 
 ***
 
@@ -372,7 +372,7 @@ The transformed data.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L291)
+[generated/preprocessing/OrdinalEncoder.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L291)
 
 ***
 
@@ -398,7 +398,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L327)
+[generated/preprocessing/OrdinalEncoder.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L327)
 
 ***
 
@@ -422,4 +422,4 @@ The data to encode.
 
 #### Defined in
 
-[generated/preprocessing/OrdinalEncoder.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L359)
+[generated/preprocessing/OrdinalEncoder.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L359)

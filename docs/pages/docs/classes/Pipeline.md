@@ -48,7 +48,7 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L31)
+[generated/pipeline/Pipeline.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L31)
 
 ## Properties
 
@@ -58,7 +58,7 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L29)
+[generated/pipeline/Pipeline.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L29)
 
 ***
 
@@ -68,7 +68,7 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L28)
+[generated/pipeline/Pipeline.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L28)
 
 ***
 
@@ -78,7 +78,7 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L27)
+[generated/pipeline/Pipeline.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L27)
 
 ***
 
@@ -88,7 +88,7 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L24)
+[generated/pipeline/Pipeline.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L24)
 
 ***
 
@@ -98,7 +98,7 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L25)
+[generated/pipeline/Pipeline.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L25)
 
 ## Accessors
 
@@ -126,7 +126,7 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L53)
+[generated/pipeline/Pipeline.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L53)
 
 ## Methods
 
@@ -156,7 +156,7 @@ Data to predict on. Must fulfill input requirements of first step of the pipelin
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L123)
+[generated/pipeline/Pipeline.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L123)
 
 ***
 
@@ -174,7 +174,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L104)
+[generated/pipeline/Pipeline.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L104)
 
 ***
 
@@ -208,7 +208,7 @@ Training targets. Must fulfill label requirements for all steps of the pipeline.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L162)
+[generated/pipeline/Pipeline.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L162)
 
 ***
 
@@ -242,7 +242,7 @@ Training targets. Must fulfill label requirements for all steps of the pipeline.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L206)
+[generated/pipeline/Pipeline.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L206)
 
 ***
 
@@ -276,7 +276,7 @@ Training targets. Must fulfill label requirements for all steps of the pipeline.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L250)
+[generated/pipeline/Pipeline.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L250)
 
 ***
 
@@ -302,7 +302,7 @@ Input features.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L294)
+[generated/pipeline/Pipeline.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L294)
 
 ***
 
@@ -328,7 +328,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L330)
+[generated/pipeline/Pipeline.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L330)
 
 ***
 
@@ -350,7 +350,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L66)
+[generated/pipeline/Pipeline.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L66)
 
 ***
 
@@ -384,7 +384,7 @@ Data samples, where `n\_samples` is the number of samples and `n\_features` is t
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L364)
+[generated/pipeline/Pipeline.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L364)
 
 ***
 
@@ -414,7 +414,7 @@ Data to predict on. Must fulfill input requirements of first step of the pipelin
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L408)
+[generated/pipeline/Pipeline.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L408)
 
 ***
 
@@ -444,7 +444,7 @@ Data to predict on. Must fulfill input requirements of first step of the pipelin
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L447)
+[generated/pipeline/Pipeline.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L447)
 
 ***
 
@@ -474,7 +474,7 @@ Data to predict on. Must fulfill input requirements of first step of the pipelin
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L486)
+[generated/pipeline/Pipeline.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L486)
 
 ***
 
@@ -512,7 +512,7 @@ Targets used for scoring. Must fulfill label requirements for all steps of the p
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L525)
+[generated/pipeline/Pipeline.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L525)
 
 ***
 
@@ -538,7 +538,7 @@ Data to predict on. Must fulfill input requirements of first step of the pipelin
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L574)
+[generated/pipeline/Pipeline.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L574)
 
 ***
 
@@ -564,7 +564,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L608)
+[generated/pipeline/Pipeline.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L608)
 
 ***
 
@@ -592,7 +592,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:644](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L644)
+[generated/pipeline/Pipeline.ts:644](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L644)
 
 ***
 
@@ -624,4 +624,4 @@ Data to transform. Must fulfill input requirements of first step of the pipeline
 
 #### Defined in
 
-[generated/pipeline/Pipeline.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/Pipeline.ts#L680)
+[generated/pipeline/Pipeline.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/pipeline/Pipeline.ts#L680)

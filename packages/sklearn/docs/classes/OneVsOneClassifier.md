@@ -36,7 +36,7 @@ The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L25)
+[generated/multiclass/OneVsOneClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L25)
 
 ## Properties
 
@@ -46,7 +46,7 @@ The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L23)
+[generated/multiclass/OneVsOneClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L23)
 
 ***
 
@@ -56,7 +56,7 @@ The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L22)
+[generated/multiclass/OneVsOneClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L22)
 
 ***
 
@@ -66,7 +66,7 @@ The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L21)
+[generated/multiclass/OneVsOneClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L21)
 
 ***
 
@@ -76,7 +76,7 @@ The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L18)
+[generated/multiclass/OneVsOneClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L18)
 
 ***
 
@@ -86,7 +86,7 @@ The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L19)
+[generated/multiclass/OneVsOneClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L19)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ Array containing labels.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L477)
+[generated/multiclass/OneVsOneClassifier.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L477)
 
 ***
 
@@ -122,7 +122,7 @@ Estimators used for predictions.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L450)
+[generated/multiclass/OneVsOneClassifier.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L450)
 
 ***
 
@@ -140,7 +140,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L558)
+[generated/multiclass/OneVsOneClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L558)
 
 ***
 
@@ -158,7 +158,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L531)
+[generated/multiclass/OneVsOneClassifier.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L531)
 
 ***
 
@@ -176,7 +176,7 @@ Indices of samples used when training the estimators. `undefined` when `estimato
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L504)
+[generated/multiclass/OneVsOneClassifier.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L504)
 
 ***
 
@@ -204,7 +204,7 @@ Indices of samples used when training the estimators. `undefined` when `estimato
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L42)
+[generated/multiclass/OneVsOneClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L42)
 
 ## Methods
 
@@ -230,7 +230,7 @@ Input data.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L117)
+[generated/multiclass/OneVsOneClassifier.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L117)
 
 ***
 
@@ -248,7 +248,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L98)
+[generated/multiclass/OneVsOneClassifier.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L98)
 
 ***
 
@@ -280,7 +280,7 @@ Multi-class targets.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L153)
+[generated/multiclass/OneVsOneClassifier.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L153)
 
 ***
 
@@ -306,7 +306,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L199)
+[generated/multiclass/OneVsOneClassifier.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L199)
 
 ***
 
@@ -328,7 +328,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L55)
+[generated/multiclass/OneVsOneClassifier.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L55)
 
 ***
 
@@ -366,7 +366,7 @@ Multi-class targets.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L237)
+[generated/multiclass/OneVsOneClassifier.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L237)
 
 ***
 
@@ -392,7 +392,7 @@ Data.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L290)
+[generated/multiclass/OneVsOneClassifier.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L290)
 
 ***
 
@@ -426,7 +426,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L326)
+[generated/multiclass/OneVsOneClassifier.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L326)
 
 ***
 
@@ -454,7 +454,7 @@ Metadata routing for `classes` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L374)
+[generated/multiclass/OneVsOneClassifier.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L374)
 
 ***
 
@@ -482,4 +482,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/multiclass/OneVsOneClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L414)
+[generated/multiclass/OneVsOneClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L414)

@@ -42,7 +42,7 @@ Numbers of training examples that has been used to generate the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L25)
+[generated/model\_selection/LearningCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L25)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Numbers of training examples that has been used to generate the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L23)
+[generated/model\_selection/LearningCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L23)
 
 ***
 
@@ -62,7 +62,7 @@ Numbers of training examples that has been used to generate the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L22)
+[generated/model\_selection/LearningCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L22)
 
 ***
 
@@ -72,7 +72,7 @@ Numbers of training examples that has been used to generate the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L21)
+[generated/model\_selection/LearningCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L21)
 
 ***
 
@@ -82,7 +82,7 @@ Numbers of training examples that has been used to generate the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L18)
+[generated/model\_selection/LearningCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L18)
 
 ***
 
@@ -92,7 +92,7 @@ Numbers of training examples that has been used to generate the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L19)
+[generated/model\_selection/LearningCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ Axes with the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L360)
+[generated/model\_selection/LearningCurveDisplay.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L360)
 
 ***
 
@@ -128,7 +128,7 @@ When the `std\_display\_style` is `"errorbar"`, this is a list of `matplotlib.co
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L414)
+[generated/model\_selection/LearningCurveDisplay.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L414)
 
 ***
 
@@ -146,7 +146,7 @@ Figure containing the learning curve.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L387)
+[generated/model\_selection/LearningCurveDisplay.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L387)
 
 ***
 
@@ -164,7 +164,7 @@ When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotl
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L468)
+[generated/model\_selection/LearningCurveDisplay.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L468)
 
 ***
 
@@ -182,7 +182,7 @@ When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotl
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L441)
+[generated/model\_selection/LearningCurveDisplay.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L441)
 
 ***
 
@@ -210,7 +210,7 @@ When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotl
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50)
+[generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50)
 
 ## Methods
 
@@ -228,7 +228,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L106)
+[generated/model\_selection/LearningCurveDisplay.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L106)
 
 ***
 
@@ -370,7 +370,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L125)
+[generated/model\_selection/LearningCurveDisplay.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L125)
 
 ***
 
@@ -392,7 +392,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L63)
+[generated/model\_selection/LearningCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L63)
 
 ***
 
@@ -456,4 +456,4 @@ The style used to display the score standard deviation around the mean score. If
 
 #### Defined in
 
-[generated/model\_selection/LearningCurveDisplay.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L285)
+[generated/model\_selection/LearningCurveDisplay.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L285)

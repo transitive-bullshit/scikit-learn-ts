@@ -38,7 +38,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L25)
+[generated/model\_selection/ParameterSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L25)
 
 ## Properties
 
@@ -48,7 +48,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L23)
+[generated/model\_selection/ParameterSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L23)
 
 ***
 
@@ -58,7 +58,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L22)
+[generated/model\_selection/ParameterSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L22)
 
 ***
 
@@ -68,7 +68,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L21)
+[generated/model\_selection/ParameterSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L21)
 
 ***
 
@@ -78,7 +78,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L18)
+[generated/model\_selection/ParameterSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L18)
 
 ***
 
@@ -88,7 +88,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L19)
+[generated/model\_selection/ParameterSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L19)
 
 ## Accessors
 
@@ -106,7 +106,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L116)
+[generated/model\_selection/ParameterSampler.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L116)
 
 ***
 
@@ -134,7 +134,7 @@ Pseudo random number generator state used for random uniform sampling from lists
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L45)
+[generated/model\_selection/ParameterSampler.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L45)
 
 ## Methods
 
@@ -152,7 +152,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L99)
+[generated/model\_selection/ParameterSampler.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L99)
 
 ***
 
@@ -174,4 +174,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/ParameterSampler.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L58)
+[generated/model\_selection/ParameterSampler.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L58)

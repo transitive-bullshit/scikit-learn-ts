@@ -66,7 +66,7 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L27)
+[generated/linear\_model/RidgeClassifierCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L27)
 
 ## Properties
 
@@ -76,7 +76,7 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L25)
+[generated/linear\_model/RidgeClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L25)
 
 ***
 
@@ -86,7 +86,7 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L24)
+[generated/linear\_model/RidgeClassifierCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L24)
 
 ***
 
@@ -96,7 +96,7 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L23)
+[generated/linear\_model/RidgeClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L23)
 
 ***
 
@@ -106,7 +106,7 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L20)
+[generated/linear\_model/RidgeClassifierCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L20)
 
 ***
 
@@ -116,7 +116,7 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L21)
+[generated/linear\_model/RidgeClassifierCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L21)
 
 ## Accessors
 
@@ -134,7 +134,7 @@ Estimated regularization parameter.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L512)
+[generated/linear\_model/RidgeClassifierCV.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L512)
 
 ***
 
@@ -152,7 +152,7 @@ Score of base estimator with best alpha.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L539)
+[generated/linear\_model/RidgeClassifierCV.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L539)
 
 ***
 
@@ -172,7 +172,7 @@ Coefficient of the features in the decision function.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L458)
+[generated/linear\_model/RidgeClassifierCV.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L458)
 
 ***
 
@@ -190,7 +190,7 @@ Cross-validation results for each alpha (only if `store\_cv\_results=True` and `
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L429)
+[generated/linear\_model/RidgeClassifierCV.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L429)
 
 ***
 
@@ -208,7 +208,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L593)
+[generated/linear\_model/RidgeClassifierCV.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L593)
 
 ***
 
@@ -226,7 +226,7 @@ Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L485)
+[generated/linear\_model/RidgeClassifierCV.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L485)
 
 ***
 
@@ -244,7 +244,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L566)
+[generated/linear\_model/RidgeClassifierCV.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L566)
 
 ***
 
@@ -272,7 +272,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L73)
+[generated/linear\_model/RidgeClassifierCV.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L73)
 
 ## Methods
 
@@ -298,7 +298,7 @@ The data matrix for which we want to get the confidence scores.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L146)
+[generated/linear\_model/RidgeClassifierCV.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L146)
 
 ***
 
@@ -316,7 +316,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L127)
+[generated/linear\_model/RidgeClassifierCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L127)
 
 ***
 
@@ -352,7 +352,7 @@ Target values. Will be cast to X’s dtype if necessary.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L182)
+[generated/linear\_model/RidgeClassifierCV.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L182)
 
 ***
 
@@ -378,7 +378,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L233)
+[generated/linear\_model/RidgeClassifierCV.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L233)
 
 ***
 
@@ -400,7 +400,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L86)
+[generated/linear\_model/RidgeClassifierCV.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L86)
 
 ***
 
@@ -424,7 +424,7 @@ The data matrix for which we want to predict the targets.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L269)
+[generated/linear\_model/RidgeClassifierCV.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L269)
 
 ***
 
@@ -458,7 +458,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L305)
+[generated/linear\_model/RidgeClassifierCV.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L305)
 
 ***
 
@@ -486,7 +486,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L353)
+[generated/linear\_model/RidgeClassifierCV.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L353)
 
 ***
 
@@ -514,4 +514,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/RidgeClassifierCV.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L393)
+[generated/linear\_model/RidgeClassifierCV.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L393)

@@ -88,7 +88,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L23)
+[generated/neighbors/RadiusNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L23)
 
 ## Properties
 
@@ -98,7 +98,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L21)
+[generated/neighbors/RadiusNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L21)
 
 ***
 
@@ -108,7 +108,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L20)
+[generated/neighbors/RadiusNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L20)
 
 ***
 
@@ -118,7 +118,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L19)
+[generated/neighbors/RadiusNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L19)
 
 ***
 
@@ -128,7 +128,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L16)
+[generated/neighbors/RadiusNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L16)
 
 ***
 
@@ -138,7 +138,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L17)
+[generated/neighbors/RadiusNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L17)
 
 ## Accessors
 
@@ -156,7 +156,7 @@ Class labels known to the classifier.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L515)
+[generated/neighbors/RadiusNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L515)
 
 ***
 
@@ -174,7 +174,7 @@ The distance metric used. It will be same as the `metric` parameter or a synonym
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L542)
+[generated/neighbors/RadiusNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L542)
 
 ***
 
@@ -192,7 +192,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L569)
+[generated/neighbors/RadiusNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L569)
 
 ***
 
@@ -210,7 +210,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L623)
+[generated/neighbors/RadiusNeighborsClassifier.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L623)
 
 ***
 
@@ -228,7 +228,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L596)
+[generated/neighbors/RadiusNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L596)
 
 ***
 
@@ -246,7 +246,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L650)
+[generated/neighbors/RadiusNeighborsClassifier.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L650)
 
 ***
 
@@ -264,7 +264,7 @@ Label which is given for outlier samples (samples with no neighbors on given rad
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L677)
+[generated/neighbors/RadiusNeighborsClassifier.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L677)
 
 ***
 
@@ -282,7 +282,7 @@ False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwi
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L704)
+[generated/neighbors/RadiusNeighborsClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L704)
 
 ***
 
@@ -310,7 +310,7 @@ False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwi
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89)
+[generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89)
 
 ## Methods
 
@@ -328,7 +328,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L145)
+[generated/neighbors/RadiusNeighborsClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L145)
 
 ***
 
@@ -356,7 +356,7 @@ Target values.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L162)
+[generated/neighbors/RadiusNeighborsClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L162)
 
 ***
 
@@ -382,7 +382,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L203)
+[generated/neighbors/RadiusNeighborsClassifier.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L203)
 
 ***
 
@@ -404,7 +404,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L102)
+[generated/neighbors/RadiusNeighborsClassifier.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L102)
 
 ***
 
@@ -428,7 +428,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L239)
+[generated/neighbors/RadiusNeighborsClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L239)
 
 ***
 
@@ -452,7 +452,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L275)
+[generated/neighbors/RadiusNeighborsClassifier.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L275)
 
 ***
 
@@ -500,7 +500,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L315)
+[generated/neighbors/RadiusNeighborsClassifier.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L315)
 
 ***
 
@@ -546,7 +546,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L372)
+[generated/neighbors/RadiusNeighborsClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L372)
 
 ***
 
@@ -580,7 +580,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L429)
+[generated/neighbors/RadiusNeighborsClassifier.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L429)
 
 ***
 
@@ -608,4 +608,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsClassifier.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L479)
+[generated/neighbors/RadiusNeighborsClassifier.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L479)

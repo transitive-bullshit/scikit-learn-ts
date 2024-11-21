@@ -86,7 +86,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L25)
+[generated/neighbors/RadiusNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L25)
 
 ## Properties
 
@@ -96,7 +96,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L23)
+[generated/neighbors/RadiusNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L23)
 
 ***
 
@@ -106,7 +106,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L22)
+[generated/neighbors/RadiusNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L22)
 
 ***
 
@@ -116,7 +116,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L21)
+[generated/neighbors/RadiusNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L21)
 
 ***
 
@@ -126,7 +126,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L18)
+[generated/neighbors/RadiusNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L18)
 
 ***
 
@@ -136,7 +136,7 @@ Weight function used in prediction. Possible values:
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L19)
+[generated/neighbors/RadiusNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L19)
 
 ## Accessors
 
@@ -154,7 +154,7 @@ The distance metric to use. It will be same as the `metric` parameter or a synon
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L476)
+[generated/neighbors/RadiusNeighborsRegressor.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L476)
 
 ***
 
@@ -172,7 +172,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L503)
+[generated/neighbors/RadiusNeighborsRegressor.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L503)
 
 ***
 
@@ -190,7 +190,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L557)
+[generated/neighbors/RadiusNeighborsRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L557)
 
 ***
 
@@ -208,7 +208,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L530)
+[generated/neighbors/RadiusNeighborsRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L530)
 
 ***
 
@@ -226,7 +226,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L584)
+[generated/neighbors/RadiusNeighborsRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L584)
 
 ***
 
@@ -254,7 +254,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L86)
+[generated/neighbors/RadiusNeighborsRegressor.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L86)
 
 ## Methods
 
@@ -272,7 +272,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L142)
+[generated/neighbors/RadiusNeighborsRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L142)
 
 ***
 
@@ -300,7 +300,7 @@ Target values.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L159)
+[generated/neighbors/RadiusNeighborsRegressor.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L159)
 
 ***
 
@@ -326,7 +326,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L200)
+[generated/neighbors/RadiusNeighborsRegressor.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L200)
 
 ***
 
@@ -348,7 +348,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L99)
+[generated/neighbors/RadiusNeighborsRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L99)
 
 ***
 
@@ -372,7 +372,7 @@ Test samples.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L236)
+[generated/neighbors/RadiusNeighborsRegressor.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L236)
 
 ***
 
@@ -420,7 +420,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L276)
+[generated/neighbors/RadiusNeighborsRegressor.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L276)
 
 ***
 
@@ -466,7 +466,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L333)
+[generated/neighbors/RadiusNeighborsRegressor.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L333)
 
 ***
 
@@ -500,7 +500,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L390)
+[generated/neighbors/RadiusNeighborsRegressor.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L390)
 
 ***
 
@@ -528,4 +528,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neighbors/RadiusNeighborsRegressor.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L440)
+[generated/neighbors/RadiusNeighborsRegressor.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L440)

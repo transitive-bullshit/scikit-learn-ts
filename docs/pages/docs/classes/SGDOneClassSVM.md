@@ -120,7 +120,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L25)
+[generated/linear\_model/SGDOneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L25)
 
 ## Properties
 
@@ -130,7 +130,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L23)
+[generated/linear\_model/SGDOneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L23)
 
 ***
 
@@ -140,7 +140,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L22)
+[generated/linear\_model/SGDOneClassSVM.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L22)
 
 ***
 
@@ -150,7 +150,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L21)
+[generated/linear\_model/SGDOneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L21)
 
 ***
 
@@ -160,7 +160,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L18)
+[generated/linear\_model/SGDOneClassSVM.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L18)
 
 ***
 
@@ -170,7 +170,7 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L19)
+[generated/linear\_model/SGDOneClassSVM.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L19)
 
 ## Accessors
 
@@ -188,7 +188,7 @@ Weights assigned to the features.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L603)
+[generated/linear\_model/SGDOneClassSVM.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L603)
 
 ***
 
@@ -206,7 +206,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L749)
+[generated/linear\_model/SGDOneClassSVM.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L749)
 
 ***
 
@@ -224,7 +224,7 @@ Deprecated since version 1.4: `loss\_function\_` was deprecated in version 1.4 a
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L699)
+[generated/linear\_model/SGDOneClassSVM.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L699)
 
 ***
 
@@ -242,7 +242,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L724)
+[generated/linear\_model/SGDOneClassSVM.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L724)
 
 ***
 
@@ -260,7 +260,7 @@ The actual number of iterations to reach the stopping criterion.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L651)
+[generated/linear\_model/SGDOneClassSVM.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L651)
 
 ***
 
@@ -278,7 +278,7 @@ Offset used to define the decision function from the raw scores. We have the rel
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L626)
+[generated/linear\_model/SGDOneClassSVM.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L626)
 
 ***
 
@@ -306,7 +306,7 @@ Offset used to define the decision function from the raw scores. We have the rel
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L114)
+[generated/linear\_model/SGDOneClassSVM.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L114)
 
 ***
 
@@ -324,7 +324,7 @@ Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_sa
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L676)
+[generated/linear\_model/SGDOneClassSVM.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L676)
 
 ## Methods
 
@@ -350,7 +350,7 @@ Testing data.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L185)
+[generated/linear\_model/SGDOneClassSVM.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L185)
 
 ***
 
@@ -372,7 +372,7 @@ Converts the `coef\_` member (back) to a numpy.ndarray. This is the default form
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L221)
+[generated/linear\_model/SGDOneClassSVM.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L221)
 
 ***
 
@@ -390,7 +390,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L166)
+[generated/linear\_model/SGDOneClassSVM.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L166)
 
 ***
 
@@ -432,7 +432,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L249)
+[generated/linear\_model/SGDOneClassSVM.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L249)
 
 ***
 
@@ -466,7 +466,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L303)
+[generated/linear\_model/SGDOneClassSVM.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L303)
 
 ***
 
@@ -492,7 +492,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L347)
+[generated/linear\_model/SGDOneClassSVM.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L347)
 
 ***
 
@@ -514,7 +514,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L127)
+[generated/linear\_model/SGDOneClassSVM.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L127)
 
 ***
 
@@ -546,7 +546,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L381)
+[generated/linear\_model/SGDOneClassSVM.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L381)
 
 ***
 
@@ -570,7 +570,7 @@ Testing data.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L423)
+[generated/linear\_model/SGDOneClassSVM.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L423)
 
 ***
 
@@ -594,7 +594,7 @@ Testing data.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L455)
+[generated/linear\_model/SGDOneClassSVM.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L455)
 
 ***
 
@@ -630,7 +630,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L491)
+[generated/linear\_model/SGDOneClassSVM.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L491)
 
 ***
 
@@ -658,7 +658,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L539)
+[generated/linear\_model/SGDOneClassSVM.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L539)
 
 ***
 
@@ -682,4 +682,4 @@ The `intercept\_` member is not converted.
 
 #### Defined in
 
-[generated/linear\_model/SGDOneClassSVM.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L577)
+[generated/linear\_model/SGDOneClassSVM.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L577)

@@ -74,7 +74,7 @@ Number of nonzero coefficients to target in each column of the solution. This is
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L25)
+[generated/decomposition/SparseCoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L25)
 
 ## Properties
 
@@ -84,7 +84,7 @@ Number of nonzero coefficients to target in each column of the solution. This is
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L23)
+[generated/decomposition/SparseCoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L23)
 
 ***
 
@@ -94,7 +94,7 @@ Number of nonzero coefficients to target in each column of the solution. This is
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L22)
+[generated/decomposition/SparseCoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L22)
 
 ***
 
@@ -104,7 +104,7 @@ Number of nonzero coefficients to target in each column of the solution. This is
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L21)
+[generated/decomposition/SparseCoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L21)
 
 ***
 
@@ -114,7 +114,7 @@ Number of nonzero coefficients to target in each column of the solution. This is
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L18)
+[generated/decomposition/SparseCoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L18)
 
 ***
 
@@ -124,7 +124,7 @@ Number of nonzero coefficients to target in each column of the solution. This is
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L19)
+[generated/decomposition/SparseCoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L19)
 
 ## Accessors
 
@@ -142,7 +142,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L380)
+[generated/decomposition/SparseCoder.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L380)
 
 ***
 
@@ -170,7 +170,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L83)
+[generated/decomposition/SparseCoder.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L83)
 
 ## Methods
 
@@ -188,7 +188,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L135)
+[generated/decomposition/SparseCoder.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L135)
 
 ***
 
@@ -218,7 +218,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L154)
+[generated/decomposition/SparseCoder.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L154)
 
 ***
 
@@ -252,7 +252,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L193)
+[generated/decomposition/SparseCoder.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L193)
 
 ***
 
@@ -278,7 +278,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L237)
+[generated/decomposition/SparseCoder.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L237)
 
 ***
 
@@ -304,7 +304,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L273)
+[generated/decomposition/SparseCoder.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L273)
 
 ***
 
@@ -326,7 +326,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L96)
+[generated/decomposition/SparseCoder.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L96)
 
 ***
 
@@ -352,7 +352,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L309)
+[generated/decomposition/SparseCoder.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L309)
 
 ***
 
@@ -382,4 +382,4 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/SparseCoder.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L343)
+[generated/decomposition/SparseCoder.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L343)

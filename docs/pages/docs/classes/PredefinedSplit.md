@@ -30,7 +30,7 @@ The entry `test\_fold\[i\]` represents the index of the test set that sample `i`
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L25)
+[generated/model\_selection/PredefinedSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L25)
 
 ## Properties
 
@@ -40,7 +40,7 @@ The entry `test\_fold\[i\]` represents the index of the test set that sample `i`
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L23)
+[generated/model\_selection/PredefinedSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L23)
 
 ***
 
@@ -50,7 +50,7 @@ The entry `test\_fold\[i\]` represents the index of the test set that sample `i`
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L22)
+[generated/model\_selection/PredefinedSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L22)
 
 ***
 
@@ -60,7 +60,7 @@ The entry `test\_fold\[i\]` represents the index of the test set that sample `i`
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L21)
+[generated/model\_selection/PredefinedSplit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L21)
 
 ***
 
@@ -70,7 +70,7 @@ The entry `test\_fold\[i\]` represents the index of the test set that sample `i`
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L18)
+[generated/model\_selection/PredefinedSplit.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L18)
 
 ***
 
@@ -80,7 +80,7 @@ The entry `test\_fold\[i\]` represents the index of the test set that sample `i`
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L19)
+[generated/model\_selection/PredefinedSplit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L19)
 
 ## Accessors
 
@@ -108,7 +108,7 @@ The entry `test\_fold\[i\]` represents the index of the test set that sample `i`
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L35)
+[generated/model\_selection/PredefinedSplit.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L35)
 
 ## Methods
 
@@ -126,7 +126,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L87)
+[generated/model\_selection/PredefinedSplit.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L87)
 
 ***
 
@@ -152,7 +152,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L106)
+[generated/model\_selection/PredefinedSplit.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L106)
 
 ***
 
@@ -184,7 +184,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L140)
+[generated/model\_selection/PredefinedSplit.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L140)
 
 ***
 
@@ -206,7 +206,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L48)
+[generated/model\_selection/PredefinedSplit.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L48)
 
 ***
 
@@ -238,4 +238,4 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/PredefinedSplit.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L182)
+[generated/model\_selection/PredefinedSplit.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L182)

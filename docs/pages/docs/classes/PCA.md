@@ -100,7 +100,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L33)
+[generated/decomposition/PCA.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L33)
 
 ## Properties
 
@@ -110,7 +110,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L31)
+[generated/decomposition/PCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L31)
 
 ***
 
@@ -120,7 +120,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L30)
+[generated/decomposition/PCA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L30)
 
 ***
 
@@ -130,7 +130,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L29)
+[generated/decomposition/PCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L29)
 
 ***
 
@@ -140,7 +140,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L26)
+[generated/decomposition/PCA.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L26)
 
 ***
 
@@ -150,7 +150,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L27)
+[generated/decomposition/PCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L27)
 
 ## Accessors
 
@@ -168,7 +168,7 @@ Principal axes in feature space, representing the directions of maximum variance
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L551)
+[generated/decomposition/PCA.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L551)
 
 ***
 
@@ -188,7 +188,7 @@ Equal to n\_components largest eigenvalues of the covariance matrix of X.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L576)
+[generated/decomposition/PCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L576)
 
 ***
 
@@ -208,7 +208,7 @@ If `n\_components` is not set then all components are stored and the sum of the 
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L603)
+[generated/decomposition/PCA.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L603)
 
 ***
 
@@ -226,7 +226,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L768)
+[generated/decomposition/PCA.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L768)
 
 ***
 
@@ -246,7 +246,7 @@ Equal to `X.mean(axis=0)`.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L653)
+[generated/decomposition/PCA.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L653)
 
 ***
 
@@ -264,7 +264,7 @@ The estimated number of components. When n\_components is set to ‘mle’ or a 
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L675)
+[generated/decomposition/PCA.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L675)
 
 ***
 
@@ -282,7 +282,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L745)
+[generated/decomposition/PCA.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L745)
 
 ***
 
@@ -300,7 +300,7 @@ Number of samples in the training data.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:698](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L698)
+[generated/decomposition/PCA.ts:698](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L698)
 
 ***
 
@@ -320,7 +320,7 @@ Equal to the average of (min(n\_features, n\_samples) - n\_components) smallest 
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L722)
+[generated/decomposition/PCA.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L722)
 
 ***
 
@@ -348,7 +348,7 @@ Equal to the average of (min(n\_features, n\_samples) - n\_components) smallest 
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L99)
+[generated/decomposition/PCA.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L99)
 
 ***
 
@@ -366,7 +366,7 @@ The singular values corresponding to each of the selected components. The singul
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L628)
+[generated/decomposition/PCA.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L628)
 
 ## Methods
 
@@ -384,7 +384,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L150)
+[generated/decomposition/PCA.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L150)
 
 ***
 
@@ -412,7 +412,7 @@ Ignored.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L167)
+[generated/decomposition/PCA.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L167)
 
 ***
 
@@ -440,7 +440,7 @@ Ignored.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L203)
+[generated/decomposition/PCA.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L203)
 
 ***
 
@@ -466,7 +466,7 @@ Estimated covariance of data.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L242)
+[generated/decomposition/PCA.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L242)
 
 ***
 
@@ -492,7 +492,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L276)
+[generated/decomposition/PCA.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L276)
 
 ***
 
@@ -518,7 +518,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L310)
+[generated/decomposition/PCA.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L310)
 
 ***
 
@@ -544,7 +544,7 @@ Estimated precision of data.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L344)
+[generated/decomposition/PCA.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L344)
 
 ***
 
@@ -566,7 +566,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L112)
+[generated/decomposition/PCA.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L112)
 
 ***
 
@@ -592,7 +592,7 @@ New data, where `n\_samples` is the number of samples and `n\_components` is the
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L378)
+[generated/decomposition/PCA.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L378)
 
 ***
 
@@ -622,7 +622,7 @@ Ignored.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L412)
+[generated/decomposition/PCA.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L412)
 
 ***
 
@@ -648,7 +648,7 @@ The data.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L451)
+[generated/decomposition/PCA.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L451)
 
 ***
 
@@ -674,7 +674,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L485)
+[generated/decomposition/PCA.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L485)
 
 ***
 
@@ -700,4 +700,4 @@ New data, where `n\_samples` is the number of samples and `n\_features` is the n
 
 #### Defined in
 
-[generated/decomposition/PCA.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/PCA.ts#L519)
+[generated/decomposition/PCA.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/PCA.ts#L519)

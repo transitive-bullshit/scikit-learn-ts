@@ -42,7 +42,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L25)
+[generated/dummy/DummyRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L25)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L23)
+[generated/dummy/DummyRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L23)
 
 ***
 
@@ -62,7 +62,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L22)
+[generated/dummy/DummyRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L22)
 
 ***
 
@@ -72,7 +72,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L21)
+[generated/dummy/DummyRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L21)
 
 ***
 
@@ -82,7 +82,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L18)
+[generated/dummy/DummyRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L18)
 
 ***
 
@@ -92,7 +92,7 @@ Strategy to use to generate predictions.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L19)
+[generated/dummy/DummyRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L19)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ Mean or median or quantile of the training targets or constant value given by th
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L391)
+[generated/dummy/DummyRegressor.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L391)
 
 ***
 
@@ -128,7 +128,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L441)
+[generated/dummy/DummyRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L441)
 
 ***
 
@@ -146,7 +146,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L416)
+[generated/dummy/DummyRegressor.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L416)
 
 ***
 
@@ -164,7 +164,7 @@ Number of outputs.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L466)
+[generated/dummy/DummyRegressor.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L466)
 
 ***
 
@@ -192,7 +192,7 @@ Number of outputs.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L47)
+[generated/dummy/DummyRegressor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L47)
 
 ## Methods
 
@@ -210,7 +210,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L99)
+[generated/dummy/DummyRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L99)
 
 ***
 
@@ -242,7 +242,7 @@ Target values.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L116)
+[generated/dummy/DummyRegressor.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L116)
 
 ***
 
@@ -268,7 +268,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L160)
+[generated/dummy/DummyRegressor.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L160)
 
 ***
 
@@ -290,7 +290,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L60)
+[generated/dummy/DummyRegressor.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L60)
 
 ***
 
@@ -322,7 +322,7 @@ Test data.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L194)
+[generated/dummy/DummyRegressor.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L194)
 
 ***
 
@@ -356,7 +356,7 @@ True values for X.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L235)
+[generated/dummy/DummyRegressor.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L235)
 
 ***
 
@@ -384,7 +384,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L281)
+[generated/dummy/DummyRegressor.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L281)
 
 ***
 
@@ -412,7 +412,7 @@ Metadata routing for `return\_std` parameter in `predict`.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L319)
+[generated/dummy/DummyRegressor.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L319)
 
 ***
 
@@ -440,4 +440,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/dummy/DummyRegressor.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L357)
+[generated/dummy/DummyRegressor.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L357)

@@ -138,7 +138,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L23)
+[generated/decomposition/LatentDirichletAllocation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L23)
 
 ## Properties
 
@@ -148,7 +148,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L21)
+[generated/decomposition/LatentDirichletAllocation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L21)
 
 ***
 
@@ -158,7 +158,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L20)
+[generated/decomposition/LatentDirichletAllocation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L20)
 
 ***
 
@@ -168,7 +168,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L19)
+[generated/decomposition/LatentDirichletAllocation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L19)
 
 ***
 
@@ -178,7 +178,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L16)
+[generated/decomposition/LatentDirichletAllocation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L16)
 
 ***
 
@@ -188,7 +188,7 @@ Verbosity level.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L17)
+[generated/decomposition/LatentDirichletAllocation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L17)
 
 ## Accessors
 
@@ -206,7 +206,7 @@ Final perplexity score on training set.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L733)
+[generated/decomposition/LatentDirichletAllocation.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L733)
 
 ***
 
@@ -224,7 +224,7 @@ Variational parameters for topic word distribution. Since the complete condition
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L571)
+[generated/decomposition/LatentDirichletAllocation.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L571)
 
 ***
 
@@ -242,7 +242,7 @@ Prior of document topic distribution `theta`. If the value is `undefined`, it is
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L760)
+[generated/decomposition/LatentDirichletAllocation.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L760)
 
 ***
 
@@ -260,7 +260,7 @@ Exponential value of expectation of log topic word distribution. In the literatu
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L598)
+[generated/decomposition/LatentDirichletAllocation.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L598)
 
 ***
 
@@ -278,7 +278,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L679)
+[generated/decomposition/LatentDirichletAllocation.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L679)
 
 ***
 
@@ -296,7 +296,7 @@ Number of iterations of the EM step.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L625)
+[generated/decomposition/LatentDirichletAllocation.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L625)
 
 ***
 
@@ -314,7 +314,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L652)
+[generated/decomposition/LatentDirichletAllocation.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L652)
 
 ***
 
@@ -332,7 +332,7 @@ Number of passes over the dataset.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L706)
+[generated/decomposition/LatentDirichletAllocation.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L706)
 
 ***
 
@@ -360,7 +360,7 @@ Number of passes over the dataset.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L134)
+[generated/decomposition/LatentDirichletAllocation.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L134)
 
 ***
 
@@ -378,7 +378,7 @@ RandomState instance that is generated either from a seed, the random number gen
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L787)
+[generated/decomposition/LatentDirichletAllocation.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L787)
 
 ***
 
@@ -396,7 +396,7 @@ Prior of topic word distribution `beta`. If the value is `undefined`, it is `1 /
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L814)
+[generated/decomposition/LatentDirichletAllocation.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L814)
 
 ## Methods
 
@@ -414,7 +414,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L190)
+[generated/decomposition/LatentDirichletAllocation.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L190)
 
 ***
 
@@ -444,7 +444,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L209)
+[generated/decomposition/LatentDirichletAllocation.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L209)
 
 ***
 
@@ -478,7 +478,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L250)
+[generated/decomposition/LatentDirichletAllocation.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L250)
 
 ***
 
@@ -504,7 +504,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L298)
+[generated/decomposition/LatentDirichletAllocation.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L298)
 
 ***
 
@@ -530,7 +530,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L336)
+[generated/decomposition/LatentDirichletAllocation.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L336)
 
 ***
 
@@ -552,7 +552,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L147)
+[generated/decomposition/LatentDirichletAllocation.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L147)
 
 ***
 
@@ -580,7 +580,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L372)
+[generated/decomposition/LatentDirichletAllocation.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L372)
 
 ***
 
@@ -610,7 +610,7 @@ Document word matrix.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L415)
+[generated/decomposition/LatentDirichletAllocation.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L415)
 
 ***
 
@@ -638,7 +638,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L456)
+[generated/decomposition/LatentDirichletAllocation.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L456)
 
 ***
 
@@ -664,7 +664,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L499)
+[generated/decomposition/LatentDirichletAllocation.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L499)
 
 ***
 
@@ -688,4 +688,4 @@ Document word matrix.
 
 #### Defined in
 
-[generated/decomposition/LatentDirichletAllocation.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L535)
+[generated/decomposition/LatentDirichletAllocation.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L535)

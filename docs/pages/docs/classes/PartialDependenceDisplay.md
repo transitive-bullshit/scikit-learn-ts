@@ -74,7 +74,7 @@ In a multiclass setting, specifies the class for which the PDPs should be comput
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
+[generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
 
 ## Properties
 
@@ -84,7 +84,7 @@ In a multiclass setting, specifies the class for which the PDPs should be comput
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25)
+[generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25)
 
 ***
 
@@ -94,7 +94,7 @@ In a multiclass setting, specifies the class for which the PDPs should be comput
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24)
+[generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24)
 
 ***
 
@@ -104,7 +104,7 @@ In a multiclass setting, specifies the class for which the PDPs should be comput
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23)
+[generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23)
 
 ***
 
@@ -114,7 +114,7 @@ In a multiclass setting, specifies the class for which the PDPs should be comput
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20)
+[generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20)
 
 ***
 
@@ -124,7 +124,7 @@ In a multiclass setting, specifies the class for which the PDPs should be comput
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21)
+[generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21)
 
 ## Accessors
 
@@ -142,7 +142,7 @@ If `ax` is an axes or `undefined`, `axes\_\[i, j\]` is the axes on the i-th row 
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L436)
+[generated/inspection/PartialDependenceDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L436)
 
 ***
 
@@ -160,7 +160,7 @@ If `ax` is an axes or `undefined`, `bars\_\[i, j\]` is the partial dependence ba
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L571)
+[generated/inspection/PartialDependenceDisplay.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L571)
 
 ***
 
@@ -178,7 +178,7 @@ If `ax` is an axes or `undefined`, the `bounding\_ax\_` is the axes where the gr
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L409)
+[generated/inspection/PartialDependenceDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L409)
 
 ***
 
@@ -196,7 +196,7 @@ If `ax` is an axes or `undefined`, `contours\_\[i, j\]` is the partial dependenc
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L544)
+[generated/inspection/PartialDependenceDisplay.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L544)
 
 ***
 
@@ -214,7 +214,7 @@ If `ax` is an axes or `undefined`, `vlines\_\[i, j\]` is the line collection rep
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L517)
+[generated/inspection/PartialDependenceDisplay.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L517)
 
 ***
 
@@ -232,7 +232,7 @@ If `ax` is an axes or `undefined`, `vlines\_\[i, j\]` is the line collection rep
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L490)
+[generated/inspection/PartialDependenceDisplay.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L490)
 
 ***
 
@@ -250,7 +250,7 @@ Figure containing partial dependence plots.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L625)
+[generated/inspection/PartialDependenceDisplay.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L625)
 
 ***
 
@@ -268,7 +268,7 @@ If `ax` is an axes or `undefined`, `heatmaps\_\[i, j\]` is the partial dependenc
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L598)
+[generated/inspection/PartialDependenceDisplay.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L598)
 
 ***
 
@@ -286,7 +286,7 @@ If `ax` is an axes or `undefined`, `lines\_\[i, j\]` is the partial dependence c
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L463)
+[generated/inspection/PartialDependenceDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L463)
 
 ***
 
@@ -314,7 +314,7 @@ If `ax` is an axes or `undefined`, `lines\_\[i, j\]` is the partial dependence c
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83)
+[generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83)
 
 ## Methods
 
@@ -332,7 +332,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L139)
+[generated/inspection/PartialDependenceDisplay.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L139)
 
 ***
 
@@ -484,7 +484,7 @@ Verbose output during PD computations.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L160)
+[generated/inspection/PartialDependenceDisplay.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L160)
 
 ***
 
@@ -506,7 +506,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L96)
+[generated/inspection/PartialDependenceDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L96)
 
 ***
 
@@ -574,4 +574,4 @@ Global min and max average predictions, such that all plots will have the same s
 
 #### Defined in
 
-[generated/inspection/PartialDependenceDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L326)
+[generated/inspection/PartialDependenceDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L326)

@@ -48,7 +48,7 @@ The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘period
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L23)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L23)
 
 ## Properties
 
@@ -58,7 +58,7 @@ The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘period
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L21)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L21)
 
 ***
 
@@ -68,7 +68,7 @@ The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘period
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L20)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L20)
 
 ***
 
@@ -78,7 +78,7 @@ The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘period
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L19)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L19)
 
 ***
 
@@ -88,7 +88,7 @@ The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘period
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L16)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L16)
 
 ***
 
@@ -98,7 +98,7 @@ The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘period
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L17)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L17)
 
 ## Accessors
 
@@ -126,7 +126,7 @@ The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘period
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L52)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L52)
 
 ## Methods
 
@@ -162,7 +162,7 @@ Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evalua
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L121)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L121)
 
 ***
 
@@ -186,7 +186,7 @@ The hyperparameters
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L165)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L165)
 
 ***
 
@@ -212,7 +212,7 @@ Left argument of the returned kernel k(X, Y)
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L201)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L201)
 
 ***
 
@@ -230,7 +230,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L104)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L104)
 
 ***
 
@@ -252,7 +252,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L65)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L65)
 
 ***
 
@@ -272,4 +272,4 @@ Returns whether the kernel is stationary.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/ExpSineSquared.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L233)
+[generated/gaussian\_process/kernels/ExpSineSquared.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/ac44cfe4514273f037328d5b7cee92242da76b0c/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L233)
