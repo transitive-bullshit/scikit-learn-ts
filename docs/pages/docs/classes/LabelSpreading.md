@@ -1,4 +1,6 @@
-# LabelSpreading
+**sklearn** • **Docs**
+
+***
 
 LabelSpreading model for semi-supervised learning.
 
@@ -10,204 +12,463 @@ Read more in the User Guide.
 
 ## Constructors
 
-## constructor()
+### new LabelSpreading()
 
-### Signature
+> **new LabelSpreading**(`opts`?): [`LabelSpreading`](LabelSpreading.md)
 
-```ts
-new LabelSpreading(opts?: object): LabelSpreading;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.alpha?` | `number` | Clamping factor. A value in (0, 1) that specifies the relative amount that an instance should adopt the information from its neighbors as opposed to its initial label. alpha=0 means keeping the initial label information; alpha=1 means replacing all initial information.  `Default Value`  `0.2` |
-| `opts.gamma?` | `number` | Parameter for rbf kernel.  `Default Value`  `20` |
-| `opts.kernel?` | `"rbf"` \| `"knn"` | String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.  `Default Value`  `'rbf'` |
-| `opts.max_iter?` | `number` | Maximum number of iterations allowed.  `Default Value`  `30` |
-| `opts.n_jobs?` | `number` | The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
-| `opts.n_neighbors?` | `number` | Parameter for knn kernel which is a strictly positive integer.  `Default Value`  `7` |
-| `opts.tol?` | `number` | Convergence tolerance: threshold to consider the system at steady state.  `Default Value`  `0.001` |
+• **opts.alpha?**: `number`
 
-### Returns
+Clamping factor. A value in (0, 1) that specifies the relative amount that an instance should adopt the information from its neighbors as opposed to its initial label. alpha=0 means keeping the initial label information; alpha=1 means replacing all initial information.
+
+**Default Value**
+
+`0.2`
+
+• **opts.gamma?**: `number`
+
+Parameter for rbf kernel.
+
+**Default Value**
+
+`20`
+
+• **opts.kernel?**: `"rbf"` \| `"knn"`
+
+String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.
+
+**Default Value**
+
+`'rbf'`
+
+• **opts.max\_iter?**: `number`
+
+Maximum number of iterations allowed.
+
+**Default Value**
+
+`30`
+
+• **opts.n\_jobs?**: `number`
+
+The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See Glossary for more details.
+
+• **opts.n\_neighbors?**: `number`
+
+Parameter for knn kernel which is a strictly positive integer.
+
+**Default Value**
+
+`7`
+
+• **opts.tol?**: `number`
+
+Convergence tolerance: threshold to consider the system at steady state.
+
+**Default Value**
+
+`0.001`
+
+#### Returns
 
 [`LabelSpreading`](LabelSpreading.md)
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L25)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L25)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L23)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L22)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L21)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L18)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L19)
+
+## Accessors
+
+### classes\_
+
+#### Get Signature
+
+> **get** **classes\_**(): `Promise`\<`ArrayLike`\>
+
+The distinct labels used in classifying instances.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L392)
+
+***
+
+### feature\_names\_in\_
+
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L492)
+
+***
+
+### label\_distributions\_
+
+#### Get Signature
+
+> **get** **label\_distributions\_**(): `Promise`\<`ArrayLike`[]\>
+
+Categorical distribution for each item.
+
+##### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L417)
+
+***
+
+### n\_features\_in\_
+
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
+Number of features seen during fit.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L467)
+
+***
+
+### n\_iter\_
+
+#### Get Signature
+
+> **get** **n\_iter\_**(): `Promise`\<`number`\>
+
+Number of iterations run.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L517)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L77)
+
+***
+
+### transduction\_
+
+#### Get Signature
+
+> **get** **transduction\_**(): `Promise`\<`ArrayLike`\>
+
+Label assigned to each item during fit.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L442)
+
+***
+
+### X\_
+
+#### Get Signature
+
+> **get** **X\_**(): `Promise`\<`ArrayLike`[]\>
+
+Input array.
+
+##### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L369)
 
 ## Methods
 
 ### dispose()
 
+> **dispose**(): `Promise`\<`void`\>
+
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L136)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L129)
+
+***
 
 ### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
 
 Fit a semi-supervised label propagation model to X.
 
 The input samples (labeled and unlabeled) are provided by matrix X, and target labels are provided by matrix y. We conventionally apply the label -1 to unlabeled samples in matrix y in a semi-supervised classification.
 
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.y?` | `ArrayLike` | Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: `ArrayLike`
+
+Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L155)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L148)
+
+***
 
 ### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
 Get metadata routing of this object.
 
 Please check User Guide on how the routing mechanism works.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L197)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L187)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L90)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L90)
+
+***
 
 ### predict()
 
+> **predict**(`opts`): `Promise`\<`ArrayLike`\>
+
 Perform inductive inference across the model.
-
-#### Signature
-
-```ts
-predict(opts: object): Promise<ArrayLike>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | The data matrix. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`[]
+
+The data matrix.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L232)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L221)
+
+***
 
 ### predict\_proba()
+
+> **predict\_proba**(`opts`): `Promise`\<`ArrayLike`[]\>
 
 Predict probability for each possible outcome.
 
 Compute the probability estimates for each single sample in X and each possible outcome seen during training (categorical distribution).
 
-#### Signature
-
-```ts
-predict_proba(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | The data matrix. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`[]
+
+The data matrix.
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L267)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L255)
+
+***
 
 ### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
 
 Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Test samples. |
-| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
-| `opts.y?` | `ArrayLike` | True labels for `X`. |
+• **opts**
+
+• **opts.sample\_weight?**: `ArrayLike`
+
+Sample weights.
+
+• **opts.X?**: `ArrayLike`[]
+
+Test samples.
+
+• **opts.y?**: `ArrayLike`
+
+True labels for `X`.
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L302)
+#### Defined in
+
+[generated/semi\_supervised/LabelSpreading.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L289)
+
+***
 
 ### set\_score\_request()
+
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `score` method.
 
@@ -215,199 +476,18 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+• **opts**
+
+• **opts.sample\_weight?**: `string` \| `boolean`
+
+Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L353)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L19)
-
-## Accessors
-
-### X\_
-
-Input array.
-
-#### Signature
-
-```ts
-X_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L389)
-
-### classes\_
-
-The distinct labels used in classifying instances.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L412)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L512)
-
-### label\_distributions\_
-
-Categorical distribution for each item.
-
-#### Signature
-
-```ts
-label_distributions_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L437)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L487)
-
-### n\_iter\_
-
-Number of iterations run.
-
-#### Signature
-
-```ts
-n_iter_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L537)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L77)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L81)
-
-### transduction\_
-
-Label assigned to each item during fit.
-
-#### Signature
-
-```ts
-transduction_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/semi\_supervised/LabelSpreading.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L462)
+[generated/semi\_supervised/LabelSpreading.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L335)

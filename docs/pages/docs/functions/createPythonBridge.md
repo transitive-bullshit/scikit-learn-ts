@@ -1,19 +1,17 @@
-# createPythonBridge()
+**sklearn** • **Docs**
 
-## Signature
+***
 
-```ts
-createPythonBridge(opts: PythonBridgeOptions = {}): Promise<PythonBridge>;
-```
+> **createPythonBridge**(`opts`): `Promise`\<`PythonBridge`\>
 
 ## Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `PythonBridgeOptions` |
+• **opts**: `PythonBridgeOptions` = `{}`
 
 ## Returns
 
 `Promise`\<`PythonBridge`\>
 
-Defined in:  [python.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/python.ts#L20)
+## Defined in
+
+[python.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/python.ts#L20)

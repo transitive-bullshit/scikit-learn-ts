@@ -1,4 +1,6 @@
-# NMF
+[**sklearn**](../README.md) • **Docs**
+
+***
 
 Non-Negative Matrix Factorization (NMF).
 
@@ -10,429 +12,528 @@ The objective function is:
 
 ## Constructors
 
-## constructor()
+### new NMF()
 
-### Signature
+> **new NMF**(`opts`?): [`NMF`](NMF.md)
 
-```ts
-new NMF(opts?: object): NMF;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.alpha_H?` | `number` \| `"same"` | Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.  `Default Value`  `'same'` |
-| `opts.alpha_W?` | `number` | Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.  `Default Value`  `0` |
-| `opts.beta_loss?` | `number` \| `"frobenius"` \| `"kullback-leibler"` \| `"itakura-saito"` | Beta divergence to be minimized, measuring the distance between X and the dot product WH. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for beta\_loss <= 0 (or ‘itakura-saito’), the input matrix X cannot contain zeros. Used only in ‘mu’ solver.  `Default Value`  `'frobenius'` |
-| `opts.init?` | `"random"` \| `"nndsvd"` \| `"nndsvda"` \| `"nndsvdar"` \| `"custom"` | Method used to initialize the procedure. Valid options: |
-| `opts.l1_ratio?` | `number` | The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.  `Default Value`  `0` |
-| `opts.max_iter?` | `number` | Maximum number of iterations before timing out.  `Default Value`  `200` |
-| `opts.n_components?` | `number` | Number of components, if n\_components is not set all features are kept. |
-| `opts.random_state?` | `number` | Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
-| `opts.shuffle?` | `boolean` | If true, randomize the order of coordinates in the CD solver.  `Default Value`  `false` |
-| `opts.solver?` | `"cd"` \| `"mu"` | Numerical solver to use:  `Default Value`  `'cd'` |
-| `opts.tol?` | `number` | Tolerance of the stopping condition.  `Default Value`  `0.0001` |
-| `opts.verbose?` | `number` | Whether to be verbose.  `Default Value`  `0` |
+• **opts.alpha\_H?**: `number` \| `"same"`
 
-### Returns
+Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.
+
+**Default Value**
+
+`'same'`
+
+• **opts.alpha\_W?**: `number`
+
+Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
+
+**Default Value**
+
+`0`
+
+• **opts.beta\_loss?**: `number` \| `"frobenius"` \| `"kullback-leibler"` \| `"itakura-saito"`
+
+Beta divergence to be minimized, measuring the distance between X and the dot product WH. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for beta\_loss <= 0 (or ‘itakura-saito’), the input matrix X cannot contain zeros. Used only in ‘mu’ solver.
+
+**Default Value**
+
+`'frobenius'`
+
+• **opts.init?**: `"random"` \| `"nndsvd"` \| `"nndsvda"` \| `"nndsvdar"` \| `"custom"`
+
+Method used to initialize the procedure. Valid options:
+
+• **opts.l1\_ratio?**: `number`
+
+The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.
+
+**Default Value**
+
+`0`
+
+• **opts.max\_iter?**: `number`
+
+Maximum number of iterations before timing out.
+
+**Default Value**
+
+`200`
+
+• **opts.n\_components?**: `number` \| `"auto"`
+
+Number of components, if n\_components is not set all features are kept. If `n\_components='auto'`, the number of components is automatically inferred from W or H shapes.
+
+• **opts.random\_state?**: `number`
+
+Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+
+• **opts.shuffle?**: `boolean`
+
+If true, randomize the order of coordinates in the CD solver.
+
+**Default Value**
+
+`false`
+
+• **opts.solver?**: `"cd"` \| `"mu"`
+
+Numerical solver to use:
+
+**Default Value**
+
+`'cd'`
+
+• **opts.tol?**: `number`
+
+Tolerance of the stopping condition.
+
+**Default Value**
+
+`0.0001`
+
+• **opts.verbose?**: `number`
+
+Whether to be verbose.
+
+**Default Value**
+
+`0`
+
+#### Returns
 
 [`NMF`](NMF.md)
 
-Defined in:  [generated/decomposition/NMF.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L25)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/decomposition/NMF.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L170)
-
-### fit()
-
-Learn a NMF model for the data X.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.params?` | `any` | Parameters (keyword arguments) and values passed to the fit\_transform instance. |
-| `opts.y?` | `any` | Not used, present for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/decomposition/NMF.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L187)
-
-### fit\_transform()
-
-Learn a NMF model for the data X and returns the transformed data.
-
-This is more efficient than calling fit followed by transform.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.H?` | [`ArrayLike`](../types/ArrayLike.md)[] | If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`. |
-| `opts.W?` | [`ArrayLike`](../types/ArrayLike.md)[] | If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`. |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.y?` | `any` | Not used, present for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
-
-Defined in:  [generated/decomposition/NMF.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L233)
-
-### get\_feature\_names\_out()
-
-Get output feature names for transformation.
-
-The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/decomposition/NMF.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L289)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/decomposition/NMF.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L324)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/decomposition/NMF.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L121)
-
-### inverse\_transform()
-
-Transform data back to its original space.
-
-#### Signature
-
-```ts
-inverse_transform(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.W?` | `any` | Use `Xt` instead. |
-| `opts.Xt?` | [`ArrayLike`](../types/ArrayLike.md) | Transformed data matrix. |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/decomposition/NMF.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L357)
-
-### set\_output()
-
-Set output container.
-
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
-
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/decomposition/NMF.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L397)
-
-### transform()
-
-Transform the data X according to the fitted NMF model.
-
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
-
-Defined in:  [generated/decomposition/NMF.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L430)
+[generated/decomposition/NMF.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/decomposition/NMF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L23)
+#### Defined in
+
+[generated/decomposition/NMF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L23)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/decomposition/NMF.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L22)
+#### Defined in
+
+[generated/decomposition/NMF.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L22)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/decomposition/NMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L21)
+#### Defined in
+
+[generated/decomposition/NMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L21)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/decomposition/NMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L18)
+#### Defined in
+
+[generated/decomposition/NMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L18)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/decomposition/NMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L19)
+#### Defined in
+
+[generated/decomposition/NMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L19)
 
 ## Accessors
 
 ### components\_
 
+#### Get Signature
+
+> **get** **components\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 Factorization matrix, sometimes called ‘dictionary’.
 
-#### Signature
+##### Returns
 
-```ts
-components_(): Promise<ArrayLike[]>;
-```
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-#### Returns
+#### Defined in
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+[generated/decomposition/NMF.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L437)
 
-Defined in:  [generated/decomposition/NMF.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L463)
-
-Defined in:  [generated/decomposition/NMF.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L463)
+***
 
 ### feature\_names\_in\_
 
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-#### Signature
+##### Returns
 
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-#### Returns
+#### Defined in
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+[generated/decomposition/NMF.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L553)
 
-Defined in:  [generated/decomposition/NMF.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L579)
-
-Defined in:  [generated/decomposition/NMF.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L579)
+***
 
 ### n\_components\_
 
+#### Get Signature
+
+> **get** **n\_components\_**(): `Promise`\<`number`\>
+
 The number of components. It is same as the `n\_components` parameter if it was given. Otherwise, it will be same as the number of features.
 
-#### Signature
-
-```ts
-n_components_(): Promise<number>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/NMF.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L486)
+#### Defined in
 
-Defined in:  [generated/decomposition/NMF.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L486)
+[generated/decomposition/NMF.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L460)
+
+***
 
 ### n\_features\_in\_
 
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
 Number of features seen during [fit](../../glossary.html#term-fit).
 
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/NMF.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L556)
+#### Defined in
 
-Defined in:  [generated/decomposition/NMF.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L556)
+[generated/decomposition/NMF.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L530)
+
+***
 
 ### n\_iter\_
 
+#### Get Signature
+
+> **get** **n\_iter\_**(): `Promise`\<`number`\>
+
 Actual number of iterations.
 
-#### Signature
-
-```ts
-n_iter_(): Promise<number>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/NMF.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L534)
+#### Defined in
 
-Defined in:  [generated/decomposition/NMF.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L534)
+[generated/decomposition/NMF.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L508)
+
+***
 
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/NMF.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L108)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in:  [generated/decomposition/NMF.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L112)
+#### Defined in
 
-Defined in:  [generated/decomposition/NMF.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L108) [generated/decomposition/NMF.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L112)
+[generated/decomposition/NMF.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L108)
+
+***
 
 ### reconstruction\_err\_
 
+#### Get Signature
+
+> **get** **reconstruction\_err\_**(): `Promise`\<`number`\>
+
 Frobenius norm of the matrix difference, or beta-divergence, between the training data `X` and the reconstructed data `WH` from the fitted model.
 
-#### Signature
-
-```ts
-reconstruction_err_(): Promise<number>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/NMF.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L509)
+#### Defined in
 
-Defined in:  [generated/decomposition/NMF.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/NMF.ts#L509)
+[generated/decomposition/NMF.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L483)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L159)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Learn a NMF model for the data X.
+
+#### Parameters
+
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters (keyword arguments) and values passed to the fit\_transform instance.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: `any`
+
+Not used, present for API consistency by convention.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L176)
+
+***
+
+### fit\_transform()
+
+> **fit\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
+Learn a NMF model for the data X and returns the transformed data.
+
+This is more efficient than calling fit followed by transform.
+
+#### Parameters
+
+• **opts**
+
+• **opts.H?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`.
+
+• **opts.W?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: `any`
+
+Not used, present for API consistency by convention.
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L219)
+
+***
+
+### get\_feature\_names\_out()
+
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
+Get output feature names for transformation.
+
+The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Parameters
+
+• **opts**
+
+• **opts.input\_features?**: `any`
+
+Only used to validate feature names with the names seen in `fit`.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L268)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Parameters
+
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L302)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L121)
+
+***
+
+### inverse\_transform()
+
+> **inverse\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
+Transform data back to its original space.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Transformed data matrix.
+
+• **opts.Xt?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Transformed data matrix.
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L334)
+
+***
+
+### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
+
+Set output container.
+
+See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Parameters
+
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L373)
+
+***
+
+### transform()
+
+> **transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
+Transform the data X according to the fitted NMF model.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
+#### Defined in
+
+[generated/decomposition/NMF.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/decomposition/NMF.ts#L405)

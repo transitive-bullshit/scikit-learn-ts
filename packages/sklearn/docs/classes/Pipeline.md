@@ -1,8 +1,12 @@
-# Pipeline
+[**sklearn**](../README.md) • **Docs**
 
-Pipeline of transforms with a final estimator.
+***
 
-Sequentially apply a list of transforms and a final estimator. Intermediate steps of the pipeline must be ‘transforms’, that is, they must implement `fit` and `transform` methods. The final estimator only needs to implement `fit`. The transformers in the pipeline can be cached using `memory` argument.
+A sequence of data transformers with an optional final predictor.
+
+`Pipeline` allows you to sequentially apply a list of transformers to preprocess the data and, if desired, conclude the sequence with a final [predictor](../../glossary.html#term-predictor) for predictive modeling.
+
+Intermediate steps of the pipeline must be ‘transforms’, that is, they must implement `fit` and `transform` methods. The final [estimator](../../glossary.html#term-estimator) only needs to implement `fit`. The transformers in the pipeline can be cached using `memory` argument.
 
 The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters. For this, it enables setting parameters of the various steps using their names and the parameter name separated by a `'\_\_'`, as in the example below. A step’s estimator may be replaced entirely by setting the parameter with its name to another estimator, or a transformer removed by setting it to `'passthrough'` or `undefined`.
 
@@ -14,410 +18,559 @@ Read more in the [User Guide](../compose.html#pipeline).
 
 ## Constructors
 
-## constructor()
+### new Pipeline()
 
-### Signature
+> **new Pipeline**(`opts`?): [`Pipeline`](Pipeline.md)
 
-```ts
-new Pipeline(opts?: object): Pipeline;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.memory?` | `string` | Used to cache the fitted transformers of the pipeline. The last step will never be cached, even if it is a transformer. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming. |
-| `opts.steps?` | `any` | List of (name, transform) tuples (implementing `fit`/`transform`) that are chained in sequential order. The last transform must be an estimator. |
-| `opts.verbose?` | `boolean` | If `true`, the time elapsed while fitting each step will be printed as it is completed.  `Default Value`  `false` |
+• **opts.memory?**: `string`
 
-### Returns
+Used to cache the fitted transformers of the pipeline. The last step will never be cached, even if it is a transformer. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
+
+• **opts.steps?**: `any`
+
+List of (name of step, estimator) tuples that are to be chained in sequential order. To be compatible with the scikit-learn API, all steps must define `fit`. All non-last steps must also define `transform`. See [Combining Estimators](../compose.html#combining-estimators) for more details.
+
+• **opts.verbose?**: `boolean`
+
+If `true`, the time elapsed while fitting each step will be printed as it is completed.
+
+**Default Value**
+
+`false`
+
+#### Returns
 
 [`Pipeline`](Pipeline.md)
 
-Defined in:  [generated/pipeline/Pipeline.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L29)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L31)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L29)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L28)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L27)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L24)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L25)
+
+## Accessors
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L53)
 
 ## Methods
 
 ### decision\_function()
 
+> **decision\_function**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 Transform the data, and apply `decision\_function` with the final estimator.
 
 Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `decision\_function` method. Only valid if the final estimator implements `decision\_function`.
 
-#### Signature
-
-```ts
-decision_function(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Data to predict on. Must fulfill input requirements of first step of the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+
+• **opts.X?**: `any`
+
+Data to predict on. Must fulfill input requirements of first step of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L124)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L123)
+
+***
 
 ### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L105)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L104)
+
+***
 
 ### fit()
 
+> **fit**(`opts`): `Promise`\<`any`\>
+
 Fit the model.
 
-Fit all the transformers one after the other and transform the data. Finally, fit the transformed data using the final estimator.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
+Fit all the transformers one after the other and sequentially transform the data. Finally, fit the transformed data using the final estimator.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Training data. Must fulfill input requirements of first step of the pipeline. |
-| `opts.fit_params?` | `any` | Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`. |
-| `opts.y?` | `any` | Training targets. Must fulfill label requirements for all steps of the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+If `enable\_metadata\_routing=False` (default):
+
+• **opts.X?**: `any`
+
+Training data. Must fulfill input requirements of first step of the pipeline.
+
+• **opts.y?**: `any`
+
+Training targets. Must fulfill label requirements for all steps of the pipeline.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L159)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L162)
+
+***
 
 ### fit\_predict()
+
+> **fit\_predict**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
 Transform the data, and apply `fit\_predict` with the final estimator.
 
 Call `fit\_transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `fit\_predict` method. Only valid if the final estimator implements `fit\_predict`.
 
-#### Signature
-
-```ts
-fit_predict(opts: object): Promise<ArrayLike>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Training data. Must fulfill input requirements of first step of the pipeline. |
-| `opts.fit_params?` | `any` | Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`. |
-| `opts.y?` | `any` | Training targets. Must fulfill label requirements for all steps of the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+If `enable\_metadata\_routing=False` (default):
+
+• **opts.X?**: `any`
+
+Training data. Must fulfill input requirements of first step of the pipeline.
+
+• **opts.y?**: `any`
+
+Training targets. Must fulfill label requirements for all steps of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L206)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L206)
+
+***
 
 ### fit\_transform()
 
+> **fit\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 Fit the model and transform with the final estimator.
 
-Fits all the transformers one after the other and transform the data. Then uses `fit\_transform` on transformed data with the final estimator.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<ArrayLike[]>;
-```
+Fit all the transformers one after the other and sequentially transform the data. Only valid if the final estimator either implements `fit\_transform` or `fit` and `transform`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Training data. Must fulfill input requirements of first step of the pipeline. |
-| `opts.fit_params?` | `any` | Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`. |
-| `opts.y?` | `any` | Training targets. Must fulfill label requirements for all steps of the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+If `enable\_metadata\_routing=False` (default):
+
+• **opts.X?**: `any`
+
+Training data. Must fulfill input requirements of first step of the pipeline.
+
+• **opts.y?**: `any`
+
+Training targets. Must fulfill label requirements for all steps of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L253)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L250)
+
+***
 
 ### get\_feature\_names\_out()
+
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
 
 Get output feature names for transformation.
 
 Transform input features using the pipeline.
 
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Input features. |
+• **opts**
+
+• **opts.input\_features?**: `any`
+
+Input features.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L300)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L294)
+
+***
 
 ### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
 Get metadata routing of this object.
 
 Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L337)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L330)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L64)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L66)
+
+***
 
 ### inverse\_transform()
+
+> **inverse\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
 Apply `inverse\_transform` for each step in a reverse order.
 
 All estimators in the pipeline must support `inverse\_transform`.
 
-#### Signature
-
-```ts
-inverse_transform(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.Xt?` | [`ArrayLike`](../types/ArrayLike.md)[] | Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method. |
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method.
+
+• **opts.Xt?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L372)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L364)
+
+***
 
 ### predict()
+
+> **predict**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
 Transform the data, and apply `predict` with the final estimator.
 
 Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict` method. Only valid if the final estimator implements `predict`.
 
-#### Signature
-
-```ts
-predict(opts: object): Promise<ArrayLike>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Data to predict on. Must fulfill input requirements of first step of the pipeline. |
-| `opts.predict_params?` | `any` | Parameters to the `predict` called at the end of all transformations in the pipeline. Note that while this may be used to return uncertainties from some models with return\_std or return\_cov, uncertainties that are generated by the transformations in the pipeline are not propagated to the final estimator. |
+• **opts**
+
+• **opts.params?**: `any`
+
+If `enable\_metadata\_routing=False` (default):
+
+• **opts.X?**: `any`
+
+Data to predict on. Must fulfill input requirements of first step of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L407)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L408)
+
+***
 
 ### predict\_log\_proba()
+
+> **predict\_log\_proba**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
 Transform the data, and apply `predict\_log\_proba` with the final estimator.
 
 Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict\_log\_proba` method. Only valid if the final estimator implements `predict\_log\_proba`.
 
-#### Signature
-
-```ts
-predict_log_proba(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Data to predict on. Must fulfill input requirements of first step of the pipeline. |
-| `opts.predict_log_proba_params?` | `any` | Parameters to the `predict\_log\_proba` called at the end of all transformations in the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+If `enable\_metadata\_routing=False` (default):
+
+• **opts.X?**: `any`
+
+Data to predict on. Must fulfill input requirements of first step of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L447)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L447)
+
+***
 
 ### predict\_proba()
+
+> **predict\_proba**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
 Transform the data, and apply `predict\_proba` with the final estimator.
 
 Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict\_proba` method. Only valid if the final estimator implements `predict\_proba`.
 
-#### Signature
-
-```ts
-predict_proba(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Data to predict on. Must fulfill input requirements of first step of the pipeline. |
-| `opts.predict_proba_params?` | `any` | Parameters to the `predict\_proba` called at the end of all transformations in the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+If `enable\_metadata\_routing=False` (default):
+
+• **opts.X?**: `any`
+
+Data to predict on. Must fulfill input requirements of first step of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L489)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L486)
+
+***
 
 ### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
 
 Transform the data, and apply `score` with the final estimator.
 
 Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `score` method. Only valid if the final estimator implements `score`.
 
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Data to predict on. Must fulfill input requirements of first step of the pipeline. |
-| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | If not `undefined`, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator. |
-| `opts.y?` | `any` | Targets used for scoring. Must fulfill label requirements for all steps of the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+
+• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+If not `undefined`, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator.
+
+• **opts.X?**: `any`
+
+Data to predict on. Must fulfill input requirements of first step of the pipeline.
+
+• **opts.y?**: `any`
+
+Targets used for scoring. Must fulfill label requirements for all steps of the pipeline.
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L529)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L525)
+
+***
 
 ### score\_samples()
+
+> **score\_samples**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
 Transform the data, and apply `score\_samples` with the final estimator.
 
 Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `score\_samples` method. Only valid if the final estimator implements `score\_samples`.
 
-#### Signature
-
-```ts
-score_samples(opts: object): Promise<ArrayLike>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Data to predict on. Must fulfill input requirements of first step of the pipeline. |
+• **opts**
+
+• **opts.X?**: `any`
+
+Data to predict on. Must fulfill input requirements of first step of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L576)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L574)
+
+***
 
 ### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
 
 Set the output container when `"transform"` and `"fit\_transform"` are called.
 
 Calling `set\_output` will set the output of all estimators in `steps`.
 
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L611)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L608)
+
+***
 
 ### set\_score\_request()
+
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `score` method.
 
@@ -425,26 +578,27 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+• **opts**
+
+• **opts.sample\_weight?**: `string` \| `boolean`
+
+Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L648)
+#### Defined in
+
+[generated/pipeline/Pipeline.ts:644](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L644)
+
+***
 
 ### transform()
+
+> **transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
 Transform the data, and apply `transform` with the final estimator.
 
@@ -452,89 +606,22 @@ Call `transform` of each transformer in the pipeline. The transformed data are f
 
 This also works where final estimator is `undefined` in which case all prior transformations are applied.
 
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Data to transform. Must fulfill input requirements of first step of the pipeline. |
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters requested and accepted by steps. Each step must have requested certain metadata for these parameters to be forwarded to them.
+
+• **opts.X?**: `any`
+
+Data to transform. Must fulfill input requirements of first step of the pipeline.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L685)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/pipeline/Pipeline.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L27)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/pipeline/Pipeline.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L26)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/pipeline/Pipeline.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L25)
-
-### id
-
-> `string`
-
-Defined in:  [generated/pipeline/Pipeline.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L22)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/pipeline/Pipeline.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L23)
-
-## Accessors
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/pipeline/Pipeline.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L51)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/pipeline/Pipeline.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L55)
-
-Defined in:  [generated/pipeline/Pipeline.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L51) [generated/pipeline/Pipeline.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/pipeline/Pipeline.ts#L55)
+[generated/pipeline/Pipeline.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/pipeline/Pipeline.ts#L680)

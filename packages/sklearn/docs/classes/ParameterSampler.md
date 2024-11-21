@@ -1,4 +1,6 @@
-# ParameterSampler
+[**sklearn**](../README.md) • **Docs**
+
+***
 
 Generator on parameters sampled from given distributions.
 
@@ -10,155 +12,166 @@ Read more in the [User Guide](../grid_search.html#grid-search).
 
 ## Constructors
 
-## constructor()
+### new ParameterSampler()
 
-### Signature
-
-```ts
-new ParameterSampler(opts?: object): ParameterSampler;
-```
-
-### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.n_iter?` | `number` | Number of parameter settings that are produced. |
-| `opts.param_distributions?` | `any` | Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above. |
-| `opts.random_state?` | `number` | Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
-
-### Returns
-
-[`ParameterSampler`](ParameterSampler.md)
-
-Defined in:  [generated/model\_selection/ParameterSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L25)
-
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/model\_selection/ParameterSampler.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L102)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
+> **new ParameterSampler**(`opts`?): [`ParameterSampler`](ParameterSampler.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **opts?**
+
+• **opts.n\_iter?**: `number`
+
+Number of parameter settings that are produced.
+
+• **opts.param\_distributions?**: `any`
+
+Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
+
+• **opts.random\_state?**: `number`
+
+Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
 #### Returns
 
-`Promise`\<`void`\>
+[`ParameterSampler`](ParameterSampler.md)
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L58)
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L23)
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L23)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L22)
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L22)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L21)
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L21)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L18)
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L18)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L19)
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L19)
 
 ## Accessors
 
 ### params
 
+#### Get Signature
+
+> **get** **params**(): `Promise`\<`any`\>
+
 *Yields** dictionaries mapping each estimator parameter to as sampled value.
 
-#### Signature
-
-```ts
-params(): Promise<any>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L119)
+#### Defined in
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L119)
+[generated/model\_selection/ParameterSampler.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L116)
+
+***
 
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L45)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L49)
+#### Defined in
 
-Defined in:  [generated/model\_selection/ParameterSampler.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L45) [generated/model\_selection/ParameterSampler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L49)
+[generated/model\_selection/ParameterSampler.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L45)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L99)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/model\_selection/ParameterSampler.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/ParameterSampler.ts#L58)

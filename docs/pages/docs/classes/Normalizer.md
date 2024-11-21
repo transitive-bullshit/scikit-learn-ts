@@ -1,4 +1,6 @@
-# Normalizer
+**sklearn** • **Docs**
+
+***
 
 Normalize samples individually to unit norm.
 
@@ -16,199 +18,337 @@ Read more in the User Guide.
 
 ## Constructors
 
-## constructor()
+### new Normalizer()
 
-### Signature
+> **new Normalizer**(`opts`?): [`Normalizer`](Normalizer.md)
 
-```ts
-new Normalizer(opts?: object): Normalizer;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.copy?` | `boolean` | Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).  `Default Value`  `true` |
-| `opts.norm?` | `"l1"` \| `"l2"` \| `"max"` | The norm to use to normalize each non zero sample. If norm=’max’ is used, values will be rescaled by the maximum of the absolute values.  `Default Value`  `'l2'` |
+• **opts.copy?**: `boolean`
 
-### Returns
+Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
+
+**Default Value**
+
+`true`
+
+• **opts.norm?**: `"l1"` \| `"l2"` \| `"max"`
+
+The norm to use to normalize each non zero sample. If norm=’max’ is used, values will be rescaled by the maximum of the absolute values.
+
+**Default Value**
+
+`'l2'`
+
+#### Returns
 
 [`Normalizer`](Normalizer.md)
 
-Defined in:  [generated/preprocessing/Normalizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L31)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L31)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L29)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L28)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L27)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L24)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L25)
+
+## Accessors
+
+### feature\_names\_in\_
+
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L406)
+
+***
+
+### n\_features\_in\_
+
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
+Number of features seen during fit.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L381)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L50)
 
 ## Methods
 
 ### dispose()
 
+> **dispose**(): `Promise`\<`void`\>
+
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L103)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L102)
+
+***
 
 ### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
 
 Only validates estimator’s parameters.
 
 This method allows to: (i) validate the estimator’s parameters and (ii) be consistent with the scikit-learn transformer API.
 
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | The data to estimate the normalization parameters. |
-| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+The data to estimate the normalization parameters.
+
+• **opts.y?**: `any`
+
+Not used, present here for API consistency by convention.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L122)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L121)
+
+***
 
 ### fit\_transform()
+
+> **fit\_transform**(`opts`): `Promise`\<`any`[]\>
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
 
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<any[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Input samples. |
-| `opts.fit_params?` | `any` | Additional fit parameters. |
-| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
+• **opts**
+
+• **opts.fit\_params?**: `any`
+
+Additional fit parameters.
+
+• **opts.X?**: `ArrayLike`[]
+
+Input samples.
+
+• **opts.y?**: `ArrayLike`
+
+Target values (`undefined` for unsupervised transformations).
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L162)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L160)
+
+***
 
 ### get\_feature\_names\_out()
 
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
 Get output feature names for transformation.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Input features. |
+• **opts**
+
+• **opts.input\_features?**: `any`
+
+Input features.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L209)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L202)
+
+***
 
 ### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
 Get metadata routing of this object.
 
 Please check User Guide on how the routing mechanism works.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L247)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L238)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L63)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L63)
+
+***
 
 ### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
 
 Set output container.
 
 See Introducing the set\_output API for an example on how to use the API.
 
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L284)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L274)
+
+***
 
 ### set\_transform\_request()
+
+> **set\_transform\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `transform` method.
 
@@ -216,143 +356,46 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_transform_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.copy?` | `string` \| `boolean` | Metadata routing for `copy` parameter in `transform`. |
+• **opts**
+
+• **opts.copy?**: `string` \| `boolean`
+
+Metadata routing for `copy` parameter in `transform`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L321)
+#### Defined in
+
+[generated/preprocessing/Normalizer.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L310)
+
+***
 
 ### transform()
 
+> **transform**(`opts`): `Promise`\<`ArrayLike`\>
+
 Scale each non zero row of X to unit norm.
 
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | The data to normalize, row by row. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy. |
-| `opts.copy?` | `boolean` | Copy the input X or not. |
+• **opts**
+
+• **opts.copy?**: `boolean`
+
+Copy the input X or not.
+
+• **opts.X?**: `ArrayLike`
+
+The data to normalize, row by row. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L356)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/preprocessing/Normalizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L29)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/preprocessing/Normalizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L28)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/preprocessing/Normalizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L27)
-
-### id
-
-> `string`
-
-Defined in:  [generated/preprocessing/Normalizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L24)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/preprocessing/Normalizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L25)
-
-## Accessors
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/preprocessing/Normalizer.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L421)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/preprocessing/Normalizer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L396)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/preprocessing/Normalizer.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L50)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/preprocessing/Normalizer.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L54)
+[generated/preprocessing/Normalizer.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L344)

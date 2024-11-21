@@ -1,4 +1,6 @@
-# BaggingClassifier
+**sklearn** • **Docs**
+
+***
 
 A Bagging classifier.
 
@@ -12,258 +14,581 @@ Read more in the User Guide.
 
 ## Constructors
 
-## constructor()
+### new BaggingClassifier()
 
-### Signature
+> **new BaggingClassifier**(`opts`?): [`BaggingClassifier`](BaggingClassifier.md)
 
-```ts
-new BaggingClassifier(opts?: object): BaggingClassifier;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.base_estimator?` | `any` | Use `estimator` instead.  `Default Value`  `'deprecated'` |
-| `opts.bootstrap?` | `boolean` | Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.  `Default Value`  `true` |
-| `opts.bootstrap_features?` | `boolean` | Whether features are drawn with replacement.  `Default Value`  `false` |
-| `opts.estimator?` | `any` | The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier"). |
-| `opts.max_features?` | `number` | The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).  `Default Value`  `1` |
-| `opts.max_samples?` | `number` | The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).  `Default Value`  `1` |
-| `opts.n_estimators?` | `number` | The number of base estimators in the ensemble.  `Default Value`  `10` |
-| `opts.n_jobs?` | `number` | The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
-| `opts.oob_score?` | `boolean` | Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.  `Default Value`  `false` |
-| `opts.random_state?` | `number` | Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See Glossary. |
-| `opts.verbose?` | `number` | Controls the verbosity when fitting and predicting.  `Default Value`  `0` |
-| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See the Glossary.  `Default Value`  `false` |
+• **opts.bootstrap?**: `boolean`
 
-### Returns
+Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.
+
+**Default Value**
+
+`true`
+
+• **opts.bootstrap\_features?**: `boolean`
+
+Whether features are drawn with replacement.
+
+**Default Value**
+
+`false`
+
+• **opts.estimator?**: `any`
+
+The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier").
+
+• **opts.max\_features?**: `number`
+
+The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).
+
+**Default Value**
+
+`1`
+
+• **opts.max\_samples?**: `number`
+
+The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).
+
+**Default Value**
+
+`1`
+
+• **opts.n\_estimators?**: `number`
+
+The number of base estimators in the ensemble.
+
+**Default Value**
+
+`10`
+
+• **opts.n\_jobs?**: `number`
+
+The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See Glossary for more details.
+
+• **opts.oob\_score?**: `boolean`
+
+Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.
+
+**Default Value**
+
+`false`
+
+• **opts.random\_state?**: `number`
+
+Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See Glossary.
+
+• **opts.verbose?**: `number`
+
+Controls the verbosity when fitting and predicting.
+
+**Default Value**
+
+`0`
+
+• **opts.warm\_start?**: `boolean`
+
+When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See the Glossary.
+
+**Default Value**
+
+`false`
+
+#### Returns
 
 [`BaggingClassifier`](BaggingClassifier.md)
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L27)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L27)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L25)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L24)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L23)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L20)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L21)
+
+## Accessors
+
+### classes\_
+
+#### Get Signature
+
+> **get** **classes\_**(): `Promise`\<`ArrayLike`\>
+
+The classes labels.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L670)
+
+***
+
+### estimator\_
+
+#### Get Signature
+
+> **get** **estimator\_**(): `Promise`\<`any`\>
+
+The base estimator from which the ensemble is grown.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L535)
+
+***
+
+### estimators\_
+
+#### Get Signature
+
+> **get** **estimators\_**(): `Promise`\<`any`\>
+
+The collection of fitted base estimators.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L616)
+
+***
+
+### estimators\_features\_
+
+#### Get Signature
+
+> **get** **estimators\_features\_**(): `Promise`\<`any`\>
+
+The subset of drawn features for each base estimator.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L643)
+
+***
+
+### feature\_names\_in\_
+
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L589)
+
+***
+
+### n\_classes\_
+
+#### Get Signature
+
+> **get** **n\_classes\_**(): `Promise`\<`number` \| `any`[]\>
+
+The number of classes.
+
+##### Returns
+
+`Promise`\<`number` \| `any`[]\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L697)
+
+***
+
+### n\_features\_in\_
+
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
+Number of features seen during fit.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L562)
+
+***
+
+### oob\_decision\_function\_
+
+#### Get Signature
+
+> **get** **oob\_decision\_function\_**(): `Promise`\<`ArrayLike`[]\>
+
+Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is `true`.
+
+##### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L751)
+
+***
+
+### oob\_score\_
+
+#### Get Signature
+
+> **get** **oob\_score\_**(): `Promise`\<`number`\>
+
+Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L724)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L103)
 
 ## Methods
 
 ### decision\_function()
 
+> **decision\_function**(`opts`): `Promise`\<`ArrayLike`[]\>
+
 Average of the decision functions of the base classifiers.
-
-#### Signature
-
-```ts
-decision_function(opts: object): Promise<ArrayLike[]>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | The training input samples. Sparse matrices are accepted only if they are supported by the base estimator. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L198)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L174)
+
+***
 
 ### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L181)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L157)
+
+***
 
 ### fit()
 
+> **fit**(`opts`): `Promise`\<`any`\>
+
 Build a Bagging ensemble of estimators from the training set (X, y).
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | The training input samples. Sparse matrices are accepted only if they are supported by the base estimator. |
-| `opts.sample_weight?` | `ArrayLike` | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting. |
-| `opts.y?` | `ArrayLike` | The target values (class labels in classification, real numbers in regression). |
+• **opts**
+
+• **opts.fit\_params?**: `any`
+
+Parameters to pass to the underlying estimators.
+
+• **opts.sample\_weight?**: `ArrayLike`
+
+Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
+
+• **opts.X?**: `ArrayLike`
+
+The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+
+• **opts.y?**: `ArrayLike`
+
+The target values (class labels in classification, real numbers in regression).
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L236)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L210)
+
+***
 
 ### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
 Get metadata routing of this object.
 
 Please check User Guide on how the routing mechanism works.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L287)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L261)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L123)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L116)
+
+***
 
 ### predict()
+
+> **predict**(`opts`): `Promise`\<`ArrayLike`\>
 
 Predict class for X.
 
 The predicted class of an input sample is computed as the class with the highest mean predicted probability. If base estimators do not implement a `predict\_proba` method, then it resorts to voting.
 
-#### Signature
-
-```ts
-predict(opts: object): Promise<ArrayLike>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | The training input samples. Sparse matrices are accepted only if they are supported by the base estimator. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L327)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L299)
+
+***
 
 ### predict\_log\_proba()
+
+> **predict\_log\_proba**(`opts`): `Promise`\<`ArrayLike`[]\>
 
 Predict class log-probabilities for X.
 
 The predicted class log-probabilities of an input sample is computed as the log of the mean predicted class probabilities of the base estimators in the ensemble.
 
-#### Signature
-
-```ts
-predict_log_proba(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | The training input samples. Sparse matrices are accepted only if they are supported by the base estimator. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L364)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L335)
+
+***
 
 ### predict\_proba()
+
+> **predict\_proba**(`opts`): `Promise`\<`ArrayLike`[]\>
 
 Predict class probabilities for X.
 
 The predicted class probabilities of an input sample is computed as the mean predicted class probabilities of the base estimators in the ensemble. If base estimators do not implement a `predict\_proba` method, then it resorts to voting and the predicted class probabilities of an input sample represents the proportion of estimators predicting each class.
 
-#### Signature
-
-```ts
-predict_proba(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | The training input samples. Sparse matrices are accepted only if they are supported by the base estimator. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L404)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L373)
+
+***
 
 ### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
 
 Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Test samples. |
-| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
-| `opts.y?` | `ArrayLike` | True labels for `X`. |
+• **opts**
+
+• **opts.sample\_weight?**: `ArrayLike`
+
+Sample weights.
+
+• **opts.X?**: `ArrayLike`[]
+
+Test samples.
+
+• **opts.y?**: `ArrayLike`
+
+True labels for `X`.
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L443)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L411)
+
+***
 
 ### set\_fit\_request()
+
+> **set\_fit\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `fit` method.
 
@@ -271,26 +596,27 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_fit_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `fit`. |
+• **opts**
+
+• **opts.sample\_weight?**: `string` \| `boolean`
+
+Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L496)
+#### Defined in
+
+[generated/ensemble/BaggingClassifier.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L459)
+
+***
 
 ### set\_score\_request()
+
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `score` method.
 
@@ -298,231 +624,18 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+• **opts**
+
+• **opts.sample\_weight?**: `string` \| `boolean`
+
+Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L538)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/BaggingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L25)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/BaggingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L24)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/ensemble/BaggingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L23)
-
-### id
-
-> `string`
-
-Defined in:  [generated/ensemble/BaggingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L20)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/ensemble/BaggingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L21)
-
-## Accessors
-
-### classes\_
-
-The classes labels.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L711)
-
-### estimator\_
-
-The base estimator from which the ensemble is grown.
-
-#### Signature
-
-```ts
-estimator_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L576)
-
-### estimators\_
-
-The collection of fitted base estimators.
-
-#### Signature
-
-```ts
-estimators_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L657)
-
-### estimators\_features\_
-
-The subset of drawn features for each base estimator.
-
-#### Signature
-
-```ts
-estimators_features_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L684)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:630](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L630)
-
-### n\_classes\_
-
-The number of classes.
-
-#### Signature
-
-```ts
-n_classes_(): Promise<number | any[]>;
-```
-
-#### Returns
-
-`Promise`\<`number` \| `any`[]\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L738)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L603)
-
-### oob\_decision\_function\_
-
-Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is `true`.
-
-#### Signature
-
-```ts
-oob_decision_function_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:792](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L792)
-
-### oob\_score\_
-
-Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
-
-#### Signature
-
-```ts
-oob_score_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:765](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L765)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/ensemble/BaggingClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L110)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/ensemble/BaggingClassifier.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L114)
+[generated/ensemble/BaggingClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L499)

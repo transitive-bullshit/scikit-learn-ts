@@ -1,4 +1,6 @@
-# StackingRegressor
+[**sklearn**](../README.md) • **Docs**
+
+***
 
 Stack of estimators with a final regressor.
 
@@ -12,226 +14,439 @@ Read more in the [User Guide](../ensemble.html#stacking).
 
 ## Constructors
 
-## constructor()
+### new StackingRegressor()
 
-### Signature
+> **new StackingRegressor**(`opts`?): [`StackingRegressor`](StackingRegressor.md)
 
-```ts
-new StackingRegressor(opts?: object): StackingRegressor;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.cv?` | `number` \| `"prefit"` | Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are: |
-| `opts.estimators?` | `any` | Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`. |
-| `opts.final_estimator?` | `any` | A regressor which will be used to combine the base estimators. The default regressor is a [`RidgeCV`](sklearn.linear_model.RidgeCV.html#sklearn.linear_model.RidgeCV "sklearn.linear_model.RidgeCV"). |
-| `opts.n_jobs?` | `number` | The number of jobs to run in parallel for `fit` of all `estimators`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details. |
-| `opts.passthrough?` | `boolean` | When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.  `Default Value`  `false` |
-| `opts.verbose?` | `number` | Verbosity level.  `Default Value`  `0` |
+• **opts.cv?**: `number` \| `"prefit"`
 
-### Returns
+Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are:
+
+• **opts.estimators?**: `any`
+
+Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.
+
+• **opts.final\_estimator?**: `any`
+
+A regressor which will be used to combine the base estimators. The default regressor is a [`RidgeCV`](sklearn.linear_model.RidgeCV.html#sklearn.linear_model.RidgeCV "sklearn.linear_model.RidgeCV").
+
+• **opts.n\_jobs?**: `number`
+
+The number of jobs to run in parallel for `fit` of all `estimators`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
+
+• **opts.passthrough?**: `boolean`
+
+When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.
+
+**Default Value**
+
+`false`
+
+• **opts.verbose?**: `number`
+
+Verbosity level.
+
+**Default Value**
+
+`0`
+
+#### Returns
 
 [`StackingRegressor`](StackingRegressor.md)
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L27)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L27)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L25)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L24)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L23)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L20)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L21)
+
+## Accessors
+
+### estimators\_
+
+#### Get Signature
+
+> **get** **estimators\_**(): `Promise`\<`any`\>
+
+The elements of the `estimators` parameter, having been fitted on the training data. If an estimator has been set to `'drop'`, it will not appear in `estimators\_`. When `cv="prefit"`, `estimators\_` is set to `estimators` and is not fitted again.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L530)
+
+***
+
+### feature\_names\_in\_
+
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
+
+##### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L584)
+
+***
+
+### final\_estimator\_
+
+#### Get Signature
+
+> **get** **final\_estimator\_**(): `Promise`\<`any`\>
+
+The regressor to stacked the base estimators fitted.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L611)
+
+***
+
+### named\_estimators\_
+
+#### Get Signature
+
+> **get** **named\_estimators\_**(): `Promise`\<`any`\>
+
+Attribute to access any fitted sub-estimators by name.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L557)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L66)
+
+***
+
+### stack\_method\_
+
+#### Get Signature
+
+> **get** **stack\_method\_**(): `Promise`\<`any`\>
+
+The method used by each base estimator.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L638)
 
 ## Methods
 
 ### dispose()
 
+> **dispose**(): `Promise`\<`void`\>
+
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L125)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L120)
+
+***
 
 ### fit()
 
+> **fit**(`opts`): `Promise`\<`any`\>
+
 Fit the estimators.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
+• **opts**
+
+• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Target values.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L142)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L137)
+
+***
 
 ### fit\_transform()
 
+> **fit\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 Fit the estimators and return the predictions for X for each estimator.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<ArrayLike[]>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
+• **opts**
+
+• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Target values.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L191)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L181)
+
+***
 
 ### get\_feature\_names\_out()
 
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
 Get output feature names for transformation.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Input features. The input feature names are only used when `passthrough` is `true`. |
+• **opts**
+
+• **opts.input\_features?**: `any`
+
+Input features. The input feature names are only used when `passthrough` is `true`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L242)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L227)
+
+***
 
 ### get\_metadata\_routing()
 
-Get metadata routing of this object.
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Raise `NotImplementedError`.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
+This estimator does not support metadata routing yet.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts**
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L282)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L265)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L79)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L79)
+
+***
 
 ### predict()
 
+> **predict**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
 Predict target for X.
-
-#### Signature
-
-```ts
-predict(opts: object): Promise<ArrayLike>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.predict_params?` | `any` | Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator. |
+• **opts**
+
+• **opts.predict\_params?**: `any`
+
+Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L320)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L295)
+
+***
 
 ### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
-| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
+• **opts**
+
+• **opts.sample\_weight?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Sample weights.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+True values for `X`.
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L364)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L336)
+
+***
 
 ### set\_fit\_request()
+
+> **set\_fit\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `fit` method.
 
@@ -239,51 +454,53 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_fit_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `fit`. |
+• **opts**
+
+• **opts.sample\_weight?**: `string` \| `boolean`
+
+Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L417)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L384)
+
+***
 
 ### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L457)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L422)
+
+***
 
 ### set\_score\_request()
+
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `score` method.
 
@@ -291,202 +508,42 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+• **opts**
+
+• **opts.sample\_weight?**: `string` \| `boolean`
+
+Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L496)
+#### Defined in
+
+[generated/ensemble/StackingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L460)
+
+***
 
 ### transform()
 
+> **transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 Return the predictions for X for each estimator.
 
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+• **opts**
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L534)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L25)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L24)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L23)
-
-### id
-
-> `string`
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L20)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L21)
-
-## Accessors
-
-### estimators\_
-
-The elements of the `estimators` parameter, having been fitted on the training data. If an estimator has been set to `'drop'`, it will not appear in `estimators\_`. When `cv="prefit"`, `estimators\_` is set to `estimators` and is not fitted again.
-
-#### Signature
-
-```ts
-estimators_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L569)
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L569)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L623)
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L623)
-
-### final\_estimator\_
-
-The regressor to stacked the base estimators fitted.
-
-#### Signature
-
-```ts
-final_estimator_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L650)
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L650)
-
-### named\_estimators\_
-
-Attribute to access any fitted sub-estimators by name.
-
-#### Signature
-
-```ts
-named_estimators_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L596)
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L596)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L66)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L70)
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L66) [generated/ensemble/StackingRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L70)
-
-### stack\_method\_
-
-The method used by each base estimator.
-
-#### Signature
-
-```ts
-stack_method_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L677)
-
-Defined in:  [generated/ensemble/StackingRegressor.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L677)
+[generated/ensemble/StackingRegressor.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L496)

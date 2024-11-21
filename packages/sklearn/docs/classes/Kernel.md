@@ -1,4 +1,6 @@
-# Kernel
+[**sklearn**](../README.md) • **Docs**
+
+***
 
 Base class for all kernels.
 
@@ -6,226 +8,230 @@ Base class for all kernels.
 
 ## Constructors
 
-## constructor()
+### new Kernel()
 
-### Signature
+> **new Kernel**(`opts`?): [`Kernel`](Kernel.md)
 
-```ts
-new Kernel(opts?: object): Kernel;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `object` |
+• **opts.bounds?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
 
-### Returns
+The log-transformed bounds on the kernel’s hyperparameters theta
+
+#### Returns
 
 [`Kernel`](Kernel.md)
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L21)
+#### Defined in
 
-## Methods
-
-### \_\_call\_\_()
-
-Evaluate the kernel.
-
-#### Signature
-
-```ts
-__call__(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opts` | `object` |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L93)
-
-### clone\_with\_theta()
-
-Returns a clone of self with given hyperparameters theta.
-
-#### Signature
-
-```ts
-clone_with_theta(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.theta?` | [`ArrayLike`](../types/ArrayLike.md) | The hyperparameters |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L119)
-
-### diag()
-
-Returns the diagonal of the kernel k(X, X).
-
-The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
-
-#### Signature
-
-```ts
-diag(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Left argument of the returned kernel k(X, Y) |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L154)
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L76)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L39)
-
-### is\_stationary()
-
-Returns whether the kernel is stationary.
-
-#### Signature
-
-```ts
-is_stationary(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opts` | `object` |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L187)
+[generated/gaussian\_process/kernels/Kernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L21)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L19)
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L19)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L18)
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L18)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L17)
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L17)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L14)
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L14)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L15)
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L15)
 
 ## Accessors
 
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L26)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L30)
+#### Defined in
 
-Defined in:  [generated/gaussian\_process/kernels/Kernel.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L26) [generated/gaussian\_process/kernels/Kernel.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L30)
+[generated/gaussian\_process/kernels/Kernel.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L31)
+
+## Methods
+
+### \_\_call\_\_()
+
+> **\_\_call\_\_**(`opts`): `Promise`\<`any`\>
+
+Evaluate the kernel.
+
+#### Parameters
+
+• **opts**
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L99)
+
+***
+
+### clone\_with\_theta()
+
+> **clone\_with\_theta**(`opts`): `Promise`\<`any`\>
+
+Returns a clone of self with given hyperparameters theta.
+
+#### Parameters
+
+• **opts**
+
+• **opts.theta?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+The hyperparameters
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L125)
+
+***
+
+### diag()
+
+> **diag**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+Returns the diagonal of the kernel k(X, X).
+
+The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Left argument of the returned kernel k(X, Y)
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L159)
+
+***
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L82)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L44)
+
+***
+
+### is\_stationary()
+
+> **is\_stationary**(`opts`): `Promise`\<`any`\>
+
+Returns whether the kernel is stationary.
+
+#### Parameters
+
+• **opts**
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/Kernel.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/Kernel.ts#L191)

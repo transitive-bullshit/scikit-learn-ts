@@ -1,6 +1,8 @@
-# LeaveOneOut
+**sklearn** • **Docs**
 
-Leave-One-Out cross-validator
+***
+
+Leave-One-Out cross-validator.
 
 Provides train/test indices to split data in train/test sets. Each sample is used once as a test set (singleton) while the remaining samples form the training set.
 
@@ -14,208 +16,230 @@ Read more in the User Guide.
 
 ## Constructors
 
-## constructor()
+### new LeaveOneOut()
 
-### Signature
+> **new LeaveOneOut**(`opts`?): [`LeaveOneOut`](LeaveOneOut.md)
 
-```ts
-new LeaveOneOut(opts?: object): LeaveOneOut;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts.routing?**: `any`
 
-### Returns
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+#### Returns
 
 [`LeaveOneOut`](LeaveOneOut.md)
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L29)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L92)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L111)
-
-### get\_n\_splits()
-
-Returns the number of splitting iterations in the cross-validator
-
-#### Signature
-
-```ts
-get_n_splits(opts: object): Promise<number>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
-| `opts.y?` | `any` | Always ignored, exists for compatibility. |
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L146)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L52)
-
-### split()
-
-Generate indices to split data into training and test set.
-
-#### Signature
-
-```ts
-split(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.groups?` | `ArrayLike` | Group labels for the samples used while splitting the dataset into train/test set. |
-| `opts.y?` | `ArrayLike` | The target variable for supervised learning problems. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L191)
+[generated/model\_selection/LeaveOneOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L27)
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L27)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L26)
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L26)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L25)
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L25)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L22)
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L22)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L23)
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L23)
 
 ## Accessors
 
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L39)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in: [generated/model\_selection/LeaveOneOut.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L43)
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L39)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L91)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check User Guide on how the routing mechanism works.
+
+#### Parameters
+
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L110)
+
+***
+
+### get\_n\_splits()
+
+> **get\_n\_splits**(`opts`): `Promise`\<`number`\>
+
+Returns the number of splitting iterations in the cross-validator.
+
+#### Parameters
+
+• **opts**
+
+• **opts.groups?**: `any`
+
+Always ignored, exists for compatibility.
+
+• **opts.X?**: `ArrayLike`[]
+
+Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: `any`
+
+Always ignored, exists for compatibility.
+
+#### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L144)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L52)
+
+***
+
+### split()
+
+> **split**(`opts`): `Promise`\<`ArrayLike`\>
+
+Generate indices to split data into training and test set.
+
+#### Parameters
+
+• **opts**
+
+• **opts.groups?**: `any`
+
+Always ignored, exists for compatibility.
+
+• **opts.X?**: `ArrayLike`[]
+
+Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: `ArrayLike`
+
+The target variable for supervised learning problems.
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/model\_selection/LeaveOneOut.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L186)

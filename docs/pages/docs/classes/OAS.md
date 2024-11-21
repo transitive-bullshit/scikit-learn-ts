@@ -1,6 +1,8 @@
-# OAS
+**sklearn** • **Docs**
 
-Oracle Approximating Shrinkage Estimator as proposed in [\[1\]](#r69773891e6a6-1).
+***
+
+Oracle Approximating Shrinkage Estimator.
 
 Read more in the User Guide.
 
@@ -8,220 +10,449 @@ Read more in the User Guide.
 
 ## Constructors
 
-## constructor()
+### new OAS()
 
-### Signature
+> **new OAS**(`opts`?): [`OAS`](OAS.md)
 
-```ts
-new OAS(opts?: object): OAS;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.assume_centered?` | `boolean` | If `true`, data will not be centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false` (default), data will be centered before computation.  `Default Value`  `false` |
-| `opts.store_precision?` | `boolean` | Specify if the estimated precision is stored.  `Default Value`  `true` |
+• **opts.assume\_centered?**: `boolean`
 
-### Returns
+If `true`, data will not be centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false` (default), data will be centered before computation.
+
+**Default Value**
+
+`false`
+
+• **opts.store\_precision?**: `boolean`
+
+Specify if the estimated precision is stored.
+
+**Default Value**
+
+`true`
+
+#### Returns
 
 [`OAS`](OAS.md)
 
-Defined in:  [generated/covariance/OAS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L23)
+#### Defined in
+
+[generated/covariance/OAS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L23)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/covariance/OAS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L21)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/covariance/OAS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L20)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/covariance/OAS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L19)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/covariance/OAS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L16)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/covariance/OAS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L17)
+
+## Accessors
+
+### covariance\_
+
+#### Get Signature
+
+> **get** **covariance\_**(): `Promise`\<`ArrayLike`[]\>
+
+Estimated covariance matrix.
+
+##### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+#### Defined in
+
+[generated/covariance/OAS.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L372)
+
+***
+
+### feature\_names\_in\_
+
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/covariance/OAS.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L484)
+
+***
+
+### location\_
+
+#### Get Signature
+
+> **get** **location\_**(): `Promise`\<`ArrayLike`\>
+
+Estimated location, i.e. the estimated mean.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/covariance/OAS.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L395)
+
+***
+
+### n\_features\_in\_
+
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
+Number of features seen during fit.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/covariance/OAS.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L461)
+
+***
+
+### precision\_
+
+#### Get Signature
+
+> **get** **precision\_**(): `Promise`\<`ArrayLike`[]\>
+
+Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
+
+##### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+#### Defined in
+
+[generated/covariance/OAS.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L417)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/covariance/OAS.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L42)
+
+***
+
+### shrinkage\_
+
+#### Get Signature
+
+> **get** **shrinkage\_**(): `Promise`\<`number`\>
+
+coefficient in the convex combination used for the computation of the shrunk estimate. Range is \[0, 1\].
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/covariance/OAS.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L439)
 
 ## Methods
 
 ### dispose()
 
+> **dispose**(): `Promise`\<`void`\>
+
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/OAS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L94)
+#### Defined in
+
+[generated/covariance/OAS.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L93)
+
+***
 
 ### error\_norm()
 
+> **error\_norm**(`opts`): `Promise`\<`number`\>
+
 Compute the Mean Squared Error between two covariance estimators.
-
-#### Signature
-
-```ts
-error_norm(opts: object): Promise<number>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.comp_cov?` | `ArrayLike`[] | The covariance to compare with. |
-| `opts.norm?` | `"frobenius"` \| `"spectral"` | The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.  `Default Value`  `'frobenius'` |
-| `opts.scaling?` | `boolean` | If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.  `Default Value`  `true` |
-| `opts.squared?` | `boolean` | Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.  `Default Value`  `true` |
+• **opts**
+
+• **opts.comp\_cov?**: `ArrayLike`[]
+
+The covariance to compare with.
+
+• **opts.norm?**: `"frobenius"` \| `"spectral"`
+
+The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+
+**Default Value**
+
+`'frobenius'`
+
+• **opts.scaling?**: `boolean`
+
+If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+
+**Default Value**
+
+`true`
+
+• **opts.squared?**: `boolean`
+
+Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
+
+**Default Value**
+
+`true`
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/OAS.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L111)
+#### Defined in
+
+[generated/covariance/OAS.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L110)
+
+***
 
 ### fit()
 
+> **fit**(`opts`): `Promise`\<`any`\>
+
 Fit the Oracle Approximating Shrinkage covariance model to X.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.y?` | `any` | Not used, present for API consistency by convention. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`[]
+
+Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: `any`
+
+Not used, present for API consistency by convention.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/OAS.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L169)
+#### Defined in
+
+[generated/covariance/OAS.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L163)
+
+***
 
 ### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
 Get metadata routing of this object.
 
 Please check User Guide on how the routing mechanism works.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/OAS.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L208)
+#### Defined in
+
+[generated/covariance/OAS.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L201)
+
+***
 
 ### get\_precision()
 
+> **get\_precision**(`opts`): `Promise`\<`any`\>
+
 Getter for the precision matrix.
-
-#### Signature
-
-```ts
-get_precision(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.precision_?` | `ArrayLike`[] | The precision matrix associated to the current covariance object. |
+• **opts**
+
+• **opts.precision\_?**: `ArrayLike`[]
+
+The precision matrix associated to the current covariance object.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/OAS.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L241)
+#### Defined in
+
+[generated/covariance/OAS.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L233)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/OAS.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L55)
+#### Defined in
+
+[generated/covariance/OAS.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L55)
+
+***
 
 ### mahalanobis()
 
+> **mahalanobis**(`opts`): `Promise`\<`ArrayLike`\>
+
 Compute the squared Mahalanobis distances of given observations.
-
-#### Signature
-
-```ts
-mahalanobis(opts: object): Promise<ArrayLike>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit. |
+• **opts**
+
+• **opts.X?**: `ArrayLike`[]
+
+The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/OAS.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L274)
+#### Defined in
+
+[generated/covariance/OAS.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L265)
+
+***
 
 ### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
 
 Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
 
 The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
 
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X_test?` | `ArrayLike`[] | Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering). |
-| `opts.y?` | `any` | Not used, present for API consistency by convention. |
+• **opts**
+
+• **opts.X\_test?**: `ArrayLike`[]
+
+Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+
+• **opts.y?**: `any`
+
+Not used, present for API consistency by convention.
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/OAS.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L309)
+#### Defined in
+
+[generated/covariance/OAS.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L299)
+
+***
 
 ### set\_score\_request()
+
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `score` method.
 
@@ -229,183 +460,18 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X_test?` | `string` \| `boolean` | Metadata routing for `X\_test` parameter in `score`. |
+• **opts**
+
+• **opts.X\_test?**: `string` \| `boolean`
+
+Metadata routing for `X\_test` parameter in `score`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/OAS.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L353)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/covariance/OAS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/covariance/OAS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/covariance/OAS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/covariance/OAS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/covariance/OAS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L17)
-
-## Accessors
-
-### covariance\_
-
-Estimated covariance matrix.
-
-#### Signature
-
-```ts
-covariance_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in: [generated/covariance/OAS.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L386)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/covariance/OAS.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L498)
-
-### location\_
-
-Estimated location, i.e. the estimated mean.
-
-#### Signature
-
-```ts
-location_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/covariance/OAS.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L409)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/covariance/OAS.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L475)
-
-### precision\_
-
-Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
-
-#### Signature
-
-```ts
-precision_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in: [generated/covariance/OAS.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L431)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/covariance/OAS.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L42)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/covariance/OAS.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L46)
-
-### shrinkage\_
-
-coefficient in the convex combination used for the computation of the shrunk estimate. Range is \[0, 1\].
-
-#### Signature
-
-```ts
-shrinkage_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/covariance/OAS.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/covariance/OAS.ts#L453)
+[generated/covariance/OAS.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/covariance/OAS.ts#L340)

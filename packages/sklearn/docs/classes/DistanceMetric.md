@@ -1,4 +1,6 @@
-# DistanceMetric
+[**sklearn**](../README.md) • **Docs**
+
+***
 
 Uniform interface for fast distance metric functions.
 
@@ -14,182 +16,200 @@ Examples
 
 ## Constructors
 
-## constructor()
+### new DistanceMetric()
 
-### Signature
+> **new DistanceMetric**(`opts`?): [`DistanceMetric`](DistanceMetric.md)
 
-```ts
-new DistanceMetric(opts?: object): DistanceMetric;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.dtype?` | `any` | The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`. |
-| `opts.kwargs?` | `any` | Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric. |
-| `opts.metric?` | `string` | The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics. |
+• **opts.dtype?**: `any`
 
-### Returns
+The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`.
+
+• **opts.kwargs?**: `any`
+
+Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric.
+
+• **opts.metric?**: `string`
+
+The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics.
+
+#### Returns
 
 [`DistanceMetric`](DistanceMetric.md)
 
-Defined in:  [generated/metrics/DistanceMetric.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L29)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/metrics/DistanceMetric.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L104)
-
-### get\_metric()
-
-Get the given distance metric from the string identifier.
-
-See the docstring of DistanceMetric for a list of available metrics.
-
-#### Signature
-
-```ts
-get_metric(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.dtype?` | `any` | The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`. |
-| `opts.kwargs?` | `any` | Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric. |
-| `opts.metric?` | `string` | The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/DistanceMetric.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L123)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/metrics/DistanceMetric.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L62)
+[generated/metrics/DistanceMetric.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L27)
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L27)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L26)
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L26)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
 
 ## Accessors
 
 ### metric\_obj
 
+#### Get Signature
+
+> **get** **metric\_obj**(): `Promise`\<`any`\>
+
 An instance of the requested distance metric class.
 
-#### Signature
+##### Returns
 
-```ts
-metric_obj(): Promise<any>;
-```
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L162)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/metrics/DistanceMetric.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L101)
+
+***
+
+### get\_metric()
+
+> **get\_metric**(`opts`): `Promise`\<`any`\>
+
+Get the given distance metric from the string identifier.
+
+See the docstring of DistanceMetric for a list of available metrics.
+
+#### Parameters
+
+• **opts**
+
+• **opts.dtype?**: `any`
+
+The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`.
+
+• **opts.kwargs?**: `any`
+
+Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric.
+
+• **opts.metric?**: `string`
+
+The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L168)
+#### Defined in
 
-Defined in:  [generated/metrics/DistanceMetric.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L168)
+[generated/metrics/DistanceMetric.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L120)
 
-### py
+***
 
-#### Signature
+### init()
 
-```ts
-py(): PythonBridge;
-```
+> **init**(`py`): `Promise`\<`void`\>
 
-#### Returns
+Initializes the underlying Python resources.
 
-`PythonBridge`
-
-Defined in:  [generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L53)
+#### Defined in
 
-Defined in:  [generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49) [generated/metrics/DistanceMetric.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L53)
+[generated/metrics/DistanceMetric.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L62)

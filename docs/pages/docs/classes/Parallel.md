@@ -1,62 +1,184 @@
-# Parallel
+**sklearn** • **Docs**
 
-Tweak of [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.4.dev0)") that propagates the scikit-learn configuration.
+***
 
-This subclass of [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.4.dev0)") ensures that the active configuration (thread-local) of scikit-learn is propagated to the parallel workers for the duration of the execution of the parallel tasks.
+Tweak of [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.5.dev0)") that propagates the scikit-learn configuration.
 
-The API does not change and you can refer to [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.4.dev0)") documentation for more details.
+This subclass of [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.5.dev0)") ensures that the active configuration (thread-local) of scikit-learn is propagated to the parallel workers for the duration of the execution of the parallel tasks.
+
+The API does not change and you can refer to [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.5.dev0)") documentation for more details.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.utils.parallel.Parallel.html)
 
 ## Constructors
 
-## constructor()
+### new Parallel()
 
-### Signature
+> **new Parallel**(`opts`?): [`Parallel`](Parallel.md)
 
-```ts
-new Parallel(opts?: object): Parallel;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `object` |
+• **opts.iterable?**: `any`
 
-### Returns
+Iterable containing tuples of (delayed\_function, args, kwargs) that should be consumed.
+
+#### Returns
 
 [`Parallel`](Parallel.md)
 
-Defined in:  [generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19)
+
+## Accessors
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L35)
+
+***
+
+### results
+
+#### Get Signature
+
+> **get** **results**(): `Promise`\<`any`[]\>
+
+List of results of the tasks.
+
+##### Returns
+
+`Promise`\<`any`[]\>
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L245)
 
 ## Methods
 
+### \_\_call\_\_()
+
+> **\_\_call\_\_**(`opts`): `Promise`\<`any`[]\>
+
+Dispatch the tasks and return the results.
+
+#### Parameters
+
+• **opts**
+
+• **opts.iterable?**: `any`
+
+Iterable containing tuples of (delayed\_function, args, kwargs) that should be consumed.
+
+#### Returns
+
+`Promise`\<`any`[]\>
+
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L103)
+
+***
+
 ### dispatch\_next()
+
+> **dispatch\_next**(`opts`): `Promise`\<`any`\>
 
 Dispatch more data for parallel processing
 
 This method is meant to be called concurrently by the multiprocessing callback. We rely on the thread-safety of dispatch\_one\_batch to protect against concurrent consumption of the unprotected iterator.
 
-#### Signature
-
-```ts
-dispatch_next(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `object` |
+• **opts**
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L99)
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L137)
+
+***
 
 ### dispatch\_one\_batch()
+
+> **dispatch\_one\_batch**(`opts`): `Promise`\<`any`\>
 
 Prefetch the tasks for the next batch and dispatch them.
 
@@ -64,172 +186,94 @@ The effective size of the batch is computed here. If there are no more jobs to d
 
 The iterator consumption and dispatching is protected by the same lock so calling this function should be thread safe.
 
-#### Signature
-
-```ts
-dispatch_one_batch(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `object` |
+• **opts**
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L129)
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L167)
+
+***
 
 ### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L80)
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L86)
+
+***
 
 ### format()
 
+> **format**(`opts`): `Promise`\<`any`\>
+
 Return the formatted representation of the object.
-
-#### Signature
-
-```ts
-format(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `object` |
+• **opts**
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L155)
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L193)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L43)
+#### Defined in
+
+[generated/utils/parallel/Parallel.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L48)
+
+***
 
 ### print\_progress()
 
+> **print\_progress**(`opts`): `Promise`\<`any`\>
+
 Display the process of the parallel execution only a fraction of time, controlled by self.verbose.
-
-#### Signature
-
-```ts
-print_progress(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `object` |
+• **opts**
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L181)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19)
-
-## Accessors
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/utils/parallel/Parallel.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L30)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/utils/parallel/Parallel.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L34)
+[generated/utils/parallel/Parallel.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L219)

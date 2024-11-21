@@ -1,4 +1,6 @@
-# LabelBinarizer
+**sklearn** • **Docs**
+
+***
 
 Binarize labels in a one-vs-all fashion.
 
@@ -14,171 +16,331 @@ Read more in the User Guide.
 
 ## Constructors
 
-## constructor()
+### new LabelBinarizer()
 
-### Signature
+> **new LabelBinarizer**(`opts`?): [`LabelBinarizer`](LabelBinarizer.md)
 
-```ts
-new LabelBinarizer(opts?: object): LabelBinarizer;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.neg_label?` | `number` | Value with which negative labels must be encoded.  `Default Value`  `0` |
-| `opts.pos_label?` | `number` | Value with which positive labels must be encoded.  `Default Value`  `1` |
-| `opts.sparse_output?` | `boolean` | True if the returned array from transform is desired to be in sparse CSR format.  `Default Value`  `false` |
+• **opts.neg\_label?**: `number`
 
-### Returns
+Value with which negative labels must be encoded.
+
+**Default Value**
+
+`0`
+
+• **opts.pos\_label?**: `number`
+
+Value with which positive labels must be encoded.
+
+**Default Value**
+
+`1`
+
+• **opts.sparse\_output?**: `boolean`
+
+True if the returned array from transform is desired to be in sparse CSR format.
+
+**Default Value**
+
+`false`
+
+#### Returns
 
 [`LabelBinarizer`](LabelBinarizer.md)
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L29)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L29)
+
+## Properties
+
+### \_isDisposed
+
+> **\_isDisposed**: `boolean` = `false`
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L27)
+
+***
+
+### \_isInitialized
+
+> **\_isInitialized**: `boolean` = `false`
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L26)
+
+***
+
+### \_py
+
+> **\_py**: `PythonBridge`
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L25)
+
+***
+
+### id
+
+> **id**: `string`
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L22)
+
+***
+
+### opts
+
+> **opts**: `any`
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L23)
+
+## Accessors
+
+### classes\_
+
+#### Get Signature
+
+> **get** **classes\_**(): `Promise`\<`ArrayLike`\>
+
+Holds the label for each class.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L375)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L55)
+
+***
+
+### sparse\_input\_
+
+#### Get Signature
+
+> **get** **sparse\_input\_**(): `Promise`\<`boolean`\>
+
+`false` otherwise.
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L425)
+
+***
+
+### y\_type\_
+
+#### Get Signature
+
+> **get** **y\_type\_**(): `Promise`\<`string`\>
+
+Represents the type of the target data as evaluated by [`type\_of\_target`](sklearn.utils.multiclass.type_of_target.html#sklearn.utils.multiclass.type_of_target "sklearn.utils.multiclass.type_of_target"). Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
+
+##### Returns
+
+`Promise`\<`string`\>
+
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L400)
 
 ## Methods
 
 ### dispose()
 
+> **dispose**(): `Promise`\<`void`\>
+
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L110)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L107)
+
+***
 
 ### fit()
 
+> **fit**(`opts`): `Promise`\<`any`\>
+
 Fit label binarizer.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.y?` | `ArrayLike` | Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. |
+• **opts**
+
+• **opts.y?**: `ArrayLike`
+
+Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L127)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L124)
+
+***
 
 ### fit\_transform()
+
+> **fit\_transform**(`opts`): `Promise`\<`ArrayLike`\>
 
 Fit label binarizer/transform multi-class labels to binary labels.
 
 The output of transform is sometimes referred to as the 1-of-K coding scheme.
 
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<ArrayLike>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.y?` | `any` | Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL. |
+• **opts**
+
+• **opts.y?**: `any`
+
+Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L162)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L158)
+
+***
 
 ### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
 Get metadata routing of this object.
 
 Please check User Guide on how the routing mechanism works.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L197)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L192)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
+• **py**: `PythonBridge`
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L68)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L68)
+
+***
 
 ### inverse\_transform()
 
+> **inverse\_transform**(`opts`): `Promise`\<`any`\>
+
 Transform binary labels back to multi-class labels.
-
-#### Signature
-
-```ts
-inverse_transform(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.Y?` | `ArrayLike` | Target values. All sparse matrices are converted to CSR before inverse transformation. |
-| `opts.threshold?` | `number` | Threshold used in the binary and multi-label cases.  Use 0 when `Y` contains the output of decision\_function (classifier). Use 0.5 when `Y` contains the output of predict\_proba.  If `undefined`, the threshold is assumed to be half way between neg\_label and pos\_label. |
+• **opts**
+
+• **opts.threshold?**: `number`
+
+Threshold used in the binary and multi-label cases.
+
+Use 0 when `Y` contains the output of decision\_function (classifier). Use 0.5 when `Y` contains the output of predict\_proba.
+
+If `undefined`, the threshold is assumed to be half way between neg\_label and pos\_label.
+
+• **opts.Y?**: `ArrayLike`
+
+Target values. All sparse matrices are converted to CSR before inverse transformation.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L232)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L226)
+
+***
 
 ### set\_inverse\_transform\_request()
+
+> **set\_inverse\_transform\_request**(`opts`): `Promise`\<`any`\>
 
 Request metadata passed to the `inverse\_transform` method.
 
@@ -186,185 +348,70 @@ Note that this method is only relevant if `enable\_metadata\_routing=True` (see 
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_inverse_transform_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.threshold?` | `string` \| `boolean` | Metadata routing for `threshold` parameter in `inverse\_transform`. |
+• **opts**
+
+• **opts.threshold?**: `string` \| `boolean`
+
+Metadata routing for `threshold` parameter in `inverse\_transform`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L282)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L273)
+
+***
 
 ### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
 
 Set output container.
 
 See Introducing the set\_output API for an example on how to use the API.
 
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L320)
+#### Defined in
+
+[generated/preprocessing/LabelBinarizer.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L309)
+
+***
 
 ### transform()
+
+> **transform**(`opts`): `Promise`\<`ArrayLike`\>
 
 Transform multi-class labels to binary labels.
 
 The output of transform is sometimes referred to by some authors as the 1-of-K coding scheme.
 
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.y?` | `any` | Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL. |
+• **opts**
+
+• **opts.y?**: `any`
+
+Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L355)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L27)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L26)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L25)
-
-### id
-
-> `string`
-
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L22)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L23)
-
-## Accessors
-
-### classes\_
-
-Holds the label for each class.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/preprocessing/LabelBinarizer.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L388)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/preprocessing/LabelBinarizer.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L55)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/preprocessing/LabelBinarizer.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L59)
-
-### sparse\_input\_
-
-`false` otherwise.
-
-#### Signature
-
-```ts
-sparse_input_(): Promise<boolean>;
-```
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-Defined in: [generated/preprocessing/LabelBinarizer.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L438)
-
-### y\_type\_
-
-Represents the type of the target data as evaluated by [`type\_of\_target`](sklearn.utils.multiclass.type_of_target.html#sklearn.utils.multiclass.type_of_target "sklearn.utils.multiclass.type_of_target"). Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
-
-#### Signature
-
-```ts
-y_type_(): Promise<string>;
-```
-
-#### Returns
-
-`Promise`\<`string`\>
-
-Defined in: [generated/preprocessing/LabelBinarizer.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L413)
+[generated/preprocessing/LabelBinarizer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/preprocessing/LabelBinarizer.ts#L343)

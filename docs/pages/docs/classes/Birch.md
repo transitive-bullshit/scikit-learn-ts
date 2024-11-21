@@ -1,4 +1,6 @@
-# Birch
+**sklearn** • **Docs**
+
+***
 
 Implements the BIRCH clustering algorithm.
 
@@ -10,473 +12,554 @@ Read more in the User Guide.
 
 ## Constructors
 
-## constructor()
+### new Birch()
 
-### Signature
+> **new Birch**(`opts`?): [`Birch`](Birch.md)
 
-```ts
-new Birch(opts?: object): Birch;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.branching_factor?` | `number` | Maximum number of CF subclusters in each node. If a new samples enters such that the number of subclusters exceed the branching\_factor then that node is split into two nodes with the subclusters redistributed in each. The parent subcluster of that node is removed and two new subclusters are added as parents of the 2 split nodes.  `Default Value`  `50` |
-| `opts.compute_labels?` | `boolean` | Whether or not to compute labels for each fit.  `Default Value`  `true` |
-| `opts.copy?` | `boolean` | Whether or not to make a copy of the given data. If set to `false`, the initial data will be overwritten.  `Default Value`  `true` |
-| `opts.n_clusters?` | `number` | Number of clusters after the final clustering step, which treats the subclusters from the leaves as new samples.  `Default Value`  `3` |
-| `opts.threshold?` | `number` | The radius of the subcluster obtained by merging a new sample and the closest subcluster should be lesser than the threshold. Otherwise a new subcluster is started. Setting this value to be very low promotes splitting and vice-versa.  `Default Value`  `0.5` |
+• **opts.branching\_factor?**: `number`
 
-### Returns
+Maximum number of CF subclusters in each node. If a new samples enters such that the number of subclusters exceed the branching\_factor then that node is split into two nodes with the subclusters redistributed in each. The parent subcluster of that node is removed and two new subclusters are added as parents of the 2 split nodes.
+
+**Default Value**
+
+`50`
+
+• **opts.compute\_labels?**: `boolean`
+
+Whether or not to compute labels for each fit.
+
+**Default Value**
+
+`true`
+
+• **opts.copy?**: `boolean`
+
+Whether or not to make a copy of the given data. If set to `false`, the initial data will be overwritten.
+
+**Default Value**
+
+`true`
+
+• **opts.n\_clusters?**: `number`
+
+Number of clusters after the final clustering step, which treats the subclusters from the leaves as new samples.
+
+**Default Value**
+
+`3`
+
+• **opts.threshold?**: `number`
+
+The radius of the subcluster obtained by merging a new sample and the closest subcluster should be lesser than the threshold. Otherwise a new subcluster is started. Setting this value to be very low promotes splitting and vice-versa.
+
+**Default Value**
+
+`0.5`
+
+#### Returns
 
 [`Birch`](Birch.md)
 
-Defined in:  [generated/cluster/Birch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L25)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cluster/Birch.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L123)
-
-### fit()
-
-Build a CF Tree for the input data.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | Input data. |
-| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/Birch.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L140)
-
-### fit\_predict()
-
-Perform clustering on `X` and returns cluster labels.
-
-#### Signature
-
-```ts
-fit_predict(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Input data. |
-| `opts.y?` | `any` | Not used, present for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/cluster/Birch.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L178)
-
-### fit\_transform()
-
-Fit to data, then transform it.
-
-Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<any[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Input samples. |
-| `opts.fit_params?` | `any` | Additional fit parameters. |
-| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
-
-#### Returns
-
-`Promise`\<`any`[]\>
-
-Defined in:  [generated/cluster/Birch.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L218)
-
-### get\_feature\_names\_out()
-
-Get output feature names for transformation.
-
-The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/Birch.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L267)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/Birch.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L302)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cluster/Birch.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L78)
-
-### partial\_fit()
-
-Online learning. Prevents rebuilding of CFTree from scratch.
-
-#### Signature
-
-```ts
-partial_fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | Input data. If X is not provided, only the global clustering step is done. |
-| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/Birch.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L335)
-
-### predict()
-
-Predict data using the `centroids\_` of subclusters.
-
-Avoid computation of the row norms of X.
-
-#### Signature
-
-```ts
-predict(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | Input data. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/Birch.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L375)
-
-### set\_output()
-
-Set output container.
-
-See Introducing the set\_output API for an example on how to use the API.
-
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/Birch.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L410)
-
-### transform()
-
-Transform X into subcluster centroids dimension.
-
-Each dimension represents the distance from the sample point to each cluster centroid.
-
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | Input data. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/cluster/Birch.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L445)
+[generated/cluster/Birch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/cluster/Birch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L23)
+#### Defined in
+
+[generated/cluster/Birch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L23)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/cluster/Birch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L22)
+#### Defined in
+
+[generated/cluster/Birch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L22)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/cluster/Birch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L21)
+#### Defined in
+
+[generated/cluster/Birch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L21)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/cluster/Birch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L18)
+#### Defined in
+
+[generated/cluster/Birch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L18)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/cluster/Birch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L19)
+#### Defined in
+
+[generated/cluster/Birch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L19)
 
 ## Accessors
 
 ### dummy\_leaf\_
 
+#### Get Signature
+
+> **get** **dummy\_leaf\_**(): `Promise`\<`any`\>
+
 Start pointer to all the leaves.
 
-#### Signature
-
-```ts
-dummy_leaf_(): Promise<any>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`any`\>
 
-Defined in: [generated/cluster/Birch.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L500)
+#### Defined in
+
+[generated/cluster/Birch.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L485)
+
+***
 
 ### feature\_names\_in\_
 
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
+
 Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L618)
+#### Defined in
+
+[generated/cluster/Birch.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L603)
+
+***
 
 ### labels\_
 
+#### Get Signature
+
+> **get** **labels\_**(): `Promise`\<`ArrayLike`\>
+
 Array of labels assigned to the input data. if partial\_fit is used instead of fit, they are assigned to the last batch of data.
 
-#### Signature
-
-```ts
-labels_(): Promise<ArrayLike>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L573)
+#### Defined in
+
+[generated/cluster/Birch.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L558)
+
+***
 
 ### n\_features\_in\_
 
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
 Number of features seen during fit.
 
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/Birch.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L595)
+#### Defined in
+
+[generated/cluster/Birch.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L580)
+
+***
 
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/Birch.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L65)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in: [generated/cluster/Birch.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L69)
+#### Defined in
+
+[generated/cluster/Birch.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L65)
+
+***
 
 ### root\_
 
+#### Get Signature
+
+> **get** **root\_**(): `Promise`\<`any`\>
+
 Root of the CFTree.
 
-#### Signature
+##### Returns
 
-```ts
-root_(): Promise<any>;
-```
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L463)
+
+***
+
+### subcluster\_centers\_
+
+#### Get Signature
+
+> **get** **subcluster\_centers\_**(): `Promise`\<`ArrayLike`\>
+
+Centroids of all subclusters read directly from the leaves.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L508)
+
+***
+
+### subcluster\_labels\_
+
+#### Get Signature
+
+> **get** **subcluster\_labels\_**(): `Promise`\<`ArrayLike`\>
+
+Labels assigned to the centroids of the subclusters after they are clustered globally.
+
+##### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L533)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L116)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Build a CF Tree for the input data.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+Input data.
+
+• **opts.y?**: `any`
+
+Not used, present here for API consistency by convention.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in: [generated/cluster/Birch.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L478)
+#### Defined in
 
-### subcluster\_centers\_
+[generated/cluster/Birch.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L133)
 
-Centroids of all subclusters read directly from the leaves.
+***
 
-#### Signature
+### fit\_predict()
 
-```ts
-subcluster_centers_(): Promise<ArrayLike>;
-```
+> **fit\_predict**(`opts`): `Promise`\<`ArrayLike`\>
+
+Perform clustering on `X` and returns cluster labels.
+
+#### Parameters
+
+• **opts**
+
+• **opts.kwargs?**: `any`
+
+Arguments to be passed to `fit`.
+
+• **opts.X?**: `ArrayLike`[]
+
+Input data.
+
+• **opts.y?**: `any`
+
+Not used, present for API consistency by convention.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L523)
+#### Defined in
 
-### subcluster\_labels\_
+[generated/cluster/Birch.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L170)
 
-Labels assigned to the centroids of the subclusters after they are clustered globally.
+***
 
-#### Signature
+### fit\_transform()
 
-```ts
-subcluster_labels_(): Promise<ArrayLike>;
-```
+> **fit\_transform**(`opts`): `Promise`\<`any`[]\>
+
+Fit to data, then transform it.
+
+Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+
+#### Parameters
+
+• **opts**
+
+• **opts.fit\_params?**: `any`
+
+Additional fit parameters.
+
+• **opts.X?**: `ArrayLike`[]
+
+Input samples.
+
+• **opts.y?**: `ArrayLike`
+
+Target values (`undefined` for unsupervised transformations).
+
+#### Returns
+
+`Promise`\<`any`[]\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L214)
+
+***
+
+### get\_feature\_names\_out()
+
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
+Get output feature names for transformation.
+
+The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Parameters
+
+• **opts**
+
+• **opts.input\_features?**: `any`
+
+Only used to validate feature names with the names seen in `fit`.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L258)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check User Guide on how the routing mechanism works.
+
+#### Parameters
+
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L292)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L78)
+
+***
+
+### partial\_fit()
+
+> **partial\_fit**(`opts`): `Promise`\<`any`\>
+
+Online learning. Prevents rebuilding of CFTree from scratch.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+Input data. If X is not provided, only the global clustering step is done.
+
+• **opts.y?**: `any`
+
+Not used, present here for API consistency by convention.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L324)
+
+***
+
+### predict()
+
+> **predict**(`opts`): `Promise`\<`any`\>
+
+Predict data using the `centroids\_` of subclusters.
+
+Avoid computation of the row norms of X.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+Input data.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L363)
+
+***
+
+### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
+
+Set output container.
+
+See Introducing the set\_output API for an example on how to use the API.
+
+#### Parameters
+
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cluster/Birch.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L397)
+
+***
+
+### transform()
+
+> **transform**(`opts`): `Promise`\<`ArrayLike`\>
+
+Transform X into subcluster centroids dimension.
+
+Each dimension represents the distance from the sample point to each cluster centroid.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: `ArrayLike`
+
+Input data.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/Birch.ts#L548)
+#### Defined in
+
+[generated/cluster/Birch.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/Birch.ts#L431)

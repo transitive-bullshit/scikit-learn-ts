@@ -1,4 +1,6 @@
-# RationalQuadratic
+**sklearn** • **Docs**
+
+***
 
 Rational Quadratic kernel.
 
@@ -8,259 +10,266 @@ The RationalQuadratic kernel can be seen as a scale mixture (an infinite sum) of
 
 ## Constructors
 
-## constructor()
+### new RationalQuadratic()
 
-### Signature
+> **new RationalQuadratic**(`opts`?): [`RationalQuadratic`](RationalQuadratic.md)
 
-```ts
-new RationalQuadratic(opts?: object): RationalQuadratic;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.alpha?` | `any` | Scale mixture parameter  `Default Value`  `1` |
-| `opts.alpha_bounds?` | `"fixed"` | The lower and upper bound on ‘alpha’. If set to “fixed”, ‘alpha’ cannot be changed during hyperparameter tuning. |
-| `opts.length_scale?` | `any` | The length scale of the kernel.  `Default Value`  `1` |
-| `opts.length_scale_bounds?` | `"fixed"` | The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning. |
+• **opts.alpha?**: `any`
 
-### Returns
+Scale mixture parameter
+
+**Default Value**
+
+`1`
+
+• **opts.alpha\_bounds?**: `"fixed"`
+
+The lower and upper bound on ‘alpha’. If set to “fixed”, ‘alpha’ cannot be changed during hyperparameter tuning.
+
+• **opts.length\_scale?**: `any`
+
+The length scale of the kernel.
+
+**Default Value**
+
+`1`
+
+• **opts.length\_scale\_bounds?**: `"fixed"`
+
+The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
+
+#### Returns
 
 [`RationalQuadratic`](RationalQuadratic.md)
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L23)
+#### Defined in
 
-## Methods
-
-### \_\_call\_\_()
-
-Return the kernel k(X, Y) and optionally its gradient.
-
-#### Signature
-
-```ts
-__call__(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
-| `opts.Y?` | `ArrayLike`[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
-| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.  `Default Value`  `false` |
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L126)
-
-### clone\_with\_theta()
-
-Returns a clone of self with given hyperparameters theta.
-
-#### Signature
-
-```ts
-clone_with_theta(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.theta?` | `ArrayLike` | The hyperparameters |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L177)
-
-### diag()
-
-Returns the diagonal of the kernel k(X, X).
-
-The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
-
-#### Signature
-
-```ts
-diag(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L217)
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L109)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L65)
-
-### is\_stationary()
-
-Returns whether the kernel is stationary.
-
-#### Signature
-
-```ts
-is_stationary(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opts` | `object` |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L252)
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L23)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L21)
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L21)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L20)
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L20)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L19)
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L19)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L16)
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L16)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L17)
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L17)
 
 ## Accessors
 
-### hyperparameter\_alpha
-
-#### Signature
-
-```ts
-hyperparameter_alpha(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/gaussian\_process/kernels/RationalQuadratic.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L279)
-
-### hyperparameter\_length\_scale
-
-#### Signature
-
-```ts
-hyperparameter_length_scale(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/gaussian\_process/kernels/RationalQuadratic.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L303)
-
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L52)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in: [generated/gaussian\_process/kernels/RationalQuadratic.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L56)
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L52)
+
+## Methods
+
+### \_\_call\_\_()
+
+> **\_\_call\_\_**(`opts`): `Promise`\<`ArrayLike`[]\>
+
+Return the kernel k(X, Y) and optionally its gradient.
+
+#### Parameters
+
+• **opts**
+
+• **opts.eval\_gradient?**: `boolean`
+
+Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
+
+**Default Value**
+
+`false`
+
+• **opts.X?**: `ArrayLike`[]
+
+Left argument of the returned kernel k(X, Y)
+
+• **opts.Y?**: `ArrayLike`[]
+
+Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
+
+#### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L123)
+
+***
+
+### clone\_with\_theta()
+
+> **clone\_with\_theta**(`opts`): `Promise`\<`any`\>
+
+Returns a clone of self with given hyperparameters theta.
+
+#### Parameters
+
+• **opts**
+
+• **opts.theta?**: `ArrayLike`
+
+The hyperparameters
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L169)
+
+***
+
+### diag()
+
+> **diag**(`opts`): `Promise`\<`ArrayLike`\>
+
+Returns the diagonal of the kernel k(X, X).
+
+The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: `ArrayLike`[]
+
+Left argument of the returned kernel k(X, Y)
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L207)
+
+***
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L106)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L65)
+
+***
+
+### is\_stationary()
+
+> **is\_stationary**(`opts`): `Promise`\<`any`\>
+
+Returns whether the kernel is stationary.
+
+#### Parameters
+
+• **opts**
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/gaussian\_process/kernels/RationalQuadratic.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L241)

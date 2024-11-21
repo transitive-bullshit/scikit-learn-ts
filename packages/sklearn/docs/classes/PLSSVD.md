@@ -1,4 +1,6 @@
-# PLSSVD
+[**sklearn**](../README.md) • **Docs**
+
+***
 
 Partial Least Square SVD.
 
@@ -10,356 +12,402 @@ Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
 ## Constructors
 
-## constructor()
+### new PLSSVD()
 
-### Signature
+> **new PLSSVD**(`opts`?): [`PLSSVD`](PLSSVD.md)
 
-```ts
-new PLSSVD(opts?: object): PLSSVD;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.copy?` | `boolean` | Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.  `Default Value`  `true` |
-| `opts.n_components?` | `number` | The number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.  `Default Value`  `2` |
-| `opts.scale?` | `boolean` | Whether to scale `X` and `Y`.  `Default Value`  `true` |
+• **opts.copy?**: `boolean`
 
-### Returns
+Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
+
+**Default Value**
+
+`true`
+
+• **opts.n\_components?**: `number`
+
+The number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+
+**Default Value**
+
+`2`
+
+• **opts.scale?**: `boolean`
+
+Whether to scale `X` and `Y`.
+
+**Default Value**
+
+`true`
+
+#### Returns
 
 [`PLSSVD`](PLSSVD.md)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L25)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L105)
-
-### fit()
-
-Fit model to data.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training samples. |
-| `opts.Y?` | [`ArrayLike`](../types/ArrayLike.md) | Targets. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L122)
-
-### fit\_transform()
-
-Learn and apply the dimensionality reduction.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training samples. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Targets. |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L162)
-
-### get\_feature\_names\_out()
-
-Get output feature names for transformation.
-
-The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L204)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L239)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L64)
-
-### set\_output()
-
-Set output container.
-
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
-
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L274)
-
-### transform()
-
-Apply the dimensionality reduction.
-
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Samples to be transformed. |
-| `opts.Y?` | [`ArrayLike`](../types/ArrayLike.md) | Targets. |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L307)
+[generated/cross\_decomposition/PLSSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L23)
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L23)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L22)
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L22)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L21)
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L21)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L18)
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L18)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L19)
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L19)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-#### Signature
+##### Returns
 
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-#### Returns
+#### Defined in
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+[generated/cross\_decomposition/PLSSVD.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L411)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L416)
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L416)
+***
 
 ### n\_features\_in\_
 
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
 Number of features seen during [fit](../../glossary.html#term-fit).
 
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L393)
+#### Defined in
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L393)
+[generated/cross\_decomposition/PLSSVD.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L388)
+
+***
 
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L55)
+#### Defined in
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51) [generated/cross\_decomposition/PLSSVD.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L55)
+[generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51)
+
+***
 
 ### x\_weights\_
 
+#### Get Signature
+
+> **get** **x\_weights\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 The left singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
 
-#### Signature
+##### Returns
 
-```ts
-x_weights_(): Promise<ArrayLike[]>;
-```
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-#### Returns
+#### Defined in
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+[generated/cross\_decomposition/PLSSVD.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L342)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L347)
-
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L347)
+***
 
 ### y\_weights\_
 
+#### Get Signature
+
+> **get** **y\_weights\_**(): `Promise`\<`any`\>
+
 The right singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
 
-#### Signature
+##### Returns
 
-```ts
-y_weights_(): Promise<any>;
-```
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L365)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L102)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Fit model to data.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Training samples.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Targets.
+
+• **opts.Y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Targets.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L370)
+#### Defined in
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L370)
+[generated/cross\_decomposition/PLSSVD.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L119)
+
+***
+
+### fit\_transform()
+
+> **fit\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+Learn and apply the dimensionality reduction.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Training samples.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Targets.
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L161)
+
+***
+
+### get\_feature\_names\_out()
+
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
+Get output feature names for transformation.
+
+The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Parameters
+
+• **opts**
+
+• **opts.input\_features?**: `any`
+
+Only used to validate feature names with the names seen in `fit`.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L200)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Parameters
+
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L234)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L64)
+
+***
+
+### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
+
+Set output container.
+
+See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Parameters
+
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L268)
+
+***
+
+### transform()
+
+> **transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+Apply the dimensionality reduction.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Samples to be transformed.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Targets.
+
+• **opts.Y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Targets.
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+#### Defined in
+
+[generated/cross\_decomposition/PLSSVD.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L300)

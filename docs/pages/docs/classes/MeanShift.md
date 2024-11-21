@@ -1,4 +1,6 @@
-# MeanShift
+**sklearn** • **Docs**
+
+***
 
 Mean shift clustering using a flat kernel.
 
@@ -6,321 +8,390 @@ Mean shift clustering aims to discover “blobs” in a smooth density of sample
 
 Seeding is performed using a binning technique for scalability.
 
+For an example of how to use MeanShift clustering, refer to: A demo of the mean-shift clustering algorithm.
+
 Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html)
 
 ## Constructors
 
-## constructor()
+### new MeanShift()
 
-### Signature
+> **new MeanShift**(`opts`?): [`MeanShift`](MeanShift.md)
 
-```ts
-new MeanShift(opts?: object): MeanShift;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.bandwidth?` | `number` | Bandwidth used in the flat kernel.  If not given, the bandwidth is estimated using sklearn.cluster.estimate\_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below). |
-| `opts.bin_seeding?` | `boolean` | If true, initial kernel locations are not locations of all points, but rather the location of the discretized version of points, where points are binned onto a grid whose coarseness corresponds to the bandwidth. Setting this option to `true` will speed up the algorithm because fewer seeds will be initialized. The default value is `false`. Ignored if seeds argument is not `undefined`.  `Default Value`  `false` |
-| `opts.cluster_all?` | `boolean` | If true, then all points are clustered, even those orphans that are not within any kernel. Orphans are assigned to the nearest kernel. If false, then orphans are given cluster label -1.  `Default Value`  `true` |
-| `opts.max_iter?` | `number` | Maximum number of iterations, per seed point before the clustering operation terminates (for that seed point), if has not converged yet.  `Default Value`  `300` |
-| `opts.min_bin_freq?` | `number` | To speed up the algorithm, accept only those bins with at least min\_bin\_freq points as seeds.  `Default Value`  `1` |
-| `opts.n_jobs?` | `number` | The number of jobs to use for the computation. The following tasks benefit from the parallelization: |
-| `opts.seeds?` | `ArrayLike`[] | Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get\_bin\_seeds with bandwidth as the grid size and default values for other parameters. |
+• **opts.bandwidth?**: `number`
 
-### Returns
+Bandwidth used in the flat kernel.
+
+If not given, the bandwidth is estimated using sklearn.cluster.estimate\_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below).
+
+• **opts.bin\_seeding?**: `boolean`
+
+If true, initial kernel locations are not locations of all points, but rather the location of the discretized version of points, where points are binned onto a grid whose coarseness corresponds to the bandwidth. Setting this option to `true` will speed up the algorithm because fewer seeds will be initialized. The default value is `false`. Ignored if seeds argument is not `undefined`.
+
+**Default Value**
+
+`false`
+
+• **opts.cluster\_all?**: `boolean`
+
+If true, then all points are clustered, even those orphans that are not within any kernel. Orphans are assigned to the nearest kernel. If false, then orphans are given cluster label -1.
+
+**Default Value**
+
+`true`
+
+• **opts.max\_iter?**: `number`
+
+Maximum number of iterations, per seed point before the clustering operation terminates (for that seed point), if has not converged yet.
+
+**Default Value**
+
+`300`
+
+• **opts.min\_bin\_freq?**: `number`
+
+To speed up the algorithm, accept only those bins with at least min\_bin\_freq points as seeds.
+
+**Default Value**
+
+`1`
+
+• **opts.n\_jobs?**: `number`
+
+The number of jobs to use for the computation. The following tasks benefit from the parallelization:
+
+• **opts.seeds?**: `ArrayLike`[]
+
+Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get\_bin\_seeds with bandwidth as the grid size and default values for other parameters.
+
+#### Returns
 
 [`MeanShift`](MeanShift.md)
 
-Defined in:  [generated/cluster/MeanShift.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L27)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cluster/MeanShift.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L137)
-
-### fit()
-
-Perform clustering.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Samples to cluster. |
-| `opts.y?` | `any` | Not used, present for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/MeanShift.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L154)
-
-### fit\_predict()
-
-Perform clustering on `X` and returns cluster labels.
-
-#### Signature
-
-```ts
-fit_predict(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Input data. |
-| `opts.y?` | `any` | Not used, present for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/cluster/MeanShift.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L192)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/MeanShift.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L232)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cluster/MeanShift.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L90)
-
-### predict()
-
-Predict the closest cluster each sample in X belongs to.
-
-#### Signature
-
-```ts
-predict(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | New data to predict. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/cluster/MeanShift.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L267)
+[generated/cluster/MeanShift.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/cluster/MeanShift.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L25)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L27)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/cluster/MeanShift.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L24)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L26)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/cluster/MeanShift.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L23)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L25)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/cluster/MeanShift.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L20)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L22)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/cluster/MeanShift.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L21)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L23)
 
 ## Accessors
 
 ### cluster\_centers\_
 
+#### Get Signature
+
+> **get** **cluster\_centers\_**(): `Promise`\<`ArrayLike`[]\>
+
 Coordinates of cluster centers.
 
-#### Signature
-
-```ts
-cluster_centers_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/cluster/MeanShift.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L300)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L294)
+
+***
 
 ### feature\_names\_in\_
 
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
+
 Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/MeanShift.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L396)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L390)
+
+***
 
 ### labels\_
 
+#### Get Signature
+
+> **get** **labels\_**(): `Promise`\<`ArrayLike`\>
+
 Labels of each point.
 
-#### Signature
+##### Returns
 
-```ts
-labels_(): Promise<ArrayLike>;
-```
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L319)
+
+***
+
+### n\_features\_in\_
+
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
+Number of features seen during fit.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L365)
+
+***
+
+### n\_iter\_
+
+#### Get Signature
+
+> **get** **n\_iter\_**(): `Promise`\<`number`\>
+
+Maximum number of iterations performed on each seed.
+
+##### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L342)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L79)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L130)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Perform clustering.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: `ArrayLike`[]
+
+Samples to cluster.
+
+• **opts.y?**: `any`
+
+Not used, present for API consistency by convention.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L147)
+
+***
+
+### fit\_predict()
+
+> **fit\_predict**(`opts`): `Promise`\<`ArrayLike`\>
+
+Perform clustering on `X` and returns cluster labels.
+
+#### Parameters
+
+• **opts**
+
+• **opts.kwargs?**: `any`
+
+Arguments to be passed to `fit`.
+
+• **opts.X?**: `ArrayLike`[]
+
+Input data.
+
+• **opts.y?**: `any`
+
+Not used, present for API consistency by convention.
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/MeanShift.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L325)
+#### Defined in
 
-### n\_features\_in\_
+[generated/cluster/MeanShift.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L184)
 
-Number of features seen during fit.
+***
 
-#### Signature
+### get\_metadata\_routing()
 
-```ts
-n_features_in_(): Promise<number>;
-```
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
-#### Returns
+Get metadata routing of this object.
 
-`Promise`\<`number`\>
-
-Defined in: [generated/cluster/MeanShift.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L371)
-
-### n\_iter\_
-
-Maximum number of iterations performed on each seed.
-
-#### Signature
-
-```ts
-n_iter_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/cluster/MeanShift.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L348)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/cluster/MeanShift.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L77)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+Please check User Guide on how the routing mechanism works.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
 
 #### Returns
 
-`void`
+`Promise`\<`any`\>
 
-Defined in: [generated/cluster/MeanShift.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/MeanShift.ts#L81)
+#### Defined in
+
+[generated/cluster/MeanShift.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L228)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L92)
+
+***
+
+### predict()
+
+> **predict**(`opts`): `Promise`\<`ArrayLike`\>
+
+Predict the closest cluster each sample in X belongs to.
+
+#### Parameters
+
+• **opts**
+
+• **opts.X?**: `ArrayLike`[]
+
+New data to predict.
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/cluster/MeanShift.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/cluster/MeanShift.ts#L262)

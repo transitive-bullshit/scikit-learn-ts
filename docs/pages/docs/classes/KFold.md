@@ -1,6 +1,8 @@
-# KFold
+**sklearn** • **Docs**
 
-K-Folds cross-validator
+***
+
+K-Fold cross-validator.
 
 Provides train/test indices to split data in train/test sets. Split dataset into k consecutive folds (without shuffling by default).
 
@@ -14,210 +16,246 @@ For visualisation of cross-validation behaviour and comparison between common sc
 
 ## Constructors
 
-## constructor()
+### new KFold()
 
-### Signature
+> **new KFold**(`opts`?): [`KFold`](KFold.md)
 
-```ts
-new KFold(opts?: object): KFold;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.n_splits?` | `number` | Number of folds. Must be at least 2.  `Default Value`  `5` |
-| `opts.random_state?` | `number` | When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See Glossary. |
-| `opts.shuffle?` | `boolean` | Whether to shuffle the data before splitting into batches. Note that the samples within each split will not be shuffled.  `Default Value`  `false` |
+• **opts.n\_splits?**: `number`
 
-### Returns
+Number of folds. Must be at least 2.
+
+**Default Value**
+
+`5`
+
+• **opts.random\_state?**: `number`
+
+When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See Glossary.
+
+• **opts.shuffle?**: `boolean`
+
+Whether to shuffle the data before splitting into batches. Note that the samples within each split will not be shuffled.
+
+**Default Value**
+
+`false`
+
+#### Returns
 
 [`KFold`](KFold.md)
 
-Defined in:  [generated/model\_selection/KFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L29)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/model\_selection/KFold.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L107)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/model\_selection/KFold.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L126)
-
-### get\_n\_splits()
-
-Returns the number of splitting iterations in the cross-validator
-
-#### Signature
-
-```ts
-get_n_splits(opts: object): Promise<number>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Always ignored, exists for compatibility. |
-| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
-| `opts.y?` | `any` | Always ignored, exists for compatibility. |
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/model\_selection/KFold.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L159)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/model\_selection/KFold.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L66)
-
-### split()
-
-Generate indices to split data into training and test set.
-
-#### Signature
-
-```ts
-split(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.groups?` | `ArrayLike` | Group labels for the samples used while splitting the dataset into train/test set. |
-| `opts.y?` | `ArrayLike` | The target variable for supervised learning problems. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/model\_selection/KFold.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L202)
+[generated/model\_selection/KFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
+#### Defined in
+
+[generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/model\_selection/KFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L26)
+#### Defined in
+
+[generated/model\_selection/KFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L26)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
+#### Defined in
+
+[generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/model\_selection/KFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L22)
+#### Defined in
+
+[generated/model\_selection/KFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L22)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
+#### Defined in
+
+[generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
 
 ## Accessors
 
 ### py
 
-#### Signature
+#### Get Signature
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+##### Returns
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/KFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L53)
+#### Set Signature
 
-#### Signature
+> **set** **py**(`pythonBridge`): `void`
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+##### Parameters
 
-#### Parameters
+• **pythonBridge**: `PythonBridge`
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
+##### Returns
 
 `void`
 
-Defined in: [generated/model\_selection/KFold.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/KFold.ts#L57)
+#### Defined in
+
+[generated/model\_selection/KFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L53)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/model\_selection/KFold.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L104)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check User Guide on how the routing mechanism works.
+
+#### Parameters
+
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/model\_selection/KFold.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L123)
+
+***
+
+### get\_n\_splits()
+
+> **get\_n\_splits**(`opts`): `Promise`\<`number`\>
+
+Returns the number of splitting iterations in the cross-validator.
+
+#### Parameters
+
+• **opts**
+
+• **opts.groups?**: `any`
+
+Always ignored, exists for compatibility.
+
+• **opts.X?**: `any`
+
+Always ignored, exists for compatibility.
+
+• **opts.y?**: `any`
+
+Always ignored, exists for compatibility.
+
+#### Returns
+
+`Promise`\<`number`\>
+
+#### Defined in
+
+[generated/model\_selection/KFold.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L155)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/model\_selection/KFold.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L66)
+
+***
+
+### split()
+
+> **split**(`opts`): `Promise`\<`ArrayLike`\>
+
+Generate indices to split data into training and test set.
+
+#### Parameters
+
+• **opts**
+
+• **opts.groups?**: `any`
+
+Always ignored, exists for compatibility.
+
+• **opts.X?**: `ArrayLike`[]
+
+Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+• **opts.y?**: `ArrayLike`
+
+The target variable for supervised learning problems.
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+#### Defined in
+
+[generated/model\_selection/KFold.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/model_selection/KFold.ts#L197)

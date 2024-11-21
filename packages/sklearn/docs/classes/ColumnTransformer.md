@@ -1,4 +1,6 @@
-# ColumnTransformer
+[**sklearn**](../README.md) • **Docs**
+
+***
 
 Applies transformers to columns of an array or pandas DataFrame.
 
@@ -10,375 +12,452 @@ Read more in the [User Guide](../compose.html#column-transformer).
 
 ## Constructors
 
-## constructor()
+### new ColumnTransformer()
 
-### Signature
+> **new ColumnTransformer**(`opts`?): [`ColumnTransformer`](ColumnTransformer.md)
 
-```ts
-new ColumnTransformer(opts?: object): ColumnTransformer;
-```
+#### Parameters
 
-### Parameters
+• **opts?**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.n_jobs?` | `number` | Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
-| `opts.remainder?` | `"drop"` \| `"passthrough"` | By default, only the specified columns in `transformers` are transformed and combined in the output, and the non-specified columns are dropped. (default of `'drop'`). By specifying `remainder='passthrough'`, all remaining columns that were not specified in `transformers`, but present in the data passed to `fit` will be automatically passed through. This subset of columns is concatenated with the output of the transformers. For dataframes, extra columns not seen during `fit` will be excluded from the output of `transform`. By setting `remainder` to be an estimator, the remaining non-specified columns will use the `remainder` estimator. The estimator must support [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform). Note that using this feature requires that the DataFrame columns input at [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform) have identical order.  `Default Value`  `'drop'` |
-| `opts.sparse_threshold?` | `number` | If the output of the different transformers contains sparse matrices, these will be stacked as a sparse matrix if the overall density is lower than this value. Use `sparse\_threshold=0` to always return dense. When the transformed output consists of all dense data, the stacked result will be dense, and this keyword will be ignored.  `Default Value`  `0.3` |
-| `opts.transformer_weights?` | `any` | Multiplicative weights for features per transformer. The output of the transformer is multiplied by these weights. Keys are transformer names, values the weights. |
-| `opts.transformers?` | `any` | List of (name, transformer, columns) tuples specifying the transformer objects to be applied to subsets of the data. |
-| `opts.verbose?` | `boolean` | If `true`, the time elapsed while fitting each transformer will be printed as it is completed.  `Default Value`  `false` |
-| `opts.verbose_feature_names_out?` | `boolean` | If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.  `Default Value`  `true` |
+• **opts.force\_int\_remainder\_cols?**: `boolean`
 
-### Returns
+Force the columns of the last entry of `transformers\_`, which corresponds to the “remainder” transformer, to always be stored as indices (int) rather than column names (str). See description of the `transformers\_` attribute for details.
+
+**Default Value**
+
+`true`
+
+• **opts.n\_jobs?**: `number`
+
+Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+
+• **opts.remainder?**: `"drop"` \| `"passthrough"`
+
+By default, only the specified columns in `transformers` are transformed and combined in the output, and the non-specified columns are dropped. (default of `'drop'`). By specifying `remainder='passthrough'`, all remaining columns that were not specified in `transformers`, but present in the data passed to `fit` will be automatically passed through. This subset of columns is concatenated with the output of the transformers. For dataframes, extra columns not seen during `fit` will be excluded from the output of `transform`. By setting `remainder` to be an estimator, the remaining non-specified columns will use the `remainder` estimator. The estimator must support [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform). Note that using this feature requires that the DataFrame columns input at [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform) have identical order.
+
+**Default Value**
+
+`'drop'`
+
+• **opts.sparse\_threshold?**: `number`
+
+If the output of the different transformers contains sparse matrices, these will be stacked as a sparse matrix if the overall density is lower than this value. Use `sparse\_threshold=0` to always return dense. When the transformed output consists of all dense data, the stacked result will be dense, and this keyword will be ignored.
+
+**Default Value**
+
+`0.3`
+
+• **opts.transformer\_weights?**: `any`
+
+Multiplicative weights for features per transformer. The output of the transformer is multiplied by these weights. Keys are transformer names, values the weights.
+
+• **opts.transformers?**: `any`
+
+List of (name, transformer, columns) tuples specifying the transformer objects to be applied to subsets of the data.
+
+• **opts.verbose?**: `boolean`
+
+If `true`, the time elapsed while fitting each transformer will be printed as it is completed.
+
+**Default Value**
+
+`false`
+
+• **opts.verbose\_feature\_names\_out?**: `boolean`
+
+If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
+
+**Default Value**
+
+`true`
+
+#### Returns
 
 [`ColumnTransformer`](ColumnTransformer.md)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L25)
+#### Defined in
 
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L138)
-
-### fit()
-
-Fit all transformers using X.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input data, of which specified subsets are used to fit the transformers. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md)[] | Targets for supervised learning. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L155)
-
-### fit\_transform()
-
-Fit all transformers, transform the data and concatenate results.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input data, of which specified subsets are used to fit the transformers. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Targets for supervised learning. |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L197)
-
-### get\_feature\_names\_out()
-
-Get output feature names for transformation.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Input features. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L241)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L281)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L86)
-
-### set\_output()
-
-Set the output container when `"transform"` and `"fit\_transform"` are called.
-
-Calling `set\_output` will set the output of all estimators in `transformers` and `transformers\_`.
-
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L321)
-
-### transform()
-
-Transform X separately by each transformer, concatenate results.
-
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The data to be transformed by subset. |
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/compose/ColumnTransformer.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L356)
+[generated/compose/ColumnTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-> `boolean`  = `false`
+> **\_isDisposed**: `boolean` = `false`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L23)
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L23)
+
+***
 
 ### \_isInitialized
 
-> `boolean`  = `false`
+> **\_isInitialized**: `boolean` = `false`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L22)
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L22)
+
+***
 
 ### \_py
 
-> `PythonBridge`
+> **\_py**: `PythonBridge`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L21)
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L21)
+
+***
 
 ### id
 
-> `string`
+> **id**: `string`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L18)
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L18)
+
+***
 
 ### opts
 
-> `any`
+> **opts**: `any`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L19)
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L19)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-#### Signature
+##### Returns
 
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-#### Returns
+#### Defined in
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+[generated/compose/ColumnTransformer.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L504)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L499)
-
-Defined in:  [generated/compose/ColumnTransformer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L499)
+***
 
 ### n\_features\_in\_
 
+#### Get Signature
+
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
+
 Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying transformers expose such an attribute when fit.
 
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
+##### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L472)
+#### Defined in
 
-Defined in:  [generated/compose/ColumnTransformer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L472)
+[generated/compose/ColumnTransformer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L477)
+
+***
 
 ### output\_indices\_
 
+#### Get Signature
+
+> **get** **output\_indices\_**(): `Promise`\<`any`\>
+
 A dictionary from each transformer name to a slice, where the slice corresponds to indices in the transformed output. This is useful to inspect which transformer is responsible for which transformed feature(s).
 
-#### Signature
+##### Returns
 
-```ts
-output_indices_(): Promise<any>;
-```
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L450)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+• **pythonBridge**: `PythonBridge`
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L80)
+
+***
+
+### sparse\_output\_
+
+#### Get Signature
+
+> **get** **sparse\_output\_**(): `Promise`\<`boolean`\>
+
+Boolean flag indicating whether the output of `transform` is a sparse matrix or a dense numpy array, which depends on the output of the individual transformers and the `sparse\_threshold` keyword.
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L423)
+
+***
+
+### transformers\_
+
+#### Get Signature
+
+> **get** **transformers\_**(): `Promise`\<`any`[]\>
+
+The collection of fitted transformers as tuples of (name, fitted\_transformer, column). `fitted\_transformer` can be an estimator, or `'drop'`; `'passthrough'` is replaced with an equivalent [`FunctionTransformer`](sklearn.preprocessing.FunctionTransformer.html#sklearn.preprocessing.FunctionTransformer "sklearn.preprocessing.FunctionTransformer"). In case there were no columns selected, this will be the unfitted transformer. If there are remaining columns, the final element is a tuple of the form: (‘remainder’, transformer, remaining\_columns) corresponding to the `remainder` parameter. If there are remaining columns, then `len(transformers\_)==len(transformers)+1`, otherwise `len(transformers\_)==len(transformers)`.
+
+##### Returns
+
+`Promise`\<`any`[]\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L396)
+
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L134)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Fit all transformers using X.
+
+#### Parameters
+
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters to be passed to the underlying transformers’ `fit` and `transform` methods.
+
+You can only pass this if metadata routing is enabled, which you can enable using `sklearn.set\_config(enable\_metadata\_routing=`true`)`.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Input data, of which specified subsets are used to fit the transformers.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Targets for supervised learning.
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L445)
+#### Defined in
 
-Defined in:  [generated/compose/ColumnTransformer.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L445)
+[generated/compose/ColumnTransformer.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L151)
 
-### py
+***
 
-#### Signature
+### fit\_transform()
 
-```ts
-py(): PythonBridge;
-```
+> **fit\_transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/compose/ColumnTransformer.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L73)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
+Fit all transformers, transform the data and concatenate results.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters to be passed to the underlying transformers’ `fit` and `transform` methods.
+
+You can only pass this if metadata routing is enabled, which you can enable using `sklearn.set\_config(enable\_metadata\_routing=`true`)`.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+Input data, of which specified subsets are used to fit the transformers.
+
+• **opts.y?**: [`ArrayLike`](../type-aliases/ArrayLike.md)
+
+Targets for supervised learning.
 
 #### Returns
 
-`void`
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L77)
+#### Defined in
 
-Defined in:  [generated/compose/ColumnTransformer.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L73) [generated/compose/ColumnTransformer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L77)
+[generated/compose/ColumnTransformer.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L197)
 
-### sparse\_output\_
+***
 
-Boolean flag indicating whether the output of `transform` is a sparse matrix or a dense numpy array, which depends on the output of the individual transformers and the `sparse\_threshold` keyword.
+### get\_feature\_names\_out()
 
-#### Signature
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
 
-```ts
-sparse_output_(): Promise<boolean>;
-```
+Get output feature names for transformation.
 
-#### Returns
+#### Parameters
 
-`Promise`\<`boolean`\>
+• **opts**
 
-Defined in:  [generated/compose/ColumnTransformer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L418)
+• **opts.input\_features?**: `any`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L418)
-
-### transformers\_
-
-The collection of fitted transformers as tuples of (name, fitted\_transformer, column). `fitted\_transformer` can be an estimator, ‘drop’, or ‘passthrough’. In case there were no columns selected, this will be the unfitted transformer. If there are remaining columns, the final element is a tuple of the form: (‘remainder’, transformer, remaining\_columns) corresponding to the `remainder` parameter. If there are remaining columns, then `len(transformers\_)==len(transformers)+1`, otherwise `len(transformers\_)==len(transformers)`.
-
-#### Signature
-
-```ts
-transformers_(): Promise<any[]>;
-```
+Input features.
 
 #### Returns
 
-`Promise`\<`any`[]\>
+`Promise`\<`any`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L391)
+#### Defined in
 
-Defined in:  [generated/compose/ColumnTransformer.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L391)
+[generated/compose/ColumnTransformer.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L245)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Parameters
+
+• **opts**
+
+• **opts.routing?**: `any`
+
+A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L283)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Parameters
+
+• **py**: `PythonBridge`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L93)
+
+***
+
+### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
+
+Set the output container when `"transform"` and `"fit\_transform"` are called.
+
+Calling `set\_output` will set the output of all estimators in `transformers` and `transformers\_`.
+
+#### Parameters
+
+• **opts**
+
+• **opts.transform?**: `"default"` \| `"pandas"` \| `"polars"`
+
+Configure output of `transform` and `fit\_transform`.
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L321)
+
+***
+
+### transform()
+
+> **transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+Transform X separately by each transformer, concatenate results.
+
+#### Parameters
+
+• **opts**
+
+• **opts.params?**: `any`
+
+Parameters to be passed to the underlying transformers’ `transform` method.
+
+You can only pass this if metadata routing is enabled, which you can enable using `sklearn.set\_config(enable\_metadata\_routing=`true`)`.
+
+• **opts.X?**: [`ArrayLike`](../type-aliases/ArrayLike.md)[]
+
+The data to be transformed by subset.
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+#### Defined in
+
+[generated/compose/ColumnTransformer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/e59c23d4803055797e663e330d0a58f2245dd145/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L355)
