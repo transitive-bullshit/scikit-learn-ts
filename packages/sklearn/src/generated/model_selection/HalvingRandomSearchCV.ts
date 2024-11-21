@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The search strategy starts evaluating all the candidates with a small amount of resources and iteratively selects the best candidates, using more and more resources.
 
-  The candidates are sampled at random from the parameter space and the number of sampled candidates is determined by `n\_candidates`.
+  The candidates are sampled at random from the parameter space and the number of sampled candidates is determined by `n_candidates`.
 
-  Read more in the [User guide](../grid_search.html#successive-halving-user-guide).
+  Read more in the [User guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#successive-halving-user-guide).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.HalvingRandomSearchCV.html)
  */
@@ -36,7 +36,7 @@ export class HalvingRandomSearchCV {
     param_distributions?: any
 
     /**
-      The number of candidate parameters to sample, at the first iteration. Using ‘exhaust’ will sample enough candidates so that the last iteration uses as many resources as possible, based on `min\_resources`, `max\_resources` and `factor`. In this case, `min\_resources` cannot be ‘exhaust’.
+      The number of candidate parameters to sample, at the first iteration. Using ‘exhaust’ will sample enough candidates so that the last iteration uses as many resources as possible, based on `min_resources`, `max_resources` and `factor`. In this case, `min_resources` cannot be ‘exhaust’.
 
       @defaultValue `'exhaust'`
      */
@@ -50,14 +50,14 @@ export class HalvingRandomSearchCV {
     factor?: number
 
     /**
-      Defines the resource that increases with each iteration. By default, the resource is the number of samples. It can also be set to any parameter of the base estimator that accepts positive integer values, e.g. ‘n\_iterations’ or ‘n\_estimators’ for a gradient boosting estimator. In this case `max\_resources` cannot be ‘auto’ and must be set explicitly.
+      Defines the resource that increases with each iteration. By default, the resource is the number of samples. It can also be set to any parameter of the base estimator that accepts positive integer values, e.g. ‘n_iterations’ or ‘n_estimators’ for a gradient boosting estimator. In this case `max_resources` cannot be ‘auto’ and must be set explicitly.
 
       @defaultValue `'n_samples'`
      */
     resource?: 'n_samples' | string
 
     /**
-      The maximum number of resources that any candidate is allowed to use for a given iteration. By default, this is set `n\_samples` when `resource='n\_samples'` (default), else an error is raised.
+      The maximum number of resources that any candidate is allowed to use for a given iteration. By default, this is set `n_samples` when `resource='n_samples'` (default), else an error is raised.
 
       @defaultValue `'auto'`
      */
@@ -71,7 +71,7 @@ export class HalvingRandomSearchCV {
     min_resources?: 'exhaust' | 'smallest' | number
 
     /**
-      This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `true`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `false` by default, which means that the last iteration may evaluate more than `factor` candidates. See [Aggressive elimination of candidates](../grid_search.html#aggressive-elimination) for more details.
+      This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `true`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `false` by default, which means that the last iteration may evaluate more than `factor` candidates. See [Aggressive elimination of candidates](https://scikit-learn.org/stable/modules/generated/../grid_search.html#aggressive-elimination) for more details.
 
       @defaultValue `false`
      */
@@ -85,14 +85,14 @@ export class HalvingRandomSearchCV {
     cv?: number
 
     /**
-      A single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
+      A single string (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
      */
     scoring?: string
 
     /**
       If `true`, refit an estimator using the best found parameters on the whole dataset.
 
-      The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `HalvingRandomSearchCV` instance.
+      The refitted estimator is made available at the `best_estimator_` attribute and permits using `predict` directly on this `HalvingRandomSearchCV` instance.
 
       @defaultValue `true`
      */
@@ -104,19 +104,19 @@ export class HalvingRandomSearchCV {
     error_score?: 'raise'
 
     /**
-      If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+      If `false`, the `cv_results_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
 
       @defaultValue `false`
      */
     return_train_score?: boolean
 
     /**
-      Pseudo random number generator state used for subsampling the dataset when `resources != 'n\_samples'`. Also used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Pseudo random number generator state used for subsampling the dataset when `resources != 'n_samples'`. Also used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -169,27 +169,8 @@ except NameError: bridgeHalvingRandomSearchCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HalvingRandomSearchCV = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'param_distributions': ${
-      this.opts['param_distributions'] ?? undefined
-    }, 'n_candidates': ${this.opts['n_candidates'] ?? undefined}, 'factor': ${
-      this.opts['factor'] ?? undefined
-    }, 'resource': ${this.opts['resource'] ?? undefined}, 'max_resources': ${
-      this.opts['max_resources'] ?? undefined
-    }, 'min_resources': ${
-      this.opts['min_resources'] ?? undefined
-    }, 'aggressive_elimination': ${
-      this.opts['aggressive_elimination'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'refit': ${this.opts['refit'] ?? undefined}, 'error_score': ${
-      this.opts['error_score'] ?? undefined
-    }, 'return_train_score': ${
-      this.opts['return_train_score'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_HalvingRandomSearchCV = {'estimator': ${this.opts['estimator'] ?? undefined}, 'param_distributions': ${this.opts['param_distributions'] ?? undefined}, 'n_candidates': ${this.opts['n_candidates'] ?? undefined}, 'factor': ${this.opts['factor'] ?? undefined}, 'resource': ${this.opts['resource'] ?? undefined}, 'max_resources': ${this.opts['max_resources'] ?? undefined}, 'min_resources': ${this.opts['min_resources'] ?? undefined}, 'aggressive_elimination': ${this.opts['aggressive_elimination'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'refit': ${this.opts['refit'] ?? undefined}, 'error_score': ${this.opts['error_score'] ?? undefined}, 'return_train_score': ${this.opts['return_train_score'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_HalvingRandomSearchCV = {k: v for k, v in ctor_HalvingRandomSearchCV.items() if v is not None}`
 
@@ -219,9 +200,9 @@ ctor_HalvingRandomSearchCV = {k: v for k, v in ctor_HalvingRandomSearchCV.items(
   }
 
   /**
-    Call decision\_function on the estimator with the best found parameters.
+    Call decision_function on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `decision\_function`.
+    Only available if `refit=True` and the underlying estimator supports `decision_function`.
    */
   async decision_function(opts: {
     /**
@@ -242,9 +223,8 @@ ctor_HalvingRandomSearchCV = {k: v for k, v in ctor_HalvingRandomSearchCV.items(
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRandomSearchCV_decision_function.items() if v is not None}`
 
@@ -262,7 +242,7 @@ pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRando
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike
 
@@ -272,14 +252,9 @@ pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRando
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-     */
-    groups?: ArrayLike
-
-    /**
       Parameters passed to the `fit` method of the estimator.
      */
-    fit_params?: any
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -292,13 +267,8 @@ pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRando
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_fit = {k: v for k, v in pms_HalvingRandomSearchCV_fit.items() if v is not None}`
 
@@ -314,11 +284,11 @@ pms_HalvingRandomSearchCV_fit = {k: v for k, v in pms_HalvingRandomSearchCV_fit.
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -336,9 +306,7 @@ pms_HalvingRandomSearchCV_fit = {k: v for k, v in pms_HalvingRandomSearchCV_fit.
 
     // set up method params
     await this._py
-      .ex`pms_HalvingRandomSearchCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_HalvingRandomSearchCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingRandomSearchCV_get_metadata_routing.items() if v is not None}`
 
@@ -352,11 +320,16 @@ pms_HalvingRandomSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingRa
   }
 
   /**
-    Call inverse\_transform on the estimator with the best found params.
+    Call inverse_transform on the estimator with the best found params.
 
-    Only available if the underlying estimator implements `inverse\_transform` and `refit=True`.
+    Only available if the underlying estimator implements `inverse_transform` and `refit=True`.
    */
   async inverse_transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+
     /**
       Must fulfill the input assumptions of the underlying estimator.
      */
@@ -375,9 +348,8 @@ pms_HalvingRandomSearchCV_get_metadata_routing = {k: v for k, v in pms_HalvingRa
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_inverse_transform = {'Xt': ${
-      opts['Xt'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_inverse_transform = {'X': ${opts['X'] ?? undefined}, 'Xt': ${opts['Xt'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_inverse_transform = {k: v for k, v in pms_HalvingRandomSearchCV_inverse_transform.items() if v is not None}`
 
@@ -412,9 +384,8 @@ pms_HalvingRandomSearchCV_inverse_transform = {k: v for k, v in pms_HalvingRando
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_predict = {k: v for k, v in pms_HalvingRandomSearchCV_predict.items() if v is not None}`
 
@@ -428,9 +399,9 @@ pms_HalvingRandomSearchCV_predict = {k: v for k, v in pms_HalvingRandomSearchCV_
   }
 
   /**
-    Call predict\_log\_proba on the estimator with the best found parameters.
+    Call predict_log_proba on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `predict\_log\_proba`.
+    Only available if `refit=True` and the underlying estimator supports `predict_log_proba`.
    */
   async predict_log_proba(opts: {
     /**
@@ -451,9 +422,8 @@ pms_HalvingRandomSearchCV_predict = {k: v for k, v in pms_HalvingRandomSearchCV_
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_predict_log_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_predict_log_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingRandomSearchCV_predict_log_proba.items() if v is not None}`
 
@@ -467,9 +437,9 @@ pms_HalvingRandomSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingRando
   }
 
   /**
-    Call predict\_proba on the estimator with the best found parameters.
+    Call predict_proba on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `predict\_proba`.
+    Only available if `refit=True` and the underlying estimator supports `predict_proba`.
    */
   async predict_proba(opts: {
     /**
@@ -490,9 +460,8 @@ pms_HalvingRandomSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingRando
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_predict_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSearchCV_predict_proba.items() if v is not None}`
 
@@ -508,11 +477,11 @@ pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSea
   /**
     Return the score on the given data, if the estimator has been refit.
 
-    This uses the score defined by `scoring` where provided, and the `best\_estimator\_.score` method otherwise.
+    This uses the score defined by `scoring` where provided, and the `best_estimator_.score` method otherwise.
    */
   async score(opts: {
     /**
-      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Input data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -520,6 +489,11 @@ pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSea
       Target relative to X for classification or regression; `undefined` for unsupervised learning.
      */
     y?: ArrayLike[]
+
+    /**
+      Parameters to be passed to the underlying scorer(s).
+     */
+    params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
@@ -532,11 +506,8 @@ pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSea
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_score = {k: v for k, v in pms_HalvingRandomSearchCV_score.items() if v is not None}`
 
@@ -550,9 +521,9 @@ pms_HalvingRandomSearchCV_score = {k: v for k, v in pms_HalvingRandomSearchCV_sc
   }
 
   /**
-    Call score\_samples on the estimator with the best found parameters.
+    Call score_samples on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `score\_samples`.
+    Only available if `refit=True` and the underlying estimator supports `score_samples`.
    */
   async score_samples(opts: {
     /**
@@ -573,9 +544,8 @@ pms_HalvingRandomSearchCV_score = {k: v for k, v in pms_HalvingRandomSearchCV_sc
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_score_samples = {k: v for k, v in pms_HalvingRandomSearchCV_score_samples.items() if v is not None}`
 
@@ -586,47 +556,6 @@ pms_HalvingRandomSearchCV_score_samples = {k: v for k, v in pms_HalvingRandomSea
     // convert the result from python to node.js
     return this
       ._py`res_HalvingRandomSearchCV_score_samples.tolist() if hasattr(res_HalvingRandomSearchCV_score_samples, 'tolist') else res_HalvingRandomSearchCV_score_samples`
-  }
-
-  /**
-    Request metadata passed to the `fit` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_fit_request(opts: {
-    /**
-      Metadata routing for `groups` parameter in `fit`.
-     */
-    groups?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This HalvingRandomSearchCV instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'HalvingRandomSearchCV must call init() before set_fit_request()'
-      )
-    }
-
-    // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_set_fit_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
-
-pms_HalvingRandomSearchCV_set_fit_request = {k: v for k, v in pms_HalvingRandomSearchCV_set_fit_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_HalvingRandomSearchCV_set_fit_request = bridgeHalvingRandomSearchCV[${this.id}].set_fit_request(**pms_HalvingRandomSearchCV_set_fit_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_HalvingRandomSearchCV_set_fit_request.tolist() if hasattr(res_HalvingRandomSearchCV_set_fit_request, 'tolist') else res_HalvingRandomSearchCV_set_fit_request`
   }
 
   /**
@@ -653,9 +582,8 @@ pms_HalvingRandomSearchCV_set_fit_request = {k: v for k, v in pms_HalvingRandomS
     }
 
     // set up method params
-    await this._py.ex`pms_HalvingRandomSearchCV_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HalvingRandomSearchCV_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchCV_transform.items() if v is not None}`
 
@@ -723,7 +651,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    The number of candidate parameters that are left after the last iteration. It corresponds to `ceil(n\_candidates\[-1\] / factor)`
+    The number of candidate parameters that are left after the last iteration. It corresponds to `ceil(n_candidates\[-1\] / factor)`
    */
   get n_remaining_candidates_(): Promise<number> {
     if (this._isDisposed) {
@@ -750,7 +678,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    The maximum number of resources that any candidate is allowed to use for a given iteration. Note that since the number of resources used at each iteration must be a multiple of `min\_resources\_`, the actual number of resources used at the last iteration may be smaller than `max\_resources\_`.
+    The maximum number of resources that any candidate is allowed to use for a given iteration. Note that since the number of resources used at each iteration must be a multiple of `min_resources_`, the actual number of resources used at the last iteration may be smaller than `max_resources_`.
    */
   get max_resources_(): Promise<number> {
     if (this._isDisposed) {
@@ -804,7 +732,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    The actual number of iterations that were run. This is equal to `n\_required\_iterations\_` if `aggressive\_elimination` is `true`. Else, this is equal to `min(n\_possible\_iterations\_, n\_required\_iterations\_)`.
+    The actual number of iterations that were run. This is equal to `n_required_iterations_` if `aggressive_elimination` is `true`. Else, this is equal to `min(n_possible_iterations_, n_required_iterations_)`.
    */
   get n_iterations_(): Promise<number> {
     if (this._isDisposed) {
@@ -831,7 +759,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    The number of iterations that are possible starting with `min\_resources\_` resources and without exceeding `max\_resources\_`.
+    The number of iterations that are possible starting with `min_resources_` resources and without exceeding `max_resources_`.
    */
   get n_possible_iterations_(): Promise<number> {
     if (this._isDisposed) {
@@ -858,7 +786,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    The number of iterations that are required to end up with less than `factor` candidates at the last iteration, starting with `min\_resources\_` resources. This will be smaller than `n\_possible\_iterations\_` when there isn’t enough resources.
+    The number of iterations that are required to end up with less than `factor` candidates at the last iteration, starting with `min_resources_` resources. This will be smaller than `n_possible_iterations_` when there isn’t enough resources.
    */
   get n_required_iterations_(): Promise<number> {
     if (this._isDisposed) {
@@ -885,7 +813,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    A dict with keys as column headers and values as columns, that can be imported into a pandas `DataFrame`. It contains lots of information for analysing the results of a search. Please refer to the [User guide](../grid_search.html#successive-halving-cv-results) for details.
+    A dict with keys as column headers and values as columns, that can be imported into a pandas `DataFrame`. It contains lots of information for analysing the results of a search. Please refer to the [User guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#successive-halving-cv-results) for details.
    */
   get cv_results_(): Promise<any> {
     if (this._isDisposed) {
@@ -939,7 +867,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    Mean cross-validated score of the best\_estimator.
+    Mean cross-validated score of the best_estimator.
    */
   get best_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -993,9 +921,9 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    The index (of the `cv\_results\_` arrays) which corresponds to the best candidate parameter setting.
+    The index (of the `cv_results_` arrays) which corresponds to the best candidate parameter setting.
 
-    The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best\_score\_`).
+    The dict at `search.cv_results_\['params'\]\[search.best_index_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best_score_`).
    */
   get best_index_(): Promise<number> {
     if (this._isDisposed) {
@@ -1132,7 +1060,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if `best_estimator_` is defined (see the documentation for the `refit` parameter for more details) and that `best_estimator_` exposes `feature_names_in_` when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

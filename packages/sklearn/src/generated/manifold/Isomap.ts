@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Non-linear dimensionality reduction through Isometric Mapping
 
-  Read more in the [User Guide](../manifold.html#isomap).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../manifold.html#isomap).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html)
  */
@@ -24,14 +24,14 @@ export class Isomap {
 
   constructor(opts?: {
     /**
-      Number of neighbors to consider for each point. If `n\_neighbors` is an int, then `radius` must be `undefined`.
+      Number of neighbors to consider for each point. If `n_neighbors` is an int, then `radius` must be `undefined`.
 
       @defaultValue `5`
      */
     n_neighbors?: number
 
     /**
-      Limiting distance of neighbors to return. If `radius` is a float, then `n\_neighbors` must be set to `undefined`.
+      Limiting distance of neighbors to return. If `radius` is a float, then `n_neighbors` must be set to `undefined`.
      */
     radius?: number
 
@@ -54,14 +54,14 @@ export class Isomap {
     eigen_solver?: 'auto' | 'arpack' | 'dense'
 
     /**
-      Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == ‘dense’.
+      Convergence tolerance passed to arpack or lobpcg. not used if eigen_solver == ‘dense’.
 
       @defaultValue `0`
      */
     tol?: number
 
     /**
-      Maximum number of iterations for the arpack solver. not used if eigen\_solver == ‘dense’.
+      Maximum number of iterations for the arpack solver. not used if eigen_solver == ‘dense’.
      */
     max_iter?: number
 
@@ -86,19 +86,19 @@ export class Isomap {
     neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [Glossary](../../glossary.html#term-sparse-graph).
+      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise_distances`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sparse-graph).
 
       @defaultValue `'minkowski'`
      */
     metric?: any
 
     /**
-      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
 
       @defaultValue `2`
      */
@@ -149,21 +149,8 @@ except NameError: bridgeIsomap = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Isomap = {'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'radius': ${this.opts['radius'] ?? undefined}, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'path_method': ${
-      this.opts['path_method'] ?? undefined
-    }, 'neighbors_algorithm': ${
-      this.opts['neighbors_algorithm'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Isomap = {'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'radius': ${this.opts['radius'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'path_method': ${this.opts['path_method'] ?? undefined}, 'neighbors_algorithm': ${this.opts['neighbors_algorithm'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}}
 
 ctor_Isomap = {k: v for k, v in ctor_Isomap.items() if v is not None}`
 
@@ -196,7 +183,7 @@ ctor_Isomap = {k: v for k, v in ctor_Isomap.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Sample data, shape = (n\_samples, n\_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
+      Sample data, shape = (n_samples, n_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
      */
     X?: ArrayLike | SparseMatrix
 
@@ -214,9 +201,8 @@ ctor_Isomap = {k: v for k, v in ctor_Isomap.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_Isomap_fit = {k: v for k, v in pms_Isomap_fit.items() if v is not None}`
 
@@ -234,7 +220,7 @@ pms_Isomap_fit = {k: v for k, v in pms_Isomap_fit.items() if v is not None}`
    */
   async fit_transform(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix
 
@@ -252,9 +238,8 @@ pms_Isomap_fit = {k: v for k, v in pms_Isomap_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Isomap_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_Isomap_fit_transform = {k: v for k, v in pms_Isomap_fit_transform.items() if v is not None}`
 
@@ -270,7 +255,7 @@ pms_Isomap_fit_transform = {k: v for k, v in pms_Isomap_fit_transform.items() if
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -287,9 +272,8 @@ pms_Isomap_fit_transform = {k: v for k, v in pms_Isomap_fit_transform.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Isomap_get_feature_names_out = {k: v for k, v in pms_Isomap_get_feature_names_out.items() if v is not None}`
 
@@ -305,11 +289,11 @@ pms_Isomap_get_feature_names_out = {k: v for k, v in pms_Isomap_get_feature_name
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -322,9 +306,8 @@ pms_Isomap_get_feature_names_out = {k: v for k, v in pms_Isomap_get_feature_name
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Isomap_get_metadata_routing = {k: v for k, v in pms_Isomap_get_metadata_routing.items() if v is not None}`
 
@@ -356,9 +339,7 @@ pms_Isomap_get_metadata_routing = {k: v for k, v in pms_Isomap_get_metadata_rout
 
     // set up method params
     await this._py
-      .ex`pms_Isomap_reconstruction_error = {'reconstruction_error': ${
-      opts['reconstruction_error'] ?? undefined
-    }}
+      .ex`pms_Isomap_reconstruction_error = {'reconstruction_error': ${opts['reconstruction_error'] ?? undefined}}
 
 pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_error.items() if v is not None}`
 
@@ -374,13 +355,13 @@ pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_er
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
@@ -391,9 +372,8 @@ pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_er
     }
 
     // set up method params
-    await this._py.ex`pms_Isomap_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Isomap_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Isomap_set_output = {k: v for k, v in pms_Isomap_set_output.items() if v is not None}`
 
@@ -409,11 +389,11 @@ pms_Isomap_set_output = {k: v for k, v in pms_Isomap_set_output.items() if v is 
   /**
     Transform X.
 
-    This is implemented by linking the points X into the graph of geodesic distances of the training data. First the `n\_neighbors` nearest neighbors of X are found in the training data, and from these the shortest geodesic distances from each point in X to each point in the training data are computed in order to construct the kernel. The embedding of X is the projection of this kernel onto the embedding vectors of the training set.
+    This is implemented by linking the points X into the graph of geodesic distances of the training data. First the `n_neighbors` nearest neighbors of X are found in the training data, and from these the shortest geodesic distances from each point in X to each point in the training data are computed in order to construct the kernel. The embedding of X is the projection of this kernel onto the embedding vectors of the training set.
    */
   async transform(opts: {
     /**
-      If neighbors\_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n\_queries, n\_samples\_fit).
+      If neighbors_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n_queries, n_samples_fit).
      */
     X?: ArrayLike | SparseMatrix
   }): Promise<ArrayLike> {
@@ -463,7 +443,7 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
   }
 
   /**
-    [`KernelPCA`](sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA "sklearn.decomposition.KernelPCA") object used to implement the embedding.
+    [`KernelPCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA "sklearn.decomposition.KernelPCA") object used to implement the embedding.
    */
   get kernel_pca_(): Promise<any> {
     if (this._isDisposed) {
@@ -531,7 +511,7 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -554,7 +534,7 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

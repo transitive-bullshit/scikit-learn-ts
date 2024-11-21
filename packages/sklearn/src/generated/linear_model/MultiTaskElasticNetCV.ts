@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Multi-task L1/L2 ElasticNet with built-in cross-validation.
 
-  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+  See glossary entry for [cross-validation estimator](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-cross-validation-estimator).
 
   The optimization objective for MultiTaskElasticNet is:
 
@@ -24,14 +24,14 @@ export class MultiTaskElasticNetCV {
 
   constructor(opts?: {
     /**
-      The ElasticNet mixing parameter, with 0 < l1\_ratio <= 1. For l1\_ratio = 1 the penalty is an L1/L2 penalty. For l1\_ratio = 0 it is an L2 penalty. For `0 < l1\_ratio < 1`, the penalty is a combination of L1/L2 and L2. This parameter can be a list, in which case the different values are tested by cross-validation and the one giving the best prediction score is used. Note that a good choice of list of values for l1\_ratio is often to put more values close to 1 (i.e. Lasso) and less close to 0 (i.e. Ridge), as in `\[.1, .5, .7, .9, .95, .99, 1\]`.
+      The ElasticNet mixing parameter, with 0 < l1_ratio <= 1. For l1_ratio = 1 the penalty is an L1/L2 penalty. For l1_ratio = 0 it is an L2 penalty. For `0 < l1_ratio < 1`, the penalty is a combination of L1/L2 and L2. This parameter can be a list, in which case the different values are tested by cross-validation and the one giving the best prediction score is used. Note that a good choice of list of values for l1_ratio is often to put more values close to 1 (i.e. Lasso) and less close to 0 (i.e. Ridge), as in `\[.1, .5, .7, .9, .95, .99, 1\]`.
 
       @defaultValue `0.5`
      */
     l1_ratio?: number
 
     /**
-      Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
+      Length of the path. `eps=1e-3` means that `alpha_min / alpha_max \= 1e-3`.
 
       @defaultValue `0.001`
      */
@@ -90,12 +90,12 @@ export class MultiTaskElasticNetCV {
     verbose?: boolean | number
 
     /**
-      Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1\_ratio are given. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1_ratio are given. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -150,21 +150,8 @@ except NameError: bridgeMultiTaskElasticNetCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MultiTaskElasticNetCV = {'l1_ratio': ${
-      this.opts['l1_ratio'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'n_alphas': ${
-      this.opts['n_alphas'] ?? undefined
-    }, 'alphas': ${this.opts['alphas'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'copy_X': ${
-      this.opts['copy_X'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'selection': ${this.opts['selection'] ?? undefined}}
+    await this._py
+      .ex`ctor_MultiTaskElasticNetCV = {'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'n_alphas': ${this.opts['n_alphas'] ?? undefined}, 'alphas': ${this.opts['alphas'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'selection': ${this.opts['selection'] ?? undefined}}
 
 ctor_MultiTaskElasticNetCV = {k: v for k, v in ctor_MultiTaskElasticNetCV.items() if v is not None}`
 
@@ -208,6 +195,11 @@ ctor_MultiTaskElasticNetCV = {k: v for k, v in ctor_MultiTaskElasticNetCV.items(
       Training target variable. Will be cast to X’s dtype if necessary.
      */
     y?: NDArray[]
+
+    /**
+      Parameters to be passed to the CV splitter.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -220,11 +212,8 @@ ctor_MultiTaskElasticNetCV = {k: v for k, v in ctor_MultiTaskElasticNetCV.items(
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_fit = {k: v for k, v in pms_MultiTaskElasticNetCV_fit.items() if v is not None}`
 
@@ -240,11 +229,11 @@ pms_MultiTaskElasticNetCV_fit = {k: v for k, v in pms_MultiTaskElasticNetCV_fit.
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -262,9 +251,7 @@ pms_MultiTaskElasticNetCV_fit = {k: v for k, v in pms_MultiTaskElasticNetCV_fit.
 
     // set up method params
     await this._py
-      .ex`pms_MultiTaskElasticNetCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MultiTaskElasticNetCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTaskElasticNetCV_get_metadata_routing.items() if v is not None}`
 
@@ -296,14 +283,14 @@ pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTask
     y?: ArrayLike | SparseMatrix
 
     /**
-      Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penalties). `l1\_ratio=1` corresponds to the Lasso.
+      Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penalties). `l1_ratio=1` corresponds to the Lasso.
 
       @defaultValue `0.5`
      */
     l1_ratio?: number
 
     /**
-      Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
+      Length of the path. `eps=1e-3` means that `alpha_min / alpha_max \= 1e-3`.
 
       @defaultValue `0.001`
      */
@@ -319,7 +306,7 @@ pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTask
     /**
       List of alphas where to compute the models. If `undefined` alphas are set automatically.
      */
-    alphas?: NDArray
+    alphas?: ArrayLike
 
     /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
@@ -343,7 +330,7 @@ pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTask
     /**
       The initial values of the coefficients.
      */
-    coef_init?: NDArray
+    coef_init?: ArrayLike
 
     /**
       Amount of verbosity.
@@ -389,29 +376,8 @@ pms_MultiTaskElasticNetCV_get_metadata_routing = {k: v for k, v in pms_MultiTask
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${
-      opts['l1_ratio'] ?? undefined
-    }, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${
-      opts['n_alphas'] ?? undefined
-    }, 'alphas': np.array(${opts['alphas'] ?? undefined}) if ${
-      opts['alphas'] !== undefined
-    } else None, 'precompute': np.array(${
-      opts['precompute'] ?? undefined
-    }) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${
-      opts['return_n_iter'] ?? undefined
-    }, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'params': ${opts['params'] ?? undefined}}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'l1_ratio': ${opts['l1_ratio'] ?? undefined}, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': ${opts['alphas'] ?? undefined}, 'precompute': np.array(${opts['precompute'] ?? undefined}) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${opts['return_n_iter'] ?? undefined}, 'positive': ${opts['positive'] ?? undefined}, 'check_input': ${opts['check_input'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_path = {k: v for k, v in pms_MultiTaskElasticNetCV_path.items() if v is not None}`
 
@@ -444,9 +410,8 @@ pms_MultiTaskElasticNetCV_path = {k: v for k, v in pms_MultiTaskElasticNetCV_pat
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_predict = {k: v for k, v in pms_MultiTaskElasticNetCV_predict.items() if v is not None}`
 
@@ -462,11 +427,11 @@ pms_MultiTaskElasticNetCV_predict = {k: v for k, v in pms_MultiTaskElasticNetCV_
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -491,13 +456,8 @@ pms_MultiTaskElasticNetCV_predict = {k: v for k, v in pms_MultiTaskElasticNetCV_
     }
 
     // set up method params
-    await this._py.ex`pms_MultiTaskElasticNetCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiTaskElasticNetCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MultiTaskElasticNetCV_score = {k: v for k, v in pms_MultiTaskElasticNetCV_score.items() if v is not None}`
 
@@ -513,13 +473,13 @@ pms_MultiTaskElasticNetCV_score = {k: v for k, v in pms_MultiTaskElasticNetCV_sc
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -537,9 +497,7 @@ pms_MultiTaskElasticNetCV_score = {k: v for k, v in pms_MultiTaskElasticNetCV_sc
 
     // set up method params
     await this._py
-      .ex`pms_MultiTaskElasticNetCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiTaskElasticNetCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_set_fit_request = {k: v for k, v in pms_MultiTaskElasticNetCV_set_fit_request.items() if v is not None}`
 
@@ -555,13 +513,13 @@ pms_MultiTaskElasticNetCV_set_fit_request = {k: v for k, v in pms_MultiTaskElast
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -579,9 +537,7 @@ pms_MultiTaskElasticNetCV_set_fit_request = {k: v for k, v in pms_MultiTaskElast
 
     // set up method params
     await this._py
-      .ex`pms_MultiTaskElasticNetCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiTaskElasticNetCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiTaskElasticNetCV_set_score_request = {k: v for k, v in pms_MultiTaskElasticNetCV_set_score_request.items() if v is not None}`
 
@@ -622,7 +578,7 @@ pms_MultiTaskElasticNetCV_set_score_request = {k: v for k, v in pms_MultiTaskEla
   }
 
   /**
-    Parameter vector (W in the cost function formula). Note that `coef\_` stores the transpose of `W`, `W.T`.
+    Parameter vector (W in the cost function formula). Note that `coef_` stores the transpose of `W`, `W.T`.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -703,7 +659,7 @@ pms_MultiTaskElasticNetCV_set_score_request = {k: v for k, v in pms_MultiTaskEla
   }
 
   /**
-    The grid of alphas used for fitting, for each l1\_ratio.
+    The grid of alphas used for fitting, for each l1_ratio.
    */
   get alphas_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -730,7 +686,7 @@ pms_MultiTaskElasticNetCV_set_score_request = {k: v for k, v in pms_MultiTaskEla
   }
 
   /**
-    Best l1\_ratio obtained by cross-validation.
+    Best l1_ratio obtained by cross-validation.
    */
   get l1_ratio_(): Promise<number> {
     if (this._isDisposed) {
@@ -811,7 +767,7 @@ pms_MultiTaskElasticNetCV_set_score_request = {k: v for k, v in pms_MultiTaskEla
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -838,7 +794,7 @@ pms_MultiTaskElasticNetCV_set_score_request = {k: v for k, v in pms_MultiTaskEla
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Ledoit-Wolf is a particular form of shrinkage, where the shrinkage coefficient is computed using O. Ledoit and M. Wolf’s formula as described in “A Well-Conditioned Estimator for Large-Dimensional Covariance Matrices”, Ledoit and Wolf, Journal of Multivariate Analysis, Volume 88, Issue 2, February 2004, pages 365-411.
 
-  Read more in the [User Guide](../covariance.html#shrunk-covariance).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../covariance.html#shrunk-covariance).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html)
  */
@@ -84,11 +84,8 @@ except NameError: bridgeLedoitWolf = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LedoitWolf = {'store_precision': ${
-      this.opts['store_precision'] ?? undefined
-    }, 'assume_centered': ${
-      this.opts['assume_centered'] ?? undefined
-    }, 'block_size': ${this.opts['block_size'] ?? undefined}}
+    await this._py
+      .ex`ctor_LedoitWolf = {'store_precision': ${this.opts['store_precision'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}, 'block_size': ${this.opts['block_size'] ?? undefined}}
 
 ctor_LedoitWolf = {k: v for k, v in ctor_LedoitWolf.items() if v is not None}`
 
@@ -127,14 +124,14 @@ ctor_LedoitWolf = {k: v for k, v in ctor_LedoitWolf.items() if v is not None}`
     comp_cov?: ArrayLike[]
 
     /**
-      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp_cov \- self.covariance_)`.
 
       @defaultValue `'frobenius'`
      */
     norm?: 'frobenius' | 'spectral'
 
     /**
-      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+      If `true` (default), the squared error norm is divided by n_features. If `false`, the squared error norm is not rescaled.
 
       @defaultValue `true`
      */
@@ -156,13 +153,8 @@ ctor_LedoitWolf = {k: v for k, v in ctor_LedoitWolf.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_LedoitWolf_error_norm = {k: v for k, v in pms_LedoitWolf_error_norm.items() if v is not None}`
 
@@ -180,7 +172,7 @@ pms_LedoitWolf_error_norm = {k: v for k, v in pms_LedoitWolf_error_norm.items() 
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -198,9 +190,8 @@ pms_LedoitWolf_error_norm = {k: v for k, v in pms_LedoitWolf_error_norm.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LedoitWolf_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LedoitWolf_fit = {k: v for k, v in pms_LedoitWolf_fit.items() if v is not None}`
 
@@ -216,11 +207,11 @@ pms_LedoitWolf_fit = {k: v for k, v in pms_LedoitWolf_fit.items() if v is not No
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -235,9 +226,8 @@ pms_LedoitWolf_fit = {k: v for k, v in pms_LedoitWolf_fit.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LedoitWolf_get_metadata_routing = {k: v for k, v in pms_LedoitWolf_get_metadata_routing.items() if v is not None}`
 
@@ -268,9 +258,8 @@ pms_LedoitWolf_get_metadata_routing = {k: v for k, v in pms_LedoitWolf_get_metad
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+    await this._py
+      .ex`pms_LedoitWolf_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_LedoitWolf_get_precision = {k: v for k, v in pms_LedoitWolf_get_precision.items() if v is not None}`
 
@@ -301,9 +290,8 @@ pms_LedoitWolf_get_precision = {k: v for k, v in pms_LedoitWolf_get_precision.it
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LedoitWolf_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LedoitWolf_mahalanobis = {k: v for k, v in pms_LedoitWolf_mahalanobis.items() if v is not None}`
 
@@ -317,13 +305,13 @@ pms_LedoitWolf_mahalanobis = {k: v for k, v in pms_LedoitWolf_mahalanobis.items(
   }
 
   /**
-    Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
+    Compute the log-likelihood of `X_test` under the estimated Gaussian model.
 
-    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
+    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location_` and `self.covariance_`.
    */
   async score(opts: {
     /**
-      Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+      Test data of which we compute the likelihood, where `n_samples` is the number of samples and `n_features` is the number of features. `X_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
      */
     X_test?: ArrayLike[]
 
@@ -341,11 +329,8 @@ pms_LedoitWolf_mahalanobis = {k: v for k, v in pms_LedoitWolf_mahalanobis.items(
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LedoitWolf_score = {k: v for k, v in pms_LedoitWolf_score.items() if v is not None}`
 
@@ -361,13 +346,13 @@ pms_LedoitWolf_score = {k: v for k, v in pms_LedoitWolf_score.items() if v is no
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `X\_test` parameter in `score`.
+      Metadata routing for `X_test` parameter in `score`.
      */
     X_test?: string | boolean
   }): Promise<any> {
@@ -380,9 +365,8 @@ pms_LedoitWolf_score = {k: v for k, v in pms_LedoitWolf_score.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_LedoitWolf_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LedoitWolf_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_LedoitWolf_set_score_request = {k: v for k, v in pms_LedoitWolf_set_score_request.items() if v is not None}`
 
@@ -444,7 +428,7 @@ pms_LedoitWolf_set_score_request = {k: v for k, v in pms_LedoitWolf_set_score_re
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
+    Estimated pseudo inverse matrix. (stored only if store_precision is `true`)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -490,7 +474,7 @@ pms_LedoitWolf_set_score_request = {k: v for k, v in pms_LedoitWolf_set_score_re
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -515,7 +499,7 @@ pms_LedoitWolf_set_score_request = {k: v for k, v in pms_LedoitWolf_set_score_re
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

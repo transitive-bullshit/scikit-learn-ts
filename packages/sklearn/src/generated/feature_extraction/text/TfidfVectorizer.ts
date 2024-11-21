@@ -8,13 +8,15 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Convert a collection of raw documents to a matrix of TF-IDF features.
 
-  Equivalent to [`CountVectorizer`](sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer "sklearn.feature_extraction.text.CountVectorizer") followed by [`TfidfTransformer`](sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer "sklearn.feature_extraction.text.TfidfTransformer").
+  Equivalent to [`CountVectorizer`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer "sklearn.feature_extraction.text.CountVectorizer") followed by [`TfidfTransformer`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer "sklearn.feature_extraction.text.TfidfTransformer").
 
-  For an example of usage, see [Classification of text documents using sparse features](../../auto_examples/text/plot_document_classification_20newsgroups.html#sphx-glr-auto-examples-text-plot-document-classification-20newsgroups-py).
+  For an example of usage, see [Classification of text documents using sparse features](https://scikit-learn.org/stable/modules/generated/../../auto_examples/text/plot_document_classification_20newsgroups.html#sphx-glr-auto-examples-text-plot-document-classification-20newsgroups-py).
 
-  For an efficiency comparision of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
+  For an efficiency comparison of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](https://scikit-learn.org/stable/modules/generated/../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
 
-  Read more in the [User Guide](../feature_extraction.html#text-feature-extraction).
+  For an example of document clustering and comparison with [`HashingVectorizer`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html#sklearn.feature_extraction.text.HashingVectorizer "sklearn.feature_extraction.text.HashingVectorizer"), see [Clustering text documents using k-means](https://scikit-learn.org/stable/modules/generated/../../auto_examples/text/plot_document_clustering.html#sphx-glr-auto-examples-text-plot-document-clustering-py).
+
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_extraction.html#text-feature-extraction).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
  */
@@ -51,7 +53,7 @@ export class TfidfVectorizer {
     /**
       Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. `undefined` (default) means no character normalization is performed.
 
-      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.12)").
+      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.13)").
      */
     strip_accents?: 'ascii' | 'unicode'
 
@@ -73,7 +75,7 @@ export class TfidfVectorizer {
     tokenizer?: any
 
     /**
-      Whether the feature should be made of word or character n-grams. Option ‘char\_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
+      Whether the feature should be made of word or character n-grams. Option ‘char_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
 
       If a callable is passed it is used to extract the sequence of features out of the raw, unprocessed input.
 
@@ -82,23 +84,23 @@ export class TfidfVectorizer {
     analyzer?: 'word' | 'char' | 'char_wb'
 
     /**
-      If a string, it is passed to \_check\_stop\_list and the appropriate stop list is returned. ‘english’ is currently the only supported string value. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](../feature_extraction.html#stop-words)).
+      If a string, it is passed to _check_stop_list and the appropriate stop list is returned. ‘english’ is currently the only supported string value. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](https://scikit-learn.org/stable/modules/generated/../feature_extraction.html#stop-words)).
 
       If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
 
-      If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
+      If `undefined`, no stop words will be used. In this case, setting `max_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
      */
     stop_words?: 'english' | any[]
 
     /**
       Regular expression denoting what constitutes a “token”, only used if `analyzer \== 'word'`. The default regexp selects tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
 
-      If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
+      If there is a capturing group in token_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
      */
     token_pattern?: string
 
     /**
-      The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
+      The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min_n <= n <= max_n will be used. For example an `ngram_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
      */
     ngram_range?: any
 
@@ -117,7 +119,7 @@ export class TfidfVectorizer {
     min_df?: number
 
     /**
-      If not `undefined`, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
+      If not `undefined`, build a vocabulary that only consider the top `max_features` ordered by term frequency across the corpus. Otherwise, all features are used.
 
       This parameter is ignored if vocabulary is not `undefined`.
      */
@@ -129,14 +131,14 @@ export class TfidfVectorizer {
     vocabulary?: any
 
     /**
-      If `true`, all non-zero term counts are set to 1. This does not mean outputs will have only 0/1 values, only that the tf term in tf-idf is binary. (Set `binary` to `true`, `use\_idf` to `false` and `norm` to `undefined` to get 0/1 outputs).
+      If `true`, all non-zero term counts are set to 1. This does not mean outputs will have only 0/1 values, only that the tf term in tf-idf is binary. (Set `binary` to `true`, `use_idf` to `false` and `norm` to `undefined` to get 0/1 outputs).
 
       @defaultValue `false`
      */
     binary?: boolean
 
     /**
-      Type of the matrix returned by fit\_transform() or transform().
+      Type of the matrix returned by fit_transform() or transform().
      */
     dtype?: any
 
@@ -208,31 +210,8 @@ except NameError: bridgeTfidfVectorizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TfidfVectorizer = {'input': ${
-      this.opts['input'] ?? undefined
-    }, 'encoding': ${this.opts['encoding'] ?? undefined}, 'decode_error': ${
-      this.opts['decode_error'] ?? undefined
-    }, 'strip_accents': ${
-      this.opts['strip_accents'] ?? undefined
-    }, 'lowercase': ${this.opts['lowercase'] ?? undefined}, 'preprocessor': ${
-      this.opts['preprocessor'] ?? undefined
-    }, 'tokenizer': ${this.opts['tokenizer'] ?? undefined}, 'analyzer': ${
-      this.opts['analyzer'] ?? undefined
-    }, 'stop_words': ${
-      this.opts['stop_words'] ?? undefined
-    }, 'token_pattern': ${
-      this.opts['token_pattern'] ?? undefined
-    }, 'ngram_range': ${this.opts['ngram_range'] ?? undefined}, 'max_df': ${
-      this.opts['max_df'] ?? undefined
-    }, 'min_df': ${this.opts['min_df'] ?? undefined}, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'vocabulary': ${this.opts['vocabulary'] ?? undefined}, 'binary': ${
-      this.opts['binary'] ?? undefined
-    }, 'dtype': ${this.opts['dtype'] ?? undefined}, 'norm': ${
-      this.opts['norm'] ?? undefined
-    }, 'use_idf': ${this.opts['use_idf'] ?? undefined}, 'smooth_idf': ${
-      this.opts['smooth_idf'] ?? undefined
-    }, 'sublinear_tf': ${this.opts['sublinear_tf'] ?? undefined}}
+    await this._py
+      .ex`ctor_TfidfVectorizer = {'input': ${this.opts['input'] ?? undefined}, 'encoding': ${this.opts['encoding'] ?? undefined}, 'decode_error': ${this.opts['decode_error'] ?? undefined}, 'strip_accents': ${this.opts['strip_accents'] ?? undefined}, 'lowercase': ${this.opts['lowercase'] ?? undefined}, 'preprocessor': ${this.opts['preprocessor'] ?? undefined}, 'tokenizer': ${this.opts['tokenizer'] ?? undefined}, 'analyzer': ${this.opts['analyzer'] ?? undefined}, 'stop_words': ${this.opts['stop_words'] ?? undefined}, 'token_pattern': ${this.opts['token_pattern'] ?? undefined}, 'ngram_range': ${this.opts['ngram_range'] ?? undefined}, 'max_df': ${this.opts['max_df'] ?? undefined}, 'min_df': ${this.opts['min_df'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'vocabulary': ${this.opts['vocabulary'] ?? undefined}, 'binary': ${this.opts['binary'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'norm': ${this.opts['norm'] ?? undefined}, 'use_idf': ${this.opts['use_idf'] ?? undefined}, 'smooth_idf': ${this.opts['smooth_idf'] ?? undefined}, 'sublinear_tf': ${this.opts['sublinear_tf'] ?? undefined}}
 
 ctor_TfidfVectorizer = {k: v for k, v in ctor_TfidfVectorizer.items() if v is not None}`
 
@@ -367,9 +346,8 @@ pms_TfidfVectorizer_build_tokenizer = {k: v for k, v in pms_TfidfVectorizer_buil
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_decode = {'doc': ${
-      opts['doc'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_decode = {'doc': ${opts['doc'] ?? undefined}}
 
 pms_TfidfVectorizer_decode = {k: v for k, v in pms_TfidfVectorizer_decode.items() if v is not None}`
 
@@ -405,9 +383,8 @@ pms_TfidfVectorizer_decode = {k: v for k, v in pms_TfidfVectorizer_decode.items(
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_fit = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TfidfVectorizer_fit = {'raw_documents': ${opts['raw_documents'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_TfidfVectorizer_fit = {k: v for k, v in pms_TfidfVectorizer_fit.items() if v is not None}`
 
@@ -445,9 +422,8 @@ pms_TfidfVectorizer_fit = {k: v for k, v in pms_TfidfVectorizer_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_fit_transform = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_TfidfVectorizer_fit_transform = {'raw_documents': ${opts['raw_documents'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_TfidfVectorizer_fit_transform = {k: v for k, v in pms_TfidfVectorizer_fit_transform.items() if v is not None}`
 
@@ -481,9 +457,7 @@ pms_TfidfVectorizer_fit_transform = {k: v for k, v in pms_TfidfVectorizer_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_TfidfVectorizer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_TfidfVectorizer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_TfidfVectorizer_get_feature_names_out = {k: v for k, v in pms_TfidfVectorizer_get_feature_names_out.items() if v is not None}`
 
@@ -499,11 +473,11 @@ pms_TfidfVectorizer_get_feature_names_out = {k: v for k, v in pms_TfidfVectorize
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -518,9 +492,8 @@ pms_TfidfVectorizer_get_feature_names_out = {k: v for k, v in pms_TfidfVectorize
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TfidfVectorizer_get_metadata_routing = {k: v for k, v in pms_TfidfVectorizer_get_metadata_routing.items() if v is not None}`
 
@@ -581,9 +554,8 @@ pms_TfidfVectorizer_get_stop_words = {k: v for k, v in pms_TfidfVectorizer_get_s
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_TfidfVectorizer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_TfidfVectorizer_inverse_transform = {k: v for k, v in pms_TfidfVectorizer_inverse_transform.items() if v is not None}`
 
@@ -599,13 +571,13 @@ pms_TfidfVectorizer_inverse_transform = {k: v for k, v in pms_TfidfVectorizer_in
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `raw\_documents` parameter in `fit`.
+      Metadata routing for `raw_documents` parameter in `fit`.
      */
     raw_documents?: string | boolean
   }): Promise<any> {
@@ -620,9 +592,8 @@ pms_TfidfVectorizer_inverse_transform = {k: v for k, v in pms_TfidfVectorizer_in
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_set_fit_request = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_set_fit_request = {'raw_documents': ${opts['raw_documents'] ?? undefined}}
 
 pms_TfidfVectorizer_set_fit_request = {k: v for k, v in pms_TfidfVectorizer_set_fit_request.items() if v is not None}`
 
@@ -638,13 +609,13 @@ pms_TfidfVectorizer_set_fit_request = {k: v for k, v in pms_TfidfVectorizer_set_
   /**
     Request metadata passed to the `transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_transform_request(opts: {
     /**
-      Metadata routing for `raw\_documents` parameter in `transform`.
+      Metadata routing for `raw_documents` parameter in `transform`.
      */
     raw_documents?: string | boolean
   }): Promise<any> {
@@ -660,9 +631,7 @@ pms_TfidfVectorizer_set_fit_request = {k: v for k, v in pms_TfidfVectorizer_set_
 
     // set up method params
     await this._py
-      .ex`pms_TfidfVectorizer_set_transform_request = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }}
+      .ex`pms_TfidfVectorizer_set_transform_request = {'raw_documents': ${opts['raw_documents'] ?? undefined}}
 
 pms_TfidfVectorizer_set_transform_request = {k: v for k, v in pms_TfidfVectorizer_set_transform_request.items() if v is not None}`
 
@@ -678,7 +647,7 @@ pms_TfidfVectorizer_set_transform_request = {k: v for k, v in pms_TfidfVectorize
   /**
     Transform documents to document-term matrix.
 
-    Uses the vocabulary and document frequencies (df) learned by fit (or fit\_transform).
+    Uses the vocabulary and document frequencies (df) learned by fit (or fit_transform).
    */
   async transform(opts: {
     /**
@@ -695,9 +664,8 @@ pms_TfidfVectorizer_set_transform_request = {k: v for k, v in pms_TfidfVectorize
     }
 
     // set up method params
-    await this._py.ex`pms_TfidfVectorizer_transform = {'raw_documents': ${
-      opts['raw_documents'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TfidfVectorizer_transform = {'raw_documents': ${opts['raw_documents'] ?? undefined}}
 
 pms_TfidfVectorizer_transform = {k: v for k, v in pms_TfidfVectorizer_transform.items() if v is not None}`
 
@@ -757,31 +725,6 @@ pms_TfidfVectorizer_transform = {k: v for k, v in pms_TfidfVectorizer_transform.
       // convert the result from python to node.js
       return this
         ._py`attr_TfidfVectorizer_fixed_vocabulary_.tolist() if hasattr(attr_TfidfVectorizer_fixed_vocabulary_, 'tolist') else attr_TfidfVectorizer_fixed_vocabulary_`
-    })()
-  }
-
-  /**
-    Terms that were ignored because they either:
-   */
-  get stop_words_(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This TfidfVectorizer instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'TfidfVectorizer must call init() before accessing stop_words_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_TfidfVectorizer_stop_words_ = bridgeTfidfVectorizer[${this.id}].stop_words_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_TfidfVectorizer_stop_words_.tolist() if hasattr(attr_TfidfVectorizer_stop_words_, 'tolist') else attr_TfidfVectorizer_stop_words_`
     })()
   }
 }

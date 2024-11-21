@@ -6,15 +6,15 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Random permutation cross-validator
+  Random permutation cross-validator.
 
   Yields indices to split data into training and test sets.
 
-  Note: contrary to other cross-validation strategies, random splits do not guarantee that all folds will be different, although this is still very likely for sizeable datasets.
+  Note: contrary to other cross-validation strategies, random splits do not guarantee that test sets across all folds will be mutually exclusive, and might include overlapping samples. However, this is still very likely for sizeable datasets.
 
-  Read more in the [User Guide](../cross_validation.html#shufflesplit).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_validation.html#shufflesplit).
 
-  For visualisation of cross-validation behaviour and comparison between common scikit-learn split methods refer to [Visualizing cross-validation behavior in scikit-learn](../../auto_examples/model_selection/plot_cv_indices.html#sphx-glr-auto-examples-model-selection-plot-cv-indices-py)
+  For visualisation of cross-validation behaviour and comparison between common scikit-learn split methods refer to [Visualizing cross-validation behavior in scikit-learn](https://scikit-learn.org/stable/modules/generated/../../auto_examples/model_selection/plot_cv_indices.html#sphx-glr-auto-examples-model-selection-plot-cv-indices-py)
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ShuffleSplit.html)
  */
@@ -35,7 +35,7 @@ export class ShuffleSplit {
     n_splits?: number
 
     /**
-      If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If `undefined`, the value is set to the complement of the train size. If `train\_size` is also `undefined`, it will be set to 0.1.
+      If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If `undefined`, the value is set to the complement of the train size. If `train_size` is also `undefined`, it will be set to 0.1.
      */
     test_size?: number
 
@@ -45,7 +45,7 @@ export class ShuffleSplit {
     train_size?: number
 
     /**
-      Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -89,11 +89,8 @@ except NameError: bridgeShuffleSplit = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ShuffleSplit = {'n_splits': ${
-      this.opts['n_splits'] ?? undefined
-    }, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${
-      this.opts['train_size'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_ShuffleSplit = {'n_splits': ${this.opts['n_splits'] ?? undefined}, 'test_size': ${this.opts['test_size'] ?? undefined}, 'train_size': ${this.opts['train_size'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_ShuffleSplit = {k: v for k, v in ctor_ShuffleSplit.items() if v is not None}`
 
@@ -125,11 +122,11 @@ ctor_ShuffleSplit = {k: v for k, v in ctor_ShuffleSplit.items() if v is not None
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -144,9 +141,8 @@ ctor_ShuffleSplit = {k: v for k, v in ctor_ShuffleSplit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_ShuffleSplit_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_ShuffleSplit_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_ShuffleSplit_get_metadata_routing = {k: v for k, v in pms_ShuffleSplit_get_metadata_routing.items() if v is not None}`
 
@@ -160,7 +156,7 @@ pms_ShuffleSplit_get_metadata_routing = {k: v for k, v in pms_ShuffleSplit_get_m
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
@@ -187,9 +183,8 @@ pms_ShuffleSplit_get_metadata_routing = {k: v for k, v in pms_ShuffleSplit_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_ShuffleSplit_get_n_splits = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_ShuffleSplit_get_n_splits = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_ShuffleSplit_get_n_splits = {k: v for k, v in pms_ShuffleSplit_get_n_splits.items() if v is not None}`
 
@@ -207,7 +202,7 @@ pms_ShuffleSplit_get_n_splits = {k: v for k, v in pms_ShuffleSplit_get_n_splits.
    */
   async split(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -217,9 +212,9 @@ pms_ShuffleSplit_get_n_splits = {k: v for k, v in pms_ShuffleSplit_get_n_splits.
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set.
+      Always ignored, exists for compatibility.
      */
-    groups?: ArrayLike
+    groups?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This ShuffleSplit instance has already been disposed')
@@ -230,13 +225,8 @@ pms_ShuffleSplit_get_n_splits = {k: v for k, v in pms_ShuffleSplit_get_n_splits.
     }
 
     // set up method params
-    await this._py.ex`pms_ShuffleSplit_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_ShuffleSplit_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_ShuffleSplit_split = {k: v for k, v in pms_ShuffleSplit_split.items() if v is not None}`
 

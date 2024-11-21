@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
+import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import React from 'react'
 
 const siteHost = 'sklearn.vercel.app'
@@ -31,22 +31,9 @@ const config: DocsThemeConfig = {
   docsRepositoryBase:
     'https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/docs',
   editLink: {
-    text: 'Edit this page on GitHub'
-  },
-  useNextSeoProps() {
-    const { asPath } = useRouter()
-    if (asPath === '/') {
-      return {
-        titleTemplate: siteTitle
-      }
-    } else {
-      return {
-        titleTemplate: `%s – ${siteTitle}`
-      }
-    }
+    content: 'Edit this page on GitHub'
   },
   sidebar: {
-    titleComponent,
     toggleButton: true
   },
   head: function useHead() {
@@ -103,21 +90,6 @@ const config: DocsThemeConfig = {
   footer: {
     component: null
   }
-}
-
-// TODO: get memoization working here
-function titleComponent({
-  title
-}: {
-  title: string
-  type: string
-  route: string
-}) {
-  if (title === 'Guide' || title === 'Documentation') {
-    return <b>{title}</b>
-  }
-
-  return <span>{title}</span>
 }
 
 export default config

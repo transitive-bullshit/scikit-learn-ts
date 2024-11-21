@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The `pairwise` method can be used to compute pairwise distances between samples in the input arrays. It returns a distance matrix representing the distances between all pairs of samples.
 
-  The [`get\_metric`](#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") method allows you to retrieve a specific metric using its string identifier.
+  The [`get_metric`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") method allows you to retrieve a specific metric using its string identifier.
 
   Examples
 
@@ -82,11 +82,8 @@ except NameError: bridgeDistanceMetric = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DistanceMetric = {'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'dtype': ${this.opts['dtype'] ?? undefined}, 'kwargs': ${
-      this.opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_DistanceMetric = {'metric': ${this.opts['metric'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'kwargs': ${this.opts['kwargs'] ?? undefined}}
 
 ctor_DistanceMetric = {k: v for k, v in ctor_DistanceMetric.items() if v is not None}`
 
@@ -145,11 +142,8 @@ ctor_DistanceMetric = {k: v for k, v in ctor_DistanceMetric.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_DistanceMetric_get_metric = {'metric': ${
-      opts['metric'] ?? undefined
-    }, 'dtype': ${opts['dtype'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DistanceMetric_get_metric = {'metric': ${opts['metric'] ?? undefined}, 'dtype': ${opts['dtype'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_DistanceMetric_get_metric = {k: v for k, v in pms_DistanceMetric_get_metric.items() if v is not None}`
 

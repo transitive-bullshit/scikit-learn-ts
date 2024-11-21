@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This regressor uses the ‘log’ link function.
 
-  Read more in the [User Guide](../linear_model.html#generalized-linear-models).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#generalized-linear-models).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PoissonRegressor.html)
  */
@@ -52,14 +52,14 @@ export class PoissonRegressor {
     max_iter?: number
 
     /**
-      Stopping criterion. For the lbfgs solver, the iteration will stop when `max{|g\_j|, j \= 1, ..., d} <= tol` where `g\_j` is the j-th component of the gradient (derivative) of the objective function. Values must be in the range `(0.0, inf)`.
+      Stopping criterion. For the lbfgs solver, the iteration will stop when `max{|g_j|, j \= 1, ..., d} <= tol` where `g_j` is the j-th component of the gradient (derivative) of the objective function. Values must be in the range `(0.0, inf)`.
 
       @defaultValue `0.0001`
      */
     tol?: number
 
     /**
-      If set to `true`, reuse the solution of the previous call to `fit` as initialization for `coef\_` and `intercept\_` .
+      If set to `true`, reuse the solution of the previous call to `fit` as initialization for `coef_` and `intercept_` .
 
       @defaultValue `false`
      */
@@ -114,15 +114,8 @@ except NameError: bridgePoissonRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PoissonRegressor = {'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PoissonRegressor = {'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_PoissonRegressor = {k: v for k, v in ctor_PoissonRegressor.items() if v is not None}`
 
@@ -181,13 +174,8 @@ ctor_PoissonRegressor = {k: v for k, v in ctor_PoissonRegressor.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_PoissonRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_PoissonRegressor_fit = {k: v for k, v in pms_PoissonRegressor_fit.items() if v is not None}`
 
@@ -203,11 +191,11 @@ pms_PoissonRegressor_fit = {k: v for k, v in pms_PoissonRegressor_fit.items() if
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -224,9 +212,8 @@ pms_PoissonRegressor_fit = {k: v for k, v in pms_PoissonRegressor_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PoissonRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PoissonRegressor_get_metadata_routing = {k: v for k, v in pms_PoissonRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -259,9 +246,8 @@ pms_PoissonRegressor_get_metadata_routing = {k: v for k, v in pms_PoissonRegress
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PoissonRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PoissonRegressor_predict = {k: v for k, v in pms_PoissonRegressor_predict.items() if v is not None}`
 
@@ -277,9 +263,9 @@ pms_PoissonRegressor_predict = {k: v for k, v in pms_PoissonRegressor_predict.it
   /**
     Compute D^2, the percentage of deviance explained.
 
-    D^2 is a generalization of the coefficient of determination R^2. R^2 uses squared error and D^2 uses the deviance of this GLM, see the [User Guide](../model_evaluation.html#regression-metrics).
+    D^2 is a generalization of the coefficient of determination R^2. R^2 uses squared error and D^2 uses the deviance of this GLM, see the [User Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#regression-metrics).
 
-    D^2 is defined as \\(D^2 = 1-\\frac{D(y\_{true},y\_{pred})}{D\_{null}}\\), \\(D\_{null}\\) is the null deviance, i.e. the deviance of a model with intercept alone, which corresponds to \\(y\_{pred} = \\bar{y}\\). The mean \\(\\bar{y}\\) is averaged by sample\_weight. Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse).
+    D^2 is defined as \\(D^2 = 1-\\frac{D(y_{true},y_{pred})}{D_{null}}\\), \\(D_{null}\\) is the null deviance, i.e. the deviance of a model with intercept alone, which corresponds to \\(y_{pred} = \\bar{y}\\). The mean \\(\\bar{y}\\) is averaged by sample_weight. Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse).
    */
   async score(opts: {
     /**
@@ -308,13 +294,8 @@ pms_PoissonRegressor_predict = {k: v for k, v in pms_PoissonRegressor_predict.it
     }
 
     // set up method params
-    await this._py.ex`pms_PoissonRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_PoissonRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_PoissonRegressor_score = {k: v for k, v in pms_PoissonRegressor_score.items() if v is not None}`
 
@@ -330,13 +311,13 @@ pms_PoissonRegressor_score = {k: v for k, v in pms_PoissonRegressor_score.items(
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -354,9 +335,7 @@ pms_PoissonRegressor_score = {k: v for k, v in pms_PoissonRegressor_score.items(
 
     // set up method params
     await this._py
-      .ex`pms_PoissonRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_PoissonRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_PoissonRegressor_set_fit_request = {k: v for k, v in pms_PoissonRegressor_set_fit_request.items() if v is not None}`
 
@@ -372,13 +351,13 @@ pms_PoissonRegressor_set_fit_request = {k: v for k, v in pms_PoissonRegressor_se
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -396,9 +375,7 @@ pms_PoissonRegressor_set_fit_request = {k: v for k, v in pms_PoissonRegressor_se
 
     // set up method params
     await this._py
-      .ex`pms_PoissonRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_PoissonRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_PoissonRegressor_set_score_request = {k: v for k, v in pms_PoissonRegressor_set_score_request.items() if v is not None}`
 
@@ -412,7 +389,7 @@ pms_PoissonRegressor_set_score_request = {k: v for k, v in pms_PoissonRegressor_
   }
 
   /**
-    Estimated coefficients for the linear predictor (`X @ coef\_ + intercept\_`) in the GLM.
+    Estimated coefficients for the linear predictor (`X @ coef_ + intercept_`) in the GLM.
    */
   get coef_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -466,7 +443,7 @@ pms_PoissonRegressor_set_score_request = {k: v for k, v in pms_PoissonRegressor_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -493,7 +470,7 @@ pms_PoissonRegressor_set_score_request = {k: v for k, v in pms_PoissonRegressor_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

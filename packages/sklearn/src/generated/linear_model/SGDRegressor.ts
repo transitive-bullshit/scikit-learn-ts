@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This implementation works with data represented as dense numpy arrays of floating point values for the features.
 
-  Read more in the [User Guide](../sgd.html#sgd).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../sgd.html#sgd).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html)
  */
@@ -28,11 +28,11 @@ export class SGDRegressor {
 
   constructor(opts?: {
     /**
-      The loss function to be used. The possible values are ‘squared\_error’, ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’
+      The loss function to be used. The possible values are ‘squared_error’, ‘huber’, ‘epsilon_insensitive’, or ‘squared_epsilon_insensitive’
 
-      The ‘squared\_error’ refers to the ordinary least squares fit. ‘huber’ modifies ‘squared\_error’ to focus less on getting outliers correct by switching from squared to linear loss past a distance of epsilon. ‘epsilon\_insensitive’ ignores errors less than epsilon and is linear past that; this is the loss function used in SVR. ‘squared\_epsilon\_insensitive’ is the same but becomes squared loss past a tolerance of epsilon.
+      The ‘squared_error’ refers to the ordinary least squares fit. ‘huber’ modifies ‘squared_error’ to focus less on getting outliers correct by switching from squared to linear loss past a distance of epsilon. ‘epsilon_insensitive’ ignores errors less than epsilon and is linear past that; this is the loss function used in SVR. ‘squared_epsilon_insensitive’ is the same but becomes squared loss past a tolerance of epsilon.
 
-      More details about the losses formulas can be found in the [User Guide](../sgd.html#sgd-mathematical-formulation).
+      More details about the losses formulas can be found in the [User Guide](https://scikit-learn.org/stable/modules/generated/../sgd.html#sgd-mathematical-formulation).
 
       @defaultValue `'squared_error'`
      */
@@ -46,14 +46,14 @@ export class SGDRegressor {
     penalty?: 'l2' | 'l1' | 'elasticnet'
 
     /**
-      Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when set to `learning\_rate` is set to ‘optimal’.
+      Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when `learning_rate` is set to ‘optimal’. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.0001`
      */
     alpha?: number
 
     /**
-      The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’.
+      The Elastic Net mixing parameter, with 0 <= l1_ratio <= 1. l1_ratio=0 corresponds to L2 penalty, l1_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’. Values must be in the range `\[0.0, 1.0\]`.
 
       @defaultValue `0.15`
      */
@@ -67,14 +67,14 @@ export class SGDRegressor {
     fit_intercept?: boolean
 
     /**
-      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDRegressor.partial_fit "sklearn.linear_model.SGDRegressor.partial_fit") method.
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.linear_model.SGDRegressor.partial_fit "sklearn.linear_model.SGDRegressor.partial_fit") method. Values must be in the range `\[1, inf)`.
 
       @defaultValue `1000`
      */
     max_iter?: number
 
     /**
-      The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
+      The stopping criterion. If it is not `undefined`, training will stop when (loss > best_loss - tol) for `n_iter_no_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early_stopping` parameter. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.001`
      */
@@ -88,21 +88,21 @@ export class SGDRegressor {
     shuffle?: boolean
 
     /**
-      The verbosity level.
+      The verbosity level. Values must be in the range `\[0, inf)`.
 
       @defaultValue `0`
      */
     verbose?: number
 
     /**
-      Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold.
+      Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon_insensitive’, or ‘squared_epsilon_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.1`
      */
     epsilon?: number
 
     /**
-      Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -114,51 +114,51 @@ export class SGDRegressor {
     learning_rate?: string
 
     /**
-      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.01.
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.01. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.01`
      */
     eta0?: number
 
     /**
-      The exponent for inverse scaling learning rate.
+      The exponent for inverse scaling learning rate. Values must be in the range `(-inf, inf)`.
 
       @defaultValue `0.25`
      */
     power_t?: number
 
     /**
-      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs.
+      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least `tol` for `n_iter_no_change` consecutive epochs.
 
       @defaultValue `false`
      */
     early_stopping?: boolean
 
     /**
-      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`.
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early_stopping` is `true`. Values must be in the range `(0.0, 1.0)`.
 
       @defaultValue `0.1`
      */
     validation_fraction?: number
 
     /**
-      Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
+      Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early_stopping` parameter. Integer values must be in the range `\[1, max_iter)`.
 
       @defaultValue `5`
      */
     n_iter_no_change?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
-      Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
+      Repeatedly calling fit or partial_fit when warm_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial_fit` will result in increasing the existing counter.
 
       @defaultValue `false`
      */
     warm_start?: boolean
 
     /**
-      When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples.
+      When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples.
 
       @defaultValue `false`
      */
@@ -204,29 +204,8 @@ except NameError: bridgeSGDRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SGDRegressor = {'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${
-      this.opts['eta0'] ?? undefined
-    }, 'power_t': ${this.opts['power_t'] ?? undefined}, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${
-      this.opts['average'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_SGDRegressor = {'loss': ${this.opts['loss'] ?? undefined}, 'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'epsilon': ${this.opts['epsilon'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${this.opts['eta0'] ?? undefined}, 'power_t': ${this.opts['power_t'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${this.opts['average'] ?? undefined}}
 
 ctor_SGDRegressor = {k: v for k, v in ctor_SGDRegressor.items() if v is not None}`
 
@@ -258,7 +237,7 @@ ctor_SGDRegressor = {k: v for k, v in ctor_SGDRegressor.items() if v is not None
   /**
     Convert coefficient matrix to dense array format.
 
-    Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
+    Converts the `coef_` member (back) to a numpy.ndarray. This is the default format of `coef_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
   async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -321,17 +300,8 @@ pms_SGDRegressor_densify = {k: v for k, v in pms_SGDRegressor_densify.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'intercept_init': np.array(${
-      opts['intercept_init'] ?? undefined
-    }) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'intercept_init': np.array(${opts['intercept_init'] ?? undefined}) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_fit = {k: v for k, v in pms_SGDRegressor_fit.items() if v is not None}`
 
@@ -347,11 +317,11 @@ pms_SGDRegressor_fit = {k: v for k, v in pms_SGDRegressor_fit.items() if v is no
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -366,9 +336,8 @@ pms_SGDRegressor_fit = {k: v for k, v in pms_SGDRegressor_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SGDRegressor_get_metadata_routing = {k: v for k, v in pms_SGDRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -384,7 +353,7 @@ pms_SGDRegressor_get_metadata_routing = {k: v for k, v in pms_SGDRegressor_get_m
   /**
     Perform one epoch of stochastic gradient descent on given samples.
 
-    Internally, this method uses `max\_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence and early stopping should be handled by the user.
+    Internally, this method uses `max_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence and early stopping should be handled by the user.
    */
   async partial_fit(opts: {
     /**
@@ -411,11 +380,8 @@ pms_SGDRegressor_get_metadata_routing = {k: v for k, v in pms_SGDRegressor_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_partial_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDRegressor_partial_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_partial_fit = {k: v for k, v in pms_SGDRegressor_partial_fit.items() if v is not None}`
 
@@ -446,9 +412,8 @@ pms_SGDRegressor_partial_fit = {k: v for k, v in pms_SGDRegressor_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDRegressor_predict = {k: v for k, v in pms_SGDRegressor_predict.items() if v is not None}`
 
@@ -464,11 +429,11 @@ pms_SGDRegressor_predict = {k: v for k, v in pms_SGDRegressor_predict.items() if
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -491,13 +456,8 @@ pms_SGDRegressor_predict = {k: v for k, v in pms_SGDRegressor_predict.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_SGDRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_SGDRegressor_score = {k: v for k, v in pms_SGDRegressor_score.items() if v is not None}`
 
@@ -513,23 +473,23 @@ pms_SGDRegressor_score = {k: v for k, v in pms_SGDRegressor_score.items() if v i
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `coef\_init` parameter in `fit`.
+      Metadata routing for `coef_init` parameter in `fit`.
      */
     coef_init?: string | boolean
 
     /**
-      Metadata routing for `intercept\_init` parameter in `fit`.
+      Metadata routing for `intercept_init` parameter in `fit`.
      */
     intercept_init?: string | boolean
 
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -542,11 +502,8 @@ pms_SGDRegressor_score = {k: v for k, v in pms_SGDRegressor_score.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'intercept_init': ${
-      opts['intercept_init'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDRegressor_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'intercept_init': ${opts['intercept_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_set_fit_request = {k: v for k, v in pms_SGDRegressor_set_fit_request.items() if v is not None}`
 
@@ -560,15 +517,15 @@ pms_SGDRegressor_set_fit_request = {k: v for k, v in pms_SGDRegressor_set_fit_re
   }
 
   /**
-    Request metadata passed to the `partial\_fit` method.
+    Request metadata passed to the `partial_fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_partial_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+      Metadata routing for `sample_weight` parameter in `partial_fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -584,9 +541,7 @@ pms_SGDRegressor_set_fit_request = {k: v for k, v in pms_SGDRegressor_set_fit_re
 
     // set up method params
     await this._py
-      .ex`pms_SGDRegressor_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_SGDRegressor_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_set_partial_fit_request = {k: v for k, v in pms_SGDRegressor_set_partial_fit_request.items() if v is not None}`
 
@@ -602,13 +557,13 @@ pms_SGDRegressor_set_partial_fit_request = {k: v for k, v in pms_SGDRegressor_se
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -623,9 +578,8 @@ pms_SGDRegressor_set_partial_fit_request = {k: v for k, v in pms_SGDRegressor_se
     }
 
     // set up method params
-    await this._py.ex`pms_SGDRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDRegressor_set_score_request = {k: v for k, v in pms_SGDRegressor_set_score_request.items() if v is not None}`
 
@@ -641,9 +595,9 @@ pms_SGDRegressor_set_score_request = {k: v for k, v in pms_SGDRegressor_set_scor
   /**
     Convert coefficient matrix to sparse format.
 
-    Converts the `coef\_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
+    Converts the `coef_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
 
-    The `intercept\_` member is not converted.
+    The `intercept_` member is not converted.
    */
   async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -740,7 +694,7 @@ pms_SGDRegressor_sparsify = {k: v for k, v in pms_SGDRegressor_sparsify.items() 
   }
 
   /**
-    Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
+    Number of weight updates performed during training. Same as `(n_iter_ \* n_samples + 1)`.
    */
   get t_(): Promise<number> {
     if (this._isDisposed) {
@@ -763,7 +717,7 @@ pms_SGDRegressor_sparsify = {k: v for k, v in pms_SGDRegressor_sparsify.items() 
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -788,7 +742,7 @@ pms_SGDRegressor_sparsify = {k: v for k, v in pms_SGDRegressor_sparsify.items() 
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

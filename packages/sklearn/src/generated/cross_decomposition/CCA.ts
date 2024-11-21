@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Canonical Correlation Analysis, also known as “Mode B” PLS.
 
-  Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
+  For a comparison between other cross decomposition algorithms, see [Compare cross decomposition methods](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cross_decomposition/plot_compare_cross_decomposition.html#sphx-glr-auto-examples-cross-decomposition-plot-compare-cross-decomposition-py).
+
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_decomposition.html#cross-decomposition).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.CCA.html)
  */
@@ -22,7 +24,7 @@ export class CCA {
 
   constructor(opts?: {
     /**
-      Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+      Number of components to keep. Should be in `\[1, min(n_samples, n_features, n_targets)\]`.
 
       @defaultValue `2`
      */
@@ -43,7 +45,7 @@ export class CCA {
     max_iter?: number
 
     /**
-      The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
+      The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u_i \- u_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
 
       @defaultValue `0.000001`
      */
@@ -96,13 +98,8 @@ except NameError: bridgeCCA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_CCA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'scale': ${this.opts['scale'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_CCA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'scale': ${this.opts['scale'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_CCA = {k: v for k, v in ctor_CCA.items() if v is not None}`
 
@@ -135,12 +132,17 @@ ctor_CCA = {k: v for k, v in ctor_CCA.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
      */
     X?: ArrayLike[]
 
     /**
-      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+      Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
+     */
+    y?: ArrayLike
+
+    /**
+      Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
      */
     Y?: ArrayLike
   }): Promise<any> {
@@ -153,11 +155,8 @@ ctor_CCA = {k: v for k, v in ctor_CCA.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_CCA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_CCA_fit = {k: v for k, v in pms_CCA_fit.items() if v is not None}`
 
@@ -174,12 +173,12 @@ pms_CCA_fit = {k: v for k, v in pms_CCA_fit.items() if v is not None}`
    */
   async fit_transform(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
      */
     X?: ArrayLike[]
 
     /**
-      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+      Target vectors, where `n_samples` is the number of samples and `n_targets` is the number of response variables.
      */
     y?: ArrayLike[]
   }): Promise<NDArray[]> {
@@ -192,11 +191,8 @@ pms_CCA_fit = {k: v for k, v in pms_CCA_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_CCA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_CCA_fit_transform = {k: v for k, v in pms_CCA_fit_transform.items() if v is not None}`
 
@@ -212,7 +208,7 @@ pms_CCA_fit_transform = {k: v for k, v in pms_CCA_fit_transform.items() if v is 
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -229,9 +225,8 @@ pms_CCA_fit_transform = {k: v for k, v in pms_CCA_fit_transform.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_CCA_get_feature_names_out = {k: v for k, v in pms_CCA_get_feature_names_out.items() if v is not None}`
 
@@ -247,11 +242,11 @@ pms_CCA_get_feature_names_out = {k: v for k, v in pms_CCA_get_feature_names_out.
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -264,9 +259,8 @@ pms_CCA_get_feature_names_out = {k: v for k, v in pms_CCA_get_feature_names_out.
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_CCA_get_metadata_routing = {k: v for k, v in pms_CCA_get_metadata_routing.items() if v is not None}`
 
@@ -284,12 +278,17 @@ pms_CCA_get_metadata_routing = {k: v for k, v in pms_CCA_get_metadata_routing.it
    */
   async inverse_transform(opts: {
     /**
-      New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+      New data, where `n_samples` is the number of samples and `n_components` is the number of pls components.
      */
     X?: ArrayLike[]
 
     /**
-      New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+      New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
+     */
+    y?: ArrayLike
+
+    /**
+      New target, where `n_samples` is the number of samples and `n_components` is the number of pls components.
      */
     Y?: ArrayLike[]
   }): Promise<NDArray[]> {
@@ -302,11 +301,8 @@ pms_CCA_get_metadata_routing = {k: v for k, v in pms_CCA_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_CCA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_CCA_inverse_transform = {k: v for k, v in pms_CCA_inverse_transform.items() if v is not None}`
 
@@ -344,11 +340,8 @@ pms_CCA_inverse_transform = {k: v for k, v in pms_CCA_inverse_transform.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_CCA_predict = {k: v for k, v in pms_CCA_predict.items() if v is not None}`
 
@@ -364,11 +357,11 @@ pms_CCA_predict = {k: v for k, v in pms_CCA_predict.items() if v is not None}`
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -391,13 +384,8 @@ pms_CCA_predict = {k: v for k, v in pms_CCA_predict.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_CCA_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_CCA_score = {k: v for k, v in pms_CCA_score.items() if v is not None}`
 
@@ -413,13 +401,13 @@ pms_CCA_score = {k: v for k, v in pms_CCA_score.items() if v is not None}`
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
@@ -430,9 +418,8 @@ pms_CCA_score = {k: v for k, v in pms_CCA_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_CCA_set_output = {k: v for k, v in pms_CCA_set_output.items() if v is not None}`
 
@@ -448,7 +435,7 @@ pms_CCA_set_output = {k: v for k, v in pms_CCA_set_output.items() if v is not No
   /**
     Request metadata passed to the `predict` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -467,9 +454,8 @@ pms_CCA_set_output = {k: v for k, v in pms_CCA_set_output.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_set_predict_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_set_predict_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_CCA_set_predict_request = {k: v for k, v in pms_CCA_set_predict_request.items() if v is not None}`
 
@@ -485,13 +471,13 @@ pms_CCA_set_predict_request = {k: v for k, v in pms_CCA_set_predict_request.item
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -504,9 +490,8 @@ pms_CCA_set_predict_request = {k: v for k, v in pms_CCA_set_predict_request.item
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_CCA_set_score_request = {k: v for k, v in pms_CCA_set_score_request.items() if v is not None}`
 
@@ -522,7 +507,7 @@ pms_CCA_set_score_request = {k: v for k, v in pms_CCA_set_score_request.items() 
   /**
     Request metadata passed to the `transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -541,9 +526,8 @@ pms_CCA_set_score_request = {k: v for k, v in pms_CCA_set_score_request.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_CCA_set_transform_request = {k: v for k, v in pms_CCA_set_transform_request.items() if v is not None}`
 
@@ -568,6 +552,11 @@ pms_CCA_set_transform_request = {k: v for k, v in pms_CCA_set_transform_request.
     /**
       Target vectors.
      */
+    y?: ArrayLike[]
+
+    /**
+      Target vectors.
+     */
     Y?: ArrayLike[]
 
     /**
@@ -586,13 +575,8 @@ pms_CCA_set_transform_request = {k: v for k, v in pms_CCA_set_transform_request.
     }
 
     // set up method params
-    await this._py.ex`pms_CCA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_CCA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_CCA_transform = {k: v for k, v in pms_CCA_transform.items() if v is not None}`
 
@@ -742,7 +726,7 @@ pms_CCA_transform = {k: v for k, v in pms_CCA_transform.items() if v is not None
   }
 
   /**
-    The coefficients of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
+    The coefficients of the linear model such that `Y` is approximated as `Y \= X @ coef_.T + intercept_`.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -764,7 +748,7 @@ pms_CCA_transform = {k: v for k, v in pms_CCA_transform.items() if v is not None
   }
 
   /**
-    The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
+    The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef_.T + intercept_`.
    */
   get intercept_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -808,7 +792,7 @@ pms_CCA_transform = {k: v for k, v in pms_CCA_transform.items() if v is not None
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -831,7 +815,7 @@ pms_CCA_transform = {k: v for k, v in pms_CCA_transform.items() if v is not None
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -8,11 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Ridge regression with built-in cross-validation.
 
-  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+  See glossary entry for [cross-validation estimator](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-cross-validation-estimator).
 
   By default, it performs efficient Leave-One-Out Cross-Validation.
 
-  Read more in the [User Guide](../linear_model.html#ridge-regression).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#ridge-regression).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeCV.html)
  */
@@ -26,7 +26,7 @@ export class RidgeCV {
 
   constructor(opts?: {
     /**
-      Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If using Leave-One-Out cross-validation, alphas must be positive.
+      Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If using Leave-One-Out cross-validation, alphas must be strictly positive.
      */
     alphas?: ArrayLike
 
@@ -38,7 +38,7 @@ export class RidgeCV {
     fit_intercept?: boolean
 
     /**
-      A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If `undefined`, the negative mean squared error if cv is ‘auto’ or `undefined` (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
+      A string (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If `undefined`, the negative mean squared error if cv is ‘auto’ or `undefined` (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
      */
     scoring?: string
 
@@ -55,18 +55,23 @@ export class RidgeCV {
     gcv_mode?: 'auto' | 'svd' | 'eigen'
 
     /**
-      Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
+      Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv_values_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
 
       @defaultValue `false`
      */
-    store_cv_values?: boolean
+    store_cv_results?: boolean
 
     /**
-      Flag indicating whether to optimize the alpha value (picked from the `alphas` parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to `true`, after fitting, the `alpha\_` attribute will contain a value for each target. When set to `false`, a single alpha is used for all targets.
+      Flag indicating whether to optimize the alpha value (picked from the `alphas` parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to `true`, after fitting, the `alpha_` attribute will contain a value for each target. When set to `false`, a single alpha is used for all targets.
 
       @defaultValue `false`
      */
     alpha_per_target?: boolean
+
+    /**
+      Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv_values_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
+     */
+    store_cv_values?: boolean
   }) {
     this.id = `RidgeCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -108,15 +113,8 @@ except NameError: bridgeRidgeCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RidgeCV = {'alphas': np.array(${
-      this.opts['alphas'] ?? undefined
-    }) if ${this.opts['alphas'] !== undefined} else None, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'scoring': ${this.opts['scoring'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'gcv_mode': ${this.opts['gcv_mode'] ?? undefined}, 'store_cv_values': ${
-      this.opts['store_cv_values'] ?? undefined
-    }, 'alpha_per_target': ${this.opts['alpha_per_target'] ?? undefined}}
+    await this._py
+      .ex`ctor_RidgeCV = {'alphas': np.array(${this.opts['alphas'] ?? undefined}) if ${this.opts['alphas'] !== undefined} else None, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'gcv_mode': ${this.opts['gcv_mode'] ?? undefined}, 'store_cv_results': ${this.opts['store_cv_results'] ?? undefined}, 'alpha_per_target': ${this.opts['alpha_per_target'] ?? undefined}, 'store_cv_values': ${this.opts['store_cv_values'] ?? undefined}}
 
 ctor_RidgeCV = {k: v for k, v in ctor_RidgeCV.items() if v is not None}`
 
@@ -162,6 +160,11 @@ ctor_RidgeCV = {k: v for k, v in ctor_RidgeCV.items() if v is not None}`
       Individual weights for each sample. If given a float, every sample will have the same weight.
      */
     sample_weight?: number | NDArray
+
+    /**
+      Parameters to be passed to the underlying scorer.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RidgeCV instance has already been disposed')
@@ -172,13 +175,8 @@ ctor_RidgeCV = {k: v for k, v in ctor_RidgeCV.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RidgeCV_fit = {k: v for k, v in pms_RidgeCV_fit.items() if v is not None}`
 
@@ -194,11 +192,11 @@ pms_RidgeCV_fit = {k: v for k, v in pms_RidgeCV_fit.items() if v is not None}`
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -211,9 +209,8 @@ pms_RidgeCV_fit = {k: v for k, v in pms_RidgeCV_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RidgeCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RidgeCV_get_metadata_routing = {k: v for k, v in pms_RidgeCV_get_metadata_routing.items() if v is not None}`
 
@@ -260,11 +257,11 @@ pms_RidgeCV_predict = {k: v for k, v in pms_RidgeCV_predict.items() if v is not 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -287,13 +284,8 @@ pms_RidgeCV_predict = {k: v for k, v in pms_RidgeCV_predict.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None}`
 
@@ -309,13 +301,13 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -328,9 +320,8 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RidgeCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RidgeCV_set_fit_request = {k: v for k, v in pms_RidgeCV_set_fit_request.items() if v is not None}`
 
@@ -346,13 +337,13 @@ pms_RidgeCV_set_fit_request = {k: v for k, v in pms_RidgeCV_set_fit_request.item
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -365,9 +356,8 @@ pms_RidgeCV_set_fit_request = {k: v for k, v in pms_RidgeCV_set_fit_request.item
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RidgeCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RidgeCV_set_score_request = {k: v for k, v in pms_RidgeCV_set_score_request.items() if v is not None}`
 
@@ -381,25 +371,25 @@ pms_RidgeCV_set_score_request = {k: v for k, v in pms_RidgeCV_set_score_request.
   }
 
   /**
-    Cross-validation values for each alpha (only available if `store\_cv\_values=True` and `cv=None`). After `fit()` has been called, this attribute will contain the mean squared errors if `scoring is None` otherwise it will contain standardized per point prediction values.
+    Cross-validation values for each alpha (only available if `store_cv_results=True` and `cv=None`). After `fit()` has been called, this attribute will contain the mean squared errors if `scoring is None` otherwise it will contain standardized per point prediction values.
    */
-  get cv_values_(): Promise<NDArray[]> {
+  get cv_results_(): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This RidgeCV instance has already been disposed')
     }
 
     if (!this._isInitialized) {
-      throw new Error('RidgeCV must call init() before accessing cv_values_')
+      throw new Error('RidgeCV must call init() before accessing cv_results_')
     }
 
     return (async () => {
       // invoke accessor
       await this._py
-        .ex`attr_RidgeCV_cv_values_ = bridgeRidgeCV[${this.id}].cv_values_`
+        .ex`attr_RidgeCV_cv_results_ = bridgeRidgeCV[${this.id}].cv_results_`
 
       // convert the result from python to node.js
       return this
-        ._py`attr_RidgeCV_cv_values_.tolist() if hasattr(attr_RidgeCV_cv_values_, 'tolist') else attr_RidgeCV_cv_values_`
+        ._py`attr_RidgeCV_cv_results_.tolist() if hasattr(attr_RidgeCV_cv_results_, 'tolist') else attr_RidgeCV_cv_results_`
     })()
   }
 
@@ -426,7 +416,7 @@ pms_RidgeCV_set_score_request = {k: v for k, v in pms_RidgeCV_set_score_request.
   }
 
   /**
-    Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
+    Independent term in decision function. Set to 0.0 if `fit_intercept \= False`.
    */
   get intercept_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -449,7 +439,7 @@ pms_RidgeCV_set_score_request = {k: v for k, v in pms_RidgeCV_set_score_request.
   }
 
   /**
-    Estimated regularization parameter, or, if `alpha\_per\_target=True`, the estimated regularization parameter for each target.
+    Estimated regularization parameter, or, if `alpha_per_target=True`, the estimated regularization parameter for each target.
    */
   get alpha_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -471,7 +461,7 @@ pms_RidgeCV_set_score_request = {k: v for k, v in pms_RidgeCV_set_score_request.
   }
 
   /**
-    Score of base estimator with best alpha, or, if `alpha\_per\_target=True`, a score for each target.
+    Score of base estimator with best alpha, or, if `alpha_per_target=True`, a score for each target.
    */
   get best_score_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -494,7 +484,7 @@ pms_RidgeCV_set_score_request = {k: v for k, v in pms_RidgeCV_set_score_request.
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -519,7 +509,7 @@ pms_RidgeCV_set_score_request = {k: v for k, v in pms_RidgeCV_set_score_request.
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

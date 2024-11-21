@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Non-deterministic iterable over random candidate combinations for hyper- parameter search. If all parameters are presented as a list, sampling without replacement is performed. If at least one parameter is given as a distribution, sampling with replacement is used. It is highly recommended to use continuous distributions for continuous parameters.
 
-  Read more in the [User Guide](../grid_search.html#grid-search).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#grid-search).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterSampler.html)
  */
@@ -34,7 +34,7 @@ export class ParameterSampler {
     n_iter?: number
 
     /**
-      Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -80,11 +80,8 @@ except NameError: bridgeParameterSampler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ParameterSampler = {'param_distributions': ${
-      this.opts['param_distributions'] ?? undefined
-    }, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ParameterSampler = {'param_distributions': ${this.opts['param_distributions'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_ParameterSampler = {k: v for k, v in ctor_ParameterSampler.items() if v is not None}`
 

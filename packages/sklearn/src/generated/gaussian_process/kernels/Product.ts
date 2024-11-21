@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  The `Product` kernel takes two kernels \\(k\_1\\) and \\(k\_2\\) and combines them via
+  The `Product` kernel takes two kernels \\(k_1\\) and \\(k_2\\) and combines them via
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Product.html)
  */
@@ -69,9 +69,8 @@ except NameError: bridgeProduct = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Product = {'k1': ${
-      this.opts['k1'] ?? undefined
-    }, 'k2': ${this.opts['k2'] ?? undefined}}
+    await this._py
+      .ex`ctor_Product = {'k1': ${this.opts['k1'] ?? undefined}, 'k2': ${this.opts['k2'] ?? undefined}}
 
 ctor_Product = {k: v for k, v in ctor_Product.items() if v is not None}`
 
@@ -129,13 +128,8 @@ ctor_Product = {k: v for k, v in ctor_Product.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Product___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Product___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_Product___call__ = {k: v for k, v in pms_Product___call__.items() if v is not None}`
 
@@ -166,9 +160,8 @@ pms_Product___call__ = {k: v for k, v in pms_Product___call__.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_Product_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+    await this._py
+      .ex`pms_Product_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_Product_clone_with_theta = {k: v for k, v in pms_Product_clone_with_theta.items() if v is not None}`
 
@@ -201,9 +194,8 @@ pms_Product_clone_with_theta = {k: v for k, v in pms_Product_clone_with_theta.it
     }
 
     // set up method params
-    await this._py.ex`pms_Product_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Product_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Product_diag = {k: v for k, v in pms_Product_diag.items() if v is not None}`
 

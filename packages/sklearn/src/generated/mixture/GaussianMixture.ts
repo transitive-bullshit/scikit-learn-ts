@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Representation of a Gaussian mixture model probability distribution. This class allows to estimate the parameters of a Gaussian mixture distribution.
 
-  Read more in the [User Guide](../mixture.html#gmm).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../mixture.html#gmm).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html)
  */
@@ -73,27 +73,27 @@ export class GaussianMixture {
     init_params?: 'kmeans' | 'k-means++' | 'random' | 'random_from_data'
 
     /**
-      The user-provided initial weights. If it is `undefined`, weights are initialized using the `init\_params` method.
+      The user-provided initial weights. If it is `undefined`, weights are initialized using the `init_params` method.
      */
     weights_init?: ArrayLike
 
     /**
-      The user-provided initial means, If it is `undefined`, means are initialized using the `init\_params` method.
+      The user-provided initial means, If it is `undefined`, means are initialized using the `init_params` method.
      */
     means_init?: ArrayLike[]
 
     /**
-      The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init\_params’ method. The shape depends on ‘covariance\_type’:
+      The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init_params’ method. The shape depends on ‘covariance_type’:
      */
     precisions_init?: ArrayLike
 
     /**
-      Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the random seed given to the method chosen to initialize the parameters (see `init_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n\_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](../../glossary.html#term-warm_start).
+      If ‘warm_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
       @defaultValue `false`
      */
@@ -153,29 +153,8 @@ except NameError: bridgeGaussianMixture = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianMixture = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'covariance_type': ${
-      this.opts['covariance_type'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'reg_covar': ${
-      this.opts['reg_covar'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'init_params': ${
-      this.opts['init_params'] ?? undefined
-    }, 'weights_init': np.array(${this.opts['weights_init'] ?? undefined}) if ${
-      this.opts['weights_init'] !== undefined
-    } else None, 'means_init': np.array(${
-      this.opts['means_init'] ?? undefined
-    }) if ${
-      this.opts['means_init'] !== undefined
-    } else None, 'precisions_init': ${
-      this.opts['precisions_init'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'verbose_interval': ${this.opts['verbose_interval'] ?? undefined}}
+    await this._py
+      .ex`ctor_GaussianMixture = {'n_components': ${this.opts['n_components'] ?? undefined}, 'covariance_type': ${this.opts['covariance_type'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'reg_covar': ${this.opts['reg_covar'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'init_params': ${this.opts['init_params'] ?? undefined}, 'weights_init': np.array(${this.opts['weights_init'] ?? undefined}) if ${this.opts['weights_init'] !== undefined} else None, 'means_init': np.array(${this.opts['means_init'] ?? undefined}) if ${this.opts['means_init'] !== undefined} else None, 'precisions_init': ${this.opts['precisions_init'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'verbose_interval': ${this.opts['verbose_interval'] ?? undefined}}
 
 ctor_GaussianMixture = {k: v for k, v in ctor_GaussianMixture.items() if v is not None}`
 
@@ -207,7 +186,7 @@ ctor_GaussianMixture = {k: v for k, v in ctor_GaussianMixture.items() if v is no
   /**
     Akaike information criterion for the current model on the input X.
 
-    You can refer to this [mathematical section](../linear_model.html#aic-bic) for more details regarding the formulation of the AIC used.
+    You can refer to this [mathematical section](https://scikit-learn.org/stable/modules/generated/../linear_model.html#aic-bic) for more details regarding the formulation of the AIC used.
    */
   async aic(opts: {
     /**
@@ -224,9 +203,8 @@ ctor_GaussianMixture = {k: v for k, v in ctor_GaussianMixture.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_aic = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_aic = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_aic = {k: v for k, v in pms_GaussianMixture_aic.items() if v is not None}`
 
@@ -242,7 +220,7 @@ pms_GaussianMixture_aic = {k: v for k, v in pms_GaussianMixture_aic.items() if v
   /**
     Bayesian information criterion for the current model on the input X.
 
-    You can refer to this [mathematical section](../linear_model.html#aic-bic) for more details regarding the formulation of the BIC used.
+    You can refer to this [mathematical section](https://scikit-learn.org/stable/modules/generated/../linear_model.html#aic-bic) for more details regarding the formulation of the BIC used.
    */
   async bic(opts: {
     /**
@@ -259,9 +237,8 @@ pms_GaussianMixture_aic = {k: v for k, v in pms_GaussianMixture_aic.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_bic = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_bic = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v is not None}`
 
@@ -277,11 +254,11 @@ pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v
   /**
     Estimate model parameters with the EM algorithm.
 
-    The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `true`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
+    The method fits the model `n_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm_start` is `true`, then `n_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
    */
   async fit(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
@@ -299,9 +276,8 @@ pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianMixture_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GaussianMixture_fit = {k: v for k, v in pms_GaussianMixture_fit.items() if v is not None}`
 
@@ -317,11 +293,11 @@ pms_GaussianMixture_fit = {k: v for k, v in pms_GaussianMixture_fit.items() if v
   /**
     Estimate model parameters using X and predict the labels for X.
 
-    The method fits the model n\_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
+    The method fits the model n_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
    */
   async fit_predict(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
@@ -339,9 +315,8 @@ pms_GaussianMixture_fit = {k: v for k, v in pms_GaussianMixture_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianMixture_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GaussianMixture_fit_predict = {k: v for k, v in pms_GaussianMixture_fit_predict.items() if v is not None}`
 
@@ -357,11 +332,11 @@ pms_GaussianMixture_fit_predict = {k: v for k, v in pms_GaussianMixture_fit_pred
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -376,9 +351,8 @@ pms_GaussianMixture_fit_predict = {k: v for k, v in pms_GaussianMixture_fit_pred
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianMixture_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianMixture_get_metadata_routing = {k: v for k, v in pms_GaussianMixture_get_metadata_routing.items() if v is not None}`
 
@@ -396,7 +370,7 @@ pms_GaussianMixture_get_metadata_routing = {k: v for k, v in pms_GaussianMixture
    */
   async predict(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -409,9 +383,8 @@ pms_GaussianMixture_get_metadata_routing = {k: v for k, v in pms_GaussianMixture
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_predict = {k: v for k, v in pms_GaussianMixture_predict.items() if v is not None}`
 
@@ -429,7 +402,7 @@ pms_GaussianMixture_predict = {k: v for k, v in pms_GaussianMixture_predict.item
    */
   async predict_proba(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -442,9 +415,8 @@ pms_GaussianMixture_predict = {k: v for k, v in pms_GaussianMixture_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_predict_proba = {k: v for k, v in pms_GaussianMixture_predict_proba.items() if v is not None}`
 
@@ -477,9 +449,8 @@ pms_GaussianMixture_predict_proba = {k: v for k, v in pms_GaussianMixture_predic
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_sample = {'n_samples': ${
-      opts['n_samples'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GaussianMixture_sample = {'n_samples': ${opts['n_samples'] ?? undefined}}
 
 pms_GaussianMixture_sample = {k: v for k, v in pms_GaussianMixture_sample.items() if v is not None}`
 
@@ -497,7 +468,7 @@ pms_GaussianMixture_sample = {k: v for k, v in pms_GaussianMixture_sample.items(
    */
   async score(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
@@ -515,9 +486,8 @@ pms_GaussianMixture_sample = {k: v for k, v in pms_GaussianMixture_sample.items(
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianMixture_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GaussianMixture_score = {k: v for k, v in pms_GaussianMixture_score.items() if v is not None}`
 
@@ -535,7 +505,7 @@ pms_GaussianMixture_score = {k: v for k, v in pms_GaussianMixture_score.items() 
    */
   async score_samples(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
   }): Promise<any> {
@@ -548,9 +518,8 @@ pms_GaussianMixture_score = {k: v for k, v in pms_GaussianMixture_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianMixture_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianMixture_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_samples.items() if v is not None}`
 
@@ -614,7 +583,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    The covariance of each mixture component. The shape depends on `covariance\_type`:
+    The covariance of each mixture component. The shape depends on `covariance_type`:
    */
   get covariances_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -639,7 +608,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    The precision matrices for each component in the mixture. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
+    The precision matrices for each component in the mixture. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance_type`:
    */
   get precisions_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -664,7 +633,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    The cholesky decomposition of the precision matrices of each mixture component. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
+    The cholesky decomposition of the precision matrices of each mixture component. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance_type`:
    */
   get precisions_cholesky_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -689,7 +658,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    True when convergence was reached in fit(), `false` otherwise.
+    True when convergence of the best fit of EM was reached, `false` otherwise.
    */
   get converged_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -764,7 +733,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -789,7 +758,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

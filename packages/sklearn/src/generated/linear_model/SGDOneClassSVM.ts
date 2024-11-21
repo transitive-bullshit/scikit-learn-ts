@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Solves linear One-Class SVM using Stochastic Gradient Descent.
 
-  This implementation is meant to be used with a kernel approximation technique (e.g. `sklearn.kernel\_approximation.Nystroem`) to obtain results similar to `sklearn.svm.OneClassSVM` which uses a Gaussian kernel by default.
+  This implementation is meant to be used with a kernel approximation technique (e.g. `sklearn.kernel_approximation.Nystroem`) to obtain results similar to `sklearn.svm.OneClassSVM` which uses a Gaussian kernel by default.
 
-  Read more in the [User Guide](../sgd.html#sgd-online-one-class-svm).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../sgd.html#sgd-online-one-class-svm).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDOneClassSVM.html)
  */
@@ -38,14 +38,14 @@ export class SGDOneClassSVM {
     fit_intercept?: boolean
 
     /**
-      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the `partial\_fit`. Defaults to 1000.
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the `partial_fit`. Defaults to 1000. Values must be in the range `\[1, inf)`.
 
       @defaultValue `1000`
      */
     max_iter?: number
 
     /**
-      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol). Defaults to 1e-3.
+      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous_loss - tol). Defaults to 1e-3. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.001`
      */
@@ -66,42 +66,42 @@ export class SGDOneClassSVM {
     verbose?: number
 
     /**
-      The seed of the pseudo random number generator to use when shuffling the data. If int, random\_state is the seed used by the random number generator; If RandomState instance, random\_state is the random number generator; If `undefined`, the random number generator is the RandomState instance used by `np.random`.
+      The seed of the pseudo random number generator to use when shuffling the data. If int, random_state is the seed used by the random number generator; If RandomState instance, random_state is the random number generator; If `undefined`, the random number generator is the RandomState instance used by `np.random`.
      */
     random_state?: number
 
     /**
-      The learning rate schedule to use with `fit`. (If using `partial\_fit`, learning rate must be controlled directly).
+      The learning rate schedule to use with `fit`. (If using `partial_fit`, learning rate must be controlled directly).
 
       @defaultValue `'optimal'`
      */
     learning_rate?: 'constant' | 'optimal' | 'invscaling' | 'adaptive'
 
     /**
-      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’.
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0`
      */
     eta0?: number
 
     /**
-      The exponent for inverse scaling learning rate \[default 0.5\].
+      The exponent for inverse scaling learning rate. Values must be in the range `(-inf, inf)`.
 
       @defaultValue `0.5`
      */
     power_t?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
-      Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
+      Repeatedly calling fit or partial_fit when warm_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial_fit` will result in increasing the existing counter.
 
       @defaultValue `false`
      */
     warm_start?: boolean
 
     /**
-      When set to `true`, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So `average=10` will begin averaging after seeing 10 samples.
+      When set to `true`, computes the averaged SGD weights and stores the result in the `coef_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So `average=10` will begin averaging after seeing 10 samples.
 
       @defaultValue `false`
      */
@@ -147,21 +147,8 @@ except NameError: bridgeSGDOneClassSVM = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SGDOneClassSVM = {'nu': ${
-      this.opts['nu'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${
-      this.opts['eta0'] ?? undefined
-    }, 'power_t': ${this.opts['power_t'] ?? undefined}, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'average': ${this.opts['average'] ?? undefined}}
+    await this._py
+      .ex`ctor_SGDOneClassSVM = {'nu': ${this.opts['nu'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'eta0': ${this.opts['eta0'] ?? undefined}, 'power_t': ${this.opts['power_t'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'average': ${this.opts['average'] ?? undefined}}
 
 ctor_SGDOneClassSVM = {k: v for k, v in ctor_SGDOneClassSVM.items() if v is not None}`
 
@@ -212,9 +199,8 @@ ctor_SGDOneClassSVM = {k: v for k, v in ctor_SGDOneClassSVM.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDOneClassSVM_decision_function = {k: v for k, v in pms_SGDOneClassSVM_decision_function.items() if v is not None}`
 
@@ -230,7 +216,7 @@ pms_SGDOneClassSVM_decision_function = {k: v for k, v in pms_SGDOneClassSVM_deci
   /**
     Convert coefficient matrix to dense array format.
 
-    Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
+    Converts the `coef_` member (back) to a numpy.ndarray. This is the default format of `coef_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
   async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -282,7 +268,7 @@ pms_SGDOneClassSVM_densify = {k: v for k, v in pms_SGDOneClassSVM_densify.items(
     offset_init?: any
 
     /**
-      Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
+      Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class_weight (passed through the constructor) if class_weight is specified.
      */
     sample_weight?: ArrayLike
   }): Promise<any> {
@@ -295,13 +281,8 @@ pms_SGDOneClassSVM_densify = {k: v for k, v in pms_SGDOneClassSVM_densify.items(
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'coef_init': ${opts['coef_init'] ?? undefined}, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_fit = {k: v for k, v in pms_SGDOneClassSVM_fit.items() if v is not None}`
 
@@ -329,6 +310,11 @@ pms_SGDOneClassSVM_fit = {k: v for k, v in pms_SGDOneClassSVM_fit.items() if v i
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
@@ -339,9 +325,8 @@ pms_SGDOneClassSVM_fit = {k: v for k, v in pms_SGDOneClassSVM_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SGDOneClassSVM_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_SGDOneClassSVM_fit_predict = {k: v for k, v in pms_SGDOneClassSVM_fit_predict.items() if v is not None}`
 
@@ -357,11 +342,11 @@ pms_SGDOneClassSVM_fit_predict = {k: v for k, v in pms_SGDOneClassSVM_fit_predic
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -376,9 +361,8 @@ pms_SGDOneClassSVM_fit_predict = {k: v for k, v in pms_SGDOneClassSVM_fit_predic
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SGDOneClassSVM_get_metadata_routing = {k: v for k, v in pms_SGDOneClassSVM_get_metadata_routing.items() if v is not None}`
 
@@ -419,11 +403,8 @@ pms_SGDOneClassSVM_get_metadata_routing = {k: v for k, v in pms_SGDOneClassSVM_g
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_partial_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_partial_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_partial_fit = {k: v for k, v in pms_SGDOneClassSVM_partial_fit.items() if v is not None}`
 
@@ -454,9 +435,8 @@ pms_SGDOneClassSVM_partial_fit = {k: v for k, v in pms_SGDOneClassSVM_partial_fi
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDOneClassSVM_predict = {k: v for k, v in pms_SGDOneClassSVM_predict.items() if v is not None}`
 
@@ -487,9 +467,8 @@ pms_SGDOneClassSVM_predict = {k: v for k, v in pms_SGDOneClassSVM_predict.items(
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_SGDOneClassSVM_score_samples = {k: v for k, v in pms_SGDOneClassSVM_score_samples.items() if v is not None}`
 
@@ -505,23 +484,23 @@ pms_SGDOneClassSVM_score_samples = {k: v for k, v in pms_SGDOneClassSVM_score_sa
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `coef\_init` parameter in `fit`.
+      Metadata routing for `coef_init` parameter in `fit`.
      */
     coef_init?: string | boolean
 
     /**
-      Metadata routing for `offset\_init` parameter in `fit`.
+      Metadata routing for `offset_init` parameter in `fit`.
      */
     offset_init?: string | boolean
 
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -536,11 +515,8 @@ pms_SGDOneClassSVM_score_samples = {k: v for k, v in pms_SGDOneClassSVM_score_sa
     }
 
     // set up method params
-    await this._py.ex`pms_SGDOneClassSVM_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SGDOneClassSVM_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_set_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_fit_request.items() if v is not None}`
 
@@ -554,15 +530,15 @@ pms_SGDOneClassSVM_set_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_fi
   }
 
   /**
-    Request metadata passed to the `partial\_fit` method.
+    Request metadata passed to the `partial_fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_partial_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+      Metadata routing for `sample_weight` parameter in `partial_fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -578,9 +554,7 @@ pms_SGDOneClassSVM_set_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_fi
 
     // set up method params
     await this._py
-      .ex`pms_SGDOneClassSVM_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_SGDOneClassSVM_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_SGDOneClassSVM_set_partial_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_partial_fit_request.items() if v is not None}`
 
@@ -596,9 +570,9 @@ pms_SGDOneClassSVM_set_partial_fit_request = {k: v for k, v in pms_SGDOneClassSV
   /**
     Convert coefficient matrix to sparse format.
 
-    Converts the `coef\_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
+    Converts the `coef_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
 
-    The `intercept\_` member is not converted.
+    The `intercept_` member is not converted.
    */
   async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -647,7 +621,7 @@ pms_SGDOneClassSVM_sparsify = {k: v for k, v in pms_SGDOneClassSVM_sparsify.item
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: decision\_function = score\_samples - offset.
+    Offset used to define the decision function from the raw scores. We have the relation: decision_function = score_samples - offset.
    */
   get offset_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -697,7 +671,7 @@ pms_SGDOneClassSVM_sparsify = {k: v for k, v in pms_SGDOneClassSVM_sparsify.item
   }
 
   /**
-    Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
+    Number of weight updates performed during training. Same as `(n_iter_ \* n_samples + 1)`.
    */
   get t_(): Promise<number> {
     if (this._isDisposed) {
@@ -719,6 +693,9 @@ pms_SGDOneClassSVM_sparsify = {k: v for k, v in pms_SGDOneClassSVM_sparsify.item
     })()
   }
 
+  /**
+    Deprecated since version 1.4: `loss_function_` was deprecated in version 1.4 and will be removed in 1.6.
+   */
   get loss_function_(): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
@@ -742,7 +719,7 @@ pms_SGDOneClassSVM_sparsify = {k: v for k, v in pms_SGDOneClassSVM_sparsify.item
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -767,7 +744,7 @@ pms_SGDOneClassSVM_sparsify = {k: v for k, v in pms_SGDOneClassSVM_sparsify.item
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

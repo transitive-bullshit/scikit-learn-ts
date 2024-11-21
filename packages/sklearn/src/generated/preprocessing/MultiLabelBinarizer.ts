@@ -77,11 +77,8 @@ except NameError: bridgeMultiLabelBinarizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MultiLabelBinarizer = {'classes': np.array(${
-      this.opts['classes'] ?? undefined
-    }) if ${this.opts['classes'] !== undefined} else None, 'sparse_output': ${
-      this.opts['sparse_output'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_MultiLabelBinarizer = {'classes': np.array(${this.opts['classes'] ?? undefined}) if ${this.opts['classes'] !== undefined} else None, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}}
 
 ctor_MultiLabelBinarizer = {k: v for k, v in ctor_MultiLabelBinarizer.items() if v is not None}`
 
@@ -111,7 +108,7 @@ ctor_MultiLabelBinarizer = {k: v for k, v in ctor_MultiLabelBinarizer.items() if
   }
 
   /**
-    Fit the label sets binarizer, storing [classes\_](../../glossary.html#term-classes_).
+    Fit the label sets binarizer, storing [classes_](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-classes_).
    */
   async fit(opts: {
     /**
@@ -130,9 +127,8 @@ ctor_MultiLabelBinarizer = {k: v for k, v in ctor_MultiLabelBinarizer.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_MultiLabelBinarizer_fit = {'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiLabelBinarizer_fit = {'y': ${opts['y'] ?? undefined}}
 
 pms_MultiLabelBinarizer_fit = {k: v for k, v in pms_MultiLabelBinarizer_fit.items() if v is not None}`
 
@@ -167,9 +163,8 @@ pms_MultiLabelBinarizer_fit = {k: v for k, v in pms_MultiLabelBinarizer_fit.item
     }
 
     // set up method params
-    await this._py.ex`pms_MultiLabelBinarizer_fit_transform = {'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiLabelBinarizer_fit_transform = {'y': ${opts['y'] ?? undefined}}
 
 pms_MultiLabelBinarizer_fit_transform = {k: v for k, v in pms_MultiLabelBinarizer_fit_transform.items() if v is not None}`
 
@@ -185,11 +180,11 @@ pms_MultiLabelBinarizer_fit_transform = {k: v for k, v in pms_MultiLabelBinarize
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -207,9 +202,7 @@ pms_MultiLabelBinarizer_fit_transform = {k: v for k, v in pms_MultiLabelBinarize
 
     // set up method params
     await this._py
-      .ex`pms_MultiLabelBinarizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MultiLabelBinarizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MultiLabelBinarizer_get_metadata_routing = {k: v for k, v in pms_MultiLabelBinarizer_get_metadata_routing.items() if v is not None}`
 
@@ -245,9 +238,7 @@ pms_MultiLabelBinarizer_get_metadata_routing = {k: v for k, v in pms_MultiLabelB
 
     // set up method params
     await this._py
-      .ex`pms_MultiLabelBinarizer_inverse_transform = {'yt': np.array(${
-      opts['yt'] ?? undefined
-    }) if ${opts['yt'] !== undefined} else None}
+      .ex`pms_MultiLabelBinarizer_inverse_transform = {'yt': np.array(${opts['yt'] ?? undefined}) if ${opts['yt'] !== undefined} else None}
 
 pms_MultiLabelBinarizer_inverse_transform = {k: v for k, v in pms_MultiLabelBinarizer_inverse_transform.items() if v is not None}`
 
@@ -263,13 +254,13 @@ pms_MultiLabelBinarizer_inverse_transform = {k: v for k, v in pms_MultiLabelBina
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -284,9 +275,8 @@ pms_MultiLabelBinarizer_inverse_transform = {k: v for k, v in pms_MultiLabelBina
     }
 
     // set up method params
-    await this._py.ex`pms_MultiLabelBinarizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiLabelBinarizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MultiLabelBinarizer_set_output = {k: v for k, v in pms_MultiLabelBinarizer_set_output.items() if v is not None}`
 
@@ -319,9 +309,8 @@ pms_MultiLabelBinarizer_set_output = {k: v for k, v in pms_MultiLabelBinarizer_s
     }
 
     // set up method params
-    await this._py.ex`pms_MultiLabelBinarizer_transform = {'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiLabelBinarizer_transform = {'y': ${opts['y'] ?? undefined}}
 
 pms_MultiLabelBinarizer_transform = {k: v for k, v in pms_MultiLabelBinarizer_transform.items() if v is not None}`
 

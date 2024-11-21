@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Soft Voting/Majority Rule classifier for unfitted estimators.
 
-  Read more in the [User Guide](../ensemble.html#voting-classifier).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#voting-classifier).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html)
  */
@@ -22,7 +22,7 @@ export class VotingClassifier {
 
   constructor(opts?: {
     /**
-      Invoking the `fit` method on the `VotingClassifier` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingClassifier.set_params "sklearn.ensemble.VotingClassifier.set_params").
+      Invoking the `fit` method on the `VotingClassifier` will fit clones of those original estimators that will be stored in the class attribute `self.estimators_`. An estimator can be set to `'drop'` using [`set_params`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.VotingClassifier.set_params "sklearn.ensemble.VotingClassifier.set_params").
      */
     estimators?: any
 
@@ -39,12 +39,12 @@ export class VotingClassifier {
     weights?: ArrayLike
 
     /**
-      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten\_transform=`true`, transform method returns matrix with shape (n\_samples, n\_classifiers \* n\_classes). If flatten\_transform=`false`, it returns (n\_classifiers, n\_samples, n\_classes).
+      Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten_transform=`true`, transform method returns matrix with shape (n_samples, n_classifiers \* n_classes). If flatten_transform=`false`, it returns (n_classifiers, n_samples, n_classes).
 
       @defaultValue `true`
      */
@@ -99,15 +99,8 @@ except NameError: bridgeVotingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_VotingClassifier = {'estimators': ${
-      this.opts['estimators'] ?? undefined
-    }, 'voting': ${this.opts['voting'] ?? undefined}, 'weights': np.array(${
-      this.opts['weights'] ?? undefined
-    }) if ${this.opts['weights'] !== undefined} else None, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'flatten_transform': ${
-      this.opts['flatten_transform'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    await this._py
+      .ex`ctor_VotingClassifier = {'estimators': ${this.opts['estimators'] ?? undefined}, 'voting': ${this.opts['voting'] ?? undefined}, 'weights': np.array(${this.opts['weights'] ?? undefined}) if ${this.opts['weights'] !== undefined} else None, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'flatten_transform': ${this.opts['flatten_transform'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is not None}`
 
@@ -141,7 +134,7 @@ ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is 
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -154,6 +147,11 @@ ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is 
       Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the underlying estimators.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -166,13 +164,8 @@ ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingClassifier_fit = {k: v for k, v in pms_VotingClassifier_fit.items() if v is not None}`
 
@@ -219,13 +212,8 @@ pms_VotingClassifier_fit = {k: v for k, v in pms_VotingClassifier_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingClassifier_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingClassifier_fit_transform = {k: v for k, v in pms_VotingClassifier_fit_transform.items() if v is not None}`
 
@@ -261,9 +249,7 @@ pms_VotingClassifier_fit_transform = {k: v for k, v in pms_VotingClassifier_fit_
 
     // set up method params
     await this._py
-      .ex`pms_VotingClassifier_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_VotingClassifier_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_VotingClassifier_get_feature_names_out = {k: v for k, v in pms_VotingClassifier_get_feature_names_out.items() if v is not None}`
 
@@ -279,11 +265,11 @@ pms_VotingClassifier_get_feature_names_out = {k: v for k, v in pms_VotingClassif
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -300,9 +286,8 @@ pms_VotingClassifier_get_feature_names_out = {k: v for k, v in pms_VotingClassif
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_VotingClassifier_get_metadata_routing = {k: v for k, v in pms_VotingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -335,9 +320,8 @@ pms_VotingClassifier_get_metadata_routing = {k: v for k, v in pms_VotingClassifi
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingClassifier_predict = {k: v for k, v in pms_VotingClassifier_predict.items() if v is not None}`
 
@@ -372,9 +356,8 @@ pms_VotingClassifier_predict = {k: v for k, v in pms_VotingClassifier_predict.it
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingClassifier_predict_proba = {k: v for k, v in pms_VotingClassifier_predict_proba.items() if v is not None}`
 
@@ -419,13 +402,8 @@ pms_VotingClassifier_predict_proba = {k: v for k, v in pms_VotingClassifier_pred
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_VotingClassifier_score = {k: v for k, v in pms_VotingClassifier_score.items() if v is not None}`
 
@@ -441,13 +419,13 @@ pms_VotingClassifier_score = {k: v for k, v in pms_VotingClassifier_score.items(
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -465,9 +443,7 @@ pms_VotingClassifier_score = {k: v for k, v in pms_VotingClassifier_score.items(
 
     // set up method params
     await this._py
-      .ex`pms_VotingClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_VotingClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingClassifier_set_fit_request = {k: v for k, v in pms_VotingClassifier_set_fit_request.items() if v is not None}`
 
@@ -483,13 +459,13 @@ pms_VotingClassifier_set_fit_request = {k: v for k, v in pms_VotingClassifier_se
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -502,9 +478,8 @@ pms_VotingClassifier_set_fit_request = {k: v for k, v in pms_VotingClassifier_se
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingClassifier_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_VotingClassifier_set_output = {k: v for k, v in pms_VotingClassifier_set_output.items() if v is not None}`
 
@@ -520,13 +495,13 @@ pms_VotingClassifier_set_output = {k: v for k, v in pms_VotingClassifier_set_out
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -544,9 +519,7 @@ pms_VotingClassifier_set_output = {k: v for k, v in pms_VotingClassifier_set_out
 
     // set up method params
     await this._py
-      .ex`pms_VotingClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_VotingClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingClassifier_set_score_request = {k: v for k, v in pms_VotingClassifier_set_score_request.items() if v is not None}`
 
@@ -564,7 +537,7 @@ pms_VotingClassifier_set_score_request = {k: v for k, v in pms_VotingClassifier_
    */
   async transform(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<any> {
@@ -579,9 +552,8 @@ pms_VotingClassifier_set_score_request = {k: v for k, v in pms_VotingClassifier_
     }
 
     // set up method params
-    await this._py.ex`pms_VotingClassifier_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingClassifier_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingClassifier_transform = {k: v for k, v in pms_VotingClassifier_transform.items() if v is not None}`
 
@@ -701,7 +673,7 @@ pms_VotingClassifier_transform = {k: v for k, v in pms_VotingClassifier_transfor
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

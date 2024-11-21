@@ -8,13 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Gaussian process classification (GPC) based on Laplace approximation.
 
-  The implementation is based on Algorithm 3.1, 3.2, and 5.1 from [\[RW2006\]](#r2da648a61a73-rw2006).
+  The implementation is based on Algorithm 3.1, 3.2, and 5.1 from [\[RW2006\]](https://scikit-learn.org/stable/modules/generated/#r2da648a61a73-rw2006).
 
   Internally, the Laplace approximation is used for approximating the non-Gaussian posterior by a Gaussian.
 
   Currently, the implementation is restricted to using the logistic link function. For multi-class classification, several binary one-versus rest classifiers are fitted. Note that this class thus does not implement a true multi-class Laplace approximation.
 
-  Read more in the [User Guide](../gaussian_process.html#gaussian-process).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../gaussian_process.html#gaussian-process).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier.html)
  */
@@ -40,7 +40,7 @@ export class GaussianProcessClassifier {
     optimizer?: 'fmin_l_bfgs_b'
 
     /**
-      The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n\_restarts\_optimizer=0 implies that one run is performed.
+      The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n_restarts_optimizer=0 implies that one run is performed.
 
       @defaultValue `0`
      */
@@ -54,7 +54,7 @@ export class GaussianProcessClassifier {
     max_iter_predict?: number
 
     /**
-      If warm-starts are enabled, the solution of the last Newton iteration on the Laplace approximation of the posterior mode is used as initialization for the next call of \_posterior\_mode(). This can speed up convergence when \_posterior\_mode is called several times on similar problems as in hyperparameter optimization. See [the Glossary](../../glossary.html#term-warm_start).
+      If warm-starts are enabled, the solution of the last Newton iteration on the Laplace approximation of the posterior mode is used as initialization for the next call of _posterior_mode(). This can speed up convergence when _posterior_mode is called several times on similar problems as in hyperparameter optimization. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
       @defaultValue `false`
      */
@@ -68,19 +68,19 @@ export class GaussianProcessClassifier {
     copy_X_train?: boolean
 
     /**
-      Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      Specifies how multi-class classification problems are handled. Supported are ‘one\_vs\_rest’ and ‘one\_vs\_one’. In ‘one\_vs\_rest’, one binary Gaussian process classifier is fitted for each class, which is trained to separate this class from the rest. In ‘one\_vs\_one’, one binary Gaussian process classifier is fitted for each pair of classes, which is trained to separate these two classes. The predictions of these binary predictors are combined into multi-class predictions. Note that ‘one\_vs\_one’ does not support predicting probability estimates.
+      Specifies how multi-class classification problems are handled. Supported are ‘one_vs_rest’ and ‘one_vs_one’. In ‘one_vs_rest’, one binary Gaussian process classifier is fitted for each class, which is trained to separate this class from the rest. In ‘one_vs_one’, one binary Gaussian process classifier is fitted for each pair of classes, which is trained to separate these two classes. The predictions of these binary predictors are combined into multi-class predictions. Note that ‘one_vs_one’ does not support predicting probability estimates.
 
       @defaultValue `'one_vs_rest'`
      */
     multi_class?: 'one_vs_rest' | 'one_vs_one'
 
     /**
-      The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -128,21 +128,8 @@ except NameError: bridgeGaussianProcessClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianProcessClassifier = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'optimizer': ${
-      this.opts['optimizer'] ?? undefined
-    }, 'n_restarts_optimizer': ${
-      this.opts['n_restarts_optimizer'] ?? undefined
-    }, 'max_iter_predict': ${
-      this.opts['max_iter_predict'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'copy_X_train': ${
-      this.opts['copy_X_train'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'multi_class': ${this.opts['multi_class'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GaussianProcessClassifier = {'kernel': ${this.opts['kernel'] ?? undefined}, 'optimizer': ${this.opts['optimizer'] ?? undefined}, 'n_restarts_optimizer': ${this.opts['n_restarts_optimizer'] ?? undefined}, 'max_iter_predict': ${this.opts['max_iter_predict'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'copy_X_train': ${this.opts['copy_X_train'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'multi_class': ${this.opts['multi_class'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_GaussianProcessClassifier = {k: v for k, v in ctor_GaussianProcessClassifier.items() if v is not None}`
 
@@ -196,11 +183,8 @@ ctor_GaussianProcessClassifier = {k: v for k, v in ctor_GaussianProcessClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_fit = {k: v for k, v in pms_GaussianProcessClassifier_fit.items() if v is not None}`
 
@@ -216,11 +200,11 @@ pms_GaussianProcessClassifier_fit = {k: v for k, v in pms_GaussianProcessClassif
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -238,9 +222,7 @@ pms_GaussianProcessClassifier_fit = {k: v for k, v in pms_GaussianProcessClassif
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianProcessClassifier_get_metadata_routing = {k: v for k, v in pms_GaussianProcessClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -260,7 +242,7 @@ pms_GaussianProcessClassifier_get_metadata_routing = {k: v for k, v in pms_Gauss
    */
   async log_marginal_likelihood(opts: {
     /**
-      Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
+      Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If `undefined`, the precomputed log_marginal_likelihood of `self.kernel_.theta` is returned.
      */
     theta?: ArrayLike
 
@@ -292,11 +274,7 @@ pms_GaussianProcessClassifier_get_metadata_routing = {k: v for k, v in pms_Gauss
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_log_marginal_likelihood = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
+      .ex`pms_GaussianProcessClassifier_log_marginal_likelihood = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
 
 pms_GaussianProcessClassifier_log_marginal_likelihood = {k: v for k, v in pms_GaussianProcessClassifier_log_marginal_likelihood.items() if v is not None}`
 
@@ -331,9 +309,8 @@ pms_GaussianProcessClassifier_log_marginal_likelihood = {k: v for k, v in pms_Ga
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_predict = {k: v for k, v in pms_GaussianProcessClassifier_predict.items() if v is not None}`
 
@@ -369,9 +346,7 @@ pms_GaussianProcessClassifier_predict = {k: v for k, v in pms_GaussianProcessCla
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GaussianProcessClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_predict_proba = {k: v for k, v in pms_GaussianProcessClassifier_predict_proba.items() if v is not None}`
 
@@ -418,13 +393,8 @@ pms_GaussianProcessClassifier_predict_proba = {k: v for k, v in pms_GaussianProc
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClassifier_score.items() if v is not None}`
 
@@ -440,13 +410,13 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -464,9 +434,7 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GaussianProcessClassifier_set_score_request = {k: v for k, v in pms_GaussianProcessClassifier_set_score_request.items() if v is not None}`
 
@@ -507,7 +475,7 @@ pms_GaussianProcessClassifier_set_score_request = {k: v for k, v in pms_Gaussian
   }
 
   /**
-    The log-marginal-likelihood of `self.kernel\_.theta`
+    The log-marginal-likelihood of `self.kernel_.theta`
    */
   get log_marginal_likelihood_value_(): Promise<number> {
     if (this._isDisposed) {
@@ -588,7 +556,7 @@ pms_GaussianProcessClassifier_set_score_request = {k: v for k, v in pms_Gaussian
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -615,7 +583,7 @@ pms_GaussianProcessClassifier_set_score_request = {k: v for k, v in pms_Gaussian
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

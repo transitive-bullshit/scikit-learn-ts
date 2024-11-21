@@ -8,8 +8,8 @@ packages = [{include = "scikit_learn_ts"}]
 
 [tool.poetry.dependencies]
 python = ">=3.11"
-numpy = "^1.24.2"
-scikit-learn = "^1.2.1"
+numpy = "^1.19.5"
+scikit-learn = "^1.5.2"
 
 [build-system]
 requires = ["poetry-core"]

@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Multidimensional scaling.
 
-  Read more in the [User Guide](../manifold.html#multidimensional-scaling).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../manifold.html#multidimensional-scaling).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html)
  */
@@ -57,21 +57,21 @@ export class MDS {
     verbose?: number
 
     /**
-      Relative tolerance with respect to stress at which to declare convergence. The value of `eps` should be tuned separately depending on whether or not `normalized\_stress` is being used.
+      Relative tolerance with respect to stress at which to declare convergence. The value of `eps` should be tuned separately depending on whether or not `normalized_stress` is being used.
 
       @defaultValue `0.001`
      */
     eps?: number
 
     /**
-      The number of jobs to use for the computation. If multiple initializations are used (`n\_init`), each run of the algorithm is computed in parallel.
+      The number of jobs to use for the computation. If multiple initializations are used (`n_init`), each run of the algorithm is computed in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -85,7 +85,7 @@ export class MDS {
     /**
       Whether use and return normed stress value (Stress-1) instead of raw stress calculated by default. Only supported in non-metric MDS.
      */
-    normalized_stress?: boolean
+    normalized_stress?: boolean | 'auto” default=”auto'
   }) {
     this.id = `MDS${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -127,19 +127,8 @@ except NameError: bridgeMDS = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MDS = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'n_init': ${
-      this.opts['n_init'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'eps': ${this.opts['eps'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'dissimilarity': ${
-      this.opts['dissimilarity'] ?? undefined
-    }, 'normalized_stress': ${this.opts['normalized_stress'] ?? undefined}}
+    await this._py
+      .ex`ctor_MDS = {'n_components': ${this.opts['n_components'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'n_init': ${this.opts['n_init'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'dissimilarity': ${this.opts['dissimilarity'] ?? undefined}, 'normalized_stress': ${this.opts['normalized_stress'] ?? undefined}}
 
 ctor_MDS = {k: v for k, v in ctor_MDS.items() if v is not None}`
 
@@ -195,13 +184,8 @@ ctor_MDS = {k: v for k, v in ctor_MDS.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'init': np.array(${opts['init'] ?? undefined}) if ${
-      opts['init'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MDS_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'init': np.array(${opts['init'] ?? undefined}) if ${opts['init'] !== undefined} else None}
 
 pms_MDS_fit = {k: v for k, v in pms_MDS_fit.items() if v is not None}`
 
@@ -241,13 +225,8 @@ pms_MDS_fit = {k: v for k, v in pms_MDS_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'init': np.array(${opts['init'] ?? undefined}) if ${
-      opts['init'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_MDS_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'init': np.array(${opts['init'] ?? undefined}) if ${opts['init'] !== undefined} else None}
 
 pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is not None}`
 
@@ -263,11 +242,11 @@ pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is 
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -280,9 +259,8 @@ pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MDS_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MDS_get_metadata_routing = {k: v for k, v in pms_MDS_get_metadata_routing.items() if v is not None}`
 
@@ -298,7 +276,7 @@ pms_MDS_get_metadata_routing = {k: v for k, v in pms_MDS_get_metadata_routing.it
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -317,9 +295,8 @@ pms_MDS_get_metadata_routing = {k: v for k, v in pms_MDS_get_metadata_routing.it
     }
 
     // set up method params
-    await this._py.ex`pms_MDS_set_fit_request = {'init': ${
-      opts['init'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MDS_set_fit_request = {'init': ${opts['init'] ?? undefined}}
 
 pms_MDS_set_fit_request = {k: v for k, v in pms_MDS_set_fit_request.items() if v is not None}`
 
@@ -355,7 +332,7 @@ pms_MDS_set_fit_request = {k: v for k, v in pms_MDS_set_fit_request.items() if v
   }
 
   /**
-    The final value of the stress (sum of squared distance of the disparities and the distances for all constrained points). If `normalized\_stress=True`, and `metric=False` returns Stress-1. A value of 0 indicates “perfect” fit, 0.025 excellent, 0.05 good, 0.1 fair, and 0.2 poor [\[1\]](#r77760563872b-1).
+    The final value of the stress (sum of squared distance of the disparities and the distances for all constrained points). If `normalized_stress=True`, and `metric=False` returns Stress-1. A value of 0 indicates “perfect” fit, 0.025 excellent, 0.05 good, 0.1 fair, and 0.2 poor [\[1\]](https://scikit-learn.org/stable/modules/generated/#r77760563872b-1).
    */
   get stress_(): Promise<number> {
     if (this._isDisposed) {
@@ -402,7 +379,7 @@ pms_MDS_set_fit_request = {k: v for k, v in pms_MDS_set_fit_request.items() if v
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -425,7 +402,7 @@ pms_MDS_set_fit_request = {k: v for k, v in pms_MDS_set_fit_request.items() if v
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

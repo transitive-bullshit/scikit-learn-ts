@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This Scaler removes the median and scales the data according to the quantile range (defaults to IQR: Interquartile Range). The IQR is the range between the 1st quartile (25th quantile) and the 3rd quartile (75th quantile).
 
-  Centering and scaling happen independently on each feature by computing the relevant statistics on the samples in the training set. Median and interquartile range are then stored to be used on later data using the [`transform`](#sklearn.preprocessing.RobustScaler.transform "sklearn.preprocessing.RobustScaler.transform") method.
+  Centering and scaling happen independently on each feature by computing the relevant statistics on the samples in the training set. Median and interquartile range are then stored to be used on later data using the [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.RobustScaler.transform "sklearn.preprocessing.RobustScaler.transform") method.
 
-  Standardization of a dataset is a common preprocessing for many machine learning estimators. Typically this is done by removing the mean and scaling to unit variance. However, outliers can often influence the sample mean / variance in a negative way. In such cases, using the median and the interquartile range often give better results. For an example visualization and comparison to other scalers, refer to [Compare RobustScaler with other scalers](../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-robust-scaler-section).
+  Standardization of a dataset is a common preprocessing for many machine learning estimators. Typically this is done by removing the mean and scaling to unit variance. However, outliers can often influence the sample mean / variance in a negative way. In such cases, using the median and the interquartile range often give better results. For an example visualization and comparison to other scalers, refer to [Compare RobustScaler with other scalers](https://scikit-learn.org/stable/modules/generated/../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-robust-scaler-section).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html)
  */
@@ -26,7 +26,7 @@ export class RobustScaler {
 
   constructor(opts?: {
     /**
-      If `true`, center the data before scaling. This will cause [`transform`](#sklearn.preprocessing.RobustScaler.transform "sklearn.preprocessing.RobustScaler.transform") to raise an exception when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
+      If `true`, center the data before scaling. This will cause [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.RobustScaler.transform "sklearn.preprocessing.RobustScaler.transform") to raise an exception when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
 
       @defaultValue `true`
      */
@@ -40,7 +40,7 @@ export class RobustScaler {
     with_scaling?: boolean
 
     /**
-      Quantile range used to calculate `scale\_`. By default this is equal to the IQR, i.e., `q\_min` is the first quantile and `q\_max` is the third quantile.
+      Quantile range used to calculate `scale_`. By default this is equal to the IQR, i.e., `q_min` is the first quantile and `q_max` is the third quantile.
      */
     quantile_range?: any
 
@@ -52,7 +52,7 @@ export class RobustScaler {
     copy?: boolean
 
     /**
-      If `true`, scale data so that normally distributed features have a variance of 1. In general, if the difference between the x-values of `q\_max` and `q\_min` for a standard normal distribution is greater than 1, the dataset will be scaled down. If less than 1, the dataset will be scaled up.
+      If `true`, scale data so that normally distributed features have a variance of 1. In general, if the difference between the x-values of `q_max` and `q_min` for a standard normal distribution is greater than 1, the dataset will be scaled down. If less than 1, the dataset will be scaled up.
 
       @defaultValue `false`
      */
@@ -98,13 +98,8 @@ except NameError: bridgeRobustScaler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RobustScaler = {'with_centering': ${
-      this.opts['with_centering'] ?? undefined
-    }, 'with_scaling': ${
-      this.opts['with_scaling'] ?? undefined
-    }, 'quantile_range': ${this.opts['quantile_range'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }, 'unit_variance': ${this.opts['unit_variance'] ?? undefined}}
+    await this._py
+      .ex`ctor_RobustScaler = {'with_centering': ${this.opts['with_centering'] ?? undefined}, 'with_scaling': ${this.opts['with_scaling'] ?? undefined}, 'quantile_range': ${this.opts['quantile_range'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}, 'unit_variance': ${this.opts['unit_variance'] ?? undefined}}
 
 ctor_RobustScaler = {k: v for k, v in ctor_RobustScaler.items() if v is not None}`
 
@@ -156,9 +151,8 @@ ctor_RobustScaler = {k: v for k, v in ctor_RobustScaler.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_RobustScaler_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_RobustScaler_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_RobustScaler_fit = {k: v for k, v in pms_RobustScaler_fit.items() if v is not None}`
 
@@ -174,7 +168,7 @@ pms_RobustScaler_fit = {k: v for k, v in pms_RobustScaler_fit.items() if v is no
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -201,13 +195,8 @@ pms_RobustScaler_fit = {k: v for k, v in pms_RobustScaler_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_RobustScaler_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RobustScaler_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_RobustScaler_fit_transform = {k: v for k, v in pms_RobustScaler_fit_transform.items() if v is not None}`
 
@@ -241,9 +230,7 @@ pms_RobustScaler_fit_transform = {k: v for k, v in pms_RobustScaler_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_RobustScaler_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_RobustScaler_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_RobustScaler_get_feature_names_out = {k: v for k, v in pms_RobustScaler_get_feature_names_out.items() if v is not None}`
 
@@ -259,11 +246,11 @@ pms_RobustScaler_get_feature_names_out = {k: v for k, v in pms_RobustScaler_get_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -278,9 +265,8 @@ pms_RobustScaler_get_feature_names_out = {k: v for k, v in pms_RobustScaler_get_
     }
 
     // set up method params
-    await this._py.ex`pms_RobustScaler_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RobustScaler_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RobustScaler_get_metadata_routing = {k: v for k, v in pms_RobustScaler_get_metadata_routing.items() if v is not None}`
 
@@ -313,9 +299,8 @@ pms_RobustScaler_get_metadata_routing = {k: v for k, v in pms_RobustScaler_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_RobustScaler_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RobustScaler_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RobustScaler_inverse_transform = {k: v for k, v in pms_RobustScaler_inverse_transform.items() if v is not None}`
 
@@ -331,13 +316,13 @@ pms_RobustScaler_inverse_transform = {k: v for k, v in pms_RobustScaler_inverse_
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RobustScaler instance has already been disposed')
@@ -348,9 +333,8 @@ pms_RobustScaler_inverse_transform = {k: v for k, v in pms_RobustScaler_inverse_
     }
 
     // set up method params
-    await this._py.ex`pms_RobustScaler_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RobustScaler_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_RobustScaler_set_output = {k: v for k, v in pms_RobustScaler_set_output.items() if v is not None}`
 
@@ -381,9 +365,8 @@ pms_RobustScaler_set_output = {k: v for k, v in pms_RobustScaler_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_RobustScaler_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RobustScaler_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RobustScaler_transform = {k: v for k, v in pms_RobustScaler_transform.items() if v is not None}`
 
@@ -443,7 +426,7 @@ pms_RobustScaler_transform = {k: v for k, v in pms_RobustScaler_transform.items(
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -468,7 +451,7 @@ pms_RobustScaler_transform = {k: v for k, v in pms_RobustScaler_transform.items(
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

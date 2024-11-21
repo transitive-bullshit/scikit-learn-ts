@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This scaler can also be applied to sparse CSR or CSC matrices.
 
-  `MaxAbsScaler` doesn’t reduce the effect of outliers; it only linearily scales them down. For an example visualization, refer to [Compare MaxAbsScaler with other scalers](../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-max-abs-scaler-section).
+  `MaxAbsScaler` doesn’t reduce the effect of outliers; it only linearly scales them down. For an example visualization, refer to [Compare MaxAbsScaler with other scalers](https://scikit-learn.org/stable/modules/generated/../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-max-abs-scaler-section).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MaxAbsScaler.html)
  */
@@ -72,9 +72,8 @@ except NameError: bridgeMaxAbsScaler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MaxAbsScaler = {'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_MaxAbsScaler = {'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_MaxAbsScaler = {k: v for k, v in ctor_MaxAbsScaler.items() if v is not None}`
 
@@ -126,9 +125,8 @@ ctor_MaxAbsScaler = {k: v for k, v in ctor_MaxAbsScaler.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_MaxAbsScaler_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MaxAbsScaler_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MaxAbsScaler_fit = {k: v for k, v in pms_MaxAbsScaler_fit.items() if v is not None}`
 
@@ -144,7 +142,7 @@ pms_MaxAbsScaler_fit = {k: v for k, v in pms_MaxAbsScaler_fit.items() if v is no
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -171,13 +169,8 @@ pms_MaxAbsScaler_fit = {k: v for k, v in pms_MaxAbsScaler_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_MaxAbsScaler_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MaxAbsScaler_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_MaxAbsScaler_fit_transform = {k: v for k, v in pms_MaxAbsScaler_fit_transform.items() if v is not None}`
 
@@ -211,9 +204,7 @@ pms_MaxAbsScaler_fit_transform = {k: v for k, v in pms_MaxAbsScaler_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_MaxAbsScaler_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_MaxAbsScaler_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_MaxAbsScaler_get_feature_names_out = {k: v for k, v in pms_MaxAbsScaler_get_feature_names_out.items() if v is not None}`
 
@@ -229,11 +220,11 @@ pms_MaxAbsScaler_get_feature_names_out = {k: v for k, v in pms_MaxAbsScaler_get_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -248,9 +239,8 @@ pms_MaxAbsScaler_get_feature_names_out = {k: v for k, v in pms_MaxAbsScaler_get_
     }
 
     // set up method params
-    await this._py.ex`pms_MaxAbsScaler_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MaxAbsScaler_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MaxAbsScaler_get_metadata_routing = {k: v for k, v in pms_MaxAbsScaler_get_metadata_routing.items() if v is not None}`
 
@@ -283,9 +273,8 @@ pms_MaxAbsScaler_get_metadata_routing = {k: v for k, v in pms_MaxAbsScaler_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_MaxAbsScaler_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MaxAbsScaler_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MaxAbsScaler_inverse_transform = {k: v for k, v in pms_MaxAbsScaler_inverse_transform.items() if v is not None}`
 
@@ -301,7 +290,7 @@ pms_MaxAbsScaler_inverse_transform = {k: v for k, v in pms_MaxAbsScaler_inverse_
   /**
     Online computation of max absolute value of X for later scaling.
 
-    All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.MaxAbsScaler.fit "sklearn.preprocessing.MaxAbsScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
+    All of X is processed as a single batch. This is intended for cases when [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.MaxAbsScaler.fit "sklearn.preprocessing.MaxAbsScaler.fit") is not feasible due to very large number of `n_samples` or because X is read from a continuous stream.
    */
   async partial_fit(opts: {
     /**
@@ -323,9 +312,8 @@ pms_MaxAbsScaler_inverse_transform = {k: v for k, v in pms_MaxAbsScaler_inverse_
     }
 
     // set up method params
-    await this._py.ex`pms_MaxAbsScaler_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MaxAbsScaler_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MaxAbsScaler_partial_fit = {k: v for k, v in pms_MaxAbsScaler_partial_fit.items() if v is not None}`
 
@@ -341,13 +329,13 @@ pms_MaxAbsScaler_partial_fit = {k: v for k, v in pms_MaxAbsScaler_partial_fit.it
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
@@ -358,9 +346,8 @@ pms_MaxAbsScaler_partial_fit = {k: v for k, v in pms_MaxAbsScaler_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_MaxAbsScaler_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MaxAbsScaler_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MaxAbsScaler_set_output = {k: v for k, v in pms_MaxAbsScaler_set_output.items() if v is not None}`
 
@@ -391,9 +378,8 @@ pms_MaxAbsScaler_set_output = {k: v for k, v in pms_MaxAbsScaler_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_MaxAbsScaler_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MaxAbsScaler_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items() if v is not None}`
 
@@ -453,7 +439,7 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -478,7 +464,7 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -503,7 +489,7 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
   }
 
   /**
-    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across `partial\_fit` calls.
+    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across `partial_fit` calls.
    */
   get n_samples_seen_(): Promise<number> {
     if (this._isDisposed) {

@@ -22,7 +22,7 @@ export class LocalOutlierFactor {
 
   constructor(opts?: {
     /**
-      Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries. If n\_neighbors is larger than the number of samples provided, all samples will be used.
+      Number of neighbors to use by default for [`kneighbors`](https://scikit-learn.org/stable/modules/generated/#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries. If n_neighbors is larger than the number of samples provided, all samples will be used.
 
       @defaultValue `20`
      */
@@ -36,16 +36,16 @@ export class LocalOutlierFactor {
     algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
 
     /**
-      Leaf is size passed to [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+      Leaf is size passed to [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
       @defaultValue `30`
      */
     leaf_size?: number
 
     /**
-      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance_metrics`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
 
       If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
@@ -54,7 +54,7 @@ export class LocalOutlierFactor {
     metric?: string
 
     /**
-      Parameter for the Minkowski metric from [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances"). When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+      Parameter for the Minkowski metric from [`sklearn.metrics.pairwise_distances`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances"). When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
 
       @defaultValue `2`
      */
@@ -73,14 +73,14 @@ export class LocalOutlierFactor {
     contamination?: 'auto' | number
 
     /**
-      By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=`false`). Set novelty to `true` if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision\_function and score\_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
+      By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=`false`). Set novelty to `true` if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision_function and score_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
 
       @defaultValue `false`
      */
     novelty?: boolean
 
     /**
-      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -128,19 +128,8 @@ except NameError: bridgeLocalOutlierFactor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LocalOutlierFactor = {'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${
-      this.opts['leaf_size'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${
-      this.opts['p'] ?? undefined
-    }, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'contamination': ${
-      this.opts['contamination'] ?? undefined
-    }, 'novelty': ${this.opts['novelty'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LocalOutlierFactor = {'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'contamination': ${this.opts['contamination'] ?? undefined}, 'novelty': ${this.opts['novelty'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_LocalOutlierFactor = {k: v for k, v in ctor_LocalOutlierFactor.items() if v is not None}`
 
@@ -196,9 +185,7 @@ ctor_LocalOutlierFactor = {k: v for k, v in ctor_LocalOutlierFactor.items() if v
 
     // set up method params
     await this._py
-      .ex`pms_LocalOutlierFactor_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LocalOutlierFactor_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LocalOutlierFactor_decision_function = {k: v for k, v in pms_LocalOutlierFactor_decision_function.items() if v is not None}`
 
@@ -236,9 +223,8 @@ pms_LocalOutlierFactor_decision_function = {k: v for k, v in pms_LocalOutlierFac
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LocalOutlierFactor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LocalOutlierFactor_fit = {k: v for k, v in pms_LocalOutlierFactor_fit.items() if v is not None}`
 
@@ -280,9 +266,8 @@ pms_LocalOutlierFactor_fit = {k: v for k, v in pms_LocalOutlierFactor_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_LocalOutlierFactor_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_LocalOutlierFactor_fit_predict = {k: v for k, v in pms_LocalOutlierFactor_fit_predict.items() if v is not None}`
 
@@ -298,11 +283,11 @@ pms_LocalOutlierFactor_fit_predict = {k: v for k, v in pms_LocalOutlierFactor_fi
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -320,9 +305,7 @@ pms_LocalOutlierFactor_fit_predict = {k: v for k, v in pms_LocalOutlierFactor_fi
 
     // set up method params
     await this._py
-      .ex`pms_LocalOutlierFactor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LocalOutlierFactor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LocalOutlierFactor_get_metadata_routing = {k: v for k, v in pms_LocalOutlierFactor_get_metadata_routing.items() if v is not None}`
 
@@ -369,11 +352,8 @@ pms_LocalOutlierFactor_get_metadata_routing = {k: v for k, v in pms_LocalOutlier
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_kneighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LocalOutlierFactor_kneighbors = {'X': ${opts['X'] ?? undefined}, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}}
 
 pms_LocalOutlierFactor_kneighbors = {k: v for k, v in pms_LocalOutlierFactor_kneighbors.items() if v is not None}`
 
@@ -391,7 +371,7 @@ pms_LocalOutlierFactor_kneighbors = {k: v for k, v in pms_LocalOutlierFactor_kne
    */
   async kneighbors_graph(opts: {
     /**
-      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n_queries, n_indexed). Otherwise the shape should be (n_queries, n_features).
      */
     X?: any
 
@@ -421,11 +401,7 @@ pms_LocalOutlierFactor_kneighbors = {k: v for k, v in pms_LocalOutlierFactor_kne
 
     // set up method params
     await this._py
-      .ex`pms_LocalOutlierFactor_kneighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${
-      opts['n_neighbors'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}}
+      .ex`pms_LocalOutlierFactor_kneighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}}
 
 pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFactor_kneighbors_graph.items() if v is not None}`
 
@@ -441,7 +417,7 @@ pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFact
   /**
     Predict the labels (1 inlier, -1 outlier) of X according to LOF.
 
-    **Only available for novelty detection (when novelty is set to `true`).** This method allows to generalize prediction to *new observations* (not in the training set). Note that the result of `clf.fit(X)` then `clf.predict(X)` with `novelty=True` may differ from the result obtained by `clf.fit\_predict(X)` with `novelty=False`.
+    **Only available for novelty detection (when novelty is set to `true`).** This method allows to generalize prediction to *new observations* (not in the training set). Note that the result of `clf.fit(X)` then `clf.predict(X)` with `novelty=True` may differ from the result obtained by `clf.fit_predict(X)` with `novelty=False`.
    */
   async predict(opts: {
     /**
@@ -460,9 +436,8 @@ pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFact
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LocalOutlierFactor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predict.items() if v is not None}`
 
@@ -480,7 +455,7 @@ pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predic
 
     It is the opposite as bigger is better, i.e. large values correspond to inliers.
 
-    **Only available for novelty detection (when novelty is set to `true`).** The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point. Because of this, the scores obtained via `score\_samples` may differ from the standard LOF scores. The standard LOF scores for the training data is available via the `negative\_outlier\_factor\_` attribute.
+    **Only available for novelty detection (when novelty is set to `true`).** The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point. Because of this, the scores obtained via `score_samples` may differ from the standard LOF scores. The standard LOF scores for the training data is available via the `negative_outlier_factor_` attribute.
    */
   async score_samples(opts: {
     /**
@@ -501,9 +476,8 @@ pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predic
     }
 
     // set up method params
-    await this._py.ex`pms_LocalOutlierFactor_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LocalOutlierFactor_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_score_samples.items() if v is not None}`
 
@@ -517,7 +491,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    The opposite LOF of the training samples. The higher, the more normal. Inliers tend to have a LOF score close to 1 (`negative\_outlier\_factor\_` close to -1), while outliers tend to have a larger LOF score.
+    The opposite LOF of the training samples. The higher, the more normal. Inliers tend to have a LOF score close to 1 (`negative_outlier_factor_` close to -1), while outliers tend to have a larger LOF score.
 
     The local outlier factor (LOF) of a sample captures its supposed ‘degree of abnormality’. It is the average of the ratio of the local reachability density of a sample and those of its k-nearest neighbors.
    */
@@ -546,7 +520,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    The actual number of neighbors used for [`kneighbors`](#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries.
+    The actual number of neighbors used for [`kneighbors`](https://scikit-learn.org/stable/modules/generated/#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries.
    */
   get n_neighbors_(): Promise<number> {
     if (this._isDisposed) {
@@ -573,7 +547,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    Offset used to obtain binary labels from the raw scores. Observations having a negative\_outlier\_factor smaller than `offset\_` are detected as abnormal. The offset is set to -1.5 (inliers score around -1), except when a contamination parameter different than “auto” is provided. In that case, the offset is defined in such a way we obtain the expected number of outliers in training.
+    Offset used to obtain binary labels from the raw scores. Observations having a negative_outlier_factor smaller than `offset_` are detected as abnormal. The offset is set to -1.5 (inliers score around -1), except when a contamination parameter different than “auto” is provided. In that case, the offset is defined in such a way we obtain the expected number of outliers in training.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -654,7 +628,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -681,7 +655,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

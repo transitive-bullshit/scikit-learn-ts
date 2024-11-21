@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This transformer simply performs a SVD on the cross-covariance matrix `X'Y`. It is able to project both the training data `X` and the targets `Y`. The training data `X` is projected on the left singular vectors, while the targets are projected on the right singular vectors.
 
-  Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_decomposition.html#cross-decomposition).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSSVD.html)
  */
@@ -24,7 +24,7 @@ export class PLSSVD {
 
   constructor(opts?: {
     /**
-      The number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+      The number of components to keep. Should be in `\[1, min(n_samples, n_features, n_targets)\]`.
 
       @defaultValue `2`
      */
@@ -84,11 +84,8 @@ except NameError: bridgePLSSVD = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PLSSVD = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'scale': ${this.opts['scale'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PLSSVD = {'n_components': ${this.opts['n_components'] ?? undefined}, 'scale': ${this.opts['scale'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_PLSSVD = {k: v for k, v in ctor_PLSSVD.items() if v is not None}`
 
@@ -128,6 +125,11 @@ ctor_PLSSVD = {k: v for k, v in ctor_PLSSVD.items() if v is not None}`
     /**
       Targets.
      */
+    y?: ArrayLike
+
+    /**
+      Targets.
+     */
     Y?: ArrayLike
   }): Promise<any> {
     if (this._isDisposed) {
@@ -139,11 +141,8 @@ ctor_PLSSVD = {k: v for k, v in ctor_PLSSVD.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSSVD_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSSVD_fit = {k: v for k, v in pms_PLSSVD_fit.items() if v is not None}`
 
@@ -179,11 +178,8 @@ pms_PLSSVD_fit = {k: v for k, v in pms_PLSSVD_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSSVD_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_PLSSVD_fit_transform = {k: v for k, v in pms_PLSSVD_fit_transform.items() if v is not None}`
 
@@ -199,7 +195,7 @@ pms_PLSSVD_fit_transform = {k: v for k, v in pms_PLSSVD_fit_transform.items() if
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -216,9 +212,8 @@ pms_PLSSVD_fit_transform = {k: v for k, v in pms_PLSSVD_fit_transform.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSSVD_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PLSSVD_get_feature_names_out = {k: v for k, v in pms_PLSSVD_get_feature_names_out.items() if v is not None}`
 
@@ -234,11 +229,11 @@ pms_PLSSVD_get_feature_names_out = {k: v for k, v in pms_PLSSVD_get_feature_name
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -251,9 +246,8 @@ pms_PLSSVD_get_feature_names_out = {k: v for k, v in pms_PLSSVD_get_feature_name
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSSVD_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PLSSVD_get_metadata_routing = {k: v for k, v in pms_PLSSVD_get_metadata_routing.items() if v is not None}`
 
@@ -269,13 +263,13 @@ pms_PLSSVD_get_metadata_routing = {k: v for k, v in pms_PLSSVD_get_metadata_rout
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSSVD instance has already been disposed')
@@ -286,9 +280,8 @@ pms_PLSSVD_get_metadata_routing = {k: v for k, v in pms_PLSSVD_get_metadata_rout
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PLSSVD_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PLSSVD_set_output = {k: v for k, v in pms_PLSSVD_set_output.items() if v is not None}`
 
@@ -313,6 +306,11 @@ pms_PLSSVD_set_output = {k: v for k, v in pms_PLSSVD_set_output.items() if v is 
     /**
       Targets.
      */
+    y?: ArrayLike
+
+    /**
+      Targets.
+     */
     Y?: ArrayLike
   }): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -324,11 +322,8 @@ pms_PLSSVD_set_output = {k: v for k, v in pms_PLSSVD_set_output.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PLSSVD_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    await this._py
+      .ex`pms_PLSSVD_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None}
 
 pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is not None}`
 
@@ -342,7 +337,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    The left singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
+    The left singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
    */
   get x_weights_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -365,7 +360,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    The right singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
+    The right singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
    */
   get y_weights_(): Promise<any> {
     if (this._isDisposed) {
@@ -388,7 +383,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -411,7 +406,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

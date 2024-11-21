@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Cluster data using hierarchical density-based clustering.
 
-  HDBSCAN - Hierarchical Density-Based Spatial Clustering of Applications with Noise. Performs [`DBSCAN`](sklearn.cluster.DBSCAN.html#sklearn.cluster.DBSCAN "sklearn.cluster.DBSCAN") over varying epsilon values and integrates the result to find a clustering that gives the best stability over epsilon. This allows HDBSCAN to find clusters of varying densities (unlike [`DBSCAN`](sklearn.cluster.DBSCAN.html#sklearn.cluster.DBSCAN "sklearn.cluster.DBSCAN")), and be more robust to parameter selection. Read more in the [User Guide](../clustering.html#hdbscan).
+  HDBSCAN - Hierarchical Density-Based Spatial Clustering of Applications with Noise. Performs [`DBSCAN`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html#sklearn.cluster.DBSCAN "sklearn.cluster.DBSCAN") over varying epsilon values and integrates the result to find a clustering that gives the best stability over epsilon. This allows HDBSCAN to find clusters of varying densities (unlike [`DBSCAN`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html#sklearn.cluster.DBSCAN "sklearn.cluster.DBSCAN")), and be more robust to parameter selection. Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../clustering.html#hdbscan).
 
-  For an example of how to use HDBSCAN, as well as a comparison to [`DBSCAN`](sklearn.cluster.DBSCAN.html#sklearn.cluster.DBSCAN "sklearn.cluster.DBSCAN"), please see the [plotting demo](../../auto_examples/cluster/plot_hdbscan.html#sphx-glr-auto-examples-cluster-plot-hdbscan-py).
+  For an example of how to use HDBSCAN, as well as a comparison to [`DBSCAN`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html#sklearn.cluster.DBSCAN "sklearn.cluster.DBSCAN"), please see the [plotting demo](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cluster/plot_hdbscan.html#sphx-glr-auto-examples-cluster-plot-hdbscan-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.HDBSCAN.html)
  */
@@ -31,19 +31,19 @@ export class HDBSCAN {
     min_cluster_size?: number
 
     /**
-      The number of samples in a neighborhood for a point to be considered as a core point. This includes the point itself. When `undefined`, defaults to `min\_cluster\_size`.
+      The parameter `k` used to calculate the distance between a point `x_p` and its k-th nearest neighbor. When `undefined`, defaults to `min_cluster_size`.
      */
     min_samples?: number
 
     /**
-      A distance threshold. Clusters below this value will be merged. See [\[5\]](#r6f313792b2b7-5) for more information.
+      A distance threshold. Clusters below this value will be merged. See [\[5\]](https://scikit-learn.org/stable/modules/generated/#r6f313792b2b7-5) for more information.
 
       @defaultValue `0`
      */
     cluster_selection_epsilon?: number
 
     /**
-      A limit to the size of clusters returned by the `"eom"` cluster selection algorithm. There is no limit when `max\_cluster\_size=None`. Has no effect if `cluster\_selection\_method="leaf"`.
+      A limit to the size of clusters returned by the `"eom"` cluster selection algorithm. There is no limit when `max_cluster_size=None`. Has no effect if `cluster_selection_method="leaf"`.
      */
     max_cluster_size?: number
 
@@ -60,30 +60,30 @@ export class HDBSCAN {
     metric_params?: any
 
     /**
-      A distance scaling parameter as used in robust single linkage. See [\[3\]](#r6f313792b2b7-3) for more information.
+      A distance scaling parameter as used in robust single linkage. See [\[3\]](https://scikit-learn.org/stable/modules/generated/#r6f313792b2b7-3) for more information.
 
       @defaultValue `1`
      */
     alpha?: number
 
     /**
-      Exactly which algorithm to use for computing core distances; By default this is set to `"auto"` which attempts to use a [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") tree if possible, otherwise it uses a [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") tree. Both `"KDTree"` and `"BallTree"` algorithms use the [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") estimator.
+      Exactly which algorithm to use for computing core distances; By default this is set to `"auto"` which attempts to use a [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") tree if possible, otherwise it uses a [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") tree. Both `"kd_tree"` and `"ball_tree"` algorithms use the [`NearestNeighbors`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") estimator.
 
-      If the `X` passed during `fit` is sparse or `metric` is invalid for both [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") and [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree"), then it resolves to use the `"brute"` algorithm.
+      If the `X` passed during `fit` is sparse or `metric` is invalid for both [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") and [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree"), then it resolves to use the `"brute"` algorithm.
 
       @defaultValue `'auto'`
      */
-    algorithm?: 'auto' | 'brute' | 'kdtree' | 'balltree'
+    algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
     /**
-      Leaf size for trees responsible for fast nearest neighbour queries when a KDTree or a BallTree are used as core-distance algorithms. A large dataset size and small `leaf\_size` may induce excessive memory usage. If you are running out of memory consider increasing the `leaf\_size` parameter. Ignored for `algorithm="brute"`.
+      Leaf size for trees responsible for fast nearest neighbour queries when a KDTree or a BallTree are used as core-distance algorithms. A large dataset size and small `leaf_size` may induce excessive memory usage. If you are running out of memory consider increasing the `leaf_size` parameter. Ignored for `algorithm="brute"`.
 
       @defaultValue `40`
      */
     leaf_size?: number
 
     /**
-      Number of jobs to run in parallel to calculate distances. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel to calculate distances. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -107,7 +107,7 @@ export class HDBSCAN {
     store_centers?: string
 
     /**
-      If `copy=True` then any time an in-place modifications would be made that would overwrite data passed to [fit](../../glossary.html#term-fit), a copy will first be made, guaranteeing that the original data will be unchanged. Currently, it only applies when `metric="precomputed"`, when passing a dense array or a CSR sparse matrix and when `algorithm="brute"`.
+      If `copy=True` then any time an in-place modifications would be made that would overwrite data passed to [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit), a copy will first be made, guaranteeing that the original data will be unchanged. Currently, it only applies when `metric="precomputed"`, when passing a dense array or a CSR sparse matrix and when `algorithm="brute"`.
 
       @defaultValue `false`
      */
@@ -153,27 +153,8 @@ except NameError: bridgeHDBSCAN = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_HDBSCAN = {'min_cluster_size': ${
-      this.opts['min_cluster_size'] ?? undefined
-    }, 'min_samples': ${
-      this.opts['min_samples'] ?? undefined
-    }, 'cluster_selection_epsilon': ${
-      this.opts['cluster_selection_epsilon'] ?? undefined
-    }, 'max_cluster_size': ${
-      this.opts['max_cluster_size'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'cluster_selection_method': ${
-      this.opts['cluster_selection_method'] ?? undefined
-    }, 'allow_single_cluster': ${
-      this.opts['allow_single_cluster'] ?? undefined
-    }, 'store_centers': ${this.opts['store_centers'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_HDBSCAN = {'min_cluster_size': ${this.opts['min_cluster_size'] ?? undefined}, 'min_samples': ${this.opts['min_samples'] ?? undefined}, 'cluster_selection_epsilon': ${this.opts['cluster_selection_epsilon'] ?? undefined}, 'max_cluster_size': ${this.opts['max_cluster_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'cluster_selection_method': ${this.opts['cluster_selection_method'] ?? undefined}, 'allow_single_cluster': ${this.opts['allow_single_cluster'] ?? undefined}, 'store_centers': ${this.opts['store_centers'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_HDBSCAN = {k: v for k, v in ctor_HDBSCAN.items() if v is not None}`
 
@@ -204,11 +185,11 @@ ctor_HDBSCAN = {k: v for k, v in ctor_HDBSCAN.items() if v is not None}`
   /**
     Return clustering given by DBSCAN without border points.
 
-    Return clustering that would be equivalent to running DBSCAN\* for a particular cut\_distance (or epsilon) DBSCAN\* can be thought of as DBSCAN without the border points. As such these results may differ slightly from `cluster.DBSCAN` due to the difference in implementation over the non-core points.
+    Return clustering that would be equivalent to running DBSCAN\* for a particular cut_distance (or epsilon) DBSCAN\* can be thought of as DBSCAN without the border points. As such these results may differ slightly from `cluster.DBSCAN` due to the difference in implementation over the non-core points.
 
     This can also be thought of as a flat clustering derived from constant height cut through the single linkage tree.
 
-    This represents the result of selecting a cut value for robust single linkage clustering. The `min\_cluster\_size` allows the flat clustering to declare noise points (and cluster smaller than `min\_cluster\_size`).
+    This represents the result of selecting a cut value for robust single linkage clustering. The `min_cluster_size` allows the flat clustering to declare noise points (and cluster smaller than `min_cluster_size`).
    */
   async dbscan_clustering(opts: {
     /**
@@ -232,9 +213,8 @@ ctor_HDBSCAN = {k: v for k, v in ctor_HDBSCAN.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_dbscan_clustering = {'cut_distance': ${
-      opts['cut_distance'] ?? undefined
-    }, 'min_cluster_size': ${opts['min_cluster_size'] ?? undefined}}
+    await this._py
+      .ex`pms_HDBSCAN_dbscan_clustering = {'cut_distance': ${opts['cut_distance'] ?? undefined}, 'min_cluster_size': ${opts['min_cluster_size'] ?? undefined}}
 
 pms_HDBSCAN_dbscan_clustering = {k: v for k, v in pms_HDBSCAN_dbscan_clustering.items() if v is not None}`
 
@@ -270,9 +250,8 @@ pms_HDBSCAN_dbscan_clustering = {k: v for k, v in pms_HDBSCAN_dbscan_clustering.
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_HDBSCAN_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_HDBSCAN_fit = {k: v for k, v in pms_HDBSCAN_fit.items() if v is not None}`
 
@@ -308,9 +287,8 @@ pms_HDBSCAN_fit = {k: v for k, v in pms_HDBSCAN_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_HDBSCAN_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_HDBSCAN_fit_predict = {k: v for k, v in pms_HDBSCAN_fit_predict.items() if v is not None}`
 
@@ -326,11 +304,11 @@ pms_HDBSCAN_fit_predict = {k: v for k, v in pms_HDBSCAN_fit_predict.items() if v
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -343,9 +321,8 @@ pms_HDBSCAN_fit_predict = {k: v for k, v in pms_HDBSCAN_fit_predict.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_HDBSCAN_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_HDBSCAN_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_HDBSCAN_get_metadata_routing = {k: v for k, v in pms_HDBSCAN_get_metadata_routing.items() if v is not None}`
 
@@ -359,7 +336,7 @@ pms_HDBSCAN_get_metadata_routing = {k: v for k, v in pms_HDBSCAN_get_metadata_ro
   }
 
   /**
-    Cluster labels for each point in the dataset given to [fit](../../glossary.html#term-fit). Outliers are labeled as follows:
+    Cluster labels for each point in the dataset given to [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Outliers are labeled as follows:
    */
   get labels_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -407,7 +384,7 @@ pms_HDBSCAN_get_metadata_routing = {k: v for k, v in pms_HDBSCAN_get_metadata_ro
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -432,7 +409,7 @@ pms_HDBSCAN_get_metadata_routing = {k: v for k, v in pms_HDBSCAN_get_metadata_ro
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -459,7 +436,7 @@ pms_HDBSCAN_get_metadata_routing = {k: v for k, v in pms_HDBSCAN_get_metadata_ro
   /**
     A collection containing the centroid of each cluster calculated under the standard euclidean metric. The centroids may fall “outside” their respective clusters if the clusters themselves are non-convex.
 
-    Note that `n\_clusters` only counts non-outlier clusters. That is to say, the `\-1, \-2, \-3` labels for the outlier clusters are excluded.
+    Note that `n_clusters` only counts non-outlier clusters. That is to say, the `\-1, \-2, \-3` labels for the outlier clusters are excluded.
    */
   get centroids_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -484,7 +461,7 @@ pms_HDBSCAN_get_metadata_routing = {k: v for k, v in pms_HDBSCAN_get_metadata_ro
   /**
     A collection containing the medoid of each cluster calculated under the whichever metric was passed to the `metric` parameter. The medoids are points in the original cluster which minimize the average distance to all other points in that cluster under the chosen metric. These can be thought of as the result of projecting the `metric`\-based centroid back onto the cluster.
 
-    Note that `n\_clusters` only counts non-outlier clusters. That is to say, the `\-1, \-2, \-3` labels for the outlier clusters are excluded.
+    Note that `n_clusters` only counts non-outlier clusters. That is to say, the `\-1, \-2, \-3` labels for the outlier clusters are excluded.
    */
   get medoids_(): Promise<NDArray[]> {
     if (this._isDisposed) {

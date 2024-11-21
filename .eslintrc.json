@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": ["@fisch0920/eslint-config/node"],
+  "ignorePatterns": ["packages/sklearn/src/generated"],
+  "rules": {
+    "unicorn/no-array-reduce": "off",
+    "unicorn/filename-case": "off",
+    "array-callback-return": "off"
+  }
+}

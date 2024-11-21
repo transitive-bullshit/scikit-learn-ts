@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   K-Means clustering.
 
-  Read more in the [User Guide](../clustering.html#k-means).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../clustering.html#k-means).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
  */
@@ -24,6 +24,8 @@ export class KMeans {
     /**
       The number of clusters to form as well as the number of centroids to generate.
 
+      For an example of how to choose an optimal value for `n_clusters` refer to [Selecting the number of clusters with silhouette analysis on KMeans clustering](https://scikit-learn.org/stable/modules/generated/../../auto_examples/cluster/plot_kmeans_silhouette_analysis.html#sphx-glr-auto-examples-cluster-plot-kmeans-silhouette-analysis-py).
+
       @defaultValue `8`
      */
     n_clusters?: number
@@ -36,11 +38,11 @@ export class KMeans {
     init?: 'k-means++' | 'random' | ArrayLike[]
 
     /**
-      Number of times the k-means algorithm is run with different centroid seeds. The final results is the best output of `n\_init` consecutive runs in terms of inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).
+      Number of times the k-means algorithm is run with different centroid seeds. The final results is the best output of `n_init` consecutive runs in terms of inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](https://scikit-learn.org/stable/modules/generated/../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).
 
-      When `n\_init='auto'`, the number of runs depends on the value of init: 10 if using `init='random'` or `init` is a callable; 1 if using `init='k-means++'` or `init` is an array-like.
+      When `n_init='auto'`, the number of runs depends on the value of init: 10 if using `init='random'` or `init` is a callable; 1 if using `init='k-means++'` or `init` is an array-like.
 
-      @defaultValue `10`
+      @defaultValue `'auto'`
      */
     n_init?: 'auto' | number
 
@@ -66,25 +68,23 @@ export class KMeans {
     verbose?: number
 
     /**
-      Determines random number generation for centroid initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
+      Determines random number generation for centroid initialization. Use an int to make the randomness deterministic. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      When pre-computing distances it is more numerically accurate to center the data first. If copy\_x is `true` (default), then the original data is not modified. If `false`, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy\_x is `false`. If the original data is sparse, but not in CSR format, a copy will be made even if copy\_x is `false`.
+      When pre-computing distances it is more numerically accurate to center the data first. If copy_x is `true` (default), then the original data is not modified. If `false`, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy_x is `false`. If the original data is sparse, but not in CSR format, a copy will be made even if copy_x is `false`.
 
       @defaultValue `true`
      */
     copy_x?: boolean
 
     /**
-      K-means algorithm to use. The classical EM-style algorithm is `"lloyd"`. The `"elkan"` variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape `(n\_samples, n\_clusters)`.
-
-      `"auto"` and `"full"` are deprecated and they will be removed in Scikit-Learn 1.3. They are both aliases for `"lloyd"`.
+      K-means algorithm to use. The classical EM-style algorithm is `"lloyd"`. The `"elkan"` variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape `(n_samples, n_clusters)`.
 
       @defaultValue `'lloyd'`
      */
-    algorithm?: 'lloyd' | 'elkan' | 'auto' | 'full'
+    algorithm?: 'lloyd' | 'elkan'
   }) {
     this.id = `KMeans${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -126,17 +126,8 @@ except NameError: bridgeKMeans = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KMeans = {'n_clusters': ${
-      this.opts['n_clusters'] ?? undefined
-    }, 'init': np.array(${this.opts['init'] ?? undefined}) if ${
-      this.opts['init'] !== undefined
-    } else None, 'n_init': ${this.opts['n_init'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'copy_x': ${
-      this.opts['copy_x'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}}
+    await this._py
+      .ex`ctor_KMeans = {'n_clusters': ${this.opts['n_clusters'] ?? undefined}, 'init': np.array(${this.opts['init'] ?? undefined}) if ${this.opts['init'] !== undefined} else None, 'n_init': ${this.opts['n_init'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'copy_x': ${this.opts['copy_x'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}}
 
 ctor_KMeans = {k: v for k, v in ctor_KMeans.items() if v is not None}`
 
@@ -179,7 +170,7 @@ ctor_KMeans = {k: v for k, v in ctor_KMeans.items() if v is not None}`
     y?: any
 
     /**
-      The weights for each observation in X. If `undefined`, all observations are assigned equal weight. `sample\_weight` is not used during initialization if `init` is a callable or a user provided array.
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight. `sample_weight` is not used during initialization if `init` is a callable or a user provided array.
      */
     sample_weight?: ArrayLike
   }): Promise<any> {
@@ -192,13 +183,8 @@ ctor_KMeans = {k: v for k, v in ctor_KMeans.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_fit = {k: v for k, v in pms_KMeans_fit.items() if v is not None}`
 
@@ -241,13 +227,8 @@ pms_KMeans_fit = {k: v for k, v in pms_KMeans_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_fit_predict = {k: v for k, v in pms_KMeans_fit_predict.items() if v is not None}`
 
@@ -290,13 +271,8 @@ pms_KMeans_fit_predict = {k: v for k, v in pms_KMeans_fit_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_fit_transform = {k: v for k, v in pms_KMeans_fit_transform.items() if v is not None}`
 
@@ -312,7 +288,7 @@ pms_KMeans_fit_transform = {k: v for k, v in pms_KMeans_fit_transform.items() if
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -329,9 +305,8 @@ pms_KMeans_fit_transform = {k: v for k, v in pms_KMeans_fit_transform.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_KMeans_get_feature_names_out = {k: v for k, v in pms_KMeans_get_feature_names_out.items() if v is not None}`
 
@@ -347,11 +322,11 @@ pms_KMeans_get_feature_names_out = {k: v for k, v in pms_KMeans_get_feature_name
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -364,9 +339,8 @@ pms_KMeans_get_feature_names_out = {k: v for k, v in pms_KMeans_get_feature_name
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KMeans_get_metadata_routing = {k: v for k, v in pms_KMeans_get_metadata_routing.items() if v is not None}`
 
@@ -382,18 +356,13 @@ pms_KMeans_get_metadata_routing = {k: v for k, v in pms_KMeans_get_metadata_rout
   /**
     Predict the closest cluster each sample in X belongs to.
 
-    In the vector quantization literature, `cluster\_centers\_` is called the code book and each value returned by `predict` is the index of the closest code in the code book.
+    In the vector quantization literature, `cluster_centers_` is called the code book and each value returned by `predict` is the index of the closest code in the code book.
    */
   async predict(opts: {
     /**
       New data to predict.
      */
     X?: ArrayLike | SparseMatrix[]
-
-    /**
-      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-     */
-    sample_weight?: ArrayLike
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This KMeans instance has already been disposed')
@@ -404,11 +373,8 @@ pms_KMeans_get_metadata_routing = {k: v for k, v in pms_KMeans_get_metadata_rout
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_KMeans_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KMeans_predict = {k: v for k, v in pms_KMeans_predict.items() if v is not None}`
 
@@ -449,13 +415,8 @@ pms_KMeans_predict = {k: v for k, v in pms_KMeans_predict.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KMeans_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KMeans_score = {k: v for k, v in pms_KMeans_score.items() if v is not None}`
 
@@ -471,13 +432,13 @@ pms_KMeans_score = {k: v for k, v in pms_KMeans_score.items() if v is not None}`
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -490,9 +451,8 @@ pms_KMeans_score = {k: v for k, v in pms_KMeans_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KMeans_set_fit_request = {k: v for k, v in pms_KMeans_set_fit_request.items() if v is not None}`
 
@@ -508,13 +468,13 @@ pms_KMeans_set_fit_request = {k: v for k, v in pms_KMeans_set_fit_request.items(
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KMeans instance has already been disposed')
@@ -525,9 +485,8 @@ pms_KMeans_set_fit_request = {k: v for k, v in pms_KMeans_set_fit_request.items(
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_KMeans_set_output = {k: v for k, v in pms_KMeans_set_output.items() if v is not None}`
 
@@ -541,52 +500,15 @@ pms_KMeans_set_output = {k: v for k, v in pms_KMeans_set_output.items() if v is 
   }
 
   /**
-    Request metadata passed to the `predict` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_predict_request(opts: {
-    /**
-      Metadata routing for `sample\_weight` parameter in `predict`.
-     */
-    sample_weight?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This KMeans instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('KMeans must call init() before set_predict_request()')
-    }
-
-    // set up method params
-    await this._py.ex`pms_KMeans_set_predict_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
-
-pms_KMeans_set_predict_request = {k: v for k, v in pms_KMeans_set_predict_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_KMeans_set_predict_request = bridgeKMeans[${this.id}].set_predict_request(**pms_KMeans_set_predict_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_KMeans_set_predict_request.tolist() if hasattr(res_KMeans_set_predict_request, 'tolist') else res_KMeans_set_predict_request`
-  }
-
-  /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -599,9 +521,8 @@ pms_KMeans_set_predict_request = {k: v for k, v in pms_KMeans_set_predict_reques
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KMeans_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KMeans_set_score_request = {k: v for k, v in pms_KMeans_set_score_request.items() if v is not None}`
 
@@ -634,9 +555,8 @@ pms_KMeans_set_score_request = {k: v for k, v in pms_KMeans_set_score_request.it
     }
 
     // set up method params
-    await this._py.ex`pms_KMeans_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KMeans_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KMeans_transform = {k: v for k, v in pms_KMeans_transform.items() if v is not None}`
 
@@ -650,7 +570,7 @@ pms_KMeans_transform = {k: v for k, v in pms_KMeans_transform.items() if v is no
   }
 
   /**
-    Coordinates of cluster centers. If the algorithm stops before fully converging (see `tol` and `max\_iter`), these will not be consistent with `labels\_`.
+    Coordinates of cluster centers. If the algorithm stops before fully converging (see `tol` and `max_iter`), these will not be consistent with `labels_`.
    */
   get cluster_centers_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -742,7 +662,7 @@ pms_KMeans_transform = {k: v for k, v in pms_KMeans_transform.items() if v is no
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -765,7 +685,7 @@ pms_KMeans_transform = {k: v for k, v in pms_KMeans_transform.items() if v is no
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

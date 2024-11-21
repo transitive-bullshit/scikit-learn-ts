@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Theil-Sen Estimator: robust multivariate regression model.
 
-  The algorithm calculates least square solutions on subsets with size n\_subsamples of the samples in X. Any value of n\_subsamples between the number of features and samples leads to an estimator with a compromise between robustness and efficiency. Since the number of least square solutions is “n\_samples choose n\_subsamples”, it can be extremely large and can therefore be limited with max\_subpopulation. If this limit is reached, the subsets are chosen randomly. In a final step, the spatial median (or L1 median) is calculated of all least square solutions.
+  The algorithm calculates least square solutions on subsets with size n_subsamples of the samples in X. Any value of n_subsamples between the number of features and samples leads to an estimator with a compromise between robustness and efficiency. Since the number of least square solutions is “n_samples choose n_subsamples”, it can be extremely large and can therefore be limited with max_subpopulation. If this limit is reached, the subsets are chosen randomly. In a final step, the spatial median (or L1 median) is calculated of all least square solutions.
 
-  Read more in the [User Guide](../linear_model.html#theil-sen-regression).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#theil-sen-regression).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.TheilSenRegressor.html)
  */
@@ -38,14 +38,14 @@ export class TheilSenRegressor {
     copy_X?: boolean
 
     /**
-      Instead of computing with a set of cardinality ‘n choose k’, where n is the number of samples and k is the number of subsamples (at least number of features), consider only a stochastic subpopulation of a given maximal size if ‘n choose k’ is larger than max\_subpopulation. For other than small problem sizes this parameter will determine memory usage and runtime if n\_subsamples is not changed. Note that the data type should be int but floats such as 1e4 can be accepted too.
+      Instead of computing with a set of cardinality ‘n choose k’, where n is the number of samples and k is the number of subsamples (at least number of features), consider only a stochastic subpopulation of a given maximal size if ‘n choose k’ is larger than max_subpopulation. For other than small problem sizes this parameter will determine memory usage and runtime if n_subsamples is not changed. Note that the data type should be int but floats such as 1e4 can be accepted too.
 
       @defaultValue `10000`
      */
     max_subpopulation?: number
 
     /**
-      Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit\_intercept=`true`) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If `undefined`, take the minimum number of subsamples leading to maximal robustness. If n\_subsamples is set to n\_samples, Theil-Sen is identical to least squares.
+      Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit_intercept=`true`) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If `undefined`, take the minimum number of subsamples leading to maximal robustness. If n_subsamples is set to n_samples, Theil-Sen is identical to least squares.
      */
     n_subsamples?: number
 
@@ -64,12 +64,12 @@ export class TheilSenRegressor {
     tol?: number
 
     /**
-      A random number generator instance to define the state of the random permutations generator. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      A random number generator instance to define the state of the random permutations generator. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -122,17 +122,8 @@ except NameError: bridgeTheilSenRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_TheilSenRegressor = {'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_subpopulation': ${
-      this.opts['max_subpopulation'] ?? undefined
-    }, 'n_subsamples': ${this.opts['n_subsamples'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_TheilSenRegressor = {'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_subpopulation': ${this.opts['max_subpopulation'] ?? undefined}, 'n_subsamples': ${this.opts['n_subsamples'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_TheilSenRegressor = {k: v for k, v in ctor_TheilSenRegressor.items() if v is not None}`
 
@@ -186,11 +177,8 @@ ctor_TheilSenRegressor = {k: v for k, v in ctor_TheilSenRegressor.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_TheilSenRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_TheilSenRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_TheilSenRegressor_fit = {k: v for k, v in pms_TheilSenRegressor_fit.items() if v is not None}`
 
@@ -206,11 +194,11 @@ pms_TheilSenRegressor_fit = {k: v for k, v in pms_TheilSenRegressor_fit.items() 
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -228,9 +216,7 @@ pms_TheilSenRegressor_fit = {k: v for k, v in pms_TheilSenRegressor_fit.items() 
 
     // set up method params
     await this._py
-      .ex`pms_TheilSenRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_TheilSenRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_TheilSenRegressor_get_metadata_routing = {k: v for k, v in pms_TheilSenRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -263,9 +249,8 @@ pms_TheilSenRegressor_get_metadata_routing = {k: v for k, v in pms_TheilSenRegre
     }
 
     // set up method params
-    await this._py.ex`pms_TheilSenRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_TheilSenRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_TheilSenRegressor_predict = {k: v for k, v in pms_TheilSenRegressor_predict.items() if v is not None}`
 
@@ -281,11 +266,11 @@ pms_TheilSenRegressor_predict = {k: v for k, v in pms_TheilSenRegressor_predict.
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -310,13 +295,8 @@ pms_TheilSenRegressor_predict = {k: v for k, v in pms_TheilSenRegressor_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_TheilSenRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_TheilSenRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_TheilSenRegressor_score = {k: v for k, v in pms_TheilSenRegressor_score.items() if v is not None}`
 
@@ -332,13 +312,13 @@ pms_TheilSenRegressor_score = {k: v for k, v in pms_TheilSenRegressor_score.item
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -356,9 +336,7 @@ pms_TheilSenRegressor_score = {k: v for k, v in pms_TheilSenRegressor_score.item
 
     // set up method params
     await this._py
-      .ex`pms_TheilSenRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_TheilSenRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_TheilSenRegressor_set_score_request = {k: v for k, v in pms_TheilSenRegressor_set_score_request.items() if v is not None}`
 
@@ -507,7 +485,7 @@ pms_TheilSenRegressor_set_score_request = {k: v for k, v in pms_TheilSenRegresso
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -534,7 +512,7 @@ pms_TheilSenRegressor_set_score_request = {k: v for k, v in pms_TheilSenRegresso
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -10,11 +10,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Similar to SVR with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.
 
-  The main differences between [`LinearSVR`](#sklearn.svm.LinearSVR "sklearn.svm.LinearSVR") and [`SVR`](sklearn.svm.SVR.html#sklearn.svm.SVR "sklearn.svm.SVR") lie in the loss function used by default, and in the handling of intercept regularization between those two implementations.
+  The main differences between [`LinearSVR`](https://scikit-learn.org/stable/modules/generated/#sklearn.svm.LinearSVR "sklearn.svm.LinearSVR") and [`SVR`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html#sklearn.svm.SVR "sklearn.svm.SVR") lie in the loss function used by default, and in the handling of intercept regularization between those two implementations.
 
   This class supports both dense and sparse input.
 
-  Read more in the [User Guide](../svm.html#svm-regression).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#svm-regression).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html)
  */
@@ -49,30 +49,30 @@ export class LinearSVR {
     C?: number
 
     /**
-      Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the L1 loss, while the squared epsilon-insensitive loss (‘squared\_epsilon\_insensitive’) is the L2 loss.
+      Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the L1 loss, while the squared epsilon-insensitive loss (‘squared_epsilon_insensitive’) is the L2 loss.
 
       @defaultValue `'epsilon_insensitive'`
      */
     loss?: 'epsilon_insensitive' | 'squared_epsilon_insensitive'
 
     /**
-      Whether or not to fit an intercept. If set to `true`, the feature vector is extended to include an intercept term: `\[x\_1, ..., x\_n, 1\]`, where 1 corresponds to the intercept. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be already centered).
+      Whether or not to fit an intercept. If set to `true`, the feature vector is extended to include an intercept term: `\[x_1, ..., x_n, 1\]`, where 1 corresponds to the intercept. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be already centered).
 
       @defaultValue `true`
      */
     fit_intercept?: boolean
 
     /**
-      When `fit\_intercept` is `true`, the instance vector x becomes `\[x\_1, ..., x\_n, intercept\_scaling\]`, i.e. a “synthetic” feature with a constant value equal to `intercept\_scaling` is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight. Note that liblinear internally penalizes the intercept, treating it like any other term in the feature vector. To reduce the impact of the regularization on the intercept, the `intercept\_scaling` parameter can be set to a value greater than 1; the higher the value of `intercept\_scaling`, the lower the impact of regularization on it. Then, the weights become `\[w\_x\_1, ..., w\_x\_n, w\_intercept\*intercept\_scaling\]`, where `w\_x\_1, ..., w\_x\_n` represent the feature weights and the intercept weight is scaled by `intercept\_scaling`. This scaling allows the intercept term to have a different regularization behavior compared to the other features.
+      When `fit_intercept` is `true`, the instance vector x becomes `\[x_1, ..., x_n, intercept_scaling\]`, i.e. a “synthetic” feature with a constant value equal to `intercept_scaling` is appended to the instance vector. The intercept becomes intercept_scaling \* synthetic feature weight. Note that liblinear internally penalizes the intercept, treating it like any other term in the feature vector. To reduce the impact of the regularization on the intercept, the `intercept_scaling` parameter can be set to a value greater than 1; the higher the value of `intercept_scaling`, the lower the impact of regularization on it. Then, the weights become `\[w_x_1, ..., w_x_n, w_intercept\*intercept_scaling\]`, where `w_x_1, ..., w_x_n` represent the feature weights and the intercept weight is scaled by `intercept_scaling`. This scaling allows the intercept term to have a different regularization behavior compared to the other features.
 
       @defaultValue `1`
      */
     intercept_scaling?: number
 
     /**
-      Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features. `dual="auto"` will choose the value of the parameter automatically, based on the values of `n\_samples`, `n\_features` and `loss`. If `n\_samples` < `n\_features` and optimizer supports chosen `loss`, then dual will be set to `true`, otherwise it will be set to `false`.
+      Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n_samples > n_features. `dual="auto"` will choose the value of the parameter automatically, based on the values of `n_samples`, `n_features` and `loss`. If `n_samples` < `n_features` and optimizer supports chosen `loss`, then dual will be set to `true`, otherwise it will be set to `false`.
 
-      @defaultValue `true`
+      @defaultValue `'auto'`
      */
     dual?: 'auto' | boolean
 
@@ -84,7 +84,7 @@ export class LinearSVR {
     verbose?: number
 
     /**
-      Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -135,19 +135,8 @@ except NameError: bridgeLinearSVR = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LinearSVR = {'epsilon': ${
-      this.opts['epsilon'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${
-      this.opts['C'] ?? undefined
-    }, 'loss': ${this.opts['loss'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'intercept_scaling': ${
-      this.opts['intercept_scaling'] ?? undefined
-    }, 'dual': ${this.opts['dual'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LinearSVR = {'epsilon': ${this.opts['epsilon'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'C': ${this.opts['C'] ?? undefined}, 'loss': ${this.opts['loss'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'intercept_scaling': ${this.opts['intercept_scaling'] ?? undefined}, 'dual': ${this.opts['dual'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_LinearSVR = {k: v for k, v in ctor_LinearSVR.items() if v is not None}`
 
@@ -180,7 +169,7 @@ ctor_LinearSVR = {k: v for k, v in ctor_LinearSVR.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -203,13 +192,8 @@ ctor_LinearSVR = {k: v for k, v in ctor_LinearSVR.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVR_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearSVR_fit = {k: v for k, v in pms_LinearSVR_fit.items() if v is not None}`
 
@@ -225,11 +209,11 @@ pms_LinearSVR_fit = {k: v for k, v in pms_LinearSVR_fit.items() if v is not None
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -244,9 +228,8 @@ pms_LinearSVR_fit = {k: v for k, v in pms_LinearSVR_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVR_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LinearSVR_get_metadata_routing = {k: v for k, v in pms_LinearSVR_get_metadata_routing.items() if v is not None}`
 
@@ -293,11 +276,11 @@ pms_LinearSVR_predict = {k: v for k, v in pms_LinearSVR_predict.items() if v is 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -320,13 +303,8 @@ pms_LinearSVR_predict = {k: v for k, v in pms_LinearSVR_predict.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearSVR_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not None}`
 
@@ -342,13 +320,13 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -361,9 +339,8 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVR_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearSVR_set_fit_request = {k: v for k, v in pms_LinearSVR_set_fit_request.items() if v is not None}`
 
@@ -379,13 +356,13 @@ pms_LinearSVR_set_fit_request = {k: v for k, v in pms_LinearSVR_set_fit_request.
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -398,9 +375,8 @@ pms_LinearSVR_set_fit_request = {k: v for k, v in pms_LinearSVR_set_fit_request.
     }
 
     // set up method params
-    await this._py.ex`pms_LinearSVR_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LinearSVR_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearSVR_set_score_request = {k: v for k, v in pms_LinearSVR_set_score_request.items() if v is not None}`
 
@@ -416,7 +392,7 @@ pms_LinearSVR_set_score_request = {k: v for k, v in pms_LinearSVR_set_score_requ
   /**
     Weights assigned to the features (coefficients in the primal problem).
 
-    `coef\_` is a readonly property derived from `raw\_coef\_` that follows the internal memory layout of liblinear.
+    `coef_` is a readonly property derived from `raw_coef_` that follows the internal memory layout of liblinear.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -462,7 +438,7 @@ pms_LinearSVR_set_score_request = {k: v for k, v in pms_LinearSVR_set_score_requ
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -487,7 +463,7 @@ pms_LinearSVR_set_score_request = {k: v for k, v in pms_LinearSVR_set_score_requ
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

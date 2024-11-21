@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Calibration curve (also known as reliability diagram) visualization.
 
-  It is recommended to use [`from\_estimator`](#sklearn.calibration.CalibrationDisplay.from_estimator "sklearn.calibration.CalibrationDisplay.from_estimator") or [`from\_predictions`](#sklearn.calibration.CalibrationDisplay.from_predictions "sklearn.calibration.CalibrationDisplay.from_predictions") to create a `CalibrationDisplay`. All parameters are stored as attributes.
+  It is recommended to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.calibration.CalibrationDisplay.from_estimator "sklearn.calibration.CalibrationDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.calibration.CalibrationDisplay.from_predictions "sklearn.calibration.CalibrationDisplay.from_predictions") to create a `CalibrationDisplay`. All parameters are stored as attributes.
 
-  Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
+  Read more about calibration in the [User Guide](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
+
+  For an example on how to use the visualization, see [Probability Calibration curves](https://scikit-learn.org/stable/modules/generated/../../auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html)
  */
@@ -44,7 +46,7 @@ export class CalibrationDisplay {
     estimator_name?: string
 
     /**
-      The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+      The positive class when computing the calibration curve. By default, `pos_label` is set to `estimators.classes_\[1\]` when using `from_estimator` and set to 1 when using `from_predictions`.
      */
     pos_label?: number | boolean | string
   }) {
@@ -92,19 +94,8 @@ except NameError: bridgeCalibrationDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_CalibrationDisplay = {'prob_true': np.array(${
-      this.opts['prob_true'] ?? undefined
-    }) if ${
-      this.opts['prob_true'] !== undefined
-    } else None, 'prob_pred': np.array(${
-      this.opts['prob_pred'] ?? undefined
-    }) if ${
-      this.opts['prob_pred'] !== undefined
-    } else None, 'y_prob': np.array(${this.opts['y_prob'] ?? undefined}) if ${
-      this.opts['y_prob'] !== undefined
-    } else None, 'estimator_name': ${
-      this.opts['estimator_name'] ?? undefined
-    }, 'pos_label': ${this.opts['pos_label'] ?? undefined}}
+    await this._py
+      .ex`ctor_CalibrationDisplay = {'prob_true': np.array(${this.opts['prob_true'] ?? undefined}) if ${this.opts['prob_true'] !== undefined} else None, 'prob_pred': np.array(${this.opts['prob_pred'] ?? undefined}) if ${this.opts['prob_pred'] !== undefined} else None, 'y_prob': np.array(${this.opts['y_prob'] ?? undefined}) if ${this.opts['y_prob'] !== undefined} else None, 'estimator_name': ${this.opts['estimator_name'] ?? undefined}, 'pos_label': ${this.opts['pos_label'] ?? undefined}}
 
 ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v is not None}`
 
@@ -138,13 +129,13 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
 
     A calibration curve, also known as a reliability diagram, uses inputs from a binary classifier and plots the average predicted probability for each bin against the fraction of positive classes, on the y-axis.
 
-    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.1)").
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
 
-    Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
+    Read more about calibration in the [User Guide](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_estimator(opts: {
     /**
-      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict\_proba](../../glossary.html#term-predict_proba) method.
+      Fitted classifier or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) method.
      */
     estimator?: any
 
@@ -173,7 +164,7 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
     strategy?: 'uniform' | 'quantile'
 
     /**
-      The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+      The positive class when computing the calibration curve. By default, `estimators.classes_\[1\]` is considered as the positive class.
      */
     pos_label?: number | boolean | string
 
@@ -195,7 +186,7 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
     ax?: any
 
     /**
-      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.1)").
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
      */
     kwargs?: any
   }): Promise<any> {
@@ -212,19 +203,8 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_CalibrationDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'n_bins': ${opts['n_bins'] ?? undefined}, 'strategy': ${
-      opts['strategy'] ?? undefined
-    }, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${
-      opts['name'] ?? undefined
-    }, 'ref_line': ${opts['ref_line'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'kwargs': ${opts['kwargs'] ?? undefined}}
+    await this._py
+      .ex`pms_CalibrationDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'n_bins': ${opts['n_bins'] ?? undefined}, 'strategy': ${opts['strategy'] ?? undefined}, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ref_line': ${opts['ref_line'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay_from_estimator.items() if v is not None}`
 
@@ -242,9 +222,9 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
 
     Calibration curve, also known as reliability diagram, uses inputs from a binary classifier and plots the average predicted probability for each bin against the fraction of positive classes, on the y-axis.
 
-    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.1)").
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
 
-    Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
+    Read more about calibration in the [User Guide](https://scikit-learn.org/stable/modules/generated/../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_predictions(opts: {
     /**
@@ -272,7 +252,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
     strategy?: 'uniform' | 'quantile'
 
     /**
-      The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+      The positive class when computing the calibration curve. By default `pos_label` is set to 1.
      */
     pos_label?: number | boolean | string
 
@@ -294,7 +274,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
     ax?: any
 
     /**
-      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.1)").
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
      */
     kwargs?: any
   }): Promise<any> {
@@ -312,19 +292,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
 
     // set up method params
     await this._py
-      .ex`pms_CalibrationDisplay_from_predictions = {'y_true': np.array(${
-      opts['y_true'] ?? undefined
-    }) if ${opts['y_true'] !== undefined} else None, 'y_prob': np.array(${
-      opts['y_prob'] ?? undefined
-    }) if ${opts['y_prob'] !== undefined} else None, 'n_bins': ${
-      opts['n_bins'] ?? undefined
-    }, 'strategy': ${opts['strategy'] ?? undefined}, 'pos_label': ${
-      opts['pos_label'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'ref_line': ${
-      opts['ref_line'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+      .ex`pms_CalibrationDisplay_from_predictions = {'y_true': np.array(${opts['y_true'] ?? undefined}) if ${opts['y_true'] !== undefined} else None, 'y_prob': np.array(${opts['y_prob'] ?? undefined}) if ${opts['y_prob'] !== undefined} else None, 'n_bins': ${opts['n_bins'] ?? undefined}, 'strategy': ${opts['strategy'] ?? undefined}, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ref_line': ${opts['ref_line'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDisplay_from_predictions.items() if v is not None}`
 
@@ -340,7 +308,7 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
   /**
     Plot visualization.
 
-    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.1)").
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
    */
   async plot(opts: {
     /**
@@ -349,7 +317,7 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
     ax?: any
 
     /**
-      Name for labeling curve. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
+      Name for labeling curve. If `undefined`, use `estimator_name` if not `undefined`, otherwise no labeling is shown.
      */
     name?: string
 
@@ -361,7 +329,7 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
     ref_line?: boolean
 
     /**
-      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.1)").
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.9.2)").
      */
     kwargs?: any
   }): Promise<any> {
@@ -376,11 +344,8 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
     }
 
     // set up method params
-    await this._py.ex`pms_CalibrationDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'ref_line': ${
-      opts['ref_line'] ?? undefined
-    }, 'kwargs': ${opts['kwargs'] ?? undefined}}
+    await this._py
+      .ex`pms_CalibrationDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ref_line': ${opts['ref_line'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_CalibrationDisplay_plot = {k: v for k, v in pms_CalibrationDisplay_plot.items() if v is not None}`
 

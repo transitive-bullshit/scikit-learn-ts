@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This estimator builds an additive model in a forward stage-wise fashion; it allows for the optimization of arbitrary differentiable loss functions. In each stage a regression tree is fit on the negative gradient of the given loss function.
 
-  [`sklearn.ensemble.HistGradientBoostingRegressor`](sklearn.ensemble.HistGradientBoostingRegressor.html#sklearn.ensemble.HistGradientBoostingRegressor "sklearn.ensemble.HistGradientBoostingRegressor") is a much faster variant of this algorithm for intermediate datasets (`n\_samples >= 10\_000`).
+  [`HistGradientBoostingRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html#sklearn.ensemble.HistGradientBoostingRegressor "sklearn.ensemble.HistGradientBoostingRegressor") is a much faster variant of this algorithm for intermediate and large datasets (`n_samples >= 10_000`) and supports monotonic constraints.
 
-  Read more in the [User Guide](../ensemble.html#gradient-boosting).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#gradient-boosting).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)
  */
@@ -26,14 +26,14 @@ export class GradientBoostingRegressor {
 
   constructor(opts?: {
     /**
-      Loss function to be optimized. ‘squared\_error’ refers to the squared error for regression. ‘absolute\_error’ refers to the absolute error of regression and is a robust loss function. ‘huber’ is a combination of the two. ‘quantile’ allows quantile regression (use `alpha` to specify the quantile).
+      Loss function to be optimized. ‘squared_error’ refers to the squared error for regression. ‘absolute_error’ refers to the absolute error of regression and is a robust loss function. ‘huber’ is a combination of the two. ‘quantile’ allows quantile regression (use `alpha` to specify the quantile).
 
       @defaultValue `'squared_error'`
      */
     loss?: 'squared_error' | 'absolute_error' | 'huber' | 'quantile'
 
     /**
-      Learning rate shrinks the contribution of each tree by `learning\_rate`. There is a trade-off between learning\_rate and n\_estimators. Values must be in the range `\[0.0, inf)`.
+      Learning rate shrinks the contribution of each tree by `learning_rate`. There is a trade-off between learning_rate and n_estimators. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.1`
      */
@@ -47,14 +47,14 @@ export class GradientBoostingRegressor {
     n_estimators?: number
 
     /**
-      The fraction of samples to be used for fitting the individual base learners. If smaller than 1.0 this results in Stochastic Gradient Boosting. `subsample` interacts with the parameter `n\_estimators`. Choosing `subsample < 1.0` leads to a reduction of variance and an increase in bias. Values must be in the range `(0.0, 1.0\]`.
+      The fraction of samples to be used for fitting the individual base learners. If smaller than 1.0 this results in Stochastic Gradient Boosting. `subsample` interacts with the parameter `n_estimators`. Choosing `subsample < 1.0` leads to a reduction of variance and an increase in bias. Values must be in the range `(0.0, 1.0\]`.
 
       @defaultValue `1`
      */
     subsample?: number
 
     /**
-      The function to measure the quality of a split. Supported criteria are “friedman\_mse” for the mean squared error with improvement score by Friedman, “squared\_error” for mean squared error. The default value of “friedman\_mse” is generally the best as it can provide a better approximation in some cases.
+      The function to measure the quality of a split. Supported criteria are “friedman_mse” for the mean squared error with improvement score by Friedman, “squared_error” for mean squared error. The default value of “friedman_mse” is generally the best as it can provide a better approximation in some cases.
 
       @defaultValue `'friedman_mse'`
      */
@@ -68,21 +68,21 @@ export class GradientBoostingRegressor {
     min_samples_split?: number
 
     /**
-      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min_samples_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
       @defaultValue `1`
      */
     min_samples_leaf?: number
 
     /**
-      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided. Values must be in the range `\[0.0, 0.5\]`.
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided. Values must be in the range `\[0.0, 0.5\]`.
 
       @defaultValue `0`
      */
     min_weight_fraction_leaf?: number
 
     /**
-      Maximum depth of the individual regression estimators. The maximum depth limits the number of nodes in the tree. Tune this parameter for best performance; the best value depends on the interaction of the input variables. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples. If int, values must be in the range `\[1, inf)`.
+      Maximum depth of the individual regression estimators. The maximum depth limits the number of nodes in the tree. Tune this parameter for best performance; the best value depends on the interaction of the input variables. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples. If int, values must be in the range `\[1, inf)`.
 
       @defaultValue `3`
      */
@@ -98,12 +98,12 @@ export class GradientBoostingRegressor {
     min_impurity_decrease?: number
 
     /**
-      An estimator object that is used to compute the initial predictions. `init` has to provide [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). If ‘zero’, the initial raw predictions are set to zero. By default a `DummyEstimator` is used, predicting either the average target value (for loss=’squared\_error’), or a quantile for the other losses.
+      An estimator object that is used to compute the initial predictions. `init` has to provide [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) and [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict). If ‘zero’, the initial raw predictions are set to zero. By default a `DummyEstimator` is used, predicting either the average target value (for loss=’squared_error’), or a quantile for the other losses.
      */
     init?: 'zero'
 
     /**
-      Controls the random seed given to each Tree estimator at each boosting iteration. In addition, it controls the random permutation of the features at each split (see Notes for more details). It also controls the random splitting of the training data to obtain a validation set if `n\_iter\_no\_change` is not `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the random seed given to each Tree estimator at each boosting iteration. In addition, it controls the random permutation of the features at each split (see Notes for more details). It also controls the random splitting of the training data to obtain a validation set if `n_iter_no_change` is not `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -127,38 +127,38 @@ export class GradientBoostingRegressor {
     verbose?: number
 
     /**
-      Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. Values must be in the range `\[2, inf)`. If `undefined`, then unlimited number of leaf nodes.
+      Grow trees with `max_leaf_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. Values must be in the range `\[2, inf)`. If `undefined`, then unlimited number of leaf nodes.
      */
     max_leaf_nodes?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
       @defaultValue `false`
      */
     warm_start?: boolean
 
     /**
-      The proportion of training data to set aside as validation set for early stopping. Values must be in the range `(0.0, 1.0)`. Only used if `n\_iter\_no\_change` is set to an integer.
+      The proportion of training data to set aside as validation set for early stopping. Values must be in the range `(0.0, 1.0)`. Only used if `n_iter_no_change` is set to an integer.
 
       @defaultValue `0.1`
      */
     validation_fraction?: number
 
     /**
-      `n\_iter\_no\_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation\_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n\_iter\_no\_change` numbers of iterations. Values must be in the range `\[1, inf)`.
+      `n_iter_no_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n_iter_no_change` numbers of iterations. Values must be in the range `\[1, inf)`. See [Early stopping in Gradient Boosting](https://scikit-learn.org/stable/modules/generated/../../auto_examples/ensemble/plot_gradient_boosting_early_stopping.html#sphx-glr-auto-examples-ensemble-plot-gradient-boosting-early-stopping-py).
      */
     n_iter_no_change?: number
 
     /**
-      Tolerance for the early stopping. When the loss is not improving by at least tol for `n\_iter\_no\_change` iterations (if set to a number), the training stops. Values must be in the range `\[0.0, inf)`.
+      Tolerance for the early stopping. When the loss is not improving by at least tol for `n_iter_no_change` iterations (if set to a number), the training stops. Values must be in the range `\[0.0, inf)`.
 
       @defaultValue `0.0001`
      */
     tol?: number
 
     /**
-      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. Values must be in the range `\[0.0, inf)`. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
+      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp_alpha` will be chosen. By default, no pruning is performed. Values must be in the range `\[0.0, inf)`. See [Minimal Cost-Complexity Pruning](https://scikit-learn.org/stable/modules/generated/../tree.html#minimal-cost-complexity-pruning) for details.
 
       @defaultValue `0`
      */
@@ -208,39 +208,8 @@ except NameError: bridgeGradientBoostingRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GradientBoostingRegressor = {'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'subsample': ${this.opts['subsample'] ?? undefined}, 'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'init': ${this.opts['init'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'max_features': ${this.opts['max_features'] ?? undefined}, 'alpha': ${
-      this.opts['alpha'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'warm_start': ${
-      this.opts['warm_start'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'ccp_alpha': ${
-      this.opts['ccp_alpha'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GradientBoostingRegressor = {'loss': ${this.opts['loss'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'subsample': ${this.opts['subsample'] ?? undefined}, 'criterion': ${this.opts['criterion'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'init': ${this.opts['init'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}}
 
 ctor_GradientBoostingRegressor = {k: v for k, v in ctor_GradientBoostingRegressor.items() if v is not None}`
 
@@ -274,7 +243,7 @@ ctor_GradientBoostingRegressor = {k: v for k, v in ctor_GradientBoostingRegresso
    */
   async apply(opts: {
     /**
-      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted to a sparse `csr\_matrix`.
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<ArrayLike[]> {
@@ -291,9 +260,8 @@ ctor_GradientBoostingRegressor = {k: v for k, v in ctor_GradientBoostingRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingRegressor_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GradientBoostingRegressor_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingRegressor_apply = {k: v for k, v in pms_GradientBoostingRegressor_apply.items() if v is not None}`
 
@@ -311,7 +279,7 @@ pms_GradientBoostingRegressor_apply = {k: v for k, v in pms_GradientBoostingRegr
    */
   async fit(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -326,7 +294,7 @@ pms_GradientBoostingRegressor_apply = {k: v for k, v in pms_GradientBoostingRegr
     sample_weight?: ArrayLike
 
     /**
-      The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `\_fit\_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshoting.
+      The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `_fit_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshotting.
      */
     monitor?: any
   }): Promise<any> {
@@ -341,15 +309,8 @@ pms_GradientBoostingRegressor_apply = {k: v for k, v in pms_GradientBoostingRegr
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'monitor': ${
-      opts['monitor'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GradientBoostingRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'monitor': ${opts['monitor'] ?? undefined}}
 
 pms_GradientBoostingRegressor_fit = {k: v for k, v in pms_GradientBoostingRegressor_fit.items() if v is not None}`
 
@@ -365,11 +326,11 @@ pms_GradientBoostingRegressor_fit = {k: v for k, v in pms_GradientBoostingRegres
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -387,9 +348,7 @@ pms_GradientBoostingRegressor_fit = {k: v for k, v in pms_GradientBoostingRegres
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GradientBoostingRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GradientBoostingRegressor_get_metadata_routing = {k: v for k, v in pms_GradientBoostingRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -407,7 +366,7 @@ pms_GradientBoostingRegressor_get_metadata_routing = {k: v for k, v in pms_Gradi
    */
   async predict(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -424,9 +383,8 @@ pms_GradientBoostingRegressor_get_metadata_routing = {k: v for k, v in pms_Gradi
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GradientBoostingRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingRegressor_predict = {k: v for k, v in pms_GradientBoostingRegressor_predict.items() if v is not None}`
 
@@ -442,11 +400,11 @@ pms_GradientBoostingRegressor_predict = {k: v for k, v in pms_GradientBoostingRe
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -473,13 +431,8 @@ pms_GradientBoostingRegressor_predict = {k: v for k, v in pms_GradientBoostingRe
     }
 
     // set up method params
-    await this._py.ex`pms_GradientBoostingRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GradientBoostingRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GradientBoostingRegressor_score = {k: v for k, v in pms_GradientBoostingRegressor_score.items() if v is not None}`
 
@@ -495,7 +448,7 @@ pms_GradientBoostingRegressor_score = {k: v for k, v in pms_GradientBoostingRegr
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -506,7 +459,7 @@ pms_GradientBoostingRegressor_score = {k: v for k, v in pms_GradientBoostingRegr
     monitor?: string | boolean
 
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -524,9 +477,7 @@ pms_GradientBoostingRegressor_score = {k: v for k, v in pms_GradientBoostingRegr
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingRegressor_set_fit_request = {'monitor': ${
-      opts['monitor'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+      .ex`pms_GradientBoostingRegressor_set_fit_request = {'monitor': ${opts['monitor'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GradientBoostingRegressor_set_fit_request = {k: v for k, v in pms_GradientBoostingRegressor_set_fit_request.items() if v is not None}`
 
@@ -542,13 +493,13 @@ pms_GradientBoostingRegressor_set_fit_request = {k: v for k, v in pms_GradientBo
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -566,9 +517,7 @@ pms_GradientBoostingRegressor_set_fit_request = {k: v for k, v in pms_GradientBo
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_GradientBoostingRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GradientBoostingRegressor_set_score_request = {k: v for k, v in pms_GradientBoostingRegressor_set_score_request.items() if v is not None}`
 
@@ -588,7 +537,7 @@ pms_GradientBoostingRegressor_set_score_request = {k: v for k, v in pms_Gradient
    */
   async staged_predict(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<any[]> {
@@ -606,9 +555,7 @@ pms_GradientBoostingRegressor_set_score_request = {k: v for k, v in pms_Gradient
 
     // set up method params
     await this._py
-      .ex`pms_GradientBoostingRegressor_staged_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_GradientBoostingRegressor_staged_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoostingRegressor_staged_predict.items() if v is not None}`
 
@@ -622,7 +569,61 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The improvement in loss on the out-of-bag samples relative to the previous iteration. `oob\_improvement\_\[0\]` is the improvement in loss of the first stage over the `init` estimator. Only available if `subsample < 1.0`.
+    The number of estimators as selected by early stopping (if `n_iter_no_change` is specified). Otherwise it is set to `n_estimators`.
+   */
+  get n_estimators_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingRegressor must call init() before accessing n_estimators_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_GradientBoostingRegressor_n_estimators_ = bridgeGradientBoostingRegressor[${this.id}].n_estimators_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_GradientBoostingRegressor_n_estimators_.tolist() if hasattr(attr_GradientBoostingRegressor_n_estimators_, 'tolist') else attr_GradientBoostingRegressor_n_estimators_`
+    })()
+  }
+
+  /**
+    The number of trees that are built at each iteration. For regressors, this is always 1.
+   */
+  get n_trees_per_iteration_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingRegressor must call init() before accessing n_trees_per_iteration_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_GradientBoostingRegressor_n_trees_per_iteration_ = bridgeGradientBoostingRegressor[${this.id}].n_trees_per_iteration_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_GradientBoostingRegressor_n_trees_per_iteration_.tolist() if hasattr(attr_GradientBoostingRegressor_n_trees_per_iteration_, 'tolist') else attr_GradientBoostingRegressor_n_trees_per_iteration_`
+    })()
+  }
+
+  /**
+    The improvement in loss on the out-of-bag samples relative to the previous iteration. `oob_improvement_\[0\]` is the improvement in loss of the first stage over the `init` estimator. Only available if `subsample < 1.0`.
    */
   get oob_improvement_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -676,7 +677,7 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The last value of the loss on the out-of-bag samples. It is the same as `oob\_scores\_\[-1\]`. Only available if `subsample < 1.0`.
+    The last value of the loss on the out-of-bag samples. It is the same as `oob_scores_\[-1\]`. Only available if `subsample < 1.0`.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -703,7 +704,7 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The i-th score `train\_score\_\[i\]` is the loss of the model at iteration `i` on the in-bag sample. If `subsample \== 1` this is the loss on the training data.
+    The i-th score `train_score_\[i\]` is the loss of the model at iteration `i` on the in-bag sample. If `subsample \== 1` this is the loss on the training data.
    */
   get train_score_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -730,7 +731,7 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The estimator that provides the initial predictions. Set via the `init` argument or `loss.init\_estimator`.
+    The estimator that provides the initial predictions. Set via the `init` argument.
    */
   get init_(): Promise<any> {
     if (this._isDisposed) {
@@ -784,34 +785,7 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The number of estimators as selected by early stopping (if `n\_iter\_no\_change` is specified). Otherwise it is set to `n\_estimators`.
-   */
-  get n_estimators_(): Promise<number> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This GradientBoostingRegressor instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'GradientBoostingRegressor must call init() before accessing n_estimators_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_GradientBoostingRegressor_n_estimators_ = bridgeGradientBoostingRegressor[${this.id}].n_estimators_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_GradientBoostingRegressor_n_estimators_.tolist() if hasattr(attr_GradientBoostingRegressor_n_estimators_, 'tolist') else attr_GradientBoostingRegressor_n_estimators_`
-    })()
-  }
-
-  /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -838,7 +812,7 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -865,7 +839,7 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The inferred value of max\_features.
+    The inferred value of max_features.
    */
   get max_features_(): Promise<number> {
     if (this._isDisposed) {

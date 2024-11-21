@@ -8,15 +8,15 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Randomized search on hyper parameters.
 
-  RandomizedSearchCV implements a “fit” and a “score” method. It also implements “score\_samples”, “predict”, “predict\_proba”, “decision\_function”, “transform” and “inverse\_transform” if they are implemented in the estimator used.
+  RandomizedSearchCV implements a “fit” and a “score” method. It also implements “score_samples”, “predict”, “predict_proba”, “decision_function”, “transform” and “inverse_transform” if they are implemented in the estimator used.
 
   The parameters of the estimator used to apply these methods are optimized by cross-validated search over parameter settings.
 
-  In contrast to GridSearchCV, not all parameter values are tried out, but rather a fixed number of parameter settings is sampled from the specified distributions. The number of parameter settings that are tried is given by n\_iter.
+  In contrast to GridSearchCV, not all parameter values are tried out, but rather a fixed number of parameter settings is sampled from the specified distributions. The number of parameter settings that are tried is given by n_iter.
 
   If all parameters are presented as a list, sampling without replacement is performed. If at least one parameter is given as a distribution, sampling with replacement is used. It is highly recommended to use continuous distributions for continuous parameters.
 
-  Read more in the [User Guide](../grid_search.html#randomized-parameter-search).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../grid_search.html#randomized-parameter-search).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html)
  */
@@ -40,7 +40,7 @@ export class RandomizedSearchCV {
     param_distributions?: any
 
     /**
-      Number of parameter settings that are sampled. n\_iter trades off runtime vs quality of the solution.
+      Number of parameter settings that are sampled. n_iter trades off runtime vs quality of the solution.
 
       @defaultValue `10`
      */
@@ -54,7 +54,7 @@ export class RandomizedSearchCV {
     scoring?: string | any[] | any
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -63,11 +63,11 @@ export class RandomizedSearchCV {
 
       For multiple metric evaluation, this needs to be a `str` denoting the scorer that would be used to find the best parameters for refitting the estimator at the end.
 
-      Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best\_index\_` given the `cv\_results`. In that case, the `best\_estimator\_` and `best\_params\_` will be set according to the returned `best\_index\_` while the `best\_score\_` attribute will not be available.
+      Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best_index_` given the `cv_results`. In that case, the `best_estimator_` and `best_params_` will be set according to the returned `best_index_` while the `best_score_` attribute will not be available.
 
-      The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `RandomizedSearchCV` instance.
+      The refitted estimator is made available at the `best_estimator_` attribute and permits using `predict` directly on this `RandomizedSearchCV` instance.
 
-      Also for multiple metric evaluation, the attributes `best\_index\_`, `best\_score\_` and `best\_params\_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
+      Also for multiple metric evaluation, the attributes `best_index_`, `best_score_` and `best_params_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
 
       See `scoring` parameter to know more about multiple metric evaluation.
 
@@ -93,7 +93,7 @@ export class RandomizedSearchCV {
     pre_dispatch?: string
 
     /**
-      Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -103,7 +103,7 @@ export class RandomizedSearchCV {
     error_score?: 'raise'
 
     /**
-      If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+      If `false`, the `cv_results_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
 
       @defaultValue `false`
      */
@@ -153,23 +153,8 @@ except NameError: bridgeRandomizedSearchCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RandomizedSearchCV = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'param_distributions': ${
-      this.opts['param_distributions'] ?? undefined
-    }, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'scoring': ${
-      this.opts['scoring'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'refit': ${
-      this.opts['refit'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'pre_dispatch': ${
-      this.opts['pre_dispatch'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'error_score': ${
-      this.opts['error_score'] ?? undefined
-    }, 'return_train_score': ${this.opts['return_train_score'] ?? undefined}}
+    await this._py
+      .ex`ctor_RandomizedSearchCV = {'estimator': ${this.opts['estimator'] ?? undefined}, 'param_distributions': ${this.opts['param_distributions'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'refit': ${this.opts['refit'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'pre_dispatch': ${this.opts['pre_dispatch'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'error_score': ${this.opts['error_score'] ?? undefined}, 'return_train_score': ${this.opts['return_train_score'] ?? undefined}}
 
 ctor_RandomizedSearchCV = {k: v for k, v in ctor_RandomizedSearchCV.items() if v is not None}`
 
@@ -199,9 +184,9 @@ ctor_RandomizedSearchCV = {k: v for k, v in ctor_RandomizedSearchCV.items() if v
   }
 
   /**
-    Call decision\_function on the estimator with the best found parameters.
+    Call decision_function on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `decision\_function`.
+    Only available if `refit=True` and the underlying estimator supports `decision_function`.
    */
   async decision_function(opts: {
     /**
@@ -222,9 +207,8 @@ ctor_RandomizedSearchCV = {k: v for k, v in ctor_RandomizedSearchCV.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_decision_function = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_decision_function = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearchCV_decision_function.items() if v is not None}`
 
@@ -242,7 +226,7 @@ pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearc
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. For precomputed kernel or distance matrix, the expected shape of X is (n_samples, n_samples).
      */
     X?: ArrayLike[]
 
@@ -252,16 +236,11 @@ pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearc
     y?: ArrayLike[]
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-     */
-    groups?: ArrayLike
+      Parameters passed to the `fit` method of the estimator, the scorer, and the CV splitter.
 
-    /**
-      Parameters passed to the `fit` method of the estimator.
-
-      If a fit parameter is an array-like whose length is equal to `num\_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample\_weight](../../glossary.html#term-sample_weight) parameter is split because `len(sample\_weights) \= len(X)`.
+      If a fit parameter is an array-like whose length is equal to `num_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample_weight](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sample_weight) parameter is split because `len(sample_weights) \= len(X)`.
      */
-    fit_params?: any
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -274,15 +253,8 @@ pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearc
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RandomizedSearchCV_fit = {k: v for k, v in pms_RandomizedSearchCV_fit.items() if v is not None}`
 
@@ -298,11 +270,11 @@ pms_RandomizedSearchCV_fit = {k: v for k, v in pms_RandomizedSearchCV_fit.items(
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -320,9 +292,7 @@ pms_RandomizedSearchCV_fit = {k: v for k, v in pms_RandomizedSearchCV_fit.items(
 
     // set up method params
     await this._py
-      .ex`pms_RandomizedSearchCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RandomizedSearchCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RandomizedSearchCV_get_metadata_routing = {k: v for k, v in pms_RandomizedSearchCV_get_metadata_routing.items() if v is not None}`
 
@@ -336,11 +306,16 @@ pms_RandomizedSearchCV_get_metadata_routing = {k: v for k, v in pms_RandomizedSe
   }
 
   /**
-    Call inverse\_transform on the estimator with the best found params.
+    Call inverse_transform on the estimator with the best found params.
 
-    Only available if the underlying estimator implements `inverse\_transform` and `refit=True`.
+    Only available if the underlying estimator implements `inverse_transform` and `refit=True`.
    */
   async inverse_transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+
     /**
       Must fulfill the input assumptions of the underlying estimator.
      */
@@ -359,9 +334,8 @@ pms_RandomizedSearchCV_get_metadata_routing = {k: v for k, v in pms_RandomizedSe
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_inverse_transform = {'Xt': ${
-      opts['Xt'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_inverse_transform = {'X': ${opts['X'] ?? undefined}, 'Xt': ${opts['Xt'] ?? undefined}}
 
 pms_RandomizedSearchCV_inverse_transform = {k: v for k, v in pms_RandomizedSearchCV_inverse_transform.items() if v is not None}`
 
@@ -396,9 +370,8 @@ pms_RandomizedSearchCV_inverse_transform = {k: v for k, v in pms_RandomizedSearc
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_predict = {k: v for k, v in pms_RandomizedSearchCV_predict.items() if v is not None}`
 
@@ -412,9 +385,9 @@ pms_RandomizedSearchCV_predict = {k: v for k, v in pms_RandomizedSearchCV_predic
   }
 
   /**
-    Call predict\_log\_proba on the estimator with the best found parameters.
+    Call predict_log_proba on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `predict\_log\_proba`.
+    Only available if `refit=True` and the underlying estimator supports `predict_log_proba`.
    */
   async predict_log_proba(opts: {
     /**
@@ -435,9 +408,8 @@ pms_RandomizedSearchCV_predict = {k: v for k, v in pms_RandomizedSearchCV_predic
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_predict_log_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_predict_log_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_predict_log_proba = {k: v for k, v in pms_RandomizedSearchCV_predict_log_proba.items() if v is not None}`
 
@@ -451,9 +423,9 @@ pms_RandomizedSearchCV_predict_log_proba = {k: v for k, v in pms_RandomizedSearc
   }
 
   /**
-    Call predict\_proba on the estimator with the best found parameters.
+    Call predict_proba on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `predict\_proba`.
+    Only available if `refit=True` and the underlying estimator supports `predict_proba`.
    */
   async predict_proba(opts: {
     /**
@@ -474,9 +446,8 @@ pms_RandomizedSearchCV_predict_log_proba = {k: v for k, v in pms_RandomizedSearc
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_predict_proba = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_predict_proba = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_predict_proba.items() if v is not None}`
 
@@ -492,11 +463,11 @@ pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_
   /**
     Return the score on the given data, if the estimator has been refit.
 
-    This uses the score defined by `scoring` where provided, and the `best\_estimator\_.score` method otherwise.
+    This uses the score defined by `scoring` where provided, and the `best_estimator_.score` method otherwise.
    */
   async score(opts: {
     /**
-      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Input data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -504,6 +475,11 @@ pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_
       Target relative to X for classification or regression; `undefined` for unsupervised learning.
      */
     y?: ArrayLike[]
+
+    /**
+      Parameters to be passed to the underlying scorer(s).
+     */
+    params?: any
   }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
@@ -516,11 +492,8 @@ pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomizedSearchCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RandomizedSearchCV_score = {k: v for k, v in pms_RandomizedSearchCV_score.items() if v is not None}`
 
@@ -534,9 +507,9 @@ pms_RandomizedSearchCV_score = {k: v for k, v in pms_RandomizedSearchCV_score.it
   }
 
   /**
-    Call score\_samples on the estimator with the best found parameters.
+    Call score_samples on the estimator with the best found parameters.
 
-    Only available if `refit=True` and the underlying estimator supports `score\_samples`.
+    Only available if `refit=True` and the underlying estimator supports `score_samples`.
    */
   async score_samples(opts: {
     /**
@@ -557,9 +530,8 @@ pms_RandomizedSearchCV_score = {k: v for k, v in pms_RandomizedSearchCV_score.it
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_score_samples = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_score_samples = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_score_samples = {k: v for k, v in pms_RandomizedSearchCV_score_samples.items() if v is not None}`
 
@@ -570,47 +542,6 @@ pms_RandomizedSearchCV_score_samples = {k: v for k, v in pms_RandomizedSearchCV_
     // convert the result from python to node.js
     return this
       ._py`res_RandomizedSearchCV_score_samples.tolist() if hasattr(res_RandomizedSearchCV_score_samples, 'tolist') else res_RandomizedSearchCV_score_samples`
-  }
-
-  /**
-    Request metadata passed to the `fit` method.
-
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
-
-    The options for each parameter are:
-   */
-  async set_fit_request(opts: {
-    /**
-      Metadata routing for `groups` parameter in `fit`.
-     */
-    groups?: string | boolean
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This RandomizedSearchCV instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'RandomizedSearchCV must call init() before set_fit_request()'
-      )
-    }
-
-    // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_set_fit_request = {'groups': ${
-      opts['groups'] ?? undefined
-    }}
-
-pms_RandomizedSearchCV_set_fit_request = {k: v for k, v in pms_RandomizedSearchCV_set_fit_request.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_RandomizedSearchCV_set_fit_request = bridgeRandomizedSearchCV[${this.id}].set_fit_request(**pms_RandomizedSearchCV_set_fit_request)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_RandomizedSearchCV_set_fit_request.tolist() if hasattr(res_RandomizedSearchCV_set_fit_request, 'tolist') else res_RandomizedSearchCV_set_fit_request`
   }
 
   /**
@@ -635,9 +566,8 @@ pms_RandomizedSearchCV_set_fit_request = {k: v for k, v in pms_RandomizedSearchC
     }
 
     // set up method params
-    await this._py.ex`pms_RandomizedSearchCV_transform = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomizedSearchCV_transform = {'X': ${opts['X'] ?? undefined}}
 
 pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_transform.items() if v is not None}`
 
@@ -711,7 +641,7 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
   }
 
   /**
-    Mean cross-validated score of the best\_estimator.
+    Mean cross-validated score of the best_estimator.
 
     For multi-metric evaluation, this is not available if `refit` is `false`. See `refit` parameter for more information.
 
@@ -771,9 +701,9 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
   }
 
   /**
-    The index (of the `cv\_results\_` arrays) which corresponds to the best candidate parameter setting.
+    The index (of the `cv_results_` arrays) which corresponds to the best candidate parameter setting.
 
-    The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best\_score\_`).
+    The dict at `search.cv_results_\['params'\]\[search.best_index_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best_score_`).
 
     For multi-metric evaluation, this is not available if `refit` is `false`. See `refit` parameter for more information.
    */
@@ -914,7 +844,7 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if `best_estimator_` is defined (see the documentation for the `refit` parameter for more details) and that `best_estimator_` exposes `feature_names_in_` when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

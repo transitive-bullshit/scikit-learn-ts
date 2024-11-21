@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Lasso linear model with iterative fitting along a regularization path.
 
-  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+  See glossary entry for [cross-validation estimator](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-cross-validation-estimator).
 
   The best model is selected by cross-validation.
 
@@ -26,7 +26,7 @@ export class LassoCV {
 
   constructor(opts?: {
     /**
-      Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
+      Length of the path. `eps=1e-3` means that `alpha_min / alpha_max \= 1e-3`.
 
       @defaultValue `0.001`
      */
@@ -92,7 +92,7 @@ export class LassoCV {
     verbose?: boolean | number
 
     /**
-      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -104,7 +104,7 @@ export class LassoCV {
     positive?: boolean
 
     /**
-      The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -155,23 +155,8 @@ except NameError: bridgeLassoCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LassoCV = {'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'n_alphas': ${this.opts['n_alphas'] ?? undefined}, 'alphas': ${
-      this.opts['alphas'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${
-      this.opts['precompute'] !== undefined
-    } else None, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'selection': ${this.opts['selection'] ?? undefined}}
+    await this._py
+      .ex`ctor_LassoCV = {'eps': ${this.opts['eps'] ?? undefined}, 'n_alphas': ${this.opts['n_alphas'] ?? undefined}, 'alphas': ${this.opts['alphas'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'precompute': np.array(${this.opts['precompute'] ?? undefined}) if ${this.opts['precompute'] !== undefined} else None, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'selection': ${this.opts['selection'] ?? undefined}}
 
 ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
 
@@ -200,13 +185,13 @@ ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
   }
 
   /**
-    Fit linear model with coordinate descent.
+    Fit Lasso model with coordinate descent.
 
     Fit is on grid of alphas and best alpha estimated by cross-validation.
    */
   async fit(opts: {
     /**
-      Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output, X can be sparse.
+      Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output, X can be sparse. Note that large sparse matrices and arrays requiring `int64` indices are not accepted.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -219,6 +204,11 @@ ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
       Sample weights used for fitting and evaluation of the weighted mean squared error of each cv-fold. Note that the cross validated MSE that is finally used to find the best model is the unweighted mean over the (weighted) MSEs of each test fold.
      */
     sample_weight?: number | ArrayLike
+
+    /**
+      Parameters to be passed to the CV splitter.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LassoCV instance has already been disposed')
@@ -229,13 +219,8 @@ ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LassoCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_LassoCV_fit = {k: v for k, v in pms_LassoCV_fit.items() if v is not None}`
 
@@ -251,11 +236,11 @@ pms_LassoCV_fit = {k: v for k, v in pms_LassoCV_fit.items() if v is not None}`
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -268,9 +253,8 @@ pms_LassoCV_fit = {k: v for k, v in pms_LassoCV_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_routing.items() if v is not None}`
 
@@ -302,7 +286,7 @@ pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_ro
     y?: ArrayLike | SparseMatrix
 
     /**
-      Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
+      Length of the path. `eps=1e-3` means that `alpha_min / alpha_max \= 1e-3`.
 
       @defaultValue `0.001`
      */
@@ -318,7 +302,7 @@ pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_ro
     /**
       List of alphas where to compute the models. If `undefined` alphas are set automatically.
      */
-    alphas?: NDArray
+    alphas?: ArrayLike
 
     /**
       Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
@@ -342,7 +326,7 @@ pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_ro
     /**
       The initial values of the coefficients.
      */
-    coef_init?: NDArray
+    coef_init?: ArrayLike
 
     /**
       Amount of verbosity.
@@ -379,27 +363,8 @@ pms_LassoCV_get_metadata_routing = {k: v for k, v in pms_LassoCV_get_metadata_ro
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'eps': ${
-      opts['eps'] ?? undefined
-    }, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': np.array(${
-      opts['alphas'] ?? undefined
-    }) if ${opts['alphas'] !== undefined} else None, 'precompute': np.array(${
-      opts['precompute'] ?? undefined
-    }) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${
-      opts['Xy'] ?? undefined
-    }) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${
-      opts['copy_X'] ?? undefined
-    }, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${
-      opts['return_n_iter'] ?? undefined
-    }, 'positive': ${opts['positive'] ?? undefined}, 'params': ${
-      opts['params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'eps': ${opts['eps'] ?? undefined}, 'n_alphas': ${opts['n_alphas'] ?? undefined}, 'alphas': ${opts['alphas'] ?? undefined}, 'precompute': np.array(${opts['precompute'] ?? undefined}) if ${opts['precompute'] !== undefined} else None, 'Xy': np.array(${opts['Xy'] ?? undefined}) if ${opts['Xy'] !== undefined} else None, 'copy_X': ${opts['copy_X'] ?? undefined}, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'verbose': ${opts['verbose'] ?? undefined}, 'return_n_iter': ${opts['return_n_iter'] ?? undefined}, 'positive': ${opts['positive'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_LassoCV_path = {k: v for k, v in pms_LassoCV_path.items() if v is not None}`
 
@@ -446,11 +411,11 @@ pms_LassoCV_predict = {k: v for k, v in pms_LassoCV_predict.items() if v is not 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -473,13 +438,8 @@ pms_LassoCV_predict = {k: v for k, v in pms_LassoCV_predict.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LassoCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None}`
 
@@ -495,13 +455,13 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -514,9 +474,8 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LassoCV_set_fit_request = {k: v for k, v in pms_LassoCV_set_fit_request.items() if v is not None}`
 
@@ -532,13 +491,13 @@ pms_LassoCV_set_fit_request = {k: v for k, v in pms_LassoCV_set_fit_request.item
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -551,9 +510,8 @@ pms_LassoCV_set_fit_request = {k: v for k, v in pms_LassoCV_set_fit_request.item
     }
 
     // set up method params
-    await this._py.ex`pms_LassoCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LassoCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LassoCV_set_score_request = {k: v for k, v in pms_LassoCV_set_score_request.items() if v is not None}`
 
@@ -680,7 +638,7 @@ pms_LassoCV_set_score_request = {k: v for k, v in pms_LassoCV_set_score_request.
   }
 
   /**
-    The dual gap at the end of the optimization for the optimal alpha (`alpha\_`).
+    The dual gap at the end of the optimization for the optimal alpha (`alpha_`).
    */
   get dual_gap_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -726,7 +684,7 @@ pms_LassoCV_set_score_request = {k: v for k, v in pms_LassoCV_set_score_request.
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -751,7 +709,7 @@ pms_LassoCV_set_score_request = {k: v for k, v in pms_LassoCV_set_score_request.
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

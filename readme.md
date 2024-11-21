@@ -35,7 +35,7 @@ See the [full docs](https://sklearn.vercel.app/) for more info.
 ## Features
 
 - **All TS classes are auto-generated from the official python scikit-learn docs!**
-- All [257 classes](https://scikit-learn.org/stable/modules/classes.html) are supported along with proper TS types and docs
+- All [259 classes](https://scikit-learn.org/stable/api/index.html) are supported along with proper TS types and docs
   - `KMeans`
   - `TSNE`
   - `PCA`
@@ -57,7 +57,7 @@ _This project is meant for Node.js users, so don't worry if you're not familiar 
 
 Make sure you have Node.js and Python 3 installed and in your `PATH`.
 
-- `node >= 14`
+- `node >= 18`
 - `python >= 3.7`
 
 In python land, install `numpy` and `scikit-learn` either globally via `pip` or via your favorite virtualenv manager. The shell running your Node.js program will need access to these python modules, so if you're using a virtualenv, make sure it's activated.
@@ -105,7 +105,7 @@ await model.dispose()
 await py.disconnect()
 ```
 
-Since the TS classes are auto-generated from the Python docs, the code will look almost identical to the Python version, so use their excellent [API docs](https://scikit-learn.org/stable/modules/classes.html) as a reference.
+Since the TS classes are auto-generated from the Python docs, the code will look almost identical to the Python version, so use their excellent [API docs](https://scikit-learn.org/stable/api/index.html) as a reference.
 
 All class names, method names, attribute (accessor) names and types are the same as the official Python version.
 
@@ -338,7 +338,7 @@ And that's how `scikit-learn-ts` was born.
 
 This project uses a fork of [python-bridge](https://github.com/Submersible/node-python-bridge) to spawn a Python interpreter as a subprocess and communicates back and forth via standard Unix pipes. The IPC pipes don't interfere with `stdout`/`stderr`/`stdin`, so your Node.js code and the underlying Python code can print things normally.
 
-The TS library is **auto-generated** from the Python `scikit-learn` [API docs](https://scikit-learn.org/stable/modules/classes.html). By using the official Python docs as a source of truth, we can guarantee a certain level of compatibility and upgradeability.
+The TS library is **auto-generated** from the Python `scikit-learn` [API docs](https://scikit-learn.org/stable/api/index.html). By using the official Python docs as a source of truth, we can guarantee a certain level of compatibility and upgradeability.
 
 For each `scikit-learn` HTML page that belongs to an exported Python `class` or `function`, we first parse it's metadata, params, methods, attributes, etc using `cheerio`, then we convert the Python types into equivalent TypeScript types. We then generate a corresponding `TypeScript` file which wraps an instance of that Python declaration via a `PythonBridge`.
 

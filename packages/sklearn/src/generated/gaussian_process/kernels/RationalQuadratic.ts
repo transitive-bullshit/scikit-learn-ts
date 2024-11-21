@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Rational Quadratic kernel.
 
-  The RationalQuadratic kernel can be seen as a scale mixture (an infinite sum) of RBF kernels with different characteristic length scales. It is parameterized by a length scale parameter \\(l>0\\) and a scale mixture parameter \\(\\alpha>0\\). Only the isotropic variant where length\_scale \\(l\\) is a scalar is supported at the moment. The kernel is given by:
+  The RationalQuadratic kernel can be seen as a scale mixture (an infinite sum) of RBF kernels with different characteristic length scales. It is parameterized by a length scale parameter \\(l>0\\) and a scale mixture parameter \\(\\alpha>0\\). Only the isotropic variant where length_scale \\(l\\) is a scalar is supported at the moment. The kernel is given by:
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.RationalQuadratic.html)
  */
@@ -36,7 +36,7 @@ export class RationalQuadratic {
     alpha?: any
 
     /**
-      The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
+      The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘length_scale’ cannot be changed during hyperparameter tuning.
      */
     length_scale_bounds?: 'fixed'
 
@@ -87,11 +87,8 @@ except NameError: bridgeRationalQuadratic = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RationalQuadratic = {'length_scale': ${
-      this.opts['length_scale'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'length_scale_bounds': ${
-      this.opts['length_scale_bounds'] ?? undefined
-    }, 'alpha_bounds': ${this.opts['alpha_bounds'] ?? undefined}}
+    await this._py
+      .ex`ctor_RationalQuadratic = {'length_scale': ${this.opts['length_scale'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'length_scale_bounds': ${this.opts['length_scale_bounds'] ?? undefined}, 'alpha_bounds': ${this.opts['alpha_bounds'] ?? undefined}}
 
 ctor_RationalQuadratic = {k: v for k, v in ctor_RationalQuadratic.items() if v is not None}`
 
@@ -152,13 +149,8 @@ ctor_RationalQuadratic = {k: v for k, v in ctor_RationalQuadratic.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_RationalQuadratic___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RationalQuadratic___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_RationalQuadratic___call__ = {k: v for k, v in pms_RationalQuadratic___call__.items() if v is not None}`
 
@@ -194,9 +186,7 @@ pms_RationalQuadratic___call__ = {k: v for k, v in pms_RationalQuadratic___call_
 
     // set up method params
     await this._py
-      .ex`pms_RationalQuadratic_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+      .ex`pms_RationalQuadratic_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_RationalQuadratic_clone_with_theta = {k: v for k, v in pms_RationalQuadratic_clone_with_theta.items() if v is not None}`
 
@@ -231,9 +221,8 @@ pms_RationalQuadratic_clone_with_theta = {k: v for k, v in pms_RationalQuadratic
     }
 
     // set up method params
-    await this._py.ex`pms_RationalQuadratic_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RationalQuadratic_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RationalQuadratic_diag = {k: v for k, v in pms_RationalQuadratic_diag.items() if v is not None}`
 
@@ -274,53 +263,5 @@ pms_RationalQuadratic_is_stationary = {k: v for k, v in pms_RationalQuadratic_is
     // convert the result from python to node.js
     return this
       ._py`res_RationalQuadratic_is_stationary.tolist() if hasattr(res_RationalQuadratic_is_stationary, 'tolist') else res_RationalQuadratic_is_stationary`
-  }
-
-  get hyperparameter_alpha(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This RationalQuadratic instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'RationalQuadratic must call init() before accessing hyperparameter_alpha'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_RationalQuadratic_hyperparameter_alpha = bridgeRationalQuadratic[${this.id}].hyperparameter_alpha`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_RationalQuadratic_hyperparameter_alpha.tolist() if hasattr(attr_RationalQuadratic_hyperparameter_alpha, 'tolist') else attr_RationalQuadratic_hyperparameter_alpha`
-    })()
-  }
-
-  get hyperparameter_length_scale(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This RationalQuadratic instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'RationalQuadratic must call init() before accessing hyperparameter_length_scale'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_RationalQuadratic_hyperparameter_length_scale = bridgeRationalQuadratic[${this.id}].hyperparameter_length_scale`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_RationalQuadratic_hyperparameter_length_scale.tolist() if hasattr(attr_RationalQuadratic_hyperparameter_length_scale, 'tolist') else attr_RationalQuadratic_hyperparameter_length_scale`
-    })()
   }
 }

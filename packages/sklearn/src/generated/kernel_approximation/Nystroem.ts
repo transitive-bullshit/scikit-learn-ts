@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Constructs an approximate feature map for an arbitrary kernel using a subset of the data as basis.
 
-  Read more in the [User Guide](../kernel_approximation.html#nystroem-kernel-approx).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../kernel_approximation.html#nystroem-kernel-approx).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html)
  */
@@ -24,7 +24,7 @@ export class Nystroem {
 
   constructor(opts?: {
     /**
-      Kernel map to be approximated. A callable should accept two arguments and the keyword arguments passed to this object as `kernel\_params`, and should return a floating point number.
+      Kernel map to be approximated. A callable should accept two arguments and the keyword arguments passed to this object as `kernel_params`, and should return a floating point number.
 
       @defaultValue `'rbf'`
      */
@@ -58,14 +58,14 @@ export class Nystroem {
     n_components?: number
 
     /**
-      Pseudo-random number generator to control the uniform sampling without replacement of `n\_components` of the training data to construct the basis kernel. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Pseudo-random number generator to control the uniform sampling without replacement of `n_components` of the training data to construct the basis kernel. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n\_jobs` even slices and computing them in parallel.
+      The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n_jobs` even slices and computing them in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -109,17 +109,8 @@ except NameError: bridgeNystroem = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Nystroem = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${
-      this.opts['coef0'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'kernel_params': ${
-      this.opts['kernel_params'] ?? undefined
-    }, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Nystroem = {'kernel': ${this.opts['kernel'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'kernel_params': ${this.opts['kernel_params'] ?? undefined}, 'n_components': ${this.opts['n_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_Nystroem = {k: v for k, v in ctor_Nystroem.items() if v is not None}`
 
@@ -154,7 +145,7 @@ ctor_Nystroem = {k: v for k, v in ctor_Nystroem.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike
 
@@ -172,9 +163,8 @@ ctor_Nystroem = {k: v for k, v in ctor_Nystroem.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Nystroem_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_Nystroem_fit = {k: v for k, v in pms_Nystroem_fit.items() if v is not None}`
 
@@ -190,7 +180,7 @@ pms_Nystroem_fit = {k: v for k, v in pms_Nystroem_fit.items() if v is not None}`
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -217,13 +207,8 @@ pms_Nystroem_fit = {k: v for k, v in pms_Nystroem_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items() if v is not None}`
 
@@ -239,7 +224,7 @@ pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items(
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -258,9 +243,8 @@ pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items(
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_names_out.items() if v is not None}`
 
@@ -276,11 +260,11 @@ pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -293,9 +277,8 @@ pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Nystroem_get_metadata_routing = {k: v for k, v in pms_Nystroem_get_metadata_routing.items() if v is not None}`
 
@@ -311,13 +294,13 @@ pms_Nystroem_get_metadata_routing = {k: v for k, v in pms_Nystroem_get_metadata_
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Nystroem instance has already been disposed')
@@ -328,9 +311,8 @@ pms_Nystroem_get_metadata_routing = {k: v for k, v in pms_Nystroem_get_metadata_
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Nystroem_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Nystroem_set_output = {k: v for k, v in pms_Nystroem_set_output.items() if v is not None}`
 
@@ -363,9 +345,8 @@ pms_Nystroem_set_output = {k: v for k, v in pms_Nystroem_set_output.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_Nystroem_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Nystroem_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v is not None}`
 
@@ -402,7 +383,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Indices of `components\_` in the training set.
+    Indices of `components_` in the training set.
    */
   get component_indices_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -427,7 +408,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Normalization matrix needed for embedding. Square root of the kernel matrix on `components\_`.
+    Normalization matrix needed for embedding. Square root of the kernel matrix on `components_`.
    */
   get normalization_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -452,7 +433,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -477,7 +458,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

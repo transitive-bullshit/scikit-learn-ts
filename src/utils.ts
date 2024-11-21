@@ -6,7 +6,9 @@ export function indentComment(
   { indent = 4 }: { indent?: number } = {}
 ): string {
   lines = Array.isArray(lines) ? lines : [lines]
-  const content = lines.filter((line) => line?.trim().length > 0).join('\n\n')
+  const content = lines
+    .filter((line) => line && line.trim().length > 0)
+    .join('\n\n')
   if (!content) {
     return ''
   }
@@ -32,5 +34,5 @@ export function pascalCase(input: string, options?: CamelCaseOptions): string {
 }
 
 export function isValidPythonIdentifier(input: string): boolean {
-  return input && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(input)
+  return !!input && /^[A-Z_a-z]\w*$/.test(input)
 }

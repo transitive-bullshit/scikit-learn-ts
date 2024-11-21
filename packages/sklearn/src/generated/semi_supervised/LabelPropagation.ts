@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Label Propagation classifier.
 
-  Read more in the [User Guide](../semi_supervised.html#label-propagation).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../semi_supervised.html#label-propagation).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelPropagation.html)
  */
@@ -22,7 +22,7 @@ export class LabelPropagation {
 
   constructor(opts?: {
     /**
-      String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.
+      String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n_samples, n_features), and return a (n_samples, n_samples) shaped weight matrix.
 
       @defaultValue `'rbf'`
      */
@@ -55,7 +55,7 @@ export class LabelPropagation {
     tol?: number
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -101,13 +101,8 @@ except NameError: bridgeLabelPropagation = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LabelPropagation = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_LabelPropagation = {'kernel': ${this.opts['kernel'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_LabelPropagation = {k: v for k, v in ctor_LabelPropagation.items() if v is not None}`
 
@@ -141,12 +136,12 @@ ctor_LabelPropagation = {k: v for k, v in ctor_LabelPropagation.items() if v is 
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
     /**
-      Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
+      Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction_`.
      */
     y?: ArrayLike
   }): Promise<any> {
@@ -161,11 +156,8 @@ ctor_LabelPropagation = {k: v for k, v in ctor_LabelPropagation.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_LabelPropagation_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelPropagation_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelPropagation_fit = {k: v for k, v in pms_LabelPropagation_fit.items() if v is not None}`
 
@@ -181,11 +173,11 @@ pms_LabelPropagation_fit = {k: v for k, v in pms_LabelPropagation_fit.items() if
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -202,9 +194,8 @@ pms_LabelPropagation_fit = {k: v for k, v in pms_LabelPropagation_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_LabelPropagation_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelPropagation_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LabelPropagation_get_metadata_routing = {k: v for k, v in pms_LabelPropagation_get_metadata_routing.items() if v is not None}`
 
@@ -237,9 +228,8 @@ pms_LabelPropagation_get_metadata_routing = {k: v for k, v in pms_LabelPropagati
     }
 
     // set up method params
-    await this._py.ex`pms_LabelPropagation_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelPropagation_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LabelPropagation_predict = {k: v for k, v in pms_LabelPropagation_predict.items() if v is not None}`
 
@@ -276,9 +266,8 @@ pms_LabelPropagation_predict = {k: v for k, v in pms_LabelPropagation_predict.it
     }
 
     // set up method params
-    await this._py.ex`pms_LabelPropagation_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelPropagation_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LabelPropagation_predict_proba = {k: v for k, v in pms_LabelPropagation_predict_proba.items() if v is not None}`
 
@@ -323,13 +312,8 @@ pms_LabelPropagation_predict_proba = {k: v for k, v in pms_LabelPropagation_pred
     }
 
     // set up method params
-    await this._py.ex`pms_LabelPropagation_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelPropagation_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LabelPropagation_score = {k: v for k, v in pms_LabelPropagation_score.items() if v is not None}`
 
@@ -345,13 +329,13 @@ pms_LabelPropagation_score = {k: v for k, v in pms_LabelPropagation_score.items(
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -369,9 +353,7 @@ pms_LabelPropagation_score = {k: v for k, v in pms_LabelPropagation_score.items(
 
     // set up method params
     await this._py
-      .ex`pms_LabelPropagation_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LabelPropagation_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LabelPropagation_set_score_request = {k: v for k, v in pms_LabelPropagation_set_score_request.items() if v is not None}`
 
@@ -464,7 +446,7 @@ pms_LabelPropagation_set_score_request = {k: v for k, v in pms_LabelPropagation_
   }
 
   /**
-    Label assigned to each item during [fit](../../glossary.html#term-fit).
+    Label assigned to each item during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get transduction_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -491,7 +473,7 @@ pms_LabelPropagation_set_score_request = {k: v for k, v in pms_LabelPropagation_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -518,7 +500,7 @@ pms_LabelPropagation_set_score_request = {k: v for k, v in pms_LabelPropagation_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Precision Recall visualization.
 
-  It is recommend to use [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") to create a [`PrecisionRecallDisplay`](#sklearn.metrics.PrecisionRecallDisplay "sklearn.metrics.PrecisionRecallDisplay"). All parameters are stored as attributes.
+  It is recommend to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") to create a [`PrecisionRecallDisplay`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay "sklearn.metrics.PrecisionRecallDisplay"). All parameters are stored as attributes.
 
-  Read more in the [User Guide](../../visualizations.html#visualizations).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html)
  */
@@ -49,7 +49,7 @@ export class PrecisionRecallDisplay {
     pos_label?: number | boolean | string
 
     /**
-      The prevalence of the positive label. It is used for plotting the chance level line. If `undefined`, the chance level line will not be plotted even if `plot\_chance\_level` is set to `true` when plotting.
+      The prevalence of the positive label. It is used for plotting the chance level line. If `undefined`, the chance level line will not be plotted even if `plot_chance_level` is set to `true` when plotting.
      */
     prevalence_pos_label?: number
   }) {
@@ -97,21 +97,8 @@ except NameError: bridgePrecisionRecallDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PrecisionRecallDisplay = {'precision': np.array(${
-      this.opts['precision'] ?? undefined
-    }) if ${
-      this.opts['precision'] !== undefined
-    } else None, 'recall': np.array(${this.opts['recall'] ?? undefined}) if ${
-      this.opts['recall'] !== undefined
-    } else None, 'average_precision': ${
-      this.opts['average_precision'] ?? undefined
-    }, 'estimator_name': ${
-      this.opts['estimator_name'] ?? undefined
-    }, 'pos_label': ${
-      this.opts['pos_label'] ?? undefined
-    }, 'prevalence_pos_label': ${
-      this.opts['prevalence_pos_label'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PrecisionRecallDisplay = {'precision': np.array(${this.opts['precision'] ?? undefined}) if ${this.opts['precision'] !== undefined} else None, 'recall': np.array(${this.opts['recall'] ?? undefined}) if ${this.opts['recall'] !== undefined} else None, 'average_precision': ${this.opts['average_precision'] ?? undefined}, 'estimator_name': ${this.opts['estimator_name'] ?? undefined}, 'pos_label': ${this.opts['pos_label'] ?? undefined}, 'prevalence_pos_label': ${this.opts['prevalence_pos_label'] ?? undefined}}
 
 ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.items() if v is not None}`
 
@@ -145,7 +132,7 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
    */
   async from_estimator(opts: {
     /**
-      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+      Fitted classifier or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
      */
     estimator?: any
 
@@ -165,7 +152,7 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
     sample_weight?: ArrayLike
 
     /**
-      The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+      The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes_\[1\]` is considered as the positive class.
      */
     pos_label?: number | boolean | string
 
@@ -177,7 +164,7 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
     drop_intermediate?: boolean
 
     /**
-      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
+      Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) is tried next.
 
       @defaultValue `'auto'`
      */
@@ -194,7 +181,7 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
     ax?: any
 
     /**
-      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
 
       @defaultValue `false`
      */
@@ -224,25 +211,7 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
 
     // set up method params
     await this._py
-      .ex`pms_PrecisionRecallDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${
-      opts['pos_label'] ?? undefined
-    }, 'drop_intermediate': ${
-      opts['drop_intermediate'] ?? undefined
-    }, 'response_method': ${opts['response_method'] ?? undefined}, 'name': ${
-      opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+      .ex`pms_PrecisionRecallDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${opts['pos_label'] ?? undefined}, 'drop_intermediate': ${opts['drop_intermediate'] ?? undefined}, 'response_method': ${opts['response_method'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecallDisplay_from_estimator.items() if v is not None}`
 
@@ -297,7 +266,7 @@ pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecal
     ax?: any
 
     /**
-      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
 
       @defaultValue `false`
      */
@@ -327,25 +296,7 @@ pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecal
 
     // set up method params
     await this._py
-      .ex`pms_PrecisionRecallDisplay_from_predictions = {'y_true': np.array(${
-      opts['y_true'] ?? undefined
-    }) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${
-      opts['y_pred'] ?? undefined
-    }) if ${
-      opts['y_pred'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${
-      opts['pos_label'] ?? undefined
-    }, 'drop_intermediate': ${
-      opts['drop_intermediate'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+      .ex`pms_PrecisionRecallDisplay_from_predictions = {'y_true': np.array(${opts['y_true'] ?? undefined}) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${opts['y_pred'] ?? undefined}) if ${opts['y_pred'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${opts['pos_label'] ?? undefined}, 'drop_intermediate': ${opts['drop_intermediate'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRecallDisplay_from_predictions.items() if v is not None}`
 
@@ -370,12 +321,12 @@ pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRec
     ax?: any
 
     /**
-      Name of precision recall curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
+      Name of precision recall curve for labeling. If `undefined`, use `estimator_name` if not `undefined`, otherwise no labeling is shown.
      */
     name?: string
 
     /**
-      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
 
       @defaultValue `false`
      */
@@ -402,13 +353,8 @@ pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRec
     }
 
     // set up method params
-    await this._py.ex`pms_PrecisionRecallDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${
-      opts['plot_chance_level'] ?? undefined
-    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PrecisionRecallDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${opts['plot_chance_level'] ?? undefined}, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_PrecisionRecallDisplay_plot = {k: v for k, v in pms_PrecisionRecallDisplay_plot.items() if v is not None}`
 

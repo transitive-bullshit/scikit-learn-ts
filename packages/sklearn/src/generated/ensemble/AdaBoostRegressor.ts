@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This class implements the algorithm known as AdaBoost.R2 \[2\].
 
-  Read more in the [User Guide](../ensemble.html#adaboost).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#adaboost).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html)
  */
@@ -26,7 +26,7 @@ export class AdaBoostRegressor {
 
   constructor(opts?: {
     /**
-      The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
+      The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max_depth=3`.
      */
     estimator?: any
 
@@ -38,7 +38,7 @@ export class AdaBoostRegressor {
     n_estimators?: number
 
     /**
-      Weight applied to each regressor at each boosting iteration. A higher learning rate increases the contribution of each regressor. There is a trade-off between the `learning\_rate` and `n\_estimators` parameters. Values must be in the range `(0.0, inf)`.
+      Weight applied to each regressor at each boosting iteration. A higher learning rate increases the contribution of each regressor. There is a trade-off between the `learning_rate` and `n_estimators` parameters. Values must be in the range `(0.0, inf)`.
 
       @defaultValue `1`
      */
@@ -52,14 +52,9 @@ export class AdaBoostRegressor {
     loss?: 'linear' | 'square' | 'exponential'
 
     /**
-      Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. In addition, it controls the bootstrap of the weights used to train the `estimator` at each boosting iteration. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random_state`. In addition, it controls the bootstrap of the weights used to train the `estimator` at each boosting iteration. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
-
-    /**
-      The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
-     */
-    base_estimator?: any
   }) {
     this.id = `AdaBoostRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -103,15 +98,8 @@ except NameError: bridgeAdaBoostRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_AdaBoostRegressor = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'loss': ${
-      this.opts['loss'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'base_estimator': ${this.opts['base_estimator'] ?? undefined}}
+    await this._py
+      .ex`ctor_AdaBoostRegressor = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'loss': ${this.opts['loss'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_AdaBoostRegressor = {k: v for k, v in ctor_AdaBoostRegressor.items() if v is not None}`
 
@@ -155,7 +143,7 @@ ctor_AdaBoostRegressor = {k: v for k, v in ctor_AdaBoostRegressor.items() if v i
     y?: ArrayLike
 
     /**
-      Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
+      Sample weights. If `undefined`, the sample weights are initialized to 1 / n_samples.
      */
     sample_weight?: ArrayLike
   }): Promise<any> {
@@ -170,13 +158,8 @@ ctor_AdaBoostRegressor = {k: v for k, v in ctor_AdaBoostRegressor.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostRegressor_fit = {k: v for k, v in pms_AdaBoostRegressor_fit.items() if v is not None}`
 
@@ -190,16 +173,11 @@ pms_AdaBoostRegressor_fit = {k: v for k, v in pms_AdaBoostRegressor_fit.items() 
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostRegressor instance has already been disposed'
@@ -213,10 +191,7 @@ pms_AdaBoostRegressor_fit = {k: v for k, v in pms_AdaBoostRegressor_fit.items() 
     }
 
     // set up method params
-    await this._py
-      .ex`pms_AdaBoostRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_AdaBoostRegressor_get_metadata_routing = {}
 
 pms_AdaBoostRegressor_get_metadata_routing = {k: v for k, v in pms_AdaBoostRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -251,9 +226,8 @@ pms_AdaBoostRegressor_get_metadata_routing = {k: v for k, v in pms_AdaBoostRegre
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostRegressor_predict = {k: v for k, v in pms_AdaBoostRegressor_predict.items() if v is not None}`
 
@@ -269,11 +243,11 @@ pms_AdaBoostRegressor_predict = {k: v for k, v in pms_AdaBoostRegressor_predict.
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -298,13 +272,8 @@ pms_AdaBoostRegressor_predict = {k: v for k, v in pms_AdaBoostRegressor_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostRegressor_score = {k: v for k, v in pms_AdaBoostRegressor_score.items() if v is not None}`
 
@@ -320,13 +289,13 @@ pms_AdaBoostRegressor_score = {k: v for k, v in pms_AdaBoostRegressor_score.item
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -344,9 +313,7 @@ pms_AdaBoostRegressor_score = {k: v for k, v in pms_AdaBoostRegressor_score.item
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_AdaBoostRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_AdaBoostRegressor_set_fit_request = {k: v for k, v in pms_AdaBoostRegressor_set_fit_request.items() if v is not None}`
 
@@ -362,13 +329,13 @@ pms_AdaBoostRegressor_set_fit_request = {k: v for k, v in pms_AdaBoostRegressor_
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -386,9 +353,7 @@ pms_AdaBoostRegressor_set_fit_request = {k: v for k, v in pms_AdaBoostRegressor_
 
     // set up method params
     await this._py
-      .ex`pms_AdaBoostRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_AdaBoostRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_AdaBoostRegressor_set_score_request = {k: v for k, v in pms_AdaBoostRegressor_set_score_request.items() if v is not None}`
 
@@ -427,9 +392,8 @@ pms_AdaBoostRegressor_set_score_request = {k: v for k, v in pms_AdaBoostRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_staged_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_staged_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_AdaBoostRegressor_staged_predict = {k: v for k, v in pms_AdaBoostRegressor_staged_predict.items() if v is not None}`
 
@@ -476,13 +440,8 @@ pms_AdaBoostRegressor_staged_predict = {k: v for k, v in pms_AdaBoostRegressor_s
     }
 
     // set up method params
-    await this._py.ex`pms_AdaBoostRegressor_staged_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_AdaBoostRegressor_staged_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_AdaBoostRegressor_staged_score = {k: v for k, v in pms_AdaBoostRegressor_staged_score.items() if v is not None}`
 
@@ -604,7 +563,7 @@ pms_AdaBoostRegressor_staged_score = {k: v for k, v in pms_AdaBoostRegressor_sta
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -631,7 +590,7 @@ pms_AdaBoostRegressor_staged_score = {k: v for k, v in pms_AdaBoostRegressor_sta
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   DET curve visualization.
 
-  It is recommend to use [`from\_estimator`](#sklearn.metrics.DetCurveDisplay.from_estimator "sklearn.metrics.DetCurveDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.DetCurveDisplay.from_predictions "sklearn.metrics.DetCurveDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
+  It is recommend to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.DetCurveDisplay.from_estimator "sklearn.metrics.DetCurveDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.DetCurveDisplay.from_predictions "sklearn.metrics.DetCurveDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
 
-  Read more in the [User Guide](../../visualizations.html#visualizations).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DetCurveDisplay.html)
  */
@@ -83,13 +83,8 @@ except NameError: bridgeDetCurveDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DetCurveDisplay = {'fpr': np.array(${
-      this.opts['fpr'] ?? undefined
-    }) if ${this.opts['fpr'] !== undefined} else None, 'fnr': np.array(${
-      this.opts['fnr'] ?? undefined
-    }) if ${this.opts['fnr'] !== undefined} else None, 'estimator_name': ${
-      this.opts['estimator_name'] ?? undefined
-    }, 'pos_label': ${this.opts['pos_label'] ?? undefined}}
+    await this._py
+      .ex`ctor_DetCurveDisplay = {'fpr': np.array(${this.opts['fpr'] ?? undefined}) if ${this.opts['fpr'] !== undefined} else None, 'fnr': np.array(${this.opts['fnr'] ?? undefined}) if ${this.opts['fnr'] !== undefined} else None, 'estimator_name': ${this.opts['estimator_name'] ?? undefined}, 'pos_label': ${this.opts['pos_label'] ?? undefined}}
 
 ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is not None}`
 
@@ -121,11 +116,11 @@ ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is no
   /**
     Plot DET curve given an estimator and data.
 
-    Read more in the [User Guide](../../visualizations.html#visualizations).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_estimator(opts: {
     /**
-      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+      Fitted classifier or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
      */
     estimator?: any
 
@@ -145,12 +140,12 @@ ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is no
     sample_weight?: ArrayLike
 
     /**
-      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the predicted target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
+      Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) or [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) as the predicted target response. If set to ‘auto’, [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) is tried next.
      */
     response_method?: 'decision_function' | 'auto’} default=’auto'
 
     /**
-      The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
+      The label of the positive class. When `pos_label=None`, if `y_true` is in {-1, 1} or {0, 1}, `pos_label` is set to 1, otherwise an error will be raised.
      */
     pos_label?: number | boolean | string
 
@@ -180,23 +175,8 @@ ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_DetCurveDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${
-      opts['sample_weight'] !== undefined
-    } else None, 'response_method': ${
-      opts['response_method'] ?? undefined
-    }, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${
-      opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DetCurveDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'response_method': ${opts['response_method'] ?? undefined}, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_estimator.items() if v is not None}`
 
@@ -212,7 +192,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
   /**
     Plot the DET curve given the true and predicted labels.
 
-    Read more in the [User Guide](../../visualizations.html#visualizations).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_predictions(opts: {
     /**
@@ -221,7 +201,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
     y_true?: ArrayLike
 
     /**
-      Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by `decision\_function` on some classifiers).
+      Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by `decision_function` on some classifiers).
      */
     y_pred?: ArrayLike
 
@@ -231,7 +211,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
     sample_weight?: ArrayLike
 
     /**
-      The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
+      The label of the positive class. When `pos_label=None`, if `y_true` is in {-1, 1} or {0, 1}, `pos_label` is set to 1, otherwise an error will be raised.
      */
     pos_label?: number | boolean | string
 
@@ -262,19 +242,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
 
     // set up method params
     await this._py
-      .ex`pms_DetCurveDisplay_from_predictions = {'y_true': np.array(${
-      opts['y_true'] ?? undefined
-    }) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${
-      opts['y_pred'] ?? undefined
-    }) if ${
-      opts['y_pred'] !== undefined
-    } else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${
-      opts['pos_label'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'kwargs': ${opts['kwargs'] ?? undefined}}
+      .ex`pms_DetCurveDisplay_from_predictions = {'y_true': np.array(${opts['y_true'] ?? undefined}) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${opts['y_pred'] ?? undefined}) if ${opts['y_pred'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_DetCurveDisplay_from_predictions = {k: v for k, v in pms_DetCurveDisplay_from_predictions.items() if v is not None}`
 
@@ -297,7 +265,7 @@ pms_DetCurveDisplay_from_predictions = {k: v for k, v in pms_DetCurveDisplay_fro
     ax?: any
 
     /**
-      Name of DET curve for labeling. If `undefined`, use `estimator\_name` if it is not `undefined`, otherwise no labeling is shown.
+      Name of DET curve for labeling. If `undefined`, use `estimator_name` if it is not `undefined`, otherwise no labeling is shown.
      */
     name?: string
 
@@ -315,11 +283,8 @@ pms_DetCurveDisplay_from_predictions = {k: v for k, v in pms_DetCurveDisplay_fro
     }
 
     // set up method params
-    await this._py.ex`pms_DetCurveDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DetCurveDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'name': ${opts['name'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_DetCurveDisplay_plot = {k: v for k, v in pms_DetCurveDisplay_plot.items() if v is not None}`
 

@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   It can also be used as a pre-processing step for estimators that consider boolean random variables (e.g. modelled using the Bernoulli distribution in a Bayesian setting).
 
-  Read more in the [User Guide](../preprocessing.html#preprocessing-binarization).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../preprocessing.html#preprocessing-binarization).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html)
  */
@@ -81,9 +81,8 @@ except NameError: bridgeBinarizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Binarizer = {'threshold': ${
-      this.opts['threshold'] ?? undefined
-    }, 'copy': ${this.opts['copy'] ?? undefined}}
+    await this._py
+      .ex`ctor_Binarizer = {'threshold': ${this.opts['threshold'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_Binarizer = {k: v for k, v in ctor_Binarizer.items() if v is not None}`
 
@@ -136,9 +135,8 @@ ctor_Binarizer = {k: v for k, v in ctor_Binarizer.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_Binarizer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_Binarizer_fit = {k: v for k, v in pms_Binarizer_fit.items() if v is not None}`
 
@@ -154,7 +152,7 @@ pms_Binarizer_fit = {k: v for k, v in pms_Binarizer_fit.items() if v is not None
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -181,13 +179,8 @@ pms_Binarizer_fit = {k: v for k, v in pms_Binarizer_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_Binarizer_fit_transform = {k: v for k, v in pms_Binarizer_fit_transform.items() if v is not None}`
 
@@ -221,9 +214,7 @@ pms_Binarizer_fit_transform = {k: v for k, v in pms_Binarizer_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_Binarizer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_Binarizer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_Binarizer_get_feature_names_out = {k: v for k, v in pms_Binarizer_get_feature_names_out.items() if v is not None}`
 
@@ -239,11 +230,11 @@ pms_Binarizer_get_feature_names_out = {k: v for k, v in pms_Binarizer_get_featur
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -258,9 +249,8 @@ pms_Binarizer_get_feature_names_out = {k: v for k, v in pms_Binarizer_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Binarizer_get_metadata_routing = {k: v for k, v in pms_Binarizer_get_metadata_routing.items() if v is not None}`
 
@@ -276,13 +266,13 @@ pms_Binarizer_get_metadata_routing = {k: v for k, v in pms_Binarizer_get_metadat
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Binarizer instance has already been disposed')
@@ -293,9 +283,8 @@ pms_Binarizer_get_metadata_routing = {k: v for k, v in pms_Binarizer_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_Binarizer_set_output = {k: v for k, v in pms_Binarizer_set_output.items() if v is not None}`
 
@@ -311,7 +300,7 @@ pms_Binarizer_set_output = {k: v for k, v in pms_Binarizer_set_output.items() if
   /**
     Request metadata passed to the `transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
@@ -332,9 +321,8 @@ pms_Binarizer_set_output = {k: v for k, v in pms_Binarizer_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_set_transform_request = {'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_set_transform_request = {'copy': ${opts['copy'] ?? undefined}}
 
 pms_Binarizer_set_transform_request = {k: v for k, v in pms_Binarizer_set_transform_request.items() if v is not None}`
 
@@ -370,11 +358,8 @@ pms_Binarizer_set_transform_request = {k: v for k, v in pms_Binarizer_set_transf
     }
 
     // set up method params
-    await this._py.ex`pms_Binarizer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'copy': ${
-      opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Binarizer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'copy': ${opts['copy'] ?? undefined}}
 
 pms_Binarizer_transform = {k: v for k, v in pms_Binarizer_transform.items() if v is not None}`
 
@@ -388,7 +373,7 @@ pms_Binarizer_transform = {k: v for k, v in pms_Binarizer_transform.items() if v
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -413,7 +398,7 @@ pms_Binarizer_transform = {k: v for k, v in pms_Binarizer_transform.items() if v
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

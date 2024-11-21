@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Bin continuous data into intervals.
 
-  Read more in the [User Guide](../preprocessing.html#preprocessing-discretization).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../preprocessing.html#preprocessing-discretization).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KBinsDiscretizer.html)
  */
@@ -22,7 +22,7 @@ export class KBinsDiscretizer {
 
   constructor(opts?: {
     /**
-      The number of bins to produce. Raises ValueError if `n\_bins < 2`.
+      The number of bins to produce. Raises ValueError if `n_bins < 2`.
 
       @defaultValue `5`
      */
@@ -48,14 +48,14 @@ export class KBinsDiscretizer {
     dtype?: any
 
     /**
-      Maximum number of samples, used to fit the model, for computational efficiency. Defaults to 200\_000 when `strategy='quantile'` and to `undefined` when `strategy='uniform'` or `strategy='kmeans'`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
+      Maximum number of samples, used to fit the model, for computational efficiency. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
 
-      @defaultValue `'warn'`
+      @defaultValue `200`
      */
     subsample?: number
 
     /**
-      Determines random number generation for subsampling. Pass an int for reproducible results across multiple function calls. See the `subsample` parameter for more details. See [Glossary](../../glossary.html#term-random_state).
+      Determines random number generation for subsampling. Pass an int for reproducible results across multiple function calls. See the `subsample` parameter for more details. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -101,15 +101,8 @@ except NameError: bridgeKBinsDiscretizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KBinsDiscretizer = {'n_bins': np.array(${
-      this.opts['n_bins'] ?? undefined
-    }) if ${this.opts['n_bins'] !== undefined} else None, 'encode': ${
-      this.opts['encode'] ?? undefined
-    }, 'strategy': ${this.opts['strategy'] ?? undefined}, 'dtype': ${
-      this.opts['dtype'] ?? undefined
-    }, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_KBinsDiscretizer = {'n_bins': np.array(${this.opts['n_bins'] ?? undefined}) if ${this.opts['n_bins'] !== undefined} else None, 'encode': ${this.opts['encode'] ?? undefined}, 'strategy': ${this.opts['strategy'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is not None}`
 
@@ -148,12 +141,12 @@ ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is 
     X?: ArrayLike[]
 
     /**
-      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
      */
     y?: any
 
     /**
-      Contains weight values to be associated with each sample. Only possible when `strategy` is set to `"quantile"`.
+      Contains weight values to be associated with each sample. Cannot be used when `strategy` is set to `"uniform"`.
      */
     sample_weight?: NDArray
   }): Promise<any> {
@@ -168,13 +161,8 @@ ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KBinsDiscretizer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if v is not None}`
 
@@ -190,7 +178,7 @@ pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -221,13 +209,8 @@ pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KBinsDiscretizer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_KBinsDiscretizer_fit_transform = {k: v for k, v in pms_KBinsDiscretizer_fit_transform.items() if v is not None}`
 
@@ -263,9 +246,7 @@ pms_KBinsDiscretizer_fit_transform = {k: v for k, v in pms_KBinsDiscretizer_fit_
 
     // set up method params
     await this._py
-      .ex`pms_KBinsDiscretizer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_KBinsDiscretizer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_KBinsDiscretizer_get_feature_names_out = {k: v for k, v in pms_KBinsDiscretizer_get_feature_names_out.items() if v is not None}`
 
@@ -281,11 +262,11 @@ pms_KBinsDiscretizer_get_feature_names_out = {k: v for k, v in pms_KBinsDiscreti
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -302,9 +283,8 @@ pms_KBinsDiscretizer_get_feature_names_out = {k: v for k, v in pms_KBinsDiscreti
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KBinsDiscretizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KBinsDiscretizer_get_metadata_routing = {k: v for k, v in pms_KBinsDiscretizer_get_metadata_routing.items() if v is not None}`
 
@@ -326,6 +306,11 @@ pms_KBinsDiscretizer_get_metadata_routing = {k: v for k, v in pms_KBinsDiscretiz
     /**
       Transformed data in the binned space.
      */
+    X?: ArrayLike[]
+
+    /**
+      Transformed data in the binned space.
+     */
     Xt?: ArrayLike[]
   }): Promise<NDArray> {
     if (this._isDisposed) {
@@ -342,9 +327,7 @@ pms_KBinsDiscretizer_get_metadata_routing = {k: v for k, v in pms_KBinsDiscretiz
 
     // set up method params
     await this._py
-      .ex`pms_KBinsDiscretizer_inverse_transform = {'Xt': np.array(${
-      opts['Xt'] ?? undefined
-    }) if ${opts['Xt'] !== undefined} else None}
+      .ex`pms_KBinsDiscretizer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Xt': np.array(${opts['Xt'] ?? undefined}) if ${opts['Xt'] !== undefined} else None}
 
 pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_inverse_transform.items() if v is not None}`
 
@@ -360,13 +343,13 @@ pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -384,9 +367,7 @@ pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_
 
     // set up method params
     await this._py
-      .ex`pms_KBinsDiscretizer_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_KBinsDiscretizer_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KBinsDiscretizer_set_fit_request = {k: v for k, v in pms_KBinsDiscretizer_set_fit_request.items() if v is not None}`
 
@@ -402,13 +383,13 @@ pms_KBinsDiscretizer_set_fit_request = {k: v for k, v in pms_KBinsDiscretizer_se
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -421,9 +402,8 @@ pms_KBinsDiscretizer_set_fit_request = {k: v for k, v in pms_KBinsDiscretizer_se
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KBinsDiscretizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_KBinsDiscretizer_set_output = {k: v for k, v in pms_KBinsDiscretizer_set_output.items() if v is not None}`
 
@@ -456,9 +436,8 @@ pms_KBinsDiscretizer_set_output = {k: v for k, v in pms_KBinsDiscretizer_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_KBinsDiscretizer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KBinsDiscretizer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transform.items() if v is not None}`
 
@@ -472,7 +451,7 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
   }
 
   /**
-    The edges of each bin. Contain arrays of varying shapes `(n\_bins\_, )` Ignored features will have empty arrays.
+    The edges of each bin. Contain arrays of varying shapes `(n_bins_, )` Ignored features will have empty arrays.
    */
   get bin_edges_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -526,7 +505,7 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -553,7 +532,7 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

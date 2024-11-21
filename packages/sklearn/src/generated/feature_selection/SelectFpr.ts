@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   FPR test stands for `false` Positive Rate test. It controls the total amount of false detections.
 
-  Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_selection.html#univariate-feature-selection).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFpr.html)
  */
@@ -24,7 +24,7 @@ export class SelectFpr {
 
   constructor(opts?: {
     /**
-      Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
+      Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). Default is f_classif (see below “See Also”). The default function only works with classification tasks.
      */
     score_func?: any
 
@@ -75,9 +75,8 @@ except NameError: bridgeSelectFpr = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectFpr = {'score_func': ${
-      this.opts['score_func'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelectFpr = {'score_func': ${this.opts['score_func'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}}
 
 ctor_SelectFpr = {k: v for k, v in ctor_SelectFpr.items() if v is not None}`
 
@@ -115,7 +114,7 @@ ctor_SelectFpr = {k: v for k, v in ctor_SelectFpr.items() if v is not None}`
     X?: ArrayLike[]
 
     /**
-      The target values (class labels in classification, real numbers in regression).
+      The target values (class labels in classification, real numbers in regression). If the selector is unsupervised then `y` can be set to `undefined`.
      */
     y?: ArrayLike
   }): Promise<any> {
@@ -128,11 +127,8 @@ ctor_SelectFpr = {k: v for k, v in ctor_SelectFpr.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFpr_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFpr_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SelectFpr_fit = {k: v for k, v in pms_SelectFpr_fit.items() if v is not None}`
 
@@ -148,7 +144,7 @@ pms_SelectFpr_fit = {k: v for k, v in pms_SelectFpr_fit.items() if v is not None
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -175,13 +171,8 @@ pms_SelectFpr_fit = {k: v for k, v in pms_SelectFpr_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFpr_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFpr_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectFpr_fit_transform = {k: v for k, v in pms_SelectFpr_fit_transform.items() if v is not None}`
 
@@ -215,9 +206,7 @@ pms_SelectFpr_fit_transform = {k: v for k, v in pms_SelectFpr_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_SelectFpr_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectFpr_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectFpr_get_feature_names_out = {k: v for k, v in pms_SelectFpr_get_feature_names_out.items() if v is not None}`
 
@@ -233,11 +222,11 @@ pms_SelectFpr_get_feature_names_out = {k: v for k, v in pms_SelectFpr_get_featur
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -252,9 +241,8 @@ pms_SelectFpr_get_feature_names_out = {k: v for k, v in pms_SelectFpr_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFpr_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFpr_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SelectFpr_get_metadata_routing = {k: v for k, v in pms_SelectFpr_get_metadata_routing.items() if v is not None}`
 
@@ -287,9 +275,8 @@ pms_SelectFpr_get_metadata_routing = {k: v for k, v in pms_SelectFpr_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFpr_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFpr_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectFpr_get_support = {k: v for k, v in pms_SelectFpr_get_support.items() if v is not None}`
 
@@ -320,9 +307,8 @@ pms_SelectFpr_get_support = {k: v for k, v in pms_SelectFpr_get_support.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFpr_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFpr_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFpr_inverse_transform = {k: v for k, v in pms_SelectFpr_inverse_transform.items() if v is not None}`
 
@@ -338,13 +324,13 @@ pms_SelectFpr_inverse_transform = {k: v for k, v in pms_SelectFpr_inverse_transf
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectFpr instance has already been disposed')
@@ -355,9 +341,8 @@ pms_SelectFpr_inverse_transform = {k: v for k, v in pms_SelectFpr_inverse_transf
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFpr_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFpr_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectFpr_set_output = {k: v for k, v in pms_SelectFpr_set_output.items() if v is not None}`
 
@@ -388,9 +373,8 @@ pms_SelectFpr_set_output = {k: v for k, v in pms_SelectFpr_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFpr_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFpr_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFpr_transform = {k: v for k, v in pms_SelectFpr_transform.items() if v is not None}`
 
@@ -450,7 +434,7 @@ pms_SelectFpr_transform = {k: v for k, v in pms_SelectFpr_transform.items() if v
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -475,7 +459,7 @@ pms_SelectFpr_transform = {k: v for k, v in pms_SelectFpr_transform.items() if v
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

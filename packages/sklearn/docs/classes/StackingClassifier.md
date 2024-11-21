@@ -1,559 +1,526 @@
-# StackingClassifier
+# Class: StackingClassifier
 
 Stack of estimators with a final classifier.
 
 Stacked generalization consists in stacking the output of individual estimator and use a classifier to compute the final prediction. Stacking allows to use the strength of each individual estimator by using their output as input of a final estimator.
 
-Note that `estimators\_` are fitted on the full `X` while `final\_estimator\_` is trained using cross-validated predictions of the base estimators using `cross\_val\_predict`.
+Note that `estimators_` are fitted on the full `X` while `final_estimator_` is trained using cross-validated predictions of the base estimators using `cross_val_predict`.
 
-Read more in the [User Guide](../ensemble.html#stacking).
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#stacking).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingClassifier.html)
 
 ## Constructors
 
-## constructor()
+### new StackingClassifier()
 
-### Signature
+> **new StackingClassifier**(`opts`?): [`StackingClassifier`](StackingClassifier.md)
 
-```ts
-new StackingClassifier(opts?: object): StackingClassifier;
-```
+#### Parameters
 
-### Parameters
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.cv`? | `number` \| `"prefit"` | Determines the cross-validation splitting strategy used in `cross_val_predict` to train `final_estimator`. Possible inputs for cv are: |
+| `opts.estimators`? | `any` | Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set_params`. The type of estimator is generally expected to be a classifier. However, one can pass a regressor for some use case (e.g. ordinal regression). |
+| `opts.final_estimator`? | `any` | A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression"). |
+| `opts.n_jobs`? | `number` | The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel_backend` context. -1 means using all processors. See Glossary for more details. |
+| `opts.passthrough`? | `boolean` | When `false`, only the predictions of estimators will be used as training data for `final_estimator`. When `true`, the `final_estimator` is trained on the predictions as well as the original training data. |
+| `opts.stack_method`? | `"auto"` \| `"predict_proba"` \| `"decision_function"` \| `"predict"` | Methods called for each base estimator. It can be: |
+| `opts.verbose`? | `number` | Verbosity level. |
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.cv?` | `number` \| `"prefit"` | Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are: |
-| `opts.estimators?` | `any` | Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.  The type of estimator is generally expected to be a classifier. However, one can pass a regressor for some use case (e.g. ordinal regression). |
-| `opts.final_estimator?` | `any` | A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression"). |
-| `opts.n_jobs?` | `number` | The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details. |
-| `opts.passthrough?` | `boolean` | When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.  `Default Value`  `false` |
-| `opts.stack_method?` | `"auto"` \| `"predict_proba"` \| `"decision_function"` \| `"predict"` | Methods called for each base estimator. It can be:  `Default Value`  `'auto'` |
-| `opts.verbose?` | `number` | Verbosity level.  `Default Value`  `0` |
-
-### Returns
+#### Returns
 
 [`StackingClassifier`](StackingClassifier.md)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L27)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L27)
+
+## Properties
+
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/ensemble/StackingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/ensemble/StackingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/ensemble/StackingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L23) |
+| `id` | `string` | `undefined` | [generated/ensemble/StackingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/ensemble/StackingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L21) |
+
+## Accessors
+
+### classes\_
+
+#### Get Signature
+
+> **get** **classes\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+Class labels.
+
+##### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L615)
+
+***
+
+### estimators\_
+
+#### Get Signature
+
+> **get** **estimators\_**(): `Promise`\<`any`\>
+
+The elements of the `estimators` parameter, having been fitted on the training data. If an estimator has been set to `'drop'`, it will not appear in `estimators_`. When `cv="prefit"`, `estimators_` is set to `estimators` and is not fitted again.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L642)
+
+***
+
+### feature\_names\_in\_
+
+#### Get Signature
+
+> **get** **feature\_names\_in\_**(): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
+
+##### Returns
+
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L696)
+
+***
+
+### final\_estimator\_
+
+#### Get Signature
+
+> **get** **final\_estimator\_**(): `Promise`\<`any`\>
+
+The classifier which predicts given the output of `estimators_`.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L723)
+
+***
+
+### named\_estimators\_
+
+#### Get Signature
+
+> **get** **named\_estimators\_**(): `Promise`\<`any`\>
+
+Attribute to access any fitted sub-estimators by name.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L669)
+
+***
+
+### py
+
+#### Get Signature
+
+> **get** **py**(): `PythonBridge`
+
+##### Returns
+
+`PythonBridge`
+
+#### Set Signature
+
+> **set** **py**(`pythonBridge`): `void`
+
+##### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L75)
+
+***
+
+### stack\_method\_
+
+#### Get Signature
+
+> **get** **stack\_method\_**(): `Promise`\<`any`\>
+
+The method used by each base estimator.
+
+##### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:750](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L750)
 
 ## Methods
 
 ### decision\_function()
 
+> **decision\_function**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
 Decision function for samples in `X` using the final estimator.
-
-#### Signature
-
-```ts
-decision_function(opts: object): Promise<ArrayLike>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L155)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L148)
+
+***
 
 ### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L138)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L131)
+
+***
 
 ### fit()
 
+> **fit**(`opts`): `Promise`\<`any`\>
+
 Fit the estimators.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](../../glossary.html#term-fit). |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L193)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L184)
+
+***
 
 ### fit\_transform()
 
+> **fit\_transform**(`opts`): `Promise`\<`any`[]\>
+
 Fit to data, then transform it.
 
-Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<any[]>;
-```
+Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
-| `opts.fit_params?` | `any` | Additional fit parameters. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Input samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L244)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L230)
+
+***
 
 ### get\_feature\_names\_out()
 
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
 Get output feature names for transformation.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.input_features?` | `any` | Input features. The input feature names are only used when `passthrough` is `true`. |
+| `opts.input_features`? | `any` | Input features. The input feature names are only used when `passthrough` is `true`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L295)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L276)
+
+***
 
 ### get\_metadata\_routing()
 
-Get metadata routing of this object.
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
 
-Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Raise `NotImplementedError`.
 
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
+This estimator does not support metadata routing yet.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+| Parameter | Type |
+| ------ | ------ |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L335)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L314)
+
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `py` | `PythonBridge` |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L88)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L88)
+
+***
 
 ### predict()
 
+> **predict**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
+
 Predict target for X.
-
-#### Signature
-
-```ts
-predict(opts: object): Promise<ArrayLike>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.predict_params?` | `any` | Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator. |
+| `opts.predict_params`? | `any` | Parameters to the `predict` called by the `final_estimator`. Note that this may be used to return uncertainties from some estimators with `return_std` or `return_cov`. Be aware that it will only accounts for uncertainty in the final estimator. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L373)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L344)
+
+***
 
 ### predict\_proba()
 
+> **predict\_proba**(`opts`): `Promise`\<`any`[] \| [`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 Predict class probabilities for `X` using the final estimator.
-
-#### Signature
-
-```ts
-predict_proba(opts: object): Promise<any[] | ArrayLike[]>;
-```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 #### Returns
 
-`Promise`\<`any`[] \| [`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`any`[] \| [`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L415)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L383)
+
+***
 
 ### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
 
 Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. |
-| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
-| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True labels for `X`. |
+| `opts.sample_weight`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Sample weights. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md)[] | Test samples. |
+| `opts.y`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L454)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L421)
+
+***
 
 ### set\_fit\_request()
 
+> **set\_fit\_request**(`opts`): `Promise`\<`any`\>
+
 Request metadata passed to the `fit` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_fit_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `fit`. |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `fit`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L507)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L469)
+
+***
 
 ### set\_output()
 
+> **set\_output**(`opts`): `Promise`\<`any`\>
+
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
-
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
+See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L547)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L507)
+
+***
 
 ### set\_score\_request()
 
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
+
 Request metadata passed to the `score` method.
 
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
 The options for each parameter are:
 
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L586)
+#### Defined in
+
+[generated/ensemble/StackingClassifier.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L545)
+
+***
 
 ### transform()
 
+> **transform**(`opts`): `Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
+
 Return class labels or probabilities for X for each estimator.
 
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike[]>;
-```
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.X`? | [`ArrayLike`](../type-aliases/ArrayLike.md) | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<[`ArrayLike`](../type-aliases/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L624)
+#### Defined in
 
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L25)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L24)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L23)
-
-### id
-
-> `string`
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L20)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L21)
-
-## Accessors
-
-### classes\_
-
-Class labels.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L659)
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L659)
-
-### estimators\_
-
-The elements of the `estimators` parameter, having been fitted on the training data. If an estimator has been set to `'drop'`, it will not appear in `estimators\_`. When `cv="prefit"`, `estimators\_` is set to `estimators` and is not fitted again.
-
-#### Signature
-
-```ts
-estimators_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L686)
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L686)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L740)
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L740)
-
-### final\_estimator\_
-
-The classifier which predicts given the output of `estimators\_`.
-
-#### Signature
-
-```ts
-final_estimator_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L767)
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L767)
-
-### named\_estimators\_
-
-Attribute to access any fitted sub-estimators by name.
-
-#### Signature
-
-```ts
-named_estimators_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L713)
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L713)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L75)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L79)
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L75) [generated/ensemble/StackingClassifier.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L79)
-
-### stack\_method\_
-
-The method used by each base estimator.
-
-#### Signature
-
-```ts
-stack_method_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L794)
-
-Defined in:  [generated/ensemble/StackingClassifier.ts:794](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L794)
+[generated/ensemble/StackingClassifier.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L581)

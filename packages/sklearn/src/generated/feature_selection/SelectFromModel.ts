@@ -20,7 +20,7 @@ export class SelectFromModel {
 
   constructor(opts?: {
     /**
-      The base estimator from which the transformer is built. This can be both a fitted (if `prefit` is set to `true`) or a non-fitted estimator. The estimator should have a `feature\_importances\_` or `coef\_` attribute after fitting. Otherwise, the `importance\_getter` parameter should be used.
+      The base estimator from which the transformer is built. This can be both a fitted (if `prefit` is set to `true`) or a non-fitted estimator. The estimator should have a `feature_importances_` or `coef_` attribute after fitting. Otherwise, the `importance_getter` parameter should be used.
      */
     estimator?: any
 
@@ -30,14 +30,14 @@ export class SelectFromModel {
     threshold?: string | number
 
     /**
-      Whether a prefit model is expected to be passed into the constructor directly or not. If `true`, `estimator` must be a fitted estimator. If `false`, `estimator` is fitted and updated by calling `fit` and `partial\_fit`, respectively.
+      Whether a prefit model is expected to be passed into the constructor directly or not. If `true`, `estimator` must be a fitted estimator. If `false`, `estimator` is fitted and updated by calling `fit` and `partial_fit`, respectively.
 
       @defaultValue `false`
      */
     prefit?: boolean
 
     /**
-      Order of the norm used to filter the vectors of coefficients below `threshold` in the case where the `coef\_` attribute of the estimator is of dimension 2.
+      Order of the norm used to filter the vectors of coefficients below `threshold` in the case where the `coef_` attribute of the estimator is of dimension 2.
 
       @defaultValue `1`
      */
@@ -49,9 +49,9 @@ export class SelectFromModel {
     max_features?: number
 
     /**
-      If ‘auto’, uses the feature importance either through a `coef\_` attribute or `feature\_importances\_` attribute of estimator.
+      If ‘auto’, uses the feature importance either through a `coef_` attribute or `feature_importances_` attribute of estimator.
 
-      Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") with its last step named `clf`.
+      Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor_.coef_` in case of [`TransformedTargetRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named_steps.clf.feature_importances_` in case of [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") with its last step named `clf`.
 
       If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
 
@@ -99,13 +99,8 @@ except NameError: bridgeSelectFromModel = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SelectFromModel = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'threshold': ${this.opts['threshold'] ?? undefined}, 'prefit': ${
-      this.opts['prefit'] ?? undefined
-    }, 'norm_order': ${this.opts['norm_order'] ?? undefined}, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
+    await this._py
+      .ex`ctor_SelectFromModel = {'estimator': ${this.opts['estimator'] ?? undefined}, 'threshold': ${this.opts['threshold'] ?? undefined}, 'prefit': ${this.opts['prefit'] ?? undefined}, 'norm_order': ${this.opts['norm_order'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'importance_getter': ${this.opts['importance_getter'] ?? undefined}}
 
 ctor_SelectFromModel = {k: v for k, v in ctor_SelectFromModel.items() if v is not None}`
 
@@ -149,7 +144,7 @@ ctor_SelectFromModel = {k: v for k, v in ctor_SelectFromModel.items() if v is no
     y?: ArrayLike
 
     /**
-      Other estimator specific parameters.
+      If `enable_metadata_routing=False` (default):
      */
     fit_params?: any
   }): Promise<any> {
@@ -162,13 +157,8 @@ ctor_SelectFromModel = {k: v for k, v in ctor_SelectFromModel.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectFromModel_fit = {k: v for k, v in pms_SelectFromModel_fit.items() if v is not None}`
 
@@ -184,7 +174,7 @@ pms_SelectFromModel_fit = {k: v for k, v in pms_SelectFromModel_fit.items() if v
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -211,13 +201,8 @@ pms_SelectFromModel_fit = {k: v for k, v in pms_SelectFromModel_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SelectFromModel_fit_transform = {k: v for k, v in pms_SelectFromModel_fit_transform.items() if v is not None}`
 
@@ -251,9 +236,7 @@ pms_SelectFromModel_fit_transform = {k: v for k, v in pms_SelectFromModel_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_SelectFromModel_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SelectFromModel_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SelectFromModel_get_feature_names_out = {k: v for k, v in pms_SelectFromModel_get_feature_names_out.items() if v is not None}`
 
@@ -269,11 +252,11 @@ pms_SelectFromModel_get_feature_names_out = {k: v for k, v in pms_SelectFromMode
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -288,9 +271,8 @@ pms_SelectFromModel_get_feature_names_out = {k: v for k, v in pms_SelectFromMode
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SelectFromModel_get_metadata_routing = {k: v for k, v in pms_SelectFromModel_get_metadata_routing.items() if v is not None}`
 
@@ -323,9 +305,8 @@ pms_SelectFromModel_get_metadata_routing = {k: v for k, v in pms_SelectFromModel
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SelectFromModel_get_support = {k: v for k, v in pms_SelectFromModel_get_support.items() if v is not None}`
 
@@ -358,9 +339,8 @@ pms_SelectFromModel_get_support = {k: v for k, v in pms_SelectFromModel_get_supp
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFromModel_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFromModel_inverse_transform = {k: v for k, v in pms_SelectFromModel_inverse_transform.items() if v is not None}`
 
@@ -388,9 +368,9 @@ pms_SelectFromModel_inverse_transform = {k: v for k, v in pms_SelectFromModel_in
     y?: ArrayLike
 
     /**
-      Other estimator specific parameters.
+      If `enable_metadata_routing=False` (default):
      */
-    fit_params?: any
+    partial_fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectFromModel instance has already been disposed')
@@ -401,13 +381,8 @@ pms_SelectFromModel_inverse_transform = {k: v for k, v in pms_SelectFromModel_in
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'partial_fit_params': ${opts['partial_fit_params'] ?? undefined}}
 
 pms_SelectFromModel_partial_fit = {k: v for k, v in pms_SelectFromModel_partial_fit.items() if v is not None}`
 
@@ -423,13 +398,13 @@ pms_SelectFromModel_partial_fit = {k: v for k, v in pms_SelectFromModel_partial_
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectFromModel instance has already been disposed')
@@ -440,9 +415,8 @@ pms_SelectFromModel_partial_fit = {k: v for k, v in pms_SelectFromModel_partial_
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SelectFromModel_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SelectFromModel_set_output = {k: v for k, v in pms_SelectFromModel_set_output.items() if v is not None}`
 
@@ -473,9 +447,8 @@ pms_SelectFromModel_set_output = {k: v for k, v in pms_SelectFromModel_set_outpu
     }
 
     // set up method params
-    await this._py.ex`pms_SelectFromModel_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SelectFromModel_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.items() if v is not None}`
 
@@ -514,7 +487,7 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
   }
 
   /**
-    Maximum number of features calculated during [fit](../../glossary.html#term-fit). Only defined if the `max\_features` is not `undefined`.
+    Maximum number of features calculated during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the `max_features` is not `undefined`.
    */
   get max_features_(): Promise<number> {
     if (this._isDisposed) {
@@ -539,7 +512,7 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

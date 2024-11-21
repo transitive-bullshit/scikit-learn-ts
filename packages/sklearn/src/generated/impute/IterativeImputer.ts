@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A strategy for imputing missing values by modeling each feature with missing values as a function of other features in a round-robin fashion.
 
-  Read more in the [User Guide](../impute.html#iterative-imputer).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../impute.html#iterative-imputer).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html)
  */
@@ -24,24 +24,24 @@ export class IterativeImputer {
 
   constructor(opts?: {
     /**
-      The estimator to use at each step of the round-robin imputation. If `sample\_posterior=True`, the estimator must support `return\_std` in its `predict` method.
+      The estimator to use at each step of the round-robin imputation. If `sample_posterior=True`, the estimator must support `return_std` in its `predict` method.
      */
     estimator?: any
 
     /**
-      The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
+      The placeholder for the missing values. All occurrences of `missing_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
      */
     missing_values?: number
 
     /**
-      Whether to sample from the (Gaussian) predictive posterior of the fitted estimator for each imputation. Estimator must support `return\_std` in its `predict` method if set to `true`. Set to `true` if using `IterativeImputer` for multiple imputations.
+      Whether to sample from the (Gaussian) predictive posterior of the fitted estimator for each imputation. Estimator must support `return_std` in its `predict` method if set to `true`. Set to `true` if using `IterativeImputer` for multiple imputations.
 
       @defaultValue `false`
      */
     sample_posterior?: boolean
 
     /**
-      Maximum number of imputation rounds to perform before returning the imputations computed during the final round. A round is a single imputation of each feature with missing values. The stopping criterion is met once `max(abs(X\_t \- X\_{t-1}))/max(abs(X\[known\_vals\])) < tol`, where `X\_t` is `X` at iteration `t`. Note that early stopping is only applied if `sample\_posterior=False`.
+      Maximum number of imputation rounds to perform before returning the imputations computed during the final round. A round is a single imputation of each feature with missing values. The stopping criterion is met once `max(abs(X_t \- X_{t-1}))/max(abs(X\[known_vals\])) < tol`, where `X_t` is `X` at iteration `t`. Note that early stopping is only applied if `sample_posterior=False`.
 
       @defaultValue `10`
      */
@@ -60,14 +60,14 @@ export class IterativeImputer {
     n_nearest_features?: number
 
     /**
-      Which strategy to use to initialize the missing values. Same as the `strategy` parameter in [`SimpleImputer`](sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer "sklearn.impute.SimpleImputer").
+      Which strategy to use to initialize the missing values. Same as the `strategy` parameter in [`SimpleImputer`](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer "sklearn.impute.SimpleImputer").
 
       @defaultValue `'mean'`
      */
     initial_strategy?: 'mean' | 'median' | 'most_frequent' | 'constant'
 
     /**
-      When `strategy="constant"`, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `undefined`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types.
+      When `strategy="constant"`, `fill_value` is used to replace all occurrences of missing_values. For string or object data types, `fill_value` must be a string. If `undefined`, `fill_value` will be 0 when imputing numerical data and “missing_value” for strings or object data types.
      */
     fill_value?: string
 
@@ -84,19 +84,19 @@ export class IterativeImputer {
       | 'random'
 
     /**
-      If `true` then features with missing values during [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") which did not have any missing values during [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") will be imputed with the initial imputation method only. Set to `true` if you have many features with no missing values at both [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") and [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") time to save compute.
+      If `true` then features with missing values during [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") which did not have any missing values during [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") will be imputed with the initial imputation method only. Set to `true` if you have many features with no missing values at both [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") and [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") time to save compute.
 
       @defaultValue `false`
      */
     skip_complete?: boolean
 
     /**
-      Minimum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one min value for each feature. The default is `\-np.inf`.
+      Minimum possible imputed value. Broadcast to shape `(n_features,)` if scalar. If array-like, expects shape `(n_features,)`, one min value for each feature. The default is `\-np.inf`.
      */
     min_value?: number | ArrayLike
 
     /**
-      Maximum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one max value for each feature. The default is `np.inf`.
+      Maximum possible imputed value. Broadcast to shape `(n_features,)` if scalar. If array-like, expects shape `(n_features,)`, one max value for each feature. The default is `np.inf`.
      */
     max_value?: number | ArrayLike
 
@@ -108,19 +108,19 @@ export class IterativeImputer {
     verbose?: number
 
     /**
-      The seed of the pseudo random number generator to use. Randomizes selection of estimator features if `n\_nearest\_features` is not `undefined`, the `imputation\_order` if `random`, and the sampling from posterior if `sample\_posterior=True`. Use an integer for determinism. See [the Glossary](../../glossary.html#term-random_state).
+      The seed of the pseudo random number generator to use. Randomizes selection of estimator features if `n_nearest_features` is not `undefined`, the `imputation_order` if `random`, and the sampling from posterior if `sample_posterior=True`. Use an integer for determinism. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+      If `true`, a [`MissingIndicator`](https://scikit-learn.org/stable/modules/generated/sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
 
       @defaultValue `false`
      */
     add_indicator?: boolean
 
     /**
-      If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `initial\_strategy="constant"` in which case `fill\_value` will be used instead.
+      If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `initial_strategy="constant"` in which case `fill_value` will be used instead.
 
       @defaultValue `false`
      */
@@ -168,35 +168,8 @@ except NameError: bridgeIterativeImputer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_IterativeImputer = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'missing_values': ${
-      this.opts['missing_values'] ?? undefined
-    }, 'sample_posterior': ${
-      this.opts['sample_posterior'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'n_nearest_features': ${
-      this.opts['n_nearest_features'] ?? undefined
-    }, 'initial_strategy': ${
-      this.opts['initial_strategy'] ?? undefined
-    }, 'fill_value': ${
-      this.opts['fill_value'] ?? undefined
-    }, 'imputation_order': ${
-      this.opts['imputation_order'] ?? undefined
-    }, 'skip_complete': ${
-      this.opts['skip_complete'] ?? undefined
-    }, 'min_value': np.array(${this.opts['min_value'] ?? undefined}) if ${
-      this.opts['min_value'] !== undefined
-    } else None, 'max_value': np.array(${
-      this.opts['max_value'] ?? undefined
-    }) if ${this.opts['max_value'] !== undefined} else None, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'add_indicator': ${
-      this.opts['add_indicator'] ?? undefined
-    }, 'keep_empty_features': ${this.opts['keep_empty_features'] ?? undefined}}
+    await this._py
+      .ex`ctor_IterativeImputer = {'estimator': ${this.opts['estimator'] ?? undefined}, 'missing_values': ${this.opts['missing_values'] ?? undefined}, 'sample_posterior': ${this.opts['sample_posterior'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'n_nearest_features': ${this.opts['n_nearest_features'] ?? undefined}, 'initial_strategy': ${this.opts['initial_strategy'] ?? undefined}, 'fill_value': ${this.opts['fill_value'] ?? undefined}, 'imputation_order': ${this.opts['imputation_order'] ?? undefined}, 'skip_complete': ${this.opts['skip_complete'] ?? undefined}, 'min_value': np.array(${this.opts['min_value'] ?? undefined}) if ${this.opts['min_value'] !== undefined} else None, 'max_value': np.array(${this.opts['max_value'] ?? undefined}) if ${this.opts['max_value'] !== undefined} else None, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'add_indicator': ${this.opts['add_indicator'] ?? undefined}, 'keep_empty_features': ${this.opts['keep_empty_features'] ?? undefined}}
 
 ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is not None}`
 
@@ -230,7 +203,7 @@ ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is 
    */
   async fit(opts: {
     /**
-      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Input data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike
 
@@ -238,6 +211,11 @@ ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is 
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Parameters routed to the `fit` method of the sub-estimator via the metadata routing API.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -250,9 +228,8 @@ ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_IterativeImputer_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if v is not None}`
 
@@ -270,7 +247,7 @@ pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if
    */
   async fit_transform(opts: {
     /**
-      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Input data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike
 
@@ -278,6 +255,11 @@ pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Parameters routed to the `fit` method of the sub-estimator via the metadata routing API.
+     */
+    params?: any
   }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
@@ -292,9 +274,8 @@ pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_fit_transform = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_IterativeImputer_fit_transform = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_IterativeImputer_fit_transform = {k: v for k, v in pms_IterativeImputer_fit_transform.items() if v is not None}`
 
@@ -330,9 +311,7 @@ pms_IterativeImputer_fit_transform = {k: v for k, v in pms_IterativeImputer_fit_
 
     // set up method params
     await this._py
-      .ex`pms_IterativeImputer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_IterativeImputer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImputer_get_feature_names_out.items() if v is not None}`
 
@@ -348,11 +327,11 @@ pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImpu
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -369,9 +348,8 @@ pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImpu
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IterativeImputer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_IterativeImputer_get_metadata_routing = {k: v for k, v in pms_IterativeImputer_get_metadata_routing.items() if v is not None}`
 
@@ -387,13 +365,13 @@ pms_IterativeImputer_get_metadata_routing = {k: v for k, v in pms_IterativeImput
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -406,9 +384,8 @@ pms_IterativeImputer_get_metadata_routing = {k: v for k, v in pms_IterativeImput
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IterativeImputer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_IterativeImputer_set_output = {k: v for k, v in pms_IterativeImputer_set_output.items() if v is not None}`
 
@@ -424,7 +401,7 @@ pms_IterativeImputer_set_output = {k: v for k, v in pms_IterativeImputer_set_out
   /**
     Impute all missing values in `X`.
 
-    Note that this is stochastic, and that if `random\_state` is not fixed, repeated calls, or permuted input, results will differ.
+    Note that this is stochastic, and that if `random_state` is not fixed, repeated calls, or permuted input, results will differ.
    */
   async transform(opts: {
     /**
@@ -443,9 +420,8 @@ pms_IterativeImputer_set_output = {k: v for k, v in pms_IterativeImputer_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_IterativeImputer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IterativeImputer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transform.items() if v is not None}`
 
@@ -486,7 +462,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Each tuple has `(feat\_idx, neighbor\_feat\_idx, estimator)`, where `feat\_idx` is the current feature to be imputed, `neighbor\_feat\_idx` is the array of other features used to impute the current feature, and `estimator` is the trained estimator used for the imputation. Length is `self.n\_features\_with\_missing\_ \* self.n\_iter\_`.
+    Each tuple has `(feat_idx, neighbor_feat_idx, estimator)`, where `feat_idx` is the current feature to be imputed, `neighbor_feat_idx` is the array of other features used to impute the current feature, and `estimator` is the trained estimator used for the imputation. Length is `self.n_features_with_missing_ \* self.n_iter_`.
    */
   get imputation_sequence_(): Promise<any> {
     if (this._isDisposed) {
@@ -513,7 +489,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Number of iteration rounds that occurred. Will be less than `self.max\_iter` if early stopping criterion was reached.
+    Number of iteration rounds that occurred. Will be less than `self.max_iter` if early stopping criterion was reached.
    */
   get n_iter_(): Promise<number> {
     if (this._isDisposed) {
@@ -540,7 +516,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -567,7 +543,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -621,7 +597,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Indicator used to add binary indicators for missing values. `undefined` if `add\_indicator=False`.
+    Indicator used to add binary indicators for missing values. `undefined` if `add_indicator=False`.
    */
   get indicator_(): Promise<any> {
     if (this._isDisposed) {

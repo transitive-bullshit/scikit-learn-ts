@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The implementation is based on libsvm.
 
-  Read more in the [User Guide](../svm.html#svm-classification).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#svm-classification).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html)
  */
@@ -26,14 +26,14 @@ export class NuSVC {
 
   constructor(opts?: {
     /**
-      An upper bound on the fraction of margin errors (see [User Guide](../svm.html#nu-svc)) and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\].
+      An upper bound on the fraction of margin errors (see [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#nu-svc)) and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\].
 
       @defaultValue `0.5`
      */
     nu?: number
 
     /**
-      Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix. For an intuitive visualization of different kernel types see [Plot classification boundaries with different SVM Kernels](../../auto_examples/svm/plot_svm_kernels.html#sphx-glr-auto-examples-svm-plot-svm-kernels-py).
+      Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix. For an intuitive visualization of different kernel types see [Plot classification boundaries with different SVM Kernels](https://scikit-learn.org/stable/modules/generated/../../auto_examples/svm/plot_svm_kernels.html#sphx-glr-auto-examples-svm-plot-svm-kernels-py).
 
       @defaultValue `'rbf'`
      */
@@ -61,14 +61,14 @@ export class NuSVC {
     coef0?: number
 
     /**
-      Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
+      Whether to use the shrinking heuristic. See the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#shrinking-svm).
 
       @defaultValue `true`
      */
     shrinking?: boolean
 
     /**
-      Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict\_proba` may be inconsistent with `predict`. Read more in the [User Guide](../svm.html#scores-probabilities).
+      Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict_proba` may be inconsistent with `predict`. Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#scores-probabilities).
 
       @defaultValue `false`
      */
@@ -89,7 +89,7 @@ export class NuSVC {
     cache_size?: number
 
     /**
-      Set the parameter C of class i to class\_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies as `n\_samples / (n\_classes \* np.bincount(y))`.
+      Set the parameter C of class i to class_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies as `n_samples / (n_classes \* np.bincount(y))`.
      */
     class_weight?: any | 'balanced'
 
@@ -108,21 +108,21 @@ export class NuSVC {
     max_iter?: number
 
     /**
-      Whether to return a one-vs-rest (‘ovr’) decision function of shape (n\_samples, n\_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n\_samples, n\_classes \* (n\_classes - 1) / 2). However, one-vs-one (‘ovo’) is always used as multi-class strategy. The parameter is ignored for binary classification.
+      Whether to return a one-vs-rest (‘ovr’) decision function of shape (n_samples, n_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n_samples, n_classes \* (n_classes - 1) / 2). However, one-vs-one (‘ovo’) is always used as multi-class strategy. The parameter is ignored for binary classification.
 
       @defaultValue `'ovr'`
      */
     decision_function_shape?: 'ovo' | 'ovr'
 
     /**
-      If true, `decision\_function\_shape='ovr'`, and number of classes > 2, [predict](../../glossary.html#term-predict) will break ties according to the confidence values of [decision\_function](../../glossary.html#term-decision_function); otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
+      If true, `decision_function_shape='ovr'`, and number of classes > 2, [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict) will break ties according to the confidence values of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function); otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
 
       @defaultValue `false`
      */
     break_ties?: boolean
 
     /**
-      Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -166,25 +166,8 @@ except NameError: bridgeNuSVC = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NuSVC = {'nu': ${
-      this.opts['nu'] ?? undefined
-    }, 'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${
-      this.opts['degree'] ?? undefined
-    }, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${
-      this.opts['coef0'] ?? undefined
-    }, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'probability': ${
-      this.opts['probability'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${
-      this.opts['cache_size'] ?? undefined
-    }, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'decision_function_shape': ${
-      this.opts['decision_function_shape'] ?? undefined
-    }, 'break_ties': ${this.opts['break_ties'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_NuSVC = {'nu': ${this.opts['nu'] ?? undefined}, 'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'probability': ${this.opts['probability'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'decision_function_shape': ${this.opts['decision_function_shape'] ?? undefined}, 'break_ties': ${this.opts['break_ties'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_NuSVC = {k: v for k, v in ctor_NuSVC.items() if v is not None}`
 
@@ -230,9 +213,8 @@ ctor_NuSVC = {k: v for k, v in ctor_NuSVC.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_decision_function = {k: v for k, v in pms_NuSVC_decision_function.items() if v is not None}`
 
@@ -250,7 +232,7 @@ pms_NuSVC_decision_function = {k: v for k, v in pms_NuSVC_decision_function.item
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n_samples, n_samples).
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -273,13 +255,8 @@ pms_NuSVC_decision_function = {k: v for k, v in pms_NuSVC_decision_function.item
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NuSVC_fit = {k: v for k, v in pms_NuSVC_fit.items() if v is not None}`
 
@@ -295,11 +272,11 @@ pms_NuSVC_fit = {k: v for k, v in pms_NuSVC_fit.items() if v is not None}`
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -312,9 +289,8 @@ pms_NuSVC_fit = {k: v for k, v in pms_NuSVC_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVC_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NuSVC_get_metadata_routing = {k: v for k, v in pms_NuSVC_get_metadata_routing.items() if v is not None}`
 
@@ -334,7 +310,7 @@ pms_NuSVC_get_metadata_routing = {k: v for k, v in pms_NuSVC_get_metadata_routin
    */
   async predict(opts: {
     /**
-      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+      For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -347,9 +323,8 @@ pms_NuSVC_get_metadata_routing = {k: v for k, v in pms_NuSVC_get_metadata_routin
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_predict = {k: v for k, v in pms_NuSVC_predict.items() if v is not None}`
 
@@ -369,7 +344,7 @@ pms_NuSVC_predict = {k: v for k, v in pms_NuSVC_predict.items() if v is not None
    */
   async predict_log_proba(opts: {
     /**
-      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+      For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
      */
     X?: ArrayLike[]
   }): Promise<NDArray[]> {
@@ -382,9 +357,8 @@ pms_NuSVC_predict = {k: v for k, v in pms_NuSVC_predict.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_predict_log_proba = {k: v for k, v in pms_NuSVC_predict_log_proba.items() if v is not None}`
 
@@ -404,7 +378,7 @@ pms_NuSVC_predict_log_proba = {k: v for k, v in pms_NuSVC_predict_log_proba.item
    */
   async predict_proba(opts: {
     /**
-      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+      For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
      */
     X?: ArrayLike[]
   }): Promise<NDArray[]> {
@@ -417,9 +391,8 @@ pms_NuSVC_predict_log_proba = {k: v for k, v in pms_NuSVC_predict_log_proba.item
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NuSVC_predict_proba = {k: v for k, v in pms_NuSVC_predict_proba.items() if v is not None}`
 
@@ -462,13 +435,8 @@ pms_NuSVC_predict_proba = {k: v for k, v in pms_NuSVC_predict_proba.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NuSVC_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
 
@@ -484,13 +452,13 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -503,9 +471,8 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVC_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NuSVC_set_fit_request = {k: v for k, v in pms_NuSVC_set_fit_request.items() if v is not None}`
 
@@ -521,13 +488,13 @@ pms_NuSVC_set_fit_request = {k: v for k, v in pms_NuSVC_set_fit_request.items() 
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -540,9 +507,8 @@ pms_NuSVC_set_fit_request = {k: v for k, v in pms_NuSVC_set_fit_request.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_NuSVC_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NuSVC_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NuSVC_set_score_request = {k: v for k, v in pms_NuSVC_set_score_request.items() if v is not None}`
 
@@ -556,7 +522,7 @@ pms_NuSVC_set_score_request = {k: v for k, v in pms_NuSVC_set_score_request.item
   }
 
   /**
-    Multipliers of parameter C of each class. Computed based on the `class\_weight` parameter.
+    Multipliers of parameter C of each class. Computed based on the `class_weight` parameter.
    */
   get class_weight_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -601,7 +567,7 @@ pms_NuSVC_set_score_request = {k: v for k, v in pms_NuSVC_set_score_request.item
   }
 
   /**
-    Dual coefficients of the support vector in the decision function (see [Mathematical formulation](../sgd.html#sgd-mathematical-formulation)), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the [multi-class section of the User Guide](../svm.html#svm-multi-class) for details.
+    Dual coefficients of the support vector in the decision function (see [Mathematical formulation](https://scikit-learn.org/stable/modules/generated/../sgd.html#sgd-mathematical-formulation)), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the [multi-class section of the User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#svm-multi-class) for details.
    */
   get dual_coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -670,7 +636,7 @@ pms_NuSVC_set_score_request = {k: v for k, v in pms_NuSVC_set_score_request.item
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -693,7 +659,7 @@ pms_NuSVC_set_score_request = {k: v for k, v in pms_NuSVC_set_score_request.item
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

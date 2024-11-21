@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Matern kernel.
 
-  The class of Matern kernels is a generalization of the [`RBF`](sklearn.gaussian_process.kernels.RBF.html#sklearn.gaussian_process.kernels.RBF "sklearn.gaussian_process.kernels.RBF"). It has an additional parameter \\(\\nu\\) which controls the smoothness of the resulting function. The smaller \\(\\nu\\), the less smooth the approximated function is. As \\(\\nu\\rightarrow\\infty\\), the kernel becomes equivalent to the [`RBF`](sklearn.gaussian_process.kernels.RBF.html#sklearn.gaussian_process.kernels.RBF "sklearn.gaussian_process.kernels.RBF") kernel. When \\(\\nu = 1/2\\), the Matérn kernel becomes identical to the absolute exponential kernel. Important intermediate values are \\(\\nu=1.5\\) (once differentiable functions) and \\(\\nu=2.5\\) (twice differentiable functions).
+  The class of Matern kernels is a generalization of the [`RBF`](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.RBF.html#sklearn.gaussian_process.kernels.RBF "sklearn.gaussian_process.kernels.RBF"). It has an additional parameter \\(\\nu\\) which controls the smoothness of the resulting function. The smaller \\(\\nu\\), the less smooth the approximated function is. As \\(\\nu\\rightarrow\\infty\\), the kernel becomes equivalent to the [`RBF`](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.RBF.html#sklearn.gaussian_process.kernels.RBF "sklearn.gaussian_process.kernels.RBF") kernel. When \\(\\nu = 1/2\\), the Matérn kernel becomes identical to the absolute exponential kernel. Important intermediate values are \\(\\nu=1.5\\) (once differentiable functions) and \\(\\nu=2.5\\) (twice differentiable functions).
 
   The kernel is given by:
 
@@ -31,7 +31,7 @@ export class Matern {
     length_scale?: number | NDArray
 
     /**
-      The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
+      The lower and upper bound on ‘length_scale’. If set to “fixed”, ‘length_scale’ cannot be changed during hyperparameter tuning.
      */
     length_scale_bounds?: 'fixed'
 
@@ -82,13 +82,8 @@ except NameError: bridgeMatern = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Matern = {'length_scale': np.array(${
-      this.opts['length_scale'] ?? undefined
-    }) if ${
-      this.opts['length_scale'] !== undefined
-    } else None, 'length_scale_bounds': ${
-      this.opts['length_scale_bounds'] ?? undefined
-    }, 'nu': ${this.opts['nu'] ?? undefined}}
+    await this._py
+      .ex`ctor_Matern = {'length_scale': np.array(${this.opts['length_scale'] ?? undefined}) if ${this.opts['length_scale'] !== undefined} else None, 'length_scale_bounds': ${this.opts['length_scale_bounds'] ?? undefined}, 'nu': ${this.opts['nu'] ?? undefined}}
 
 ctor_Matern = {k: v for k, v in ctor_Matern.items() if v is not None}`
 
@@ -146,13 +141,8 @@ ctor_Matern = {k: v for k, v in ctor_Matern.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Matern___call__ = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Matern___call__ = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}}
 
 pms_Matern___call__ = {k: v for k, v in pms_Matern___call__.items() if v is not None}`
 
@@ -183,9 +173,8 @@ pms_Matern___call__ = {k: v for k, v in pms_Matern___call__.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_Matern_clone_with_theta = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None}
+    await this._py
+      .ex`pms_Matern_clone_with_theta = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None}
 
 pms_Matern_clone_with_theta = {k: v for k, v in pms_Matern_clone_with_theta.items() if v is not None}`
 
@@ -218,9 +207,8 @@ pms_Matern_clone_with_theta = {k: v for k, v in pms_Matern_clone_with_theta.item
     }
 
     // set up method params
-    await this._py.ex`pms_Matern_diag = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Matern_diag = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Matern_diag = {k: v for k, v in pms_Matern_diag.items() if v is not None}`
 
@@ -257,47 +245,5 @@ pms_Matern_is_stationary = {k: v for k, v in pms_Matern_is_stationary.items() if
     // convert the result from python to node.js
     return this
       ._py`res_Matern_is_stationary.tolist() if hasattr(res_Matern_is_stationary, 'tolist') else res_Matern_is_stationary`
-  }
-
-  get anisotropic(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This Matern instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('Matern must call init() before accessing anisotropic')
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_Matern_anisotropic = bridgeMatern[${this.id}].anisotropic`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_Matern_anisotropic.tolist() if hasattr(attr_Matern_anisotropic, 'tolist') else attr_Matern_anisotropic`
-    })()
-  }
-
-  get hyperparameter_length_scale(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This Matern instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'Matern must call init() before accessing hyperparameter_length_scale'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_Matern_hyperparameter_length_scale = bridgeMatern[${this.id}].hyperparameter_length_scale`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_Matern_hyperparameter_length_scale.tolist() if hasattr(attr_Matern_hyperparameter_length_scale, 'tolist') else attr_Matern_hyperparameter_length_scale`
-    })()
   }
 }

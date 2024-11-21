@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Extracts patches from a collection of images.
 
-  Read more in the [User Guide](../feature_extraction.html#image-feature-extraction).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_extraction.html#image-feature-extraction).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.image.PatchExtractor.html)
  */
@@ -22,17 +22,17 @@ export class PatchExtractor {
 
   constructor(opts?: {
     /**
-      The dimensions of one patch. If set to `undefined`, the patch size will be automatically set to `(img\_height // 10, img\_width // 10)`, where `img\_height` and `img\_width` are the dimensions of the input images.
+      The dimensions of one patch. If set to `undefined`, the patch size will be automatically set to `(img_height // 10, img_width // 10)`, where `img_height` and `img_width` are the dimensions of the input images.
      */
     patch_size?: any
 
     /**
-      The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches. If set to `undefined`, extract all possible patches.
+      The maximum number of patches per image to extract. If `max_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches. If set to `undefined`, extract all possible patches.
      */
     max_patches?: number
 
     /**
-      Determines the random number generator used for random sampling when `max\_patches is not None`. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
+      Determines the random number generator used for random sampling when `max_patches is not None`. Use an int to make the randomness deterministic. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -76,11 +76,8 @@ except NameError: bridgePatchExtractor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PatchExtractor = {'patch_size': ${
-      this.opts['patch_size'] ?? undefined
-    }, 'max_patches': ${
-      this.opts['max_patches'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_PatchExtractor = {'patch_size': ${this.opts['patch_size'] ?? undefined}, 'max_patches': ${this.opts['max_patches'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_PatchExtractor = {k: v for k, v in ctor_PatchExtractor.items() if v is not None}`
 
@@ -116,7 +113,7 @@ ctor_PatchExtractor = {k: v for k, v in ctor_PatchExtractor.items() if v is not 
    */
   async fit(opts: {
     /**
-      Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n\_channels=3`.
+      Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n_channels=3`.
      */
     X?: NDArray[][]
 
@@ -134,9 +131,8 @@ ctor_PatchExtractor = {k: v for k, v in ctor_PatchExtractor.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PatchExtractor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v is not None}`
 
@@ -152,7 +148,7 @@ pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v i
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -179,13 +175,8 @@ pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PatchExtractor_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_PatchExtractor_fit_transform = {k: v for k, v in pms_PatchExtractor_fit_transform.items() if v is not None}`
 
@@ -201,11 +192,11 @@ pms_PatchExtractor_fit_transform = {k: v for k, v in pms_PatchExtractor_fit_tran
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -220,9 +211,8 @@ pms_PatchExtractor_fit_transform = {k: v for k, v in pms_PatchExtractor_fit_tran
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PatchExtractor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PatchExtractor_get_metadata_routing = {k: v for k, v in pms_PatchExtractor_get_metadata_routing.items() if v is not None}`
 
@@ -238,13 +228,13 @@ pms_PatchExtractor_get_metadata_routing = {k: v for k, v in pms_PatchExtractor_g
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PatchExtractor instance has already been disposed')
@@ -255,9 +245,8 @@ pms_PatchExtractor_get_metadata_routing = {k: v for k, v in pms_PatchExtractor_g
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PatchExtractor_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PatchExtractor_set_output = {k: v for k, v in pms_PatchExtractor_set_output.items() if v is not None}`
 
@@ -275,7 +264,7 @@ pms_PatchExtractor_set_output = {k: v for k, v in pms_PatchExtractor_set_output.
    */
   async transform(opts: {
     /**
-      Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n\_channels=3`.
+      Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n_channels=3`.
      */
     X?: NDArray[][]
   }): Promise<any[]> {
@@ -288,9 +277,8 @@ pms_PatchExtractor_set_output = {k: v for k, v in pms_PatchExtractor_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_PatchExtractor_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PatchExtractor_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PatchExtractor_transform = {k: v for k, v in pms_PatchExtractor_transform.items() if v is not None}`
 

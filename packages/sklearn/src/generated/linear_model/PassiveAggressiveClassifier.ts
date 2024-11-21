@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Passive Aggressive Classifier.
 
-  Read more in the [User Guide](../linear_model.html#passive-aggressive).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#passive-aggressive).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveClassifier.html)
  */
@@ -36,28 +36,28 @@ export class PassiveAggressiveClassifier {
     fit_intercept?: boolean
 
     /**
-      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the `PassiveAggressive.partial\_fit` method.
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.linear_model.PassiveAggressiveClassifier.partial_fit "sklearn.linear_model.PassiveAggressiveClassifier.partial_fit") method.
 
       @defaultValue `1000`
      */
     max_iter?: number
 
     /**
-      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol).
+      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous_loss - tol).
 
       @defaultValue `0.001`
      */
     tol?: number
 
     /**
-      Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
+      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least `tol` for `n_iter_no_change` consecutive epochs.
 
       @defaultValue `false`
      */
     early_stopping?: boolean
 
     /**
-      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early_stopping is `true`.
 
       @defaultValue `0.1`
      */
@@ -85,42 +85,42 @@ export class PassiveAggressiveClassifier {
     verbose?: number
 
     /**
-      The loss function to be used: hinge: equivalent to PA-I in the reference paper. squared\_hinge: equivalent to PA-II in the reference paper.
+      The loss function to be used: hinge: equivalent to PA-I in the reference paper. squared_hinge: equivalent to PA-II in the reference paper.
 
       @defaultValue `'hinge'`
      */
     loss?: string
 
     /**
-      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
-      Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled.
+      Repeatedly calling fit or partial_fit when warm_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled.
 
       @defaultValue `false`
      */
     warm_start?: boolean
 
     /**
-      Preset for the class\_weight fit parameter.
+      Preset for the class_weight fit parameter.
 
       Weights associated with classes. If not given, all classes are supposed to have weight one.
 
-      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`.
      */
     class_weight?: any | 'balanced'
 
     /**
-      When set to `true`, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So average=10 will begin averaging after seeing 10 samples.
+      When set to `true`, computes the averaged SGD weights and stores the result in the `coef_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So average=10 will begin averaging after seeing 10 samples.
 
       @defaultValue `false`
      */
@@ -170,27 +170,8 @@ except NameError: bridgePassiveAggressiveClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PassiveAggressiveClassifier = {'C': ${
-      this.opts['C'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'loss': ${this.opts['loss'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'average': ${this.opts['average'] ?? undefined}}
+    await this._py
+      .ex`ctor_PassiveAggressiveClassifier = {'C': ${this.opts['C'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'loss': ${this.opts['loss'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'average': ${this.opts['average'] ?? undefined}}
 
 ctor_PassiveAggressiveClassifier = {k: v for k, v in ctor_PassiveAggressiveClassifier.items() if v is not None}`
 
@@ -244,9 +225,7 @@ ctor_PassiveAggressiveClassifier = {k: v for k, v in ctor_PassiveAggressiveClass
 
     // set up method params
     await this._py
-      .ex`pms_PassiveAggressiveClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_PassiveAggressiveClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PassiveAggressiveClassifier_decision_function = {k: v for k, v in pms_PassiveAggressiveClassifier_decision_function.items() if v is not None}`
 
@@ -262,7 +241,7 @@ pms_PassiveAggressiveClassifier_decision_function = {k: v for k, v in pms_Passiv
   /**
     Convert coefficient matrix to dense array format.
 
-    Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
+    Converts the `coef_` member (back) to a numpy.ndarray. This is the default format of `coef_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
   async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -328,17 +307,8 @@ pms_PassiveAggressiveClassifier_densify = {k: v for k, v in pms_PassiveAggressiv
     }
 
     // set up method params
-    await this._py.ex`pms_PassiveAggressiveClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'coef_init': np.array(${
-      opts['coef_init'] ?? undefined
-    }) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'intercept_init': np.array(${
-      opts['intercept_init'] ?? undefined
-    }) if ${opts['intercept_init'] !== undefined} else None}
+    await this._py
+      .ex`pms_PassiveAggressiveClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'intercept_init': np.array(${opts['intercept_init'] ?? undefined}) if ${opts['intercept_init'] !== undefined} else None}
 
 pms_PassiveAggressiveClassifier_fit = {k: v for k, v in pms_PassiveAggressiveClassifier_fit.items() if v is not None}`
 
@@ -354,11 +324,11 @@ pms_PassiveAggressiveClassifier_fit = {k: v for k, v in pms_PassiveAggressiveCla
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -376,9 +346,7 @@ pms_PassiveAggressiveClassifier_fit = {k: v for k, v in pms_PassiveAggressiveCla
 
     // set up method params
     await this._py
-      .ex`pms_PassiveAggressiveClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_PassiveAggressiveClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PassiveAggressiveClassifier_get_metadata_routing = {k: v for k, v in pms_PassiveAggressiveClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -406,7 +374,7 @@ pms_PassiveAggressiveClassifier_get_metadata_routing = {k: v for k, v in pms_Pas
     y?: ArrayLike
 
     /**
-      Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+      Classes across all calls to partial_fit. Can be obtained by via `np.unique(y_all)`, where y_all is the target vector of the entire dataset. This argument is required for the first call to partial_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
      */
     classes?: NDArray
   }): Promise<any> {
@@ -424,13 +392,7 @@ pms_PassiveAggressiveClassifier_get_metadata_routing = {k: v for k, v in pms_Pas
 
     // set up method params
     await this._py
-      .ex`pms_PassiveAggressiveClassifier_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'classes': np.array(${
-      opts['classes'] ?? undefined
-    }) if ${opts['classes'] !== undefined} else None}
+      .ex`pms_PassiveAggressiveClassifier_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${opts['classes'] !== undefined} else None}
 
 pms_PassiveAggressiveClassifier_partial_fit = {k: v for k, v in pms_PassiveAggressiveClassifier_partial_fit.items() if v is not None}`
 
@@ -466,9 +428,7 @@ pms_PassiveAggressiveClassifier_partial_fit = {k: v for k, v in pms_PassiveAggre
 
     // set up method params
     await this._py
-      .ex`pms_PassiveAggressiveClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_PassiveAggressiveClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PassiveAggressiveClassifier_predict = {k: v for k, v in pms_PassiveAggressiveClassifier_predict.items() if v is not None}`
 
@@ -515,13 +475,8 @@ pms_PassiveAggressiveClassifier_predict = {k: v for k, v in pms_PassiveAggressiv
     }
 
     // set up method params
-    await this._py.ex`pms_PassiveAggressiveClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_PassiveAggressiveClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_PassiveAggressiveClassifier_score = {k: v for k, v in pms_PassiveAggressiveClassifier_score.items() if v is not None}`
 
@@ -537,18 +492,18 @@ pms_PassiveAggressiveClassifier_score = {k: v for k, v in pms_PassiveAggressiveC
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `coef\_init` parameter in `fit`.
+      Metadata routing for `coef_init` parameter in `fit`.
      */
     coef_init?: string | boolean
 
     /**
-      Metadata routing for `intercept\_init` parameter in `fit`.
+      Metadata routing for `intercept_init` parameter in `fit`.
      */
     intercept_init?: string | boolean
   }): Promise<any> {
@@ -566,9 +521,7 @@ pms_PassiveAggressiveClassifier_score = {k: v for k, v in pms_PassiveAggressiveC
 
     // set up method params
     await this._py
-      .ex`pms_PassiveAggressiveClassifier_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'intercept_init': ${opts['intercept_init'] ?? undefined}}
+      .ex`pms_PassiveAggressiveClassifier_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'intercept_init': ${opts['intercept_init'] ?? undefined}}
 
 pms_PassiveAggressiveClassifier_set_fit_request = {k: v for k, v in pms_PassiveAggressiveClassifier_set_fit_request.items() if v is not None}`
 
@@ -582,15 +535,15 @@ pms_PassiveAggressiveClassifier_set_fit_request = {k: v for k, v in pms_PassiveA
   }
 
   /**
-    Request metadata passed to the `partial\_fit` method.
+    Request metadata passed to the `partial_fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_partial_fit_request(opts: {
     /**
-      Metadata routing for `classes` parameter in `partial\_fit`.
+      Metadata routing for `classes` parameter in `partial_fit`.
      */
     classes?: string | boolean
   }): Promise<any> {
@@ -608,9 +561,7 @@ pms_PassiveAggressiveClassifier_set_fit_request = {k: v for k, v in pms_PassiveA
 
     // set up method params
     await this._py
-      .ex`pms_PassiveAggressiveClassifier_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }}
+      .ex`pms_PassiveAggressiveClassifier_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}}
 
 pms_PassiveAggressiveClassifier_set_partial_fit_request = {k: v for k, v in pms_PassiveAggressiveClassifier_set_partial_fit_request.items() if v is not None}`
 
@@ -626,13 +577,13 @@ pms_PassiveAggressiveClassifier_set_partial_fit_request = {k: v for k, v in pms_
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -650,9 +601,7 @@ pms_PassiveAggressiveClassifier_set_partial_fit_request = {k: v for k, v in pms_
 
     // set up method params
     await this._py
-      .ex`pms_PassiveAggressiveClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_PassiveAggressiveClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_PassiveAggressiveClassifier_set_score_request = {k: v for k, v in pms_PassiveAggressiveClassifier_set_score_request.items() if v is not None}`
 
@@ -668,9 +617,9 @@ pms_PassiveAggressiveClassifier_set_score_request = {k: v for k, v in pms_Passiv
   /**
     Convert coefficient matrix to sparse format.
 
-    Converts the `coef\_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
+    Converts the `coef_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
 
-    The `intercept\_` member is not converted.
+    The `intercept_` member is not converted.
    */
   async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -754,7 +703,7 @@ pms_PassiveAggressiveClassifier_sparsify = {k: v for k, v in pms_PassiveAggressi
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -781,7 +730,7 @@ pms_PassiveAggressiveClassifier_sparsify = {k: v for k, v in pms_PassiveAggressi
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -862,7 +811,7 @@ pms_PassiveAggressiveClassifier_sparsify = {k: v for k, v in pms_PassiveAggressi
   }
 
   /**
-    Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
+    Number of weight updates performed during training. Same as `(n_iter_ \* n_samples + 1)`.
    */
   get t_(): Promise<number> {
     if (this._isDisposed) {

@@ -16,9 +16,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   By default, zero-mean, unit-variance normalization is applied to the transformed data.
 
-  For an example visualization, refer to [Compare PowerTransformer with other scalers](../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-power-transformer-section). To see the effect of Box-Cox and Yeo-Johnson transformations on different distributions, see: [Map data to a normal distribution](../../auto_examples/preprocessing/plot_map_data_to_normal.html#sphx-glr-auto-examples-preprocessing-plot-map-data-to-normal-py).
+  For an example visualization, refer to [Compare PowerTransformer with other scalers](https://scikit-learn.org/stable/modules/generated/../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-power-transformer-section). To see the effect of Box-Cox and Yeo-Johnson transformations on different distributions, see: [Map data to a normal distribution](https://scikit-learn.org/stable/modules/generated/../../auto_examples/preprocessing/plot_map_data_to_normal.html#sphx-glr-auto-examples-preprocessing-plot-map-data-to-normal-py).
 
-  Read more in the [User Guide](../preprocessing.html#preprocessing-transformer).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../preprocessing.html#preprocessing-transformer).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PowerTransformer.html)
  */
@@ -94,11 +94,8 @@ except NameError: bridgePowerTransformer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PowerTransformer = {'method': ${
-      this.opts['method'] ?? undefined
-    }, 'standardize': ${this.opts['standardize'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PowerTransformer = {'method': ${this.opts['method'] ?? undefined}, 'standardize': ${this.opts['standardize'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}}
 
 ctor_PowerTransformer = {k: v for k, v in ctor_PowerTransformer.items() if v is not None}`
 
@@ -154,9 +151,8 @@ ctor_PowerTransformer = {k: v for k, v in ctor_PowerTransformer.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PowerTransformer_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PowerTransformer_fit = {k: v for k, v in pms_PowerTransformer_fit.items() if v is not None}`
 
@@ -196,9 +192,8 @@ pms_PowerTransformer_fit = {k: v for k, v in pms_PowerTransformer_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PowerTransformer_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PowerTransformer_fit_transform = {k: v for k, v in pms_PowerTransformer_fit_transform.items() if v is not None}`
 
@@ -234,9 +229,7 @@ pms_PowerTransformer_fit_transform = {k: v for k, v in pms_PowerTransformer_fit_
 
     // set up method params
     await this._py
-      .ex`pms_PowerTransformer_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_PowerTransformer_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PowerTransformer_get_feature_names_out = {k: v for k, v in pms_PowerTransformer_get_feature_names_out.items() if v is not None}`
 
@@ -252,11 +245,11 @@ pms_PowerTransformer_get_feature_names_out = {k: v for k, v in pms_PowerTransfor
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -273,9 +266,8 @@ pms_PowerTransformer_get_feature_names_out = {k: v for k, v in pms_PowerTransfor
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PowerTransformer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PowerTransformer_get_metadata_routing = {k: v for k, v in pms_PowerTransformer_get_metadata_routing.items() if v is not None}`
 
@@ -312,9 +304,8 @@ pms_PowerTransformer_get_metadata_routing = {k: v for k, v in pms_PowerTransform
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PowerTransformer_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_inverse_transform.items() if v is not None}`
 
@@ -330,13 +321,13 @@ pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -349,9 +340,8 @@ pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PowerTransformer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PowerTransformer_set_output = {k: v for k, v in pms_PowerTransformer_set_output.items() if v is not None}`
 
@@ -384,9 +374,8 @@ pms_PowerTransformer_set_output = {k: v for k, v in pms_PowerTransformer_set_out
     }
 
     // set up method params
-    await this._py.ex`pms_PowerTransformer_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PowerTransformer_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PowerTransformer_transform = {k: v for k, v in pms_PowerTransformer_transform.items() if v is not None}`
 
@@ -427,7 +416,7 @@ pms_PowerTransformer_transform = {k: v for k, v in pms_PowerTransformer_transfor
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -454,7 +443,7 @@ pms_PowerTransformer_transform = {k: v for k, v in pms_PowerTransformer_transfor
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

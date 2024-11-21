@@ -1,14 +1,31 @@
 {
-  "extends": "../../tsconfig.base",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "composite": true,
+    "lib": ["esnext", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "noEmit": true,
+    "target": "es2020",
     "outDir": "build",
-    "rootDir": "src",
-    "tsBuildInfoFile": "build/.tsbuildinfo",
-    "emitDeclarationOnly": true,
+
+    "allowImportingTsExtensions": false,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": false,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": false,
+    "useDefineForClassFields": true,
+
     "paths": {
       "@/sklearn/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src"]
 }

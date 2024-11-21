@@ -1,4 +1,4 @@
-# NuSVC
+# Class: NuSVC
 
 Nu-Support Vector Classification.
 
@@ -6,558 +6,452 @@ Similar to SVC but uses a parameter to control the number of support vectors.
 
 The implementation is based on libsvm.
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#svm-classification).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html)
 
 ## Constructors
 
-## constructor()
-
-### Signature
-
-```ts
-new NuSVC(opts?: object): NuSVC;
-```
-
-### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.break_ties?` | `boolean` | If true, `decision\_function\_shape='ovr'`, and number of classes > 2, predict will break ties according to the confidence values of decision\_function; otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.  `Default Value`  `false` |
-| `opts.cache_size?` | `number` | Specify the size of the kernel cache (in MB).  `Default Value`  `200` |
-| `opts.class_weight?` | `any` | Set the parameter C of class i to class\_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies as `n\_samples / (n\_classes \* np.bincount(y))`. |
-| `opts.coef0?` | `number` | Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.  `Default Value`  `0` |
-| `opts.decision_function_shape?` | `"ovr"` \| `"ovo"` | Whether to return a one-vs-rest (‘ovr’) decision function of shape (n\_samples, n\_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n\_samples, n\_classes \* (n\_classes - 1) / 2). However, one-vs-one (‘ovo’) is always used as multi-class strategy. The parameter is ignored for binary classification.  `Default Value`  `'ovr'` |
-| `opts.degree?` | `number` | Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels.  `Default Value`  `3` |
-| `opts.gamma?` | `number` \| `"auto"` \| `"scale"` | Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.  `Default Value`  `'scale'` |
-| `opts.kernel?` | `"sigmoid"` \| `"precomputed"` \| `"linear"` \| `"poly"` \| `"rbf"` | Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix. For an intuitive visualization of different kernel types see Plot classification boundaries with different SVM Kernels.  `Default Value`  `'rbf'` |
-| `opts.max_iter?` | `number` | Hard limit on iterations within solver, or -1 for no limit.  `Default Value`  `-1` |
-| `opts.nu?` | `number` | An upper bound on the fraction of margin errors (see User Guide) and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\].  `Default Value`  `0.5` |
-| `opts.probability?` | `boolean` | Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict\_proba` may be inconsistent with `predict`. Read more in the User Guide.  `Default Value`  `false` |
-| `opts.random_state?` | `number` | Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See Glossary. |
-| `opts.shrinking?` | `boolean` | Whether to use the shrinking heuristic. See the User Guide.  `Default Value`  `true` |
-| `opts.tol?` | `number` | Tolerance for stopping criterion.  `Default Value`  `0.001` |
-| `opts.verbose?` | `boolean` | Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context.  `Default Value`  `false` |
-
-### Returns
-
-[`NuSVC`](NuSVC.md)
-
-Defined in:  [generated/svm/NuSVC.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L27)
-
-## Methods
-
-### decision\_function()
-
-Evaluate the decision function for the samples in X.
-
-#### Signature
-
-```ts
-decision_function(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | The input samples. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in:  [generated/svm/NuSVC.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L218)
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/svm/NuSVC.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L201)
-
-### fit()
-
-Fit the SVM model according to the given training data.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples). |
-| `opts.sample_weight?` | `ArrayLike` | Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points. |
-| `opts.y?` | `ArrayLike` | Target values (class labels in classification, real numbers in regression). |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/svm/NuSVC.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L251)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/svm/NuSVC.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L300)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/svm/NuSVC.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L146)
-
-### predict()
-
-Perform classification on samples in X.
-
-For an one-class model, +1 or -1 is returned.
-
-#### Signature
-
-```ts
-predict(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train). |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/svm/NuSVC.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L335)
-
-### predict\_log\_proba()
-
-Compute log probabilities of possible outcomes for samples in X.
-
-The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
-
-#### Signature
-
-```ts
-predict_log_proba(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train). |
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in:  [generated/svm/NuSVC.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L370)
-
-### predict\_proba()
-
-Compute probabilities of possible outcomes for samples in X.
-
-The model needs to have probability information computed at training time: fit with attribute `probability` set to `true`.
-
-#### Signature
-
-```ts
-predict_proba(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train). |
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in:  [generated/svm/NuSVC.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L405)
-
-### score()
-
-Return the mean accuracy on the given test data and labels.
-
-In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
-
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Test samples. |
-| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
-| `opts.y?` | `ArrayLike` | True labels for `X`. |
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/svm/NuSVC.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L440)
-
-### set\_fit\_request()
-
-Request metadata passed to the `fit` method.
-
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
-
-The options for each parameter are:
-
-#### Signature
-
-```ts
-set_fit_request(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `fit`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/svm/NuSVC.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L491)
-
-### set\_score\_request()
-
-Request metadata passed to the `score` method.
-
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
-
-The options for each parameter are:
-
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/svm/NuSVC.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L528)
+### new NuSVC()
+
+> **new NuSVC**(`opts`?): [`NuSVC`](NuSVC.md)
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.break_ties`? | `boolean` | If true, `decision_function_shape='ovr'`, and number of classes > 2, [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict) will break ties according to the confidence values of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function); otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict. |
+| `opts.cache_size`? | `number` | Specify the size of the kernel cache (in MB). |
+| `opts.class_weight`? | `any` | Set the parameter C of class i to class_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies as `n_samples / (n_classes \* np.bincount(y))`. |
+| `opts.coef0`? | `number` | Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’. |
+| `opts.decision_function_shape`? | `"ovr"` \| `"ovo"` | Whether to return a one-vs-rest (‘ovr’) decision function of shape (n_samples, n_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n_samples, n_classes \* (n_classes - 1) / 2). However, one-vs-one (‘ovo’) is always used as multi-class strategy. The parameter is ignored for binary classification. |
+| `opts.degree`? | `number` | Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels. |
+| `opts.gamma`? | `number` \| `"auto"` \| `"scale"` | Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. |
+| `opts.kernel`? | `"sigmoid"` \| `"precomputed"` \| `"linear"` \| `"poly"` \| `"rbf"` | Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix. For an intuitive visualization of different kernel types see [Plot classification boundaries with different SVM Kernels](https://scikit-learn.org/stable/modules/generated/../../auto_examples/svm/plot_svm_kernels.html#sphx-glr-auto-examples-svm-plot-svm-kernels-py). |
+| `opts.max_iter`? | `number` | Hard limit on iterations within solver, or -1 for no limit. |
+| `opts.nu`? | `number` | An upper bound on the fraction of margin errors (see [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#nu-svc)) and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\]. |
+| `opts.probability`? | `boolean` | Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict_proba` may be inconsistent with `predict`. Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#scores-probabilities). |
+| `opts.random_state`? | `number` | Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
+| `opts.shrinking`? | `boolean` | Whether to use the shrinking heuristic. See the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#shrinking-svm). |
+| `opts.tol`? | `number` | Tolerance for stopping criterion. |
+| `opts.verbose`? | `boolean` | Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context. |
+
+**Returns** [`NuSVC`](NuSVC.md)
+
+**Defined in** [generated/svm/NuSVC.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L27)
 
 ## Properties
 
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/svm/NuSVC.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L25)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/svm/NuSVC.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L24)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/svm/NuSVC.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L23)
-
-### id
-
-> `string`
-
-Defined in:  [generated/svm/NuSVC.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L20)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/svm/NuSVC.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L21)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/svm/NuSVC.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L25) |
+| `_isInitialized` | `boolean` | `false` | [generated/svm/NuSVC.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L24) |
+| `_py` | `PythonBridge` | `undefined` | [generated/svm/NuSVC.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L23) |
+| `id` | `string` | `undefined` | [generated/svm/NuSVC.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L20) |
+| `opts` | `any` | `undefined` | [generated/svm/NuSVC.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L21) |
 
 ## Accessors
 
 ### class\_weight\_
 
-Multipliers of parameter C of each class. Computed based on the `class\_weight` parameter.
+**Get Signature**
 
-#### Signature
+> **get** **class\_weight\_**(): `Promise`\<`ArrayLike`\>
 
-```ts
-class_weight_(): Promise<ArrayLike>;
-```
+Multipliers of parameter C of each class. Computed based on the `class_weight` parameter.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/svm/NuSVC.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L527)
 
-Defined in: [generated/svm/NuSVC.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L561)
+***
 
 ### classes\_
 
+**Get Signature**
+
+> **get** **classes\_**(): `Promise`\<`ArrayLike`\>
+
 The unique classes labels.
 
-#### Signature
+**Returns** `Promise`\<`ArrayLike`\>
 
-```ts
-classes_(): Promise<ArrayLike>;
-```
+**Defined in** [generated/svm/NuSVC.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L550)
 
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/svm/NuSVC.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L584)
+***
 
 ### dual\_coef\_
 
-Dual coefficients of the support vector in the decision function (see Mathematical formulation), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the multi-class section of the User Guide for details.
+**Get Signature**
 
-#### Signature
+> **get** **dual\_coef\_**(): `Promise`\<`ArrayLike`[]\>
 
-```ts
-dual_coef_(): Promise<ArrayLike[]>;
-```
+Dual coefficients of the support vector in the decision function (see [Mathematical formulation](https://scikit-learn.org/stable/modules/generated/../sgd.html#sgd-mathematical-formulation)), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the [multi-class section of the User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#svm-multi-class) for details.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-`Promise`\<`ArrayLike`[]\>
+**Defined in** [generated/svm/NuSVC.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L572)
 
-Defined in: [generated/svm/NuSVC.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L606)
+***
 
 ### feature\_names\_in\_
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+**Get Signature**
 
-#### Signature
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/svm/NuSVC.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L664)
 
-Defined in: [generated/svm/NuSVC.ts:698](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L698)
+***
 
 ### fit\_status\_
 
+**Get Signature**
+
+> **get** **fit\_status\_**(): `Promise`\<`number`\>
+
 0 if correctly fitted, 1 if the algorithm did not converge.
 
-#### Signature
+**Returns** `Promise`\<`number`\>
 
-```ts
-fit_status_(): Promise<number>;
-```
+**Defined in** [generated/svm/NuSVC.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L595)
 
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/svm/NuSVC.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L629)
+***
 
 ### intercept\_
 
+**Get Signature**
+
+> **get** **intercept\_**(): `Promise`\<`ArrayLike`\>
+
 Constants in decision function.
 
-#### Signature
+**Returns** `Promise`\<`ArrayLike`\>
 
-```ts
-intercept_(): Promise<ArrayLike>;
-```
+**Defined in** [generated/svm/NuSVC.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L618)
 
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/svm/NuSVC.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L652)
+***
 
 ### n\_features\_in\_
 
-Number of features seen during fit.
+**Get Signature**
 
-#### Signature
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-```ts
-n_features_in_(): Promise<number>;
-```
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-#### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
+**Defined in** [generated/svm/NuSVC.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L641)
 
-Defined in: [generated/svm/NuSVC.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L675)
+***
 
 ### n\_iter\_
 
+**Get Signature**
+
+> **get** **n\_iter\_**(): `Promise`\<`ArrayLike`\>
+
 Number of iterations run by the optimization routine to fit the model. The shape of this attribute depends on the number of models optimized which in turn depends on the number of classes.
 
-#### Signature
+**Returns** `Promise`\<`ArrayLike`\>
 
-```ts
-n_iter_(): Promise<ArrayLike>;
-```
+**Defined in** [generated/svm/NuSVC.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L689)
 
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/svm/NuSVC.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L723)
+***
 
 ### py
 
-#### Signature
+**Get Signature**
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
+**Set Signature**
 
-Defined in:  [generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L133)
+> **set** **py**(`pythonBridge`): `void`
 
-#### Signature
+**Parameters**
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `pythonBridge` | `PythonBridge` |
 
-#### Returns
+**Returns** `void`
 
-`void`
+**Defined in** [generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L133)
 
-Defined in: [generated/svm/NuSVC.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L137)
+***
 
 ### shape\_fit\_
 
+**Get Signature**
+
+> **get** **shape\_fit\_**(): `Promise`\<`any`[]\>
+
 Array dimensions of training vector `X`.
 
-#### Signature
+**Returns** `Promise`\<`any`[]\>
 
-```ts
-shape_fit_(): Promise<any[]>;
-```
+**Defined in** [generated/svm/NuSVC.ts:758](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L758)
 
-#### Returns
-
-`Promise`\<`any`[]\>
-
-Defined in: [generated/svm/NuSVC.ts:792](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L792)
+***
 
 ### support\_
 
+**Get Signature**
+
+> **get** **support\_**(): `Promise`\<`ArrayLike`\>
+
 Indices of support vectors.
 
-#### Signature
+**Returns** `Promise`\<`ArrayLike`\>
 
-```ts
-support_(): Promise<ArrayLike>;
-```
+**Defined in** [generated/svm/NuSVC.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L711)
 
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/svm/NuSVC.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L745)
+***
 
 ### support\_vectors\_
 
+**Get Signature**
+
+> **get** **support\_vectors\_**(): `Promise`\<`ArrayLike`[]\>
+
 Support vectors.
 
-#### Signature
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-```ts
-support_vectors_(): Promise<ArrayLike[]>;
-```
+**Defined in** [generated/svm/NuSVC.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L733)
 
-#### Returns
+## Methods
 
-`Promise`\<`ArrayLike`[]\>
+### decision\_function()
 
-Defined in: [generated/svm/NuSVC.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/NuSVC.ts#L767)
+> **decision\_function**(`opts`): `Promise`\<`ArrayLike`[]\>
+
+Evaluate the decision function for the samples in X.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | The input samples. |
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/svm/NuSVC.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L201)
+
+***
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/svm/NuSVC.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L184)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Fit the SVM model according to the given training data.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points. |
+| `opts.X`? | `ArrayLike` | Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n_samples, n_samples). |
+| `opts.y`? | `ArrayLike` | Target values (class labels in classification, real numbers in regression). |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/svm/NuSVC.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L233)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/svm/NuSVC.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L277)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+**Parameters**
+
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/svm/NuSVC.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L146)
+
+***
+
+### predict()
+
+> **predict**(`opts`): `Promise`\<`ArrayLike`\>
+
+Perform classification on samples in X.
+
+For an one-class model, +1 or -1 is returned.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike` | For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train). |
+
+**Returns** `Promise`\<`ArrayLike`\>
+
+**Defined in** [generated/svm/NuSVC.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L311)
+
+***
+
+### predict\_log\_proba()
+
+> **predict\_log\_proba**(`opts`): `Promise`\<`ArrayLike`[]\>
+
+Compute log probabilities of possible outcomes for samples in X.
+
+The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train). |
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/svm/NuSVC.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L345)
+
+***
+
+### predict\_proba()
+
+> **predict\_proba**(`opts`): `Promise`\<`ArrayLike`[]\>
+
+Compute probabilities of possible outcomes for samples in X.
+
+The model needs to have probability information computed at training time: fit with attribute `probability` set to `true`.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train). |
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/svm/NuSVC.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L379)
+
+***
+
+### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
+
+Return the mean accuracy on the given test data and labels.
+
+In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Sample weights. |
+| `opts.X`? | `ArrayLike`[] | Test samples. |
+| `opts.y`? | `ArrayLike` | True labels for `X`. |
+
+**Returns** `Promise`\<`number`\>
+
+**Defined in** [generated/svm/NuSVC.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L413)
+
+***
+
+### set\_fit\_request()
+
+> **set\_fit\_request**(`opts`): `Promise`\<`any`\>
+
+Request metadata passed to the `fit` method.
+
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `fit`. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/svm/NuSVC.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L459)
+
+***
+
+### set\_score\_request()
+
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/svm/NuSVC.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/svm/NuSVC.ts#L495)

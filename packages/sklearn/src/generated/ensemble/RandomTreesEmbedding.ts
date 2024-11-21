@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   An unsupervised transformation of a dataset to a high-dimensional sparse representation. A datapoint is coded according to which leaf of each tree it is sorted into. Using a one-hot encoding of the leaves, this leads to a binary coding with as many ones as there are trees in the forest.
 
-  The dimensionality of the resulting representation is `n\_out <= n\_estimators \* max\_leaf\_nodes`. If `max\_leaf\_nodes \== None`, the number of leaf nodes is at most `n\_estimators \* 2 \*\* max\_depth`.
+  The dimensionality of the resulting representation is `n_out <= n_estimators \* max_leaf_nodes`. If `max_leaf_nodes \== None`, the number of leaf nodes is at most `n_estimators \* 2 \*\* max_depth`.
 
-  Read more in the [User Guide](../ensemble.html#random-trees-embedding).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#random-trees-embedding).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomTreesEmbedding.html)
  */
@@ -33,7 +33,7 @@ export class RandomTreesEmbedding {
     n_estimators?: number
 
     /**
-      The maximum depth of each tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+      The maximum depth of each tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
 
       @defaultValue `5`
      */
@@ -47,21 +47,21 @@ export class RandomTreesEmbedding {
     min_samples_split?: number
 
     /**
-      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min_samples_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
       @defaultValue `1`
      */
     min_samples_leaf?: number
 
     /**
-      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided.
 
       @defaultValue `0`
      */
     min_weight_fraction_leaf?: number
 
     /**
-      Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+      Grow trees with `max_leaf_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
      */
     max_leaf_nodes?: number
 
@@ -82,12 +82,12 @@ export class RandomTreesEmbedding {
     sparse_output?: boolean
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision_path`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Controls the generation of the random `y` used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See [Glossary](../../glossary.html#term-random_state) for details.
+      Controls the generation of the random `y` used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
      */
     random_state?: number
 
@@ -99,7 +99,7 @@ export class RandomTreesEmbedding {
     verbose?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start) and [Fitting additional trees](https://scikit-learn.org/stable/modules/generated/../ensemble.html#tree-ensemble-warm-start) for details.
 
       @defaultValue `false`
      */
@@ -149,25 +149,8 @@ except NameError: bridgeRandomTreesEmbedding = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RandomTreesEmbedding = {'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
+    await this._py
+      .ex`ctor_RandomTreesEmbedding = {'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
 
 ctor_RandomTreesEmbedding = {k: v for k, v in ctor_RandomTreesEmbedding.items() if v is not None}`
 
@@ -201,7 +184,7 @@ ctor_RandomTreesEmbedding = {k: v for k, v in ctor_RandomTreesEmbedding.items() 
    */
   async apply(opts: {
     /**
-      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -216,9 +199,8 @@ ctor_RandomTreesEmbedding = {k: v for k, v in ctor_RandomTreesEmbedding.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_RandomTreesEmbedding_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomTreesEmbedding_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RandomTreesEmbedding_apply = {k: v for k, v in pms_RandomTreesEmbedding_apply.items() if v is not None}`
 
@@ -236,7 +218,7 @@ pms_RandomTreesEmbedding_apply = {k: v for k, v in pms_RandomTreesEmbedding_appl
    */
   async decision_path(opts: {
     /**
-      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<SparseMatrix[]> {
@@ -253,9 +235,8 @@ pms_RandomTreesEmbedding_apply = {k: v for k, v in pms_RandomTreesEmbedding_appl
     }
 
     // set up method params
-    await this._py.ex`pms_RandomTreesEmbedding_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomTreesEmbedding_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RandomTreesEmbedding_decision_path = {k: v for k, v in pms_RandomTreesEmbedding_decision_path.items() if v is not None}`
 
@@ -273,7 +254,7 @@ pms_RandomTreesEmbedding_decision_path = {k: v for k, v in pms_RandomTreesEmbedd
    */
   async fit(opts: {
     /**
-      The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
+      The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc_matrix` for maximum efficiency.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -298,13 +279,8 @@ pms_RandomTreesEmbedding_decision_path = {k: v for k, v in pms_RandomTreesEmbedd
     }
 
     // set up method params
-    await this._py.ex`pms_RandomTreesEmbedding_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_RandomTreesEmbedding_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RandomTreesEmbedding_fit = {k: v for k, v in pms_RandomTreesEmbedding_fit.items() if v is not None}`
 
@@ -349,13 +325,8 @@ pms_RandomTreesEmbedding_fit = {k: v for k, v in pms_RandomTreesEmbedding_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_RandomTreesEmbedding_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_RandomTreesEmbedding_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RandomTreesEmbedding_fit_transform = {k: v for k, v in pms_RandomTreesEmbedding_fit_transform.items() if v is not None}`
 
@@ -373,7 +344,7 @@ pms_RandomTreesEmbedding_fit_transform = {k: v for k, v in pms_RandomTreesEmbedd
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit").
+      Only used to validate feature names with the names seen in [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit").
      */
     input_features?: any
   }): Promise<any> {
@@ -391,9 +362,7 @@ pms_RandomTreesEmbedding_fit_transform = {k: v for k, v in pms_RandomTreesEmbedd
 
     // set up method params
     await this._py
-      .ex`pms_RandomTreesEmbedding_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_RandomTreesEmbedding_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_RandomTreesEmbedding_get_feature_names_out = {k: v for k, v in pms_RandomTreesEmbedding_get_feature_names_out.items() if v is not None}`
 
@@ -409,11 +378,11 @@ pms_RandomTreesEmbedding_get_feature_names_out = {k: v for k, v in pms_RandomTre
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -431,9 +400,7 @@ pms_RandomTreesEmbedding_get_feature_names_out = {k: v for k, v in pms_RandomTre
 
     // set up method params
     await this._py
-      .ex`pms_RandomTreesEmbedding_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RandomTreesEmbedding_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RandomTreesEmbedding_get_metadata_routing = {k: v for k, v in pms_RandomTreesEmbedding_get_metadata_routing.items() if v is not None}`
 
@@ -449,13 +416,13 @@ pms_RandomTreesEmbedding_get_metadata_routing = {k: v for k, v in pms_RandomTree
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -473,9 +440,7 @@ pms_RandomTreesEmbedding_get_metadata_routing = {k: v for k, v in pms_RandomTree
 
     // set up method params
     await this._py
-      .ex`pms_RandomTreesEmbedding_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RandomTreesEmbedding_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RandomTreesEmbedding_set_fit_request = {k: v for k, v in pms_RandomTreesEmbedding_set_fit_request.items() if v is not None}`
 
@@ -491,13 +456,13 @@ pms_RandomTreesEmbedding_set_fit_request = {k: v for k, v in pms_RandomTreesEmbe
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -512,9 +477,8 @@ pms_RandomTreesEmbedding_set_fit_request = {k: v for k, v in pms_RandomTreesEmbe
     }
 
     // set up method params
-    await this._py.ex`pms_RandomTreesEmbedding_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_RandomTreesEmbedding_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_RandomTreesEmbedding_set_output = {k: v for k, v in pms_RandomTreesEmbedding_set_output.items() if v is not None}`
 
@@ -532,7 +496,7 @@ pms_RandomTreesEmbedding_set_output = {k: v for k, v in pms_RandomTreesEmbedding
    */
   async transform(opts: {
     /**
-      Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csr\_matrix` for maximum efficiency.
+      Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csr_matrix` for maximum efficiency.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<SparseMatrix[]> {
@@ -549,9 +513,8 @@ pms_RandomTreesEmbedding_set_output = {k: v for k, v in pms_RandomTreesEmbedding
     }
 
     // set up method params
-    await this._py.ex`pms_RandomTreesEmbedding_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RandomTreesEmbedding_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RandomTreesEmbedding_transform = {k: v for k, v in pms_RandomTreesEmbedding_transform.items() if v is not None}`
 
@@ -619,7 +582,7 @@ pms_RandomTreesEmbedding_transform = {k: v for k, v in pms_RandomTreesEmbedding_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -646,7 +609,7 @@ pms_RandomTreesEmbedding_transform = {k: v for k, v in pms_RandomTreesEmbedding_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Random partitioning produces noticeably shorter paths for anomalies. Hence, when a forest of random trees collectively produce shorter path lengths for particular samples, they are highly likely to be anomalies.
 
-  Read more in the [User Guide](../outlier_detection.html#isolation-forest).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../outlier_detection.html#isolation-forest).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
  */
@@ -39,7 +39,7 @@ export class IsolationForest {
     n_estimators?: number
 
     /**
-      If int, then draw `max\_samples` samples.
+      If int, then draw `max_samples` samples.
 
       @defaultValue `'auto'`
      */
@@ -67,14 +67,14 @@ export class IsolationForest {
     bootstrap?: boolean
 
     /**
-      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for both [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
       Controls the pseudo-randomness of the selection of the feature and split values for each branching step and each tree in the forest.
 
-      Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
 
@@ -86,7 +86,7 @@ export class IsolationForest {
     verbose?: number
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [the Glossary](../../glossary.html#term-warm_start).
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
       @defaultValue `false`
      */
@@ -132,19 +132,8 @@ except NameError: bridgeIsolationForest = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_IsolationForest = {'n_estimators': ${
-      this.opts['n_estimators'] ?? undefined
-    }, 'max_samples': ${
-      this.opts['max_samples'] ?? undefined
-    }, 'contamination': ${
-      this.opts['contamination'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
+    await this._py
+      .ex`ctor_IsolationForest = {'n_estimators': ${this.opts['n_estimators'] ?? undefined}, 'max_samples': ${this.opts['max_samples'] ?? undefined}, 'contamination': ${this.opts['contamination'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'bootstrap': ${this.opts['bootstrap'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
 
 ctor_IsolationForest = {k: v for k, v in ctor_IsolationForest.items() if v is not None}`
 
@@ -178,11 +167,11 @@ ctor_IsolationForest = {k: v for k, v in ctor_IsolationForest.items() if v is no
 
     The anomaly score of an input sample is computed as the mean anomaly score of the trees in the forest.
 
-    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n\_left in the leaf, the average path length of a n\_left samples isolation tree is added.
+    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n_left in the leaf, the average path length of a n_left samples isolation tree is added.
    */
   async decision_function(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -197,9 +186,8 @@ ctor_IsolationForest = {k: v for k, v in ctor_IsolationForest.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsolationForest_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IsolationForest_decision_function = {k: v for k, v in pms_IsolationForest_decision_function.items() if v is not None}`
 
@@ -217,7 +205,7 @@ pms_IsolationForest_decision_function = {k: v for k, v in pms_IsolationForest_de
    */
   async fit(opts: {
     /**
-      The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
+      The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc_matrix` for maximum efficiency.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -240,13 +228,8 @@ pms_IsolationForest_decision_function = {k: v for k, v in pms_IsolationForest_de
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_IsolationForest_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_IsolationForest_fit = {k: v for k, v in pms_IsolationForest_fit.items() if v is not None}`
 
@@ -274,6 +257,11 @@ pms_IsolationForest_fit = {k: v for k, v in pms_IsolationForest_fit.items() if v
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This IsolationForest instance has already been disposed')
@@ -284,9 +272,8 @@ pms_IsolationForest_fit = {k: v for k, v in pms_IsolationForest_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_IsolationForest_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_IsolationForest_fit_predict = {k: v for k, v in pms_IsolationForest_fit_predict.items() if v is not None}`
 
@@ -302,11 +289,11 @@ pms_IsolationForest_fit_predict = {k: v for k, v in pms_IsolationForest_fit_pred
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -321,9 +308,8 @@ pms_IsolationForest_fit_predict = {k: v for k, v in pms_IsolationForest_fit_pred
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsolationForest_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_IsolationForest_get_metadata_routing = {k: v for k, v in pms_IsolationForest_get_metadata_routing.items() if v is not None}`
 
@@ -341,7 +327,7 @@ pms_IsolationForest_get_metadata_routing = {k: v for k, v in pms_IsolationForest
    */
   async predict(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -354,9 +340,8 @@ pms_IsolationForest_get_metadata_routing = {k: v for k, v in pms_IsolationForest
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsolationForest_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IsolationForest_predict = {k: v for k, v in pms_IsolationForest_predict.items() if v is not None}`
 
@@ -374,7 +359,7 @@ pms_IsolationForest_predict = {k: v for k, v in pms_IsolationForest_predict.item
 
     The anomaly score of an input sample is computed as the mean anomaly score of the trees in the forest.
 
-    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n\_left in the leaf, the average path length of a n\_left samples isolation tree is added.
+    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n_left in the leaf, the average path length of a n_left samples isolation tree is added.
    */
   async score_samples(opts: {
     /**
@@ -391,9 +376,8 @@ pms_IsolationForest_predict = {k: v for k, v in pms_IsolationForest_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_IsolationForest_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_samples.items() if v is not None}`
 
@@ -409,13 +393,13 @@ pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -430,9 +414,8 @@ pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_
     }
 
     // set up method params
-    await this._py.ex`pms_IsolationForest_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_IsolationForest_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_IsolationForest_set_fit_request = {k: v for k, v in pms_IsolationForest_set_fit_request.items() if v is not None}`
 
@@ -546,7 +529,7 @@ pms_IsolationForest_set_fit_request = {k: v for k, v in pms_IsolationForest_set_
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: `decision\_function \= score\_samples \- offset\_`. `offset\_` is defined as follows. When the contamination parameter is set to “auto”, the offset is equal to -0.5 as the scores of inliers are close to 0 and the scores of outliers are close to -1. When a contamination parameter different than “auto” is provided, the offset is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
+    Offset used to define the decision function from the raw scores. We have the relation: `decision_function \= score_samples \- offset_`. `offset_` is defined as follows. When the contamination parameter is set to “auto”, the offset is equal to -0.5 as the scores of inliers are close to 0 and the scores of outliers are close to -1. When a contamination parameter different than “auto” is provided, the offset is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -571,7 +554,7 @@ pms_IsolationForest_set_fit_request = {k: v for k, v in pms_IsolationForest_set_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -596,7 +579,7 @@ pms_IsolationForest_set_fit_request = {k: v for k, v in pms_IsolationForest_set_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

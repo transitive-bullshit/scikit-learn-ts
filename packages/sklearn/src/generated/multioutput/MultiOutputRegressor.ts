@@ -22,16 +22,16 @@ export class MultiOutputRegressor {
 
   constructor(opts?: {
     /**
-      An estimator object implementing [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict).
+      An estimator object implementing [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit) and [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict).
      */
     estimator?: any
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.multioutput.MultiOutputRegressor.fit "sklearn.multioutput.MultiOutputRegressor.fit"), [`predict`](#sklearn.multioutput.MultiOutputRegressor.predict "sklearn.multioutput.MultiOutputRegressor.predict") and [`partial\_fit`](#sklearn.multioutput.MultiOutputRegressor.partial_fit "sklearn.multioutput.MultiOutputRegressor.partial_fit") (if supported by the passed estimator) will be parallelized for each target.
+      The number of jobs to run in parallel. [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.multioutput.MultiOutputRegressor.fit "sklearn.multioutput.MultiOutputRegressor.fit"), [`predict`](https://scikit-learn.org/stable/modules/generated/#sklearn.multioutput.MultiOutputRegressor.predict "sklearn.multioutput.MultiOutputRegressor.predict") and [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.multioutput.MultiOutputRegressor.partial_fit "sklearn.multioutput.MultiOutputRegressor.partial_fit") (if supported by the passed estimator) will be parallelized for each target.
 
-      When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
+      When individual estimators are fast to train or predict, using `n_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means `1` unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -79,9 +79,8 @@ except NameError: bridgeMultiOutputRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MultiOutputRegressor = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_MultiOutputRegressor = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_MultiOutputRegressor = {k: v for k, v in ctor_MultiOutputRegressor.items() if v is not None}`
 
@@ -145,15 +144,8 @@ ctor_MultiOutputRegressor = {k: v for k, v in ctor_MultiOutputRegressor.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiOutputRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.items() if v is not None}`
 
@@ -169,11 +161,11 @@ pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.it
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -191,9 +183,7 @@ pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.it
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MultiOutputRegressor_get_metadata_routing = {k: v for k, v in pms_MultiOutputRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -226,9 +216,9 @@ pms_MultiOutputRegressor_get_metadata_routing = {k: v for k, v in pms_MultiOutpu
     sample_weight?: ArrayLike
 
     /**
-      Parameters passed to the `estimator.partial\_fit` method of each sub-estimator.
+      Parameters passed to the `estimator.partial_fit` method of each sub-estimator.
 
-      Only available if `enable\_metadata\_routing=True`. See the [User Guide](../../metadata_routing.html#metadata-routing).
+      Only available if `enable_metadata_routing=True`. See the [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing).
      */
     partial_fit_params?: any
   }): Promise<any> {
@@ -245,17 +235,8 @@ pms_MultiOutputRegressor_get_metadata_routing = {k: v for k, v in pms_MultiOutpu
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${
-      opts['sample_weight'] !== undefined
-    } else None, 'partial_fit_params': ${
-      opts['partial_fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MultiOutputRegressor_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'partial_fit_params': ${opts['partial_fit_params'] ?? undefined}}
 
 pms_MultiOutputRegressor_partial_fit = {k: v for k, v in pms_MultiOutputRegressor_partial_fit.items() if v is not None}`
 
@@ -288,9 +269,8 @@ pms_MultiOutputRegressor_partial_fit = {k: v for k, v in pms_MultiOutputRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiOutputRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MultiOutputRegressor_predict = {k: v for k, v in pms_MultiOutputRegressor_predict.items() if v is not None}`
 
@@ -306,11 +286,11 @@ pms_MultiOutputRegressor_predict = {k: v for k, v in pms_MultiOutputRegressor_pr
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -335,13 +315,8 @@ pms_MultiOutputRegressor_predict = {k: v for k, v in pms_MultiOutputRegressor_pr
     }
 
     // set up method params
-    await this._py.ex`pms_MultiOutputRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_MultiOutputRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_score.items() if v is not None}`
 
@@ -357,13 +332,13 @@ pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_scor
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -381,9 +356,7 @@ pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_scor
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputRegressor_set_fit_request = {k: v for k, v in pms_MultiOutputRegressor_set_fit_request.items() if v is not None}`
 
@@ -397,15 +370,15 @@ pms_MultiOutputRegressor_set_fit_request = {k: v for k, v in pms_MultiOutputRegr
   }
 
   /**
-    Request metadata passed to the `partial\_fit` method.
+    Request metadata passed to the `partial_fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_partial_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+      Metadata routing for `sample_weight` parameter in `partial_fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -423,9 +396,7 @@ pms_MultiOutputRegressor_set_fit_request = {k: v for k, v in pms_MultiOutputRegr
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_set_partial_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_set_partial_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputRegressor_set_partial_fit_request = {k: v for k, v in pms_MultiOutputRegressor_set_partial_fit_request.items() if v is not None}`
 
@@ -441,13 +412,13 @@ pms_MultiOutputRegressor_set_partial_fit_request = {k: v for k, v in pms_MultiOu
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -465,9 +436,7 @@ pms_MultiOutputRegressor_set_partial_fit_request = {k: v for k, v in pms_MultiOu
 
     // set up method params
     await this._py
-      .ex`pms_MultiOutputRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_MultiOutputRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_MultiOutputRegressor_set_score_request = {k: v for k, v in pms_MultiOutputRegressor_set_score_request.items() if v is not None}`
 
@@ -508,7 +477,7 @@ pms_MultiOutputRegressor_set_score_request = {k: v for k, v in pms_MultiOutputRe
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `estimator` exposes such an attribute when fit.
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying `estimator` exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -535,7 +504,7 @@ pms_MultiOutputRegressor_set_score_request = {k: v for k, v in pms_MultiOutputRe
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

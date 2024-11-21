@@ -6,15 +6,15 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Leave-One-Out cross-validator
+  Leave-One-Out cross-validator.
 
   Provides train/test indices to split data in train/test sets. Each sample is used once as a test set (singleton) while the remaining samples form the training set.
 
-  Note: `LeaveOneOut()` is equivalent to `KFold(n\_splits=n)` and `LeavePOut(p=1)` where `n` is the number of samples.
+  Note: `LeaveOneOut()` is equivalent to `KFold(n_splits=n)` and `LeavePOut(p=1)` where `n` is the number of samples.
 
-  Due to the high number of test sets (which is the same as the number of samples) this cross-validation method can be very costly. For large datasets one should favor [`KFold`](sklearn.model_selection.KFold.html#sklearn.model_selection.KFold "sklearn.model_selection.KFold"), [`ShuffleSplit`](sklearn.model_selection.ShuffleSplit.html#sklearn.model_selection.ShuffleSplit "sklearn.model_selection.ShuffleSplit") or [`StratifiedKFold`](sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold "sklearn.model_selection.StratifiedKFold").
+  Due to the high number of test sets (which is the same as the number of samples) this cross-validation method can be very costly. For large datasets one should favor [`KFold`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold "sklearn.model_selection.KFold"), [`ShuffleSplit`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ShuffleSplit.html#sklearn.model_selection.ShuffleSplit "sklearn.model_selection.ShuffleSplit") or [`StratifiedKFold`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold "sklearn.model_selection.StratifiedKFold").
 
-  Read more in the [User Guide](../cross_validation.html#leave-one-out).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../cross_validation.html#leave-one-out).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html)
  */
@@ -28,7 +28,7 @@ export class LeaveOneOut {
 
   constructor(opts?: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }) {
@@ -72,9 +72,8 @@ except NameError: bridgeLeaveOneOut = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LeaveOneOut = {'routing': ${
-      this.opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LeaveOneOut = {'routing': ${this.opts['routing'] ?? undefined}}
 
 ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
 
@@ -106,11 +105,11 @@ ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -125,9 +124,8 @@ ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneOut_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LeaveOneOut_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LeaveOneOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneOut_get_metadata_routing.items() if v is not None}`
 
@@ -141,11 +139,11 @@ pms_LeaveOneOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneOut_get_met
   }
 
   /**
-    Returns the number of splitting iterations in the cross-validator
+    Returns the number of splitting iterations in the cross-validator.
    */
   async get_n_splits(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -168,11 +166,8 @@ pms_LeaveOneOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneOut_get_met
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneOut_get_n_splits = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'groups': ${opts['groups'] ?? undefined}}
+    await this._py
+      .ex`pms_LeaveOneOut_get_n_splits = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.items() if v is not None}`
 
@@ -190,7 +185,7 @@ pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.it
    */
   async split(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -200,9 +195,9 @@ pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.it
     y?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set.
+      Always ignored, exists for compatibility.
      */
-    groups?: ArrayLike
+    groups?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LeaveOneOut instance has already been disposed')
@@ -213,13 +208,8 @@ pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.it
     }
 
     // set up method params
-    await this._py.ex`pms_LeaveOneOut_split = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'groups': np.array(${
-      opts['groups'] ?? undefined
-    }) if ${opts['groups'] !== undefined} else None}
+    await this._py
+      .ex`pms_LeaveOneOut_split = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'groups': ${opts['groups'] ?? undefined}}
 
 pms_LeaveOneOut_split = {k: v for k, v in pms_LeaveOneOut_split.items() if v is not None}`
 

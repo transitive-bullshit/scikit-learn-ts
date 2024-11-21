@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Linear perceptron classifier.
 
-  Read more in the [User Guide](../linear_model.html#perceptron).
+  The implementation is a wrapper around [`SGDClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier "sklearn.linear_model.SGDClassifier") by fixing the `loss` and `learning_rate` parameters as:
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)
  */
@@ -34,7 +34,7 @@ export class Perceptron {
     alpha?: number
 
     /**
-      The Elastic Net mixing parameter, with `0 <= l1\_ratio <= 1`. `l1\_ratio=0` corresponds to L2 penalty, `l1\_ratio=1` to L1. Only used if `penalty='elasticnet'`.
+      The Elastic Net mixing parameter, with `0 <= l1_ratio <= 1`. `l1_ratio=0` corresponds to L2 penalty, `l1_ratio=1` to L1. Only used if `penalty='elasticnet'`.
 
       @defaultValue `0.15`
      */
@@ -48,14 +48,14 @@ export class Perceptron {
     fit_intercept?: boolean
 
     /**
-      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.Perceptron.partial_fit "sklearn.linear_model.Perceptron.partial_fit") method.
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial_fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.linear_model.Perceptron.partial_fit "sklearn.linear_model.Perceptron.partial_fit") method.
 
       @defaultValue `1000`
      */
     max_iter?: number
 
     /**
-      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol).
+      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous_loss - tol).
 
       @defaultValue `0.001`
      */
@@ -83,26 +83,26 @@ export class Perceptron {
     eta0?: number
 
     /**
-      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
 
       @defaultValue `0`
      */
     random_state?: number
 
     /**
-      Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
+      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least `tol` for `n_iter_no_change` consecutive epochs.
 
       @defaultValue `false`
      */
     early_stopping?: boolean
 
     /**
-      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early_stopping is `true`.
 
       @defaultValue `0.1`
      */
@@ -116,16 +116,16 @@ export class Perceptron {
     n_iter_no_change?: number
 
     /**
-      Preset for the class\_weight fit parameter.
+      Preset for the class_weight fit parameter.
 
       Weights associated with classes. If not given, all classes are supposed to have weight one.
 
-      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`.
      */
     class_weight?: any | 'balanced'
 
     /**
-      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-warm_start).
 
       @defaultValue `false`
      */
@@ -171,29 +171,8 @@ except NameError: bridgePerceptron = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Perceptron = {'penalty': ${
-      this.opts['penalty'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${
-      this.opts['l1_ratio'] ?? undefined
-    }, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'eta0': ${this.opts['eta0'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'early_stopping': ${
-      this.opts['early_stopping'] ?? undefined
-    }, 'validation_fraction': ${
-      this.opts['validation_fraction'] ?? undefined
-    }, 'n_iter_no_change': ${
-      this.opts['n_iter_no_change'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
+    await this._py
+      .ex`ctor_Perceptron = {'penalty': ${this.opts['penalty'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'l1_ratio': ${this.opts['l1_ratio'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'shuffle': ${this.opts['shuffle'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eta0': ${this.opts['eta0'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'early_stopping': ${this.opts['early_stopping'] ?? undefined}, 'validation_fraction': ${this.opts['validation_fraction'] ?? undefined}, 'n_iter_no_change': ${this.opts['n_iter_no_change'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'warm_start': ${this.opts['warm_start'] ?? undefined}}
 
 ctor_Perceptron = {k: v for k, v in ctor_Perceptron.items() if v is not None}`
 
@@ -242,9 +221,8 @@ ctor_Perceptron = {k: v for k, v in ctor_Perceptron.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Perceptron_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Perceptron_decision_function = {k: v for k, v in pms_Perceptron_decision_function.items() if v is not None}`
 
@@ -260,7 +238,7 @@ pms_Perceptron_decision_function = {k: v for k, v in pms_Perceptron_decision_fun
   /**
     Convert coefficient matrix to dense array format.
 
-    Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
+    Converts the `coef_` member (back) to a numpy.ndarray. This is the default format of `coef_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
   async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -310,7 +288,7 @@ pms_Perceptron_densify = {k: v for k, v in pms_Perceptron_densify.items() if v i
     intercept_init?: NDArray
 
     /**
-      Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
+      Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class_weight (passed through the constructor) if class_weight is specified.
      */
     sample_weight?: ArrayLike
   }): Promise<any> {
@@ -323,17 +301,8 @@ pms_Perceptron_densify = {k: v for k, v in pms_Perceptron_densify.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${
-      opts['coef_init'] !== undefined
-    } else None, 'intercept_init': np.array(${
-      opts['intercept_init'] ?? undefined
-    }) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Perceptron_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'coef_init': np.array(${opts['coef_init'] ?? undefined}) if ${opts['coef_init'] !== undefined} else None, 'intercept_init': np.array(${opts['intercept_init'] ?? undefined}) if ${opts['intercept_init'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_fit = {k: v for k, v in pms_Perceptron_fit.items() if v is not None}`
 
@@ -349,11 +318,11 @@ pms_Perceptron_fit = {k: v for k, v in pms_Perceptron_fit.items() if v is not No
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -368,9 +337,8 @@ pms_Perceptron_fit = {k: v for k, v in pms_Perceptron_fit.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Perceptron_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Perceptron_get_metadata_routing = {k: v for k, v in pms_Perceptron_get_metadata_routing.items() if v is not None}`
 
@@ -386,7 +354,7 @@ pms_Perceptron_get_metadata_routing = {k: v for k, v in pms_Perceptron_get_metad
   /**
     Perform one epoch of stochastic gradient descent on given samples.
 
-    Internally, this method uses `max\_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence, early stopping, and learning rate adjustments should be handled by the user.
+    Internally, this method uses `max_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence, early stopping, and learning rate adjustments should be handled by the user.
    */
   async partial_fit(opts: {
     /**
@@ -400,7 +368,7 @@ pms_Perceptron_get_metadata_routing = {k: v for k, v in pms_Perceptron_get_metad
     y?: NDArray
 
     /**
-      Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+      Classes across all calls to partial_fit. Can be obtained by via `np.unique(y_all)`, where y_all is the target vector of the entire dataset. This argument is required for the first call to partial_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
      */
     classes?: NDArray
 
@@ -418,13 +386,8 @@ pms_Perceptron_get_metadata_routing = {k: v for k, v in pms_Perceptron_get_metad
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_partial_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${
-      opts['classes'] !== undefined
-    } else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_Perceptron_partial_fit = {'X': ${opts['X'] ?? undefined}, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'classes': np.array(${opts['classes'] ?? undefined}) if ${opts['classes'] !== undefined} else None, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_partial_fit = {k: v for k, v in pms_Perceptron_partial_fit.items() if v is not None}`
 
@@ -455,9 +418,8 @@ pms_Perceptron_partial_fit = {k: v for k, v in pms_Perceptron_partial_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_Perceptron_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_Perceptron_predict = {k: v for k, v in pms_Perceptron_predict.items() if v is not None}`
 
@@ -500,13 +462,8 @@ pms_Perceptron_predict = {k: v for k, v in pms_Perceptron_predict.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_Perceptron_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_Perceptron_score = {k: v for k, v in pms_Perceptron_score.items() if v is not None}`
 
@@ -522,23 +479,23 @@ pms_Perceptron_score = {k: v for k, v in pms_Perceptron_score.items() if v is no
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `coef\_init` parameter in `fit`.
+      Metadata routing for `coef_init` parameter in `fit`.
      */
     coef_init?: string | boolean
 
     /**
-      Metadata routing for `intercept\_init` parameter in `fit`.
+      Metadata routing for `intercept_init` parameter in `fit`.
      */
     intercept_init?: string | boolean
 
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -551,11 +508,8 @@ pms_Perceptron_score = {k: v for k, v in pms_Perceptron_score.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_set_fit_request = {'coef_init': ${
-      opts['coef_init'] ?? undefined
-    }, 'intercept_init': ${
-      opts['intercept_init'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_Perceptron_set_fit_request = {'coef_init': ${opts['coef_init'] ?? undefined}, 'intercept_init': ${opts['intercept_init'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_set_fit_request = {k: v for k, v in pms_Perceptron_set_fit_request.items() if v is not None}`
 
@@ -569,20 +523,20 @@ pms_Perceptron_set_fit_request = {k: v for k, v in pms_Perceptron_set_fit_reques
   }
 
   /**
-    Request metadata passed to the `partial\_fit` method.
+    Request metadata passed to the `partial_fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_partial_fit_request(opts: {
     /**
-      Metadata routing for `classes` parameter in `partial\_fit`.
+      Metadata routing for `classes` parameter in `partial_fit`.
      */
     classes?: string | boolean
 
     /**
-      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+      Metadata routing for `sample_weight` parameter in `partial_fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -597,9 +551,8 @@ pms_Perceptron_set_fit_request = {k: v for k, v in pms_Perceptron_set_fit_reques
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_set_partial_fit_request = {'classes': ${
-      opts['classes'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+    await this._py
+      .ex`pms_Perceptron_set_partial_fit_request = {'classes': ${opts['classes'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_set_partial_fit_request = {k: v for k, v in pms_Perceptron_set_partial_fit_request.items() if v is not None}`
 
@@ -615,13 +568,13 @@ pms_Perceptron_set_partial_fit_request = {k: v for k, v in pms_Perceptron_set_pa
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -634,9 +587,8 @@ pms_Perceptron_set_partial_fit_request = {k: v for k, v in pms_Perceptron_set_pa
     }
 
     // set up method params
-    await this._py.ex`pms_Perceptron_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Perceptron_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Perceptron_set_score_request = {k: v for k, v in pms_Perceptron_set_score_request.items() if v is not None}`
 
@@ -652,9 +604,9 @@ pms_Perceptron_set_score_request = {k: v for k, v in pms_Perceptron_set_score_re
   /**
     Convert coefficient matrix to sparse format.
 
-    Converts the `coef\_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
+    Converts the `coef_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
 
-    The `intercept\_` member is not converted.
+    The `intercept_` member is not converted.
    */
   async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
@@ -774,7 +726,7 @@ pms_Perceptron_sparsify = {k: v for k, v in pms_Perceptron_sparsify.items() if v
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -799,7 +751,7 @@ pms_Perceptron_sparsify = {k: v for k, v in pms_Perceptron_sparsify.items() if v
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -847,7 +799,7 @@ pms_Perceptron_sparsify = {k: v for k, v in pms_Perceptron_sparsify.items() if v
   }
 
   /**
-    Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
+    Number of weight updates performed during training. Same as `(n_iter_ \* n_samples + 1)`.
    */
   get t_(): Promise<number> {
     if (this._isDisposed) {

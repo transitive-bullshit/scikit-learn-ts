@@ -1,366 +1,285 @@
-# OrthogonalMatchingPursuit
+# Class: OrthogonalMatchingPursuit
 
 Orthogonal Matching Pursuit model (OMP).
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#omp).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.OrthogonalMatchingPursuit.html)
 
 ## Constructors
 
-## constructor()
+### new OrthogonalMatchingPursuit()
 
-### Signature
+> **new OrthogonalMatchingPursuit**(`opts`?): [`OrthogonalMatchingPursuit`](OrthogonalMatchingPursuit.md)
 
-```ts
-new OrthogonalMatchingPursuit(opts?: object): OrthogonalMatchingPursuit;
-```
+**Parameters**
 
-### Parameters
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.fit_intercept`? | `boolean` | Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered). |
+| `opts.n_nonzero_coefs`? | `number` | Desired number of non-zero entries in the solution. Ignored if `tol` is set. When `undefined` and `tol` is also `undefined`, this value is either set to 10% of `n_features` or 1, whichever is greater. |
+| `opts.precompute`? | `boolean` \| `"auto"` | Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improves performance when [n_targets](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_targets) or [n_samples](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_samples) is very large. Note that if you already have such matrices, you can pass them directly to the fit method. |
+| `opts.tol`? | `number` | Maximum squared norm of the residual. If not `undefined`, overrides n_nonzero_coefs. |
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.fit_intercept?` | `boolean` | Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).  `Default Value`  `true` |
-| `opts.n_nonzero_coefs?` | `number` | Desired number of non-zero entries in the solution. If `undefined` (by default) this value is set to 10% of n\_features. |
-| `opts.normalize?` | `boolean` | This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.  `Default Value`  `false` |
-| `opts.precompute?` | `boolean` \| `"auto"` | Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improves performance when n\_targets or n\_samples is very large. Note that if you already have such matrices, you can pass them directly to the fit method.  `Default Value`  `'auto'` |
-| `opts.tol?` | `number` | Maximum squared norm of the residual. If not `undefined`, overrides n\_nonzero\_coefs. |
+**Returns** [`OrthogonalMatchingPursuit`](OrthogonalMatchingPursuit.md)
 
-### Returns
-
-[`OrthogonalMatchingPursuit`](OrthogonalMatchingPursuit.md)
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L23)
-
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L120)
-
-### fit()
-
-Fit the model using X, y as training data.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Training data. |
-| `opts.y?` | `ArrayLike` | Target values. Will be cast to X’s dtype if necessary. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L137)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L181)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L72)
-
-### predict()
-
-Predict using the linear model.
-
-#### Signature
-
-```ts
-predict(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Samples. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L219)
-
-### score()
-
-Return the coefficient of determination of the prediction.
-
-The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
-
-#### Signature
-
-```ts
-score(opts: object): Promise<number>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
-| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
-| `opts.y?` | `ArrayLike` | True values for `X`. |
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L258)
-
-### set\_score\_request()
-
-Request metadata passed to the `score` method.
-
-Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
-
-The options for each parameter are:
-
-#### Signature
-
-```ts
-set_score_request(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L313)
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L23)
 
 ## Properties
 
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L17)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/linear\_model/OrthogonalMatchingPursuit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/linear\_model/OrthogonalMatchingPursuit.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/linear\_model/OrthogonalMatchingPursuit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L19) |
+| `id` | `string` | `undefined` | [generated/linear\_model/OrthogonalMatchingPursuit.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/linear\_model/OrthogonalMatchingPursuit.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L17) |
 
 ## Accessors
 
 ### coef\_
 
+**Get Signature**
+
+> **get** **coef\_**(): `Promise`\<`ArrayLike`\>
+
 Parameter vector (w in the formula).
 
-#### Signature
+**Returns** `Promise`\<`ArrayLike`\>
 
-```ts
-coef_(): Promise<ArrayLike>;
-```
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L326)
 
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuit.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L351)
+***
 
 ### feature\_names\_in\_
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+**Get Signature**
 
-#### Signature
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L461)
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuit.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L486)
+***
 
 ### intercept\_
 
+**Get Signature**
+
+> **get** **intercept\_**(): `Promise`\<`number` \| `ArrayLike`\>
+
 Independent term in decision function.
 
-#### Signature
+**Returns** `Promise`\<`number` \| `ArrayLike`\>
 
-```ts
-intercept_(): Promise<number | ArrayLike>;
-```
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L353)
 
-#### Returns
-
-`Promise`\<`number` \| `ArrayLike`\>
-
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuit.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L378)
+***
 
 ### n\_features\_in\_
 
-Number of features seen during fit.
+**Get Signature**
 
-#### Signature
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-```ts
-n_features_in_(): Promise<number>;
-```
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-#### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L434)
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuit.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L459)
+***
 
 ### n\_iter\_
 
+**Get Signature**
+
+> **get** **n\_iter\_**(): `Promise`\<`number` \| `ArrayLike`\>
+
 Number of active features across every target.
 
-#### Signature
+**Returns** `Promise`\<`number` \| `ArrayLike`\>
 
-```ts
-n_iter_(): Promise<number | ArrayLike>;
-```
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L380)
 
-#### Returns
-
-`Promise`\<`number` \| `ArrayLike`\>
-
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuit.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L405)
+***
 
 ### n\_nonzero\_coefs\_
 
-The number of non-zero coefficients in the solution. If `n\_nonzero\_coefs` is `undefined` and `tol` is `undefined` this value is either set to 10% of `n\_features` or 1, whichever is greater.
+**Get Signature**
 
-#### Signature
+> **get** **n\_nonzero\_coefs\_**(): `Promise`\<`number`\>
 
-```ts
-n_nonzero_coefs_(): Promise<number>;
-```
+The number of non-zero coefficients in the solution or `undefined` when `tol` is set. If `n_nonzero_coefs` is `undefined` and `tol` is `undefined` this value is either set to 10% of `n_features` or 1, whichever is greater.
 
-#### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L407)
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuit.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L432)
+***
 
 ### py
 
-#### Signature
+**Get Signature**
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
+**Set Signature**
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L59)
+> **set** **py**(`pythonBridge`): `void`
 
-#### Signature
+**Parameters**
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `pythonBridge` | `PythonBridge` |
 
-#### Returns
+**Returns** `void`
 
-`void`
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L52)
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuit.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L63)
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L108)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Fit the model using X, y as training data.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | Training data. |
+| `opts.y`? | `ArrayLike` | Target values. Will be cast to X’s dtype if necessary. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L125)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L166)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+**Parameters**
+
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L65)
+
+***
+
+### predict()
+
+> **predict**(`opts`): `Promise`\<`any`\>
+
+Predict using the linear model.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | Samples. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L202)
+
+***
+
+### score()
+
+> **score**(`opts`): `Promise`\<`number`\>
+
+Return the coefficient of determination of the prediction.
+
+The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `ArrayLike` | Sample weights. |
+| `opts.X`? | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.y`? | `ArrayLike` | True values for `X`. |
+
+**Returns** `Promise`\<`number`\>
+
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L240)
+
+***
+
+### set\_score\_request()
+
+> **set\_score\_request**(`opts`): `Promise`\<`any`\>
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.sample_weight`? | `string` \| `boolean` | Metadata routing for `sample_weight` parameter in `score`. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/linear\_model/OrthogonalMatchingPursuit.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L290)

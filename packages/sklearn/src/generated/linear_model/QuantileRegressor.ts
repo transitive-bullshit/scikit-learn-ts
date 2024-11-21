@@ -8,11 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Linear regression model that predicts conditional quantiles.
 
-  The linear [`QuantileRegressor`](#sklearn.linear_model.QuantileRegressor "sklearn.linear_model.QuantileRegressor") optimizes the pinball loss for a desired `quantile` and is robust to outliers.
+  The linear [`QuantileRegressor`](https://scikit-learn.org/stable/modules/generated/#sklearn.linear_model.QuantileRegressor "sklearn.linear_model.QuantileRegressor") optimizes the pinball loss for a desired `quantile` and is robust to outliers.
 
-  This model uses an L1 regularization like [`Lasso`](sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso "sklearn.linear_model.Lasso").
+  This model uses an L1 regularization like [`Lasso`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso "sklearn.linear_model.Lasso").
 
-  Read more in the [User Guide](../linear_model.html#quantile-regression).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#quantile-regression).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.QuantileRegressor.html)
  */
@@ -47,13 +47,13 @@ export class QuantileRegressor {
     fit_intercept?: boolean
 
     /**
-      Method used by [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.11.3)") to solve the linear programming formulation.
+      Method used by [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.14.1)") to solve the linear programming formulation.
 
       From `scipy>=1.6.0`, it is recommended to use the highs methods because they are the fastest ones. Solvers “highs-ds”, “highs-ipm” and “highs” support sparse input data and, in fact, always convert to sparse csc.
 
       From `scipy>=1.11.0`, “interior-point” is not available anymore.
 
-      @defaultValue `'interior-point'`
+      @defaultValue `'highs'`
      */
     solver?:
       | 'highs-ds'
@@ -63,7 +63,7 @@ export class QuantileRegressor {
       | 'revised simplex'
 
     /**
-      Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.11.3)") as options. If `undefined` and if `solver='interior-point'`, then `{"lstsq": `true`}` is passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.11.3)") for the sake of stability.
+      Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.14.1)") as options. If `undefined` and if `solver='interior-point'`, then `{"lstsq": `true`}` is passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.14.1)") for the sake of stability.
      */
     solver_options?: any
   }) {
@@ -109,13 +109,8 @@ except NameError: bridgeQuantileRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_QuantileRegressor = {'quantile': ${
-      this.opts['quantile'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'solver': ${this.opts['solver'] ?? undefined}, 'solver_options': ${
-      this.opts['solver_options'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_QuantileRegressor = {'quantile': ${this.opts['quantile'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'solver_options': ${this.opts['solver_options'] ?? undefined}}
 
 ctor_QuantileRegressor = {k: v for k, v in ctor_QuantileRegressor.items() if v is not None}`
 
@@ -174,13 +169,8 @@ ctor_QuantileRegressor = {k: v for k, v in ctor_QuantileRegressor.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_QuantileRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_QuantileRegressor_fit = {k: v for k, v in pms_QuantileRegressor_fit.items() if v is not None}`
 
@@ -196,11 +186,11 @@ pms_QuantileRegressor_fit = {k: v for k, v in pms_QuantileRegressor_fit.items() 
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -218,9 +208,7 @@ pms_QuantileRegressor_fit = {k: v for k, v in pms_QuantileRegressor_fit.items() 
 
     // set up method params
     await this._py
-      .ex`pms_QuantileRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_QuantileRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_QuantileRegressor_get_metadata_routing = {k: v for k, v in pms_QuantileRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -253,9 +241,8 @@ pms_QuantileRegressor_get_metadata_routing = {k: v for k, v in pms_QuantileRegre
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileRegressor_predict = {'X': ${
-      opts['X'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_QuantileRegressor_predict = {'X': ${opts['X'] ?? undefined}}
 
 pms_QuantileRegressor_predict = {k: v for k, v in pms_QuantileRegressor_predict.items() if v is not None}`
 
@@ -271,11 +258,11 @@ pms_QuantileRegressor_predict = {k: v for k, v in pms_QuantileRegressor_predict.
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -300,13 +287,8 @@ pms_QuantileRegressor_predict = {k: v for k, v in pms_QuantileRegressor_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_QuantileRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_QuantileRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_QuantileRegressor_score = {k: v for k, v in pms_QuantileRegressor_score.items() if v is not None}`
 
@@ -322,13 +304,13 @@ pms_QuantileRegressor_score = {k: v for k, v in pms_QuantileRegressor_score.item
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -346,9 +328,7 @@ pms_QuantileRegressor_score = {k: v for k, v in pms_QuantileRegressor_score.item
 
     // set up method params
     await this._py
-      .ex`pms_QuantileRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_QuantileRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_QuantileRegressor_set_fit_request = {k: v for k, v in pms_QuantileRegressor_set_fit_request.items() if v is not None}`
 
@@ -364,13 +344,13 @@ pms_QuantileRegressor_set_fit_request = {k: v for k, v in pms_QuantileRegressor_
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -388,9 +368,7 @@ pms_QuantileRegressor_set_fit_request = {k: v for k, v in pms_QuantileRegressor_
 
     // set up method params
     await this._py
-      .ex`pms_QuantileRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_QuantileRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_QuantileRegressor_set_score_request = {k: v for k, v in pms_QuantileRegressor_set_score_request.items() if v is not None}`
 
@@ -458,7 +436,7 @@ pms_QuantileRegressor_set_score_request = {k: v for k, v in pms_QuantileRegresso
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -485,7 +463,7 @@ pms_QuantileRegressor_set_score_request = {k: v for k, v in pms_QuantileRegresso
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

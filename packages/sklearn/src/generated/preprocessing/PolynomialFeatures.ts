@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Generate a new feature matrix consisting of all polynomial combinations of the features with degree less than or equal to the specified degree. For example, if an input sample is two dimensional and of the form \[a, b\], the degree-2 polynomial features are \[1, a, b, a^2, ab, b^2\].
 
-  Read more in the [User Guide](../preprocessing.html#polynomial-features).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../preprocessing.html#polynomial-features).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
  */
@@ -24,7 +24,7 @@ export class PolynomialFeatures {
 
   constructor(opts?: {
     /**
-      If a single int is given, it specifies the maximal degree of the polynomial features. If a tuple `(min\_degree, max\_degree)` is passed, then `min\_degree` is the minimum and `max\_degree` is the maximum polynomial degree of the generated features. Note that `min\_degree=0` and `min\_degree=1` are equivalent as outputting the degree zero term is determined by `include\_bias`.
+      If a single int is given, it specifies the maximal degree of the polynomial features. If a tuple `(min_degree, max_degree)` is passed, then `min_degree` is the minimum and `max_degree` is the maximum polynomial degree of the generated features. Note that `min_degree=0` and `min_degree=1` are equivalent as outputting the degree zero term is determined by `include_bias`.
 
       @defaultValue `2`
      */
@@ -95,13 +95,8 @@ except NameError: bridgePolynomialFeatures = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PolynomialFeatures = {'degree': ${
-      this.opts['degree'] ?? undefined
-    }, 'interaction_only': ${
-      this.opts['interaction_only'] ?? undefined
-    }, 'include_bias': ${this.opts['include_bias'] ?? undefined}, 'order': ${
-      this.opts['order'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_PolynomialFeatures = {'degree': ${this.opts['degree'] ?? undefined}, 'interaction_only': ${this.opts['interaction_only'] ?? undefined}, 'include_bias': ${this.opts['include_bias'] ?? undefined}, 'order': ${this.opts['order'] ?? undefined}}
 
 ctor_PolynomialFeatures = {k: v for k, v in ctor_PolynomialFeatures.items() if v is not None}`
 
@@ -155,9 +150,8 @@ ctor_PolynomialFeatures = {k: v for k, v in ctor_PolynomialFeatures.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_PolynomialFeatures_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_PolynomialFeatures_fit = {k: v for k, v in pms_PolynomialFeatures_fit.items() if v is not None}`
 
@@ -173,7 +167,7 @@ pms_PolynomialFeatures_fit = {k: v for k, v in pms_PolynomialFeatures_fit.items(
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -204,13 +198,8 @@ pms_PolynomialFeatures_fit = {k: v for k, v in pms_PolynomialFeatures_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PolynomialFeatures_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_PolynomialFeatures_fit_transform = {k: v for k, v in pms_PolynomialFeatures_fit_transform.items() if v is not None}`
 
@@ -246,9 +235,7 @@ pms_PolynomialFeatures_fit_transform = {k: v for k, v in pms_PolynomialFeatures_
 
     // set up method params
     await this._py
-      .ex`pms_PolynomialFeatures_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_PolynomialFeatures_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_PolynomialFeatures_get_feature_names_out = {k: v for k, v in pms_PolynomialFeatures_get_feature_names_out.items() if v is not None}`
 
@@ -264,11 +251,11 @@ pms_PolynomialFeatures_get_feature_names_out = {k: v for k, v in pms_PolynomialF
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -286,9 +273,7 @@ pms_PolynomialFeatures_get_feature_names_out = {k: v for k, v in pms_PolynomialF
 
     // set up method params
     await this._py
-      .ex`pms_PolynomialFeatures_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_PolynomialFeatures_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_PolynomialFeatures_get_metadata_routing = {k: v for k, v in pms_PolynomialFeatures_get_metadata_routing.items() if v is not None}`
 
@@ -304,13 +289,13 @@ pms_PolynomialFeatures_get_metadata_routing = {k: v for k, v in pms_PolynomialFe
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -323,9 +308,8 @@ pms_PolynomialFeatures_get_metadata_routing = {k: v for k, v in pms_PolynomialFe
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_PolynomialFeatures_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_PolynomialFeatures_set_output = {k: v for k, v in pms_PolynomialFeatures_set_output.items() if v is not None}`
 
@@ -362,9 +346,8 @@ pms_PolynomialFeatures_set_output = {k: v for k, v in pms_PolynomialFeatures_set
     }
 
     // set up method params
-    await this._py.ex`pms_PolynomialFeatures_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_PolynomialFeatures_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_transform.items() if v is not None}`
 
@@ -378,7 +361,7 @@ pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_tran
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -405,7 +388,7 @@ pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_tran
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

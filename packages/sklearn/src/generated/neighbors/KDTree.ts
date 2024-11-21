@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   KDTree for fast generalized N-point problems
 
-  Read more in the [User Guide](../neighbors.html#unsupervised-neighbors).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../neighbors.html#unsupervised-neighbors).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html)
  */
@@ -22,19 +22,19 @@ export class KDTree {
 
   constructor(opts?: {
     /**
-      n\_samples is the number of points in the data set, and n\_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
+      n_samples is the number of points in the data set, and n_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
      */
     X?: ArrayLike[]
 
     /**
-      Number of points at which to switch to brute-force. Changing leaf\_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n\_samples / leaf\_size. For a specified `leaf\_size`, a leaf node is guaranteed to satisfy `leaf\_size <= n\_points <= 2 \* leaf\_size`, except in the case that `n\_samples < leaf\_size`.
+      Number of points at which to switch to brute-force. Changing leaf_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n_samples / leaf_size. For a specified `leaf_size`, a leaf node is guaranteed to satisfy `leaf_size <= n_points <= 2 \* leaf_size`, except in the case that `n_samples < leaf_size`.
 
       @defaultValue `40`
      */
     leaf_size?: any
 
     /**
-      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. A list of valid metrics for KDTree is given by `KDTree.valid\_metrics`. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for more information on any distance metric.
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. A list of valid metrics for KDTree is given by the attribute `valid_metrics`. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance_metrics`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for more information on any distance metric.
 
       @defaultValue `'minkowski'`
      */
@@ -80,11 +80,8 @@ except NameError: bridgeKDTree = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KDTree = {'X': np.array(${
-      this.opts['X'] ?? undefined
-    }) if ${this.opts['X'] !== undefined} else None, 'leaf_size': ${
-      this.opts['leaf_size'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}}
+    await this._py
+      .ex`ctor_KDTree = {'X': np.array(${this.opts['X'] ?? undefined}) if ${this.opts['X'] !== undefined} else None, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}}
 
 ctor_KDTree = {k: v for k, v in ctor_KDTree.items() if v is not None}`
 
@@ -212,14 +209,14 @@ pms_KDTree_get_tree_stats = {k: v for k, v in pms_KDTree_get_tree_stats.items() 
     kernel?: string
 
     /**
-      Specify the desired absolute tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is zero (i.e. machine precision).
+      Specify the desired absolute tolerance of the result. If the true result is `K_true`, then the returned result `K_ret` satisfies `abs(K_true \- K_ret) < atol + rtol \* K_ret` The default is zero (i.e. machine precision).
 
       @defaultValue `0`
      */
     atol?: number
 
     /**
-      Specify the desired relative tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is `1e-8` (i.e. machine precision).
+      Specify the desired relative tolerance of the result. If the true result is `K_true`, then the returned result `K_ret` satisfies `abs(K_true \- K_ret) < atol + rtol \* K_ret` The default is `1e-8` (i.e. machine precision).
 
       @defaultValue `1e-8`
      */
@@ -248,15 +245,8 @@ pms_KDTree_get_tree_stats = {k: v for k, v in pms_KDTree_get_tree_stats.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_KDTree_kernel_density = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'h': ${
-      opts['h'] ?? undefined
-    }, 'kernel': ${opts['kernel'] ?? undefined}, 'atol': ${
-      opts['atol'] ?? undefined
-    }, 'rtol': ${opts['rtol'] ?? undefined}, 'breadth_first': ${
-      opts['breadth_first'] ?? undefined
-    }, 'return_log': ${opts['return_log'] ?? undefined}}
+    await this._py
+      .ex`pms_KDTree_kernel_density = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'h': ${opts['h'] ?? undefined}, 'kernel': ${opts['kernel'] ?? undefined}, 'atol': ${opts['atol'] ?? undefined}, 'rtol': ${opts['rtol'] ?? undefined}, 'breadth_first': ${opts['breadth_first'] ?? undefined}, 'return_log': ${opts['return_log'] ?? undefined}}
 
 pms_KDTree_kernel_density = {k: v for k, v in pms_KDTree_kernel_density.items() if v is not None}`
 
@@ -322,15 +312,8 @@ pms_KDTree_kernel_density = {k: v for k, v in pms_KDTree_kernel_density.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_KDTree_query = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'k': ${
-      opts['k'] ?? undefined
-    }, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }, 'dualtree': ${opts['dualtree'] ?? undefined}, 'breadth_first': ${
-      opts['breadth_first'] ?? undefined
-    }, 'sort_results': ${opts['sort_results'] ?? undefined}}
+    await this._py
+      .ex`pms_KDTree_query = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'k': ${opts['k'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}, 'dualtree': ${opts['dualtree'] ?? undefined}, 'breadth_first': ${opts['breadth_first'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_KDTree_query = {k: v for k, v in pms_KDTree_query.items() if v is not None}`
 
@@ -358,21 +341,21 @@ pms_KDTree_query = {k: v for k, v in pms_KDTree_query.items() if v is not None}`
     r?: any
 
     /**
-      if `true`, return distances to neighbors of each point if `false`, return only neighbors Note that unlike the query() method, setting return\_distance=`true` here adds to the computation time. Not all distances need to be calculated explicitly for return\_distance=`false`. Results are not sorted by default: see `sort\_results` keyword.
+      if `true`, return distances to neighbors of each point if `false`, return only neighbors Note that unlike the query() method, setting return_distance=`true` here adds to the computation time. Not all distances need to be calculated explicitly for return_distance=`false`. Results are not sorted by default: see `sort_results` keyword.
 
       @defaultValue `false`
      */
     return_distance?: boolean
 
     /**
-      if `true`, return only the count of points within distance r if `false`, return the indices of all points within distance r If return\_distance==`true`, setting count\_only=`true` will result in an error.
+      if `true`, return only the count of points within distance r if `false`, return the indices of all points within distance r If return_distance==`true`, setting count_only=`true` will result in an error.
 
       @defaultValue `false`
      */
     count_only?: boolean
 
     /**
-      if `true`, the distances and indices will be sorted before being returned. If `false`, the results will not be sorted. If return\_distance == `false`, setting sort\_results = `true` will result in an error.
+      if `true`, the distances and indices will be sorted before being returned. If `false`, the results will not be sorted. If return_distance == `false`, setting sort_results = `true` will result in an error.
 
       @defaultValue `false`
      */
@@ -387,15 +370,8 @@ pms_KDTree_query = {k: v for k, v in pms_KDTree_query.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_KDTree_query_radius = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'r': ${
-      opts['r'] ?? undefined
-    }, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }, 'count_only': ${opts['count_only'] ?? undefined}, 'sort_results': ${
-      opts['sort_results'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KDTree_query_radius = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'r': ${opts['r'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}, 'count_only': ${opts['count_only'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_KDTree_query_radius = {k: v for k, v in pms_KDTree_query_radius.items() if v is not None}`
 
@@ -464,11 +440,8 @@ pms_KDTree_reset_n_calls = {k: v for k, v in pms_KDTree_reset_n_calls.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KDTree_two_point_correlation = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'r': ${
-      opts['r'] ?? undefined
-    }, 'dualtree': ${opts['dualtree'] ?? undefined}}
+    await this._py
+      .ex`pms_KDTree_two_point_correlation = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'r': ${opts['r'] ?? undefined}, 'dualtree': ${opts['dualtree'] ?? undefined}}
 
 pms_KDTree_two_point_correlation = {k: v for k, v in pms_KDTree_two_point_correlation.items() if v is not None}`
 

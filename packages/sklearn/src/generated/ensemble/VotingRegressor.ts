@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A voting regressor is an ensemble meta-estimator that fits several base regressors, each on the whole dataset. Then it averages the individual predictions to form a final prediction.
 
-  Read more in the [User Guide](../ensemble.html#voting-regressor).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#voting-regressor).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingRegressor.html)
  */
@@ -24,7 +24,7 @@ export class VotingRegressor {
 
   constructor(opts?: {
     /**
-      Invoking the `fit` method on the `VotingRegressor` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingRegressor.set_params "sklearn.ensemble.VotingRegressor.set_params").
+      Invoking the `fit` method on the `VotingRegressor` will fit clones of those original estimators that will be stored in the class attribute `self.estimators_`. An estimator can be set to `'drop'` using [`set_params`](https://scikit-learn.org/stable/modules/generated/#sklearn.ensemble.VotingRegressor.set_params "sklearn.ensemble.VotingRegressor.set_params").
      */
     estimators?: any
 
@@ -34,7 +34,7 @@ export class VotingRegressor {
     weights?: ArrayLike
 
     /**
-      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -85,13 +85,8 @@ except NameError: bridgeVotingRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_VotingRegressor = {'estimators': ${
-      this.opts['estimators'] ?? undefined
-    }, 'weights': np.array(${this.opts['weights'] ?? undefined}) if ${
-      this.opts['weights'] !== undefined
-    } else None, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_VotingRegressor = {'estimators': ${this.opts['estimators'] ?? undefined}, 'weights': np.array(${this.opts['weights'] ?? undefined}) if ${this.opts['weights'] !== undefined} else None, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is not None}`
 
@@ -125,7 +120,7 @@ ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is no
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -138,6 +133,11 @@ ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is no
       Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the underlying estimators.
+     */
+    fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
@@ -148,13 +148,8 @@ ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingRegressor_fit = {k: v for k, v in pms_VotingRegressor_fit.items() if v is not None}`
 
@@ -197,13 +192,8 @@ pms_VotingRegressor_fit = {k: v for k, v in pms_VotingRegressor_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VotingRegressor_fit_transform = {k: v for k, v in pms_VotingRegressor_fit_transform.items() if v is not None}`
 
@@ -237,9 +227,7 @@ pms_VotingRegressor_fit_transform = {k: v for k, v in pms_VotingRegressor_fit_tr
 
     // set up method params
     await this._py
-      .ex`pms_VotingRegressor_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_VotingRegressor_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_VotingRegressor_get_feature_names_out = {k: v for k, v in pms_VotingRegressor_get_feature_names_out.items() if v is not None}`
 
@@ -255,11 +243,11 @@ pms_VotingRegressor_get_feature_names_out = {k: v for k, v in pms_VotingRegresso
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -274,9 +262,8 @@ pms_VotingRegressor_get_feature_names_out = {k: v for k, v in pms_VotingRegresso
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_VotingRegressor_get_metadata_routing = {k: v for k, v in pms_VotingRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -309,9 +296,8 @@ pms_VotingRegressor_get_metadata_routing = {k: v for k, v in pms_VotingRegressor
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingRegressor_predict = {k: v for k, v in pms_VotingRegressor_predict.items() if v is not None}`
 
@@ -327,11 +313,11 @@ pms_VotingRegressor_predict = {k: v for k, v in pms_VotingRegressor_predict.item
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -354,13 +340,8 @@ pms_VotingRegressor_predict = {k: v for k, v in pms_VotingRegressor_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_VotingRegressor_score = {k: v for k, v in pms_VotingRegressor_score.items() if v is not None}`
 
@@ -376,13 +357,13 @@ pms_VotingRegressor_score = {k: v for k, v in pms_VotingRegressor_score.items() 
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -397,9 +378,8 @@ pms_VotingRegressor_score = {k: v for k, v in pms_VotingRegressor_score.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingRegressor_set_fit_request = {k: v for k, v in pms_VotingRegressor_set_fit_request.items() if v is not None}`
 
@@ -415,13 +395,13 @@ pms_VotingRegressor_set_fit_request = {k: v for k, v in pms_VotingRegressor_set_
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
@@ -432,9 +412,8 @@ pms_VotingRegressor_set_fit_request = {k: v for k, v in pms_VotingRegressor_set_
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VotingRegressor_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_VotingRegressor_set_output = {k: v for k, v in pms_VotingRegressor_set_output.items() if v is not None}`
 
@@ -450,13 +429,13 @@ pms_VotingRegressor_set_output = {k: v for k, v in pms_VotingRegressor_set_outpu
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -472,9 +451,7 @@ pms_VotingRegressor_set_output = {k: v for k, v in pms_VotingRegressor_set_outpu
 
     // set up method params
     await this._py
-      .ex`pms_VotingRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_VotingRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_VotingRegressor_set_score_request = {k: v for k, v in pms_VotingRegressor_set_score_request.items() if v is not None}`
 
@@ -505,9 +482,8 @@ pms_VotingRegressor_set_score_request = {k: v for k, v in pms_VotingRegressor_se
     }
 
     // set up method params
-    await this._py.ex`pms_VotingRegressor_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VotingRegressor_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VotingRegressor_transform = {k: v for k, v in pms_VotingRegressor_transform.items() if v is not None}`
 
@@ -571,7 +547,7 @@ pms_VotingRegressor_transform = {k: v for k, v in pms_VotingRegressor_transform.
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

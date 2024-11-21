@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The implementation is based on libsvm.
 
-  Read more in the [User Guide](../outlier_detection.html#outlier-detection).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../outlier_detection.html#outlier-detection).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html)
  */
@@ -68,7 +68,7 @@ export class OneClassSVM {
     nu?: number
 
     /**
-      Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
+      Whether to use the shrinking heuristic. See the [User Guide](https://scikit-learn.org/stable/modules/generated/../svm.html#shrinking-svm).
 
       @defaultValue `true`
      */
@@ -135,17 +135,8 @@ except NameError: bridgeOneClassSVM = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OneClassSVM = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'coef0': ${this.opts['coef0'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'nu': ${this.opts['nu'] ?? undefined}, 'shrinking': ${
-      this.opts['shrinking'] ?? undefined
-    }, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
+    await this._py
+      .ex`ctor_OneClassSVM = {'kernel': ${this.opts['kernel'] ?? undefined}, 'degree': ${this.opts['degree'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'coef0': ${this.opts['coef0'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'nu': ${this.opts['nu'] ?? undefined}, 'shrinking': ${this.opts['shrinking'] ?? undefined}, 'cache_size': ${this.opts['cache_size'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}}
 
 ctor_OneClassSVM = {k: v for k, v in ctor_OneClassSVM.items() if v is not None}`
 
@@ -194,9 +185,8 @@ ctor_OneClassSVM = {k: v for k, v in ctor_OneClassSVM.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneClassSVM_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneClassSVM_decision_function = {k: v for k, v in pms_OneClassSVM_decision_function.items() if v is not None}`
 
@@ -214,7 +204,7 @@ pms_OneClassSVM_decision_function = {k: v for k, v in pms_OneClassSVM_decision_f
    */
   async fit(opts: {
     /**
-      Set of samples, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Set of samples, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -237,13 +227,8 @@ pms_OneClassSVM_decision_function = {k: v for k, v in pms_OneClassSVM_decision_f
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_OneClassSVM_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_OneClassSVM_fit = {k: v for k, v in pms_OneClassSVM_fit.items() if v is not None}`
 
@@ -271,6 +256,11 @@ pms_OneClassSVM_fit = {k: v for k, v in pms_OneClassSVM_fit.items() if v is not 
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Arguments to be passed to `fit`.
+     */
+    kwargs?: any
   }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OneClassSVM instance has already been disposed')
@@ -281,9 +271,8 @@ pms_OneClassSVM_fit = {k: v for k, v in pms_OneClassSVM_fit.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_fit_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_OneClassSVM_fit_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_OneClassSVM_fit_predict = {k: v for k, v in pms_OneClassSVM_fit_predict.items() if v is not None}`
 
@@ -299,11 +288,11 @@ pms_OneClassSVM_fit_predict = {k: v for k, v in pms_OneClassSVM_fit_predict.item
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -318,9 +307,8 @@ pms_OneClassSVM_fit_predict = {k: v for k, v in pms_OneClassSVM_fit_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneClassSVM_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OneClassSVM_get_metadata_routing = {k: v for k, v in pms_OneClassSVM_get_metadata_routing.items() if v is not None}`
 
@@ -340,7 +328,7 @@ pms_OneClassSVM_get_metadata_routing = {k: v for k, v in pms_OneClassSVM_get_met
    */
   async predict(opts: {
     /**
-      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+      For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -353,9 +341,8 @@ pms_OneClassSVM_get_metadata_routing = {k: v for k, v in pms_OneClassSVM_get_met
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneClassSVM_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneClassSVM_predict = {k: v for k, v in pms_OneClassSVM_predict.items() if v is not None}`
 
@@ -386,9 +373,8 @@ pms_OneClassSVM_predict = {k: v for k, v in pms_OneClassSVM_predict.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneClassSVM_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.items() if v is not None}`
 
@@ -404,13 +390,13 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -423,9 +409,8 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
     }
 
     // set up method params
-    await this._py.ex`pms_OneClassSVM_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneClassSVM_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_request.items() if v is not None}`
 
@@ -436,31 +421,6 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
     // convert the result from python to node.js
     return this
       ._py`res_OneClassSVM_set_fit_request.tolist() if hasattr(res_OneClassSVM_set_fit_request, 'tolist') else res_OneClassSVM_set_fit_request`
-  }
-
-  /**
-    Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
-   */
-  get class_weight_(): Promise<NDArray> {
-    if (this._isDisposed) {
-      throw new Error('This OneClassSVM instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'OneClassSVM must call init() before accessing class_weight_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_OneClassSVM_class_weight_ = bridgeOneClassSVM[${this.id}].class_weight_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_OneClassSVM_class_weight_.tolist() if hasattr(attr_OneClassSVM_class_weight_, 'tolist') else attr_OneClassSVM_class_weight_`
-    })()
   }
 
   /**
@@ -539,7 +499,7 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -564,7 +524,7 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -612,7 +572,7 @@ pms_OneClassSVM_set_fit_request = {k: v for k, v in pms_OneClassSVM_set_fit_requ
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: decision\_function = score\_samples - `offset\_`. The offset is the opposite of `intercept\_` and is provided for consistency with other outlier detection algorithms.
+    Offset used to define the decision function from the raw scores. We have the relation: decision_function = score_samples - `offset_`. The offset is the opposite of `intercept_` and is provided for consistency with other outlier detection algorithms.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {

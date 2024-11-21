@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   A decision tree classifier.
 
-  Read more in the [User Guide](../tree.html#tree).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../tree.html#tree).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
  */
@@ -22,7 +22,7 @@ export class DecisionTreeClassifier {
 
   constructor(opts?: {
     /**
-      The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log\_loss” and “entropy” both for the Shannon information gain, see [Mathematical formulation](../tree.html#tree-mathematical-formulation).
+      The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log_loss” and “entropy” both for the Shannon information gain, see [Mathematical formulation](https://scikit-learn.org/stable/modules/generated/../tree.html#tree-mathematical-formulation).
 
       @defaultValue `'gini'`
      */
@@ -36,7 +36,7 @@ export class DecisionTreeClassifier {
     splitter?: 'best' | 'random'
 
     /**
-      The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+      The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
      */
     max_depth?: number
 
@@ -48,14 +48,14 @@ export class DecisionTreeClassifier {
     min_samples_split?: number
 
     /**
-      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min_samples_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
       @defaultValue `1`
      */
     min_samples_leaf?: number
 
     /**
-      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided.
 
       @defaultValue `0`
      */
@@ -64,15 +64,15 @@ export class DecisionTreeClassifier {
     /**
       The number of features to consider when looking for the best split:
      */
-    max_features?: number | 'auto' | 'sqrt' | 'log2'
+    max_features?: number | 'sqrt' | 'log2'
 
     /**
-      Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
+      Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max_features < n_features`, the algorithm will select `max_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max_features=n_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random_state` has to be fixed to an integer. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
      */
     random_state?: number
 
     /**
-      Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+      Grow a tree with `max_leaf_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
      */
     max_leaf_nodes?: number
 
@@ -86,24 +86,29 @@ export class DecisionTreeClassifier {
     min_impurity_decrease?: number
 
     /**
-      Weights associated with classes in the form `{class\_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
+      Weights associated with classes in the form `{class_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
 
       Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].
 
-      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`
 
       For multi-output, the weights of each column of y will be multiplied.
 
-      Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
+      Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified.
      */
     class_weight?: any | 'balanced'
 
     /**
-      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
+      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](https://scikit-learn.org/stable/modules/generated/../tree.html#minimal-cost-complexity-pruning) for details.
 
       @defaultValue `0`
      */
     ccp_alpha?: any
+
+    /**
+      1: monotonic increase
+     */
+    monotonic_cst?: any[]
   }) {
     this.id = `DecisionTreeClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -149,27 +154,8 @@ except NameError: bridgeDecisionTreeClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DecisionTreeClassifier = {'criterion': ${
-      this.opts['criterion'] ?? undefined
-    }, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${
-      this.opts['max_depth'] ?? undefined
-    }, 'min_samples_split': ${
-      this.opts['min_samples_split'] ?? undefined
-    }, 'min_samples_leaf': ${
-      this.opts['min_samples_leaf'] ?? undefined
-    }, 'min_weight_fraction_leaf': ${
-      this.opts['min_weight_fraction_leaf'] ?? undefined
-    }, 'max_features': ${
-      this.opts['max_features'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'max_leaf_nodes': ${
-      this.opts['max_leaf_nodes'] ?? undefined
-    }, 'min_impurity_decrease': ${
-      this.opts['min_impurity_decrease'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}}
+    await this._py
+      .ex`ctor_DecisionTreeClassifier = {'criterion': ${this.opts['criterion'] ?? undefined}, 'splitter': ${this.opts['splitter'] ?? undefined}, 'max_depth': ${this.opts['max_depth'] ?? undefined}, 'min_samples_split': ${this.opts['min_samples_split'] ?? undefined}, 'min_samples_leaf': ${this.opts['min_samples_leaf'] ?? undefined}, 'min_weight_fraction_leaf': ${this.opts['min_weight_fraction_leaf'] ?? undefined}, 'max_features': ${this.opts['max_features'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'max_leaf_nodes': ${this.opts['max_leaf_nodes'] ?? undefined}, 'min_impurity_decrease': ${this.opts['min_impurity_decrease'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'ccp_alpha': ${this.opts['ccp_alpha'] ?? undefined}, 'monotonic_cst': np.array(${this.opts['monotonic_cst'] ?? undefined}) if ${this.opts['monotonic_cst'] !== undefined} else None}
 
 ctor_DecisionTreeClassifier = {k: v for k, v in ctor_DecisionTreeClassifier.items() if v is not None}`
 
@@ -203,7 +189,7 @@ ctor_DecisionTreeClassifier = {k: v for k, v in ctor_DecisionTreeClassifier.item
    */
   async apply(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -225,11 +211,8 @@ ctor_DecisionTreeClassifier = {k: v for k, v in ctor_DecisionTreeClassifier.item
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_apply = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_apply = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_apply = {k: v for k, v in pms_DecisionTreeClassifier_apply.items() if v is not None}`
 
@@ -245,11 +228,11 @@ pms_DecisionTreeClassifier_apply = {k: v for k, v in pms_DecisionTreeClassifier_
   /**
     Compute the pruning path during Minimal Cost-Complexity Pruning.
 
-    See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
+    See [Minimal Cost-Complexity Pruning](https://scikit-learn.org/stable/modules/generated/../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
    */
   async cost_complexity_pruning_path(opts: {
     /**
-      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -277,13 +260,7 @@ pms_DecisionTreeClassifier_apply = {k: v for k, v in pms_DecisionTreeClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_cost_complexity_pruning_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+      .ex`pms_DecisionTreeClassifier_cost_complexity_pruning_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DecisionTreeClassifier_cost_complexity_pruning_path = {k: v for k, v in pms_DecisionTreeClassifier_cost_complexity_pruning_path.items() if v is not None}`
 
@@ -301,7 +278,7 @@ pms_DecisionTreeClassifier_cost_complexity_pruning_path = {k: v for k, v in pms_
    */
   async decision_path(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -326,11 +303,7 @@ pms_DecisionTreeClassifier_cost_complexity_pruning_path = {k: v for k, v in pms_
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_decision_path = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_decision_path = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_decision_path = {k: v for k, v in pms_DecisionTreeClassifier_decision_path.items() if v is not None}`
 
@@ -348,7 +321,7 @@ pms_DecisionTreeClassifier_decision_path = {k: v for k, v in pms_DecisionTreeCla
    */
   async fit(opts: {
     /**
-      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -380,15 +353,8 @@ pms_DecisionTreeClassifier_decision_path = {k: v for k, v in pms_DecisionTreeCla
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_fit = {k: v for k, v in pms_DecisionTreeClassifier_fit.items() if v is not None}`
 
@@ -436,11 +402,11 @@ pms_DecisionTreeClassifier_get_depth = {k: v for k, v in pms_DecisionTreeClassif
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -458,9 +424,7 @@ pms_DecisionTreeClassifier_get_depth = {k: v for k, v in pms_DecisionTreeClassif
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_DecisionTreeClassifier_get_metadata_routing = {k: v for k, v in pms_DecisionTreeClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -510,7 +474,7 @@ pms_DecisionTreeClassifier_get_n_leaves = {k: v for k, v in pms_DecisionTreeClas
    */
   async predict(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -534,11 +498,8 @@ pms_DecisionTreeClassifier_get_n_leaves = {k: v for k, v in pms_DecisionTreeClas
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_predict = {k: v for k, v in pms_DecisionTreeClassifier_predict.items() if v is not None}`
 
@@ -556,7 +517,7 @@ pms_DecisionTreeClassifier_predict = {k: v for k, v in pms_DecisionTreeClassifie
    */
   async predict_log_proba(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -574,9 +535,7 @@ pms_DecisionTreeClassifier_predict = {k: v for k, v in pms_DecisionTreeClassifie
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_DecisionTreeClassifier_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_DecisionTreeClassifier_predict_log_proba = {k: v for k, v in pms_DecisionTreeClassifier_predict_log_proba.items() if v is not None}`
 
@@ -596,7 +555,7 @@ pms_DecisionTreeClassifier_predict_log_proba = {k: v for k, v in pms_DecisionTre
    */
   async predict_proba(opts: {
     /**
-      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr_matrix`.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -621,11 +580,7 @@ pms_DecisionTreeClassifier_predict_log_proba = {k: v for k, v in pms_DecisionTre
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_predict_proba = {k: v for k, v in pms_DecisionTreeClassifier_predict_proba.items() if v is not None}`
 
@@ -670,13 +625,8 @@ pms_DecisionTreeClassifier_predict_proba = {k: v for k, v in pms_DecisionTreeCla
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionTreeClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_DecisionTreeClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_DecisionTreeClassifier_score = {k: v for k, v in pms_DecisionTreeClassifier_score.items() if v is not None}`
 
@@ -692,18 +642,18 @@ pms_DecisionTreeClassifier_score = {k: v for k, v in pms_DecisionTreeClassifier_
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `check\_input` parameter in `fit`.
+      Metadata routing for `check_input` parameter in `fit`.
      */
     check_input?: string | boolean
 
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -721,9 +671,7 @@ pms_DecisionTreeClassifier_score = {k: v for k, v in pms_DecisionTreeClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_fit_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+      .ex`pms_DecisionTreeClassifier_set_fit_request = {'check_input': ${opts['check_input'] ?? undefined}, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_fit_request = {k: v for k, v in pms_DecisionTreeClassifier_set_fit_request.items() if v is not None}`
 
@@ -737,15 +685,15 @@ pms_DecisionTreeClassifier_set_fit_request = {k: v for k, v in pms_DecisionTreeC
   }
 
   /**
-    Request metadata passed to the `predict\_proba` method.
+    Request metadata passed to the `predict_proba` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_predict_proba_request(opts: {
     /**
-      Metadata routing for `check\_input` parameter in `predict\_proba`.
+      Metadata routing for `check_input` parameter in `predict_proba`.
      */
     check_input?: string | boolean
   }): Promise<any> {
@@ -763,9 +711,7 @@ pms_DecisionTreeClassifier_set_fit_request = {k: v for k, v in pms_DecisionTreeC
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_predict_proba_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_set_predict_proba_request = {'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_predict_proba_request = {k: v for k, v in pms_DecisionTreeClassifier_set_predict_proba_request.items() if v is not None}`
 
@@ -781,13 +727,13 @@ pms_DecisionTreeClassifier_set_predict_proba_request = {k: v for k, v in pms_Dec
   /**
     Request metadata passed to the `predict` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_predict_request(opts: {
     /**
-      Metadata routing for `check\_input` parameter in `predict`.
+      Metadata routing for `check_input` parameter in `predict`.
      */
     check_input?: string | boolean
   }): Promise<any> {
@@ -805,9 +751,7 @@ pms_DecisionTreeClassifier_set_predict_proba_request = {k: v for k, v in pms_Dec
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_predict_request = {'check_input': ${
-      opts['check_input'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_set_predict_request = {'check_input': ${opts['check_input'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_predict_request = {k: v for k, v in pms_DecisionTreeClassifier_set_predict_request.items() if v is not None}`
 
@@ -823,13 +767,13 @@ pms_DecisionTreeClassifier_set_predict_request = {k: v for k, v in pms_DecisionT
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -847,9 +791,7 @@ pms_DecisionTreeClassifier_set_predict_request = {k: v for k, v in pms_DecisionT
 
     // set up method params
     await this._py
-      .ex`pms_DecisionTreeClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_DecisionTreeClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_DecisionTreeClassifier_set_score_request = {k: v for k, v in pms_DecisionTreeClassifier_set_score_request.items() if v is not None}`
 
@@ -890,7 +832,7 @@ pms_DecisionTreeClassifier_set_score_request = {k: v for k, v in pms_DecisionTre
   }
 
   /**
-    The inferred value of max\_features.
+    The inferred value of max_features.
    */
   get max_features_(): Promise<number> {
     if (this._isDisposed) {
@@ -944,7 +886,7 @@ pms_DecisionTreeClassifier_set_score_request = {k: v for k, v in pms_DecisionTre
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -971,7 +913,7 @@ pms_DecisionTreeClassifier_set_score_request = {k: v for k, v in pms_DecisionTre
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -1025,7 +967,7 @@ pms_DecisionTreeClassifier_set_score_request = {k: v for k, v in pms_DecisionTre
   }
 
   /**
-    The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and [Understanding the decision tree structure](../../auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py) for basic usage of these attributes.
+    The underlying Tree object. Please refer to `help(sklearn.tree._tree.Tree)` for attributes of Tree object and [Understanding the decision tree structure](https://scikit-learn.org/stable/modules/generated/../../auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py) for basic usage of these attributes.
    */
   get tree_(): Promise<any> {
     if (this._isDisposed) {

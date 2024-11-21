@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each class is represented by its centroid, with test samples classified to the class with the nearest centroid.
 
-  Read more in the [User Guide](../neighbors.html#nearest-centroid-classifier).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../neighbors.html#nearest-centroid-classifier).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html)
  */
@@ -24,13 +24,13 @@ export class NearestCentroid {
 
   constructor(opts?: {
     /**
-      Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values. Note that “wminkowski”, “seuclidean” and “mahalanobis” are not supported.
+      Metric to use for distance computation.
 
-      The centroids for the samples corresponding to each class is the point from which the sum of the distances (according to the metric) of all samples that belong to that particular class are minimized. If the `"manhattan"` metric is provided, this centroid is the median and for all other metrics, the centroid is now set to be the mean.
+      If `metric="euclidean"`, the centroid for the samples corresponding to each class is the arithmetic mean, which minimizes the sum of squared L1 distances. If `metric="manhattan"`, the centroid is the feature-wise median, which minimizes the sum of L1 distances.
 
       @defaultValue `'euclidean'`
      */
-    metric?: string
+    metric?: 'euclidean' | 'manhattan'
 
     /**
       Threshold for shrinking centroids to remove features.
@@ -77,9 +77,8 @@ except NameError: bridgeNearestCentroid = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NearestCentroid = {'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'shrink_threshold': ${this.opts['shrink_threshold'] ?? undefined}}
+    await this._py
+      .ex`ctor_NearestCentroid = {'metric': ${this.opts['metric'] ?? undefined}, 'shrink_threshold': ${this.opts['shrink_threshold'] ?? undefined}}
 
 ctor_NearestCentroid = {k: v for k, v in ctor_NearestCentroid.items() if v is not None}`
 
@@ -113,7 +112,7 @@ ctor_NearestCentroid = {k: v for k, v in ctor_NearestCentroid.items() if v is no
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. Note that centroid shrinking cannot be used with sparse matrices.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features. Note that centroid shrinking cannot be used with sparse matrices.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -131,11 +130,8 @@ ctor_NearestCentroid = {k: v for k, v in ctor_NearestCentroid.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_NearestCentroid_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v is not None}`
 
@@ -151,11 +147,11 @@ pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -170,9 +166,8 @@ pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NearestCentroid_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NearestCentroid_get_metadata_routing = {k: v for k, v in pms_NearestCentroid_get_metadata_routing.items() if v is not None}`
 
@@ -205,9 +200,8 @@ pms_NearestCentroid_get_metadata_routing = {k: v for k, v in pms_NearestCentroid
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_NearestCentroid_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_NearestCentroid_predict = {k: v for k, v in pms_NearestCentroid_predict.items() if v is not None}`
 
@@ -250,13 +244,8 @@ pms_NearestCentroid_predict = {k: v for k, v in pms_NearestCentroid_predict.item
     }
 
     // set up method params
-    await this._py.ex`pms_NearestCentroid_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_NearestCentroid_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() if v is not None}`
 
@@ -272,13 +261,13 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -294,9 +283,7 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
 
     // set up method params
     await this._py
-      .ex`pms_NearestCentroid_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_NearestCentroid_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_NearestCentroid_set_score_request = {k: v for k, v in pms_NearestCentroid_set_score_request.items() if v is not None}`
 
@@ -360,7 +347,7 @@ pms_NearestCentroid_set_score_request = {k: v for k, v in pms_NearestCentroid_se
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -385,7 +372,7 @@ pms_NearestCentroid_set_score_request = {k: v for k, v in pms_NearestCentroid_se
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

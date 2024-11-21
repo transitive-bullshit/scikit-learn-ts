@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This Sequential Feature Selector adds (forward selection) or removes (backward selection) features to form a feature subset in a greedy fashion. At each stage, this estimator chooses the best feature to add or remove based on the cross-validation score of an estimator. In the case of unsupervised learning, this Sequential Feature Selector looks only at the features (X), not the desired outputs (y).
 
-  Read more in the [User Guide](../feature_selection.html#sequential-feature-selection).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_selection.html#sequential-feature-selection).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html)
  */
@@ -38,9 +38,9 @@ export class SequentialFeatureSelector {
     /**
       If the score is not incremented by at least `tol` between two consecutive feature additions or removals, stop adding or removing.
 
-      `tol` can be negative when removing features using `direction="backward"`. It can be useful to reduce the number of features at the cost of a small decrease in the score.
+      `tol` can be negative when removing features using `direction="backward"`. `tol` is required to be strictly positive when doing forward selection. It can be useful to reduce the number of features at the cost of a small decrease in the score.
 
-      `tol` is enabled only when `n\_features\_to\_select` is `"auto"`.
+      `tol` is enabled only when `n_features_to_select` is `"auto"`.
      */
     tol?: number
 
@@ -52,7 +52,7 @@ export class SequentialFeatureSelector {
     direction?: 'forward' | 'backward'
 
     /**
-      A single str (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set.
+      A single str (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)) to evaluate the predictions on the test set.
 
       NOTE that when using a custom scorer, it should return a single value.
 
@@ -66,7 +66,7 @@ export class SequentialFeatureSelector {
     cv?: number
 
     /**
-      Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -114,15 +114,8 @@ except NameError: bridgeSequentialFeatureSelector = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SequentialFeatureSelector = {'estimator': ${
-      this.opts['estimator'] ?? undefined
-    }, 'n_features_to_select': ${
-      this.opts['n_features_to_select'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'direction': ${
-      this.opts['direction'] ?? undefined
-    }, 'scoring': ${this.opts['scoring'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_SequentialFeatureSelector = {'estimator': ${this.opts['estimator'] ?? undefined}, 'n_features_to_select': ${this.opts['n_features_to_select'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'direction': ${this.opts['direction'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_SequentialFeatureSelector = {k: v for k, v in ctor_SequentialFeatureSelector.items() if v is not None}`
 
@@ -156,7 +149,7 @@ ctor_SequentialFeatureSelector = {k: v for k, v in ctor_SequentialFeatureSelecto
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of predictors.
      */
     X?: ArrayLike[]
 
@@ -176,11 +169,8 @@ ctor_SequentialFeatureSelector = {k: v for k, v in ctor_SequentialFeatureSelecto
     }
 
     // set up method params
-    await this._py.ex`pms_SequentialFeatureSelector_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_SequentialFeatureSelector_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_SequentialFeatureSelector_fit = {k: v for k, v in pms_SequentialFeatureSelector_fit.items() if v is not None}`
 
@@ -196,7 +186,7 @@ pms_SequentialFeatureSelector_fit = {k: v for k, v in pms_SequentialFeatureSelec
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -228,13 +218,7 @@ pms_SequentialFeatureSelector_fit = {k: v for k, v in pms_SequentialFeatureSelec
 
     // set up method params
     await this._py
-      .ex`pms_SequentialFeatureSelector_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_SequentialFeatureSelector_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SequentialFeatureSelector_fit_transform = {k: v for k, v in pms_SequentialFeatureSelector_fit_transform.items() if v is not None}`
 
@@ -270,9 +254,7 @@ pms_SequentialFeatureSelector_fit_transform = {k: v for k, v in pms_SequentialFe
 
     // set up method params
     await this._py
-      .ex`pms_SequentialFeatureSelector_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SequentialFeatureSelector_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SequentialFeatureSelector_get_feature_names_out = {k: v for k, v in pms_SequentialFeatureSelector_get_feature_names_out.items() if v is not None}`
 
@@ -286,16 +268,11 @@ pms_SequentialFeatureSelector_get_feature_names_out = {k: v for k, v in pms_Sequ
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -309,10 +286,7 @@ pms_SequentialFeatureSelector_get_feature_names_out = {k: v for k, v in pms_Sequ
     }
 
     // set up method params
-    await this._py
-      .ex`pms_SequentialFeatureSelector_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_SequentialFeatureSelector_get_metadata_routing = {}
 
 pms_SequentialFeatureSelector_get_metadata_routing = {k: v for k, v in pms_SequentialFeatureSelector_get_metadata_routing.items() if v is not None}`
 
@@ -349,9 +323,8 @@ pms_SequentialFeatureSelector_get_metadata_routing = {k: v for k, v in pms_Seque
     }
 
     // set up method params
-    await this._py.ex`pms_SequentialFeatureSelector_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SequentialFeatureSelector_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_SequentialFeatureSelector_get_support = {k: v for k, v in pms_SequentialFeatureSelector_get_support.items() if v is not None}`
 
@@ -387,9 +360,7 @@ pms_SequentialFeatureSelector_get_support = {k: v for k, v in pms_SequentialFeat
 
     // set up method params
     await this._py
-      .ex`pms_SequentialFeatureSelector_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_SequentialFeatureSelector_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SequentialFeatureSelector_inverse_transform = {k: v for k, v in pms_SequentialFeatureSelector_inverse_transform.items() if v is not None}`
 
@@ -405,13 +376,13 @@ pms_SequentialFeatureSelector_inverse_transform = {k: v for k, v in pms_Sequenti
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -427,9 +398,7 @@ pms_SequentialFeatureSelector_inverse_transform = {k: v for k, v in pms_Sequenti
 
     // set up method params
     await this._py
-      .ex`pms_SequentialFeatureSelector_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+      .ex`pms_SequentialFeatureSelector_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SequentialFeatureSelector_set_output = {k: v for k, v in pms_SequentialFeatureSelector_set_output.items() if v is not None}`
 
@@ -465,9 +434,7 @@ pms_SequentialFeatureSelector_set_output = {k: v for k, v in pms_SequentialFeatu
 
     // set up method params
     await this._py
-      .ex`pms_SequentialFeatureSelector_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_SequentialFeatureSelector_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SequentialFeatureSelector_transform = {k: v for k, v in pms_SequentialFeatureSelector_transform.items() if v is not None}`
 
@@ -481,7 +448,7 @@ pms_SequentialFeatureSelector_transform = {k: v for k, v in pms_SequentialFeatur
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -508,7 +475,7 @@ pms_SequentialFeatureSelector_transform = {k: v for k, v in pms_SequentialFeatur
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

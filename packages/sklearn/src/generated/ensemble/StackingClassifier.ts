@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Stacked generalization consists in stacking the output of individual estimator and use a classifier to compute the final prediction. Stacking allows to use the strength of each individual estimator by using their output as input of a final estimator.
 
-  Note that `estimators\_` are fitted on the full `X` while `final\_estimator\_` is trained using cross-validated predictions of the base estimators using `cross\_val\_predict`.
+  Note that `estimators_` are fitted on the full `X` while `final_estimator_` is trained using cross-validated predictions of the base estimators using `cross_val_predict`.
 
-  Read more in the [User Guide](../ensemble.html#stacking).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../ensemble.html#stacking).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingClassifier.html)
  */
@@ -26,19 +26,19 @@ export class StackingClassifier {
 
   constructor(opts?: {
     /**
-      Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.
+      Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set_params`.
 
       The type of estimator is generally expected to be a classifier. However, one can pass a regressor for some use case (e.g. ordinal regression).
      */
     estimators?: any
 
     /**
-      A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression").
+      A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression").
      */
     final_estimator?: any
 
     /**
-      Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are:
+      Determines the cross-validation splitting strategy used in `cross_val_predict` to train `final_estimator`. Possible inputs for cv are:
      */
     cv?: number | 'prefit'
 
@@ -50,12 +50,12 @@ export class StackingClassifier {
     stack_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
 
     /**
-      The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
+      The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel_backend` context. -1 means using all processors. See Glossary for more details.
      */
     n_jobs?: number
 
     /**
-      When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.
+      When `false`, only the predictions of estimators will be used as training data for `final_estimator`. When `true`, the `final_estimator` is trained on the predictions as well as the original training data.
 
       @defaultValue `false`
      */
@@ -112,15 +112,8 @@ except NameError: bridgeStackingClassifier = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_StackingClassifier = {'estimators': ${
-      this.opts['estimators'] ?? undefined
-    }, 'final_estimator': ${this.opts['final_estimator'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'stack_method': ${this.opts['stack_method'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'passthrough': ${this.opts['passthrough'] ?? undefined}, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_StackingClassifier = {'estimators': ${this.opts['estimators'] ?? undefined}, 'final_estimator': ${this.opts['final_estimator'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'stack_method': ${this.opts['stack_method'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'passthrough': ${this.opts['passthrough'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}}
 
 ctor_StackingClassifier = {k: v for k, v in ctor_StackingClassifier.items() if v is not None}`
 
@@ -154,7 +147,7 @@ ctor_StackingClassifier = {k: v for k, v in ctor_StackingClassifier.items() if v
    */
   async decision_function(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray> {
@@ -172,9 +165,7 @@ ctor_StackingClassifier = {k: v for k, v in ctor_StackingClassifier.items() if v
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_StackingClassifier_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_StackingClassifier_decision_function = {k: v for k, v in pms_StackingClassifier_decision_function.items() if v is not None}`
 
@@ -192,12 +183,12 @@ pms_StackingClassifier_decision_function = {k: v for k, v in pms_StackingClassif
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
     /**
-      Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](../../glossary.html#term-fit).
+      Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
      */
     y?: ArrayLike
 
@@ -217,13 +208,8 @@ pms_StackingClassifier_decision_function = {k: v for k, v in pms_StackingClassif
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StackingClassifier_fit = {k: v for k, v in pms_StackingClassifier_fit.items() if v is not None}`
 
@@ -239,7 +225,7 @@ pms_StackingClassifier_fit = {k: v for k, v in pms_StackingClassifier_fit.items(
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -270,13 +256,8 @@ pms_StackingClassifier_fit = {k: v for k, v in pms_StackingClassifier_fit.items(
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingClassifier_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_StackingClassifier_fit_transform = {k: v for k, v in pms_StackingClassifier_fit_transform.items() if v is not None}`
 
@@ -312,9 +293,7 @@ pms_StackingClassifier_fit_transform = {k: v for k, v in pms_StackingClassifier_
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_StackingClassifier_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_StackingClassifier_get_feature_names_out = {k: v for k, v in pms_StackingClassifier_get_feature_names_out.items() if v is not None}`
 
@@ -328,16 +307,11 @@ pms_StackingClassifier_get_feature_names_out = {k: v for k, v in pms_StackingCla
   }
 
   /**
-    Get metadata routing of this object.
+    Raise `NotImplementedError`.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    This estimator does not support metadata routing yet.
    */
-  async get_metadata_routing(opts: {
-    /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
-     */
-    routing?: any
-  }): Promise<any> {
+  async get_metadata_routing(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -351,10 +325,7 @@ pms_StackingClassifier_get_feature_names_out = {k: v for k, v in pms_StackingCla
     }
 
     // set up method params
-    await this._py
-      .ex`pms_StackingClassifier_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py.ex`pms_StackingClassifier_get_metadata_routing = {}
 
 pms_StackingClassifier_get_metadata_routing = {k: v for k, v in pms_StackingClassifier_get_metadata_routing.items() if v is not None}`
 
@@ -372,12 +343,12 @@ pms_StackingClassifier_get_metadata_routing = {k: v for k, v in pms_StackingClas
    */
   async predict(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
 
     /**
-      Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator.
+      Parameters to the `predict` called by the `final_estimator`. Note that this may be used to return uncertainties from some estimators with `return_std` or `return_cov`. Be aware that it will only accounts for uncertainty in the final estimator.
      */
     predict_params?: any
   }): Promise<NDArray> {
@@ -392,11 +363,8 @@ pms_StackingClassifier_get_metadata_routing = {k: v for k, v in pms_StackingClas
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'predict_params': ${
-      opts['predict_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingClassifier_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'predict_params': ${opts['predict_params'] ?? undefined}}
 
 pms_StackingClassifier_predict = {k: v for k, v in pms_StackingClassifier_predict.items() if v is not None}`
 
@@ -414,7 +382,7 @@ pms_StackingClassifier_predict = {k: v for k, v in pms_StackingClassifier_predic
    */
   async predict_proba(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[] | any[]> {
@@ -431,9 +399,8 @@ pms_StackingClassifier_predict = {k: v for k, v in pms_StackingClassifier_predic
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_StackingClassifier_predict_proba = {k: v for k, v in pms_StackingClassifier_predict_proba.items() if v is not None}`
 
@@ -478,13 +445,8 @@ pms_StackingClassifier_predict_proba = {k: v for k, v in pms_StackingClassifier_
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_StackingClassifier_score = {k: v for k, v in pms_StackingClassifier_score.items() if v is not None}`
 
@@ -500,13 +462,13 @@ pms_StackingClassifier_score = {k: v for k, v in pms_StackingClassifier_score.it
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -524,9 +486,7 @@ pms_StackingClassifier_score = {k: v for k, v in pms_StackingClassifier_score.it
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_StackingClassifier_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StackingClassifier_set_fit_request = {k: v for k, v in pms_StackingClassifier_set_fit_request.items() if v is not None}`
 
@@ -542,13 +502,13 @@ pms_StackingClassifier_set_fit_request = {k: v for k, v in pms_StackingClassifie
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -561,9 +521,8 @@ pms_StackingClassifier_set_fit_request = {k: v for k, v in pms_StackingClassifie
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_StackingClassifier_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_StackingClassifier_set_output = {k: v for k, v in pms_StackingClassifier_set_output.items() if v is not None}`
 
@@ -579,13 +538,13 @@ pms_StackingClassifier_set_output = {k: v for k, v in pms_StackingClassifier_set
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -603,9 +562,7 @@ pms_StackingClassifier_set_output = {k: v for k, v in pms_StackingClassifier_set
 
     // set up method params
     await this._py
-      .ex`pms_StackingClassifier_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_StackingClassifier_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_StackingClassifier_set_score_request = {k: v for k, v in pms_StackingClassifier_set_score_request.items() if v is not None}`
 
@@ -623,7 +580,7 @@ pms_StackingClassifier_set_score_request = {k: v for k, v in pms_StackingClassif
    */
   async transform(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix[]
   }): Promise<NDArray[]> {
@@ -638,9 +595,8 @@ pms_StackingClassifier_set_score_request = {k: v for k, v in pms_StackingClassif
     }
 
     // set up method params
-    await this._py.ex`pms_StackingClassifier_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_StackingClassifier_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_StackingClassifier_transform = {k: v for k, v in pms_StackingClassifier_transform.items() if v is not None}`
 
@@ -681,7 +637,7 @@ pms_StackingClassifier_transform = {k: v for k, v in pms_StackingClassifier_tran
   }
 
   /**
-    The elements of the `estimators` parameter, having been fitted on the training data. If an estimator has been set to `'drop'`, it will not appear in `estimators\_`. When `cv="prefit"`, `estimators\_` is set to `estimators` and is not fitted again.
+    The elements of the `estimators` parameter, having been fitted on the training data. If an estimator has been set to `'drop'`, it will not appear in `estimators_`. When `cv="prefit"`, `estimators_` is set to `estimators` and is not fitted again.
    */
   get estimators_(): Promise<any> {
     if (this._isDisposed) {
@@ -735,7 +691,7 @@ pms_StackingClassifier_transform = {k: v for k, v in pms_StackingClassifier_tran
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -762,7 +718,7 @@ pms_StackingClassifier_transform = {k: v for k, v in pms_StackingClassifier_tran
   }
 
   /**
-    The classifier which predicts given the output of `estimators\_`.
+    The classifier which predicts given the output of `estimators_`.
    */
   get final_estimator_(): Promise<any> {
     if (this._isDisposed) {

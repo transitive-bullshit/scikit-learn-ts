@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Decisions boundary visualization.
 
-  It is recommended to use [`from\_estimator`](#sklearn.inspection.DecisionBoundaryDisplay.from_estimator "sklearn.inspection.DecisionBoundaryDisplay.from_estimator") to create a [`DecisionBoundaryDisplay`](#sklearn.inspection.DecisionBoundaryDisplay "sklearn.inspection.DecisionBoundaryDisplay"). All parameters are stored as attributes.
+  It is recommended to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.inspection.DecisionBoundaryDisplay.from_estimator "sklearn.inspection.DecisionBoundaryDisplay.from_estimator") to create a [`DecisionBoundaryDisplay`](https://scikit-learn.org/stable/modules/generated/#sklearn.inspection.DecisionBoundaryDisplay "sklearn.inspection.DecisionBoundaryDisplay"). All parameters are stored as attributes.
 
-  Read more in the [User Guide](../../visualizations.html#visualizations).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.DecisionBoundaryDisplay.html)
  */
@@ -24,12 +24,12 @@ export class DecisionBoundaryDisplay {
 
   constructor(opts?: {
     /**
-      First output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.26)").
+      First output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v2.1)").
      */
     xx0?: NDArray[]
 
     /**
-      Second output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.26)").
+      Second output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v2.1)").
      */
     xx1?: NDArray[]
 
@@ -92,15 +92,8 @@ except NameError: bridgeDecisionBoundaryDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DecisionBoundaryDisplay = {'xx0': np.array(${
-      this.opts['xx0'] ?? undefined
-    }) if ${this.opts['xx0'] !== undefined} else None, 'xx1': np.array(${
-      this.opts['xx1'] ?? undefined
-    }) if ${this.opts['xx1'] !== undefined} else None, 'response': np.array(${
-      this.opts['response'] ?? undefined
-    }) if ${this.opts['response'] !== undefined} else None, 'xlabel': ${
-      this.opts['xlabel'] ?? undefined
-    }, 'ylabel': ${this.opts['ylabel'] ?? undefined}}
+    await this._py
+      .ex`ctor_DecisionBoundaryDisplay = {'xx0': np.array(${this.opts['xx0'] ?? undefined}) if ${this.opts['xx0'] !== undefined} else None, 'xx1': np.array(${this.opts['xx1'] ?? undefined}) if ${this.opts['xx1'] !== undefined} else None, 'response': np.array(${this.opts['response'] ?? undefined}) if ${this.opts['response'] !== undefined} else None, 'xlabel': ${this.opts['xlabel'] ?? undefined}, 'ylabel': ${this.opts['ylabel'] ?? undefined}}
 
 ctor_DecisionBoundaryDisplay = {k: v for k, v in ctor_DecisionBoundaryDisplay.items() if v is not None}`
 
@@ -132,7 +125,7 @@ ctor_DecisionBoundaryDisplay = {k: v for k, v in ctor_DecisionBoundaryDisplay.it
   /**
     Plot decision boundary given an estimator.
 
-    Read more in the [User Guide](../../visualizations.html#visualizations).
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations).
    */
   async from_estimator(opts: {
     /**
@@ -160,18 +153,23 @@ ctor_DecisionBoundaryDisplay = {k: v for k, v in ctor_DecisionBoundaryDisplay.it
     eps?: number
 
     /**
-      Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.8.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.8.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.8.1)").
+      Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.9.2)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.9.2)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.9.2)").
 
       @defaultValue `'contourf'`
      */
     plot_method?: 'contourf' | 'contour' | 'pcolormesh'
 
     /**
-      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba), [decision\_function](../../glossary.html#term-decision_function), [predict](../../glossary.html#term-predict) as the target response. If set to ‘auto’, the response method is tried in the following order: [decision\_function](../../glossary.html#term-decision_function), [predict\_proba](../../glossary.html#term-predict_proba), [predict](../../glossary.html#term-predict). For multiclass problems, [predict](../../glossary.html#term-predict) is selected when `response\_method="auto"`.
+      Specifies whether to use [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba), [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function), [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict) as the target response. If set to ‘auto’, the response method is tried in the following order: [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function), [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba), [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict). For multiclass problems, [predict](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict) is selected when `response_method="auto"`.
 
       @defaultValue `'auto'`
      */
     response_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
+
+    /**
+      The class considered when plotting the decision. If `undefined`, `estimator.classes_\[1\]` is considered as the positive class for binary classifiers. Must have an explicit value for multiclass classifiers when `response_method` is ‘predict_proba’ or ‘decision_function’.
+     */
+    class_of_interest?: number | boolean | string
 
     /**
       The label used for the x-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
@@ -189,7 +187,7 @@ ctor_DecisionBoundaryDisplay = {k: v for k, v in ctor_DecisionBoundaryDisplay.it
     ax?: any
 
     /**
-      Additional keyword arguments to be passed to the `plot\_method`.
+      Additional keyword arguments to be passed to the `plot_method`.
      */
     kwargs?: any
   }): Promise<any> {
@@ -207,19 +205,7 @@ ctor_DecisionBoundaryDisplay = {k: v for k, v in ctor_DecisionBoundaryDisplay.it
 
     // set up method params
     await this._py
-      .ex`pms_DecisionBoundaryDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'grid_resolution': ${
-      opts['grid_resolution'] ?? undefined
-    }, 'eps': ${opts['eps'] ?? undefined}, 'plot_method': ${
-      opts['plot_method'] ?? undefined
-    }, 'response_method': ${opts['response_method'] ?? undefined}, 'xlabel': ${
-      opts['xlabel'] ?? undefined
-    }, 'ylabel': ${opts['ylabel'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'kwargs': ${opts['kwargs'] ?? undefined}}
+      .ex`pms_DecisionBoundaryDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'grid_resolution': ${opts['grid_resolution'] ?? undefined}, 'eps': ${opts['eps'] ?? undefined}, 'plot_method': ${opts['plot_method'] ?? undefined}, 'response_method': ${opts['response_method'] ?? undefined}, 'class_of_interest': ${opts['class_of_interest'] ?? undefined}, 'xlabel': ${opts['xlabel'] ?? undefined}, 'ylabel': ${opts['ylabel'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_DecisionBoundaryDisplay_from_estimator = {k: v for k, v in pms_DecisionBoundaryDisplay_from_estimator.items() if v is not None}`
 
@@ -237,7 +223,7 @@ pms_DecisionBoundaryDisplay_from_estimator = {k: v for k, v in pms_DecisionBound
    */
   async plot(opts: {
     /**
-      Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.8.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.8.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.8.1)").
+      Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.9.2)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.9.2)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.9.2)").
 
       @defaultValue `'contourf'`
      */
@@ -259,7 +245,7 @@ pms_DecisionBoundaryDisplay_from_estimator = {k: v for k, v in pms_DecisionBound
     ylabel?: string
 
     /**
-      Additional keyword arguments to be passed to the `plot\_method`.
+      Additional keyword arguments to be passed to the `plot_method`.
      */
     kwargs?: any
   }): Promise<any> {
@@ -274,13 +260,8 @@ pms_DecisionBoundaryDisplay_from_estimator = {k: v for k, v in pms_DecisionBound
     }
 
     // set up method params
-    await this._py.ex`pms_DecisionBoundaryDisplay_plot = {'plot_method': ${
-      opts['plot_method'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'xlabel': ${
-      opts['xlabel'] ?? undefined
-    }, 'ylabel': ${opts['ylabel'] ?? undefined}, 'kwargs': ${
-      opts['kwargs'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_DecisionBoundaryDisplay_plot = {'plot_method': ${opts['plot_method'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'xlabel': ${opts['xlabel'] ?? undefined}, 'ylabel': ${opts['ylabel'] ?? undefined}, 'kwargs': ${opts['kwargs'] ?? undefined}}
 
 pms_DecisionBoundaryDisplay_plot = {k: v for k, v in pms_DecisionBoundaryDisplay_plot.items() if v is not None}`
 
@@ -294,7 +275,7 @@ pms_DecisionBoundaryDisplay_plot = {k: v for k, v in pms_DecisionBoundaryDisplay
   }
 
   /**
-    If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.8.1)"). If `plot\_method` is ‘pcolormesh’, `surface\_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.8.1)").
+    If `plot_method` is ‘contour’ or ‘contourf’, `surface_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.9.2)"). If `plot_method` is ‘pcolormesh’, `surface_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.9.2)").
    */
   get surface_(): Promise<any> {
     if (this._isDisposed) {
@@ -321,7 +302,7 @@ pms_DecisionBoundaryDisplay_plot = {k: v for k, v in pms_DecisionBoundaryDisplay
   }
 
   /**
-    Axes with confusion matrix.
+    Axes with decision boundary.
    */
   get ax_(): Promise<any> {
     if (this._isDisposed) {
@@ -348,7 +329,7 @@ pms_DecisionBoundaryDisplay_plot = {k: v for k, v in pms_DecisionBoundaryDisplay
   }
 
   /**
-    Figure containing the confusion matrix.
+    Figure containing the decision boundary.
    */
   get figure_(): Promise<any> {
     if (this._isDisposed) {

@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Kernel Density Estimation.
 
-  Read more in the [User Guide](../density.html#kernel-density).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../density.html#kernel-density).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html)
  */
@@ -49,9 +49,9 @@ export class KernelDensity {
       | 'cosine'
 
     /**
-      Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+      Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance_metrics`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-      Not all metrics are valid with all algorithms: refer to the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") and [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). Note that the normalization of the density output is correct only for the Euclidean distance metric.
+      Not all metrics are valid with all algorithms: refer to the documentation of [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") and [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). Note that the normalization of the density output is correct only for the Euclidean distance metric.
 
       @defaultValue `'euclidean'`
      */
@@ -79,14 +79,14 @@ export class KernelDensity {
     breadth_first?: boolean
 
     /**
-      Specify the leaf size of the underlying tree. See [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") for details.
+      Specify the leaf size of the underlying tree. See [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") for details.
 
       @defaultValue `40`
      */
     leaf_size?: number
 
     /**
-      Additional parameters to be passed to the tree for use with the metric. For more information, see the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree").
+      Additional parameters to be passed to the tree for use with the metric. For more information, see the documentation of [`BallTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree").
      */
     metric_params?: any
   }) {
@@ -130,17 +130,8 @@ except NameError: bridgeKernelDensity = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_KernelDensity = {'bandwidth': ${
-      this.opts['bandwidth'] ?? undefined
-    }, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'metric': ${this.opts['metric'] ?? undefined}, 'atol': ${
-      this.opts['atol'] ?? undefined
-    }, 'rtol': ${this.opts['rtol'] ?? undefined}, 'breadth_first': ${
-      this.opts['breadth_first'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_KernelDensity = {'bandwidth': ${this.opts['bandwidth'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'kernel': ${this.opts['kernel'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'atol': ${this.opts['atol'] ?? undefined}, 'rtol': ${this.opts['rtol'] ?? undefined}, 'breadth_first': ${this.opts['breadth_first'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}}
 
 ctor_KernelDensity = {k: v for k, v in ctor_KernelDensity.items() if v is not None}`
 
@@ -174,12 +165,12 @@ ctor_KernelDensity = {k: v for k, v in ctor_KernelDensity.items() if v is not No
    */
   async fit(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
     /**
-      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
      */
     y?: any
 
@@ -197,13 +188,8 @@ ctor_KernelDensity = {k: v for k, v in ctor_KernelDensity.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
-      opts['sample_weight'] !== undefined
-    } else None}
+    await this._py
+      .ex`pms_KernelDensity_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_KernelDensity_fit = {k: v for k, v in pms_KernelDensity_fit.items() if v is not None}`
 
@@ -219,11 +205,11 @@ pms_KernelDensity_fit = {k: v for k, v in pms_KernelDensity_fit.items() if v is 
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -238,9 +224,8 @@ pms_KernelDensity_fit = {k: v for k, v in pms_KernelDensity_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelDensity_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_KernelDensity_get_metadata_routing = {k: v for k, v in pms_KernelDensity_get_metadata_routing.items() if v is not None}`
 
@@ -267,7 +252,7 @@ pms_KernelDensity_get_metadata_routing = {k: v for k, v in pms_KernelDensity_get
     n_samples?: number
 
     /**
-      Determines random number generation used to generate random samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines random number generation used to generate random samples. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }): Promise<ArrayLike[]> {
@@ -280,9 +265,8 @@ pms_KernelDensity_get_metadata_routing = {k: v for k, v in pms_KernelDensity_get
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_sample = {'n_samples': ${
-      opts['n_samples'] ?? undefined
-    }, 'random_state': ${opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelDensity_sample = {'n_samples': ${opts['n_samples'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}}
 
 pms_KernelDensity_sample = {k: v for k, v in pms_KernelDensity_sample.items() if v is not None}`
 
@@ -300,12 +284,12 @@ pms_KernelDensity_sample = {k: v for k, v in pms_KernelDensity_sample.items() if
    */
   async score(opts: {
     /**
-      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+      List of n_features-dimensional data points. Each row corresponds to a single data point.
      */
     X?: ArrayLike[]
 
     /**
-      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
      */
     y?: any
   }): Promise<number> {
@@ -318,9 +302,8 @@ pms_KernelDensity_sample = {k: v for k, v in pms_KernelDensity_sample.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_KernelDensity_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_KernelDensity_score = {k: v for k, v in pms_KernelDensity_score.items() if v is not None}`
 
@@ -338,7 +321,7 @@ pms_KernelDensity_score = {k: v for k, v in pms_KernelDensity_score.items() if v
    */
   async score_samples(opts: {
     /**
-      An array of points to query. Last dimension should match dimension of training data (n\_features).
+      An array of points to query. Last dimension should match dimension of training data (n_features).
      */
     X?: ArrayLike[]
   }): Promise<NDArray> {
@@ -351,9 +334,8 @@ pms_KernelDensity_score = {k: v for k, v in pms_KernelDensity_score.items() if v
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_KernelDensity_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samples.items() if v is not None}`
 
@@ -369,13 +351,13 @@ pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samp
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -388,9 +370,8 @@ pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samp
     }
 
     // set up method params
-    await this._py.ex`pms_KernelDensity_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_KernelDensity_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_KernelDensity_set_fit_request = {k: v for k, v in pms_KernelDensity_set_fit_request.items() if v is not None}`
 
@@ -404,7 +385,7 @@ pms_KernelDensity_set_fit_request = {k: v for k, v in pms_KernelDensity_set_fit_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -452,7 +433,7 @@ pms_KernelDensity_set_fit_request = {k: v for k, v in pms_KernelDensity_set_fit_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

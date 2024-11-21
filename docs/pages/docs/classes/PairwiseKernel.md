@@ -1,4 +1,4 @@
-# PairwiseKernel
+# Class: PairwiseKernel
 
 Wrapper for kernels in sklearn.metrics.pairwise.
 
@@ -8,245 +8,167 @@ A thin wrapper around the functionality of the kernels in sklearn.metrics.pairwi
 
 ## Constructors
 
-## constructor()
+### new PairwiseKernel()
 
-### Signature
+> **new PairwiseKernel**(`opts`?): [`PairwiseKernel`](PairwiseKernel.md)
 
-```ts
-new PairwiseKernel(opts?: object): PairwiseKernel;
-```
+**Parameters**
 
-### Parameters
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.gamma`? | `number` | Parameter gamma of the pairwise kernel specified by metric. It should be positive. |
+| `opts.gamma_bounds`? | `"fixed"` | The lower and upper bound on ‘gamma’. If set to “fixed”, ‘gamma’ cannot be changed during hyperparameter tuning. |
+| `opts.metric`? | `"sigmoid"` \| `"linear"` \| `"poly"` \| `"rbf"` \| `"cosine"` \| `"additive_chi2"` \| `"chi2"` \| `"polynomial"` \| `"laplacian"` | The metric to use when calculating kernel between instances in a feature array. If metric is a string, it must be one of the metrics in pairwise.PAIRWISE_KERNEL_FUNCTIONS. If metric is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays from X as input and return a value indicating the distance between them. |
+| `opts.pairwise_kernels_kwargs`? | `any` | All entries of this dict (if any) are passed as keyword arguments to the pairwise kernel function. |
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.gamma?` | `number` | Parameter gamma of the pairwise kernel specified by metric. It should be positive.  `Default Value`  `1` |
-| `opts.gamma_bounds?` | `"fixed"` | The lower and upper bound on ‘gamma’. If set to “fixed”, ‘gamma’ cannot be changed during hyperparameter tuning. |
-| `opts.metric?` | `"sigmoid"` \| `"linear"` \| `"poly"` \| `"rbf"` \| `"cosine"` \| `"additive_chi2"` \| `"chi2"` \| `"polynomial"` \| `"laplacian"` | The metric to use when calculating kernel between instances in a feature array. If metric is a string, it must be one of the metrics in pairwise.PAIRWISE\_KERNEL\_FUNCTIONS. If metric is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays from X as input and return a value indicating the distance between them.  `Default Value`  `'linear'` |
-| `opts.pairwise_kernels_kwargs?` | `any` | All entries of this dict (if any) are passed as keyword arguments to the pairwise kernel function. |
+**Returns** [`PairwiseKernel`](PairwiseKernel.md)
 
-### Returns
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L23)
 
-[`PairwiseKernel`](PairwiseKernel.md)
+## Properties
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L23)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/gaussian\_process/kernels/PairwiseKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L21) |
+| `_isInitialized` | `boolean` | `false` | [generated/gaussian\_process/kernels/PairwiseKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L20) |
+| `_py` | `PythonBridge` | `undefined` | [generated/gaussian\_process/kernels/PairwiseKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L19) |
+| `id` | `string` | `undefined` | [generated/gaussian\_process/kernels/PairwiseKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L16) |
+| `opts` | `any` | `undefined` | [generated/gaussian\_process/kernels/PairwiseKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L17) |
+
+## Accessors
+
+### py
+
+**Get Signature**
+
+> **get** **py**(): `PythonBridge`
+
+**Returns** `PythonBridge`
+
+**Set Signature**
+
+> **set** **py**(`pythonBridge`): `void`
+
+**Parameters**
+
+| Parameter | Type |
+| ------ | ------ |
+| `pythonBridge` | `PythonBridge` |
+
+**Returns** `void`
+
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L61)
 
 ## Methods
 
 ### \_\_call\_\_()
 
+> **\_\_call\_\_**(`opts`): `Promise`\<`ArrayLike`[]\>
+
 Return the kernel k(X, Y) and optionally its gradient.
 
-#### Signature
+**Parameters**
 
-```ts
-__call__(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
-| `opts.Y?` | `ArrayLike`[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
-| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.  `Default Value`  `false` |
+| `opts.eval_gradient`? | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`. |
+| `opts.X`? | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y`? | `ArrayLike`[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-`Promise`\<`ArrayLike`[]\>
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L130)
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L135)
+***
 
 ### clone\_with\_theta()
 
+> **clone\_with\_theta**(`opts`): `Promise`\<`any`\>
+
 Returns a clone of self with given hyperparameters theta.
 
-#### Signature
+**Parameters**
 
-```ts
-clone_with_theta(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.theta?` | `ArrayLike` | The hyperparameters |
+| `opts.theta`? | `ArrayLike` | The hyperparameters |
 
-#### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L174)
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L184)
+***
 
 ### diag()
+
+> **diag**(`opts`): `Promise`\<`ArrayLike`\>
 
 Returns the diagonal of the kernel k(X, X).
 
 The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
 
-#### Signature
+**Parameters**
 
-```ts
-diag(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
 | `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
+| `opts.X`? | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L210)
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L222)
+***
 
 ### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
-#### Signature
+**Returns** `Promise`\<`void`\>
 
-```ts
-dispose(): Promise<void>;
-```
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L113)
 
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L118)
+***
 
 ### init()
+
+> **init**(`py`): `Promise`\<`void`\>
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
 
-#### Signature
+**Parameters**
 
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `py` | `PythonBridge` |
 
-#### Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L74)
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L74)
+***
 
 ### is\_stationary()
 
+> **is\_stationary**(`opts`): `Promise`\<`any`\>
+
 Returns whether the kernel is stationary.
 
-#### Signature
+**Parameters**
 
-```ts
-is_stationary(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `opts` | `object` |
 
-#### Returns
+**Returns** `Promise`\<`any`\>
 
-`Promise`\<`any`\>
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L255)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L17)
-
-## Accessors
-
-### hyperparameter\_gamma
-
-#### Signature
-
-```ts
-hyperparameter_gamma(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/gaussian\_process/kernels/PairwiseKernel.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L278)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L61)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/gaussian\_process/kernels/PairwiseKernel.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L65)
+**Defined in** [generated/gaussian\_process/kernels/PairwiseKernel.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L242)

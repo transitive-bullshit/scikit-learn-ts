@@ -3,7 +3,7 @@ import * as sklearn from 'sklearn'
 async function main() {
   const py = await sklearn.createPythonBridge()
 
-  const v = [
+  const _v = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -52,4 +52,4 @@ async function main() {
   await py.disconnect()
 }
 
-main()
+await main()

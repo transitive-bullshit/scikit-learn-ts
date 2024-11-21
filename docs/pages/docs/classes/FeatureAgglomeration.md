@@ -1,452 +1,359 @@
-# FeatureAgglomeration
+# Class: FeatureAgglomeration
 
 Agglomerate features.
 
 Recursively merges pair of clusters of features.
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../clustering.html#hierarchical-clustering).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.FeatureAgglomeration.html)
 
 ## Constructors
 
-## constructor()
-
-### Signature
-
-```ts
-new FeatureAgglomeration(opts?: object): FeatureAgglomeration;
-```
-
-### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.affinity?` | `string` | The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.  `Default Value`  `'euclidean'` |
-| `opts.compute_distances?` | `boolean` | Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.  `Default Value`  `false` |
-| `opts.compute_full_tree?` | `boolean` \| `"auto"` | Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.  `Default Value`  `'auto'` |
-| `opts.connectivity?` | `ArrayLike` | Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured. |
-| `opts.distance_threshold?` | `number` | The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`. |
-| `opts.linkage?` | `"ward"` \| `"complete"` \| `"average"` \| `"single"` | Which linkage criterion to use. The linkage criterion determines which distance to use between sets of features. The algorithm will merge the pairs of cluster that minimize this criterion.  `Default Value`  `'ward'` |
-| `opts.memory?` | `string` | Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory. |
-| `opts.metric?` | `string` | Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method. |
-| `opts.n_clusters?` | `number` | The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.  `Default Value`  `2` |
-| `opts.pooling_func?` | `any` | This combines the values of agglomerated features into a single value, and should accept an array of shape \[M, N\] and the keyword argument `axis=1`, and reduce it to an array of size \[M\]. |
-
-### Returns
-
-[`FeatureAgglomeration`](FeatureAgglomeration.md)
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L25)
-
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L157)
-
-### fit()
-
-Fit the hierarchical clustering on the data.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | The data. |
-| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L174)
-
-### fit\_transform()
-
-Fit to data, then transform it.
-
-Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<any[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Input samples. |
-| `opts.fit_params?` | `any` | Additional fit parameters. |
-| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
-
-#### Returns
-
-`Promise`\<`any`[]\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L216)
-
-### get\_feature\_names\_out()
-
-Get output feature names for transformation.
-
-The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L269)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L309)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L103)
-
-### inverse\_transform()
-
-Inverse the transformation and return a vector of size `n\_features`.
-
-#### Signature
-
-```ts
-inverse_transform(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.Xred?` | `any` | Use `Xt` instead. |
-| `opts.Xt?` | `ArrayLike`[] | The values to be assigned to each cluster of samples. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L347)
-
-### set\_output()
-
-Set output container.
-
-See Introducing the set\_output API for an example on how to use the API.
-
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L394)
-
-### transform()
-
-Transform a new matrix using the built clustering.
-
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | A M by N array of M observations in N dimensions or a length M array of M one-dimensional observations. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L431)
+### new FeatureAgglomeration()
+
+> **new FeatureAgglomeration**(`opts`?): [`FeatureAgglomeration`](FeatureAgglomeration.md)
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.compute_distances`? | `boolean` | Computes distances between clusters even if `distance_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead. |
+| `opts.compute_full_tree`? | `boolean` \| `"auto"` | Stop early the construction of the tree at `n_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance_threshold` is not `undefined`. By default `compute_full_tree` is “auto”, which is equivalent to `true` when `distance_threshold` is not `undefined` or that `n_clusters` is inferior to the maximum between 100 or `0.02 \* n_samples`. Otherwise, “auto” is equivalent to `false`. |
+| `opts.connectivity`? | `ArrayLike` | Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured. |
+| `opts.distance_threshold`? | `number` | The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n_clusters` must be `undefined` and `compute_full_tree` must be `true`. |
+| `opts.linkage`? | `"ward"` \| `"complete"` \| `"average"` \| `"single"` | Which linkage criterion to use. The linkage criterion determines which distance to use between sets of features. The algorithm will merge the pairs of cluster that minimize this criterion. |
+| `opts.memory`? | `string` | Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory. |
+| `opts.metric`? | `string` | Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method. |
+| `opts.n_clusters`? | `number` | The number of clusters to find. It must be `undefined` if `distance_threshold` is not `undefined`. |
+| `opts.pooling_func`? | `any` | This combines the values of agglomerated features into a single value, and should accept an array of shape \[M, N\] and the keyword argument `axis=1`, and reduce it to an array of size \[M\]. |
+
+**Returns** [`FeatureAgglomeration`](FeatureAgglomeration.md)
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/cluster/FeatureAgglomeration.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/cluster/FeatureAgglomeration.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/cluster/FeatureAgglomeration.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L21) |
+| `id` | `string` | `undefined` | [generated/cluster/FeatureAgglomeration.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/cluster/FeatureAgglomeration.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L19) |
 
 ## Accessors
 
 ### children\_
 
-The children of each non-leaf node. Values less than `n\_features` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n\_features` is a non-leaf node and has children `children\_\[i \- n\_features\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n\_features + i`.
+**Get Signature**
 
-#### Signature
+> **get** **children\_**(): `Promise`\<`ArrayLike`[]\>
 
-```ts
-children_(): Promise<ArrayLike[]>;
-```
+The children of each non-leaf node. Values less than `n_features` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n_features` is a non-leaf node and has children `children_\[i \- n_features\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n_features + i`.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-`Promise`\<`ArrayLike`[]\>
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L598)
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:630](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L630)
+***
 
 ### distances\_
 
-Distances between nodes in the corresponding place in `children\_`. Only computed if `distance\_threshold` is used or `compute\_distances` is set to `true`.
+**Get Signature**
 
-#### Signature
+> **get** **distances\_**(): `Promise`\<`ArrayLike`\>
 
-```ts
-distances_(): Promise<ArrayLike>;
-```
+Distances between nodes in the corresponding place in `children_`. Only computed if `distance_threshold` is used or `compute_distances` is set to `true`.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L625)
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L657)
+***
 
 ### feature\_names\_in\_
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+**Get Signature**
 
-#### Signature
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L571)
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L603)
+***
 
 ### labels\_
 
+**Get Signature**
+
+> **get** **labels\_**(): `Promise`\<`any`\>
+
 Cluster labels for each feature.
 
-#### Signature
+**Returns** `Promise`\<`any`\>
 
-```ts
-labels_(): Promise<any>;
-```
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L463)
 
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/cluster/FeatureAgglomeration.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L495)
+***
 
 ### n\_clusters\_
 
-The number of clusters found by the algorithm. If `distance\_threshold=None`, it will be equal to the given `n\_clusters`.
+**Get Signature**
 
-#### Signature
+> **get** **n\_clusters\_**(): `Promise`\<`number`\>
 
-```ts
-n_clusters_(): Promise<number>;
-```
+The number of clusters found by the algorithm. If `distance_threshold=None`, it will be equal to the given `n_clusters`.
 
-#### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L436)
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L468)
+***
 
 ### n\_connected\_components\_
 
+**Get Signature**
+
+> **get** **n\_connected\_components\_**(): `Promise`\<`number`\>
+
 The estimated number of connected components in the graph.
 
-#### Signature
+**Returns** `Promise`\<`number`\>
 
-```ts
-n_connected_components_(): Promise<number>;
-```
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L517)
 
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/cluster/FeatureAgglomeration.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L549)
+***
 
 ### n\_features\_in\_
 
-Number of features seen during fit.
+**Get Signature**
 
-#### Signature
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-```ts
-n_features_in_(): Promise<number>;
-```
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-#### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L544)
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L576)
+***
 
 ### n\_leaves\_
 
+**Get Signature**
+
+> **get** **n\_leaves\_**(): `Promise`\<`number`\>
+
 Number of leaves in the hierarchical tree.
 
-#### Signature
+**Returns** `Promise`\<`number`\>
 
-```ts
-n_leaves_(): Promise<number>;
-```
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L490)
 
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/cluster/FeatureAgglomeration.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L522)
+***
 
 ### py
 
-#### Signature
+**Get Signature**
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
+**Set Signature**
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L90)
+> **set** **py**(`pythonBridge`): `void`
 
-#### Signature
+**Parameters**
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `pythonBridge` | `PythonBridge` |
 
-#### Returns
+**Returns** `void`
 
-`void`
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L85)
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L94)
+## Methods
+
+### dispose()
+
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L141)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Fit the hierarchical clustering on the data.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | The data. |
+| `opts.y`? | `any` | Not used, present here for API consistency by convention. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L158)
+
+***
+
+### fit\_transform()
+
+> **fit\_transform**(`opts`): `Promise`\<`any`[]\>
+
+Fit to data, then transform it.
+
+Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | `ArrayLike`[] | Input samples. |
+| `opts.y`? | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
+
+**Returns** `Promise`\<`any`[]\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L199)
+
+***
+
+### get\_feature\_names\_out()
+
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
+Get output feature names for transformation.
+
+The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L247)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L285)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+**Parameters**
+
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L98)
+
+***
+
+### inverse\_transform()
+
+> **inverse\_transform**(`opts`): `Promise`\<`ArrayLike`[]\>
+
+Inverse the transformation and return a vector of size `n_features`.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | The values to be assigned to each cluster of samples. |
+| `opts.Xt`? | `ArrayLike`[] | The values to be assigned to each cluster of samples. |
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L321)
+
+***
+
+### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
+
+Set output container.
+
+See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L364)
+
+***
+
+### transform()
+
+> **transform**(`opts`): `Promise`\<`ArrayLike`[]\>
+
+Transform a new matrix using the built clustering.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `ArrayLike`[] | A M by N array of M observations in N dimensions or a length M array of M one-dimensional observations. |
+
+**Returns** `Promise`\<`ArrayLike`[]\>
+
+**Defined in** [generated/cluster/FeatureAgglomeration.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L400)

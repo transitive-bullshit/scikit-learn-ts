@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Sparse inverse covariance w/ cross-validated choice of the l1 penalty.
 
-  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+  See glossary entry for [cross-validation estimator](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-cross-validation-estimator).
 
-  Read more in the [User Guide](../covariance.html#sparse-inverse-covariance).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../covariance.html#sparse-inverse-covariance).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.GraphicalLassoCV.html)
  */
@@ -71,7 +71,7 @@ export class GraphicalLassoCV {
     mode?: 'cd' | 'lars'
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -136,19 +136,8 @@ except NameError: bridgeGraphicalLassoCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GraphicalLassoCV = {'alphas': np.array(${
-      this.opts['alphas'] ?? undefined
-    }) if ${this.opts['alphas'] !== undefined} else None, 'n_refinements': ${
-      this.opts['n_refinements'] ?? undefined
-    }, 'cv': ${this.opts['cv'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'enet_tol': ${this.opts['enet_tol'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'mode': ${this.opts['mode'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}}
+    await this._py
+      .ex`ctor_GraphicalLassoCV = {'alphas': np.array(${this.opts['alphas'] ?? undefined}) if ${this.opts['alphas'] !== undefined} else None, 'n_refinements': ${this.opts['n_refinements'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'enet_tol': ${this.opts['enet_tol'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'mode': ${this.opts['mode'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}}
 
 ctor_GraphicalLassoCV = {k: v for k, v in ctor_GraphicalLassoCV.items() if v is not None}`
 
@@ -187,14 +176,14 @@ ctor_GraphicalLassoCV = {k: v for k, v in ctor_GraphicalLassoCV.items() if v is 
     comp_cov?: ArrayLike[]
 
     /**
-      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp_cov \- self.covariance_)`.
 
       @defaultValue `'frobenius'`
      */
     norm?: 'frobenius' | 'spectral'
 
     /**
-      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+      If `true` (default), the squared error norm is divided by n_features. If `false`, the squared error norm is not rescaled.
 
       @defaultValue `true`
      */
@@ -218,13 +207,8 @@ ctor_GraphicalLassoCV = {k: v for k, v in ctor_GraphicalLassoCV.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_GraphicalLassoCV_error_norm = {k: v for k, v in pms_GraphicalLassoCV_error_norm.items() if v is not None}`
 
@@ -250,6 +234,11 @@ pms_GraphicalLassoCV_error_norm = {k: v for k, v in pms_GraphicalLassoCV_error_n
       Not used, present for API consistency by convention.
      */
     y?: any
+
+    /**
+      Parameters to be passed to the CV splitter and the cross_val_score function.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -262,9 +251,8 @@ pms_GraphicalLassoCV_error_norm = {k: v for k, v in pms_GraphicalLassoCV_error_n
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_GraphicalLassoCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}, 'params': ${opts['params'] ?? undefined}}
 
 pms_GraphicalLassoCV_fit = {k: v for k, v in pms_GraphicalLassoCV_fit.items() if v is not None}`
 
@@ -280,11 +268,11 @@ pms_GraphicalLassoCV_fit = {k: v for k, v in pms_GraphicalLassoCV_fit.items() if
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -301,9 +289,8 @@ pms_GraphicalLassoCV_fit = {k: v for k, v in pms_GraphicalLassoCV_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GraphicalLassoCV_get_metadata_routing = {k: v for k, v in pms_GraphicalLassoCV_get_metadata_routing.items() if v is not None}`
 
@@ -339,9 +326,7 @@ pms_GraphicalLassoCV_get_metadata_routing = {k: v for k, v in pms_GraphicalLasso
 
     // set up method params
     await this._py
-      .ex`pms_GraphicalLassoCV_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+      .ex`pms_GraphicalLassoCV_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_GraphicalLassoCV_get_precision = {k: v for k, v in pms_GraphicalLassoCV_get_precision.items() if v is not None}`
 
@@ -374,9 +359,8 @@ pms_GraphicalLassoCV_get_precision = {k: v for k, v in pms_GraphicalLassoCV_get_
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_GraphicalLassoCV_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_GraphicalLassoCV_mahalanobis = {k: v for k, v in pms_GraphicalLassoCV_mahalanobis.items() if v is not None}`
 
@@ -390,13 +374,13 @@ pms_GraphicalLassoCV_mahalanobis = {k: v for k, v in pms_GraphicalLassoCV_mahala
   }
 
   /**
-    Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
+    Compute the log-likelihood of `X_test` under the estimated Gaussian model.
 
-    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
+    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location_` and `self.covariance_`.
    */
   async score(opts: {
     /**
-      Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+      Test data of which we compute the likelihood, where `n_samples` is the number of samples and `n_features` is the number of features. `X_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
      */
     X_test?: ArrayLike[]
 
@@ -416,11 +400,8 @@ pms_GraphicalLassoCV_mahalanobis = {k: v for k, v in pms_GraphicalLassoCV_mahala
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items() if v is not None}`
 
@@ -436,13 +417,13 @@ pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items(
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `X\_test` parameter in `score`.
+      Metadata routing for `X_test` parameter in `score`.
      */
     X_test?: string | boolean
   }): Promise<any> {
@@ -459,9 +440,8 @@ pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items(
     }
 
     // set up method params
-    await this._py.ex`pms_GraphicalLassoCV_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_GraphicalLassoCV_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_GraphicalLassoCV_set_score_request = {k: v for k, v in pms_GraphicalLassoCV_set_score_request.items() if v is not None}`
 
@@ -556,7 +536,7 @@ pms_GraphicalLassoCV_set_score_request = {k: v for k, v in pms_GraphicalLassoCV_
   }
 
   /**
-    The list of values of the objective function and the dual gap at each iteration. Returned only if return\_costs is `true`.
+    The list of values of the objective function and the dual gap at each iteration. Returned only if return_costs is `true`.
    */
   get costs_(): Promise<any> {
     if (this._isDisposed) {
@@ -664,7 +644,7 @@ pms_GraphicalLassoCV_set_score_request = {k: v for k, v in pms_GraphicalLassoCV_
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -691,7 +671,7 @@ pms_GraphicalLassoCV_set_score_request = {k: v for k, v in pms_GraphicalLassoCV_
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

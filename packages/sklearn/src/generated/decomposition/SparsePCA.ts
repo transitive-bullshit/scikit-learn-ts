@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Finds the set of sparse components that can optimally reconstruct the data. The amount of sparseness is controllable by the coefficient of the L1 penalty, given by the parameter alpha.
 
-  Read more in the [User Guide](../decomposition.html#sparsepca).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../decomposition.html#sparsepca).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparsePCA.html)
  */
@@ -24,7 +24,7 @@ export class SparsePCA {
 
   constructor(opts?: {
     /**
-      Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`.
+      Number of sparse atoms to extract. If `undefined`, then `n_components` is set to `n_features`.
      */
     n_components?: number
 
@@ -57,24 +57,24 @@ export class SparsePCA {
     tol?: number
 
     /**
-      Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear\_model.lars\_path) cd: uses the coordinate descent method to compute the Lasso solution (linear\_model.Lasso). Lars will be faster if the estimated components are sparse.
+      Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear_model.lars_path) cd: uses the coordinate descent method to compute the Lasso solution (linear_model.Lasso). Lars will be faster if the estimated components are sparse.
 
       @defaultValue `'lars'`
      */
     method?: 'lars' | 'cd'
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Initial values for the loadings for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
+      Initial values for the loadings for warm restart scenarios. Only used if `U_init` and `V_init` are not `undefined`.
      */
     U_init?: NDArray[]
 
     /**
-      Initial values for the components for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
+      Initial values for the components for warm restart scenarios. Only used if `U_init` and `V_init` are not `undefined`.
      */
     V_init?: NDArray[]
 
@@ -86,7 +86,7 @@ export class SparsePCA {
     verbose?: number | boolean
 
     /**
-      Used during dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Used during dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -130,21 +130,8 @@ except NameError: bridgeSparsePCA = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SparsePCA = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'alpha': ${this.opts['alpha'] ?? undefined}, 'ridge_alpha': ${
-      this.opts['ridge_alpha'] ?? undefined
-    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'method': ${this.opts['method'] ?? undefined}, 'n_jobs': ${
-      this.opts['n_jobs'] ?? undefined
-    }, 'U_init': np.array(${this.opts['U_init'] ?? undefined}) if ${
-      this.opts['U_init'] !== undefined
-    } else None, 'V_init': np.array(${this.opts['V_init'] ?? undefined}) if ${
-      this.opts['V_init'] !== undefined
-    } else None, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_SparsePCA = {'n_components': ${this.opts['n_components'] ?? undefined}, 'alpha': ${this.opts['alpha'] ?? undefined}, 'ridge_alpha': ${this.opts['ridge_alpha'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'method': ${this.opts['method'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}, 'U_init': np.array(${this.opts['U_init'] ?? undefined}) if ${this.opts['U_init'] !== undefined} else None, 'V_init': np.array(${this.opts['V_init'] ?? undefined}) if ${this.opts['V_init'] !== undefined} else None, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SparsePCA = {k: v for k, v in ctor_SparsePCA.items() if v is not None}`
 
@@ -177,7 +164,7 @@ ctor_SparsePCA = {k: v for k, v in ctor_SparsePCA.items() if v is not None}`
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -195,9 +182,8 @@ ctor_SparsePCA = {k: v for k, v in ctor_SparsePCA.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SparsePCA_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SparsePCA_fit = {k: v for k, v in pms_SparsePCA_fit.items() if v is not None}`
 
@@ -213,7 +199,7 @@ pms_SparsePCA_fit = {k: v for k, v in pms_SparsePCA_fit.items() if v is not None
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -240,13 +226,8 @@ pms_SparsePCA_fit = {k: v for k, v in pms_SparsePCA_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparsePCA_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SparsePCA_fit_transform = {k: v for k, v in pms_SparsePCA_fit_transform.items() if v is not None}`
 
@@ -262,7 +243,7 @@ pms_SparsePCA_fit_transform = {k: v for k, v in pms_SparsePCA_fit_transform.item
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -282,9 +263,7 @@ pms_SparsePCA_fit_transform = {k: v for k, v in pms_SparsePCA_fit_transform.item
 
     // set up method params
     await this._py
-      .ex`pms_SparsePCA_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SparsePCA_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SparsePCA_get_feature_names_out = {k: v for k, v in pms_SparsePCA_get_feature_names_out.items() if v is not None}`
 
@@ -300,11 +279,11 @@ pms_SparsePCA_get_feature_names_out = {k: v for k, v in pms_SparsePCA_get_featur
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -319,9 +298,8 @@ pms_SparsePCA_get_feature_names_out = {k: v for k, v in pms_SparsePCA_get_featur
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparsePCA_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SparsePCA_get_metadata_routing = {k: v for k, v in pms_SparsePCA_get_metadata_routing.items() if v is not None}`
 
@@ -354,9 +332,8 @@ pms_SparsePCA_get_metadata_routing = {k: v for k, v in pms_SparsePCA_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SparsePCA_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparsePCA_inverse_transform = {k: v for k, v in pms_SparsePCA_inverse_transform.items() if v is not None}`
 
@@ -372,13 +349,13 @@ pms_SparsePCA_inverse_transform = {k: v for k, v in pms_SparsePCA_inverse_transf
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
@@ -389,9 +366,8 @@ pms_SparsePCA_inverse_transform = {k: v for k, v in pms_SparsePCA_inverse_transf
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparsePCA_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SparsePCA_set_output = {k: v for k, v in pms_SparsePCA_set_output.items() if v is not None}`
 
@@ -407,7 +383,7 @@ pms_SparsePCA_set_output = {k: v for k, v in pms_SparsePCA_set_output.items() if
   /**
     Least Squares projection of the data onto the sparse components.
 
-    To avoid instability issues in case the system is under-determined, regularization can be applied (Ridge regression) via the `ridge\_alpha` parameter.
+    To avoid instability issues in case the system is under-determined, regularization can be applied (Ridge regression) via the `ridge_alpha` parameter.
 
     Note that Sparse PCA components orthogonality is not enforced as in PCA hence one cannot use a simple linear projection.
    */
@@ -426,9 +402,8 @@ pms_SparsePCA_set_output = {k: v for k, v in pms_SparsePCA_set_output.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_SparsePCA_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SparsePCA_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparsePCA_transform = {k: v for k, v in pms_SparsePCA_transform.items() if v is not None}`
 
@@ -559,7 +534,7 @@ pms_SparsePCA_transform = {k: v for k, v in pms_SparsePCA_transform.items() if v
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -584,7 +559,7 @@ pms_SparsePCA_transform = {k: v for k, v in pms_SparsePCA_transform.items() if v
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

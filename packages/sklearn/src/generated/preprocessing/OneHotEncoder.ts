@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Encode categorical features as a one-hot numeric array.
 
-  The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. The features are encoded using a one-hot (aka ‘one-of-K’ or ‘dummy’) encoding scheme. This creates a binary column for each category and returns a sparse matrix or dense array (depending on the `sparse\_output` parameter)
+  The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. The features are encoded using a one-hot (aka ‘one-of-K’ or ‘dummy’) encoding scheme. This creates a binary column for each category and returns a sparse matrix or dense array (depending on the `sparse_output` parameter).
 
   By default, the encoder derives the categories based on the unique values in each feature. Alternatively, you can also specify the `categories` manually.
 
@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note: a one-hot encoding of y labels should use a LabelBinarizer instead.
 
-  Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features). For a comparison of different encoders, refer to: [Comparing Target Encoder with Other Encoders](../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../preprocessing.html#preprocessing-categorical-features). For a comparison of different encoders, refer to: [Comparing Target Encoder with Other Encoders](https://scikit-learn.org/stable/modules/generated/../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
  */
@@ -44,14 +44,7 @@ export class OneHotEncoder {
     drop?: 'first' | 'if_binary' | any[]
 
     /**
-      Will return sparse matrix if set `true` else will return an array.
-
-      @defaultValue `true`
-     */
-    sparse?: boolean
-
-    /**
-      Will return sparse matrix if set `true` else will return an array.
+      When `true`, it returns a [`scipy.sparse.csr_matrix`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html#scipy.sparse.csr_matrix "(in SciPy v1.14.1)"), i.e. a sparse matrix in “Compressed Sparse Row” (CSR) format.
 
       @defaultValue `true`
      */
@@ -63,7 +56,7 @@ export class OneHotEncoder {
     dtype?: any
 
     /**
-      Specifies the way unknown categories are handled during [`transform`](#sklearn.preprocessing.OneHotEncoder.transform "sklearn.preprocessing.OneHotEncoder.transform").
+      Specifies the way unknown categories are handled during [`transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.OneHotEncoder.transform "sklearn.preprocessing.OneHotEncoder.transform").
 
       @defaultValue `'error'`
      */
@@ -75,14 +68,14 @@ export class OneHotEncoder {
     min_frequency?: number
 
     /**
-      Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
+      Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
      */
     max_categories?: number
 
     /**
-      Callable with signature `def callable(input\_feature, category)` that returns a string. This is used to create feature names to be returned by [`get\_feature\_names\_out`](#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").
+      Callable with signature `def callable(input_feature, category)` that returns a string. This is used to create feature names to be returned by [`get_feature_names_out`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").
 
-      `"concat"` concatenates encoded feature name and category with `feature + "\_" + str(category)`.E.g. feature X with values 1, 6, 7 create feature names `X\_1, X\_6, X\_7`.
+      `"concat"` concatenates encoded feature name and category with `feature + "_" + str(category)`.E.g. feature X with values 1, 6, 7 create feature names `X_1, X_6, X_7`.
 
       @defaultValue `'concat'`
      */
@@ -128,23 +121,8 @@ except NameError: bridgeOneHotEncoder = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_OneHotEncoder = {'categories': ${
-      this.opts['categories'] ?? undefined
-    }, 'drop': np.array(${this.opts['drop'] ?? undefined}) if ${
-      this.opts['drop'] !== undefined
-    } else None, 'sparse': ${
-      this.opts['sparse'] ?? undefined
-    }, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}, 'dtype': ${
-      this.opts['dtype'] ?? undefined
-    }, 'handle_unknown': ${
-      this.opts['handle_unknown'] ?? undefined
-    }, 'min_frequency': ${
-      this.opts['min_frequency'] ?? undefined
-    }, 'max_categories': ${
-      this.opts['max_categories'] ?? undefined
-    }, 'feature_name_combiner': ${
-      this.opts['feature_name_combiner'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_OneHotEncoder = {'categories': ${this.opts['categories'] ?? undefined}, 'drop': np.array(${this.opts['drop'] ?? undefined}) if ${this.opts['drop'] !== undefined} else None, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}, 'dtype': ${this.opts['dtype'] ?? undefined}, 'handle_unknown': ${this.opts['handle_unknown'] ?? undefined}, 'min_frequency': ${this.opts['min_frequency'] ?? undefined}, 'max_categories': ${this.opts['max_categories'] ?? undefined}, 'feature_name_combiner': ${this.opts['feature_name_combiner'] ?? undefined}}
 
 ctor_OneHotEncoder = {k: v for k, v in ctor_OneHotEncoder.items() if v is not None}`
 
@@ -183,7 +161,7 @@ ctor_OneHotEncoder = {k: v for k, v in ctor_OneHotEncoder.items() if v is not No
     X?: ArrayLike[]
 
     /**
-      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
      */
     y?: any
   }): Promise<any> {
@@ -196,9 +174,8 @@ ctor_OneHotEncoder = {k: v for k, v in ctor_OneHotEncoder.items() if v is not No
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_OneHotEncoder_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_OneHotEncoder_fit = {k: v for k, v in pms_OneHotEncoder_fit.items() if v is not None}`
 
@@ -214,7 +191,7 @@ pms_OneHotEncoder_fit = {k: v for k, v in pms_OneHotEncoder_fit.items() if v is 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -241,13 +218,8 @@ pms_OneHotEncoder_fit = {k: v for k, v in pms_OneHotEncoder_fit.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneHotEncoder_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_OneHotEncoder_fit_transform = {k: v for k, v in pms_OneHotEncoder_fit_transform.items() if v is not None}`
 
@@ -281,9 +253,7 @@ pms_OneHotEncoder_fit_transform = {k: v for k, v in pms_OneHotEncoder_fit_transf
 
     // set up method params
     await this._py
-      .ex`pms_OneHotEncoder_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_OneHotEncoder_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_get_feature_names_out.items() if v is not None}`
 
@@ -299,11 +269,11 @@ pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_ge
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -318,9 +288,8 @@ pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_ge
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneHotEncoder_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_OneHotEncoder_get_metadata_routing = {k: v for k, v in pms_OneHotEncoder_get_metadata_routing.items() if v is not None}`
 
@@ -338,7 +307,7 @@ pms_OneHotEncoder_get_metadata_routing = {k: v for k, v in pms_OneHotEncoder_get
 
     When unknown categories are encountered (all zeros in the one-hot encoding), `undefined` is used to represent this category. If the feature with the unknown category has a dropped category, the dropped category will be its inverse.
 
-    For a given input feature, if there is an infrequent category, ‘infrequent\_sklearn’ will be used to represent the infrequent category.
+    For a given input feature, if there is an infrequent category, ‘infrequent_sklearn’ will be used to represent the infrequent category.
    */
   async inverse_transform(opts: {
     /**
@@ -357,9 +326,8 @@ pms_OneHotEncoder_get_metadata_routing = {k: v for k, v in pms_OneHotEncoder_get
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneHotEncoder_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_inverse_transform.items() if v is not None}`
 
@@ -375,13 +343,13 @@ pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_invers
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
@@ -392,9 +360,8 @@ pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_invers
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_OneHotEncoder_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_OneHotEncoder_set_output = {k: v for k, v in pms_OneHotEncoder_set_output.items() if v is not None}`
 
@@ -410,7 +377,9 @@ pms_OneHotEncoder_set_output = {k: v for k, v in pms_OneHotEncoder_set_output.it
   /**
     Transform X using one-hot encoding.
 
-    If there are infrequent categories for a feature, the infrequent categories will be grouped into a single category.
+    If `sparse_output=True` (default), it returns an instance of [`scipy.sparse._csr.csr_matrix`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html#scipy.sparse.csr_matrix "(in SciPy v1.14.1)") (CSR format).
+
+    If there are infrequent categories for a feature, set by specifying `max_categories` or `min_frequency`, the infrequent categories are grouped into a single category.
    */
   async transform(opts: {
     /**
@@ -427,9 +396,8 @@ pms_OneHotEncoder_set_output = {k: v for k, v in pms_OneHotEncoder_set_output.it
     }
 
     // set up method params
-    await this._py.ex`pms_OneHotEncoder_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_OneHotEncoder_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.items() if v is not None}`
 
@@ -468,7 +436,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    `drop\_idx\_\[i\]` is the index in `categories\_\[i\]` of the category to be dropped for each feature.
+    `drop_idx_\[i\]` is the index in `categories_\[i\]` of the category to be dropped for each feature.
    */
   get drop_idx_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -493,7 +461,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -518,7 +486,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -543,7 +511,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    Callable with signature `def callable(input\_feature, category)` that returns a string. This is used to create feature names to be returned by [`get\_feature\_names\_out`](#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").
+    Callable with signature `def callable(input_feature, category)` that returns a string. This is used to create feature names to be returned by [`get_feature_names_out`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").
    */
   get feature_name_combiner(): Promise<any> {
     if (this._isDisposed) {

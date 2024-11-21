@@ -1,359 +1,279 @@
-# RBFSampler
+# Class: RBFSampler
 
 Approximate a RBF kernel feature map using random Fourier features.
 
 It implements a variant of Random Kitchen Sinks.\[1\]
 
-Read more in the User Guide.
+Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../kernel_approximation.html#rbf-kernel-approx).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.RBFSampler.html)
 
 ## Constructors
 
-## constructor()
+### new RBFSampler()
 
-### Signature
+> **new RBFSampler**(`opts`?): [`RBFSampler`](RBFSampler.md)
 
-```ts
-new RBFSampler(opts?: object): RBFSampler;
-```
+**Parameters**
 
-### Parameters
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts`? | `object` | - |
+| `opts.gamma`? | `number` \| `"scale"` | Parameter of RBF kernel: exp(-gamma \* x^2). If `gamma='scale'` is passed then it uses 1 / (n_features \* X.var()) as value of gamma. |
+| `opts.n_components`? | `number` | Number of Monte Carlo samples per original feature. Equals the dimensionality of the computed feature space. |
+| `opts.random_state`? | `number` | Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state). |
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `object` | - |
-| `opts.gamma?` | `number` \| `"scale"` | Parameter of RBF kernel: exp(-gamma \* x^2). If `gamma='scale'` is passed then it uses 1 / (n\_features \* X.var()) as value of gamma.  `Default Value`  `1` |
-| `opts.n_components?` | `number` | Number of Monte Carlo samples per original feature. Equals the dimensionality of the computed feature space.  `Default Value`  `100` |
-| `opts.random_state?` | `number` | Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See Glossary. |
+**Returns** [`RBFSampler`](RBFSampler.md)
 
-### Returns
-
-[`RBFSampler`](RBFSampler.md)
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L25)
-
-## Methods
-
-### dispose()
-
-Disposes of the underlying Python resources.
-
-Once `dispose()` is called, the instance is no longer usable.
-
-#### Signature
-
-```ts
-dispose(): Promise<void>;
-```
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L104)
-
-### fit()
-
-Fit the model with X.
-
-Samples random projection according to n\_features.
-
-#### Signature
-
-```ts
-fit(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L123)
-
-### fit\_transform()
-
-Fit to data, then transform it.
-
-Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
-
-#### Signature
-
-```ts
-fit_transform(opts: object): Promise<any[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike`[] | Input samples. |
-| `opts.fit_params?` | `any` | Additional fit parameters. |
-| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
-
-#### Returns
-
-`Promise`\<`any`[]\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L163)
-
-### get\_feature\_names\_out()
-
-Get output feature names for transformation.
-
-The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
-
-#### Signature
-
-```ts
-get_feature_names_out(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L212)
-
-### get\_metadata\_routing()
-
-Get metadata routing of this object.
-
-Please check User Guide on how the routing mechanism works.
-
-#### Signature
-
-```ts
-get_metadata_routing(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L250)
-
-### init()
-
-Initializes the underlying Python resources.
-
-This instance is not usable until the `Promise` returned by `init()` resolves.
-
-#### Signature
-
-```ts
-init(py: PythonBridge): Promise<void>;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L62)
-
-### set\_output()
-
-Set output container.
-
-See Introducing the set\_output API for an example on how to use the API.
-
-#### Signature
-
-```ts
-set_output(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L287)
-
-### transform()
-
-Apply the approximate feature map to X.
-
-#### Signature
-
-```ts
-transform(opts: object): Promise<ArrayLike>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `any` | New data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L320)
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L25)
 
 ## Properties
 
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L19)
+| Property | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| `_isDisposed` | `boolean` | `false` | [generated/kernel\_approximation/RBFSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L23) |
+| `_isInitialized` | `boolean` | `false` | [generated/kernel\_approximation/RBFSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L22) |
+| `_py` | `PythonBridge` | `undefined` | [generated/kernel\_approximation/RBFSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L21) |
+| `id` | `string` | `undefined` | [generated/kernel\_approximation/RBFSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L18) |
+| `opts` | `any` | `undefined` | [generated/kernel\_approximation/RBFSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L19) |
 
 ## Accessors
 
 ### feature\_names\_in\_
 
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+**Get Signature**
 
-#### Signature
+> **get** **feature\_names\_in\_**(): `Promise`\<`ArrayLike`\>
 
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
+Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L414)
 
-Defined in: [generated/kernel\_approximation/RBFSampler.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L428)
+***
 
 ### n\_features\_in\_
 
-Number of features seen during fit.
+**Get Signature**
 
-#### Signature
+> **get** **n\_features\_in\_**(): `Promise`\<`number`\>
 
-```ts
-n_features_in_(): Promise<number>;
-```
+Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
 
-#### Returns
+**Returns** `Promise`\<`number`\>
 
-`Promise`\<`number`\>
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L389)
 
-Defined in: [generated/kernel\_approximation/RBFSampler.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L403)
+***
 
 ### py
 
-#### Signature
+**Get Signature**
 
-```ts
-py(): PythonBridge;
-```
+> **get** **py**(): `PythonBridge`
 
-#### Returns
+**Returns** `PythonBridge`
 
-`PythonBridge`
+**Set Signature**
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L49)
+> **set** **py**(`pythonBridge`): `void`
 
-#### Signature
+**Parameters**
 
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `pythonBridge` | `PythonBridge` |
 
-#### Returns
+**Returns** `void`
 
-`void`
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L49)
 
-Defined in: [generated/kernel\_approximation/RBFSampler.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L53)
+***
 
 ### random\_offset\_
 
-Random offset used to compute the projection in the `n\_components` dimensions of the feature space.
+**Get Signature**
 
-#### Signature
+> **get** **random\_offset\_**(): `Promise`\<`ArrayLike`\>
 
-```ts
-random_offset_(): Promise<ArrayLike>;
-```
+Random offset used to compute the projection in the `n_components` dimensions of the feature space.
 
-#### Returns
+**Returns** `Promise`\<`ArrayLike`\>
 
-`Promise`\<`ArrayLike`\>
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L339)
 
-Defined in: [generated/kernel\_approximation/RBFSampler.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L353)
+***
 
 ### random\_weights\_
 
+**Get Signature**
+
+> **get** **random\_weights\_**(): `Promise`\<`ArrayLike`[]\>
+
 Random projection directions drawn from the Fourier transform of the RBF kernel.
 
-#### Signature
+**Returns** `Promise`\<`ArrayLike`[]\>
 
-```ts
-random_weights_(): Promise<ArrayLike[]>;
-```
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L364)
 
-#### Returns
+## Methods
 
-`Promise`\<`ArrayLike`[]\>
+### dispose()
 
-Defined in: [generated/kernel\_approximation/RBFSampler.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L378)
+> **dispose**(): `Promise`\<`void`\>
+
+Disposes of the underlying Python resources.
+
+Once `dispose()` is called, the instance is no longer usable.
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L101)
+
+***
+
+### fit()
+
+> **fit**(`opts`): `Promise`\<`any`\>
+
+Fit the model with X.
+
+Samples random projection according to n_features.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | Training data, where `n_samples` is the number of samples and `n_features` is the number of features. |
+| `opts.y`? | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L120)
+
+***
+
+### fit\_transform()
+
+> **fit\_transform**(`opts`): `Promise`\<`any`[]\>
+
+Fit to data, then transform it.
+
+Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.fit_params`? | `any` | Additional fit parameters. |
+| `opts.X`? | `ArrayLike`[] | Input samples. |
+| `opts.y`? | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
+
+**Returns** `Promise`\<`any`[]\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L159)
+
+***
+
+### get\_feature\_names\_out()
+
+> **get\_feature\_names\_out**(`opts`): `Promise`\<`any`\>
+
+Get output feature names for transformation.
+
+The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.input_features`? | `any` | Only used to validate feature names with the names seen in `fit`. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L203)
+
+***
+
+### get\_metadata\_routing()
+
+> **get\_metadata\_routing**(`opts`): `Promise`\<`any`\>
+
+Get metadata routing of this object.
+
+Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.routing`? | `any` | A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L239)
+
+***
+
+### init()
+
+> **init**(`py`): `Promise`\<`void`\>
+
+Initializes the underlying Python resources.
+
+This instance is not usable until the `Promise` returned by `init()` resolves.
+
+**Parameters**
+
+| Parameter | Type |
+| ------ | ------ |
+| `py` | `PythonBridge` |
+
+**Returns** `Promise`\<`void`\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L62)
+
+***
+
+### set\_output()
+
+> **set\_output**(`opts`): `Promise`\<`any`\>
+
+Set output container.
+
+See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.transform`? | `"default"` \| `"pandas"` \| `"polars"` | Configure output of `transform` and `fit_transform`. |
+
+**Returns** `Promise`\<`any`\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L275)
+
+***
+
+### transform()
+
+> **transform**(`opts`): `Promise`\<`ArrayLike`\>
+
+Apply the approximate feature map to X.
+
+**Parameters**
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `opts` | `object` | - |
+| `opts.X`? | `any` | New data, where `n_samples` is the number of samples and `n_features` is the number of features. |
+
+**Returns** `Promise`\<`ArrayLike`\>
+
+**Defined in** [generated/kernel\_approximation/RBFSampler.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L307)

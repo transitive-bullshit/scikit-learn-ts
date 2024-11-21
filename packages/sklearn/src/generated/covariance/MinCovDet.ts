@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The Minimum Covariance Determinant covariance estimator is to be applied on Gaussian-distributed data, but could still be relevant on data drawn from a unimodal, symmetric distribution. It is not meant to be used with multi-modal data (the algorithm used to fit a MinCovDet object is likely to fail in such a case). One should consider projection pursuit methods to deal with multi-modal datasets.
 
-  Read more in the [User Guide](../covariance.html#robust-covariance).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../covariance.html#robust-covariance).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.MinCovDet.html)
  */
@@ -38,12 +38,12 @@ export class MinCovDet {
     assume_centered?: boolean
 
     /**
-      The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_sample + n\_features + 1) / 2`. The parameter must be in the range (0, 1\].
+      The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support_fraction will be used within the algorithm: `(n_samples + n_features + 1) / 2 \* n_samples`. The parameter must be in the range (0, 1\].
      */
     support_fraction?: number
 
     /**
-      Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -87,13 +87,8 @@ except NameError: bridgeMinCovDet = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MinCovDet = {'store_precision': ${
-      this.opts['store_precision'] ?? undefined
-    }, 'assume_centered': ${
-      this.opts['assume_centered'] ?? undefined
-    }, 'support_fraction': ${
-      this.opts['support_fraction'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_MinCovDet = {'store_precision': ${this.opts['store_precision'] ?? undefined}, 'assume_centered': ${this.opts['assume_centered'] ?? undefined}, 'support_fraction': ${this.opts['support_fraction'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_MinCovDet = {k: v for k, v in ctor_MinCovDet.items() if v is not None}`
 
@@ -124,7 +119,7 @@ ctor_MinCovDet = {k: v for k, v in ctor_MinCovDet.items() if v is not None}`
   /**
     Apply a correction to raw Minimum Covariance Determinant estimates.
 
-    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](#r491365aeaa84-rvd).
+    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](https://scikit-learn.org/stable/modules/generated/#r491365aeaa84-rvd).
    */
   async correct_covariance(opts: {
     /**
@@ -141,9 +136,8 @@ ctor_MinCovDet = {k: v for k, v in ctor_MinCovDet.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_correct_covariance = {'data': np.array(${
-      opts['data'] ?? undefined
-    }) if ${opts['data'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_correct_covariance = {'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_MinCovDet_correct_covariance = {k: v for k, v in pms_MinCovDet_correct_covariance.items() if v is not None}`
 
@@ -166,14 +160,14 @@ pms_MinCovDet_correct_covariance = {k: v for k, v in pms_MinCovDet_correct_covar
     comp_cov?: ArrayLike[]
 
     /**
-      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp_cov \- self.covariance_)`.
 
       @defaultValue `'frobenius'`
      */
     norm?: 'frobenius' | 'spectral'
 
     /**
-      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+      If `true` (default), the squared error norm is divided by n_features. If `false`, the squared error norm is not rescaled.
 
       @defaultValue `true`
      */
@@ -195,13 +189,8 @@ pms_MinCovDet_correct_covariance = {k: v for k, v in pms_MinCovDet_correct_covar
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_error_norm = {'comp_cov': np.array(${
-      opts['comp_cov'] ?? undefined
-    }) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${
-      opts['norm'] ?? undefined
-    }, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${
-      opts['squared'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_error_norm = {'comp_cov': np.array(${opts['comp_cov'] ?? undefined}) if ${opts['comp_cov'] !== undefined} else None, 'norm': ${opts['norm'] ?? undefined}, 'scaling': ${opts['scaling'] ?? undefined}, 'squared': ${opts['squared'] ?? undefined}}
 
 pms_MinCovDet_error_norm = {k: v for k, v in pms_MinCovDet_error_norm.items() if v is not None}`
 
@@ -219,7 +208,7 @@ pms_MinCovDet_error_norm = {k: v for k, v in pms_MinCovDet_error_norm.items() if
    */
   async fit(opts: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -237,9 +226,8 @@ pms_MinCovDet_error_norm = {k: v for k, v in pms_MinCovDet_error_norm.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MinCovDet_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MinCovDet_fit = {k: v for k, v in pms_MinCovDet_fit.items() if v is not None}`
 
@@ -255,11 +243,11 @@ pms_MinCovDet_fit = {k: v for k, v in pms_MinCovDet_fit.items() if v is not None
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -274,9 +262,8 @@ pms_MinCovDet_fit = {k: v for k, v in pms_MinCovDet_fit.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MinCovDet_get_metadata_routing = {k: v for k, v in pms_MinCovDet_get_metadata_routing.items() if v is not None}`
 
@@ -307,9 +294,8 @@ pms_MinCovDet_get_metadata_routing = {k: v for k, v in pms_MinCovDet_get_metadat
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_get_precision = {'precision_': np.array(${
-      opts['precision_'] ?? undefined
-    }) if ${opts['precision_'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_get_precision = {'precision_': np.array(${opts['precision_'] ?? undefined}) if ${opts['precision_'] !== undefined} else None}
 
 pms_MinCovDet_get_precision = {k: v for k, v in pms_MinCovDet_get_precision.items() if v is not None}`
 
@@ -340,9 +326,8 @@ pms_MinCovDet_get_precision = {k: v for k, v in pms_MinCovDet_get_precision.item
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_mahalanobis = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_mahalanobis = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MinCovDet_mahalanobis = {k: v for k, v in pms_MinCovDet_mahalanobis.items() if v is not None}`
 
@@ -358,7 +343,7 @@ pms_MinCovDet_mahalanobis = {k: v for k, v in pms_MinCovDet_mahalanobis.items() 
   /**
     Re-weight raw Minimum Covariance Determinant estimates.
 
-    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](#r9465bad4668c-rvdriessen).
+    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](https://scikit-learn.org/stable/modules/generated/#r9465bad4668c-rvdriessen).
    */
   async reweight_covariance(opts: {
     /**
@@ -375,9 +360,8 @@ pms_MinCovDet_mahalanobis = {k: v for k, v in pms_MinCovDet_mahalanobis.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_reweight_covariance = {'data': np.array(${
-      opts['data'] ?? undefined
-    }) if ${opts['data'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinCovDet_reweight_covariance = {'data': np.array(${opts['data'] ?? undefined}) if ${opts['data'] !== undefined} else None}
 
 pms_MinCovDet_reweight_covariance = {k: v for k, v in pms_MinCovDet_reweight_covariance.items() if v is not None}`
 
@@ -391,13 +375,13 @@ pms_MinCovDet_reweight_covariance = {k: v for k, v in pms_MinCovDet_reweight_cov
   }
 
   /**
-    Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
+    Compute the log-likelihood of `X_test` under the estimated Gaussian model.
 
-    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
+    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location_` and `self.covariance_`.
    */
   async score(opts: {
     /**
-      Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+      Test data of which we compute the likelihood, where `n_samples` is the number of samples and `n_features` is the number of features. `X_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
      */
     X_test?: ArrayLike[]
 
@@ -415,11 +399,8 @@ pms_MinCovDet_reweight_covariance = {k: v for k, v in pms_MinCovDet_reweight_cov
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_score = {'X_test': np.array(${
-      opts['X_test'] ?? undefined
-    }) if ${opts['X_test'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_score = {'X_test': np.array(${opts['X_test'] ?? undefined}) if ${opts['X_test'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not None}`
 
@@ -435,13 +416,13 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `X\_test` parameter in `score`.
+      Metadata routing for `X_test` parameter in `score`.
      */
     X_test?: string | boolean
   }): Promise<any> {
@@ -454,9 +435,8 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_MinCovDet_set_score_request = {'X_test': ${
-      opts['X_test'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinCovDet_set_score_request = {'X_test': ${opts['X_test'] ?? undefined}}
 
 pms_MinCovDet_set_score_request = {k: v for k, v in pms_MinCovDet_set_score_request.items() if v is not None}`
 
@@ -591,7 +571,7 @@ pms_MinCovDet_set_score_request = {k: v for k, v in pms_MinCovDet_set_score_requ
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
+    Estimated pseudo inverse matrix. (stored only if store_precision is `true`)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -637,7 +617,7 @@ pms_MinCovDet_set_score_request = {k: v for k, v in pms_MinCovDet_set_score_requ
   }
 
   /**
-    Mahalanobis distances of the training set (on which [`fit`](#sklearn.covariance.MinCovDet.fit "sklearn.covariance.MinCovDet.fit") is called) observations.
+    Mahalanobis distances of the training set (on which [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.covariance.MinCovDet.fit "sklearn.covariance.MinCovDet.fit") is called) observations.
    */
   get dist_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -660,7 +640,7 @@ pms_MinCovDet_set_score_request = {k: v for k, v in pms_MinCovDet_set_score_requ
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -685,7 +665,7 @@ pms_MinCovDet_set_score_request = {k: v for k, v in pms_MinCovDet_set_score_requ
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

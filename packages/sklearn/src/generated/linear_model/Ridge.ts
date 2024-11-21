@@ -24,7 +24,7 @@ export class Ridge {
     /**
       Constant that multiplies the L2 term, controlling regularization strength. `alpha` must be a non-negative float i.e. in `\[0, inf)`.
 
-      When `alpha \= 0`, the objective is equivalent to ordinary least squares, solved by the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object. For numerical reasons, using `alpha \= 0` with the `Ridge` object is not advised. Instead, you should use the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object.
+      When `alpha \= 0`, the objective is equivalent to ordinary least squares, solved by the [`LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object. For numerical reasons, using `alpha \= 0` with the `Ridge` object is not advised. Instead, you should use the [`LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object.
 
       If an array is passed, penalties are assumed to be specific to the targets. Hence they must correspond in number.
 
@@ -47,12 +47,12 @@ export class Ridge {
     copy_X?: boolean
 
     /**
-      Maximum number of iterations for conjugate gradient solver. For ‘sparse\_cg’ and ‘lsqr’ solvers, the default value is determined by scipy.sparse.linalg. For ‘sag’ solver, the default value is 1000. For ‘lbfgs’ solver, the default value is 15000.
+      Maximum number of iterations for conjugate gradient solver. For ‘sparse_cg’ and ‘lsqr’ solvers, the default value is determined by scipy.sparse.linalg. For ‘sag’ solver, the default value is 1000. For ‘lbfgs’ solver, the default value is 15000.
      */
     max_iter?: number
 
     /**
-      The precision of the solution (`coef\_`) is determined by `tol` which specifies a different convergence criterion for each solver:
+      The precision of the solution (`coef_`) is determined by `tol` which specifies a different convergence criterion for each solver:
 
       @defaultValue `0.0001`
      */
@@ -81,7 +81,7 @@ export class Ridge {
     positive?: boolean
 
     /**
-      Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
+      Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
      */
     random_state?: number
   }) {
@@ -125,17 +125,8 @@ except NameError: bridgeRidge = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_Ridge = {'alpha': np.array(${
-      this.opts['alpha'] ?? undefined
-    }) if ${this.opts['alpha'] !== undefined} else None, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_Ridge = {'alpha': np.array(${this.opts['alpha'] ?? undefined}) if ${this.opts['alpha'] !== undefined} else None, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${this.opts['copy_X'] ?? undefined}, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'solver': ${this.opts['solver'] ?? undefined}, 'positive': ${this.opts['positive'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_Ridge = {k: v for k, v in ctor_Ridge.items() if v is not None}`
 
@@ -191,13 +182,8 @@ ctor_Ridge = {k: v for k, v in ctor_Ridge.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Ridge_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_Ridge_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_Ridge_fit = {k: v for k, v in pms_Ridge_fit.items() if v is not None}`
 
@@ -213,11 +199,11 @@ pms_Ridge_fit = {k: v for k, v in pms_Ridge_fit.items() if v is not None}`
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -230,9 +216,8 @@ pms_Ridge_fit = {k: v for k, v in pms_Ridge_fit.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Ridge_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Ridge_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_Ridge_get_metadata_routing = {k: v for k, v in pms_Ridge_get_metadata_routing.items() if v is not None}`
 
@@ -279,11 +264,11 @@ pms_Ridge_predict = {k: v for k, v in pms_Ridge_predict.items() if v is not None
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -306,13 +291,8 @@ pms_Ridge_predict = {k: v for k, v in pms_Ridge_predict.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_Ridge_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_Ridge_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_Ridge_score = {k: v for k, v in pms_Ridge_score.items() if v is not None}`
 
@@ -328,13 +308,13 @@ pms_Ridge_score = {k: v for k, v in pms_Ridge_score.items() if v is not None}`
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -347,9 +327,8 @@ pms_Ridge_score = {k: v for k, v in pms_Ridge_score.items() if v is not None}`
     }
 
     // set up method params
-    await this._py.ex`pms_Ridge_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Ridge_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Ridge_set_fit_request = {k: v for k, v in pms_Ridge_set_fit_request.items() if v is not None}`
 
@@ -365,13 +344,13 @@ pms_Ridge_set_fit_request = {k: v for k, v in pms_Ridge_set_fit_request.items() 
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -384,9 +363,8 @@ pms_Ridge_set_fit_request = {k: v for k, v in pms_Ridge_set_fit_request.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_Ridge_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_Ridge_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_Ridge_set_score_request = {k: v for k, v in pms_Ridge_set_score_request.items() if v is not None}`
 
@@ -422,7 +400,7 @@ pms_Ridge_set_score_request = {k: v for k, v in pms_Ridge_set_score_request.item
   }
 
   /**
-    Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
+    Independent term in decision function. Set to 0.0 if `fit_intercept \= False`.
    */
   get intercept_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -467,7 +445,7 @@ pms_Ridge_set_score_request = {k: v for k, v in pms_Ridge_set_score_request.item
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -490,7 +468,7 @@ pms_Ridge_set_score_request = {k: v for k, v in pms_Ridge_set_score_request.item
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -511,6 +489,28 @@ pms_Ridge_set_score_request = {k: v for k, v in pms_Ridge_set_score_request.item
       // convert the result from python to node.js
       return this
         ._py`attr_Ridge_feature_names_in_.tolist() if hasattr(attr_Ridge_feature_names_in_, 'tolist') else attr_Ridge_feature_names_in_`
+    })()
+  }
+
+  /**
+    The solver that was used at fit time by the computational routines.
+   */
+  get solver_(): Promise<string> {
+    if (this._isDisposed) {
+      throw new Error('This Ridge instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('Ridge must call init() before accessing solver_')
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py.ex`attr_Ridge_solver_ = bridgeRidge[${this.id}].solver_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_Ridge_solver_.tolist() if hasattr(attr_Ridge_solver_, 'tolist') else attr_Ridge_solver_`
     })()
   }
 }

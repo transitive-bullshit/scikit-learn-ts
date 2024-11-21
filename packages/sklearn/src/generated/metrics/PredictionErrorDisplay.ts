@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This tool can display “residuals vs predicted” or “actual vs predicted” using scatter plots to qualitatively assess the behavior of a regressor, preferably on held-out data points.
 
-  See the details in the docstrings of [`from\_estimator`](#sklearn.metrics.PredictionErrorDisplay.from_estimator "sklearn.metrics.PredictionErrorDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PredictionErrorDisplay.from_predictions "sklearn.metrics.PredictionErrorDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
+  See the details in the docstrings of [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PredictionErrorDisplay.from_estimator "sklearn.metrics.PredictionErrorDisplay.from_estimator") or [`from_predictions`](https://scikit-learn.org/stable/modules/generated/#sklearn.metrics.PredictionErrorDisplay.from_predictions "sklearn.metrics.PredictionErrorDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
 
-  For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
+  For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#visualization-regression-evaluation).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PredictionErrorDisplay.html)
  */
@@ -79,11 +79,8 @@ except NameError: bridgePredictionErrorDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_PredictionErrorDisplay = {'y_true': np.array(${
-      this.opts['y_true'] ?? undefined
-    }) if ${this.opts['y_true'] !== undefined} else None, 'y_pred': np.array(${
-      this.opts['y_pred'] ?? undefined
-    }) if ${this.opts['y_pred'] !== undefined} else None}
+    await this._py
+      .ex`ctor_PredictionErrorDisplay = {'y_true': np.array(${this.opts['y_true'] ?? undefined}) if ${this.opts['y_true'] !== undefined} else None, 'y_pred': np.array(${this.opts['y_pred'] ?? undefined}) if ${this.opts['y_pred'] !== undefined} else None}
 
 ctor_PredictionErrorDisplay = {k: v for k, v in ctor_PredictionErrorDisplay.items() if v is not None}`
 
@@ -115,11 +112,11 @@ ctor_PredictionErrorDisplay = {k: v for k, v in ctor_PredictionErrorDisplay.item
   /**
     Plot the prediction error given a regressor and some data.
 
-    For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
+    For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#visualization-regression-evaluation).
    */
   async from_estimator(opts: {
     /**
-      Fitted regressor or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
+      Fitted regressor or a fitted [`Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
      */
     estimator?: any
 
@@ -141,14 +138,14 @@ ctor_PredictionErrorDisplay = {k: v for k, v in ctor_PredictionErrorDisplay.item
     kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
 
     /**
-      Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+      Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, 1000 samples or less will be displayed.
 
       @defaultValue `1`
      */
     subsample?: number
 
     /**
-      Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+      Controls the randomness when `subsample` is not `undefined`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
      */
     random_state?: number
 
@@ -181,19 +178,7 @@ ctor_PredictionErrorDisplay = {k: v for k, v in ctor_PredictionErrorDisplay.item
 
     // set up method params
     await this._py
-      .ex`pms_PredictionErrorDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'kind': ${opts['kind'] ?? undefined}, 'subsample': ${
-      opts['subsample'] ?? undefined
-    }, 'random_state': ${opts['random_state'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'scatter_kwargs': ${
-      opts['scatter_kwargs'] ?? undefined
-    }, 'line_kwargs': ${opts['line_kwargs'] ?? undefined}}
+      .ex`pms_PredictionErrorDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'kind': ${opts['kind'] ?? undefined}, 'subsample': ${opts['subsample'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'scatter_kwargs': ${opts['scatter_kwargs'] ?? undefined}, 'line_kwargs': ${opts['line_kwargs'] ?? undefined}}
 
 pms_PredictionErrorDisplay_from_estimator = {k: v for k, v in pms_PredictionErrorDisplay_from_estimator.items() if v is not None}`
 
@@ -209,7 +194,7 @@ pms_PredictionErrorDisplay_from_estimator = {k: v for k, v in pms_PredictionErro
   /**
     Plot the prediction error given the true and predicted targets.
 
-    For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
+    For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#visualization-regression-evaluation).
    */
   async from_predictions(opts: {
     /**
@@ -230,14 +215,14 @@ pms_PredictionErrorDisplay_from_estimator = {k: v for k, v in pms_PredictionErro
     kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
 
     /**
-      Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+      Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, 1000 samples or less will be displayed.
 
       @defaultValue `1`
      */
     subsample?: number
 
     /**
-      Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+      Controls the randomness when `subsample` is not `undefined`. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state) for details.
      */
     random_state?: number
 
@@ -270,17 +255,7 @@ pms_PredictionErrorDisplay_from_estimator = {k: v for k, v in pms_PredictionErro
 
     // set up method params
     await this._py
-      .ex`pms_PredictionErrorDisplay_from_predictions = {'y_true': np.array(${
-      opts['y_true'] ?? undefined
-    }) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${
-      opts['y_pred'] ?? undefined
-    }) if ${opts['y_pred'] !== undefined} else None, 'kind': ${
-      opts['kind'] ?? undefined
-    }, 'subsample': ${opts['subsample'] ?? undefined}, 'random_state': ${
-      opts['random_state'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'scatter_kwargs': ${
-      opts['scatter_kwargs'] ?? undefined
-    }, 'line_kwargs': ${opts['line_kwargs'] ?? undefined}}
+      .ex`pms_PredictionErrorDisplay_from_predictions = {'y_true': np.array(${opts['y_true'] ?? undefined}) if ${opts['y_true'] !== undefined} else None, 'y_pred': np.array(${opts['y_pred'] ?? undefined}) if ${opts['y_pred'] !== undefined} else None, 'kind': ${opts['kind'] ?? undefined}, 'subsample': ${opts['subsample'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'scatter_kwargs': ${opts['scatter_kwargs'] ?? undefined}, 'line_kwargs': ${opts['line_kwargs'] ?? undefined}}
 
 pms_PredictionErrorDisplay_from_predictions = {k: v for k, v in pms_PredictionErrorDisplay_from_predictions.items() if v is not None}`
 
@@ -332,11 +307,8 @@ pms_PredictionErrorDisplay_from_predictions = {k: v for k, v in pms_PredictionEr
     }
 
     // set up method params
-    await this._py.ex`pms_PredictionErrorDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'kind': ${opts['kind'] ?? undefined}, 'scatter_kwargs': ${
-      opts['scatter_kwargs'] ?? undefined
-    }, 'line_kwargs': ${opts['line_kwargs'] ?? undefined}}
+    await this._py
+      .ex`pms_PredictionErrorDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'kind': ${opts['kind'] ?? undefined}, 'scatter_kwargs': ${opts['scatter_kwargs'] ?? undefined}, 'line_kwargs': ${opts['line_kwargs'] ?? undefined}}
 
 pms_PredictionErrorDisplay_plot = {k: v for k, v in pms_PredictionErrorDisplay_plot.items() if v is not None}`
 
@@ -350,7 +322,7 @@ pms_PredictionErrorDisplay_plot = {k: v for k, v in pms_PredictionErrorDisplay_p
   }
 
   /**
-    Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal line for `kind="predictions"` and a horizontal line for `kind="residuals"`.
+    Optimal line representing `y_true \== y_pred`. Therefore, it is a diagonal line for `kind="predictions"` and a horizontal line for `kind="residuals"`.
    */
   get line_(): Promise<any> {
     if (this._isDisposed) {
@@ -377,7 +349,7 @@ pms_PredictionErrorDisplay_plot = {k: v for k, v in pms_PredictionErrorDisplay_p
   }
 
   /**
-    Residual lines. If `with\_errors=False`, then it is set to `undefined`.
+    Residual lines. If `with_errors=False`, then it is set to `undefined`.
    */
   get errors_lines_(): Promise<any> {
     if (this._isDisposed) {

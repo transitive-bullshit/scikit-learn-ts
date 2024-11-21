@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Unsupervised learner for implementing neighbor searches.
 
-  Read more in the [User Guide](../neighbors.html#unsupervised-neighbors).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../neighbors.html#unsupervised-neighbors).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html)
  */
@@ -22,14 +22,14 @@ export class NearestNeighbors {
 
   constructor(opts?: {
     /**
-      Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.NearestNeighbors.kneighbors "sklearn.neighbors.NearestNeighbors.kneighbors") queries.
+      Number of neighbors to use by default for [`kneighbors`](https://scikit-learn.org/stable/modules/generated/#sklearn.neighbors.NearestNeighbors.kneighbors "sklearn.neighbors.NearestNeighbors.kneighbors") queries.
 
       @defaultValue `5`
      */
     n_neighbors?: number
 
     /**
-      Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.NearestNeighbors.radius_neighbors "sklearn.neighbors.NearestNeighbors.radius_neighbors") queries.
+      Range of parameter space to use by default for [`radius_neighbors`](https://scikit-learn.org/stable/modules/generated/#sklearn.neighbors.NearestNeighbors.radius_neighbors "sklearn.neighbors.NearestNeighbors.radius_neighbors") queries.
 
       @defaultValue `1`
      */
@@ -50,9 +50,9 @@ export class NearestNeighbors {
     leaf_size?: number
 
     /**
-      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance_metrics`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
 
       If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
@@ -61,11 +61,11 @@ export class NearestNeighbors {
     metric?: string
 
     /**
-      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
 
       @defaultValue `2`
      */
-    p?: number
+    p?: any
 
     /**
       Additional keyword arguments for the metric function.
@@ -73,7 +73,7 @@ export class NearestNeighbors {
     metric_params?: any
 
     /**
-      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -119,15 +119,8 @@ except NameError: bridgeNearestNeighbors = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_NearestNeighbors = {'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'radius': ${this.opts['radius'] ?? undefined}, 'algorithm': ${
-      this.opts['algorithm'] ?? undefined
-    }, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${
-      this.opts['metric'] ?? undefined
-    }, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${
-      this.opts['metric_params'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_NearestNeighbors = {'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'radius': ${this.opts['radius'] ?? undefined}, 'algorithm': ${this.opts['algorithm'] ?? undefined}, 'leaf_size': ${this.opts['leaf_size'] ?? undefined}, 'metric': ${this.opts['metric'] ?? undefined}, 'p': ${this.opts['p'] ?? undefined}, 'metric_params': ${this.opts['metric_params'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_NearestNeighbors = {k: v for k, v in ctor_NearestNeighbors.items() if v is not None}`
 
@@ -181,9 +174,8 @@ ctor_NearestNeighbors = {k: v for k, v in ctor_NearestNeighbors.items() if v is 
     }
 
     // set up method params
-    await this._py.ex`pms_NearestNeighbors_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_NearestNeighbors_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_NearestNeighbors_fit = {k: v for k, v in pms_NearestNeighbors_fit.items() if v is not None}`
 
@@ -199,11 +191,11 @@ pms_NearestNeighbors_fit = {k: v for k, v in pms_NearestNeighbors_fit.items() if
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -220,9 +212,8 @@ pms_NearestNeighbors_fit = {k: v for k, v in pms_NearestNeighbors_fit.items() if
     }
 
     // set up method params
-    await this._py.ex`pms_NearestNeighbors_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NearestNeighbors_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_NearestNeighbors_get_metadata_routing = {k: v for k, v in pms_NearestNeighbors_get_metadata_routing.items() if v is not None}`
 
@@ -269,11 +260,8 @@ pms_NearestNeighbors_get_metadata_routing = {k: v for k, v in pms_NearestNeighbo
     }
 
     // set up method params
-    await this._py.ex`pms_NearestNeighbors_kneighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_NearestNeighbors_kneighbors = {'X': ${opts['X'] ?? undefined}, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}}
 
 pms_NearestNeighbors_kneighbors = {k: v for k, v in pms_NearestNeighbors_kneighbors.items() if v is not None}`
 
@@ -291,7 +279,7 @@ pms_NearestNeighbors_kneighbors = {k: v for k, v in pms_NearestNeighbors_kneighb
    */
   async kneighbors_graph(opts: {
     /**
-      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n_queries, n_indexed). Otherwise the shape should be (n_queries, n_features).
      */
     X?: any
 
@@ -320,11 +308,8 @@ pms_NearestNeighbors_kneighbors = {k: v for k, v in pms_NearestNeighbors_kneighb
     }
 
     // set up method params
-    await this._py.ex`pms_NearestNeighbors_kneighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${
-      opts['n_neighbors'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}}
+    await this._py
+      .ex`pms_NearestNeighbors_kneighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'n_neighbors': ${opts['n_neighbors'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}}
 
 pms_NearestNeighbors_kneighbors_graph = {k: v for k, v in pms_NearestNeighbors_kneighbors_graph.items() if v is not None}`
 
@@ -363,7 +348,7 @@ pms_NearestNeighbors_kneighbors_graph = {k: v for k, v in pms_NearestNeighbors_k
     return_distance?: boolean
 
     /**
-      If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
+      If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return_distance=False`, setting `sort_results=True` will result in an error.
 
       @defaultValue `false`
      */
@@ -382,11 +367,8 @@ pms_NearestNeighbors_kneighbors_graph = {k: v for k, v in pms_NearestNeighbors_k
     }
 
     // set up method params
-    await this._py.ex`pms_NearestNeighbors_radius_neighbors = {'X': ${
-      opts['X'] ?? undefined
-    }, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${
-      opts['return_distance'] ?? undefined
-    }, 'sort_results': ${opts['sort_results'] ?? undefined}}
+    await this._py
+      .ex`pms_NearestNeighbors_radius_neighbors = {'X': ${opts['X'] ?? undefined}, 'radius': ${opts['radius'] ?? undefined}, 'return_distance': ${opts['return_distance'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_NearestNeighbors_radius_neighbors = {k: v for k, v in pms_NearestNeighbors_radius_neighbors.items() if v is not None}`
 
@@ -443,13 +425,7 @@ pms_NearestNeighbors_radius_neighbors = {k: v for k, v in pms_NearestNeighbors_r
 
     // set up method params
     await this._py
-      .ex`pms_NearestNeighbors_radius_neighbors_graph = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'radius': ${
-      opts['radius'] ?? undefined
-    }, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${
-      opts['sort_results'] ?? undefined
-    }}
+      .ex`pms_NearestNeighbors_radius_neighbors_graph = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'radius': ${opts['radius'] ?? undefined}, 'mode': ${opts['mode'] ?? undefined}, 'sort_results': ${opts['sort_results'] ?? undefined}}
 
 pms_NearestNeighbors_radius_neighbors_graph = {k: v for k, v in pms_NearestNeighbors_radius_neighbors_graph.items() if v is not None}`
 
@@ -517,7 +493,7 @@ pms_NearestNeighbors_radius_neighbors_graph = {k: v for k, v in pms_NearestNeigh
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -544,7 +520,7 @@ pms_NearestNeighbors_radius_neighbors_graph = {k: v for k, v in pms_NearestNeigh
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note : Laplacian Eigenmaps is the actual algorithm implemented here.
 
-  Read more in the [User Guide](../manifold.html#spectral-embedding).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../manifold.html#spectral-embedding).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html)
  */
@@ -33,7 +33,7 @@ export class SpectralEmbedding {
     n_components?: number
 
     /**
-      ‘nearest\_neighbors’ : construct the affinity matrix by computing a graph of nearest neighbors.
+      ‘nearest_neighbors’ : construct the affinity matrix by computing a graph of nearest neighbors.
 
       @defaultValue `'nearest_neighbors'`
      */
@@ -44,12 +44,12 @@ export class SpectralEmbedding {
       | 'precomputed_nearest_neighbors'
 
     /**
-      Kernel coefficient for rbf kernel. If `undefined`, gamma will be set to 1/n\_features.
+      Kernel coefficient for rbf kernel. If `undefined`, gamma will be set to 1/n_features.
      */
     gamma?: number
 
     /**
-      A pseudo random number generator used for the initialization of the lobpcg eigen vectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
+      A pseudo random number generator used for the initialization of the lobpcg eigen vectors decomposition when `eigen_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state)).
      */
     random_state?: number
 
@@ -59,19 +59,19 @@ export class SpectralEmbedding {
     eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
 
     /**
-      Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:
+      Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen_tol="auto"` then the passed tolerance will depend on the `eigen_solver`:
 
       @defaultValue `'auto'`
      */
     eigen_tol?: number
 
     /**
-      Number of nearest neighbors for nearest\_neighbors graph building. If `undefined`, n\_neighbors will be set to max(n\_samples/10, 1).
+      Number of nearest neighbors for nearest_neighbors graph building. If `undefined`, n_neighbors will be set to max(n_samples/10, 1).
      */
     n_neighbors?: number
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -117,17 +117,8 @@ except NameError: bridgeSpectralEmbedding = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SpectralEmbedding = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'affinity': ${this.opts['affinity'] ?? undefined}, 'gamma': ${
-      this.opts['gamma'] ?? undefined
-    }, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }, 'eigen_solver': ${
-      this.opts['eigen_solver'] ?? undefined
-    }, 'eigen_tol': ${this.opts['eigen_tol'] ?? undefined}, 'n_neighbors': ${
-      this.opts['n_neighbors'] ?? undefined
-    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+    await this._py
+      .ex`ctor_SpectralEmbedding = {'n_components': ${this.opts['n_components'] ?? undefined}, 'affinity': ${this.opts['affinity'] ?? undefined}, 'gamma': ${this.opts['gamma'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}, 'eigen_solver': ${this.opts['eigen_solver'] ?? undefined}, 'eigen_tol': ${this.opts['eigen_tol'] ?? undefined}, 'n_neighbors': ${this.opts['n_neighbors'] ?? undefined}, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
 
 ctor_SpectralEmbedding = {k: v for k, v in ctor_SpectralEmbedding.items() if v is not None}`
 
@@ -161,9 +152,9 @@ ctor_SpectralEmbedding = {k: v for k, v in ctor_SpectralEmbedding.items() if v i
    */
   async fit(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
 
-      If affinity is “precomputed” X : {array-like, sparse matrix}, shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
+      If affinity is “precomputed” X : {array-like, sparse matrix}, shape (n_samples, n_samples), Interpret X as precomputed adjacency graph computed from samples.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -183,9 +174,8 @@ ctor_SpectralEmbedding = {k: v for k, v in ctor_SpectralEmbedding.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralEmbedding_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralEmbedding_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralEmbedding_fit = {k: v for k, v in pms_SpectralEmbedding_fit.items() if v is not None}`
 
@@ -203,9 +193,9 @@ pms_SpectralEmbedding_fit = {k: v for k, v in pms_SpectralEmbedding_fit.items() 
    */
   async fit_transform(opts: {
     /**
-      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training vector, where `n_samples` is the number of samples and `n_features` is the number of features.
 
-      If affinity is “precomputed” X : {array-like, sparse matrix} of shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
+      If affinity is “precomputed” X : {array-like, sparse matrix} of shape (n_samples, n_samples), Interpret X as precomputed adjacency graph computed from samples.
      */
     X?: ArrayLike | SparseMatrix[]
 
@@ -227,9 +217,8 @@ pms_SpectralEmbedding_fit = {k: v for k, v in pms_SpectralEmbedding_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_SpectralEmbedding_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SpectralEmbedding_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fit_transform.items() if v is not None}`
 
@@ -245,11 +234,11 @@ pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fi
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -267,9 +256,7 @@ pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fi
 
     // set up method params
     await this._py
-      .ex`pms_SpectralEmbedding_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SpectralEmbedding_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SpectralEmbedding_get_metadata_routing = {k: v for k, v in pms_SpectralEmbedding_get_metadata_routing.items() if v is not None}`
 
@@ -310,7 +297,7 @@ pms_SpectralEmbedding_get_metadata_routing = {k: v for k, v in pms_SpectralEmbed
   }
 
   /**
-    Affinity\_matrix constructed from samples or precomputed.
+    Affinity_matrix constructed from samples or precomputed.
    */
   get affinity_matrix_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -337,7 +324,7 @@ pms_SpectralEmbedding_get_metadata_routing = {k: v for k, v in pms_SpectralEmbed
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -364,7 +351,7 @@ pms_SpectralEmbedding_get_metadata_routing = {k: v for k, v in pms_SpectralEmbed
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

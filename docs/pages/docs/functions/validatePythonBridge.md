@@ -1,19 +1,13 @@
-# validatePythonBridge()
+# Function: validatePythonBridge()
 
-## Signature
+> **validatePythonBridge**(`py`): `Promise`\<`void`\>
 
-```ts
-validatePythonBridge(py: PythonBridge): Promise<void>;
-```
+**Parameters**
 
-## Parameters
-
-| Name | Type |
-| :------ | :------ |
+| Parameter | Type |
+| ------ | ------ |
 | `py` | `PythonBridge` |
 
-## Returns
+**Returns** `Promise`\<`void`\>
 
-`Promise`\<`void`\>
-
-Defined in:  [python.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/python.ts#L33)
+**Defined in** [python.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/bab9a6d8b9738b16b8b9ba0b3f7cea1495d968d8/packages/sklearn/src/python.ts#L33)

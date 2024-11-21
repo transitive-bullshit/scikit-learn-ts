@@ -82,11 +82,8 @@ except NameError: bridgeMinMaxScaler = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_MinMaxScaler = {'feature_range': ${
-      this.opts['feature_range'] ?? undefined
-    }, 'copy': ${this.opts['copy'] ?? undefined}, 'clip': ${
-      this.opts['clip'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_MinMaxScaler = {'feature_range': ${this.opts['feature_range'] ?? undefined}, 'copy': ${this.opts['copy'] ?? undefined}, 'clip': ${this.opts['clip'] ?? undefined}}
 
 ctor_MinMaxScaler = {k: v for k, v in ctor_MinMaxScaler.items() if v is not None}`
 
@@ -138,9 +135,8 @@ ctor_MinMaxScaler = {k: v for k, v in ctor_MinMaxScaler.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_MinMaxScaler_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MinMaxScaler_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MinMaxScaler_fit = {k: v for k, v in pms_MinMaxScaler_fit.items() if v is not None}`
 
@@ -156,7 +152,7 @@ pms_MinMaxScaler_fit = {k: v for k, v in pms_MinMaxScaler_fit.items() if v is no
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -183,13 +179,8 @@ pms_MinMaxScaler_fit = {k: v for k, v in pms_MinMaxScaler_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_MinMaxScaler_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinMaxScaler_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_MinMaxScaler_fit_transform = {k: v for k, v in pms_MinMaxScaler_fit_transform.items() if v is not None}`
 
@@ -223,9 +214,7 @@ pms_MinMaxScaler_fit_transform = {k: v for k, v in pms_MinMaxScaler_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_MinMaxScaler_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_MinMaxScaler_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_MinMaxScaler_get_feature_names_out = {k: v for k, v in pms_MinMaxScaler_get_feature_names_out.items() if v is not None}`
 
@@ -241,11 +230,11 @@ pms_MinMaxScaler_get_feature_names_out = {k: v for k, v in pms_MinMaxScaler_get_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -260,9 +249,8 @@ pms_MinMaxScaler_get_feature_names_out = {k: v for k, v in pms_MinMaxScaler_get_
     }
 
     // set up method params
-    await this._py.ex`pms_MinMaxScaler_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinMaxScaler_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_MinMaxScaler_get_metadata_routing = {k: v for k, v in pms_MinMaxScaler_get_metadata_routing.items() if v is not None}`
 
@@ -276,7 +264,7 @@ pms_MinMaxScaler_get_metadata_routing = {k: v for k, v in pms_MinMaxScaler_get_m
   }
 
   /**
-    Undo the scaling of X according to feature\_range.
+    Undo the scaling of X according to feature_range.
    */
   async inverse_transform(opts: {
     /**
@@ -295,9 +283,8 @@ pms_MinMaxScaler_get_metadata_routing = {k: v for k, v in pms_MinMaxScaler_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_MinMaxScaler_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinMaxScaler_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MinMaxScaler_inverse_transform = {k: v for k, v in pms_MinMaxScaler_inverse_transform.items() if v is not None}`
 
@@ -313,7 +300,7 @@ pms_MinMaxScaler_inverse_transform = {k: v for k, v in pms_MinMaxScaler_inverse_
   /**
     Online computation of min and max on X for later scaling.
 
-    All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.MinMaxScaler.fit "sklearn.preprocessing.MinMaxScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
+    All of X is processed as a single batch. This is intended for cases when [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.MinMaxScaler.fit "sklearn.preprocessing.MinMaxScaler.fit") is not feasible due to very large number of `n_samples` or because X is read from a continuous stream.
    */
   async partial_fit(opts: {
     /**
@@ -335,9 +322,8 @@ pms_MinMaxScaler_inverse_transform = {k: v for k, v in pms_MinMaxScaler_inverse_
     }
 
     // set up method params
-    await this._py.ex`pms_MinMaxScaler_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_MinMaxScaler_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MinMaxScaler_partial_fit = {k: v for k, v in pms_MinMaxScaler_partial_fit.items() if v is not None}`
 
@@ -353,13 +339,13 @@ pms_MinMaxScaler_partial_fit = {k: v for k, v in pms_MinMaxScaler_partial_fit.it
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
@@ -370,9 +356,8 @@ pms_MinMaxScaler_partial_fit = {k: v for k, v in pms_MinMaxScaler_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_MinMaxScaler_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_MinMaxScaler_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_MinMaxScaler_set_output = {k: v for k, v in pms_MinMaxScaler_set_output.items() if v is not None}`
 
@@ -386,7 +371,7 @@ pms_MinMaxScaler_set_output = {k: v for k, v in pms_MinMaxScaler_set_output.item
   }
 
   /**
-    Scale features of X according to feature\_range.
+    Scale features of X according to feature_range.
    */
   async transform(opts: {
     /**
@@ -403,9 +388,8 @@ pms_MinMaxScaler_set_output = {k: v for k, v in pms_MinMaxScaler_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_MinMaxScaler_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_MinMaxScaler_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items() if v is not None}`
 
@@ -419,7 +403,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Per feature adjustment for minimum. Equivalent to `min \- X.min(axis=0) \* self.scale\_`
+    Per feature adjustment for minimum. Equivalent to `min \- X.min(axis=0) \* self.scale_`
    */
   get min_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -515,7 +499,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Per feature range `(data\_max\_ \- data\_min\_)` seen in the data
+    Per feature range `(data_max_ \- data_min_)` seen in the data
    */
   get data_range_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -540,7 +524,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -565,7 +549,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    The number of samples processed by the estimator. It will be reset on new calls to fit, but increments across `partial\_fit` calls.
+    The number of samples processed by the estimator. It will be reset on new calls to fit, but increments across `partial_fit` calls.
    */
   get n_samples_seen_(): Promise<number> {
     if (this._isDisposed) {
@@ -590,7 +574,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

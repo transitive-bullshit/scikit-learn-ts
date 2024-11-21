@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A Restricted Boltzmann Machine with binary visible units and binary hidden units. Parameters are estimated using Stochastic Maximum Likelihood (SML), also known as Persistent Contrastive Divergence (PCD) \[2\].
 
-  The time complexity of this implementation is `O(d \*\* 2)` assuming d ~ n\_features ~ n\_components.
+  The time complexity of this implementation is `O(d \*\* 2)` assuming d ~ n_features ~ n_components.
 
-  Read more in the [User Guide](../neural_networks_unsupervised.html#rbm).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../neural_networks_unsupervised.html#rbm).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html)
  */
@@ -105,15 +105,8 @@ except NameError: bridgeBernoulliRBM = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_BernoulliRBM = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'learning_rate': ${
-      this.opts['learning_rate'] ?? undefined
-    }, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'n_iter': ${
-      this.opts['n_iter'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_BernoulliRBM = {'n_components': ${this.opts['n_components'] ?? undefined}, 'learning_rate': ${this.opts['learning_rate'] ?? undefined}, 'batch_size': ${this.opts['batch_size'] ?? undefined}, 'n_iter': ${this.opts['n_iter'] ?? undefined}, 'verbose': ${this.opts['verbose'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_BernoulliRBM = {k: v for k, v in ctor_BernoulliRBM.items() if v is not None}`
 
@@ -165,11 +158,8 @@ ctor_BernoulliRBM = {k: v for k, v in ctor_BernoulliRBM.items() if v is not None
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_BernoulliRBM_fit = {k: v for k, v in pms_BernoulliRBM_fit.items() if v is not None}`
 
@@ -185,7 +175,7 @@ pms_BernoulliRBM_fit = {k: v for k, v in pms_BernoulliRBM_fit.items() if v is no
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -212,13 +202,8 @@ pms_BernoulliRBM_fit = {k: v for k, v in pms_BernoulliRBM_fit.items() if v is no
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BernoulliRBM_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_BernoulliRBM_fit_transform = {k: v for k, v in pms_BernoulliRBM_fit_transform.items() if v is not None}`
 
@@ -234,7 +219,7 @@ pms_BernoulliRBM_fit_transform = {k: v for k, v in pms_BernoulliRBM_fit_transfor
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -254,9 +239,7 @@ pms_BernoulliRBM_fit_transform = {k: v for k, v in pms_BernoulliRBM_fit_transfor
 
     // set up method params
     await this._py
-      .ex`pms_BernoulliRBM_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_BernoulliRBM_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_BernoulliRBM_get_feature_names_out = {k: v for k, v in pms_BernoulliRBM_get_feature_names_out.items() if v is not None}`
 
@@ -272,11 +255,11 @@ pms_BernoulliRBM_get_feature_names_out = {k: v for k, v in pms_BernoulliRBM_get_
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -291,9 +274,8 @@ pms_BernoulliRBM_get_feature_names_out = {k: v for k, v in pms_BernoulliRBM_get_
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BernoulliRBM_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_BernoulliRBM_get_metadata_routing = {k: v for k, v in pms_BernoulliRBM_get_metadata_routing.items() if v is not None}`
 
@@ -324,9 +306,8 @@ pms_BernoulliRBM_get_metadata_routing = {k: v for k, v in pms_BernoulliRBM_get_m
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_gibbs = {'v': np.array(${
-      opts['v'] ?? undefined
-    }) if ${opts['v'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_gibbs = {'v': np.array(${opts['v'] ?? undefined}) if ${opts['v'] !== undefined} else None}
 
 pms_BernoulliRBM_gibbs = {k: v for k, v in pms_BernoulliRBM_gibbs.items() if v is not None}`
 
@@ -362,11 +343,8 @@ pms_BernoulliRBM_gibbs = {k: v for k, v in pms_BernoulliRBM_gibbs.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_partial_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_partial_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_BernoulliRBM_partial_fit = {k: v for k, v in pms_BernoulliRBM_partial_fit.items() if v is not None}`
 
@@ -397,9 +375,8 @@ pms_BernoulliRBM_partial_fit = {k: v for k, v in pms_BernoulliRBM_partial_fit.it
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_score_samples = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_score_samples = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_samples.items() if v is not None}`
 
@@ -415,13 +392,13 @@ pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_sample
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
@@ -432,9 +409,8 @@ pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_sample
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_BernoulliRBM_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_BernoulliRBM_set_output = {k: v for k, v in pms_BernoulliRBM_set_output.items() if v is not None}`
 
@@ -465,9 +441,8 @@ pms_BernoulliRBM_set_output = {k: v for k, v in pms_BernoulliRBM_set_output.item
     }
 
     // set up method params
-    await this._py.ex`pms_BernoulliRBM_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_BernoulliRBM_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items() if v is not None}`
 
@@ -531,7 +506,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Weight matrix, where `n\_features` is the number of visible units and `n\_components` is the number of hidden units.
+    Weight matrix, where `n_features` is the number of visible units and `n_components` is the number of hidden units.
    */
   get components_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -556,7 +531,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Hidden Activation sampled from the model distribution, where `batch\_size` is the number of examples per minibatch and `n\_components` is the number of hidden units.
+    Hidden Activation sampled from the model distribution, where `batch_size` is the number of examples per minibatch and `n_components` is the number of hidden units.
    */
   get h_samples_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -581,7 +556,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -606,7 +581,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

@@ -43,7 +43,9 @@ export class LinearDiscriminantAnalysis {
     priors?: ArrayLike
 
     /**
-      Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If `undefined`, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
+      Number of components (<= min(n_classes - 1, n_features)) for dimensionality reduction. If `undefined`, will be set to min(n_classes - 1, n_features). This parameter only affects the `transform` method.
+
+      For a usage example, see [Comparison of LDA and PCA 2D projection of Iris dataset](https://scikit-learn.org/stable/modules/generated/../../auto_examples/decomposition/plot_pca_vs_lda.html#sphx-glr-auto-examples-decomposition-plot-pca-vs-lda-py).
      */
     n_components?: number
 
@@ -62,9 +64,9 @@ export class LinearDiscriminantAnalysis {
     tol?: number
 
     /**
-      If not `undefined`, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../classes.html#module-sklearn.covariance "sklearn.covariance"). if `undefined` the shrinkage parameter drives the estimate.
+      If not `undefined`, `covariance_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance_` attribute like the estimators in [`sklearn.covariance`](https://scikit-learn.org/stable/modules/generated/../../api/sklearn.covariance.html#module-sklearn.covariance "sklearn.covariance"). if `undefined` the shrinkage parameter drives the estimate.
 
-      This should be left to `undefined` if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
+      This should be left to `undefined` if `shrinkage` is used. Note that `covariance_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
      */
     covariance_estimator?: any
   }) {
@@ -112,19 +114,8 @@ except NameError: bridgeLinearDiscriminantAnalysis = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LinearDiscriminantAnalysis = {'solver': ${
-      this.opts['solver'] ?? undefined
-    }, 'shrinkage': ${
-      this.opts['shrinkage'] ?? undefined
-    }, 'priors': np.array(${this.opts['priors'] ?? undefined}) if ${
-      this.opts['priors'] !== undefined
-    } else None, 'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'store_covariance': ${
-      this.opts['store_covariance'] ?? undefined
-    }, 'tol': ${this.opts['tol'] ?? undefined}, 'covariance_estimator': ${
-      this.opts['covariance_estimator'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LinearDiscriminantAnalysis = {'solver': ${this.opts['solver'] ?? undefined}, 'shrinkage': ${this.opts['shrinkage'] ?? undefined}, 'priors': np.array(${this.opts['priors'] ?? undefined}) if ${this.opts['priors'] !== undefined} else None, 'n_components': ${this.opts['n_components'] ?? undefined}, 'store_covariance': ${this.opts['store_covariance'] ?? undefined}, 'tol': ${this.opts['tol'] ?? undefined}, 'covariance_estimator': ${this.opts['covariance_estimator'] ?? undefined}}
 
 ctor_LinearDiscriminantAnalysis = {k: v for k, v in ctor_LinearDiscriminantAnalysis.items() if v is not None}`
 
@@ -156,7 +147,7 @@ ctor_LinearDiscriminantAnalysis = {k: v for k, v in ctor_LinearDiscriminantAnaly
   /**
     Apply decision function to an array of samples.
 
-    The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See [Mathematical formulation of the LDA and QDA classifiers](../lda_qda.html#lda-qda-math).
+    The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See [Mathematical formulation of the LDA and QDA classifiers](https://scikit-learn.org/stable/modules/generated/../lda_qda.html#lda-qda-math).
    */
   async decision_function(opts: {
     /**
@@ -178,9 +169,7 @@ ctor_LinearDiscriminantAnalysis = {k: v for k, v in ctor_LinearDiscriminantAnaly
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_decision_function = {k: v for k, v in pms_LinearDiscriminantAnalysis_decision_function.items() if v is not None}`
 
@@ -220,11 +209,8 @@ pms_LinearDiscriminantAnalysis_decision_function = {k: v for k, v in pms_LinearD
     }
 
     // set up method params
-    await this._py.ex`pms_LinearDiscriminantAnalysis_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearDiscriminantAnalysis_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_fit = {k: v for k, v in pms_LinearDiscriminantAnalysis_fit.items() if v is not None}`
 
@@ -240,7 +226,7 @@ pms_LinearDiscriminantAnalysis_fit = {k: v for k, v in pms_LinearDiscriminantAna
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -272,13 +258,7 @@ pms_LinearDiscriminantAnalysis_fit = {k: v for k, v in pms_LinearDiscriminantAna
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_fit_transform = {k: v for k, v in pms_LinearDiscriminantAnalysis_fit_transform.items() if v is not None}`
 
@@ -294,7 +274,7 @@ pms_LinearDiscriminantAnalysis_fit_transform = {k: v for k, v in pms_LinearDiscr
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -316,9 +296,7 @@ pms_LinearDiscriminantAnalysis_fit_transform = {k: v for k, v in pms_LinearDiscr
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_get_feature_names_out = {k: v for k, v in pms_LinearDiscriminantAnalysis_get_feature_names_out.items() if v is not None}`
 
@@ -334,11 +312,11 @@ pms_LinearDiscriminantAnalysis_get_feature_names_out = {k: v for k, v in pms_Lin
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -356,9 +334,7 @@ pms_LinearDiscriminantAnalysis_get_feature_names_out = {k: v for k, v in pms_Lin
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_get_metadata_routing = {k: v for k, v in pms_LinearDiscriminantAnalysis_get_metadata_routing.items() if v is not None}`
 
@@ -393,9 +369,8 @@ pms_LinearDiscriminantAnalysis_get_metadata_routing = {k: v for k, v in pms_Line
     }
 
     // set up method params
-    await this._py.ex`pms_LinearDiscriminantAnalysis_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearDiscriminantAnalysis_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_predict = {k: v for k, v in pms_LinearDiscriminantAnalysis_predict.items() if v is not None}`
 
@@ -431,9 +406,7 @@ pms_LinearDiscriminantAnalysis_predict = {k: v for k, v in pms_LinearDiscriminan
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_predict_log_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_predict_log_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_LinearDiscriminantAnalysis_predict_log_proba.items() if v is not None}`
 
@@ -469,9 +442,7 @@ pms_LinearDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_LinearD
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_predict_proba = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_predict_proba = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_LinearDiscriminantAnalysis_predict_proba.items() if v is not None}`
 
@@ -518,13 +489,8 @@ pms_LinearDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_LinearDiscr
     }
 
     // set up method params
-    await this._py.ex`pms_LinearDiscriminantAnalysis_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_LinearDiscriminantAnalysis_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantAnalysis_score.items() if v is not None}`
 
@@ -540,13 +506,13 @@ pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantA
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -562,9 +528,7 @@ pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantA
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_set_output = {k: v for k, v in pms_LinearDiscriminantAnalysis_set_output.items() if v is not None}`
 
@@ -580,13 +544,13 @@ pms_LinearDiscriminantAnalysis_set_output = {k: v for k, v in pms_LinearDiscrimi
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -604,9 +568,7 @@ pms_LinearDiscriminantAnalysis_set_output = {k: v for k, v in pms_LinearDiscrimi
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_LinearDiscriminantAnalysis_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_LinearDiscriminantAnalysis_set_score_request = {k: v for k, v in pms_LinearDiscriminantAnalysis_set_score_request.items() if v is not None}`
 
@@ -642,9 +604,7 @@ pms_LinearDiscriminantAnalysis_set_score_request = {k: v for k, v in pms_LinearD
 
     // set up method params
     await this._py
-      .ex`pms_LinearDiscriminantAnalysis_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_LinearDiscriminantAnalysis_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscriminantAnalysis_transform.items() if v is not None}`
 
@@ -712,7 +672,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Weighted within-class covariance matrix. It corresponds to `sum\_k prior\_k \* C\_k` where `C\_k` is the covariance matrix of the samples in class `k`. The `C\_k` are estimated using the (potentially shrunk) biased estimator of covariance. If solver is ‘svd’, only exists when `store\_covariance` is `true`.
+    Weighted within-class covariance matrix. It corresponds to `sum_k prior_k \* C_k` where `C_k` is the covariance matrix of the samples in class `k`. The `C_k` are estimated using the (potentially shrunk) biased estimator of covariance. If solver is ‘svd’, only exists when `store_covariance` is `true`.
    */
   get covariance_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -739,7 +699,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Percentage of variance explained by each of the selected components. If `n\_components` is not set then all components are stored and the sum of explained variances is equal to 1.0. Only available when eigen or svd solver is used.
+    Percentage of variance explained by each of the selected components. If `n_components` is not set then all components are stored and the sum of explained variances is equal to 1.0. Only available when eigen or svd solver is used.
    */
   get explained_variance_ratio_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -901,7 +861,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -928,7 +888,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

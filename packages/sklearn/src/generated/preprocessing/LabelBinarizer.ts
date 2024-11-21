@@ -12,9 +12,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   At learning time, this simply consists in learning one regressor or binary classifier per class. In doing so, one needs to convert multi-class labels to binary labels (belong or does not belong to the class). `LabelBinarizer` makes this process easy with the transform method.
 
-  At prediction time, one assigns the class for which the corresponding model gave the greatest confidence. `LabelBinarizer` makes this easy with the [`inverse\_transform`](#sklearn.preprocessing.LabelBinarizer.inverse_transform "sklearn.preprocessing.LabelBinarizer.inverse_transform") method.
+  At prediction time, one assigns the class for which the corresponding model gave the greatest confidence. `LabelBinarizer` makes this easy with the [`inverse_transform`](https://scikit-learn.org/stable/modules/generated/#sklearn.preprocessing.LabelBinarizer.inverse_transform "sklearn.preprocessing.LabelBinarizer.inverse_transform") method.
 
-  Read more in the [User Guide](../preprocessing_targets.html#preprocessing-targets).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../preprocessing_targets.html#preprocessing-targets).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html)
  */
@@ -88,11 +88,8 @@ except NameError: bridgeLabelBinarizer = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LabelBinarizer = {'neg_label': ${
-      this.opts['neg_label'] ?? undefined
-    }, 'pos_label': ${this.opts['pos_label'] ?? undefined}, 'sparse_output': ${
-      this.opts['sparse_output'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_LabelBinarizer = {'neg_label': ${this.opts['neg_label'] ?? undefined}, 'pos_label': ${this.opts['pos_label'] ?? undefined}, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}}
 
 ctor_LabelBinarizer = {k: v for k, v in ctor_LabelBinarizer.items() if v is not None}`
 
@@ -139,9 +136,8 @@ ctor_LabelBinarizer = {k: v for k, v in ctor_LabelBinarizer.items() if v is not 
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_fit = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelBinarizer_fit = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelBinarizer_fit = {k: v for k, v in pms_LabelBinarizer_fit.items() if v is not None}`
 
@@ -174,9 +170,8 @@ pms_LabelBinarizer_fit = {k: v for k, v in pms_LabelBinarizer_fit.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_fit_transform = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelBinarizer_fit_transform = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_transform.items() if v is not None}`
 
@@ -192,11 +187,11 @@ pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_tran
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -211,9 +206,8 @@ pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_tran
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelBinarizer_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_LabelBinarizer_get_metadata_routing = {k: v for k, v in pms_LabelBinarizer_get_metadata_routing.items() if v is not None}`
 
@@ -238,9 +232,9 @@ pms_LabelBinarizer_get_metadata_routing = {k: v for k, v in pms_LabelBinarizer_g
     /**
       Threshold used in the binary and multi-label cases.
 
-      Use 0 when `Y` contains the output of [decision\_function](../../glossary.html#term-decision_function) (classifier). Use 0.5 when `Y` contains the output of [predict\_proba](../../glossary.html#term-predict_proba).
+      Use 0 when `Y` contains the output of [decision_function](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-decision_function) (classifier). Use 0.5 when `Y` contains the output of [predict_proba](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-predict_proba).
 
-      If `undefined`, the threshold is assumed to be half way between neg\_label and pos\_label.
+      If `undefined`, the threshold is assumed to be half way between neg_label and pos_label.
      */
     threshold?: number
   }): Promise<NDArray | SparseMatrix> {
@@ -255,11 +249,8 @@ pms_LabelBinarizer_get_metadata_routing = {k: v for k, v in pms_LabelBinarizer_g
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_inverse_transform = {'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None, 'threshold': ${
-      opts['threshold'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelBinarizer_inverse_transform = {'Y': np.array(${opts['Y'] ?? undefined}) if ${opts['Y'] !== undefined} else None, 'threshold': ${opts['threshold'] ?? undefined}}
 
 pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inverse_transform.items() if v is not None}`
 
@@ -273,15 +264,15 @@ pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inve
   }
 
   /**
-    Request metadata passed to the `inverse\_transform` method.
+    Request metadata passed to the `inverse_transform` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_inverse_transform_request(opts: {
     /**
-      Metadata routing for `threshold` parameter in `inverse\_transform`.
+      Metadata routing for `threshold` parameter in `inverse_transform`.
      */
     threshold?: string | boolean
   }): Promise<any> {
@@ -297,9 +288,7 @@ pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inve
 
     // set up method params
     await this._py
-      .ex`pms_LabelBinarizer_set_inverse_transform_request = {'threshold': ${
-      opts['threshold'] ?? undefined
-    }}
+      .ex`pms_LabelBinarizer_set_inverse_transform_request = {'threshold': ${opts['threshold'] ?? undefined}}
 
 pms_LabelBinarizer_set_inverse_transform_request = {k: v for k, v in pms_LabelBinarizer_set_inverse_transform_request.items() if v is not None}`
 
@@ -315,13 +304,13 @@ pms_LabelBinarizer_set_inverse_transform_request = {k: v for k, v in pms_LabelBi
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelBinarizer instance has already been disposed')
@@ -332,9 +321,8 @@ pms_LabelBinarizer_set_inverse_transform_request = {k: v for k, v in pms_LabelBi
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_LabelBinarizer_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_LabelBinarizer_set_output = {k: v for k, v in pms_LabelBinarizer_set_output.items() if v is not None}`
 
@@ -367,9 +355,8 @@ pms_LabelBinarizer_set_output = {k: v for k, v in pms_LabelBinarizer_set_output.
     }
 
     // set up method params
-    await this._py.ex`pms_LabelBinarizer_transform = {'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_LabelBinarizer_transform = {'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.items() if v is not None}`
 
@@ -408,7 +395,7 @@ pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.it
   }
 
   /**
-    Represents the type of the target data as evaluated by [`type\_of\_target`](sklearn.utils.multiclass.type_of_target.html#sklearn.utils.multiclass.type_of_target "sklearn.utils.multiclass.type_of_target"). Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
+    Represents the type of the target data as evaluated by [`type_of_target`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.multiclass.type_of_target.html#sklearn.utils.multiclass.type_of_target "sklearn.utils.multiclass.type_of_target"). Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
    */
   get y_type_(): Promise<string> {
     if (this._isDisposed) {

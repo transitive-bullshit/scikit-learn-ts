@@ -8,11 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Ridge classifier with built-in cross-validation.
 
-  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+  See glossary entry for [cross-validation estimator](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-cross-validation-estimator).
 
-  By default, it performs Leave-One-Out Cross-Validation. Currently, only the n\_features > n\_samples case is handled efficiently.
+  By default, it performs Leave-One-Out Cross-Validation. Currently, only the n_features > n_samples case is handled efficiently.
 
-  Read more in the [User Guide](../linear_model.html#ridge-regression).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../linear_model.html#ridge-regression).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifierCV.html)
  */
@@ -26,7 +26,7 @@ export class RidgeClassifierCV {
 
   constructor(opts?: {
     /**
-      Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
+      Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If using Leave-One-Out cross-validation, alphas must be strictly positive.
      */
     alphas?: ArrayLike
 
@@ -38,7 +38,7 @@ export class RidgeClassifierCV {
     fit_intercept?: boolean
 
     /**
-      A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
+      A string (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
      */
     scoring?: string
 
@@ -48,16 +48,21 @@ export class RidgeClassifierCV {
     cv?: number
 
     /**
-      Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
+      Weights associated with classes in the form `{class_label: weight}`. If not given, all classes are supposed to have weight one.
 
-      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n_samples / (n_classes \* np.bincount(y))`.
      */
     class_weight?: any | 'balanced'
 
     /**
-      Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
+      Flag indicating if the cross-validation results corresponding to each alpha should be stored in the `cv_results_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
 
       @defaultValue `false`
+     */
+    store_cv_results?: boolean
+
+    /**
+      Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv_values_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
      */
     store_cv_values?: boolean
   }) {
@@ -103,15 +108,8 @@ except NameError: bridgeRidgeClassifierCV = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_RidgeClassifierCV = {'alphas': np.array(${
-      this.opts['alphas'] ?? undefined
-    }) if ${this.opts['alphas'] !== undefined} else None, 'fit_intercept': ${
-      this.opts['fit_intercept'] ?? undefined
-    }, 'scoring': ${this.opts['scoring'] ?? undefined}, 'cv': ${
-      this.opts['cv'] ?? undefined
-    }, 'class_weight': ${
-      this.opts['class_weight'] ?? undefined
-    }, 'store_cv_values': ${this.opts['store_cv_values'] ?? undefined}}
+    await this._py
+      .ex`ctor_RidgeClassifierCV = {'alphas': np.array(${this.opts['alphas'] ?? undefined}) if ${this.opts['alphas'] !== undefined} else None, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'scoring': ${this.opts['scoring'] ?? undefined}, 'cv': ${this.opts['cv'] ?? undefined}, 'class_weight': ${this.opts['class_weight'] ?? undefined}, 'store_cv_results': ${this.opts['store_cv_results'] ?? undefined}, 'store_cv_values': ${this.opts['store_cv_values'] ?? undefined}}
 
 ctor_RidgeClassifierCV = {k: v for k, v in ctor_RidgeClassifierCV.items() if v is not None}`
 
@@ -165,9 +163,7 @@ ctor_RidgeClassifierCV = {k: v for k, v in ctor_RidgeClassifierCV.items() if v i
 
     // set up method params
     await this._py
-      .ex`pms_RidgeClassifierCV_decision_function = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_RidgeClassifierCV_decision_function = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RidgeClassifierCV_decision_function = {k: v for k, v in pms_RidgeClassifierCV_decision_function.items() if v is not None}`
 
@@ -185,7 +181,7 @@ pms_RidgeClassifierCV_decision_function = {k: v for k, v in pms_RidgeClassifierC
    */
   async fit(opts: {
     /**
-      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. When using GCV, will be cast to float64 if necessary.
+      Training vectors, where `n_samples` is the number of samples and `n_features` is the number of features. When using GCV, will be cast to float64 if necessary.
      */
     X?: NDArray[]
 
@@ -198,6 +194,11 @@ pms_RidgeClassifierCV_decision_function = {k: v for k, v in pms_RidgeClassifierC
       Individual weights for each sample. If given a float, every sample will have the same weight.
      */
     sample_weight?: number | NDArray
+
+    /**
+      Parameters to be passed to the underlying scorer.
+     */
+    params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -210,13 +211,8 @@ pms_RidgeClassifierCV_decision_function = {k: v for k, v in pms_RidgeClassifierC
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifierCV_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeClassifierCV_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None, 'params': ${opts['params'] ?? undefined}}
 
 pms_RidgeClassifierCV_fit = {k: v for k, v in pms_RidgeClassifierCV_fit.items() if v is not None}`
 
@@ -232,11 +228,11 @@ pms_RidgeClassifierCV_fit = {k: v for k, v in pms_RidgeClassifierCV_fit.items() 
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRouter`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -254,9 +250,7 @@ pms_RidgeClassifierCV_fit = {k: v for k, v in pms_RidgeClassifierCV_fit.items() 
 
     // set up method params
     await this._py
-      .ex`pms_RidgeClassifierCV_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_RidgeClassifierCV_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_RidgeClassifierCV_get_metadata_routing = {k: v for k, v in pms_RidgeClassifierCV_get_metadata_routing.items() if v is not None}`
 
@@ -289,9 +283,8 @@ pms_RidgeClassifierCV_get_metadata_routing = {k: v for k, v in pms_RidgeClassifi
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifierCV_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeClassifierCV_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_RidgeClassifierCV_predict = {k: v for k, v in pms_RidgeClassifierCV_predict.items() if v is not None}`
 
@@ -336,13 +329,8 @@ pms_RidgeClassifierCV_predict = {k: v for k, v in pms_RidgeClassifierCV_predict.
     }
 
     // set up method params
-    await this._py.ex`pms_RidgeClassifierCV_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_RidgeClassifierCV_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.items() if v is not None}`
 
@@ -358,13 +346,13 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
   /**
     Request metadata passed to the `fit` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_fit_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `fit`.
+      Metadata routing for `sample_weight` parameter in `fit`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -382,9 +370,7 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
 
     // set up method params
     await this._py
-      .ex`pms_RidgeClassifierCV_set_fit_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RidgeClassifierCV_set_fit_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RidgeClassifierCV_set_fit_request = {k: v for k, v in pms_RidgeClassifierCV_set_fit_request.items() if v is not None}`
 
@@ -400,13 +386,13 @@ pms_RidgeClassifierCV_set_fit_request = {k: v for k, v in pms_RidgeClassifierCV_
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -424,9 +410,7 @@ pms_RidgeClassifierCV_set_fit_request = {k: v for k, v in pms_RidgeClassifierCV_
 
     // set up method params
     await this._py
-      .ex`pms_RidgeClassifierCV_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_RidgeClassifierCV_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_RidgeClassifierCV_set_score_request = {k: v for k, v in pms_RidgeClassifierCV_set_score_request.items() if v is not None}`
 
@@ -440,9 +424,9 @@ pms_RidgeClassifierCV_set_score_request = {k: v for k, v in pms_RidgeClassifierC
   }
 
   /**
-    Cross-validation values for each alpha (only if `store\_cv\_values=True` and `cv=None`). After `fit()` has been called, this attribute will contain the mean squared errors if `scoring is None` otherwise it will contain standardized per point prediction values.
+    Cross-validation results for each alpha (only if `store_cv_results=True` and `cv=None`). After `fit()` has been called, this attribute will contain the mean squared errors if `scoring is None` otherwise it will contain standardized per point prediction values.
    */
-  get cv_values_(): Promise<NDArray[][]> {
+  get cv_results_(): Promise<NDArray[][]> {
     if (this._isDisposed) {
       throw new Error(
         'This RidgeClassifierCV instance has already been disposed'
@@ -451,25 +435,25 @@ pms_RidgeClassifierCV_set_score_request = {k: v for k, v in pms_RidgeClassifierC
 
     if (!this._isInitialized) {
       throw new Error(
-        'RidgeClassifierCV must call init() before accessing cv_values_'
+        'RidgeClassifierCV must call init() before accessing cv_results_'
       )
     }
 
     return (async () => {
       // invoke accessor
       await this._py
-        .ex`attr_RidgeClassifierCV_cv_values_ = bridgeRidgeClassifierCV[${this.id}].cv_values_`
+        .ex`attr_RidgeClassifierCV_cv_results_ = bridgeRidgeClassifierCV[${this.id}].cv_results_`
 
       // convert the result from python to node.js
       return this
-        ._py`attr_RidgeClassifierCV_cv_values_.tolist() if hasattr(attr_RidgeClassifierCV_cv_values_, 'tolist') else attr_RidgeClassifierCV_cv_values_`
+        ._py`attr_RidgeClassifierCV_cv_results_.tolist() if hasattr(attr_RidgeClassifierCV_cv_results_, 'tolist') else attr_RidgeClassifierCV_cv_results_`
     })()
   }
 
   /**
     Coefficient of the features in the decision function.
 
-    `coef\_` is of shape (1, n\_features) when the given problem is binary.
+    `coef_` is of shape (1, n_features) when the given problem is binary.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -496,7 +480,7 @@ pms_RidgeClassifierCV_set_score_request = {k: v for k, v in pms_RidgeClassifierC
   }
 
   /**
-    Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
+    Independent term in decision function. Set to 0.0 if `fit_intercept \= False`.
    */
   get intercept_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -577,7 +561,7 @@ pms_RidgeClassifierCV_set_score_request = {k: v for k, v in pms_RidgeClassifierC
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -604,7 +588,7 @@ pms_RidgeClassifierCV_set_score_request = {k: v for k, v in pms_RidgeClassifierC
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

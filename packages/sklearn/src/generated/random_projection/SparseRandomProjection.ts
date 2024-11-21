@@ -26,7 +26,7 @@ export class SparseRandomProjection {
     /**
       Dimensionality of the target projection space.
 
-      n\_components can be automatically adjusted according to the number of samples in the dataset and the bound given by the Johnson-Lindenstrauss lemma. In that case the quality of the embedding is controlled by the `eps` parameter.
+      n_components can be automatically adjusted according to the number of samples in the dataset and the bound given by the Johnson-Lindenstrauss lemma. In that case the quality of the embedding is controlled by the `eps` parameter.
 
       It should be noted that Johnson-Lindenstrauss lemma can yield very conservative estimated of the required number of components as it makes no assumption on the structure of the dataset.
 
@@ -37,7 +37,7 @@ export class SparseRandomProjection {
     /**
       Ratio in the range (0, 1\] of non-zero component in the random projection matrix.
 
-      If density = ‘auto’, the value is set to the minimum density as recommended by Ping Li et al.: 1 / sqrt(n\_features).
+      If density = ‘auto’, the value is set to the minimum density as recommended by Ping Li et al.: 1 / sqrt(n_features).
 
       Use density = 1 / 3.0 if you want to reproduce the results from Achlioptas, 2001.
 
@@ -46,9 +46,9 @@ export class SparseRandomProjection {
     density?: number | 'auto'
 
     /**
-      Parameter to control the quality of the embedding according to the Johnson-Lindenstrauss lemma when n\_components is set to ‘auto’. This value should be strictly positive.
+      Parameter to control the quality of the embedding according to the Johnson-Lindenstrauss lemma when n_components is set to ‘auto’. This value should be strictly positive.
 
-      Smaller values lead to better embedding and higher number of dimensions (n\_components) in the target projection space.
+      Smaller values lead to better embedding and higher number of dimensions (n_components) in the target projection space.
 
       @defaultValue `0.1`
      */
@@ -64,14 +64,14 @@ export class SparseRandomProjection {
     dense_output?: boolean
 
     /**
-      Learn the inverse transform by computing the pseudo-inverse of the components during fit. Note that the pseudo-inverse is always a dense array, even if the training data was sparse. This means that it might be necessary to call `inverse\_transform` on a small batch of samples at a time to avoid exhausting the available memory on the host. Moreover, computing the pseudo-inverse does not scale well to large matrices.
+      Learn the inverse transform by computing the pseudo-inverse of the components during fit. Note that the pseudo-inverse is always a dense array, even if the training data was sparse. This means that it might be necessary to call `inverse_transform` on a small batch of samples at a time to avoid exhausting the available memory on the host. Moreover, computing the pseudo-inverse does not scale well to large matrices.
 
       @defaultValue `false`
      */
     compute_inverse_components?: boolean
 
     /**
-      Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -119,15 +119,8 @@ except NameError: bridgeSparseRandomProjection = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_SparseRandomProjection = {'n_components': ${
-      this.opts['n_components'] ?? undefined
-    }, 'density': ${this.opts['density'] ?? undefined}, 'eps': ${
-      this.opts['eps'] ?? undefined
-    }, 'dense_output': ${
-      this.opts['dense_output'] ?? undefined
-    }, 'compute_inverse_components': ${
-      this.opts['compute_inverse_components'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`ctor_SparseRandomProjection = {'n_components': ${this.opts['n_components'] ?? undefined}, 'density': ${this.opts['density'] ?? undefined}, 'eps': ${this.opts['eps'] ?? undefined}, 'dense_output': ${this.opts['dense_output'] ?? undefined}, 'compute_inverse_components': ${this.opts['compute_inverse_components'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_SparseRandomProjection = {k: v for k, v in ctor_SparseRandomProjection.items() if v is not None}`
 
@@ -181,9 +174,8 @@ ctor_SparseRandomProjection = {k: v for k, v in ctor_SparseRandomProjection.item
     }
 
     // set up method params
-    await this._py.ex`pms_SparseRandomProjection_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_SparseRandomProjection_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_SparseRandomProjection_fit = {k: v for k, v in pms_SparseRandomProjection_fit.items() if v is not None}`
 
@@ -199,7 +191,7 @@ pms_SparseRandomProjection_fit = {k: v for k, v in pms_SparseRandomProjection_fi
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -231,13 +223,7 @@ pms_SparseRandomProjection_fit = {k: v for k, v in pms_SparseRandomProjection_fi
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+      .ex`pms_SparseRandomProjection_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_SparseRandomProjection_fit_transform = {k: v for k, v in pms_SparseRandomProjection_fit_transform.items() if v is not None}`
 
@@ -253,7 +239,7 @@ pms_SparseRandomProjection_fit_transform = {k: v for k, v in pms_SparseRandomPro
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class_name0", "class_name1", "class_name2"\]`.
    */
   async get_feature_names_out(opts: {
     /**
@@ -275,9 +261,7 @@ pms_SparseRandomProjection_fit_transform = {k: v for k, v in pms_SparseRandomPro
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_SparseRandomProjection_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_SparseRandomProjection_get_feature_names_out = {k: v for k, v in pms_SparseRandomProjection_get_feature_names_out.items() if v is not None}`
 
@@ -293,11 +277,11 @@ pms_SparseRandomProjection_get_feature_names_out = {k: v for k, v in pms_SparseR
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -315,9 +299,7 @@ pms_SparseRandomProjection_get_feature_names_out = {k: v for k, v in pms_SparseR
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_SparseRandomProjection_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_SparseRandomProjection_get_metadata_routing = {k: v for k, v in pms_SparseRandomProjection_get_metadata_routing.items() if v is not None}`
 
@@ -333,9 +315,9 @@ pms_SparseRandomProjection_get_metadata_routing = {k: v for k, v in pms_SparseRa
   /**
     Project data back to its original space.
 
-    Returns an array X\_original whose transform would be X. Note that even if X is sparse, X\_original is dense: this may use a lot of RAM.
+    Returns an array X_original whose transform would be X. Note that even if X is sparse, X_original is dense: this may use a lot of RAM.
 
-    If `compute\_inverse\_components` is `false`, the inverse of the components is computed during each call to `inverse\_transform` which can be costly.
+    If `compute_inverse_components` is `false`, the inverse of the components is computed during each call to `inverse_transform` which can be costly.
    */
   async inverse_transform(opts: {
     /**
@@ -357,9 +339,7 @@ pms_SparseRandomProjection_get_metadata_routing = {k: v for k, v in pms_SparseRa
 
     // set up method params
     await this._py
-      .ex`pms_SparseRandomProjection_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_SparseRandomProjection_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparseRandomProjection_inverse_transform = {k: v for k, v in pms_SparseRandomProjection_inverse_transform.items() if v is not None}`
 
@@ -375,13 +355,13 @@ pms_SparseRandomProjection_inverse_transform = {k: v for k, v in pms_SparseRando
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -396,9 +376,8 @@ pms_SparseRandomProjection_inverse_transform = {k: v for k, v in pms_SparseRando
     }
 
     // set up method params
-    await this._py.ex`pms_SparseRandomProjection_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_SparseRandomProjection_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_SparseRandomProjection_set_output = {k: v for k, v in pms_SparseRandomProjection_set_output.items() if v is not None}`
 
@@ -433,9 +412,8 @@ pms_SparseRandomProjection_set_output = {k: v for k, v in pms_SparseRandomProjec
     }
 
     // set up method params
-    await this._py.ex`pms_SparseRandomProjection_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_SparseRandomProjection_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_SparseRandomProjection_transform = {k: v for k, v in pms_SparseRandomProjection_transform.items() if v is not None}`
 
@@ -449,7 +427,7 @@ pms_SparseRandomProjection_transform = {k: v for k, v in pms_SparseRandomProject
   }
 
   /**
-    Concrete number of components computed when n\_components=”auto”.
+    Concrete number of components computed when n_components=”auto”.
    */
   get n_components_(): Promise<number> {
     if (this._isDisposed) {
@@ -503,7 +481,7 @@ pms_SparseRandomProjection_transform = {k: v for k, v in pms_SparseRandomProject
   }
 
   /**
-    Pseudo-inverse of the components, only computed if `compute\_inverse\_components` is `true`.
+    Pseudo-inverse of the components, only computed if `compute_inverse_components` is `true`.
    */
   get inverse_components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -557,7 +535,7 @@ pms_SparseRandomProjection_transform = {k: v for k, v in pms_SparseRandomProject
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -584,7 +562,7 @@ pms_SparseRandomProjection_transform = {k: v for k, v in pms_SparseRandomProject
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

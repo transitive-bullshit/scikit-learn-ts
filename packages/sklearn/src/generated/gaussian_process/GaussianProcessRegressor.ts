@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Gaussian process regression (GPR).
 
-  The implementation is based on Algorithm 2.1 of [\[RW2006\]](#rf75674b0f418-rw2006).
+  The implementation is based on Algorithm 2.1 of [\[RW2006\]](https://scikit-learn.org/stable/modules/generated/#rf75674b0f418-rw2006).
 
-  In addition to standard scikit-learn estimator API, [`GaussianProcessRegressor`](#sklearn.gaussian_process.GaussianProcessRegressor "sklearn.gaussian_process.GaussianProcessRegressor"):
+  In addition to standard scikit-learn estimator API, [`GaussianProcessRegressor`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor "sklearn.gaussian_process.GaussianProcessRegressor"):
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html)
  */
@@ -24,12 +24,12 @@ export class GaussianProcessRegressor {
 
   constructor(opts?: {
     /**
-      The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
+      The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant_value_bounds="fixed") \* RBF(1.0, length_scale_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
      */
     kernel?: any
 
     /**
-      Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a `WhiteKernel`. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with [`Ridge`](sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge "sklearn.linear_model.Ridge").
+      Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a `WhiteKernel`. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with [`Ridge`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge "sklearn.linear_model.Ridge").
 
       @defaultValue `1e-10`
      */
@@ -43,7 +43,7 @@ export class GaussianProcessRegressor {
     optimizer?: 'fmin_l_bfgs_b'
 
     /**
-      The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n\_restarts\_optimizer \== 0` implies that one run is performed.
+      The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n_restarts_optimizer \== 0` implies that one run is performed.
 
       @defaultValue `0`
      */
@@ -64,12 +64,12 @@ export class GaussianProcessRegressor {
     copy_X_train?: boolean
 
     /**
-      The number of dimensions of the target values. Used to decide the number of outputs when sampling from the prior distributions (i.e. calling [`sample\_y`](#sklearn.gaussian_process.GaussianProcessRegressor.sample_y "sklearn.gaussian_process.GaussianProcessRegressor.sample_y") before [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit")). This parameter is ignored once [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit") has been called.
+      The number of dimensions of the target values. Used to decide the number of outputs when sampling from the prior distributions (i.e. calling [`sample_y`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor.sample_y "sklearn.gaussian_process.GaussianProcessRegressor.sample_y") before [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit")). This parameter is ignored once [`fit`](https://scikit-learn.org/stable/modules/generated/#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit") has been called.
      */
     n_targets?: number
 
     /**
-      Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
      */
     random_state?: number
   }) {
@@ -117,21 +117,8 @@ except NameError: bridgeGaussianProcessRegressor = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_GaussianProcessRegressor = {'kernel': ${
-      this.opts['kernel'] ?? undefined
-    }, 'alpha': np.array(${this.opts['alpha'] ?? undefined}) if ${
-      this.opts['alpha'] !== undefined
-    } else None, 'optimizer': ${
-      this.opts['optimizer'] ?? undefined
-    }, 'n_restarts_optimizer': ${
-      this.opts['n_restarts_optimizer'] ?? undefined
-    }, 'normalize_y': ${
-      this.opts['normalize_y'] ?? undefined
-    }, 'copy_X_train': ${
-      this.opts['copy_X_train'] ?? undefined
-    }, 'n_targets': ${this.opts['n_targets'] ?? undefined}, 'random_state': ${
-      this.opts['random_state'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_GaussianProcessRegressor = {'kernel': ${this.opts['kernel'] ?? undefined}, 'alpha': np.array(${this.opts['alpha'] ?? undefined}) if ${this.opts['alpha'] !== undefined} else None, 'optimizer': ${this.opts['optimizer'] ?? undefined}, 'n_restarts_optimizer': ${this.opts['n_restarts_optimizer'] ?? undefined}, 'normalize_y': ${this.opts['normalize_y'] ?? undefined}, 'copy_X_train': ${this.opts['copy_X_train'] ?? undefined}, 'n_targets': ${this.opts['n_targets'] ?? undefined}, 'random_state': ${this.opts['random_state'] ?? undefined}}
 
 ctor_GaussianProcessRegressor = {k: v for k, v in ctor_GaussianProcessRegressor.items() if v is not None}`
 
@@ -185,11 +172,8 @@ ctor_GaussianProcessRegressor = {k: v for k, v in ctor_GaussianProcessRegressor.
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_fit = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_fit = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None}
 
 pms_GaussianProcessRegressor_fit = {k: v for k, v in pms_GaussianProcessRegressor_fit.items() if v is not None}`
 
@@ -205,11 +189,11 @@ pms_GaussianProcessRegressor_fit = {k: v for k, v in pms_GaussianProcessRegresso
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -227,9 +211,7 @@ pms_GaussianProcessRegressor_fit = {k: v for k, v in pms_GaussianProcessRegresso
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessRegressor_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_GaussianProcessRegressor_get_metadata_routing = {k: v for k, v in pms_GaussianProcessRegressor_get_metadata_routing.items() if v is not None}`
 
@@ -247,7 +229,7 @@ pms_GaussianProcessRegressor_get_metadata_routing = {k: v for k, v in pms_Gaussi
    */
   async log_marginal_likelihood(opts: {
     /**
-      Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
+      Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log_marginal_likelihood of `self.kernel_.theta` is returned.
      */
     theta?: any
 
@@ -279,11 +261,7 @@ pms_GaussianProcessRegressor_get_metadata_routing = {k: v for k, v in pms_Gaussi
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_log_marginal_likelihood = {'theta': np.array(${
-      opts['theta'] ?? undefined
-    }) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${
-      opts['eval_gradient'] ?? undefined
-    }, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
+      .ex`pms_GaussianProcessRegressor_log_marginal_likelihood = {'theta': np.array(${opts['theta'] ?? undefined}) if ${opts['theta'] !== undefined} else None, 'eval_gradient': ${opts['eval_gradient'] ?? undefined}, 'clone_kernel': ${opts['clone_kernel'] ?? undefined}}
 
 pms_GaussianProcessRegressor_log_marginal_likelihood = {k: v for k, v in pms_GaussianProcessRegressor_log_marginal_likelihood.items() if v is not None}`
 
@@ -299,7 +277,7 @@ pms_GaussianProcessRegressor_log_marginal_likelihood = {k: v for k, v in pms_Gau
   /**
     Predict using the Gaussian process regression model.
 
-    We can also predict based on an unfitted model by using the GP prior. In addition to the mean of the predictive distribution, optionally also returns its standard deviation (`return\_std=True`) or covariance (`return\_cov=True`). Note that at most one of the two can be requested.
+    We can also predict based on an unfitted model by using the GP prior. In addition to the mean of the predictive distribution, optionally also returns its standard deviation (`return_std=True`) or covariance (`return_cov=True`). Note that at most one of the two can be requested.
    */
   async predict(opts: {
     /**
@@ -334,11 +312,8 @@ pms_GaussianProcessRegressor_log_marginal_likelihood = {k: v for k, v in pms_Gau
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_predict = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'return_std': ${
-      opts['return_std'] ?? undefined
-    }, 'return_cov': ${opts['return_cov'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_predict = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'return_std': ${opts['return_std'] ?? undefined}, 'return_cov': ${opts['return_cov'] ?? undefined}}
 
 pms_GaussianProcessRegressor_predict = {k: v for k, v in pms_GaussianProcessRegressor_predict.items() if v is not None}`
 
@@ -368,7 +343,7 @@ pms_GaussianProcessRegressor_predict = {k: v for k, v in pms_GaussianProcessRegr
     n_samples?: number
 
     /**
-      Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+      Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-random_state).
 
       @defaultValue `0`
      */
@@ -387,11 +362,8 @@ pms_GaussianProcessRegressor_predict = {k: v for k, v in pms_GaussianProcessRegr
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_sample_y = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'n_samples': ${
-      opts['n_samples'] ?? undefined
-    }, 'random_state': ${opts['random_state'] ?? undefined}}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_sample_y = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'n_samples': ${opts['n_samples'] ?? undefined}, 'random_state': ${opts['random_state'] ?? undefined}}
 
 pms_GaussianProcessRegressor_sample_y = {k: v for k, v in pms_GaussianProcessRegressor_sample_y.items() if v is not None}`
 
@@ -407,11 +379,11 @@ pms_GaussianProcessRegressor_sample_y = {k: v for k, v in pms_GaussianProcessReg
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y_true \- y_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y_true \- y_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: {
     /**
-      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n_samples, n_samples_fitted)`, where `n_samples_fitted` is the number of samples used in the fitting for the estimator.
      */
     X?: ArrayLike[]
 
@@ -438,13 +410,8 @@ pms_GaussianProcessRegressor_sample_y = {k: v for k, v in pms_GaussianProcessReg
     }
 
     // set up method params
-    await this._py.ex`pms_GaussianProcessRegressor_score = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
-      opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    await this._py
+      .ex`pms_GaussianProcessRegressor_score = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${opts['sample_weight'] !== undefined} else None}
 
 pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegressor_score.items() if v is not None}`
 
@@ -460,18 +427,18 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
   /**
     Request metadata passed to the `predict` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_predict_request(opts: {
     /**
-      Metadata routing for `return\_cov` parameter in `predict`.
+      Metadata routing for `return_cov` parameter in `predict`.
      */
     return_cov?: string | boolean
 
     /**
-      Metadata routing for `return\_std` parameter in `predict`.
+      Metadata routing for `return_std` parameter in `predict`.
      */
     return_std?: string | boolean
   }): Promise<any> {
@@ -489,9 +456,7 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_set_predict_request = {'return_cov': ${
-      opts['return_cov'] ?? undefined
-    }, 'return_std': ${opts['return_std'] ?? undefined}}
+      .ex`pms_GaussianProcessRegressor_set_predict_request = {'return_cov': ${opts['return_cov'] ?? undefined}, 'return_std': ${opts['return_std'] ?? undefined}}
 
 pms_GaussianProcessRegressor_set_predict_request = {k: v for k, v in pms_GaussianProcessRegressor_set_predict_request.items() if v is not None}`
 
@@ -507,13 +472,13 @@ pms_GaussianProcessRegressor_set_predict_request = {k: v for k, v in pms_Gaussia
   /**
     Request metadata passed to the `score` method.
 
-    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Note that this method is only relevant if `enable_metadata_routing=True` (see [`sklearn.set_config`](https://scikit-learn.org/stable/modules/generated/sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
 
     The options for each parameter are:
    */
   async set_score_request(opts: {
     /**
-      Metadata routing for `sample\_weight` parameter in `score`.
+      Metadata routing for `sample_weight` parameter in `score`.
      */
     sample_weight?: string | boolean
   }): Promise<any> {
@@ -531,9 +496,7 @@ pms_GaussianProcessRegressor_set_predict_request = {k: v for k, v in pms_Gaussia
 
     // set up method params
     await this._py
-      .ex`pms_GaussianProcessRegressor_set_score_request = {'sample_weight': ${
-      opts['sample_weight'] ?? undefined
-    }}
+      .ex`pms_GaussianProcessRegressor_set_score_request = {'sample_weight': ${opts['sample_weight'] ?? undefined}}
 
 pms_GaussianProcessRegressor_set_score_request = {k: v for k, v in pms_GaussianProcessRegressor_set_score_request.items() if v is not None}`
 
@@ -628,7 +591,7 @@ pms_GaussianProcessRegressor_set_score_request = {k: v for k, v in pms_GaussianP
   }
 
   /**
-    Lower-triangular Cholesky decomposition of the kernel in `X\_train\_`.
+    Lower-triangular Cholesky decomposition of the kernel in `X_train_`.
    */
   get L_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -682,7 +645,7 @@ pms_GaussianProcessRegressor_set_score_request = {k: v for k, v in pms_GaussianP
   }
 
   /**
-    The log-marginal-likelihood of `self.kernel\_.theta`.
+    The log-marginal-likelihood of `self.kernel_.theta`.
    */
   get log_marginal_likelihood_value_(): Promise<number> {
     if (this._isDisposed) {
@@ -709,7 +672,7 @@ pms_GaussianProcessRegressor_set_score_request = {k: v for k, v in pms_GaussianP
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -736,7 +699,7 @@ pms_GaussianProcessRegressor_set_score_request = {k: v for k, v in pms_GaussianP
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

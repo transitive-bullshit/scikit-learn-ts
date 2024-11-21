@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This feature selection algorithm looks only at the features (X), not the desired outputs (y), and can thus be used for unsupervised learning.
 
-  Read more in the [User Guide](../feature_selection.html#variance-threshold).
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../feature_selection.html#variance-threshold).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html)
  */
@@ -72,9 +72,8 @@ except NameError: bridgeVarianceThreshold = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_VarianceThreshold = {'threshold': ${
-      this.opts['threshold'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_VarianceThreshold = {'threshold': ${this.opts['threshold'] ?? undefined}}
 
 ctor_VarianceThreshold = {k: v for k, v in ctor_VarianceThreshold.items() if v is not None}`
 
@@ -108,7 +107,7 @@ ctor_VarianceThreshold = {k: v for k, v in ctor_VarianceThreshold.items() if v i
    */
   async fit(opts: {
     /**
-      Data from which to compute variances, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Data from which to compute variances, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike | SparseMatrix
 
@@ -128,9 +127,8 @@ ctor_VarianceThreshold = {k: v for k, v in ctor_VarianceThreshold.items() if v i
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_fit = {'X': ${
-      opts['X'] ?? undefined
-    }, 'y': ${opts['y'] ?? undefined}}
+    await this._py
+      .ex`pms_VarianceThreshold_fit = {'X': ${opts['X'] ?? undefined}, 'y': ${opts['y'] ?? undefined}}
 
 pms_VarianceThreshold_fit = {k: v for k, v in pms_VarianceThreshold_fit.items() if v is not None}`
 
@@ -146,7 +144,7 @@ pms_VarianceThreshold_fit = {k: v for k, v in pms_VarianceThreshold_fit.items() 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fits transformer to `X` and `y` with optional parameters `fit_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: {
     /**
@@ -177,13 +175,8 @@ pms_VarianceThreshold_fit = {k: v for k, v in pms_VarianceThreshold_fit.items() 
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_fit_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VarianceThreshold_fit_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'fit_params': ${opts['fit_params'] ?? undefined}}
 
 pms_VarianceThreshold_fit_transform = {k: v for k, v in pms_VarianceThreshold_fit_transform.items() if v is not None}`
 
@@ -219,9 +212,7 @@ pms_VarianceThreshold_fit_transform = {k: v for k, v in pms_VarianceThreshold_fi
 
     // set up method params
     await this._py
-      .ex`pms_VarianceThreshold_get_feature_names_out = {'input_features': ${
-      opts['input_features'] ?? undefined
-    }}
+      .ex`pms_VarianceThreshold_get_feature_names_out = {'input_features': ${opts['input_features'] ?? undefined}}
 
 pms_VarianceThreshold_get_feature_names_out = {k: v for k, v in pms_VarianceThreshold_get_feature_names_out.items() if v is not None}`
 
@@ -237,11 +228,11 @@ pms_VarianceThreshold_get_feature_names_out = {k: v for k, v in pms_VarianceThre
   /**
     Get metadata routing of this object.
 
-    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+    Please check [User Guide](https://scikit-learn.org/stable/modules/generated/../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
    */
   async get_metadata_routing(opts: {
     /**
-      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+      A [`MetadataRequest`](https://scikit-learn.org/stable/modules/generated/sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
     routing?: any
   }): Promise<any> {
@@ -259,9 +250,7 @@ pms_VarianceThreshold_get_feature_names_out = {k: v for k, v in pms_VarianceThre
 
     // set up method params
     await this._py
-      .ex`pms_VarianceThreshold_get_metadata_routing = {'routing': ${
-      opts['routing'] ?? undefined
-    }}
+      .ex`pms_VarianceThreshold_get_metadata_routing = {'routing': ${opts['routing'] ?? undefined}}
 
 pms_VarianceThreshold_get_metadata_routing = {k: v for k, v in pms_VarianceThreshold_get_metadata_routing.items() if v is not None}`
 
@@ -296,9 +285,8 @@ pms_VarianceThreshold_get_metadata_routing = {k: v for k, v in pms_VarianceThres
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_get_support = {'indices': ${
-      opts['indices'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VarianceThreshold_get_support = {'indices': ${opts['indices'] ?? undefined}}
 
 pms_VarianceThreshold_get_support = {k: v for k, v in pms_VarianceThreshold_get_support.items() if v is not None}`
 
@@ -334,9 +322,7 @@ pms_VarianceThreshold_get_support = {k: v for k, v in pms_VarianceThreshold_get_
 
     // set up method params
     await this._py
-      .ex`pms_VarianceThreshold_inverse_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+      .ex`pms_VarianceThreshold_inverse_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshold_inverse_transform.items() if v is not None}`
 
@@ -352,13 +338,13 @@ pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshol
   /**
     Set output container.
 
-    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+    See [Introducing the set_output API](https://scikit-learn.org/stable/modules/generated/../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: {
     /**
-      Configure output of `transform` and `fit\_transform`.
+      Configure output of `transform` and `fit_transform`.
      */
-    transform?: 'default' | 'pandas'
+    transform?: 'default' | 'pandas' | 'polars'
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -371,9 +357,8 @@ pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshol
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_set_output = {'transform': ${
-      opts['transform'] ?? undefined
-    }}
+    await this._py
+      .ex`pms_VarianceThreshold_set_output = {'transform': ${opts['transform'] ?? undefined}}
 
 pms_VarianceThreshold_set_output = {k: v for k, v in pms_VarianceThreshold_set_output.items() if v is not None}`
 
@@ -406,9 +391,8 @@ pms_VarianceThreshold_set_output = {k: v for k, v in pms_VarianceThreshold_set_o
     }
 
     // set up method params
-    await this._py.ex`pms_VarianceThreshold_transform = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None}
+    await this._py
+      .ex`pms_VarianceThreshold_transform = {'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None}
 
 pms_VarianceThreshold_transform = {k: v for k, v in pms_VarianceThreshold_transform.items() if v is not None}`
 
@@ -449,7 +433,7 @@ pms_VarianceThreshold_transform = {k: v for k, v in pms_VarianceThreshold_transf
   }
 
   /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
+    Number of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -476,7 +460,7 @@ pms_VarianceThreshold_transform = {k: v for k, v in pms_VarianceThreshold_transf
   }
 
   /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+    Names of features seen during [fit](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {

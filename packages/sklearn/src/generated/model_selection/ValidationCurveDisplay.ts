@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Validation Curve visualization.
 
-  It is recommended to use [`from\_estimator`](#sklearn.model_selection.ValidationCurveDisplay.from_estimator "sklearn.model_selection.ValidationCurveDisplay.from_estimator") to create a [`ValidationCurveDisplay`](#sklearn.model_selection.ValidationCurveDisplay "sklearn.model_selection.ValidationCurveDisplay") instance. All parameters are stored as attributes.
+  It is recommended to use [`from_estimator`](https://scikit-learn.org/stable/modules/generated/#sklearn.model_selection.ValidationCurveDisplay.from_estimator "sklearn.model_selection.ValidationCurveDisplay.from_estimator") to create a [`ValidationCurveDisplay`](https://scikit-learn.org/stable/modules/generated/#sklearn.model_selection.ValidationCurveDisplay "sklearn.model_selection.ValidationCurveDisplay") instance. All parameters are stored as attributes.
 
-  Read more in the [User Guide](../../visualizations.html#visualizations) for general information about the visualization API and [detailed documentation](../learning_curve.html#validation-curve) regarding the validation curve visualization.
+  Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations) for general information about the visualization API and [detailed documentation](https://scikit-learn.org/stable/modules/generated/../learning_curve.html#validation-curve) regarding the validation curve visualization.
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ValidationCurveDisplay.html)
  */
@@ -44,7 +44,7 @@ export class ValidationCurveDisplay {
     test_scores?: NDArray[]
 
     /**
-      The name of the score used in `validation\_curve`. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate\_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `\_` by spaces and capitalize the first letter. We remove `neg\_` and replace it by `"Negative"` if `negate\_score` is `false` or just remove it otherwise.
+      The name of the score used in `validation_curve`. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `_` by spaces and capitalize the first letter. We remove `neg_` and replace it by `"Negative"` if `negate_score` is `false` or just remove it otherwise.
      */
     score_name?: string
   }) {
@@ -92,19 +92,8 @@ except NameError: bridgeValidationCurveDisplay = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ValidationCurveDisplay = {'param_name': ${
-      this.opts['param_name'] ?? undefined
-    }, 'param_range': np.array(${this.opts['param_range'] ?? undefined}) if ${
-      this.opts['param_range'] !== undefined
-    } else None, 'train_scores': np.array(${
-      this.opts['train_scores'] ?? undefined
-    }) if ${
-      this.opts['train_scores'] !== undefined
-    } else None, 'test_scores': np.array(${
-      this.opts['test_scores'] ?? undefined
-    }) if ${this.opts['test_scores'] !== undefined} else None, 'score_name': ${
-      this.opts['score_name'] ?? undefined
-    }}
+    await this._py
+      .ex`ctor_ValidationCurveDisplay = {'param_name': ${this.opts['param_name'] ?? undefined}, 'param_range': np.array(${this.opts['param_range'] ?? undefined}) if ${this.opts['param_range'] !== undefined} else None, 'train_scores': np.array(${this.opts['train_scores'] ?? undefined}) if ${this.opts['train_scores'] !== undefined} else None, 'test_scores': np.array(${this.opts['test_scores'] ?? undefined}) if ${this.opts['test_scores'] !== undefined} else None, 'score_name': ${this.opts['score_name'] ?? undefined}}
 
 ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.items() if v is not None}`
 
@@ -136,7 +125,7 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
   /**
     Create a validation curve display from an estimator.
 
-    Read more in the [User Guide](../../visualizations.html#visualizations) for general information about the visualization API and [detailed documentation](../learning_curve.html#validation-curve) regarding the validation curve visualization.
+    Read more in the [User Guide](https://scikit-learn.org/stable/modules/generated/../../visualizations.html#visualizations) for general information about the visualization API and [detailed documentation](https://scikit-learn.org/stable/modules/generated/../learning_curve.html#validation-curve) regarding the validation curve visualization.
    */
   async from_estimator(opts: {
     /**
@@ -145,7 +134,7 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
     estimator?: any
 
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      Training data, where `n_samples` is the number of samples and `n_features` is the number of features.
      */
     X?: ArrayLike[]
 
@@ -165,7 +154,7 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
     param_range?: ArrayLike
 
     /**
-      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
+      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
      */
     groups?: ArrayLike
 
@@ -175,17 +164,17 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
     cv?: number
 
     /**
-      A string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a scorer callable object / function with signature `scorer(estimator, X, y)` (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)).
+      A string (see [The scoring parameter: defining model evaluation rules](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring-parameter)) or a scorer callable object / function with signature `scorer(estimator, X, y)` (see [Defining your scoring strategy from metric functions](https://scikit-learn.org/stable/modules/generated/../model_evaluation.html#scoring)).
      */
     scoring?: string
 
     /**
-      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.5.dev0)") context. `\-1` means using all processors. See [Glossary](https://scikit-learn.org/stable/modules/generated/../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
-      Number of predispatched jobs for parallel execution (default is all). The option can reduce the allocated memory. The str can be an expression like ‘2\*n\_jobs’.
+      Number of predispatched jobs for parallel execution (default is all). The option can reduce the allocated memory. The str can be an expression like ‘2\*n_jobs’.
 
       @defaultValue `'all'`
      */
@@ -214,14 +203,14 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
     ax?: any
 
     /**
-      Whether or not to negate the scores obtained through [`validation\_curve`](sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve "sklearn.model_selection.validation_curve"). This is particularly useful when using the error denoted by `neg\_\*` in `scikit-learn`.
+      Whether or not to negate the scores obtained through [`validation_curve`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve "sklearn.model_selection.validation_curve"). This is particularly useful when using the error denoted by `neg_\*` in `scikit-learn`.
 
       @defaultValue `false`
      */
     negate_score?: boolean
 
     /**
-      The name of the score used to decorate the y-axis of the plot. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate\_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `\_` by spaces and capitalize the first letter. We remove `neg\_` and replace it by `"Negative"` if `negate\_score` is `false` or just remove it otherwise.
+      The name of the score used to decorate the y-axis of the plot. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `_` by spaces and capitalize the first letter. We remove `neg_` and replace it by `"Negative"` if `negate_score` is `false` or just remove it otherwise.
      */
     score_name?: string
 
@@ -245,7 +234,7 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
     line_kw?: any
 
     /**
-      Additional keyword arguments passed to the `plt.fill\_between` used to draw the score standard deviation.
+      Additional keyword arguments passed to the `plt.fill_between` used to draw the score standard deviation.
      */
     fill_between_kw?: any
 
@@ -268,33 +257,7 @@ ctor_ValidationCurveDisplay = {k: v for k, v in ctor_ValidationCurveDisplay.item
 
     // set up method params
     await this._py
-      .ex`pms_ValidationCurveDisplay_from_estimator = {'estimator': ${
-      opts['estimator'] ?? undefined
-    }, 'X': np.array(${opts['X'] ?? undefined}) if ${
-      opts['X'] !== undefined
-    } else None, 'y': np.array(${opts['y'] ?? undefined}) if ${
-      opts['y'] !== undefined
-    } else None, 'param_name': ${
-      opts['param_name'] ?? undefined
-    }, 'param_range': np.array(${opts['param_range'] ?? undefined}) if ${
-      opts['param_range'] !== undefined
-    } else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${
-      opts['groups'] !== undefined
-    } else None, 'cv': ${opts['cv'] ?? undefined}, 'scoring': ${
-      opts['scoring'] ?? undefined
-    }, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'pre_dispatch': ${
-      opts['pre_dispatch'] ?? undefined
-    }, 'verbose': ${opts['verbose'] ?? undefined}, 'error_score': ${
-      opts['error_score'] ?? undefined
-    }, 'fit_params': ${opts['fit_params'] ?? undefined}, 'ax': ${
-      opts['ax'] ?? undefined
-    }, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${
-      opts['score_name'] ?? undefined
-    }, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${
-      opts['std_display_style'] ?? undefined
-    }, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${
-      opts['fill_between_kw'] ?? undefined
-    }, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
+      .ex`pms_ValidationCurveDisplay_from_estimator = {'estimator': ${opts['estimator'] ?? undefined}, 'X': np.array(${opts['X'] ?? undefined}) if ${opts['X'] !== undefined} else None, 'y': np.array(${opts['y'] ?? undefined}) if ${opts['y'] !== undefined} else None, 'param_name': ${opts['param_name'] ?? undefined}, 'param_range': np.array(${opts['param_range'] ?? undefined}) if ${opts['param_range'] !== undefined} else None, 'groups': np.array(${opts['groups'] ?? undefined}) if ${opts['groups'] !== undefined} else None, 'cv': ${opts['cv'] ?? undefined}, 'scoring': ${opts['scoring'] ?? undefined}, 'n_jobs': ${opts['n_jobs'] ?? undefined}, 'pre_dispatch': ${opts['pre_dispatch'] ?? undefined}, 'verbose': ${opts['verbose'] ?? undefined}, 'error_score': ${opts['error_score'] ?? undefined}, 'fit_params': ${opts['fit_params'] ?? undefined}, 'ax': ${opts['ax'] ?? undefined}, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${opts['score_name'] ?? undefined}, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${opts['std_display_style'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${opts['fill_between_kw'] ?? undefined}, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
 
 pms_ValidationCurveDisplay_from_estimator = {k: v for k, v in pms_ValidationCurveDisplay_from_estimator.items() if v is not None}`
 
@@ -317,14 +280,14 @@ pms_ValidationCurveDisplay_from_estimator = {k: v for k, v in pms_ValidationCurv
     ax?: any
 
     /**
-      Whether or not to negate the scores obtained through [`validation\_curve`](sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve "sklearn.model_selection.validation_curve"). This is particularly useful when using the error denoted by `neg\_\*` in `scikit-learn`.
+      Whether or not to negate the scores obtained through [`validation_curve`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve "sklearn.model_selection.validation_curve"). This is particularly useful when using the error denoted by `neg_\*` in `scikit-learn`.
 
       @defaultValue `false`
      */
     negate_score?: boolean
 
     /**
-      The name of the score used to decorate the y-axis of the plot. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate\_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `\_` by spaces and capitalize the first letter. We remove `neg\_` and replace it by `"Negative"` if `negate\_score` is `false` or just remove it otherwise.
+      The name of the score used to decorate the y-axis of the plot. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `_` by spaces and capitalize the first letter. We remove `neg_` and replace it by `"Negative"` if `negate_score` is `false` or just remove it otherwise.
      */
     score_name?: string
 
@@ -348,7 +311,7 @@ pms_ValidationCurveDisplay_from_estimator = {k: v for k, v in pms_ValidationCurv
     line_kw?: any
 
     /**
-      Additional keyword arguments passed to the `plt.fill\_between` used to draw the score standard deviation.
+      Additional keyword arguments passed to the `plt.fill_between` used to draw the score standard deviation.
      */
     fill_between_kw?: any
 
@@ -368,15 +331,8 @@ pms_ValidationCurveDisplay_from_estimator = {k: v for k, v in pms_ValidationCurv
     }
 
     // set up method params
-    await this._py.ex`pms_ValidationCurveDisplay_plot = {'ax': ${
-      opts['ax'] ?? undefined
-    }, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${
-      opts['score_name'] ?? undefined
-    }, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${
-      opts['std_display_style'] ?? undefined
-    }, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${
-      opts['fill_between_kw'] ?? undefined
-    }, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
+    await this._py
+      .ex`pms_ValidationCurveDisplay_plot = {'ax': ${opts['ax'] ?? undefined}, 'negate_score': ${opts['negate_score'] ?? undefined}, 'score_name': ${opts['score_name'] ?? undefined}, 'score_type': ${opts['score_type'] ?? undefined}, 'std_display_style': ${opts['std_display_style'] ?? undefined}, 'line_kw': ${opts['line_kw'] ?? undefined}, 'fill_between_kw': ${opts['fill_between_kw'] ?? undefined}, 'errorbar_kw': ${opts['errorbar_kw'] ?? undefined}}
 
 pms_ValidationCurveDisplay_plot = {k: v for k, v in pms_ValidationCurveDisplay_plot.items() if v is not None}`
 
@@ -444,7 +400,7 @@ pms_ValidationCurveDisplay_plot = {k: v for k, v in pms_ValidationCurveDisplay_p
   }
 
   /**
-    When the `std\_display\_style` is `"errorbar"`, this is a list of `matplotlib.container.ErrorbarContainer` objects. If another style is used, `errorbar\_` is `undefined`.
+    When the `std_display_style` is `"errorbar"`, this is a list of `matplotlib.container.ErrorbarContainer` objects. If another style is used, `errorbar_` is `undefined`.
    */
   get errorbar_(): Promise<any> {
     if (this._isDisposed) {
@@ -471,7 +427,7 @@ pms_ValidationCurveDisplay_plot = {k: v for k, v in pms_ValidationCurveDisplay_p
   }
 
   /**
-    When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.lines.Line2D` objects corresponding to the mean train and test scores. If another style is used, `line\_` is `undefined`.
+    When the `std_display_style` is `"fill_between"`, this is a list of `matplotlib.lines.Line2D` objects corresponding to the mean train and test scores. If another style is used, `line_` is `undefined`.
    */
   get lines_(): Promise<any> {
     if (this._isDisposed) {
@@ -498,7 +454,7 @@ pms_ValidationCurveDisplay_plot = {k: v for k, v in pms_ValidationCurveDisplay_p
   }
 
   /**
-    When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.collections.PolyCollection` objects. If another style is used, `fill\_between\_` is `undefined`.
+    When the `std_display_style` is `"fill_between"`, this is a list of `matplotlib.collections.PolyCollection` objects. If another style is used, `fill_between_` is `undefined`.
    */
   get fill_between_(): Promise<any> {
     if (this._isDisposed) {
